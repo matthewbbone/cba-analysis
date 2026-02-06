@@ -10,7 +10,7 @@ import pandas as pd
 from pypdf import PdfReader, PdfWriter
 
 APP_DIR = Path(__file__).resolve().parent
-DEFAULT_DOC_DIR = APP_DIR.parent / "dol_archive"
+DEFAULT_DOC_DIR = APP_DIR.parent / "processed_cbas"
 DEFAULT_FEATURES_CSV = APP_DIR.parent / "outputs" / "cba_features.csv"
 DEFAULT_META_DTA = APP_DIR.parent / "dol_archive" / "CBAList_with_statefips.dta"
 
