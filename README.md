@@ -66,6 +66,14 @@ REVIEW_UI_PASSWORD = "your-password-here"
 uv pip install -r requirements.txt
 ```
 
+## Environment Setup
+
+Create a `.env` file in the repo root with your OpenAI API key:
+
+```env
+OPENAI_API_KEY=your_key_here
+```
+
 ## Notes
 - The UI defaults to documents in `dol_archive/` and only lists documents found in `outputs/cba_features.csv`.
 - NAICS is mapped to 2-digit sector names; state FIPS are mapped to state names.

@@ -298,6 +298,24 @@ def main():
             .reset_index(name="count")
         )
 
+        if level == "Document":
+            denom = (
+                merged.drop_duplicates(["document_id", dim])
+                .groupby(dim)
+                .size()
+                .reset_index(name="denom")
+            )
+        else:
+            denom = (
+                merged.drop_duplicates(["document_id", "document_page", dim])
+                .groupby(dim)
+                .size()
+                .reset_index(name="denom")
+            )
+
+        counts = counts.merge(denom, on=dim, how="left")
+        counts["percent"] = (counts["count"] / counts["denom"] * 100.0).round(2)
+
         if counts.empty:
             st.info("No data to display after join.")
             return
@@ -308,8 +326,8 @@ def main():
             .encode(
                 x=alt.X("feature_name:N", title="Provision"),
                 y=alt.Y(f"{dim}:N", title=dim),
-                color=alt.Color("count:Q", title="Count"),
-                tooltip=[dim, "feature_name", "count"],
+                color=alt.Color("percent:Q", title=f"% of {'documents' if level=='Document' else 'pages'}"),
+                tooltip=[dim, "feature_name", "count", "percent"],
             )
         )
         st.altair_chart(heat, use_container_width=True)
