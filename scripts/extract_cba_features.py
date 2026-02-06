@@ -53,11 +53,16 @@ def parse_taxonomy(path: Path):
     current_desc = None
     for line in text.splitlines():
         line = line.strip()
-        m = re.match(r"^###\s+\d+\.\s+([A-Z0-9_]+)", line)
+        m = re.match(r"^###\s+\d+\.\s+(.+)$", line)
         if m:
-            current = m.group(1)
+            current = m.group(1).strip()
             current_desc = None
-            features[current] = {"description": "", "details": []}
+            features[current] = {"description": "", "tldr": "", "details": []}
+            continue
+        if current and line.startswith("**TLDR**"):
+            parts = line.split(":", 1)
+            if len(parts) == 2:
+                features[current]["tldr"] = parts[1].strip()
             continue
         if current and line.startswith("**Description**"):
             # format: **Description**: ...
@@ -158,9 +163,9 @@ def build_prompt(features):
     feature_list = ", ".join(features.keys())
     feature_lines = []
     for feat, meta in features.items():
-        desc = meta.get("description", "").strip()
-        if desc:
-            feature_lines.append(f"{feat} — {desc}")
+        tldr = meta.get("tldr", "").strip()
+        if tldr:
+            feature_lines.append(f"{feat} — {tldr}")
         else:
             feature_lines.append(feat)
     feature_context = "\n".join(feature_lines)
