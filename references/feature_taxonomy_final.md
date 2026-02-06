@@ -1,267 +1,135 @@
-# CBA Feature Taxonomy - Final
+# Collective Bargaining Agreement Clause Taxonomy
 
-### 1. RECOGNITION
-**Description**: Defines which employees/job classifications are covered by the agreement
-**Details to extract**:
-- Bargaining unit definition
-- Covered job classifications
-- Excluded positions (supervisors, executives, etc.)
-- Geographic scope
+Source: [Thomson Reuters, Collective Bargaining Basics Toolkit](https://uk.practicallaw.thomsonreuters.com/0-589-5305?originationContext=knowHow&transitionType=KnowHowItem&contextData=%28sc.Default%29)
 
-### 2. UNION_SECURITY
-**Description**: Requirements for union membership and dues
-**Details to extract**:
-- Type (union shop, agency shop, open shop)
-- Membership requirement timing
-- Dues check-off provisions
-- Maintenance of membership clauses
+### 1. Parties to Agreement and Preamble
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to formally identify the parties to the CBA and articulate their general intentions and purposes in forming the CBA. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It serves as an uncontroversial starting point for the parties' broader negotiations and offers guidance and best practices for precisely defining the employer and union to reduce potential ambiguities and manage legal risks and liabilities. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
 
-### 3. MANAGEMENT_RIGHTS
-**Description**: Reserved rights of employer
-**Details to extract**:
-- Hiring/firing authority
-- Work assignment authority
-- Operational decisions reserved
-- Any limitations on management rights
+### 2. Duration Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to define the period during which the parties' agreement is effective and the procedures for its modification or termination. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. Employers may select between a short-form duration clause that adds no notice or bargaining obligations beyond those required under Section 8(d) of the NLRA and a long-form duration clause that includes an evergreen provision automatically renewing the CBA unless proper notice is given. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
 
-### 4. WAGES
-**Description**: Base pay rates and wage structures
-**Details to extract**:
-- Base hourly/weekly/annual rates by classification
-- Wage schedules/progressions
-- General wage increase percentages
-- Effective dates of increases
-- New hire rates vs incumbent rates
-- Cost-of-living adjustments (COLA)
+### 3. Management Rights Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to reserve the employer's rights and authority over key business decisions during the CBA's term, except as limited by other provisions of the CBA. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It offers both short-form and long-form options, with the long-form approach identifying specific retained rights such as the authority to manage staffing levels, implement technological changes, and subcontract work. It aims to facilitate the effective management of business operations and reduce the likelihood of future disputes concerning the scope of the employer's authority to take unilateral action. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
 
-### 5. HOURS_OF_WORK
-**Description**: Standard work schedules and shift structures
-**Details to extract**:
-- Standard workweek (days/hours)
-- Shift start/end times
-- Shift scheduling rules
-- Part-time vs full-time definitions
-- Schedule posting requirements
+### 4. Zipper Clause (Complete Agreement Clause)
+**Description**: A Standard Clause that can be included in a collective bargaining agreement (CBA) to close bargaining for the CBA's term and deem all subjects not covered in the CBA as raised and bargained to conclusion as if they were included therein. It is based on the National Labor Relations Act (NLRA) but may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. This Standard Clause has integrated drafting notes with important explanations and negotiating tips.
 
-### 6. OVERTIME
-**Description**: Premium pay for work beyond standard hours
-**Details to extract**:
-- Daily overtime threshold (hours)
-- Weekly overtime threshold (hours)
-- Overtime rate multiplier (1.5x, 2x, etc.)
-- Double-time triggers
-- Overtime distribution rules
-- Mandatory vs voluntary overtime
+### 5. State or Local Law Waiver Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to waive the application of state or local laws where those laws permit waivers of certain employment terms, such as paid sick leave, minimum wages, meal or rest periods, or work scheduling limitations, through collective bargaining. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It offers alternative drafting approaches for satisfying the clear and unmistakable waiver standard, either through an express waiver of the state or local law or an affirmation that the employer provides sufficiently comparable benefits. It also explores the strategic advantages for both employers and unions in negotiating these waivers, highlighting their potential as a cost-saving measure and a valuable bargaining chip. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs and comply with the specific requirements established in the relevant state or local law for a valid waiver.
 
-### 7. HOLIDAYS
-**Description**: Paid holidays and holiday pay
-**Details to extract**:
-- List of recognized holidays
-- Number of holidays per year
-- Holiday pay rate (if worked)
-- Eligibility requirements
-- Personal/floating holidays
-- Holiday scheduling rules
+### 6. Reopener Clause
+**Description**: A Standard Clause that can be included in a collective bargaining agreement (CBA) to permit mid-term reopening of the CBA for new negotiations over a particular issue or terms if specified conditions are met. It is based on the National Labor Relations Act (NLRA) but may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. This Standard Clause has integrated drafting notes with important explanations and negotiating tips.
 
-### 8. VACATIONS
-**Description**: Paid vacation entitlements
-**Details to extract**:
-- Vacation accrual by years of service
-- Maximum vacation accumulation
-- Vacation scheduling procedures
-- Vacation pay calculation
-- Cash-out provisions
+### 7. Savings Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to sever any provision deemed invalid, illegal, or otherwise unenforceable while preserving the validity of the remainder of the CBA. Generally referred to as a savings or severability clause, this clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It specifies how an invalidated provision is to be treated for the remainder of the CBA's term and establishes procedures for reopening the CBA to negotiate a replacement provision. It also examines key considerations implicated by an impasse in reopener negotiations, including the availability of economic weapons such as strikes or lockouts and whether to submit the dispute to binding interest arbitration. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
 
-### 9. HEALTH_WELFARE_INSURANCE
-**Description**: Health and welfare benefit provisions
-**Details to extract**:
-- Medical insurance coverage
-- Dental/vision coverage
-- Employer contribution amounts
-- Employee premium share
-- Dependent coverage
-- Eligibility waiting periods
+### 8. Force Majeure Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to provide relief from an employer's contractual obligations during qualifying force majeure events that may occur during the CBA's term, such as acts of God, natural disasters, and other events beyond the employer's control that might frustrate the performance of its obligations under the CBA. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It presents alternative drafting approaches for both a broad, stand-alone force majeure provision and targeted force majeure language to be included within one or more relevant CBA provisions. It also provides a detailed, customizable definition of "force majeure event" that incorporates both traditional concerns and modern challenges such as pandemics and cybersecurity attacks and addresses other key considerations, including notice to the union, the employer's duty to mitigate, and dispute resolution procedures. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
 
-### 10. PENSION_RETIREMENT
-**Description**: Retirement benefit provisions
-**Details to extract**:
-- Pension plan type (defined benefit, defined contribution)
-- Employer contribution rate
-- Employee contribution rate
-- Vesting schedule
-- Retirement age eligibility
-- Benefit calculation formula
+### 9. Notices Clause
+**Description**: A Standard Clause that can be included in a collective bargaining agreement (CBA) to establish the procedures by which the parties must provide notices to each other during the CBA's term and when those notices become effective. It is based on the National Labor Relations Act (NLRA) but may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. This Standard Clause has integrated drafting notes with important explanations and negotiating tips.
 
-### 11. SENIORITY
-**Description**: Rules governing seniority rights
-**Details to extract**:
-- Seniority definition (company, department, classification)
-- Seniority accrual rules
-- Application to layoffs/recalls
-- Application to promotions/transfers
-- Application to shift preference
-- Loss of seniority conditions
+### 10. Discipline and Discharge Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to establish standards for the discipline and discharge of union-represented employees and reserve the employer's right to take disciplinary action during the CBA's term. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It discusses options for defining the standard for discipline, such as "just cause," and identifies common examples of terminable misconduct. It also contains optional language clarifying the employer's flexibility to determine appropriate discipline and the application of the clause to probationary employees. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
 
-### 12. GRIEVANCE_PROCEDURE
-**Description**: Process for resolving disputes
-**Details to extract**:
-- Number of steps
-- Time limits at each step
-- Representatives at each step
-- Written vs oral grievances
-- Scope of grievable issues
+### 11. Grievance Procedure Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to set out a grievance procedure for the resolution of disputes between the union and employer that concern the CBA's interpretation and application. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It outlines a multi-step framework for grievance processing that establishes clear timelines for the parties to file and respond to grievances and escalate unresolved grievances toward formal arbitration. It also defines what constitutes a grievable dispute, identifies who is eligible to file and advance grievances, and addresses other key considerations such as the treatment of probationary employees and potential grounds for expedited arbitration. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
 
-### 13. ARBITRATION
-**Description**: Final step dispute resolution
-**Details to extract**:
-- Binding vs advisory
-- Arbitrator selection method
-- Cost sharing
-- Scope limitations
-- Expedited arbitration provisions
+### 12. Arbitration Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to establish an arbitration procedure for the resolution of disputes concerning the CBA's interpretation and application that cannot be settled through the parties' grievance procedure. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It offers both short-form and long-form options and addresses key procedural and logistical details such as the prerequisites for arbitration, the process for arbitrator selection, the rules applicable to the arbitration hearing, the scope of the arbitrator's authority, and the allocation of fees and costs. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
 
----
+### 13. Probationary Period Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to memorialize that new employees and employees returning after a break in service are regarded as probationary for a specified period and subject to different employment terms than other employees covered by the CBA, allowing the employer an evaluation period before new hires are afforded the full rights and benefits afforded to regular employees under the CBA. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It addresses the duration of the probationary period, the conditions for its extension, and the establishment of different compensation or benefit eligibility for probationary employees. It also preserves the employer's discretion to discharge probationary employees at will and limits their access to the CBA's grievance and arbitration procedures. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
 
-## Additional Contract Features
+### 14. Drug Testing Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to outline the conditions under which an employer may conduct drug and alcohol testing for current or prospective employees. This clause is based on the National Labor Relations Act (NLRA) with consideration of the Americans with Disabilities Act (ADA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It provides three alternative approaches, including compliance with federally imposed testing requirements, incorporation of a separate company policy, or negotiation of a detailed CBA provision outlining the employer's drug and alcohol testing program. The clause includes optional text authorizing pre-employment, reasonable suspicion, post-incident, return-to-work, post-rehabilitation follow-up, and random testing. It also contains provisions addressing confidentiality, testing procedures, and consequences for violations. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs and comply with any state and local laws applicable to their jurisdiction.
 
-### 14. NO_STRIKE_LOCKOUT
-**Description**: Prohibition on work stoppages
-**Details to extract**:
-- Scope of prohibition
-- Exceptions (e.g., safety issues)
-- Penalties for violations
-- Union liability provisions
+### 15. No-Strike Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to help maintain the employer's operational continuity by prohibiting the union and union-represented employees from calling for or participating in picketing, strikes, and other work stoppages. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It provides long- and short-form options for drafting a no-strike clause and discusses their potential strategic advantages and disadvantages. It also addresses key issues such as the employer's discretion to discipline employees for violations of the no-strike prohibition and the union's affirmative obligations in the event of an unauthorized work stoppage. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
 
-### 15. DISCIPLINE_DISCHARGE
-**Description**: Rules governing employee discipline
-**Details to extract**:
-- Just cause requirement
-- Progressive discipline steps
-- Notice requirements
-- Right to representation
-- Documentation requirements
+### 16. No-Lockout Clause
+**Description**: A Standard Clause that can be included in a collective bargaining agreement (CBA) to preclude an employer from engaging in a lockout and define the scope of that limitation. It is based on the National Labor Relations Act (NLRA) but may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. This Standard Clause has integrated drafting notes with important explanations and negotiating tips.
 
-### 16. SICK_LEAVE
-**Description**: Paid sick leave provisions
-**Details to extract**:
-- Accrual rate
-- Maximum accumulation
-- Usage rules
-- Documentation requirements
-- Sick leave buyback
+### 17. Non-Discrimination Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to prohibit discrimination against employees based on specified protected characteristics. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. Protected classes include race, sex, age, religion, national origin, disability, and other classifications recognized by applicable federal, state, and local laws. The clause also includes optional language providing for the resolution of discrimination claims through the CBA's grievance and arbitration procedures. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs and comply with any state and local laws applicable to their jurisdiction.
 
-### 17. LEAVES_OF_ABSENCE
-**Description**: Unpaid leave provisions
-**Details to extract**:
-- Types available (personal, medical, educational)
-- Duration limits
-- Job protection guarantees
-- Benefit continuation during leave
-- Return rights
+### 18. Bargaining Unit Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to identify the employees in the bargaining unit covered by the CBA. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It offers best practices for precisely defining the bargaining unit to reduce potential ambiguities and the likelihood of future disputes concerning the scope of the CBA's application. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
 
-### 18. SHIFT_DIFFERENTIAL
-**Description**: Premium pay for non-standard shifts
-**Details to extract**:
-- Evening shift premium (amount/percentage)
-- Night shift premium (amount/percentage)
-- Weekend premium
-- Qualifying hours for premium
+### 19. Recognition Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to provide a contractual basis for the union's status as the exclusive bargaining representative for the bargaining unit and define the scope of the CBA's application. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It offers key guidance and best practices for precisely defining the scope of representation to minimize legal risks and avoid overbroad language that could expand bargaining obligations. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
 
-### 19. JOB_CLASSIFICATION
-**Description**: Job classification structure and duties
-**Details to extract**:
-- Classification titles
-- Job duties/descriptions
-- Skill/experience requirements
-- Classification hierarchy
+### 20. Successors and Assigns Clause
+**Description**: A Standard Clause that can be included in a collective bargaining agreement (CBA) to specify the parties' intentions regarding the extent to which their respective successors and assigns are entitled to the benefits of and subject to the obligations created by the CBA. It is based on the National Labor Relations Act (NLRA), which has a statutory analysis for successorship that may override contractual successorship. It also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. This Standard Clause has integrated drafting notes with important explanations and negotiating tips.
 
-### 20. JOB_POSTING
-**Description**: Internal job vacancy procedures
-**Details to extract**:
-- Posting requirements
-- Posting duration
-- Bidding procedures
-- Selection criteria
-- Trial periods
+### 21. Subcontracting Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to memorialize the parties' agreement regarding the employer's right to subcontract work during the CBA's term. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It provides several alternative approaches to defining the scope of the employer's subcontracting authority, with one formulation affirming a broad and unconditional right to subcontract and others setting out narrower rights based on the employer's past practice or specific operational needs. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
 
----
+### 22. New Technology or Automation Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to memorialize the parties' agreement regarding the scope of the employer's right to introduce new technology or work processes, including labor-saving automation, during the CBA's term. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It provides alternative approaches for setting out the employer's authority to implement technological changes, with one formulation affirming a broad and general right to implement new technology or automation and the other promoting a cooperative process that includes union input. It also addresses key considerations regarding the employer's effects bargaining obligations, employee training on new equipment, and procedures for negotiating wage rates for job classifications created or significantly revised in response to technological changes. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
 
-## Supplementary Features
+### 23. E-Verify Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to outline the conditions under which an employer may enroll in and use E-Verify to verify the employment eligibility of new hires and current employees. This clause is based on the National Labor Relations Act (NLRA) with consideration of the Immigration Reform and Control Act of 1986 (IRCA) Form I-9 employment eligibility verification process. It is drafted primarily for employers with a unionized workforce governed by the NLRA, but it may also be useful for public sector employers or those covered by the Railway Labor Act (RLA). It provides two alternative approaches, including compliance with federally imposed testing requirements or incorporation of a separate company policy. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs and comply with any state and local laws applicable to their jurisdiction.
 
-### 21. FUNERAL_BEREAVEMENT
-**Description**: Paid leave for family deaths
-**Details to extract**:
-- Days allowed
-- Covered family members
-- Pay provisions
-- Documentation requirements
+### 24. Dues Checkoff Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to authorize the employer to deduct union dues or agency fees from employee paychecks and remit them to the union on receipt of an employee's voluntary written authorization in compliance with applicable law. This clause is based on the National Labor Relations Act (NLRA) and Labor Management Relations Act (LMRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It establishes the timing and procedure for remittance of deductions to the union and indemnifies the employer against claims relating to the administration of the checkoff arrangement. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs and comply with any state and local laws applicable to their jurisdiction.
 
-### 22. JURY_DUTY
-**Description**: Leave for jury service
-**Details to extract**:
-- Pay provisions
-- Duration limits
-- Documentation requirements
+--### 25. Union Access Clause
+--**Description**: N/A
 
-### 23. MILITARY_LEAVE
-**Description**: Leave for military service
-**Details to extract**:
-- Pay provisions
-- Seniority protection
-- Return rights
-- Benefit continuation
+### 26. Holidays Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to identify paid holidays, establish eligibility criteria for holiday pay, and specify premium pay for work on designated holidays. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It lists recognized company holidays, including any employer-designated and floating holidays, and clarifies observance dates for holidays that fall on the weekend, if appropriate. It also conditions the receipt of holiday pay on employees working their full schedule on the workdays immediately before and after the holiday, except in cases of certain excused absences. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
 
-### 24. SUBCONTRACTING
-**Description**: Limits on contracting out bargaining unit work
-**Details to extract**:
-- Notification requirements
-- Union consent requirements
-- Impact on employees
-- Exceptions
+### 27. Bereavement Leave Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to define the conditions under which the employer provides bereavement leave for employees grieving the death or attending the funeral of an immediate family member. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It identifies eligibility criteria and the number of available leave days and defines qualifying immediate family members. The clause also contains provisions addressing extended leave for necessary travel, caps on paid leave, and notice and documentation requirements and clarifies the impact of bereavement leave on overtime and benefits calculations. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs and comply with any state and local laws applicable to their jurisdiction.
 
-### 25. SAFETY_HEALTH
-**Description**: Workplace safety provisions
-**Details to extract**:
-- Safety committee provisions
-- Protective equipment
-- Right to refuse unsafe work
-- Reporting procedures
+### 28. Jury Duty Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to set out the employment conditions applicable to employees called for jury duty. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It addresses key considerations such as eligibility for jury duty leave, compensation during the leave period, and the maximum duration of paid leave. It also covers notice and documentation requirements, return-to-work obligations following early dismissal from jury duty, scheduling options for employees who work non-standard shifts, and employer-requested postponements of an employee's jury service due to business needs. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs and comply with any state and local laws applicable to their jurisdiction.
 
-### 26. UNIFORMS_TOOLS_EQUIPMENT
-**Description**: Employer-provided work items
-**Details to extract**:
-- Items provided
-- Allowances/reimbursements
-- Maintenance responsibilities
-- Replacement provisions
+### 29. Vacation Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to identify paid vacation benefits and the conditions that employees must satisfy to be eligible for those benefits. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It provides customizable language addressing key issues such as eligibility requirements for full-time, part-time, and new employees, vacation accrual rates and maximum accrual caps, procedures for requesting or bidding for vacation time, and calculation of vacation pay. It also presents options for the annual carryover, payout, or forfeiture of unused vacation time and the treatment of accrued vacation on an employee's termination. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs and comply with any state and local laws applicable to their jurisdiction.
 
-### 27. TRAINING_APPRENTICESHIP
-**Description**: Training and skill development
-**Details to extract**:
-- Training programs available
-- Apprenticeship ratios
-- Training pay provisions
-- Certification requirements
+### 30. Sick Leave Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to identify paid sick leave benefits and the conditions that employees must satisfy to be eligible for those benefits. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It addresses key issues such as leave accrual rates and maximum accrual caps, differentiated terms for new hires and part-time employees, calculation of sick leave pay, and procedures for taking leave and providing medical certification. It also presents options for handling the carryover of unused sick leave and the payout of accrued leave on an employee's termination. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs and comply with any state and local laws applicable to their jurisdiction.
 
-### 28. REST_BREAK_PERIODS
-**Description**: Meal and rest break provisions
-**Details to extract**:
-- Lunch break duration
-- Rest break frequency/duration
-- Paid vs unpaid breaks
-- Timing requirements
+### 31. Union Business Leave Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to identify the employment conditions applicable to employees who take leave from their employment to conduct official union business. This clause is based on the National Labor Relations Act (NLRA) with consideration of Section 302 of the Labor Management Relations Act (LMRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It contains language providing both long-term leave for employees elected to a full-time union position and short-term leave for employees attending specific union functions like conventions and training sessions. It also addresses key issues including eligibility for leave, advance notice requirements, limitations on leave duration, and employee reinstatement rights and seniority implications. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
 
-### 29. TRANSFERS
-**Description**: Employee transfer provisions
-**Details to extract**:
-- Voluntary transfer rights
-- Involuntary transfer rules
-- Geographic transfer provisions
-- Pay protection during transfer
+### 32. Bulletin Board Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to identify the conditions under which an employer provides bulletin board space on its property for union use. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It outlines the union's rights and limitations regarding bulletin board usage, including requirements relating to location, access, permissible content, and employer oversight of posted materials. This clause facilitates effective communication between the union and bargaining unit employees at the workplace while preserving the employer's right to preview or remove nonconforming notices. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
 
-### 30. LONGEVITY_PAY
-**Description**: Additional pay for long service
-**Details to extract**:
-- Service thresholds
-- Payment amounts
-- Payment frequency
+### 33. Most Favored Nation Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to allow an employer to obtain the best economic terms for labor that the union provides to any competitor within the same industry or region. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. Known as a most favored nation clause (MFN), this provision enables the employer to adopt more favorable terms, such as lower-cost wages or benefits, if the union subsequently grants those terms to another employer. Carefully drafted to avoid potential antitrust concerns, it ensures that the employer can remain competitive and is not disadvantaged by its labor costs relative to local industry competitors. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
+
+### 34. Company Benefits and Policies Clause
+**Description**: A Standard Clause that can be included in a collective bargaining agreement (CBA) to clarify that the parties have agreed to incorporate by reference and therefore maintain during the CBA's term specified employer-provided benefits and policies. It is based on the National Labor Relations Act (NLRA) but may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. This Standard Clause has integrated drafting notes with important explanations and negotiating tips.
+
+### 35. Wages Clause
+**Description**: A Standard Clause that can be included in a collective bargaining agreement (CBA) to specify the wages that an employer will pay to non-tipped, hourly paid nonexempt employees and how those wages are paid. It is based on the National Labor Relations Act (NLRA) with consideration of the Fair Labor Standards Act (FLSA) but may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. This Standard Clause has integrated drafting notes with important explanations and negotiating tips.
+
+### 36. Overtime Clause
+**Description**: A Standard Clause that can be included in a collective bargaining agreement (CBA) to specify the basis for the assignment or distribution of overtime work and the calculation of overtime compensation to hourly nonexempt employees. It is based on the National Labor Relations Act (NLRA) with consideration of the Fair Labor Standards Act (FLSA) but may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. This Standard Clause has integrated drafting notes with important explanations and negotiating tips.
+
+### 37. Donning, Doffing, and Washing Time Clause
+**Description**: A Standard Clause that can be included in a collective bargaining agreement (CBA) to clarify whether time spent washing or donning and doffing clothing and protective gear is compensable under the Fair Labor Standards Act (FLSA). It is based on the National Labor Relations Act (NLRA) with consideration of FLSA Section 203(o) (29 U.S.C. § 203(o)). State or local law may impose different or additional requirements on compensation practices for donning, doffing, and washing time. This Standard Clause has integrated drafting notes with important explanations and negotiating tips.
+
+### 38. Wage Differentials Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to specify wage differentials or premiums paid to employees who perform certain work. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It includes optional text establishing various pay differentials, including shift, lead person, hazard, machinery, and certification premiums. It addresses the calculation and application of these differentials, prohibits the pyramiding of premium pay, and discusses considerations relating to the applicability of wage premiums to unworked paid time. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
+
+### 39. Reporting-Pay Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to specify the minimum pay to which employees are entitled when they report to work for their scheduled shift and the expected workload is unavailable, commonly referred to as reporting pay, show-up pay, or report-in pay. This clause is based on the National Labor Relations Act (NLRA) with consideration of the Fair Labor Standards Act (FLSA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It provides alternative language for establishing either a flat or tiered pay guarantee, addresses the applicable rate of pay, and specifies that the reporting pay guarantee does not apply where the employer provides advance notice of schedule changes to affected employees. It also outlines exceptions that excuse the employer's reporting pay obligation, such as qualifying emergencies or specific employee conduct. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs and comply with any state and local laws applicable to their jurisdiction.
+
+### 40. Call-Back Pay Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to specify the minimum pay to which employees are entitled when called back to work after completing their scheduled shift and leaving the employer's premises. This clause is based on the National Labor Relations Act (NLRA) with consideration of the Fair Labor Standards Act (FLSA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It establishes a minimum guarantee of hours of work or pay for each callback and defines the applicable pay rate. It also includes optional language for addressing "virtual callbacks," where an employee performs unscheduled work remotely without returning to the physical worksite, and outlines exceptions where the callback pay guarantee does not apply, such as in qualifying emergencies or circumstances resulting from an individual employee's conduct. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs and comply with any state and local laws applicable to their jurisdiction.
+
+### 41. Work Hours Clause
+**Description**: A Standard Clause that can be included in a collective bargaining agreement (CBA) to identify employee work hours and define the regular workweek, workday, and shift schedules for the employer's operations. It is based on the National Labor Relations Act (NLRA) with consideration of the Fair Labor Standards Act (FLSA), but may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. This Standard Clause has integrated drafting notes with important explanations and negotiating tips.
+
+### 42. Ratification Bonus Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA), memorandum of agreement (MOA), or collective bargaining proposal to provide that bargaining unit employees on the payroll when the agreement or proposal is ratified receive a bonus. This clause is based on the National Labor Relations Act (NLRA) with consideration of the Fair Labor Standards Act (FLSA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It serves as a tool to incentivize timely ratification by union members, often by a specified deadline, to facilitate the prompt implementation of the negotiated employment terms and conditions. It explores key issues such as structuring the bonus to allow its exclusion from the regular rate of pay under the FLSA for overtime calculation purposes and navigating good faith bargaining obligations when offering a time-limited incentive. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
+
+### 43. Individual Agreements Clause
+**Description**: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to authorize employers to negotiate individual agreements with employees while ensuring terms are not less favorable than those in the CBA. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It addresses the need for flexibility in industries requiring specially skilled or high-visibility employees, allowing for better compensation and conditions than standard CBA terms. It also outlines permissible negotiation boundaries and the degree of union participation in securing individual agreements. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
+
+### 44. Discretionary Bonus Clause
+**Description**: A Standard Clause that can be included in a collective bargaining agreement (CBA) to confirm that an employer retains sole discretion over the timing and amounts of, and reasons for, bonuses paid to employees during the CBA's term. It is based on the National Labor Relations Act (NLRA) with consideration of the Fair Labor Standards Act (FLSA), but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. This Standard Clause has integrated drafting notes with important explanations and negotiating tips.
