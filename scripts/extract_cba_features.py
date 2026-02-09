@@ -49,7 +49,7 @@ except Exception as exc:
 
 # ----- Default paths (relative to repo root) -----
 TAXONOMY_PATH = Path("references/feature_taxonomy_final.md")
-DEFAULT_INPUT_DIR = Path("cbas")
+DEFAULT_INPUT_DIR = Path("dol_archive")
 DEFAULT_OUT_FEATURES = Path("outputs/cba_features.csv")
 DEFAULT_OUT_DETAILS = Path("outputs/cba_feature_details.csv")
 DEFAULT_CACHE_FILE = Path("outputs/processing_cache.json")
@@ -344,6 +344,9 @@ def main():
         if f_feat.tell() == 0:
             feat_writer.writeheader()
 
+        total_pages_processed = 0
+        total_start = time.time()
+
         pdf_files = sorted(args.input_dir.glob("document_*.pdf"))
         if not pdf_files:
             print(f"No PDFs found in {args.input_dir}", file=sys.stderr)
@@ -479,6 +482,7 @@ def main():
                             "feature_name": feat,
                         }
                     )
+                total_pages_processed += 1
                 # Update and persist cache after every page for crash resilience
                 processed_pages.add(page_number)
                 doc_cache["processed_pages"] = sorted(processed_pages)
@@ -489,6 +493,14 @@ def main():
                     time.sleep(args.sleep)
 
             # no per-document merge needed for the simplified page-level output
+
+        total_elapsed = time.time() - total_start
+        if total_pages_processed > 0:
+            avg_sec = total_elapsed / total_pages_processed
+            print(f"Processed pages: {total_pages_processed}", file=sys.stderr)
+            print(f"Average seconds per page: {avg_sec:.2f}", file=sys.stderr)
+        else:
+            print("No pages processed.", file=sys.stderr)
 
 
 if __name__ == "__main__":
