@@ -250,6 +250,25 @@ def main():
         st.warning("No documents found that match entries in cba_features.csv.")
         return
 
+    # Clause filter (optional)
+    clause_filter = st.sidebar.selectbox(
+        "Filter by clause",
+        options=["All"] + all_features,
+        index=0,
+        help="Limit document/page choices to where this clause appears.",
+    )
+
+    if clause_filter != "All":
+        # Build doc -> pages map for the selected clause
+        doc_pages = {}
+        for (doc_id, page), feats in features_map.items():
+            if clause_filter in feats:
+                doc_pages.setdefault(doc_id, set()).add(page)
+        docs = [p for p in docs if p.stem in doc_pages]
+        if not docs:
+            st.warning("No documents found with the selected clause.")
+            return
+
     doc_names = [p.name for p in docs]
     selected_doc = st.sidebar.selectbox("Document", doc_names)
     pdf_path = doc_dir / selected_doc
@@ -261,7 +280,14 @@ def main():
         st.error(f"Failed to open PDF: {exc}")
         return
 
-    page_index = st.sidebar.number_input("Page", min_value=1, max_value=page_count, value=1, step=1)
+    if clause_filter != "All":
+        available_pages = sorted(doc_pages.get(pdf_path.stem, []))
+        if not available_pages:
+            st.warning("No pages found for this document with the selected clause.")
+            return
+        page_index = st.sidebar.selectbox("Page", options=available_pages)
+    else:
+        page_index = st.sidebar.number_input("Page", min_value=1, max_value=page_count, value=1, step=1)
     page_number = int(page_index) - 1
     feature_key = (pdf_path.stem, page_index)
     detected_features = sorted(features_map.get(feature_key, []))
