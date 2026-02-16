@@ -5,13 +5,8 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "numpy<2.3.0",
-    "fitz>=0.0.1.dev2",
-    "frontend>=0.0.3",
-    "openai>=2.21.0",
-    "pymupdf>=1.26.7",
-    "pypdf>=6.6.2",
-    "python-dotenv>=1.2.1",
-    "streamlit[pdf]>=1.54.0",
-    "vllm>=0.15.1",
+    "olmocr[bench]>=0.4.25",
+    "pypdf>=6.7.0",
+    "torch>=2.10.0",
+    "torchvision>=0.25.0",
 ]

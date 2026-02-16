@@ -1,4 +1,6 @@
+import base64
 import io
+import json
 from pathlib import Path
 import datetime
 
@@ -13,6 +15,8 @@ APP_DIR = Path(__file__).resolve().parent
 DEFAULT_DOC_DIR = APP_DIR.parent / "processed_cbas"
 DEFAULT_FEATURES_CSV = APP_DIR.parent / "outputs" / "cba_features.csv"
 DEFAULT_META_DTA = APP_DIR.parent / "processed_cbas" / "CBAList_with_statefips.dta"
+DEFAULT_OCR_DIR = APP_DIR.parent / "ocr_output"
+DEFAULT_PDF_DIR = APP_DIR.parent / "dol_archive"
 
 
 @st.cache_data(show_spinner=False)
@@ -204,6 +208,122 @@ def load_all_feature_names(taxonomy_path: Path):
         names.append("OTHER")
     return names
 
+@st.cache_data(show_spinner=False)
+def load_dolma(jsonl_path: Path):
+    with jsonl_path.open("r", encoding="utf-8") as f:
+        return json.loads(f.readline())
+
+
+@st.cache_data(show_spinner=False)
+def list_ocr_documents(ocr_dir: Path):
+    """List document dirs that have either a dolma.jsonl or individual page_*.txt files."""
+    return sorted(
+        [d for d in ocr_dir.iterdir() if d.is_dir() and (
+            (d / "dolma.jsonl").exists() or list(d.glob("page_*.txt"))
+        )],
+        key=lambda p: p.name,
+    )
+
+
+@st.cache_data(show_spinner=False)
+def list_page_files(doc_dir: Path):
+    return sorted(doc_dir.glob("page_*.txt"))
+
+
+def render_ocr_viewer():
+    ocr_dir = Path(st.sidebar.text_input("OCR output folder", str(DEFAULT_OCR_DIR))).expanduser().resolve()
+    pdf_dir = Path(st.sidebar.text_input("Source PDF folder", str(DEFAULT_PDF_DIR))).expanduser().resolve()
+
+    if not ocr_dir.exists():
+        st.error(f"OCR output folder not found: {ocr_dir}")
+        return
+
+    ocr_docs = list_ocr_documents(ocr_dir)
+    if not ocr_docs:
+        st.warning("No OCR results found. Run the OCR pipeline first.")
+        return
+
+    doc_names = [d.name for d in ocr_docs]
+    selected = st.sidebar.selectbox("Document", doc_names, key="ocr_doc")
+    doc_dir = ocr_dir / selected
+
+    has_dolma = (doc_dir / "dolma.jsonl").exists()
+    doc = load_dolma(doc_dir / "dolma.jsonl") if has_dolma else None
+    page_files = list_page_files(doc_dir)
+
+    if doc:
+        spans = doc.get("attributes", {}).get("pdf_page_numbers", [])
+        num_pages = len(spans)
+    else:
+        num_pages = len(page_files)
+
+    if num_pages == 0:
+        st.warning("No pages found for this document.")
+        return
+
+    page_idx = st.sidebar.number_input("Page", min_value=1, max_value=num_pages, value=1, step=1, key="ocr_page") - 1
+
+    # Metadata summary
+    st.sidebar.markdown("---")
+    if doc:
+        meta = doc.get("metadata", {})
+        st.sidebar.markdown(f"**Pages:** {meta.get('pdf-total-pages', num_pages)}")
+        st.sidebar.markdown(f"**Input tokens:** {meta.get('total-input-tokens', '?'):,}")
+        st.sidebar.markdown(f"**Output tokens:** {meta.get('total-output-tokens', '?'):,}")
+        st.sidebar.markdown(f"**Fallback pages:** {meta.get('total-fallback-pages', '?')}")
+    else:
+        st.sidebar.markdown(f"**Pages processed:** {len(page_files)}")
+        st.sidebar.caption("Dolma file not yet generated (pipeline still running?)")
+
+    col_left, col_right = st.columns([1, 1], gap="large")
+
+    with col_left:
+        st.subheader(f"{selected} — Page {page_idx + 1} of {num_pages}")
+        pdf_path = pdf_dir / f"{selected}.pdf"
+        if pdf_path.exists():
+            try:
+                pdf_bytes = load_pdf_page(pdf_path, page_idx)
+                b64 = base64.b64encode(pdf_bytes).decode()
+                st.markdown(
+                    f'<iframe src="data:application/pdf;base64,{b64}" '
+                    f'width="100%" height="800" type="application/pdf"></iframe>',
+                    unsafe_allow_html=True,
+                )
+            except Exception as exc:
+                st.error(f"Failed to render PDF page: {exc}")
+        else:
+            st.info(f"Source PDF not found: {pdf_path.name}")
+
+    with col_right:
+        st.subheader("OCR Text")
+
+        # Get page text from dolma spans or individual page files
+        page_text = ""
+        if doc:
+            spans = doc.get("attributes", {}).get("pdf_page_numbers", [])
+            if page_idx < len(spans):
+                start, end, _ = spans[page_idx]
+                page_text = doc["text"][start:end]
+        elif page_idx < len(page_files):
+            page_text = page_files[page_idx].read_text(encoding="utf-8")
+
+        if page_text:
+            st.text_area("", value=page_text, height=600, disabled=True, key="ocr_text")
+        else:
+            st.info("No text for this page.")
+
+        if doc:
+            attrs = doc.get("attributes", {})
+            page_attrs = {}
+            for key in ("primary_language", "is_rotation_valid", "rotation_correction", "is_table", "is_diagram"):
+                vals = attrs.get(key, [])
+                if page_idx < len(vals):
+                    page_attrs[key] = vals[page_idx]
+            if page_attrs:
+                st.subheader("Page Attributes")
+                st.json(page_attrs)
+
+
 def main():
     st.set_page_config(page_title="CBA Review UI", layout="wide")
     st.title("CBA Review UI")
@@ -226,7 +346,12 @@ def main():
     doc_dir = Path(doc_dir).expanduser().resolve()
     features_csv = st.sidebar.text_input("Features CSV", str(DEFAULT_FEATURES_CSV))
     features_csv = Path(features_csv).expanduser().resolve()
-    page_choice = st.sidebar.radio("View", ["Review", "Stats", "Heatmap"])
+    page_choice = st.sidebar.radio("View", ["Review", "Stats", "Heatmap", "OCR Viewer"])
+
+    if page_choice == "OCR Viewer":
+        render_ocr_viewer()
+        return
+
     features_map = load_features(features_csv)
     feature_rows = load_feature_rows(features_csv)
     meta_path = st.sidebar.text_input("Metadata DTA", str(DEFAULT_META_DTA))
@@ -437,7 +562,12 @@ def main():
         st.subheader(f"{selected_doc} — Page {page_index} of {page_count}")
         try:
             pdf_bytes = load_pdf_page(pdf_path, page_number)
-            st.pdf(pdf_bytes, height="stretch")
+            b64 = base64.b64encode(pdf_bytes).decode()
+            st.markdown(
+                f'<iframe src="data:application/pdf;base64,{b64}" '
+                f'width="100%" height="800" type="application/pdf"></iframe>',
+                unsafe_allow_html=True,
+            )
         except Exception as exc:
             st.error(f"Failed to render page: {exc}")
 
