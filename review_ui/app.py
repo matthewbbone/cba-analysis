@@ -3,6 +3,8 @@ import io
 import json
 from pathlib import Path
 import datetime
+import html
+import re
 
 import streamlit as st
 import csv
@@ -10,13 +12,15 @@ from collections import Counter, defaultdict
 import altair as alt
 import pandas as pd
 from pypdf import PdfReader, PdfWriter
+import streamlit.components.v1 as components
 
 APP_DIR = Path(__file__).resolve().parent
 DEFAULT_DOC_DIR = APP_DIR.parent / "processed_cbas"
-DEFAULT_FEATURES_CSV = APP_DIR.parent / "outputs" / "cba_features.csv"
-DEFAULT_META_DTA = APP_DIR.parent / "processed_cbas" / "CBAList_with_statefips.dta"
+DEFAULT_FEATURES_OUTPUT = APP_DIR.parent / "outputs" / "cba_features_annotated.jsonl"
+DEFAULT_META_DTA = APP_DIR.parent / "dol_archive" / "CBAList_with_statefips.dta"
 DEFAULT_OCR_DIR = APP_DIR.parent / "ocr_output"
 DEFAULT_PDF_DIR = APP_DIR.parent / "dol_archive"
+DEFAULT_ANNOTATED_JSONL = APP_DIR.parent / "outputs" / "cba_features_annotated.jsonl"
 
 
 @st.cache_data(show_spinner=False)
@@ -34,44 +38,104 @@ def load_pdf_page(pdf_path: Path, page_number: int) -> bytes:
     return output.getvalue()
 
 @st.cache_data(show_spinner=False)
-def load_features(csv_path: Path):
-    if not csv_path.exists():
-        return {}
-    features = {}
-    with csv_path.open("r", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            doc_id = row.get("document_id", "")
-            page = row.get("document_page", "")
-            feat = row.get("feature_name", "")
-            if not doc_id or not page or not feat:
-                continue
-            key = (doc_id, int(page))
-            features.setdefault(key, set()).add(feat)
-    return features
-
-
-@st.cache_data(show_spinner=False)
-def load_feature_rows(csv_path: Path):
-    if not csv_path.exists():
+def load_feature_rows(path: Path):
+    """Load extracted features from CSV or annotated JSONL output."""
+    if not path.exists():
         return []
+
     rows = []
-    with csv_path.open("r", encoding="utf-8") as f:
+    seen = set()
+    suffix = path.suffix.lower()
+
+    if suffix == ".jsonl":
+        with path.open("r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    obj = json.loads(line)
+                except Exception:
+                    continue
+
+                raw_doc_id = str(obj.get("document_id", "")).strip()
+                if not raw_doc_id:
+                    continue
+
+                m = re.match(r"^(document_\d+)_page_(\d+)$", raw_doc_id)
+                if m:
+                    doc_id = m.group(1)
+                    page_num = int(m.group(2))
+                else:
+                    doc_id = raw_doc_id
+                    try:
+                        page_num = int(obj.get("document_page"))
+                    except Exception:
+                        continue
+
+                features = set()
+                for ex in obj.get("extractions", []) if isinstance(obj.get("extractions", []), list) else []:
+                    if not isinstance(ex, dict):
+                        continue
+                    feature_name = ""
+                    attrs = ex.get("attributes")
+                    if isinstance(attrs, dict):
+                        feature_name = str(
+                            attrs.get("feature_name")
+                            or attrs.get("clause")
+                            or attrs.get("label")
+                            or ""
+                        ).strip()
+                    if not feature_name:
+                        continue
+                    features.add(feature_name)
+
+                for feat in sorted(features):
+                    key = (doc_id, page_num, feat)
+                    if key in seen:
+                        continue
+                    seen.add(key)
+                    rows.append(
+                        {
+                            "document_id": doc_id,
+                            "document_page": page_num,
+                            "feature_name": feat,
+                        }
+                    )
+        return rows
+
+    with path.open("r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            doc_id = row.get("document_id", "")
-            page = row.get("document_page", "")
-            feat = row.get("feature_name", "")
-            if not doc_id or not page or not feat:
+            doc_id = str(row.get("document_id", "")).strip()
+            feat = str(row.get("feature_name", "")).strip()
+            try:
+                page = int(row.get("document_page"))
+            except Exception:
                 continue
+            if not doc_id or not feat:
+                continue
+            key = (doc_id, page, feat)
+            if key in seen:
+                continue
+            seen.add(key)
             rows.append(
                 {
                     "document_id": doc_id,
-                    "document_page": int(page),
+                    "document_page": page,
                     "feature_name": feat,
                 }
             )
     return rows
+
+
+@st.cache_data(show_spinner=False)
+def load_features(path: Path):
+    features = {}
+    for row in load_feature_rows(path):
+        key = (row["document_id"], row["document_page"])
+        features.setdefault(key, set()).add(row["feature_name"])
+    return features
 
 
 @st.cache_data(show_spinner=False)
@@ -191,6 +255,37 @@ def load_metadata(dta_path: Path):
     return df
 
 
+def _safe_label_value(value, default: str) -> str:
+    if pd.isna(value):
+        return default
+    s = str(value).strip()
+    return s if s else default
+
+
+def build_doc_display_map(meta_df: pd.DataFrame) -> dict[str, str]:
+    """Build document_id -> 'Union v Employer' display labels from metadata."""
+    if meta_df is None or meta_df.empty or "document_id" not in meta_df.columns:
+        return {}
+
+    union_col = "union" if "union" in meta_df.columns else None
+    employer_col = "employername" if "employername" in meta_df.columns else None
+    if employer_col is None and "employer" in meta_df.columns:
+        employer_col = "employer"
+
+    labels = {}
+    for _, row in meta_df.iterrows():
+        doc_id = row.get("document_id")
+        if pd.isna(doc_id):
+            continue
+        doc_id = str(doc_id).strip()
+        if not doc_id:
+            continue
+        union_name = _safe_label_value(row[union_col], "Union") if union_col else "Union"
+        employer_name = _safe_label_value(row[employer_col], "Employer") if employer_col else "Employer"
+        labels[doc_id] = f"{union_name} v {employer_name}"
+    return labels
+
+
 def load_all_feature_names(taxonomy_path: Path):
     if not taxonomy_path.exists():
         return []
@@ -209,18 +304,123 @@ def load_all_feature_names(taxonomy_path: Path):
     return names
 
 @st.cache_data(show_spinner=False)
-def load_dolma(jsonl_path: Path):
+def load_annotated_pages(jsonl_path: Path):
+    """Load LangExtract-style JSONL and index by (document_id, page_number)."""
+    pages = {}
+    if not jsonl_path.exists():
+        return pages
     with jsonl_path.open("r", encoding="utf-8") as f:
-        return json.loads(f.readline())
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                obj = json.loads(line)
+            except Exception:
+                continue
+            raw_doc_id = str(obj.get("document_id", "")).strip()
+            if not raw_doc_id:
+                continue
+            m = re.match(r"^(document_\d+)_page_(\d+)$", raw_doc_id)
+            if not m:
+                continue
+            doc_id = m.group(1)
+            page_num = int(m.group(2))
+            pages[(doc_id, page_num)] = obj
+    return pages
+
+
+def render_clause_highlights(text: str, extractions: list[dict], height: int = 620):
+    """Render highlighted text spans for clause annotations."""
+    if not text:
+        st.info("No text for this page.")
+        return
+
+    spans = []
+    for ex in extractions or []:
+        ci = ex.get("char_interval") if isinstance(ex, dict) else None
+        if not isinstance(ci, dict):
+            continue
+        start = ci.get("start_pos")
+        end = ci.get("end_pos")
+        if not isinstance(start, int) or not isinstance(end, int):
+            continue
+        if start < 0 or end <= start or end > len(text):
+            continue
+        label = ""
+        attrs = ex.get("attributes") if isinstance(ex, dict) else None
+        if isinstance(attrs, dict):
+            label = str(attrs.get("feature_name", "")).strip()
+        if not label:
+            label = str(ex.get("extraction_class", "Clause"))
+        spans.append((start, end, label))
+
+    spans.sort(key=lambda x: (x[0], x[1]))
+    # Keep non-overlapping spans only to avoid broken markup.
+    filtered = []
+    last_end = -1
+    for start, end, label in spans:
+        if start < last_end:
+            continue
+        filtered.append((start, end, label))
+        last_end = end
+
+    palette = [
+        "#fde68a", "#bfdbfe", "#fecaca", "#c7d2fe", "#a7f3d0",
+        "#fbcfe8", "#fdba74", "#ddd6fe", "#86efac", "#fcd34d",
+    ]
+    label_to_color = {}
+    for _, _, label in filtered:
+        if label not in label_to_color:
+            label_to_color[label] = palette[len(label_to_color) % len(palette)]
+
+    chunks = []
+    cursor = 0
+    for start, end, label in filtered:
+        if cursor < start:
+            chunks.append(html.escape(text[cursor:start]))
+        color = label_to_color[label]
+        frag = html.escape(text[start:end])
+        title = html.escape(label)
+        chunks.append(
+            f'<mark style="background:{color}; padding:0.05rem 0.15rem; border-radius:3px;" '
+            f'title="{title}">{frag}</mark>'
+        )
+        cursor = end
+    if cursor < len(text):
+        chunks.append(html.escape(text[cursor:]))
+
+    legend = "".join(
+        f'<span style="display:inline-block; margin:0 0.5rem 0.35rem 0;">'
+        f'<span style="background:{color}; padding:0.1rem 0.35rem; border-radius:3px;">&nbsp;</span> '
+        f'{html.escape(label)}</span>'
+        for label, color in label_to_color.items()
+    )
+
+    html_doc = f"""
+    <div style="font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;">
+      <div style="margin-bottom:0.5rem; font-size:0.9rem;">{legend or "No highlighted spans available."}</div>
+      <div style="
+          white-space: pre-wrap;
+          border: 1px solid #e5e7eb;
+          border-radius: 8px;
+          padding: 0.9rem;
+          height: {height}px;
+          overflow-y: auto;
+          line-height: 1.45;
+          background: #ffffff;
+          color: #111827;
+        ">{''.join(chunks)}</div>
+    </div>
+    """
+    components.html(html_doc, height=height + 70, scrolling=True)
 
 
 @st.cache_data(show_spinner=False)
 def list_ocr_documents(ocr_dir: Path):
-    """List document dirs that have either a dolma.jsonl or individual page_*.txt files."""
+    """List document dirs that have individual page_*.txt OCR files."""
     return sorted(
-        [d for d in ocr_dir.iterdir() if d.is_dir() and (
-            (d / "dolma.jsonl").exists() or list(d.glob("page_*.txt"))
-        )],
+        [d for d in ocr_dir.iterdir() if d.is_dir() and list(d.glob("page_*.txt"))],
         key=lambda p: p.name,
     )
 
@@ -233,6 +433,10 @@ def list_page_files(doc_dir: Path):
 def render_ocr_viewer():
     ocr_dir = Path(st.sidebar.text_input("OCR output folder", str(DEFAULT_OCR_DIR))).expanduser().resolve()
     pdf_dir = Path(st.sidebar.text_input("Source PDF folder", str(DEFAULT_PDF_DIR))).expanduser().resolve()
+    meta_path = Path(st.sidebar.text_input("Metadata DTA", str(DEFAULT_META_DTA))).expanduser().resolve()
+    annotated_jsonl = Path(
+        st.sidebar.text_input("Annotated JSONL", str(DEFAULT_ANNOTATED_JSONL))
+    ).expanduser().resolve()
 
     if not ocr_dir.exists():
         st.error(f"OCR output folder not found: {ocr_dir}")
@@ -243,19 +447,20 @@ def render_ocr_viewer():
         st.warning("No OCR results found. Run the OCR pipeline first.")
         return
 
-    doc_names = [d.name for d in ocr_docs]
-    selected = st.sidebar.selectbox("Document", doc_names, key="ocr_doc")
+    meta_df = load_metadata(meta_path)
+    display_map = build_doc_display_map(meta_df)
+
+    selected_doc = st.sidebar.selectbox(
+        "Document",
+        ocr_docs,
+        key="ocr_doc",
+        format_func=lambda p: display_map.get(p.name, "Union v Employer"),
+    )
+    selected = selected_doc.name
     doc_dir = ocr_dir / selected
 
-    has_dolma = (doc_dir / "dolma.jsonl").exists()
-    doc = load_dolma(doc_dir / "dolma.jsonl") if has_dolma else None
     page_files = list_page_files(doc_dir)
-
-    if doc:
-        spans = doc.get("attributes", {}).get("pdf_page_numbers", [])
-        num_pages = len(spans)
-    else:
-        num_pages = len(page_files)
+    num_pages = len(page_files)
 
     if num_pages == 0:
         st.warning("No pages found for this document.")
@@ -265,15 +470,7 @@ def render_ocr_viewer():
 
     # Metadata summary
     st.sidebar.markdown("---")
-    if doc:
-        meta = doc.get("metadata", {})
-        st.sidebar.markdown(f"**Pages:** {meta.get('pdf-total-pages', num_pages)}")
-        st.sidebar.markdown(f"**Input tokens:** {meta.get('total-input-tokens', '?'):,}")
-        st.sidebar.markdown(f"**Output tokens:** {meta.get('total-output-tokens', '?'):,}")
-        st.sidebar.markdown(f"**Fallback pages:** {meta.get('total-fallback-pages', '?')}")
-    else:
-        st.sidebar.markdown(f"**Pages processed:** {len(page_files)}")
-        st.sidebar.caption("Dolma file not yet generated (pipeline still running?)")
+    st.sidebar.markdown(f"**Pages processed:** {len(page_files)}")
 
     col_left, col_right = st.columns([1, 1], gap="large")
 
@@ -295,33 +492,26 @@ def render_ocr_viewer():
             st.info(f"Source PDF not found: {pdf_path.name}")
 
     with col_right:
-        st.subheader("OCR Text")
+        st.subheader("OCR Text with Clause Highlights")
 
-        # Get page text from dolma spans or individual page files
+        # Get page text from individual page files
         page_text = ""
-        if doc:
-            spans = doc.get("attributes", {}).get("pdf_page_numbers", [])
-            if page_idx < len(spans):
-                start, end, _ = spans[page_idx]
-                page_text = doc["text"][start:end]
-        elif page_idx < len(page_files):
+        if page_idx < len(page_files):
             page_text = page_files[page_idx].read_text(encoding="utf-8")
 
-        if page_text:
-            st.text_area("", value=page_text, height=600, disabled=True, key="ocr_text")
+        annotations = load_annotated_pages(annotated_jsonl) if annotated_jsonl.exists() else {}
+        page_num = page_idx + 1
+        record = annotations.get((selected, page_num))
+        if record:
+            page_text = str(record.get("text", page_text))
+            render_clause_highlights(page_text, record.get("extractions", []))
+            st.caption(f"Showing highlights from {annotated_jsonl.name}")
         else:
-            st.info("No text for this page.")
-
-        if doc:
-            attrs = doc.get("attributes", {})
-            page_attrs = {}
-            for key in ("primary_language", "is_rotation_valid", "rotation_correction", "is_table", "is_diagram"):
-                vals = attrs.get(key, [])
-                if page_idx < len(vals):
-                    page_attrs[key] = vals[page_idx]
-            if page_attrs:
-                st.subheader("Page Attributes")
-                st.json(page_attrs)
+            render_clause_highlights(page_text, [])
+            if annotated_jsonl.exists():
+                st.caption("No annotation row found for this page in annotated JSONL.")
+            else:
+                st.caption("Annotated JSONL not found; showing plain OCR text.")
 
 
 def main():
@@ -342,86 +532,26 @@ def main():
                 st.warning("Enter password to continue.")
                 return
 
-    doc_dir = st.sidebar.text_input("Document folder", str(DEFAULT_DOC_DIR))
-    doc_dir = Path(doc_dir).expanduser().resolve()
-    features_csv = st.sidebar.text_input("Features CSV", str(DEFAULT_FEATURES_CSV))
-    features_csv = Path(features_csv).expanduser().resolve()
-    page_choice = st.sidebar.radio("View", ["Review", "Stats", "Heatmap", "OCR Viewer"])
+    page_choice = st.sidebar.radio("View", ["OCR Viewer", "Stats", "Heatmap"])
 
     if page_choice == "OCR Viewer":
         render_ocr_viewer()
         return
 
-    features_map = load_features(features_csv)
-    feature_rows = load_feature_rows(features_csv)
+    features_path = Path(
+        st.sidebar.text_input("Extraction output (CSV/JSONL)", str(DEFAULT_FEATURES_OUTPUT))
+    ).expanduser().resolve()
+    feature_rows = load_feature_rows(features_path)
+    if not feature_rows:
+        st.warning(f"No extracted feature rows found in: {features_path}")
+        return
+
     meta_path = st.sidebar.text_input("Metadata DTA", str(DEFAULT_META_DTA))
     meta_path = Path(meta_path).expanduser().resolve()
     meta_df = load_metadata(meta_path)
-    taxonomy_path = APP_DIR.parent / "references" / "feature_taxonomy_final.md"
-    all_features = load_all_feature_names(taxonomy_path)
-
-    if not doc_dir.exists():
-        st.error(f"Folder not found: {doc_dir}")
-        return
-
-    docs = list_documents(doc_dir)
-    if not docs:
-        st.warning("No documents found. Expect files named document_*.pdf")
-        return
-
-    feature_doc_ids = {doc_id for (doc_id, _page) in features_map.keys()}
-    docs = [p for p in docs if p.stem in feature_doc_ids]
-    if not docs:
-        st.warning("No documents found that match entries in cba_features.csv.")
-        return
-
-    # Clause filter (optional)
-    clause_filter = st.sidebar.selectbox(
-        "Filter by clause",
-        options=["All"] + all_features,
-        index=0,
-        help="Limit document/page choices to where this clause appears.",
-    )
-
-    if clause_filter != "All":
-        # Build doc -> pages map for the selected clause
-        doc_pages = {}
-        for (doc_id, page), feats in features_map.items():
-            if clause_filter in feats:
-                doc_pages.setdefault(doc_id, set()).add(page)
-        docs = [p for p in docs if p.stem in doc_pages]
-        if not docs:
-            st.warning("No documents found with the selected clause.")
-            return
-
-    doc_names = [p.name for p in docs]
-    selected_doc = st.sidebar.selectbox("Document", doc_names)
-    pdf_path = doc_dir / selected_doc
-
-    try:
-        reader = PdfReader(str(pdf_path))
-        page_count = len(reader.pages)
-    except Exception as exc:
-        st.error(f"Failed to open PDF: {exc}")
-        return
-
-    if clause_filter != "All":
-        available_pages = sorted(doc_pages.get(pdf_path.stem, []))
-        if not available_pages:
-            st.warning("No pages found for this document with the selected clause.")
-            return
-        page_index = st.sidebar.selectbox("Page", options=available_pages)
-    else:
-        page_index = st.sidebar.number_input("Page", min_value=1, max_value=page_count, value=1, step=1)
-    page_number = int(page_index) - 1
-    feature_key = (pdf_path.stem, page_index)
-    detected_features = sorted(features_map.get(feature_key, []))
 
     if page_choice == "Heatmap":
         st.subheader("Provision Heatmap")
-        if not feature_rows:
-            st.info("No feature rows found in the CSV.")
-            return
         if meta_df.empty:
             st.info("Metadata DTA not found or empty.")
             return
@@ -496,149 +626,60 @@ def main():
             st.write(", ".join(company_list[:50]))
         return
 
-    if page_choice == "Stats":
-        st.subheader("Provision Counts")
-        if not feature_rows:
-            st.info("No feature rows found in the CSV.")
-            return
+    st.subheader("Provision Counts")
+    page_counts = Counter()
+    doc_sets = defaultdict(set)
+    for row in feature_rows:
+        feat = row["feature_name"]
+        page_counts[feat] += 1
+        doc_sets[feat].add(row["document_id"])
 
-        page_counts = Counter()
-        doc_sets = defaultdict(set)
-        for row in feature_rows:
-            feat = row["feature_name"]
-            page_counts[feat] += 1
-            doc_sets[feat].add(row["document_id"])
+    page_rows = [
+        {"feature_name": feat, "count": cnt}
+        for feat, cnt in page_counts.most_common()
+    ]
+    doc_rows = sorted(
+        [{"feature_name": feat, "count": len(doc_sets[feat])} for feat in doc_sets.keys()],
+        key=lambda r: r["count"],
+        reverse=True,
+    )
 
-        page_rows = [
-            {"feature_name": feat, "count": cnt}
-            for feat, cnt in page_counts.most_common()
-        ]
-        doc_rows = sorted(
-            [{"feature_name": feat, "count": len(doc_sets[feat])} for feat in doc_sets.keys()],
-            key=lambda r: r["count"],
-            reverse=True,
-        )
-
-        col_a, col_b = st.columns(2, gap="large")
-        with col_a:
-            st.subheader("Page-Level Frequency")
-            page_df = pd.DataFrame(page_rows)
-            try:
-                page_chart = (
-                    alt.Chart(page_df)
-                    .mark_bar()
-                    .encode(
-                        x=alt.X("count:Q", title="Count"),
-                        y=alt.Y("feature_name:N", sort="-x", title="Feature"),
-                        tooltip=["feature_name", "count"],
-                    )
-                )
-                st.altair_chart(page_chart, use_container_width=True)
-            except Exception:
-                st.bar_chart(page_df.set_index("feature_name")["count"])
-            st.dataframe(page_df, use_container_width=True)
-        with col_b:
-            st.subheader("Document-Level Frequency")
-            doc_df = pd.DataFrame(doc_rows)
-            try:
-                doc_chart = (
-                    alt.Chart(doc_df)
-                    .mark_bar()
-                    .encode(
-                        x=alt.X("count:Q", title="Count"),
-                        y=alt.Y("feature_name:N", sort="-x", title="Feature"),
-                        tooltip=["feature_name", "count"],
-                    )
-                )
-                st.altair_chart(doc_chart, use_container_width=True)
-            except Exception:
-                st.bar_chart(doc_df.set_index("feature_name")["count"])
-            st.dataframe(doc_df, use_container_width=True)
-        return
-
-    col_left, col_right = st.columns([2, 1], gap="large")
-
-    with col_left:
-        st.subheader(f"{selected_doc} — Page {page_index} of {page_count}")
+    col_a, col_b = st.columns(2, gap="large")
+    with col_a:
+        st.subheader("Page-Level Frequency")
+        page_df = pd.DataFrame(page_rows)
         try:
-            pdf_bytes = load_pdf_page(pdf_path, page_number)
-            b64 = base64.b64encode(pdf_bytes).decode()
-            st.markdown(
-                f'<iframe src="data:application/pdf;base64,{b64}" '
-                f'width="100%" height="800" type="application/pdf"></iframe>',
-                unsafe_allow_html=True,
-            )
-        except Exception as exc:
-            st.error(f"Failed to render page: {exc}")
-
-    with col_right:
-        st.subheader("Features")
-        st.caption("List the features visible on this page.")
-        review_rows = []
-        if detected_features:
-            st.write("Mark each detected feature as correct or incorrect:")
-            for feat in detected_features:
-                ok = st.checkbox(feat, value=True, key=f"feat_ok_{pdf_path.stem}_{page_index}_{feat}")
-                review_rows.append(
-                    {
-                        "document_id": pdf_path.stem,
-                        "document_page": page_index,
-                        "feature_name": feat,
-                        "label_action": "kept" if ok else "removed",
-                    }
+            page_chart = (
+                alt.Chart(page_df)
+                .mark_bar()
+                .encode(
+                    x=alt.X("count:Q", title="Count"),
+                    y=alt.Y("feature_name:N", sort="-x", title="Feature"),
+                    tooltip=["feature_name", "count"],
                 )
-        else:
-            st.info("No detected features for this page.")
-        unlabeled = [f for f in all_features if f not in detected_features]
-        added = st.multiselect(
-            "Add missing features",
-            options=unlabeled,
-            default=[],
-            help="Select additional features present on this page but not labeled.",
-        )
-        for feat in added:
-            review_rows.append(
-                {
-                    "document_id": pdf_path.stem,
-                    "document_page": page_index,
-                    "feature_name": feat,
-                    "label_action": "added",
-                }
             )
-        notes = st.text_area("Notes", height=200, placeholder="Optional reviewer notes...")
-        if notes.strip():
-            review_rows.append(
-                {
-                    "document_id": pdf_path.stem,
-                    "document_page": page_index,
-                    "feature_name": "",
-                    "label_action": "note",
-                    "note": notes.strip(),
-                }
+            st.altair_chart(page_chart, use_container_width=True)
+        except Exception:
+            st.bar_chart(page_df.set_index("feature_name")["count"])
+        st.dataframe(page_df, use_container_width=True)
+    with col_b:
+        st.subheader("Document-Level Frequency")
+        doc_df = pd.DataFrame(doc_rows)
+        try:
+            doc_chart = (
+                alt.Chart(doc_df)
+                .mark_bar()
+                .encode(
+                    x=alt.X("count:Q", title="Count"),
+                    y=alt.Y("feature_name:N", sort="-x", title="Feature"),
+                    tooltip=["feature_name", "count"],
+                )
             )
-
-        if st.button("Save review"):
-            out_path = APP_DIR.parent / "outputs" / "review.csv"
-            out_path.parent.mkdir(parents=True, exist_ok=True)
-            file_exists = out_path.exists()
-            fieldnames = ["timestamp", "document_id", "document_page", "feature_name", "label_action", "note"]
-            with out_path.open("a", newline="", encoding="utf-8") as f:
-                writer = csv.DictWriter(f, fieldnames=fieldnames)
-                if not file_exists:
-                    writer.writeheader()
-                ts = datetime.datetime.now().isoformat(timespec="seconds")
-                for row in review_rows:
-                    writer.writerow(
-                        {
-                            "timestamp": ts,
-                            "document_id": row.get("document_id", ""),
-                            "document_page": row.get("document_page", ""),
-                            "feature_name": row.get("feature_name", ""),
-                            "label_action": row.get("label_action", ""),
-                            "note": row.get("note", ""),
-                        }
-                    )
-            st.success(f"Saved {len(review_rows)} rows to {out_path}")
+            st.altair_chart(doc_chart, use_container_width=True)
+        except Exception:
+            st.bar_chart(doc_df.set_index("feature_name")["count"])
+        st.dataframe(doc_df, use_container_width=True)
+    return
 
 
 if __name__ == "__main__":
