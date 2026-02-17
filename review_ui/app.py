@@ -19,7 +19,7 @@ DEFAULT_DOC_DIR = APP_DIR.parent / "processed_cbas"
 DEFAULT_FEATURES_OUTPUT = APP_DIR.parent / "outputs" / "cba_features_annotated.jsonl"
 DEFAULT_META_DTA = APP_DIR.parent / "dol_archive" / "CBAList_with_statefips.dta"
 DEFAULT_OCR_DIR = APP_DIR.parent / "ocr_output"
-DEFAULT_PDF_DIR = APP_DIR.parent / "dol_archive"
+DEFAULT_PDF_DIR = APP_DIR.parent / "processed_cbas"
 DEFAULT_ANNOTATED_JSONL = APP_DIR.parent / "outputs" / "cba_features_annotated.jsonl"
 
 
@@ -263,7 +263,7 @@ def _safe_label_value(value, default: str) -> str:
 
 
 def build_doc_display_map(meta_df: pd.DataFrame) -> dict[str, str]:
-    """Build document_id -> 'Union v Employer' display labels from metadata."""
+    """Build document_id -> 'Employer v Union' display labels from metadata."""
     if meta_df is None or meta_df.empty or "document_id" not in meta_df.columns:
         return {}
 
@@ -280,10 +280,16 @@ def build_doc_display_map(meta_df: pd.DataFrame) -> dict[str, str]:
         doc_id = str(doc_id).strip()
         if not doc_id:
             continue
-        union_name = _safe_label_value(row[union_col], "Union") if union_col else "Union"
         employer_name = _safe_label_value(row[employer_col], "Employer") if employer_col else "Employer"
-        labels[doc_id] = f"{union_name} v {employer_name}"
+        union_name = _safe_label_value(row[union_col], "Union") if union_col else "Union"
+        labels[doc_id] = f"{employer_name} v {union_name}"
     return labels
+
+
+def first_n_chars(text: str, n: int = 30) -> str:
+    s = str(text or "")
+    s = re.sub(r"\s+Clause\b", "", s, flags=re.IGNORECASE)
+    return s[:n]
 
 
 def load_all_feature_names(taxonomy_path: Path):
@@ -416,6 +422,29 @@ def render_clause_highlights(text: str, extractions: list[dict], height: int = 6
     components.html(html_doc, height=height + 70, scrolling=True)
 
 
+def build_clause_to_doc_pages(annotations: dict[tuple[str, int], dict]) -> dict[str, dict[str, list[int]]]:
+    """Build clause -> document -> pages index from annotated JSONL records."""
+    raw_map: dict[str, dict[str, set[int]]] = {}
+    for (doc_id, page_num), record in annotations.items():
+        labels = set()
+        for ex in record.get("extractions", []) if isinstance(record, dict) else []:
+            if not isinstance(ex, dict):
+                continue
+            attrs = ex.get("attributes")
+            if not isinstance(attrs, dict):
+                continue
+            label = str(attrs.get("feature_name", "")).strip()
+            if label:
+                labels.add(label)
+        for label in labels:
+            raw_map.setdefault(label, {}).setdefault(doc_id, set()).add(page_num)
+
+    return {
+        clause: {doc: sorted(pages) for doc, pages in doc_map.items()}
+        for clause, doc_map in raw_map.items()
+    }
+
+
 @st.cache_data(show_spinner=False)
 def list_ocr_documents(ocr_dir: Path):
     """List document dirs that have individual page_*.txt OCR files."""
@@ -431,15 +460,13 @@ def list_page_files(doc_dir: Path):
 
 
 def render_ocr_viewer():
-    ocr_dir = Path(st.sidebar.text_input("OCR output folder", str(DEFAULT_OCR_DIR))).expanduser().resolve()
-    pdf_dir = Path(st.sidebar.text_input("Source PDF folder", str(DEFAULT_PDF_DIR))).expanduser().resolve()
-    meta_path = Path(st.sidebar.text_input("Metadata DTA", str(DEFAULT_META_DTA))).expanduser().resolve()
-    annotated_jsonl = Path(
-        st.sidebar.text_input("Annotated JSONL", str(DEFAULT_ANNOTATED_JSONL))
-    ).expanduser().resolve()
+    ocr_dir = DEFAULT_OCR_DIR.expanduser().resolve()
+    pdf_dir = DEFAULT_PDF_DIR.expanduser().resolve()
+    meta_path = DEFAULT_META_DTA.expanduser().resolve()
+    annotated_jsonl = DEFAULT_ANNOTATED_JSONL.expanduser().resolve()
 
     if not ocr_dir.exists():
-        st.error(f"OCR output folder not found: {ocr_dir}")
+        st.error("OCR output folder not found.")
         return
 
     ocr_docs = list_ocr_documents(ocr_dir)
@@ -447,14 +474,33 @@ def render_ocr_viewer():
         st.warning("No OCR results found. Run the OCR pipeline first.")
         return
 
+    annotations = load_annotated_pages(annotated_jsonl) if annotated_jsonl.exists() else {}
+    clause_map = build_clause_to_doc_pages(annotations)
+    clause_options = ["All"] + sorted(clause_map.keys())
+    clause_filter = st.sidebar.selectbox(
+        "Filter by clause",
+        clause_options,
+        key="ocr_clause_filter",
+        help="Limit available documents/pages to those annotated with a selected clause.",
+    )
+
     meta_df = load_metadata(meta_path)
     display_map = build_doc_display_map(meta_df)
 
+    if clause_filter == "All":
+        candidate_docs = ocr_docs
+    else:
+        doc_ids = set(clause_map.get(clause_filter, {}).keys())
+        candidate_docs = [d for d in ocr_docs if d.name in doc_ids]
+        if not candidate_docs:
+            st.warning("No OCR documents found for the selected clause.")
+            return
+
     selected_doc = st.sidebar.selectbox(
         "Document",
-        ocr_docs,
+        candidate_docs,
         key="ocr_doc",
-        format_func=lambda p: display_map.get(p.name, "Union v Employer"),
+        format_func=lambda p: display_map.get(p.name, "Employer v Union"),
     )
     selected = selected_doc.name
     doc_dir = ocr_dir / selected
@@ -466,11 +512,32 @@ def render_ocr_viewer():
         st.warning("No pages found for this document.")
         return
 
-    page_idx = st.sidebar.number_input("Page", min_value=1, max_value=num_pages, value=1, step=1, key="ocr_page") - 1
+    if clause_filter == "All":
+        page_idx = (
+            st.sidebar.number_input(
+                "Page",
+                min_value=1,
+                max_value=num_pages,
+                value=1,
+                step=1,
+                key="ocr_page",
+            )
+            - 1
+        )
+        pages_for_filter = None
+    else:
+        pages_for_filter = clause_map.get(clause_filter, {}).get(selected, [])
+        if not pages_for_filter:
+            st.warning("No pages found in this document for the selected clause.")
+            return
+        page_num = st.sidebar.selectbox("Page", pages_for_filter, key="ocr_page_filtered")
+        page_idx = int(page_num) - 1
 
     # Metadata summary
     st.sidebar.markdown("---")
     st.sidebar.markdown(f"**Pages processed:** {len(page_files)}")
+    if pages_for_filter is not None:
+        st.sidebar.markdown(f"**Pages matching clause:** {len(pages_for_filter)}")
 
     col_left, col_right = st.columns([1, 1], gap="large")
 
@@ -538,16 +605,13 @@ def main():
         render_ocr_viewer()
         return
 
-    features_path = Path(
-        st.sidebar.text_input("Extraction output (CSV/JSONL)", str(DEFAULT_FEATURES_OUTPUT))
-    ).expanduser().resolve()
+    features_path = DEFAULT_FEATURES_OUTPUT.expanduser().resolve()
     feature_rows = load_feature_rows(features_path)
     if not feature_rows:
-        st.warning(f"No extracted feature rows found in: {features_path}")
+        st.warning("No extracted feature rows found.")
         return
 
-    meta_path = st.sidebar.text_input("Metadata DTA", str(DEFAULT_META_DTA))
-    meta_path = Path(meta_path).expanduser().resolve()
+    meta_path = DEFAULT_META_DTA.expanduser().resolve()
     meta_df = load_metadata(meta_path)
 
     if page_choice == "Heatmap":
@@ -623,7 +687,7 @@ def main():
         for _, row in companies.iterrows():
             company_list = row["employername"]
             st.write(f"**{row[dim]} ({len(company_list)})**")
-            st.write(", ".join(company_list[:50]))
+            st.write("; ".join(company_list[:50]))
         return
 
     st.subheader("Provision Counts")
@@ -648,36 +712,52 @@ def main():
     with col_a:
         st.subheader("Page-Level Frequency")
         page_df = pd.DataFrame(page_rows)
+        page_df["feature_short"] = page_df["feature_name"].apply(lambda s: first_n_chars(s, 30))
+        page_chart_height = max(550, len(page_df) * 24)
         try:
             page_chart = (
                 alt.Chart(page_df)
                 .mark_bar()
                 .encode(
                     x=alt.X("count:Q", title="Count"),
-                    y=alt.Y("feature_name:N", sort="-x", title="Feature"),
+                    y=alt.Y(
+                        "feature_short:N",
+                        sort="-x",
+                        title="Feature (first 30 chars)",
+                        axis=alt.Axis(labelLimit=420),
+                    ),
                     tooltip=["feature_name", "count"],
                 )
+                .properties(height=page_chart_height)
             )
             st.altair_chart(page_chart, use_container_width=True)
         except Exception:
-            st.bar_chart(page_df.set_index("feature_name")["count"])
+            st.bar_chart(page_df.set_index("feature_short")["count"])
         st.dataframe(page_df, use_container_width=True)
     with col_b:
         st.subheader("Document-Level Frequency")
         doc_df = pd.DataFrame(doc_rows)
+        doc_df["feature_short"] = doc_df["feature_name"].apply(lambda s: first_n_chars(s, 30))
+        doc_chart_height = max(550, len(doc_df) * 24)
         try:
             doc_chart = (
                 alt.Chart(doc_df)
                 .mark_bar()
                 .encode(
                     x=alt.X("count:Q", title="Count"),
-                    y=alt.Y("feature_name:N", sort="-x", title="Feature"),
+                    y=alt.Y(
+                        "feature_short:N",
+                        sort="-x",
+                        title="Feature (first 30 chars)",
+                        axis=alt.Axis(labelLimit=420),
+                    ),
                     tooltip=["feature_name", "count"],
                 )
+                .properties(height=doc_chart_height)
             )
             st.altair_chart(doc_chart, use_container_width=True)
         except Exception:
-            st.bar_chart(doc_df.set_index("feature_name")["count"])
+            st.bar_chart(doc_df.set_index("feature_short")["count"])
         st.dataframe(doc_df, use_container_width=True)
     return
 
