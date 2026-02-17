@@ -1,4 +1,3 @@
-import base64
 import io
 import json
 from pathlib import Path
@@ -547,12 +546,7 @@ def render_ocr_viewer():
         if pdf_path.exists():
             try:
                 pdf_bytes = load_pdf_page(pdf_path, page_idx)
-                b64 = base64.b64encode(pdf_bytes).decode()
-                st.markdown(
-                    f'<iframe src="data:application/pdf;base64,{b64}" '
-                    f'width="100%" height="800" type="application/pdf"></iframe>',
-                    unsafe_allow_html=True,
-                )
+                st.pdf(pdf_bytes, height=800)
             except Exception as exc:
                 st.error(f"Failed to render PDF page: {exc}")
         else:
