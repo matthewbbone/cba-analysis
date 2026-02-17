@@ -1,79 +1,98 @@
 # CBA Analysis Toolkit
 
-This repo contains two main components:
+This repository now uses a two-stage clause extraction pipeline:
 
-1. **Extraction script** (`scripts/extract_cba_features.py`) that labels which contract features appear on each PDF page.
-2. **Review UI** (`review_ui/app.py`) for validating extracted features and exploring summary statistics.
+1. OCR each `document_*.pdf` page into text files.
+2. Run clause extraction on OCR text using taxonomy-constrained labels.
+3. Review outputs in Streamlit (OCR highlights + stats + metadata heatmaps).
 
-## 1) Extraction Script
+## Pipeline Overview
 
-**Purpose**
-- Reads PDFs named `document_*.pdf` from a folder.
-- Uses `gpt-5-nano` to detect which CBA provisions appear on each page.
-- Writes a consolidated CSV at `outputs/cba_features.csv` with one row per **document-page-feature**.
+### Stage 1: OCR (`clause_extraction/ocr/runner.py`)
+- Input: PDF files named `document_*.pdf` (typically in `dol_archive/`).
+- Output: per-page OCR text files in `ocr_output/document_<id>/page_####.txt`.
+- Cache: `outputs/ocr_processing_cache.json`.
+- Model serving: OpenAI-compatible endpoint (default `http://localhost:1234/v1`).
+- Behavior: resumes from the most recently processed page.
+- Behavior: sampling prioritizes partially processed documents.
+- Behavior: optional page cap via `--max-pages`.
 
-**Outputs**
-- `outputs/cba_features.csv`: columns `document_id`, `document_page`, `feature_name`
-- `outputs/processing_cache.json`: tracks processed pages for resumable runs
+Run:
 
-**Key behaviors**
-- **Sampling**: `--sample-size N` processes a random sample.
-- **Resume**: skips pages already processed and continues from the last page.
-- **Partial priority**: when sampling, prioritizes docs with partially processed pages.
-- **Filters**: only reads files matching `document_*.pdf`.
-
-**Run**
 ```bash
-uv run scripts/extract_cba_features.py --input-dir dol_archive --sample-size 5
+uv run python clause_extraction/ocr/runner.py --input-dir dol_archive --sample-size 5
 ```
 
-**Common options**
-- `--input-dir` directory of PDFs (default `cbas/`)
-- `--sample-size` process only N documents
-- `--max-pages` limit pages per document
-- `--debug-dir` save raw responses for failed JSON parses
+### Stage 2: Clause Extraction (`clause_extraction/extraction/runner.py`)
+- Input: OCR text from `ocr_output/`.
+- Taxonomy: `references/feature_taxonomy_final.md` (uses clause headings + TLDR context, plus `OTHER`).
+- Backend: `vllm` (default) via LangExtract + vLLM-compatible endpoint.
+- Backend: `openai` via OpenAI Responses API (requires `OPENAI_API_KEY`).
+- Output CSV: `outputs/cba_features.csv` with exact columns `document_id, document_page, feature_name`.
+- `outputs/cba_features_annotated.jsonl` for highlighted review spans.
+- `outputs/extraction_processing_cache.json` for resumable extraction.
+- `outputs/extraction_debug/*.json` page-level debug artifacts.
 
-## 2) Review UI
+Run with vLLM backend:
 
-**Purpose**
-- Review extracted labels page-by-page.
-- Add or remove detected features.
-- Save reviewer feedback to `outputs/review.csv`.
-- View provision frequency stats and heatmaps by metadata.
+```bash
+uv run python clause_extraction/extraction/runner.py --backend vllm --model-id vllm:http://localhost:8000/v1
+```
 
-**Features**
-- **Review**: PDF page on the left, detected features on the right.
-- **Checklists**: confirm or remove each detected feature.
-- **Add missing**: multi-select missing provisions.
-- **Save feedback**: writes `outputs/review.csv`.
-- **Stats**: page-level and document-level bar charts.
-- **Heatmap**: distributions by `naics`, `type`, `statefips1`, `union`, `expire_year` using `dol_archive/CBAList_with_statefips.dta`.
+Run with OpenAI backend:
 
-**Run**
+```bash
+uv run python clause_extraction/extraction/runner.py --backend openai --openai-model gpt-5-nano
+```
+
+Useful options:
+- `--sample-size N` sample documents (partial docs prioritized first).
+- `--max-pages N` cap page number processed per document.
+- `--clear-cache` remove prior outputs/cache/debug and start fresh.
+- `--sleep S` add delay between page requests.
+
+## Review UI (`review_ui/app.py`)
+
+Run:
+
 ```bash
 uv run streamlit run review_ui/app.py
 ```
 
-**Password protection**
-Create `review_ui/.streamlit/secrets.toml`:
+Views:
+- `OCR Viewer`: PDF page + OCR text with highlighted extracted clauses.
+- `Stats`: page-level and document-level frequency bar charts.
+- `Heatmap`: partitioned clause prevalence by metadata dimensions (`naics`, `type`, `statefips1`, `union`, `expire_year`) with company lists per partition.
+
+Defaults:
+- PDF source: `processed_cbas/`
+- OCR source: `ocr_output/`
+- Annotations: `outputs/cba_features_annotated.jsonl`
+- Metadata: `dol_archive/CBAList_with_statefips.dta`
+
+Auth:
+- Set a password in `.streamlit/secrets.toml`:
+
 ```toml
 REVIEW_UI_PASSWORD = "your-password-here"
 ```
 
-## Requirements
+## Setup
+
+Install dependencies with `uv`:
 
 ```bash
 uv pip install -r requirements.txt
+uv sync
 ```
 
-## Environment Setup
-
-Create a `.env` file in the repo root with your OpenAI API key:
+Create `.env` in repo root when using OpenAI backend:
 
 ```env
 OPENAI_API_KEY=your_key_here
 ```
 
 ## Notes
-- The UI defaults to documents in `dol_archive/` and only lists documents found in `outputs/cba_features.csv`.
-- NAICS is mapped to 2-digit sector names; state FIPS are mapped to state names.
+
+- The legacy one-step script `scripts/extract_cba_features.py` is still present, but the primary workflow is the two-stage OCR + LangExtract pipeline above.
+- Document names must follow `document_<int>.pdf` for cache/sampling/metadata linking.
