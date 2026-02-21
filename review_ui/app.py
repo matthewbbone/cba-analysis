@@ -1,5 +1,5 @@
-import base64
 import io
+import itertools
 import json
 from pathlib import Path
 import datetime
@@ -19,6 +19,8 @@ DEFAULT_DOC_DIR = APP_DIR.parent / "processed_cbas"
 DEFAULT_FEATURES_OUTPUT = APP_DIR.parent / "outputs" / "cba_features_annotated.jsonl"
 DEFAULT_META_DTA = APP_DIR.parent / "dol_archive" / "CBAList_with_statefips.dta"
 DEFAULT_OCR_DIR = APP_DIR.parent / "ocr_output"
+DEFAULT_OCR_EXPERIMENT_DIR = APP_DIR.parent / "experiments" / "ocr"
+DEFAULT_CLAUSE_EXPERIMENT_DIR = APP_DIR.parent / "experiments" / "clause_extraction"
 DEFAULT_PDF_DIR = APP_DIR.parent / "processed_cbas"
 DEFAULT_ANNOTATED_JSONL = APP_DIR.parent / "outputs" / "cba_features_annotated.jsonl"
 
@@ -547,12 +549,7 @@ def render_ocr_viewer():
         if pdf_path.exists():
             try:
                 pdf_bytes = load_pdf_page(pdf_path, page_idx)
-                b64 = base64.b64encode(pdf_bytes).decode()
-                st.markdown(
-                    f'<iframe src="data:application/pdf;base64,{b64}" '
-                    f'width="100%" height="800" type="application/pdf"></iframe>',
-                    unsafe_allow_html=True,
-                )
+                st.pdf(pdf_bytes, height=800)
             except Exception as exc:
                 st.error(f"Failed to render PDF page: {exc}")
         else:
@@ -581,6 +578,323 @@ def render_ocr_viewer():
                 st.caption("Annotated JSONL not found; showing plain OCR text.")
 
 
+def render_ocr_comparison():
+    """Compare OCR outputs from experiment methods side-by-side."""
+    experiment_dir = DEFAULT_OCR_EXPERIMENT_DIR.expanduser().resolve()
+    output_dir = experiment_dir / "output"
+    results_file = experiment_dir / "results.csv"
+    test_pdfs_dir = experiment_dir / "test_pdfs"
+
+    if not output_dir.exists():
+        st.warning("No experiment outputs found. Run the OCR experiment first.")
+        return
+
+    # Load results CSV for metrics and agreement scores
+    metrics = {}  # (pdf_stem, page, method_a, method_b) -> {cer, wer}
+    page_agreement = defaultdict(list)  # (pdf_stem, page) -> list of (cer+wer)/2
+    if results_file.exists():
+        with results_file.open(newline="") as f:
+            for row in csv.DictReader(f):
+                pdf_stem_r = Path(row["pdf"]).stem
+                page_r = int(row["page"])
+                cer = float(row["cer"])
+                wer = float(row["wer"])
+                key = (pdf_stem_r, page_r, row["method_a"], row["method_b"])
+                metrics[key] = {"cer": cer, "wer": wer}
+                page_agreement[(pdf_stem_r, page_r)].append((cer + wer) / 2)
+
+    # Compute agreement scores: higher = more agreement (1.0 = perfect)
+    agreement_scores = {k: 1 - sum(v) / len(v) for k, v in page_agreement.items()}
+
+    # Discover all (doc, page) pairs across all experiment output
+    doc_dirs = sorted(
+        [d for d in output_dir.iterdir() if d.is_dir()],
+        key=lambda p: p.name,
+    )
+    if not doc_dirs:
+        st.warning("No experiment output directories found.")
+        return
+
+    # Load all method data per document
+    all_doc_methods = {}  # pdf_stem -> {method_name -> {page -> text}}
+    all_entries = []  # list of (pdf_stem, page)
+    for doc_dir in doc_dirs:
+        stem = doc_dir.name
+        doc_methods = {}
+        for mf in sorted(doc_dir.glob("*.json")):
+            data = json.loads(mf.read_text())
+            doc_methods[mf.stem] = {int(k): v for k, v in data.items()}
+        if not doc_methods:
+            continue
+        all_doc_methods[stem] = doc_methods
+        pages = sorted(set().union(*(m.keys() for m in doc_methods.values())))
+        for p in pages:
+            all_entries.append((stem, p))
+
+    if not all_entries:
+        st.warning("No pages found in experiment output.")
+        return
+
+    # Rank all entries by agreement score (least agreeable first)
+    all_entries.sort(key=lambda x: agreement_scores.get(x, 1.0))
+
+    def entry_label(entry):
+        stem, p = entry
+        score = agreement_scores.get((stem, p))
+        if score is not None:
+            return f"{stem} p.{p} (agreement: {score:.4f})"
+        return f"{stem} p.{p}"
+
+    # Sidebar: page selection
+    selected_entry = st.sidebar.selectbox(
+        "Page",
+        all_entries,
+        format_func=entry_label,
+        key="ocr_cmp_page",
+    )
+    pdf_stem, page_num = selected_entry
+
+    methods = all_doc_methods[pdf_stem]
+    preferred_order = ["pdftotext", "vision_model", "olmocr"]
+    method_names = [m for m in preferred_order if m in methods]
+    method_names += [m for m in sorted(methods.keys()) if m not in preferred_order]
+
+    st.sidebar.markdown("---")
+    st.sidebar.markdown(f"**Methods:** {', '.join(method_names)}")
+    st.sidebar.markdown(f"**Total pages:** {len(all_entries)}")
+    current_score = agreement_scores.get((pdf_stem, page_num))
+    if current_score is not None:
+        st.sidebar.markdown(f"**Agreement score:** {current_score:.4f}")
+
+    # --- Pairwise metrics table ---
+    st.subheader(f"{pdf_stem} — Page {page_num}")
+
+    pairs = list(itertools.combinations(method_names, 2))
+    if pairs and metrics:
+        metric_rows = []
+        for m1, m2 in pairs:
+            # Try both orderings
+            key = (pdf_stem, page_num, m1, m2)
+            key_rev = (pdf_stem, page_num, m2, m1)
+            m = metrics.get(key) or metrics.get(key_rev)
+            if m:
+                metric_rows.append({
+                    "Method A": m1,
+                    "Method B": m2,
+                    "CER": f"{m['cer']:.4f}",
+                    "WER": f"{m['wer']:.4f}",
+                })
+            else:
+                metric_rows.append({
+                    "Method A": m1,
+                    "Method B": m2,
+                    "CER": "—",
+                    "WER": "—",
+                })
+        st.dataframe(pd.DataFrame(metric_rows), use_container_width=True, hide_index=True)
+
+    # --- PDF preview (left) + stacked OCR outputs (right) ---
+    pdf_path = test_pdfs_dir / f"{pdf_stem}.pdf"
+    show_pdf = pdf_path.exists()
+
+    col_left, col_right = st.columns([1, 1], gap="medium")
+
+    if show_pdf:
+        with col_left:
+            st.markdown("**PDF**")
+            try:
+                pdf_bytes = load_pdf_page(pdf_path, page_num - 1)
+                st.pdf(pdf_bytes, height=900)
+            except Exception as exc:
+                st.error(f"Failed to render PDF: {exc}")
+
+    with col_right:
+        for method in method_names:
+            text = methods[method].get(page_num, "")
+            char_count = len(text) if text else 0
+            st.markdown(f"**{method}** ({char_count} chars)")
+            st.text_area(
+                label=method,
+                value=text or "(no output)",
+                height=300,
+                key=f"ocr_cmp_text_{method}_{pdf_stem}_{page_num}",
+                label_visibility="collapsed",
+            )
+
+
+def _render_experiment_highlights(text: str, extractions: list[dict], label_to_color: dict[str, str], height: int = 620):
+    """Render highlighted spans from clause extraction experiment output."""
+    if not text:
+        st.info("No text for this page.")
+        return
+
+    spans = []
+    for ex in extractions or []:
+        start = ex.get("start_pos")
+        end = ex.get("end_pos")
+        if not isinstance(start, int) or not isinstance(end, int):
+            continue
+        if start < 0 or end <= start or end > len(text):
+            continue
+        label = ex.get("clause_label", "Unknown")
+        spans.append((start, end, label))
+
+    spans.sort(key=lambda x: (x[0], x[1]))
+    filtered = []
+    last_end = -1
+    for start, end, label in spans:
+        if start < last_end:
+            continue
+        filtered.append((start, end, label))
+        last_end = end
+
+    for _, _, label in filtered:
+        if label not in label_to_color:
+            label_to_color[label] = _CLAUSE_PALETTE[len(label_to_color) % len(_CLAUSE_PALETTE)]
+
+    chunks = []
+    cursor = 0
+    for start, end, label in filtered:
+        if cursor < start:
+            chunks.append(html.escape(text[cursor:start]))
+        color = label_to_color[label]
+        frag = html.escape(text[start:end])
+        title = html.escape(label)
+        chunks.append(
+            f'<mark style="background:{color}; padding:0.05rem 0.15rem; border-radius:3px;" '
+            f'title="{title}">{frag}</mark>'
+        )
+        cursor = end
+    if cursor < len(text):
+        chunks.append(html.escape(text[cursor:]))
+
+    legend = "".join(
+        f'<span style="display:inline-block; margin:0 0.5rem 0.35rem 0;">'
+        f'<span style="background:{color}; padding:0.1rem 0.35rem; border-radius:3px;">&nbsp;</span> '
+        f'{html.escape(label)}</span>'
+        for label, color in label_to_color.items()
+    )
+
+    html_doc = f"""
+    <div style="font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;">
+      <div style="margin-bottom:0.5rem; font-size:0.9rem;">{legend or "No highlighted spans."}</div>
+      <div style="
+          white-space: pre-wrap;
+          border: 1px solid #e5e7eb;
+          border-radius: 8px;
+          padding: 0.9rem;
+          height: {height}px;
+          overflow-y: auto;
+          line-height: 1.45;
+          background: #ffffff;
+          color: #111827;
+        ">{''.join(chunks)}</div>
+    </div>
+    """
+    components.html(html_doc, height=height + 70, scrolling=True)
+
+
+_CLAUSE_PALETTE = [
+    "#fde68a", "#bfdbfe", "#fecaca", "#c7d2fe", "#a7f3d0",
+    "#fbcfe8", "#fdba74", "#ddd6fe", "#86efac", "#fcd34d",
+    "#fed7aa", "#e9d5ff", "#99f6e4", "#fca5a5", "#a5b4fc",
+]
+
+
+def render_clause_extraction_comparison():
+    """Compare clause extraction methods side-by-side with highlighted spans."""
+    experiment_dir = DEFAULT_CLAUSE_EXPERIMENT_DIR.expanduser().resolve()
+    output_dir = experiment_dir / "output"
+    ocr_dir = DEFAULT_OCR_DIR.expanduser().resolve()
+
+    if not output_dir.exists():
+        st.warning("No clause extraction experiment outputs found. Run the experiment first.")
+        return
+
+    # Discover documents with output
+    doc_dirs = sorted(
+        [d for d in output_dir.iterdir() if d.is_dir()],
+        key=lambda p: p.name,
+    )
+    if not doc_dirs:
+        st.warning("No experiment output directories found.")
+        return
+
+    # Load method results per document
+    doc_methods: dict[str, dict[str, dict]] = {}  # doc_id -> {method -> {page_str -> extractions}}
+    for d in doc_dirs:
+        methods = {}
+        for mf in sorted(d.glob("*.json")):
+            methods[mf.stem] = json.loads(mf.read_text())
+        if methods:
+            doc_methods[d.name] = methods
+
+    if not doc_methods:
+        st.warning("No method outputs found.")
+        return
+
+    # Metadata for display labels
+    meta_df = load_metadata(DEFAULT_META_DTA.expanduser().resolve())
+    display_map = build_doc_display_map(meta_df)
+
+    doc_ids = sorted(doc_methods.keys())
+    selected_doc = st.sidebar.selectbox(
+        "Document",
+        doc_ids,
+        format_func=lambda d: display_map.get(d, d),
+        key="clause_cmp_doc",
+    )
+
+    methods = doc_methods[selected_doc]
+    method_names = sorted(methods.keys())
+
+    # Collect all pages across methods
+    all_pages = sorted(set(
+        int(p) for m in methods.values() for p in m.keys()
+    ))
+
+    if not all_pages:
+        st.warning("No pages found for this document.")
+        return
+
+    page_num = st.sidebar.selectbox("Page", all_pages, key="clause_cmp_page")
+
+    st.sidebar.markdown("---")
+    st.sidebar.markdown(f"**Methods:** {', '.join(method_names)}")
+    st.sidebar.markdown(f"**Pages:** {len(all_pages)}")
+
+    # Load page text from OCR output
+    page_file = ocr_dir / selected_doc / f"page_{page_num:04d}.txt"
+    page_text = ""
+    if page_file.exists():
+        page_text = page_file.read_text(encoding="utf-8", errors="replace")
+
+    st.subheader(f"{display_map.get(selected_doc, selected_doc)} — Page {page_num}")
+
+    # Build a shared color map across all methods so same clause = same color
+    label_to_color: dict[str, str] = {}
+    all_extractions_all_methods = []
+    for method in method_names:
+        exts = methods[method].get(str(page_num), [])
+        all_extractions_all_methods.extend(exts)
+    for ex in all_extractions_all_methods:
+        label = ex.get("clause_label", "Unknown")
+        if label not in label_to_color:
+            label_to_color[label] = _CLAUSE_PALETTE[len(label_to_color) % len(_CLAUSE_PALETTE)]
+
+    # Render side-by-side columns
+    cols = st.columns(len(method_names), gap="medium")
+    for col, method in zip(cols, method_names):
+        with col:
+            extractions = methods[method].get(str(page_num), [])
+            n_ext = len(extractions)
+            clause_labels = sorted(set(e.get("clause_label", "") for e in extractions) - {"OTHER"})
+            st.markdown(f"**{method}** ({n_ext} extractions)")
+            _render_experiment_highlights(page_text, extractions, label_to_color, height=600)
+            if clause_labels:
+                st.caption(f"Clauses: {', '.join(clause_labels)}")
+
+
 def main():
     st.set_page_config(page_title="CBA Review UI", layout="wide")
     st.title("CBA Review UI")
@@ -599,10 +913,18 @@ def main():
                 st.warning("Enter password to continue.")
                 return
 
-    page_choice = st.sidebar.radio("View", ["OCR Viewer", "Stats", "Heatmap"])
+    page_choice = st.sidebar.radio("View", ["OCR Viewer", "OCR Comparison", "Clause Extraction", "Stats", "Heatmap"])
 
     if page_choice == "OCR Viewer":
         render_ocr_viewer()
+        return
+
+    if page_choice == "OCR Comparison":
+        render_ocr_comparison()
+        return
+
+    if page_choice == "Clause Extraction":
+        render_clause_extraction_comparison()
         return
 
     features_path = DEFAULT_FEATURES_OUTPUT.expanduser().resolve()
