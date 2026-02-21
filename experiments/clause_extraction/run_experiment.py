@@ -172,7 +172,7 @@ async def run_summary_segmentation(doc_dir: str, pages: list[int], taxonomy: lis
 
 
 METHODS = {
-    # "langextract": run_langextract,
+    "langextract": run_langextract,
     "llm_segmentation": run_llm_segmentation,
     "summary_segmentation": run_summary_segmentation,
 }

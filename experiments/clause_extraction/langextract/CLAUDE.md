@@ -1,19 +1,20 @@
-# LangExtract Method
+# Langextract-Style Method (OpenRouter)
 
 ## Approach
-Uses Google's [langextract](https://github.com/google/langextract) library for structured information extraction with few-shot examples. Adapted from the existing `clause_extraction/extraction/runner.py`.
+Implements a lightweight, langextract-style extractor without the `langextract` package. It uses OpenRouter chat completions with strict JSON output and long-document chunking.
 
 ## How It Works
-1. **Parse Taxonomy:** Load the 44-clause taxonomy from `references/feature_taxonomy_final.md`.
-2. **Build Prompt:** Create a `prompt_description` listing all allowed clause labels with TLDRs.
-3. **Few-Shot Examples:** Provide `lx.data.ExampleData` / `lx.data.Extraction` examples to guide the model.
-4. **Extract:** For each page, call `lx.extract()` which handles chunking, structured output, and source grounding.
-5. **Normalize:** Map raw model outputs to canonical clause names using fuzzy matching.
-6. **Locate Spans:** Use langextract's `char_interval` for span positions, with fallback text search.
+1. **Parse Taxonomy:** Load clause names + TLDRs from `references/feature_taxonomy_final.md`.
+2. **Build Label Prompt:** Constrain extraction to allowed taxonomy labels.
+3. **Combine Pages:** Concatenate selected pages into one text stream and track page char offsets.
+4. **Chunk + Overlap:** Split long text with separator-aware chunking and overlap.
+5. **Chunk Extraction:** Call OpenRouter on each chunk with bounded left/right context.
+6. **Normalize + Locate:** Normalize clause labels and align extraction text to source spans.
+7. **Deduplicate + Map:** Deduplicate overlap hits, then map global spans back to page-local offsets.
 
 ## Backend
-Uses langextract with Gemini 2.5 Flash by default. The library handles the model interaction, structured output parsing, and source text alignment.
+Uses the OpenAI-compatible OpenRouter endpoint (`https://openrouter.ai/api/v1`) via the `openai` Python SDK.
 
 ## Dependencies
-- `langextract` — Google's structured extraction library
-- `GOOGLE_API_KEY` env var (for Gemini models)
+- `openai` Python package
+- `OPENROUTER_API_KEY` env var
