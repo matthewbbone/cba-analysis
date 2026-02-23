@@ -722,12 +722,8 @@ def render_ocr_comparison():
             )
 
 
-def _render_experiment_highlights(text: str, extractions: list[dict], label_to_color: dict[str, str], height: int = 620):
-    """Render highlighted spans from clause extraction experiment output."""
-    if not text:
-        st.info("No text for this page.")
-        return
-
+def _get_visible_spans(text: str, extractions: list[dict]) -> list[tuple[int, int, str]]:
+    """Return non-overlapping spans that will actually be highlighted."""
     spans = []
     for ex in extractions or []:
         start = ex.get("start_pos")
@@ -747,10 +743,26 @@ def _render_experiment_highlights(text: str, extractions: list[dict], label_to_c
             continue
         filtered.append((start, end, label))
         last_end = end
+    return filtered
+
+
+def _render_experiment_highlights(
+    text: str,
+    extractions: list[dict],
+    label_to_color: dict[str, str],
+    height: int = 620,
+):
+    """Render highlighted spans (no legend — rendered separately)."""
+    if not text:
+        st.info("No text for this page.")
+        return
+
+    filtered = _get_visible_spans(text, extractions)
 
     for _, _, label in filtered:
         if label not in label_to_color:
-            label_to_color[label] = _CLAUSE_PALETTE[len(label_to_color) % len(_CLAUSE_PALETTE)]
+            idx = len(label_to_color) % len(_CLAUSE_PALETTE)
+            label_to_color[label] = _CLAUSE_PALETTE[idx]
 
     chunks = []
     cursor = 0
@@ -761,23 +773,17 @@ def _render_experiment_highlights(text: str, extractions: list[dict], label_to_c
         frag = html.escape(text[start:end])
         title = html.escape(label)
         chunks.append(
-            f'<mark style="background:{color}; padding:0.05rem 0.15rem; border-radius:3px;" '
-            f'title="{title}">{frag}</mark>'
+            f'<mark style="background:{color};'
+            f' padding:0.05rem 0.15rem;'
+            f' border-radius:3px;"'
+            f' title="{title}">{frag}</mark>'
         )
         cursor = end
     if cursor < len(text):
         chunks.append(html.escape(text[cursor:]))
 
-    legend = "".join(
-        f'<span style="display:inline-block; margin:0 0.5rem 0.35rem 0;">'
-        f'<span style="background:{color}; padding:0.1rem 0.35rem; border-radius:3px;">&nbsp;</span> '
-        f'{html.escape(label)}</span>'
-        for label, color in label_to_color.items()
-    )
-
     html_doc = f"""
-    <div style="font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;">
-      <div style="margin-bottom:0.5rem; font-size:0.9rem;">{legend or "No highlighted spans."}</div>
+    <div style="font-family: ui-sans-serif, system-ui, sans-serif;">
       <div style="
           white-space: pre-wrap;
           border: 1px solid #e5e7eb;
@@ -791,7 +797,7 @@ def _render_experiment_highlights(text: str, extractions: list[dict], label_to_c
         ">{''.join(chunks)}</div>
     </div>
     """
-    components.html(html_doc, height=height + 70, scrolling=True)
+    components.html(html_doc, height=height + 40, scrolling=True)
 
 
 _CLAUSE_PALETTE = [
@@ -871,28 +877,51 @@ def render_clause_extraction_comparison():
 
     st.subheader(f"{display_map.get(selected_doc, selected_doc)} — Page {page_num}")
 
-    # Build a shared color map across all methods so same clause = same color
-    label_to_color: dict[str, str] = {}
-    all_extractions_all_methods = []
+    # Collect only labels that actually appear as visible highlights
+    # across all methods (after overlap filtering + bounds checks)
+    visible_labels: set[str] = set()
+    method_extractions: dict[str, list[dict]] = {}
     for method in method_names:
         exts = methods[method].get(str(page_num), [])
-        all_extractions_all_methods.extend(exts)
-    for ex in all_extractions_all_methods:
-        label = ex.get("clause_label", "Unknown")
-        if label not in label_to_color:
-            label_to_color[label] = _CLAUSE_PALETTE[len(label_to_color) % len(_CLAUSE_PALETTE)]
+        method_extractions[method] = exts
+        for _, _, label in _get_visible_spans(page_text, exts):
+            visible_labels.add(label)
+
+    # Build shared color map from visible labels only
+    label_to_color: dict[str, str] = {}
+    for label in sorted(visible_labels):
+        label_to_color[label] = _CLAUSE_PALETTE[
+            len(label_to_color) % len(_CLAUSE_PALETTE)
+        ]
+
+    # Shared legend
+    if label_to_color:
+        legend_html = "".join(
+            f'<span style="display:inline-block;'
+            f' margin:0 0.5rem 0.35rem 0;">'
+            f'<span style="background:{color};'
+            f' padding:0.1rem 0.35rem;'
+            f' border-radius:3px;">&nbsp;</span> '
+            f'{html.escape(label)}</span>'
+            for label, color in label_to_color.items()
+        )
+        components.html(
+            f'<div style="font-family: ui-sans-serif, system-ui,'
+            f' sans-serif; font-size:0.9rem;">'
+            f'{legend_html}</div>',
+            height=60,
+            scrolling=True,
+        )
 
     # Render side-by-side columns
     cols = st.columns(len(method_names), gap="medium")
     for col, method in zip(cols, method_names):
         with col:
-            extractions = methods[method].get(str(page_num), [])
-            n_ext = len(extractions)
-            clause_labels = sorted(set(e.get("clause_label", "") for e in extractions) - {"OTHER"})
-            st.markdown(f"**{method}** ({n_ext} extractions)")
-            _render_experiment_highlights(page_text, extractions, label_to_color, height=600)
-            if clause_labels:
-                st.caption(f"Clauses: {', '.join(clause_labels)}")
+            exts = method_extractions[method]
+            st.markdown(f"**{method}** ({len(exts)} extractions)")
+            _render_experiment_highlights(
+                page_text, exts, label_to_color, height=600,
+            )
 
 
 def main():

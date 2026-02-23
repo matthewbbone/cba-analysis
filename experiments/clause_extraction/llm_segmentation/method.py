@@ -13,7 +13,7 @@ from openai import OpenAI
 
 load_dotenv()
 
-DEFAULT_VERSION = "google/gemini-3-flash-preview"
+DEFAULT_VERSION = "openai/gpt-5-mini"
 
 
 def _build_prompt(taxonomy: list[dict]) -> str:

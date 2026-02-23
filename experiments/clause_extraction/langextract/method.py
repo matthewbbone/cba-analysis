@@ -5,6 +5,7 @@ This implementation keeps the same experiment interface while replacing the
 It is optimized for long documents by:
 - chunking combined document text with overlap,
 - giving each chunk bounded left/right context,
+- running a second focused pass on candidate regions,
 - deduplicating overlap hits,
 - mapping chunk-global spans back to page-local spans.
 """
@@ -23,10 +24,12 @@ from openai import OpenAI
 
 load_dotenv()
 
-DEFAULT_VERSION = "google/gemini-3-flash-preview"
-DEFAULT_MAX_CHAR_BUFFER = 12000
+DEFAULT_VERSION = "openai/gpt-5-mini"
+DEFAULT_MAX_CHAR_BUFFER = 10_000
 DEFAULT_OVERLAP_FRACTION = 0.1
-DEFAULT_CONTEXT_CHARS = 1200
+DEFAULT_CONTEXT_CHARS = 1000
+DEFAULT_EXTRACTION_PASSES = 2
+DEFAULT_REFINEMENT_MARGIN_CHARS = 500
 
 _SEPARATORS = ("\n\n", "\n", ". ", "; ", ", ", " ")
 
@@ -252,6 +255,89 @@ def _dedupe_extractions(extractions: list[dict]) -> list[dict]:
     return deduped
 
 
+def _merge_regions(
+    regions: list[tuple[int, int]],
+    max_gap: int = 200,
+) -> list[tuple[int, int]]:
+    """Merge overlapping or near-adjacent regions."""
+    if not regions:
+        return []
+
+    regions = sorted(regions)
+    merged: list[list[int]] = [[regions[0][0], regions[0][1]]]
+    for start, end in regions[1:]:
+        tail = merged[-1]
+        if start <= tail[1] + max_gap:
+            tail[1] = max(tail[1], end)
+        else:
+            merged.append([start, end])
+    return [(s, e) for s, e in merged]
+
+
+def _build_refinement_chunks(
+    text: str,
+    seed_extractions: list[dict],
+    refinement_margin_chars: int,
+    refinement_chunk_size: int,
+    overlap_fraction: float,
+) -> list[tuple[int, int, str]]:
+    """Build second-pass chunks around first-pass extraction spans."""
+    n = len(text)
+    if n == 0 or not seed_extractions:
+        return []
+
+    refinement_margin_chars = max(200, refinement_margin_chars)
+    refinement_chunk_size = max(1000, refinement_chunk_size)
+
+    seed_regions: list[tuple[int, int]] = []
+    for ext in seed_extractions:
+        start = ext.get("start_pos")
+        end = ext.get("end_pos")
+
+        if start is None or end is None:
+            snippet = str(ext.get("extraction_text", "")).strip()
+            if not snippet:
+                continue
+            start, end = _find_span(text, snippet)
+            if start is None or end is None:
+                continue
+
+        start = int(start)
+        end = int(end)
+        if end <= start:
+            continue
+
+        seed_regions.append((
+            max(0, start - refinement_margin_chars),
+            min(n, end + refinement_margin_chars),
+        ))
+
+    merged_regions = _merge_regions(seed_regions, max_gap=refinement_margin_chars // 3)
+    if not merged_regions:
+        return []
+
+    chunks: list[tuple[int, int, str]] = []
+    seen_offsets: set[tuple[int, int]] = set()
+
+    for region_start, region_end in merged_regions:
+        region_text = text[region_start:region_end]
+        region_chunks = _chunk_text(
+            text=region_text,
+            max_char_buffer=refinement_chunk_size,
+            overlap_fraction=overlap_fraction,
+        )
+        for local_start, local_end, chunk_text in region_chunks:
+            global_start = region_start + local_start
+            global_end = region_start + local_end
+            key = (global_start, global_end)
+            if key in seen_offsets:
+                continue
+            seen_offsets.add(key)
+            chunks.append((global_start, global_end, chunk_text))
+
+    return sorted(chunks, key=lambda x: (x[0], x[1]))
+
+
 def _extract_chunk_sync(
     client: OpenAI,
     chunk_text: str,
@@ -325,6 +411,58 @@ def _extract_chunk_sync(
     return chunk_extractions
 
 
+async def _run_chunk_pass(
+    client: OpenAI,
+    combined_text: str,
+    chunks: list[tuple[int, int, str]],
+    taxonomy: list[dict],
+    version: str,
+    canonical: dict[str, str],
+    names: set[str],
+    context_chars: int,
+    pass_name: str,
+) -> list[dict]:
+    """Run extraction on a set of chunks and return global-span extractions."""
+    pass_extractions: list[dict] = []
+    for i, (start, end, chunk_text) in enumerate(chunks, start=1):
+        left = combined_text[max(0, start - context_chars):start]
+        right = combined_text[end:min(len(combined_text), end + context_chars)]
+        try:
+            chunk_hits = await asyncio.to_thread(
+                _extract_chunk_sync,
+                client,
+                chunk_text,
+                left,
+                right,
+                taxonomy,
+                version,
+                canonical,
+                names,
+            )
+        except Exception as exc:
+            print(f"  [langextract] {pass_name} chunk {i}/{len(chunks)} failed: {exc}")
+            continue
+
+        for hit in chunk_hits:
+            local_start = hit.get("start_pos")
+            local_end = hit.get("end_pos")
+            if local_start is None or local_end is None:
+                global_start = None
+                global_end = None
+            else:
+                global_start = start + int(local_start)
+                global_end = start + int(local_end)
+
+            pass_extractions.append({
+                "clause_label": hit["clause_label"],
+                "extraction_text": hit["extraction_text"],
+                "start_pos": global_start,
+                "end_pos": global_end,
+            })
+
+    return _dedupe_extractions(pass_extractions)
+
+
 async def extract_document(
     doc_dir: str,
     pages: list[int] | None = None,
@@ -333,8 +471,15 @@ async def extract_document(
     max_char_buffer: int = DEFAULT_MAX_CHAR_BUFFER,
     overlap_fraction: float = DEFAULT_OVERLAP_FRACTION,
     context_chars: int = DEFAULT_CONTEXT_CHARS,
+    extraction_passes: int = DEFAULT_EXTRACTION_PASSES,
+    refinement_margin_chars: int = DEFAULT_REFINEMENT_MARGIN_CHARS,
 ) -> dict[int, list[dict]]:
-    """Extract clauses from a whole document using OpenRouter-backed chunking."""
+    """Extract clauses from a whole document using OpenRouter-backed chunking.
+
+    Supports a simple 2-pass mode:
+    - pass 1: coarse extraction over full-document chunks
+    - pass 2: focused extraction around pass-1 candidate spans
+    """
     doc_path = Path(doc_dir)
     if taxonomy is None:
         taxonomy = _load_default_taxonomy()
@@ -389,49 +534,52 @@ async def extract_document(
     print(
         "  [langextract] "
         f"OpenRouter chunk extraction on {len(combined_text)} chars "
-        f"across {len(chunks)} chunks"
+        f"across {len(chunks)} chunks (pass 1)"
     )
 
     client = _make_client()
-    global_extractions: list[dict] = []
+    pass1_extractions = await _run_chunk_pass(
+        client=client,
+        combined_text=combined_text,
+        chunks=chunks,
+        taxonomy=taxonomy,
+        version=version,
+        canonical=canonical,
+        names=names,
+        context_chars=context_chars,
+        pass_name="pass1",
+    )
+    global_extractions = list(pass1_extractions)
 
-    for i, (start, end, chunk_text) in enumerate(chunks, start=1):
-        left = combined_text[max(0, start - context_chars):start]
-        right = combined_text[end:min(len(combined_text), end + context_chars)]
-        try:
-            chunk_hits = await asyncio.to_thread(
-                _extract_chunk_sync,
-                client,
-                chunk_text,
-                left,
-                right,
-                taxonomy,
-                version,
-                canonical,
-                names,
+    if extraction_passes >= 2:
+        refinement_chunk_size = max(2000, max_char_buffer // 2)
+        pass2_chunks = _build_refinement_chunks(
+            text=combined_text,
+            seed_extractions=pass1_extractions,
+            refinement_margin_chars=refinement_margin_chars,
+            refinement_chunk_size=refinement_chunk_size,
+            overlap_fraction=overlap_fraction,
+        )
+        if pass2_chunks:
+            print(
+                "  [langextract] "
+                f"Running focused pass 2 on {len(pass2_chunks)} chunks "
+                f"(around {len(pass1_extractions)} seed hits)"
             )
-        except Exception as exc:
-            print(f"  [langextract] chunk {i}/{len(chunks)} failed: {exc}")
-            continue
-
-        for hit in chunk_hits:
-            local_start = hit.get("start_pos")
-            local_end = hit.get("end_pos")
-            if local_start is None or local_end is None:
-                global_start = None
-                global_end = None
-            else:
-                global_start = start + int(local_start)
-                global_end = start + int(local_end)
-
-            global_extractions.append({
-                "clause_label": hit["clause_label"],
-                "extraction_text": hit["extraction_text"],
-                "start_pos": global_start,
-                "end_pos": global_end,
-            })
-
-    global_extractions = _dedupe_extractions(global_extractions)
+            pass2_extractions = await _run_chunk_pass(
+                client=client,
+                combined_text=combined_text,
+                chunks=pass2_chunks,
+                taxonomy=taxonomy,
+                version=version,
+                canonical=canonical,
+                names=names,
+                context_chars=context_chars,
+                pass_name="pass2",
+            )
+            global_extractions = _dedupe_extractions(global_extractions + pass2_extractions)
+        else:
+            print("  [langextract] Skipping pass 2 (no candidate regions from pass 1)")
 
     for ext in global_extractions:
         start = ext.get("start_pos")

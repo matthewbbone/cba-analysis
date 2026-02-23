@@ -18,7 +18,7 @@ from sentence_transformers import SentenceTransformer
 
 load_dotenv()
 
-DEFAULT_VERSION = "google/gemini-3-flash-preview"
+DEFAULT_VERSION = "openai/gpt-5-mini"
 DEFAULT_EMBED_MODEL = "all-MiniLM-L6-v2"
 
 # Cache the embedding model across calls
