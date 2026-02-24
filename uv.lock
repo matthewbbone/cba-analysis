@@ -298,6 +298,7 @@ dependencies = [
     { name = "langextract", extra = ["openai"] },
     { name = "olmocr", extra = ["bench"] },
     { name = "pypdf" },
+    { name = "pyyaml" },
     { name = "torch" },
     { name = "torchvision" },
 ]
@@ -307,6 +308,7 @@ requires-dist = [
     { name = "langextract", extras = ["openai"], specifier = ">=1.1.1" },
     { name = "olmocr", extras = ["bench"], specifier = ">=0.4.25" },
     { name = "pypdf", specifier = ">=6.7.0" },
+    { name = "pyyaml", specifier = ">=6.0.3" },
     { name = "torch", specifier = ">=2.10.0" },
     { name = "torchvision", specifier = ">=0.25.0" },
 ]
