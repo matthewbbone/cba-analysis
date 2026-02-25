@@ -74,7 +74,22 @@ def _normalize_segments(meta_segments):
             length = int(span[2])
         except Exception:
             continue
-        out.append({"number": number, "start": start, "end": end, "length": length})
+        header = str(v.get("header", "")).strip()
+        parent_header = str(v.get("parent_header", "")).strip()
+        if header.upper() == "NULL":
+            header = ""
+        if parent_header.upper() == "NULL":
+            parent_header = ""
+        out.append(
+            {
+                "number": number,
+                "start": start,
+                "end": end,
+                "length": length,
+                "header": header,
+                "parent_header": parent_header,
+            }
+        )
     return sorted(out, key=lambda x: x["number"])
 
 
@@ -408,8 +423,8 @@ def main():
             {
                 "start_pos": seg["start"],
                 "end_pos": seg["end"],
-                "title": f"segment_{seg['number']}",
-                "parent": "runner.py output",
+                "title": seg["header"] or f"segment_{seg['number']}",
+                "parent": seg["parent_header"] or "Unlabeled Parent",
                 "text": full_text[seg["start"]:seg["end"]],
             }
             for seg in segments
@@ -424,8 +439,9 @@ def main():
         _render_segmentation_highlights(page_text, page_segments, height=520)
         if page_segments:
             for seg in page_segments:
+                parent_label = seg["parent"] if seg["parent"] else "Unlabeled Parent"
                 with st.expander(
-                    f"{seg['title']} | [{seg['local_start']}, {seg['local_end']})",
+                    f"{parent_label} > {seg['title']} | [{seg['local_start']}, {seg['local_end']})",
                     expanded=False,
                 ):
                     st.text(page_text[seg["local_start"]:seg["local_end"]][:2500])

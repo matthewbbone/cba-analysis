@@ -34,7 +34,8 @@ class Page(Chunk):
     
 @dataclass
 class Segment(Chunk):
-    pass
+    header: str | None = None
+    parent_header: str | None = None
     
 @dataclass
 class Document:
@@ -200,7 +201,7 @@ class SegmentationRunner:
         if os.path.exists(self.output_dir / path.name / "boundary_evaluations.json"):
             with open(self.output_dir / path.name / "boundary_evaluations.json", "r") as f:
                 payloads = json.load(f)
-            return [c for i, c in enumerate(candidates) if payloads[i].get("is_boundary") is True]
+            return [c for i, c in enumerate(candidates) if payloads[i].get("is_boundary") is True], payloads
         
         plan = self.documents[path.name].plan
         
@@ -214,8 +215,7 @@ class SegmentationRunner:
             "Return a JSON object with the following fields:",
             '{',
             '  "explanation": "...",',
-            '  "is_boundary": true/false,',
-            '  "confidence": float (0.0 - 1.0),',
+            '  "is_boundary": true/false,'
             "}",
             ''
         ])
@@ -230,9 +230,8 @@ class SegmentationRunner:
                     "properties": {
                         "explanation": {"type": "string"},
                         "is_boundary": {"type": "boolean"},
-                        "confidence": {"type": "number", "minimum": 0.0, "maximum": 1.0}
                     },
-                    "required": ["explanation", "is_boundary", "confidence"]
+                    "required": ["explanation", "is_boundary"]
                 }
             }
         }
@@ -321,6 +320,8 @@ class SegmentationRunner:
         with open(doc_output_dir / "full_text.txt", "w") as f:
             f.write(self.documents[path.name].full_text)
             
+        segment_path = doc_output_dir / "segments"
+        os.makedirs(segment_path, exist_ok=True)
         for segment in self.documents[path.name].segments.values():
             segment_text = self.documents[path.name].full_text[segment.span[0]:segment.span[1]]
             with open(doc_output_dir / "segments" / f"segment_{segment.number}.txt", "w") as f:
