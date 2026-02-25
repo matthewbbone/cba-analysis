@@ -36,24 +36,7 @@ class OCRRunner:
             base_url=base_url,
             timeout=120,
         )
-        self.model_name = model_name or self._discover_served_model()
-
-    def _discover_served_model(self) -> str:
-        try:
-            models = self.client.models.list().data
-        except Exception as exc:
-            raise RuntimeError(
-                "Unable to fetch served models from OpenAI-compatible endpoint. "
-                "Start vLLM first or pass --model explicitly."
-            ) from exc
-
-        if not models:
-            raise RuntimeError(
-                "No models reported by the server. Ensure vLLM is serving a model "
-                "or pass --model explicitly."
-            )
-
-        return models[0].id
+        self.model_name = model_name
 
     @staticmethod
     def _parse_response(raw: str) -> PageResponse:
