@@ -105,20 +105,26 @@ class SegmentationRunner:
         
     def _plan_segmentation(self, path: Path):
         
+        if os.path.exists(self.output_dir / path.name / "document_meta.json"):
+            self.documents[path.name].plan = json.load(open(self.output_dir / path.name / "document_meta.json")).get("plan")
+            return 
+        
         text = self.documents[path.name].full_text[:self.planning_chars]
         system_prompt = "\n".join([
             "You are an expert in understanding formal document structures.",
-            "You've been asked to identify the hierarchical organization of a collective bargaining agreement.",
-            "Infer the highest two-levels of the document's structure.",
+            "You've been asked to identify the organization of a collective bargaining agreement.",
+            "Infer the highest level segmentation structure of the document",
             "For instance, it may be structured into 'Articles' with 'Sections' and 'Subsections.",
-            "You should identify 'Articles' as the first level and 'Sections' as the second level",
-            "without referring to the 'Subsections' as they are not part of the two-level structure.",
+            "You should identify 'Articles' as the highest level.",
+            "Then, provide examples of the headers that introduce these segments.",
+            "Lastly, provide regex rules that could be used to identify these headers in the text.",
+            "The goal is high recall of potential segment boundaries", 
+            "so the regex rules should be permissive and capture some false positives.",
             "Return strict JSON with the following fields:",
             '{',
-            '  "top_level_type": "...",',
-            '  "second_level_type": "...",',
-            '  "example_top_level_header": ["..."],'
-            '  "example_second_level_header": ["..."]',
+            '  "segment_type": "...",',
+            '  "segment_header_examples": ["..."],'
+            '  "segment_header_rules": ["..."]',
             "}",
         ])
         schema = {
@@ -130,22 +136,20 @@ class SegmentationRunner:
                     "type": "object",
                     "additionalProperties": False,
                     "properties": {
-                        "top_level_type": {"type": "string"},
-                        "second_level_type": {"type": "string"},
-                        "example_top_level_header": {
+                        "segment_type": {"type": "string"},
+                        "segment_header_examples": {
                             "type": "array",
                             "items": {"type": "string"}, 
                         },
-                        "example_second_level_header": {
+                        "segment_header_rules": {
                             "type": "array",
                             "items": {"type": "string"},
                         }
                     },
                     "required": [
-                        "top_level_type",
-                        "second_level_type",
-                        "example_top_level_header",
-                        "example_second_level_header",
+                        "segment_type",
+                        "segment_header_examples",
+                        "segment_header_rules"
                     ],
                 },
             },
@@ -169,27 +173,39 @@ class SegmentationRunner:
         )
         
         payload = utils.parse_json_response(response.choices[0].message.content)
-        print(payload)
         self.documents[path.name].plan = payload
         
     def _get_boundary_candidates(self, path: Path):
         
         text = self.documents[path.name].full_text
-        candidates = list(re.finditer(rf"\n\n", text))
+        candidates = []
+        for rule in self.documents[path.name].plan["segment_header_rules"]:
+            try:
+                candidates.extend(re.finditer(rule, text, flags=re.MULTILINE))
+            except re.error:
+                continue
+        
+        # order and deduplicate candidates
+        candidates = sorted(candidates, key=lambda c: c.start())
+        unique_candidates = []
+        last_end = -1
+        for candidate in candidates:
+            if candidate.start() >= last_end:
+                unique_candidates.append(candidate)
+                last_end = candidate.end()
+        candidates = unique_candidates
         
         candidate_texts = []
         for candidate in candidates:
-            
-            breakpoint = text[candidate.start():candidate.end()]
+        
             pretext = text[candidate.start() - self.boundary_padding:candidate.start()]
             posttext = text[candidate.end():candidate.end() + self.boundary_padding]
-            
+        
             candidate_texts.append(
                 "".join([
                     pretext,
-                    "<BOUNDARY>",
-                    breakpoint,
-                    "</BOUNDARY>",
+                    "<BOUNDARY/>",
+                    text[candidate.start():candidate.end()],
                     posttext
                 ])
             )
@@ -200,22 +216,25 @@ class SegmentationRunner:
         
         if os.path.exists(self.output_dir / path.name / "boundary_evaluations.json"):
             with open(self.output_dir / path.name / "boundary_evaluations.json", "r") as f:
-                payloads = json.load(f)
-            return [c for i, c in enumerate(candidates) if payloads[i].get("is_boundary") is True], payloads
+                evaluations = json.load(f)
+            return evaluations
         
         plan = self.documents[path.name].plan
         
         system_prompt = "\n".join([
             "You are an expert in understanding formal document structures.",
             "You've been asked to segment a collective bargaining agreement",
-            f"by reviewing candidate boundaries between {plan['second_level_type']} of text.",
-            "Identify whether the boundary marked by <BOUNDARY> and </BOUNDARY>",
-            f"is a valid boundary between two {plan['second_level_type']} of the document.",
-            f"Some examples of {plan['second_level_type']} headers are: {', '.join(plan['example_second_level_header'])}",  
+            f"by reviewing candidate boundaries between {plan['segment_type']} of the document.",
+            "Identify whether the boundary marked by <BOUNDARY/>",
+            f"is a valid boundary between two {plan['segment_type']} of the document.",
+            f"Some examples of {plan['segment_type']} headers are: {', '.join(plan['segment_header_examples'])}",
+            f"You should aim for high precision in identifying true {plan['segment_type']} boundaries,",
+            f"so only mark a boundary as valid if you are confident it indicates the start of a new {plan['segment_type']}.",
+            "If the boundary is in the table of contents or a list of articles/sections, it is not a true boundary.",
             "Return a JSON object with the following fields:",
             '{',
             '  "explanation": "...",',
-            '  "is_boundary": true/false,'
+            '  "is_new_segment": true/false,',
             "}",
             ''
         ])
@@ -229,9 +248,9 @@ class SegmentationRunner:
                     "additionalProperties": False,
                     "properties": {
                         "explanation": {"type": "string"},
-                        "is_boundary": {"type": "boolean"},
+                        "is_new_segment": {"type": "boolean"},
                     },
-                    "required": ["explanation", "is_boundary"]
+                    "required": ["explanation", "is_new_segment"],
                 }
             }
         }
@@ -268,26 +287,41 @@ class SegmentationRunner:
                 payloads[idx] = payload
             return payloads
 
-        payloads = asyncio.run(_evaluate_all())
+        evaluations = asyncio.run(_evaluate_all())
             
         os.makedirs(self.output_dir / path.name, exist_ok=True)
         with open(self.output_dir / path.name / "boundary_evaluations.json", "w") as f:
-            json.dump(payloads, f, indent=4)
+            json.dump(evaluations, f, indent=4)
             
-        return [c for i, c in enumerate(candidates) if payloads[i].get("is_boundary") is True]
+        return evaluations
     
-    def _create_segments(self, path: Path, valid_candidates: list[re.Match]):
+    def _create_segments(self, path: Path, candidates: list[re.Match], evaluations: list[dict]):
         
+        plan = self.documents[path.name].plan
         text = self.documents[path.name].full_text
         segments = []
-        
-        for i, candidate in enumerate(valid_candidates):
-            start = candidate.end()
-            end = valid_candidates[i + 1].start() if i + 1 < len(valid_candidates) else len(text)
+
+        spans: list[tuple[int, int]] = []
+        if not candidates:
+            spans.append((0, len(text)))
+        else:
+            spans.append((0, candidates[0].start()))
+            for i, candidate in enumerate(candidates):
+                
+                if not evaluations[i].get("is_new_segment", False):
+                    continue
+                
+                start = candidate.end()
+                end = candidates[i + 1].start() if i + 1 < len(candidates) else len(text)
+                spans.append((start, end))
+
+        for start, end in spans:
+            if end <= start:
+                continue
             segment_span = (start, end, end - start)
             segment_obj = Segment(
                 document_id=path.name,
-                number=i + 1,
+                number=len(segments) + 1,
                 span=segment_span,
             )
             segments.append(segment_obj)
@@ -340,8 +374,8 @@ class SegmentationRunner:
         self._plan_segmentation(path)
         candidates, candidate_texts = self._get_boundary_candidates(path)
         print(f"Assessing {len(candidates)} boundary candidates for document {path.name}")
-        valid_candidates = self._evaluate_candidates(path, candidates, candidate_texts)
-        self._create_segments(path, valid_candidates)
+        evaluations = self._evaluate_candidates(path, candidates, candidate_texts)
+        self._create_segments(path, candidates, evaluations)
         self._save_documents(path)
         
     def run(
@@ -376,13 +410,13 @@ def main():
         cache_dir=cache_dir,
         input_dir=input_dir,
         output_dir=output_dir,
-        planning_model='openai/gpt-5.2',
+        planning_model='openai/gpt-oss-120b:exacto',
         planning_chars=80_000,
-        boundary_model='openai/gpt-5-mini',
-        boundary_padding=500,
+        boundary_model='openai/gpt-oss-120b:exacto',
+        boundary_padding=300,
     )
     runner.run(
-        document_id="282ABBYY"
+        sample_size=68
     )
     
 if __name__ == "__main__":

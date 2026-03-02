@@ -74,22 +74,7 @@ def _normalize_segments(meta_segments):
             length = int(span[2])
         except Exception:
             continue
-        header = str(v.get("header", "")).strip()
-        parent_header = str(v.get("parent_header", "")).strip()
-        if header.upper() == "NULL":
-            header = ""
-        if parent_header.upper() == "NULL":
-            parent_header = ""
-        out.append(
-            {
-                "number": number,
-                "start": start,
-                "end": end,
-                "length": length,
-                "header": header,
-                "parent_header": parent_header,
-            }
-        )
+        out.append({"number": number, "start": start, "end": end, "length": length})
     return sorted(out, key=lambda x: x["number"])
 
 
@@ -114,6 +99,60 @@ def _context(full_text: str, start: int, end: int, window: int):
     marker = full_text[start:end]
     post = full_text[end:right]
     return pre, marker, post
+
+
+def _is_new_segment(eval_payload: dict) -> bool:
+    # Prefer the new schema key, but tolerate older cached payloads.
+    if not isinstance(eval_payload, dict):
+        return False
+    if "is_new_segment" in eval_payload:
+        return eval_payload.get("is_new_segment") is True
+    return eval_payload.get("is_boundary") is True
+
+
+def _boundary_question(plan: dict) -> str:
+    segment_type = str(plan.get("segment_type", "")).strip() if isinstance(plan, dict) else ""
+    if not segment_type:
+        segment_type = "segment"
+    return (
+        f"Identify whether the boundary marked by <BOUNDARY/> is a valid boundary "
+        f"between two {segment_type} of the document."
+    )
+
+
+def _collect_boundary_candidates(full_text: str, plan: dict):
+    candidates = []
+    notes = []
+    rules = plan.get("segment_header_rules") if isinstance(plan, dict) else None
+
+    if isinstance(rules, list):
+        for idx, rule in enumerate(rules, start=1):
+            if not isinstance(rule, str) or not rule.strip():
+                notes.append(f"Skipped empty/non-string regex rule at index {idx}.")
+                continue
+            try:
+                candidates.extend(re.finditer(rule, full_text, flags=re.MULTILINE))
+            except re.error as err:
+                notes.append(f"Invalid regex rule #{idx}: {err}.")
+
+    if candidates:
+        # Keep one match per (start, end) in sorted order.
+        deduped = []
+        seen = set()
+        for m in sorted(candidates, key=lambda x: (x.start(), x.end())):
+            key = (m.start(), m.end())
+            if key in seen:
+                continue
+            deduped.append(m)
+            seen.add(key)
+        return deduped, notes, "plan rules"
+
+    fallback = list(re.finditer(r"\n\n", full_text))
+    if isinstance(rules, list) and rules:
+        notes.append(
+            "No usable matches from plan regex rules; fell back to double-newline candidates."
+        )
+    return fallback, notes, "double-newline fallback"
 
 
 def _load_doc_page_text_and_spans(doc_dir: Path):
@@ -278,12 +317,15 @@ def main():
     full_text = payload["full_text"] or ""
     meta = payload["meta"] or {}
     boundary_evaluations = payload["boundary_evaluations"]
+    plan = meta.get("plan") if isinstance(meta.get("plan"), dict) else {}
+    top_level_type = str(plan.get("top_level_type", "")).strip()
+    above_top_level_key = f"above_Articles" if top_level_type else None
 
     if not full_text:
         st.error("Missing or unreadable full_text.txt")
         return
 
-    candidates = list(re.finditer(r"\n\n", full_text))
+    candidates, candidate_notes, candidate_source = _collect_boundary_candidates(full_text, plan)
     n_candidates = len(candidates)
 
     if not isinstance(boundary_evaluations, list):
@@ -296,11 +338,11 @@ def main():
         )
 
     n_aligned = min(n_candidates, n_eval)
-    accepted_idxs = [
+    new_segment_idxs = [
         i
         for i in range(n_aligned)
         if isinstance(boundary_evaluations[i], dict)
-        and boundary_evaluations[i].get("is_boundary") is True
+        and _is_new_segment(boundary_evaluations[i])
     ]
 
     segments = _normalize_segments((meta.get("segments") or {}))
@@ -338,8 +380,11 @@ def main():
     c1, c2, c3, c4 = st.columns(4)
     c1.metric("Candidates", n_candidates)
     c2.metric("Evaluations", n_eval)
-    c3.metric("Accepted boundaries", len(accepted_idxs))
+    c3.metric("New segments", len(new_segment_idxs))
     c4.metric("Segments", len(segments))
+    st.caption(f"Candidate extraction source: {candidate_source}")
+    for note in candidate_notes:
+        st.warning(note)
 
     with st.expander("Plan + Integrity", expanded=False):
         st.subheader("Plan")
@@ -352,14 +397,14 @@ def main():
         else:
             st.success("No overlap or span-length issues found in segment metadata.")
 
-    st.subheader("Boundary Evaluations")
+    st.subheader("Segment Break Evaluations")
+    st.caption(f"Model question: {_boundary_question(plan)}")
     mode = st.radio(
         "Show",
-        options=["accepted", "rejected", "all"],
+        options=["new_segment", "not_new_segment", "all"],
         horizontal=True,
         index=0,
     )
-    min_conf = st.slider("Minimum confidence", min_value=0.0, max_value=1.0, value=0.0, step=0.01)
     context_window = st.slider("Context window (chars)", min_value=100, max_value=2000, value=400, step=100)
 
     filtered = []
@@ -367,16 +412,11 @@ def main():
         p = boundary_evaluations[i]
         if not isinstance(p, dict):
             continue
-        is_boundary = p.get("is_boundary") is True
-        confidence = p.get("confidence")
-        if not isinstance(confidence, (int, float)):
-            confidence = 0.0
+        is_new_segment = _is_new_segment(p)
 
-        if mode == "accepted" and not is_boundary:
+        if mode == "new_segment" and not is_new_segment:
             continue
-        if mode == "rejected" and is_boundary:
-            continue
-        if confidence < min_conf:
+        if mode == "not_new_segment" and is_new_segment:
             continue
         filtered.append(i)
 
@@ -400,12 +440,13 @@ def main():
 
         left, right = st.columns([2, 1])
         with left:
-            st.code(pre + "<BOUNDARY>" + marker + "</BOUNDARY>" + post)
+            st.code(pre + "<BOUNDARY/>" + marker + post)
         with right:
             st.write(f"Candidate #{idx}")
             st.write(f"start={match.start()}, end={match.end()}")
-            st.write(f"is_boundary={eval_payload.get('is_boundary')}")
-            st.write(f"confidence={eval_payload.get('confidence')}")
+            st.write(f"is_new_segment={_is_new_segment(eval_payload)}")
+            if above_top_level_key:
+                st.write(f"{above_top_level_key}={eval_payload.get(above_top_level_key)}")
             st.write("explanation:")
             st.write(eval_payload.get("explanation", ""))
 
@@ -423,8 +464,8 @@ def main():
             {
                 "start_pos": seg["start"],
                 "end_pos": seg["end"],
-                "title": seg["header"] or f"segment_{seg['number']}",
-                "parent": seg["parent_header"] or "Unlabeled Parent",
+                "title": f"segment_{seg['number']}",
+                "parent": "runner.py output",
                 "text": full_text[seg["start"]:seg["end"]],
             }
             for seg in segments
@@ -439,9 +480,8 @@ def main():
         _render_segmentation_highlights(page_text, page_segments, height=520)
         if page_segments:
             for seg in page_segments:
-                parent_label = seg["parent"] if seg["parent"] else "Unlabeled Parent"
                 with st.expander(
-                    f"{parent_label} > {seg['title']} | [{seg['local_start']}, {seg['local_end']})",
+                    f"{seg['title']} | [{seg['local_start']}, {seg['local_end']})",
                     expanded=False,
                 ):
                     st.text(page_text[seg["local_start"]:seg["local_end"]][:2500])

@@ -11,10 +11,18 @@ load_dotenv()
 
 class VLLMServer:
     
-    def __init__(self, model_name: str, port: int = 8000):
+    def __init__(
+        self,
+        model_name: str,
+        port: int = 8000,
+        served_model_name: str | None = None,
+        max_model_len: int = 16384,
+    ):
         
         self.model_name = model_name
         self.port = port
+        self.served_model_name = served_model_name
+        self.max_model_len = max_model_len
         self.server = None
         self.client = None
         
@@ -29,8 +37,11 @@ class VLLMServer:
             self.model_name,
             "--port", str(self.port),
             "--dtype", "bfloat16",
+            "--max-model-len", str(self.max_model_len),
             "--trust-remote-code",
         ]
+        if self.served_model_name:
+            cmd.extend(["--served-model-name", self.served_model_name])
         
         env = os.environ.copy()
         env["VLLM_CACHE_ROOT"] = os.environ["XDG_CACHE_HOME"]
@@ -107,9 +118,26 @@ def main():
     parser = argparse.ArgumentParser(description="Run a vLLM server interactively.")
     parser.add_argument("--model", help="Model name/path to serve")
     parser.add_argument("--port", type=int, default=8000, help="Port to serve on")
+    parser.add_argument(
+        "--served-model-name",
+        type=str,
+        default=None,
+        help="Optional served model name exposed on the OpenAI-compatible endpoint",
+    )
+    parser.add_argument(
+        "--max-model-len",
+        type=int,
+        default=16384,
+        help="Context length for vLLM",
+    )
     args = parser.parse_args()
 
-    server = VLLMServer(args.model, port=args.port)
+    server = VLLMServer(
+        args.model,
+        port=args.port,
+        served_model_name=args.served_model_name,
+        max_model_len=args.max_model_len,
+    )
     server.start()
 
     try:
