@@ -160,7 +160,7 @@ def _default_segmentation_root() -> Path:
     cache_dir = os.environ.get("CACHE_DIR", "").strip()
     if cache_dir:
         return _resolve_path(cache_dir, _project_root()) / "02_segmentation_output"
-    return (_project_root() / "outputs" / "02_segmentation_output").resolve()
+    return (_project_root() / "outputs" / "02_segmentation_output" / "dol_archive").resolve()
 
 
 def _parse_segment_num(path: Path) -> int:
@@ -260,7 +260,7 @@ def _load_sentence_embedder(model_name: str):
         ) from err
 
 
-def _cluster_document_sentences(
+def _cluster_sentence_entries(
     sentence_entries: list[dict[str, Any]],
     *,
     embedder,
@@ -294,7 +294,7 @@ def _cluster_document_sentences(
         texts,
         convert_to_numpy=True,
         normalize_embeddings=True,
-        show_progress_bar=False,
+        show_progress_bar=True,
     )
 
     labels = DBSCAN(eps=dbscan_eps, min_samples=dbscan_min_samples, metric="cosine").fit_predict(embeddings)
@@ -323,43 +323,59 @@ def _cluster_document_sentences(
     }
 
 
-def _apply_embedding_clusters_to_document(
-    doc_out_dir: Path,
+def _apply_embedding_clusters_to_documents(
+    doc_out_dirs: list[Path],
     *,
     embedder,
     embedding_model: str,
     dbscan_eps: float,
     dbscan_min_samples: int,
 ) -> dict[str, Any]:
-    segment_json_files = sorted(doc_out_dir.glob("segment_*.json"), key=_parse_segment_json_num)
-    if not segment_json_files:
+    loaded_payloads: list[tuple[str, Path, dict[str, Any]]] = []
+    sentence_entries: list[dict[str, Any]] = []
+    per_document: dict[str, dict[str, int]] = {}
+
+    for doc_out_dir in doc_out_dirs:
+        doc_id = doc_out_dir.name
+        stats = per_document.setdefault(
+            doc_id,
+            {
+                "segments_updated": 0,
+                "sentences_clustered": 0,
+            },
+        )
+        segment_json_files = sorted(doc_out_dir.glob("segment_*.json"), key=_parse_segment_json_num)
+        for json_path in segment_json_files:
+            payload = json.loads(json_path.read_text(encoding="utf-8", errors="replace"))
+            loaded_payloads.append((doc_id, json_path, payload))
+            stats["segments_updated"] += 1
+            for sentence in payload.get("sentences", []):
+                text = _normalize_space(str(sentence.get("text", "")))
+                if not text:
+                    continue
+                sentence_entries.append({"text": text, "payload": sentence})
+                stats["sentences_clustered"] += 1
+
+    if not loaded_payloads:
         return {
             "follow_up_step": True,
+            "scope": "all_documents",
             "embedding_model": embedding_model,
             "dbscan": {
                 "eps": dbscan_eps,
                 "min_samples": dbscan_min_samples,
                 "metric": "cosine",
             },
+            "documents_updated": 0,
             "segments_updated": 0,
             "sentences_clustered": 0,
             "cluster_count": 0,
             "noise_count": 0,
             "cluster_sizes": {},
+            "per_document": per_document,
         }
 
-    loaded_payloads: list[tuple[Path, dict[str, Any]]] = []
-    sentence_entries: list[dict[str, Any]] = []
-    for json_path in segment_json_files:
-        payload = json.loads(json_path.read_text(encoding="utf-8", errors="replace"))
-        loaded_payloads.append((json_path, payload))
-        for sentence in payload.get("sentences", []):
-            text = _normalize_space(str(sentence.get("text", "")))
-            if not text:
-                continue
-            sentence_entries.append({"text": text, "payload": sentence})
-
-    cluster_summary = _cluster_document_sentences(
+    cluster_summary = _cluster_sentence_entries(
         sentence_entries,
         embedder=embedder,
         embedding_model=embedding_model,
@@ -367,9 +383,10 @@ def _apply_embedding_clusters_to_document(
         dbscan_min_samples=dbscan_min_samples,
     )
 
-    for json_path, payload in loaded_payloads:
+    for _, json_path, payload in loaded_payloads:
         payload["embedding_clustering"] = {
             "follow_up_step": True,
+            "scope": "all_documents",
             "embedding_model": cluster_summary["embedding_model"],
             "dbscan": cluster_summary["dbscan"],
         }
@@ -377,9 +394,12 @@ def _apply_embedding_clusters_to_document(
 
     return {
         "follow_up_step": True,
+        "scope": "all_documents",
         **cluster_summary,
+        "documents_updated": len([s for s in per_document.values() if s["segments_updated"] > 0]),
         "segments_updated": len(loaded_payloads),
         "sentences_clustered": len(sentence_entries),
+        "per_document": per_document,
     }
 
 
@@ -751,7 +771,7 @@ def run(
         },
         "documents": [],
     }
-
+    doc_out_dirs_for_clustering: list[Path] = []
     for doc_dir in docs:
         segments_dir = doc_dir / "segments"
         if not segments_dir.exists():
@@ -763,6 +783,7 @@ def run(
 
         doc_out_dir = output_root / doc_dir.name
         doc_out_dir.mkdir(parents=True, exist_ok=True)
+        doc_out_dirs_for_clustering.append(doc_out_dir)
 
         doc_summary = {
             "document_id": doc_dir.name,
@@ -800,16 +821,34 @@ def run(
             doc_summary["segments_processed"] += 1
             doc_summary["sentences_processed"] += len(sentence_payloads)
 
-        if cluster_follow_up and embedder is not None:
-            doc_summary["embedding_clustering"] = _apply_embedding_clusters_to_document(
-                doc_out_dir,
-                embedder=embedder,
-                embedding_model=embedding_model,
-                dbscan_eps=dbscan_eps,
-                dbscan_min_samples=dbscan_min_samples,
-            )
-
         summary["documents"].append(doc_summary)
+
+    if cluster_follow_up and embedder is not None:
+        global_cluster_summary = _apply_embedding_clusters_to_documents(
+            doc_out_dirs_for_clustering,
+            embedder=embedder,
+            embedding_model=embedding_model,
+            dbscan_eps=dbscan_eps,
+            dbscan_min_samples=dbscan_min_samples,
+        )
+        summary["embedding_clustering"] = {
+            **summary["embedding_clustering"],
+            **global_cluster_summary,
+        }
+        per_document = global_cluster_summary.get("per_document", {})
+        for doc_summary in summary["documents"]:
+            doc_id = str(doc_summary.get("document_id", ""))
+            doc_stats = per_document.get(doc_id, {"segments_updated": 0, "sentences_clustered": 0})
+            doc_summary["embedding_clustering"] = {
+                "follow_up_step": True,
+                "scope": "all_documents",
+                "embedding_model": global_cluster_summary["embedding_model"],
+                "dbscan": global_cluster_summary["dbscan"],
+                "segments_updated": int(doc_stats.get("segments_updated", 0)),
+                "sentences_clustered": int(doc_stats.get("sentences_clustered", 0)),
+                "cluster_count": int(global_cluster_summary["cluster_count"]),
+                "noise_count": int(global_cluster_summary["noise_count"]),
+            }
 
     summary_path = output_root / "summary.json"
     summary_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -849,7 +888,7 @@ def main():
     parser.add_argument(
         "--dbscan-eps",
         type=float,
-        default=0.35,
+        default=0.5,
         help="DBSCAN eps value for sentence embedding clustering.",
     )
     parser.add_argument(
@@ -867,7 +906,7 @@ def main():
     args = parser.parse_args()
 
     summary = run(
-        segmentation_root=args.segmentation_root,
+        segmentation_root=Path(args.segmentation_root) / "dol_archive",
         output_root=args.output_root,
         model=args.model,
         document_id=args.document_id,

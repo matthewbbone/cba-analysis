@@ -11,6 +11,7 @@ import json
 import re
 from tqdm import tqdm
 import sys
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
 try:
     import pipeline.utils.utils as utils
@@ -53,7 +54,7 @@ class SegmentationRunner:
         input_dir: Path,
         output_dir: Path,
         planning_model: str,
-        planning_chars: int,
+        planning_perc: float,
         boundary_model: str,
         boundary_padding: int,
     ): 
@@ -64,7 +65,7 @@ class SegmentationRunner:
         self.documents: dict[str, Document] = {}
         
         self.planning_model: str = planning_model
-        self.planning_chars: int = planning_chars
+        self.planning_perc: float = planning_perc
         self.client = OpenAI(
             api_key=os.environ.get("OPENROUTER_API_KEY", ""),
             base_url="https://openrouter.ai/api/v1", 
@@ -109,7 +110,8 @@ class SegmentationRunner:
             self.documents[path.name].plan = json.load(open(self.output_dir / path.name / "document_meta.json")).get("plan")
             return 
         
-        text = self.documents[path.name].full_text[:self.planning_chars]
+        char_perc = int(len(self.documents[path.name].full_text) * self.planning_perc)
+        text = self.documents[path.name].full_text[:char_perc]
         system_prompt = "\n".join([
             "You are an expert in understanding formal document structures.",
             "You've been asked to identify the organization of a collective bargaining agreement.",
@@ -123,7 +125,7 @@ class SegmentationRunner:
             "Return strict JSON with the following fields:",
             '{',
             '  "segment_type": "...",',
-            '  "segment_header_examples": ["..."],'
+            '  "segment_header_examples": ["..."],',
             '  "segment_header_rules": ["..."]',
             "}",
         ])
@@ -168,11 +170,11 @@ class SegmentationRunner:
                 }
             ],
             response_format=schema,
-            max_tokens=1200,
+            max_tokens=4800,
             temperature=0.0,
         )
         
-        payload = utils.parse_json_response(response.choices[0].message.content)
+        payload = json.loads(response.choices[0].message.content)
         self.documents[path.name].plan = payload
         
     def _get_boundary_candidates(self, path: Path):
@@ -230,7 +232,7 @@ class SegmentationRunner:
             f"Some examples of {plan['segment_type']} headers are: {', '.join(plan['segment_header_examples'])}",
             f"You should aim for high precision in identifying true {plan['segment_type']} boundaries,",
             f"so only mark a boundary as valid if you are confident it indicates the start of a new {plan['segment_type']}.",
-            "If the boundary is in the table of contents or a list of articles/sections, it is not a true boundary.",
+            "If the boundary is in a list of sections like a table of contents, it is not a true boundary.",
             "Return a JSON object with the following fields:",
             '{',
             '  "explanation": "...",',
@@ -247,7 +249,7 @@ class SegmentationRunner:
                     "type": "object",
                     "additionalProperties": False,
                     "properties": {
-                        "explanation": {"type": "string"},
+                        "explanation": {"type": "string", "maxLength": 1000},
                         "is_new_segment": {"type": "boolean"},
                     },
                     "required": ["explanation", "is_new_segment"],
@@ -255,6 +257,12 @@ class SegmentationRunner:
             }
         }
         
+        @retry(
+            retry=retry_if_exception_type(Exception),
+            wait=wait_exponential(multiplier=1, min=1, max=8),
+            stop=stop_after_attempt(3),
+            reraise=True,
+        )
         async def _evaluate_one(idx: int, candidate_text: str):
             response = await asyncio.to_thread(
                 self.client.chat.completions.create,
@@ -270,10 +278,10 @@ class SegmentationRunner:
                     }
                 ],
                 response_format=schema,
-                max_tokens=1200,
+                max_tokens=4800,
                 temperature=0.0,
             )
-            payload = utils.parse_json_response(response.choices[0].message.content)
+            payload = json.loads(response.choices[0].message.content)
             return idx, payload
 
         async def _evaluate_all():
@@ -368,6 +376,7 @@ class SegmentationRunner:
             pages={},
             segments={},
             full_text="",
+            plan=None
         )
         
         self._process_pages(path)
@@ -404,19 +413,20 @@ class SegmentationRunner:
 def main():
     
     cache_dir = os.environ.get("CACHE_DIR")
-    input_dir = "01_ocr_output"
-    output_dir = "02_segmentation_output"
+    input_dir = Path("01_ocr_output") / "dol_archive"
+    output_dir = Path("02_segmentation_output") / "dol_archive"
     runner = SegmentationRunner(
         cache_dir=cache_dir,
         input_dir=input_dir,
         output_dir=output_dir,
         planning_model='openai/gpt-oss-120b:exacto',
-        planning_chars=80_000,
+        planning_perc=.1,
         boundary_model='openai/gpt-oss-120b:exacto',
         boundary_padding=300,
     )
     runner.run(
-        sample_size=68
+        sample_size=59,
+        # document_id="document_790"
     )
     
 if __name__ == "__main__":

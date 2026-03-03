@@ -15,13 +15,11 @@ class VLLMServer:
         self,
         model_name: str,
         port: int = 8000,
-        served_model_name: str | None = None,
         max_model_len: int = 16384,
     ):
         
         self.model_name = model_name
         self.port = port
-        self.served_model_name = served_model_name
         self.max_model_len = max_model_len
         self.server = None
         self.client = None
@@ -40,8 +38,6 @@ class VLLMServer:
             "--max-model-len", str(self.max_model_len),
             "--trust-remote-code",
         ]
-        if self.served_model_name:
-            cmd.extend(["--served-model-name", self.served_model_name])
         
         env = os.environ.copy()
         env["VLLM_CACHE_ROOT"] = os.environ["XDG_CACHE_HOME"]
@@ -135,7 +131,6 @@ def main():
     server = VLLMServer(
         args.model,
         port=args.port,
-        served_model_name=args.served_model_name,
         max_model_len=args.max_model_len,
     )
     server.start()

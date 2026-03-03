@@ -10,8 +10,9 @@ dependencies = [
     "pip>=26.0.1",
     "pypdf>=6.7.2",
     "python-dotenv>=1.2.1",
+    "sentence-transformers>=5.2.3",
     "spacy>=3.8.11",
-    "streamlit>=1.54.0",
+    "streamlit[pdf]>=1.54.0",
     "vllm>=0.15.1",
     "wordcloud>=1.9.4",
 ]

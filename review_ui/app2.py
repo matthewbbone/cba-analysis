@@ -11,9 +11,11 @@ import streamlit.components.v1 as components
 
 
 APP_DIR = Path(__file__).resolve().parent
-DEFAULT_CACHE_DIR = Path(os.environ.get("CACHE_DIR"))
-DEFAULT_SEGMENTATION_DIR = DEFAULT_CACHE_DIR / "02_segmentation_output"
-DEFAULT_OCR_DIR = DEFAULT_CACHE_DIR / "01_ocr_output"
+CACHE_DIR_ENV = os.environ.get("CACHE_DIR")
+DEFAULT_CACHE_DIR = Path(CACHE_DIR_ENV).expanduser() if CACHE_DIR_ENV else APP_DIR.parent
+DEFAULT_COLLECTION = os.environ.get("SEGMENT_COLLECTION", "dol_archive")
+DEFAULT_SEGMENTATION_DIR = DEFAULT_CACHE_DIR / "02_segmentation_output" / DEFAULT_COLLECTION
+DEFAULT_OCR_DIR = DEFAULT_CACHE_DIR / "01_ocr_output" / DEFAULT_COLLECTION
 
 
 def _safe_read_json(path: Path):
@@ -45,6 +47,68 @@ def _sorted_page_paths(doc_dir: Path):
             return 10**9
 
     return sorted(pages, key=_page_num)
+
+
+def _is_document_dir(path: Path) -> bool:
+    return path.is_dir() and re.fullmatch(r"document_\d+", path.name) is not None
+
+
+def _doc_sort_key(doc_id: str):
+    m = re.fullmatch(r"document_(\d+)", doc_id)
+    if not m:
+        return (10**9, doc_id)
+    return (int(m.group(1)), doc_id)
+
+
+def _list_doc_ids(root: Path):
+    if not root.exists() or not root.is_dir():
+        return []
+    return sorted(
+        [p.name for p in root.iterdir() if _is_document_dir(p)],
+        key=_doc_sort_key,
+    )
+
+
+def _resolve_doc_root(root: Path, preferred_collection: str | None = None):
+    notes = []
+    if _is_document_dir(root):
+        notes.append(f"Using single document directory: {root}")
+        return root.parent, [root.name], notes
+
+    direct_doc_ids = _list_doc_ids(root)
+    if direct_doc_ids:
+        return root, direct_doc_ids, notes
+
+    if not root.exists() or not root.is_dir():
+        return root, [], notes
+
+    collection_candidates: list[tuple[Path, list[str]]] = []
+    for subdir in sorted([p for p in root.iterdir() if p.is_dir()], key=lambda p: p.name):
+        sub_doc_ids = _list_doc_ids(subdir)
+        if sub_doc_ids:
+            collection_candidates.append((subdir, sub_doc_ids))
+
+    if not collection_candidates:
+        return root, [], notes
+
+    selected: tuple[Path, list[str]] | None = None
+    if preferred_collection:
+        for candidate in collection_candidates:
+            if candidate[0].name == preferred_collection:
+                selected = candidate
+                break
+
+    if selected is None:
+        if len(collection_candidates) == 1:
+            selected = collection_candidates[0]
+        else:
+            selected = collection_candidates[0]
+            notes.append(
+                f"Multiple collections found under {root}; defaulting to '{selected[0].name}'."
+            )
+
+    notes.append(f"Using collection directory: {selected[0]}")
+    return selected[0], selected[1], notes
 
 
 def _load_doc(seg_dir: Path, doc_id: str):
@@ -295,21 +359,35 @@ def main():
 
     with st.sidebar:
         st.header("Inputs")
-        seg_root = Path(
+        seg_root_input = Path(
             st.text_input("Segmentation output dir", value=str(DEFAULT_SEGMENTATION_DIR))
         )
-        ocr_root = Path(st.text_input("OCR input dir (optional)", value=str(DEFAULT_OCR_DIR)))
+        ocr_root_input = Path(st.text_input("OCR input dir (optional)", value=str(DEFAULT_OCR_DIR)))
 
-    if not seg_root.exists():
-        st.error(f"Segmentation directory does not exist: {seg_root}")
+    if not seg_root_input.exists():
+        st.error(f"Segmentation directory does not exist: {seg_root_input}")
         return
 
-    doc_ids = sorted([p.name for p in seg_root.iterdir() if p.is_dir()])
+    seg_root, doc_ids, seg_root_notes = _resolve_doc_root(
+        seg_root_input,
+        preferred_collection=DEFAULT_COLLECTION,
+    )
+    ocr_root, _, ocr_root_notes = _resolve_doc_root(
+        ocr_root_input,
+        preferred_collection=seg_root.name if seg_root != seg_root_input else DEFAULT_COLLECTION,
+    )
+
     if not doc_ids:
-        st.warning(f"No document folders found in {seg_root}")
+        st.warning(f"No document folders found in {seg_root_input}")
         return
 
     with st.sidebar:
+        for note in seg_root_notes:
+            st.caption(note)
+        for note in ocr_root_notes:
+            st.caption(note)
+        st.caption(f"Seg root: {seg_root}")
+        st.caption(f"OCR root: {ocr_root}")
         doc_id = st.selectbox("Document", options=doc_ids)
 
     payload = _load_doc(seg_root, doc_id)

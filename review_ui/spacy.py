@@ -287,39 +287,63 @@ def _safe_cluster_id(raw) -> int | None:
 
 
 @st.cache_data(show_spinner=False)
-def _document_cluster_sentences(parse_root_str: str, doc_id: str) -> dict[int, list[dict]]:
+def _cluster_sentences(parse_root_str: str, doc_id: str | None = None) -> tuple[dict[int, list[dict]], dict]:
     parse_root = Path(parse_root_str)
-    doc_dir = parse_root / doc_id
     clusters: dict[int, list[dict]] = {}
+    scope_counts = Counter()
+    docs_with_clusters = set()
+    clustered_sentence_count = 0
 
-    for seg_json_path in _segment_json_paths(doc_dir):
-        payload = _safe_read_json(seg_json_path)
-        if not isinstance(payload, dict):
-            continue
-        sentences = payload.get("sentences", [])
-        if not isinstance(sentences, list):
-            continue
-        seg_label = f"segment_{_segment_num_from_json(seg_json_path)}"
-        for idx, sent in enumerate(sentences, start=1):
-            if not isinstance(sent, dict):
+    target_doc_ids = [doc_id] if doc_id else _doc_ids(parse_root)
+
+    for current_doc_id in target_doc_ids:
+        doc_dir = parse_root / str(current_doc_id)
+        for seg_json_path in _segment_json_paths(doc_dir):
+            payload = _safe_read_json(seg_json_path)
+            if not isinstance(payload, dict):
                 continue
-            cluster_id = _safe_cluster_id(sent.get("embedding_cluster_id"))
-            if cluster_id is None:
+            embedding_meta = payload.get("embedding_clustering", {})
+            if isinstance(embedding_meta, dict):
+                scope = str(embedding_meta.get("scope", "")).strip()
+                if scope:
+                    scope_counts[scope] += 1
+
+            sentences = payload.get("sentences", [])
+            if not isinstance(sentences, list):
                 continue
-            sentence_text = str(sent.get("text", "")).strip()
-            if not sentence_text:
-                continue
-            cls = _sentence_classification(sent)
-            clusters.setdefault(cluster_id, []).append(
-                {
-                    "text": sentence_text,
-                    "segment": seg_label,
-                    "sentence_index": idx,
-                    "sentence_type": cls.get("sentence_type", "other"),
-                    "agent_types": cls.get("subject_agent_types", []),
-                }
-            )
-    return clusters
+            seg_label = f"segment_{_segment_num_from_json(seg_json_path)}"
+            for idx, sent in enumerate(sentences, start=1):
+                if not isinstance(sent, dict):
+                    continue
+                cluster_id = _safe_cluster_id(sent.get("embedding_cluster_id"))
+                if cluster_id is None:
+                    continue
+                sentence_text = str(sent.get("text", "")).strip()
+                if not sentence_text:
+                    continue
+                cls = _sentence_classification(sent)
+                clusters.setdefault(cluster_id, []).append(
+                    {
+                        "doc_id": str(current_doc_id),
+                        "text": sentence_text,
+                        "segment": seg_label,
+                        "sentence_index": idx,
+                        "sentence_type": cls.get("sentence_type", "other"),
+                        "agent_types": cls.get("subject_agent_types", []),
+                    }
+                )
+                docs_with_clusters.add(str(current_doc_id))
+                clustered_sentence_count += 1
+
+    dominant_scope = scope_counts.most_common(1)[0][0] if scope_counts else "document"
+    metadata = {
+        "scope": dominant_scope,
+        "documents_scanned": len(target_doc_ids),
+        "documents_with_clusters": len(docs_with_clusters),
+        "clustered_sentence_count": clustered_sentence_count,
+        "doc_filter": str(doc_id) if doc_id else None,
+    }
+    return clusters, metadata
 
 
 def _wordcloud_modules():
@@ -362,15 +386,21 @@ def _render_cluster_wordcloud(
     return wc.to_array()
 
 
-def _render_cluster_wordcloud_view(parse_root: Path, doc_id: str):
+def _render_cluster_wordcloud_view(parse_root: Path, doc_id: str | None = None):
     st.subheader("Cluster Word Clouds")
-    cluster_map = _document_cluster_sentences(str(parse_root), doc_id)
+    cluster_map, cluster_meta = _cluster_sentences(str(parse_root), doc_id)
     if not cluster_map:
+        source_label = doc_id if doc_id else "all documents"
         st.warning(
-            "No embedding clusters found in this document. "
+            f"No embedding clusters found for {source_label}. "
             "Run the spaCy parse pipeline with follow-up embedding clustering enabled."
         )
         return
+
+    if str(cluster_meta.get("scope", "")).strip() == "all_documents":
+        st.caption("Embedding clusters are corpus-level (built across all processed documents).")
+    else:
+        st.caption("Embedding clusters appear to be document-scoped in this output.")
 
     WordCloud, default_stopwords = _wordcloud_modules()
     if WordCloud is None or default_stopwords is None:
@@ -413,12 +443,15 @@ def _render_cluster_wordcloud_view(parse_root: Path, doc_id: str):
         st.info("No non-noise clusters available with current filters.")
         return
 
-    total_clustered = sum(len(v) for v in cluster_map.values())
+    total_clustered = int(cluster_meta.get("clustered_sentence_count", 0))
     shown_clustered = sum(len(cluster_map[cid]) for cid in ordered_cluster_ids)
-    s1, s2, s3 = st.columns(3)
-    s1.metric("Document", doc_id)
-    s2.metric("Clusters shown", len(ordered_cluster_ids))
-    s3.metric("Sentences shown", shown_clustered)
+    source_label = doc_id if doc_id else "All documents"
+    docs_with_clusters = int(cluster_meta.get("documents_with_clusters", 0))
+    s1, s2, s3, s4 = st.columns(4)
+    s1.metric("Source", source_label)
+    s2.metric("Docs represented", docs_with_clusters)
+    s3.metric("Clusters shown", len(ordered_cluster_ids))
+    s4.metric("Sentences shown", shown_clustered)
     st.caption(f"Total clustered sentences (including noise): {total_clustered}")
 
     for cluster_id in ordered_cluster_ids:
@@ -428,7 +461,8 @@ def _render_cluster_wordcloud_view(parse_root: Path, doc_id: str):
         filtered_freq = Counter({k: v for k, v in frequencies.items() if v >= min_word_freq})
 
         st.markdown(f"### Cluster {cluster_id}")
-        st.caption(f"{len(entries)} sentence(s)")
+        doc_count = len({str(e.get("doc_id", "")) for e in entries if str(e.get("doc_id", "")).strip()})
+        st.caption(f"{len(entries)} sentence(s) across {doc_count} document(s)")
         image_array = _render_cluster_wordcloud(
             filtered_freq,
             width=cloud_width,
@@ -454,10 +488,11 @@ def _render_cluster_wordcloud_view(parse_root: Path, doc_id: str):
         with st.expander(f"Sample sentences: cluster {cluster_id}", expanded=False):
             preview_count = min(20, len(entries))
             for row in entries[:preview_count]:
+                row_doc_id = str(row.get("doc_id", ""))
                 sentence_type = str(row.get("sentence_type", "other"))
                 segment = str(row.get("segment", "segment"))
                 sent_idx = row.get("sentence_index", "?")
-                st.write(f"- [{segment} #{sent_idx}] ({sentence_type}) {row.get('text', '')}")
+                st.write(f"- [{row_doc_id} / {segment} #{sent_idx}] ({sentence_type}) {row.get('text', '')}")
             if len(entries) > preview_count:
                 st.caption(f"... and {len(entries) - preview_count} more sentence(s)")
 
@@ -620,17 +655,22 @@ def main():
         _render_random_bucket_sentence_view(parse_root)
 
     with st.sidebar:
-        doc_id = st.selectbox("Document", options=doc_ids)
         view_mode = st.radio("View", options=list(CLUSTER_VIEW_TABS))
+
+    if view_mode == "Cluster Word Clouds":
+        with st.sidebar:
+            cluster_source = st.selectbox("Cluster source", options=["All documents"] + doc_ids)
+        cluster_doc_id = None if cluster_source == "All documents" else str(cluster_source)
+        _render_cluster_wordcloud_view(parse_root, cluster_doc_id)
+        return
+
+    with st.sidebar:
+        doc_id = st.selectbox("Document", options=doc_ids)
 
     doc_dir = parse_root / doc_id
     segment_paths = _segment_json_paths(doc_dir)
     if not segment_paths:
         st.warning(f"No segment JSON files found for {doc_id} in {doc_dir}")
-        return
-
-    if view_mode == "Cluster Word Clouds":
-        _render_cluster_wordcloud_view(parse_root, doc_id)
         return
 
     segment_labels = [f"segment_{_segment_num_from_json(p)}" for p in segment_paths]

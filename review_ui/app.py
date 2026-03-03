@@ -1,6 +1,7 @@
 import io
 import itertools
 import json
+import os
 from pathlib import Path
 import datetime
 import html
@@ -13,17 +14,24 @@ import altair as alt
 import pandas as pd
 from pypdf import PdfReader, PdfWriter
 import streamlit.components.v1 as components
+from dotenv import load_dotenv
+
+load_dotenv()
 
 APP_DIR = Path(__file__).resolve().parent
-DEFAULT_DOC_DIR = APP_DIR.parent / "processed_cbas"
+CACHE_DIR_ENV = os.environ.get("CACHE_DIR", "").strip()
+DEFAULT_CACHE_DIR = Path(CACHE_DIR_ENV).expanduser() if CACHE_DIR_ENV else APP_DIR.parent
+DEFAULT_COLLECTION = "dol_archive"
+
+DEFAULT_DOC_DIR = DEFAULT_CACHE_DIR / DEFAULT_COLLECTION
 DEFAULT_FEATURES_OUTPUT = APP_DIR.parent / "outputs" / "cba_features_annotated.jsonl"
 DEFAULT_META_DTA = APP_DIR.parent / "dol_archive" / "CBAList_with_statefips.dta"
-DEFAULT_OCR_DIR = APP_DIR.parent / "ocr_output"
+DEFAULT_OCR_DIR = DEFAULT_CACHE_DIR / "01_ocr_output" / DEFAULT_COLLECTION
 DEFAULT_OCR_EXPERIMENT_DIR = APP_DIR.parent / "experiments" / "ocr"
 DEFAULT_CLAUSE_EXPERIMENT_DIR = APP_DIR.parent / "experiments" / "clause_extraction"
 DEFAULT_PROVISION_EXPERIMENT_DIR = APP_DIR.parent / "experiments" / "provision_identification"
 DEFAULT_SEGMENTATION_EXPERIMENT_DIR = APP_DIR.parent / "experiments" / "segmentation"
-DEFAULT_PDF_DIR = APP_DIR.parent / "processed_cbas"
+DEFAULT_PDF_DIR = DEFAULT_CACHE_DIR / DEFAULT_COLLECTION
 DEFAULT_ANNOTATED_JSONL = APP_DIR.parent / "outputs" / "cba_features_annotated.jsonl"
 
 
@@ -563,7 +571,7 @@ def render_ocr_viewer():
         # Get page text from individual page files
         page_text = ""
         if page_idx < len(page_files):
-            page_text = page_files[page_idx].read_text(encoding="utf-8")
+            page_text = page_files[page_idx + 1].read_text(encoding="utf-8")
 
         annotations = load_annotated_pages(annotated_jsonl) if annotated_jsonl.exists() else {}
         page_num = page_idx + 1
