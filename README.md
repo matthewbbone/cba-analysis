@@ -140,7 +140,7 @@ $CACHE_DIR/
 
 ### OCR
 
-Use explicit output paths so downstream stages see `01_ocr_output`:
+The OCR stage now defaults to `01_ocr_output`:
 
 ```bash
 uv run python pipeline/01_ocr/runner.py \
@@ -157,9 +157,17 @@ uv run python pipeline/01_ocr/runner.py \
 uv run python pipeline/02_segment/runner.py
 ```
 
-Current caveat:
+Default behavior:
 
-- `pipeline/02_segment/runner.py` is still configured for cached reruns in `main()`
+- cached reruns are enabled by default
+- use `--no-cached-only` to process all matching OCR documents, including fresh runs without cache artifacts
+
+Examples:
+
+```bash
+uv run python pipeline/02_segment/runner.py --document-id document_790
+uv run python pipeline/02_segment/runner.py --no-cached-only
+```
 
 ### Clause classification
 
@@ -244,8 +252,7 @@ Most summary scripts write charts into repo-local `figures/`, even when their in
 
 ## Known Caveats
 
-- `pipeline/01_ocr/runner.py` still defaults to `01_ocr_output_qwen3_5`, while downstream stages often expect `01_ocr_output`. Use explicit OCR flags.
-- `pipeline/02_segment/runner.py` is not yet a polished first-run CLI.
+- `pipeline/02_segment/runner.py` defaults to cached reruns; pass `--no-cached-only` for a fresh full pass.
 - `CACHE_DIR` is effectively required for most collaborator workflows.
 - `review_ui/app3.py` is the only review UI that should be treated as the primary collaborator entrypoint.
 - `development/` contains moved experimental and internal material and is not required for normal collaborator onboarding.

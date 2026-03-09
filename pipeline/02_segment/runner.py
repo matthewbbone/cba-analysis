@@ -7,10 +7,11 @@ segment text files plus a `document_meta.json` manifest for downstream stages.
 Operational notes for collaborators:
 - Input and output paths are resolved relative to `CACHE_DIR`.
 - The script entrypoint currently targets `01_ocr_output/dol_archive`.
-- The checked-in `main()` is configured for cached reruns (`cached_only=True`);
-  see the README caveats before expecting a fresh end-to-end segmentation pass.
+- The CLI defaults to cached reruns, but can be switched to process all
+  documents with `--no-cached-only`.
 """
 
+import argparse
 import os
 import asyncio
 from pathlib import Path
@@ -454,7 +455,37 @@ class SegmentationRunner:
         
         
 def main():
-    """Run segmentation with the repository's current default cache layout."""
+    """Run segmentation with cached reruns enabled by default."""
+
+    parser = argparse.ArgumentParser(
+        description="Segment OCR output into top-level CBA sections."
+    )
+    parser.add_argument(
+        "--sample-size",
+        type=int,
+        default=None,
+        help="Randomly process only N documents.",
+    )
+    parser.add_argument(
+        "--document-id",
+        type=str,
+        default=None,
+        help="Process a single document directory such as document_790.",
+    )
+    parser.set_defaults(cached_only=True)
+    parser.add_argument(
+        "--cached-only",
+        dest="cached_only",
+        action="store_true",
+        help="Only process documents with cached planning/evaluation artifacts (default).",
+    )
+    parser.add_argument(
+        "--no-cached-only",
+        dest="cached_only",
+        action="store_false",
+        help="Process all matching OCR documents, including fresh runs without cache artifacts.",
+    )
+    args = parser.parse_args()
 
     cache_dir = os.environ.get("CACHE_DIR")
     input_dir = Path("01_ocr_output") / "dol_archive"
@@ -470,11 +501,9 @@ def main():
         provider="openai"
     )
     runner.run(
-        # This entrypoint is currently tuned for reruns over documents that
-        # already have cached planning/evaluation artifacts.
-        # sample_size=75,
-        # document_id="document_790"
-        cached_only=True
+        sample_size=args.sample_size,
+        document_id=args.document_id,
+        cached_only=args.cached_only,
     )
     
 if __name__ == "__main__":
