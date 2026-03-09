@@ -1,3 +1,16 @@
+"""Segment OCR text into top-level CBA sections.
+
+This stage reads per-document OCR output directories, asks an LLM to infer the
+document's highest-level structure, evaluates candidate boundaries, and writes
+segment text files plus a `document_meta.json` manifest for downstream stages.
+
+Operational notes for collaborators:
+- Input and output paths are resolved relative to `CACHE_DIR`.
+- The script entrypoint currently targets `01_ocr_output/dol_archive`.
+- The checked-in `main()` is configured for cached reruns (`cached_only=True`);
+  see the README caveats before expecting a fresh end-to-end segmentation pass.
+"""
+
 import os
 import asyncio
 from pathlib import Path
@@ -48,7 +61,8 @@ class Document:
     plan: dict | None = None
 
 class SegmentationRunner:
-    
+    """Plan, score, and materialize document segments for OCR'd CBAs."""
+
     def __init__(
         self,
         cache_dir: str,
@@ -89,6 +103,7 @@ class SegmentationRunner:
         self.boundary_padding = boundary_padding
         
     def _process_pages(self, path: Path):
+        """Load page text files and record their character spans in the full text."""
         
         separator = "\n\n"
         offset = 0
@@ -118,6 +133,7 @@ class SegmentationRunner:
         self.documents[path.name].full_text = separator.join(texts)
         
     def _plan_segmentation(self, path: Path):
+        """Infer header patterns for the document's top-level segmentation scheme."""
         
         if os.path.exists(self.output_dir / path.name / "document_meta.json"):
             self.documents[path.name].plan = json.load(open(self.output_dir / path.name / "document_meta.json")).get("plan")
@@ -228,6 +244,7 @@ class SegmentationRunner:
         return candidates, candidate_texts
             
     def _evaluate_candidates(self, path: Path, candidates: list[re.Match], candidate_texts: list[str]):
+        """Ask the boundary model which regex candidates are true segment starts."""
         
         if os.path.exists(self.output_dir / path.name / "boundary_evaluations.json"):
             with open(self.output_dir / path.name / "boundary_evaluations.json", "r") as f:
@@ -407,6 +424,7 @@ class SegmentationRunner:
         document_id: str | None = None,
         cached_only: bool = False,
     ):
+        """Process all selected OCR documents and write segment files to disk."""
         
         paths = sorted(self.input_dir.glob("*/"), key=lambda p: p.name)
 
@@ -436,7 +454,8 @@ class SegmentationRunner:
         
         
 def main():
-    
+    """Run segmentation with the repository's current default cache layout."""
+
     cache_dir = os.environ.get("CACHE_DIR")
     input_dir = Path("01_ocr_output") / "dol_archive"
     output_dir = Path("02_segmentation_output") / "dol_archive"
@@ -451,6 +470,8 @@ def main():
         provider="openai"
     )
     runner.run(
+        # This entrypoint is currently tuned for reruns over documents that
+        # already have cached planning/evaluation artifacts.
         # sample_size=75,
         # document_id="document_790"
         cached_only=True

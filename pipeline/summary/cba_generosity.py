@@ -1,3 +1,9 @@
+"""Generate a ranked document-level generosity chart from LLM outputs.
+
+The script reads `document_composite_scores.csv`, joins optional company names
+from the DOL metadata files, and writes chart/table artifacts to `figures/`.
+"""
+
 from __future__ import annotations
 
 import argparse
@@ -294,6 +300,7 @@ def run(
     dol_archive_dir: Path,
     top_bottom_count: int = 5,
 ) -> dict[str, Any]:
+    """Create a labeled bar chart of document composite generosity scores."""
     llm_output_dir = llm_output_dir.expanduser().resolve()
     figure_dir = figure_dir.expanduser().resolve()
     dol_archive_dir = dol_archive_dir.expanduser().resolve()
@@ -509,6 +516,7 @@ def run(
 
 
 def main() -> None:
+    """CLI entrypoint for the document-level generosity figure."""
     parser = argparse.ArgumentParser(
         description=(
             "Create a horizontal bar chart of 04_generosity_llm document composite scores "

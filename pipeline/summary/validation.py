@@ -1,3 +1,9 @@
+"""Compare LLM and Gabriel document-level generosity scores.
+
+This script loads both scoring outputs, computes overlap statistics, and writes
+the validation scatter artifacts used in the repository figures.
+"""
+
 from __future__ import annotations
 
 import argparse
@@ -149,6 +155,7 @@ def run(
     gab_output_dir: Path,
     output_dir: Path,
 ) -> dict[str, Any]:
+    """Build overlap tables and a scatter plot for LLM-vs-GAB validation."""
     llm_output_dir = llm_output_dir.expanduser().resolve()
     gab_output_dir = gab_output_dir.expanduser().resolve()
     output_dir = output_dir.expanduser().resolve()
@@ -263,6 +270,7 @@ def run(
 
 
 def main() -> None:
+    """CLI entrypoint for the LLM-vs-GAB validation figure."""
     parser = argparse.ArgumentParser(
         description=(
             "Create LLM-vs-GAB validation scatter with Pearson and Spearman correlation "

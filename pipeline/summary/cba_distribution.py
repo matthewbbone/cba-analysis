@@ -1,3 +1,9 @@
+"""Build state-by-industry coverage summaries for scored CBAs.
+
+This script joins `04_generosity_llm` document scores with DOL metadata and
+emits CSV/JSON summaries used by the figures in `figures/`.
+"""
+
 from __future__ import annotations
 
 import argparse
@@ -336,6 +342,7 @@ def run(
     dol_archive_dir: Path,
     output_dir: Path,
 ) -> dict[str, Any]:
+    """Create state/industry distribution tables from LLM-scored documents."""
     llm_output_dir = llm_output_dir.expanduser().resolve()
     dol_archive_dir = dol_archive_dir.expanduser().resolve()
     output_dir = output_dir.expanduser().resolve()
@@ -447,6 +454,7 @@ def run(
 
 
 def main() -> None:
+    """CLI entrypoint for the state-by-industry distribution summary."""
     parser = argparse.ArgumentParser(
         description=(
             "Build a joint distribution table for CBAs processed by 04_generosity_llm "

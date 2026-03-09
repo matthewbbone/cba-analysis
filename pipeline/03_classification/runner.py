@@ -1,3 +1,11 @@
+"""Classify segmented CBA text into clause types from the project taxonomy.
+
+The classifier combines embedding retrieval against the taxonomy reference file
+with an OpenRouter-hosted LLM that chooses a single final label per segment.
+Outputs are written as one JSON payload per segment under
+`03_classification_output/<collection>/document_*/segment_*.json`.
+"""
+
 import asyncio
 import argparse
 import json
@@ -25,6 +33,7 @@ class FeatureMeta:
 
 
 def parse_taxonomy(path: Path) -> list[FeatureMeta]:
+    """Load clause definitions from `references/feature_taxonomy_final.md`."""
     if not path.exists():
         raise FileNotFoundError(f"Taxonomy file not found: {path}")
 
@@ -70,6 +79,7 @@ def parse_taxonomy(path: Path) -> list[FeatureMeta]:
 
 
 def build_prompt() -> str:
+    """Return the fixed instruction prompt for the final label-selection call."""
     return "\n".join(
         [
             "You classify ONE segment of collective bargaining agreement text.",
@@ -120,6 +130,8 @@ def normalize_feature_name(raw: str, canonical: dict[str, str], names: set[str])
 
 
 class ClauseExtractionRunner:
+    """Run taxonomy-based clause classification over segmented documents."""
+
     def __init__(
         self,
         cache_dir: str | Path,
@@ -216,6 +228,7 @@ class ClauseExtractionRunner:
         return json.dumps(candidates, ensure_ascii=False, indent=2)
 
     def _retrieve_top_candidates(self, text: str) -> list[dict[str, Any]]:
+        """Rank likely clause labels via sentence-transformer similarity search."""
         if not self.retrieval_features or self.feature_embeddings is None:
             return []
 
@@ -495,6 +508,7 @@ class ClauseExtractionRunner:
 
 
 def main():
+    """CLI entrypoint for segment classification."""
     parser = argparse.ArgumentParser(description="Classify segmented CBA text into clause labels with embedding retrieval + OpenRouter.")
     parser.add_argument("--cache-dir", type=str, default=os.environ.get("CACHE_DIR", ""))
     parser.add_argument("--input-dir", type=Path, default=Path("02_segmentation_output") / "dol_archive")

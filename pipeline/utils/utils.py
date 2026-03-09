@@ -1,8 +1,11 @@
+"""Small shared parsing helpers for pipeline scripts."""
+
 from typing import Any
 import re
 import json
 
 def parse_json_response(text: str) -> dict[str, Any]:
+    """Parse a model response that may contain fenced or wrapped JSON."""
     raw = (text or "").strip()
     if not raw:
         return {}

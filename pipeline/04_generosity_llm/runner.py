@@ -1,3 +1,10 @@
+"""Run rubric-based generosity scoring over classified CBA segments.
+
+This stage builds clause-specific schemas from sampled segments, extracts
+structured details, calibrates scoring rubrics, and evaluates document+clause
+pairs into composite generosity outputs. All model calls go through OpenRouter.
+"""
+
 from __future__ import annotations
 
 import asyncio
@@ -53,6 +60,7 @@ def _resolve_path(raw: str, base: Path) -> Path:
 
 
 def _resolve_io_path(path_value: Path, cache_base: Path | None) -> Path:
+    """Resolve CLI paths against `CACHE_DIR` when callers pass relative values."""
     p = Path(path_value)
     if p.is_absolute():
         return p.resolve()
@@ -321,6 +329,8 @@ def _coerce_field_value(value: Any, field_type: str) -> Any:
 
 
 class GenerosityLlmRunner:
+    """Own the end-to-end schema, extraction, rubric, and evaluation workflow."""
+
     def __init__(
         self,
         *,
@@ -1647,6 +1657,7 @@ class GenerosityLlmRunner:
 
 
 def main() -> None:
+    """CLI entrypoint for rubric-based generosity scoring."""
     parser = argparse.ArgumentParser(
         description=(
             "Rubric-based generosity scoring pipeline with OpenRouter: "

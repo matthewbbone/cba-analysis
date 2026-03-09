@@ -1,3 +1,11 @@
+"""Compute Gabriel-style generosity rankings from classified CBA segments.
+
+This stage reads segmentation outputs plus clause labels, ranks segments within
+each clause type, converts ranks to within-clause scores, and aggregates those
+scores up to document-level composites. Paths default to `CACHE_DIR` when set
+and otherwise fall back to `outputs/` inside the repository.
+"""
+
 from __future__ import annotations
 
 import argparse
@@ -55,6 +63,7 @@ def _default_cache_dir() -> str:
 
 
 def _default_input_dir() -> Path:
+    """Return the default segmentation directory for the active cache layout."""
     cache_dir = _default_cache_dir()
     if cache_dir:
         return _resolve_path(cache_dir, _project_root()) / "02_segmentation_output" / "dol_archive"
@@ -62,6 +71,7 @@ def _default_input_dir() -> Path:
 
 
 def _default_classification_dir() -> Path:
+    """Return the default classification directory for the active cache layout."""
     cache_dir = _default_cache_dir()
     if cache_dir:
         return _resolve_path(cache_dir, _project_root()) / "03_classification_output" / "dol_archive"
@@ -69,6 +79,7 @@ def _default_classification_dir() -> Path:
 
 
 def _default_output_dir() -> Path:
+    """Return the default output directory for Gabriel scoring artifacts."""
     cache_dir = _default_cache_dir()
     if cache_dir:
         return _resolve_path(cache_dir, _project_root()) / "04_generosity_gab_output" / "dol_archive"
@@ -121,6 +132,8 @@ def _is_excluded_procedural_clause_type(clause_type: Any) -> bool:
 
 
 class GenerosityGabRunner:
+    """Aggregate segment-level pairwise generosity comparisons into document scores."""
+
     def __init__(
         self,
         *,
@@ -724,6 +737,7 @@ class GenerosityGabRunner:
 
 
 def main() -> None:
+    """CLI entrypoint for Gabriel generosity scoring."""
     parser = argparse.ArgumentParser(
         description=(
             "Rank segment-level generosity with GAB within each clause type and aggregate to "

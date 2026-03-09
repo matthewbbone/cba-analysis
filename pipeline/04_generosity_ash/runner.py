@@ -1,3 +1,10 @@
+"""Compute the rule-based ASH baseline generosity metrics.
+
+The ASH pipeline derives sentence- and segment-level auth categories from
+classified CBA segments, aggregates worker-versus-firm counts, and writes
+document-level outputs for comparison against the primary LLM and GAB methods.
+"""
+
 from __future__ import annotations
 
 import argparse
@@ -1119,6 +1126,8 @@ def _statement_rows_for_sentence(
 
 
 class GenerosityAshRunner:
+    """Run the sentence parsing and auth aggregation baseline over classified segments."""
+
     def __init__(
         self,
         *,
@@ -1432,6 +1441,7 @@ class GenerosityAshRunner:
 
 
 def main() -> None:
+    """CLI entrypoint for the ASH baseline scorer."""
     parser = argparse.ArgumentParser(
         description=(
             "Run Ash-style auth categorization (obligation/constraint/permission/entitlement) "

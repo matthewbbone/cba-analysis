@@ -1,3 +1,10 @@
+"""Primary Streamlit dashboard for inspecting pipeline outputs side by side.
+
+Compared with `review_ui/app.py`, this UI is broader: it can browse
+segmentation, classification, and all three generosity outputs, while also
+falling back across multiple cache/output directory layouts used in the repo.
+"""
+
 import html
 import io
 import json
@@ -36,6 +43,7 @@ GENEROSITY_RATIO_STATUS_COLORS = {
 
 
 def _resolve_clause_root(cache_dir: Path, collection: str) -> Path:
+    """Find the first clause-classification directory that exists for the UI."""
     candidates = [
         cache_dir / "03_classification_output" / collection,
         cache_dir / "03_classification_output",
@@ -49,6 +57,7 @@ def _resolve_clause_root(cache_dir: Path, collection: str) -> Path:
 
 
 def _resolve_generosity_ash_root(cache_dir: Path, collection: str) -> Path:
+    """Support both cache-root and repo-local layouts for ASH outputs."""
     candidates = [
         cache_dir / "04_generosity_ash_output" / collection,
         cache_dir / "04_generosity_ash_output",
@@ -62,6 +71,7 @@ def _resolve_generosity_ash_root(cache_dir: Path, collection: str) -> Path:
 
 
 def _resolve_generosity_gab_root(cache_dir: Path, collection: str) -> Path:
+    """Support both cache-root and repo-local layouts for GAB outputs."""
     candidates = [
         cache_dir / "04_generosity_gab_output" / collection,
         cache_dir / "04_generosity_gab_output",
@@ -75,6 +85,7 @@ def _resolve_generosity_gab_root(cache_dir: Path, collection: str) -> Path:
 
 
 def _resolve_generosity_llm_root(cache_dir: Path, collection: str) -> Path:
+    """Support both cache-root and repo-local layouts for LLM generosity outputs."""
     candidates = [
         cache_dir / "04_generosity_llm_output" / collection,
         cache_dir / "04_generosity_llm_output",
@@ -3726,6 +3737,7 @@ def _render_cluster_examples_view(cluster_root: Path):
 
 
 def main():
+    """Launch the main review dashboard for pipeline artifacts."""
     st.set_page_config(page_title="OCR + Segments Review", layout="wide")
     st.title("OCR + Segments Review")
 

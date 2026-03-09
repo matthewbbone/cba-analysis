@@ -1,3 +1,9 @@
+"""Summarize clause prevalence from classification outputs.
+
+The resulting CSV/JSON/figure artifacts answer which clause types appear most
+often across classified documents and segments.
+"""
+
 from __future__ import annotations
 
 import argparse
@@ -130,6 +136,7 @@ def run(
     figure_dir: Path,
     include_other: bool = False,
 ) -> dict[str, Any]:
+    """Count clause prevalence across classified documents and build chart assets."""
     classification_dir = classification_dir.expanduser().resolve()
     output_dir = output_dir.expanduser().resolve()
     figure_dir = figure_dir.expanduser().resolve()
@@ -365,6 +372,7 @@ def run(
 
 
 def main() -> None:
+    """CLI entrypoint for clause prevalence summaries."""
     parser = argparse.ArgumentParser(
         description="Build a clause type prevalence summary across documents and save Plotly chart to ./figures."
     )

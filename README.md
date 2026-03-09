@@ -1,104 +1,281 @@
-# CBA Dataset Construction Methodology
+# CBA Analysis
 
-## Purpose and Scope
-This repository implements a document-transformation pipeline that converts archival collective bargaining agreements (CBAs) into a structured, document-linked dataset for clause-level and document-level generosity analysis.
+This repository turns archival collective bargaining agreements (CBAs) into structured analysis artifacts. The maintained code is organized as a CLI-first pipeline for OCR, segmentation, clause classification, and generosity scoring, plus Streamlit dashboards for reviewing outputs and a set of summary scripts that generate figures.
 
-The canonical methodology is:
+The main production path is:
 
-`01_ocr -> 02_segment -> 03_classification -> 04_generosity_gab`
+`PDFs -> OCR text -> document segments -> clause labels -> generosity scores -> summary figures`
 
-The `04_generosity_ash` method is retained as a baseline comparison and is documented in Appendix A.
+## What The Repo Contains
 
-## End-to-End Transformation Path
-The pipeline transforms each source contract through the following representation sequence:
+### Maintained runnable code
 
-`PDF document -> page text -> document text -> segment text -> clause-typed segment -> clause-type generosity score -> document composite score`
+- `pipeline/`
+  Main OCR, segmentation, classification, generosity, and summary scripts.
+- `review_ui/`
+  Streamlit dashboards for inspecting OCR, segmentation, classification, and generosity outputs.
+- `clause_extraction/`
+  Separate extraction-oriented runners for OCR and clause extraction workflows.
+- `generosity/`
+  Method-development utilities and comparison scripts for generosity scoring.
+- `scripts/`
+  Standalone utilities such as direct PDF clause-feature extraction.
 
-At each stage, `document_id` is preserved so intermediate and final records remain linkable across tables.
+### Experiments and references
 
-## Stage 01: OCR Transformation (`01_ocr`)
-**Input:** Scanned CBA PDFs.
+- `experiments/`
+  Evaluation harnesses, reports, and method-specific outputs for OCR, segmentation, sentence parsing, and clause extraction experiments.
+- `references/`
+  Research references and the clause taxonomy used by the classifier.
 
-**Transformation:** Page images are converted from non-machine-readable document scans into machine-readable text.
+### Generated artifacts and source data
 
-**Output:**
-- Document-aligned page text units.
-- Assembled document-level text.
+- `outputs/`
+  Checked-in caches and generated CSV/JSONL artifacts.
+- `figures/`
+  Generated charts, HTML visualizations, and summary JSON files.
+- `dol_archive/`
+  Source metadata and example archive files.
 
-**Dataset contribution:** Establishes the base textual corpus required for all downstream structuring and scoring.
+## Pipeline Overview
 
-## Stage 02: Segmentation Transformation (`02_segment`)
-**Input:** OCR-derived document text.
+### 1. OCR
 
-**Transformation:** Each CBA is partitioned into ordered top-level contractual units (segments/articles), producing standardized text units for later labeling and scoring.
+Entry point: `pipeline/01_ocr/runner.py`
 
-**Output:**
-- Ordered segment text units per document.
-- Document-relative structural segmentation.
+- Input: `document_*.pdf`
+- Output: one directory per document containing `page_####.txt` files plus assembled full text
+- Providers:
+  - local vLLM
+  - Google AI Studio via the OpenAI-compatible Gemini endpoint
 
-**Dataset contribution:** Creates comparable segment-level records so semantic labels and generosity scores are attached to consistent contract units.
+### 2. Segmentation
 
-## Stage 03: Clause Classification Transformation (`03_classification`)
-**Input:** Segmented contract text units.
+Entry point: `pipeline/02_segment/runner.py`
 
-**Transformation:** Each segment is assigned a clause type from a fixed taxonomy, with `OTHER` used when no taxonomy class is appropriate.
+- Input: OCR output directories
+- Output: `document_meta.json`, `full_text.txt`, and `segments/segment_*.txt`
+- Method: use an LLM to infer the document structure, score candidate headers, then write top-level segments
 
-**Output:**
-- Segment-level clause labels with one primary assigned class per segment.
+### 3. Clause classification
 
-**Dataset contribution:** Adds semantic clause typing, enabling within-clause comparisons across different documents.
+Entry point: `pipeline/03_classification/runner.py`
 
-## Stage 04: Gabriel Generosity Transformation (Primary) (`04_generosity_gab`)
-**Input:** Segment text with clause-type labels.
+- Input: segmented text files
+- Output: one JSON file per segment with clause labels
+- Method: embedding retrieval against `references/feature_taxonomy_final.md` plus an OpenRouter LLM decision step
 
-**Transformation:**
-1. Segments are ranked by generosity within each clause type across documents.
-2. Segment ranks are converted to within-clause percentiles.
-3. A clause-type score is computed per document as the mean segment percentile for that clause type.
-4. A document composite score is computed as the mean of available clause-type scores.
+### 4. Generosity scoring
 
-**Coverage rule for stability:**
-- If a clause type appears in fewer than 5 documents, no ranking is computed for that clause type.
-- The corresponding clause-type score is treated as `NA` and excluded from the document composite mean.
+- `pipeline/04_generosity_gab/runner.py`
+  Pairwise/ranking-style Gabriel score aggregation
+- `pipeline/04_generosity_ash/runner.py`
+  Rule-based ASH baseline from sentence/auth parsing
+- `pipeline/04_generosity_llm/runner.py`
+  Rubric-based LLM scoring with schema generation, extraction, and evaluation
 
-**Output:**
-- Segment-level generosity table.
-- Clause-type-by-document generosity table.
-- Document-level composite ranking table.
+### 5. Review and summaries
 
-**Dataset contribution:** Produces comparable continuous generosity measures at segment, clause-type, and document levels.
+- `review_ui/app3.py`
+  Preferred review dashboard
+- `pipeline/summary/*.py`
+  Figure and table builders for clause prevalence, validation, time series, and document distributions
 
-## Final Dataset Structure
-The final dataset is a linked set of tables keyed by `document_id` (and `segment_number` where applicable).
+## Environment Setup
 
-Core analytical views:
+### Python and dependency manager
 
-1. **Segment view**
-- Segment text unit.
-- Clause type.
-- Segment-level generosity outputs.
+- Preferred Python: `3.12+` from `pyproject.toml`
+- Preferred package manager: `uv`
 
-2. **Clause-document view**
-- Clause-type score for each document.
+Bootstrap the environment:
 
-3. **Document view**
-- Composite generosity score.
-- Document rank.
+```bash
+uv sync
+```
 
-Interpretation:
-- Higher Gabriel values indicate language that is more worker-generous relative to peer segments in the same clause type.
-- Composite values summarize average clause-type standing for each document using available non-NA clause-type scores.
+If you want to use the project virtualenv directly:
 
-## Appendix A: ASH Baseline Comparison Method (`04_generosity_ash`)
-`04_generosity_ash` is a baseline comparator, not the primary scoring method.
+```bash
+source .venv/bin/activate
+```
 
-Baseline transformation logic:
+### Environment variables
 
-1. Parse segment text into sentences and classify statement/agent roles.
-2. Derive worker-benefit and firm-benefit counts from classified statements.
-3. Compute worker-over-firm ratios at segment and clause-document levels.
-4. Compute a document composite from clause-type ratios.
+Create a `.env` file or export the variables in your shell:
 
-Comparison role:
-- ASH provides an alternative, rule-based generosity signal.
-- It is used to benchmark and triangulate Gabriel-based rankings.
+```bash
+export CACHE_DIR=/absolute/path/to/run-cache
+export OPENAI_API_KEY=...
+export OPENROUTER_API_KEY=...
+export GOOGLE_API_KEY=...
+```
+
+What each variable is used for:
+
+- `CACHE_DIR`
+  Base directory for most pipeline inputs and outputs. Many scripts assume it is set.
+- `OPENAI_API_KEY`
+  Needed by the segmentation stage and some utility scripts.
+- `OPENROUTER_API_KEY`
+  Needed by classification, `04_generosity_llm`, and some summary/experiment scripts.
+- `GOOGLE_API_KEY`
+  Needed only if OCR is run with `--provider google`.
+
+### Recommended cache layout
+
+The maintained pipeline works most predictably if `CACHE_DIR` contains:
+
+```text
+$CACHE_DIR/
+  dol_archive/
+    document_*.pdf
+  01_ocr_output/
+    dol_archive/
+  02_segmentation_output/
+    dol_archive/
+  03_classification_output/
+    dol_archive/
+  04_generosity_gab_output/
+    dol_archive/
+  04_generosity_ash_output/
+    dol_archive/
+  04_generosity_llm_output/
+    dol_archive/
+```
+
+## How To Run The Main Workflow
+
+### OCR
+
+Use explicit output paths so downstream stages see the expected `01_ocr_output` directory name:
+
+```bash
+uv run python pipeline/01_ocr/runner.py \
+  --provider google \
+  --input-dir "$CACHE_DIR/dol_archive" \
+  --output-dir "$CACHE_DIR/01_ocr_output/dol_archive" \
+  --cache-file "$CACHE_DIR/01_ocr_output/01_ocr_cache.json" \
+  --model gemini-2.5-flash
+```
+
+If you want local vLLM instead, switch `--provider vllm` and configure the model-related flags.
+
+### Segmentation
+
+```bash
+uv run python pipeline/02_segment/runner.py
+```
+
+This script currently assumes:
+
+- OCR input is at `$CACHE_DIR/01_ocr_output/dol_archive`
+- outputs should be written to `$CACHE_DIR/02_segmentation_output/dol_archive`
+- the checked-in `main()` runs with `cached_only=True`, which is useful for reruns but not ideal for a fresh first pass
+
+### Clause classification
+
+```bash
+uv run python pipeline/03_classification/runner.py \
+  --cache-dir "$CACHE_DIR" \
+  --input-dir 02_segmentation_output/dol_archive \
+  --output-dir 03_classification_output/dol_archive \
+  --taxonomy-path references/feature_taxonomy_final.md \
+  --model openai/gpt-5-mini
+```
+
+### Gabriel generosity
+
+```bash
+uv run python pipeline/04_generosity_gab/runner.py \
+  --cache-dir "$CACHE_DIR" \
+  --input-dir 02_segmentation_output/dol_archive \
+  --classification-dir 03_classification_output/dol_archive \
+  --output-dir 04_generosity_gab_output/dol_archive
+```
+
+### ASH baseline generosity
+
+```bash
+uv run python pipeline/04_generosity_ash/runner.py \
+  --cache-dir "$CACHE_DIR" \
+  --input-dir 02_segmentation_output/dol_archive \
+  --classification-dir 03_classification_output/dol_archive \
+  --output-dir 04_generosity_ash_output/dol_archive
+```
+
+### Rubric-based LLM generosity
+
+```bash
+uv run python pipeline/04_generosity_llm/runner.py \
+  --cache-dir "$CACHE_DIR" \
+  --classification-dir 03_classification_output/dol_archive \
+  --output-dir 04_generosity_llm_output/dol_archive \
+  --model openai/gpt-5-mini
+```
+
+## Review UI
+
+Preferred dashboard:
+
+```bash
+uv run streamlit run review_ui/app3.py
+```
+
+Notes:
+
+- `review_ui/app3.py` is the broadest dashboard and the best starting point for collaborators.
+- `review_ui/app.py` is an older experiment-oriented UI.
+- both UIs read heavily from `CACHE_DIR`, plus checked-in `outputs/` and `figures/` artifacts
+
+## Summary And Figure Scripts
+
+Examples:
+
+```bash
+uv run python pipeline/summary/clause_distribution.py --classification-dir "$CACHE_DIR/03_classification_output/dol_archive"
+uv run python pipeline/summary/validation.py --llm-output-dir "$CACHE_DIR/04_generosity_llm_output/dol_archive" --gab-output-dir "$CACHE_DIR/04_generosity_gab_output/dol_archive"
+uv run python pipeline/summary/time_series_search.py --topic ai --ocr-dir "$CACHE_DIR/01_ocr_output/dol_archive"
+```
+
+Most summary scripts write final charts into repo-local `figures/`, even when their inputs come from `CACHE_DIR`.
+
+## Other Maintained Utilities
+
+- `scripts/extract_cba_features.py`
+  Direct PDF-to-feature extraction utility using an OpenAI vision model.
+- `clause_extraction/ocr/runner.py`
+  Separate OCR workflow for clause-extraction experiments.
+- `clause_extraction/extraction/runner.py`
+  Extraction-focused pipeline outside the main `pipeline/01-04_*` path.
+- `generosity/compare_scores.py`
+  Compare generosity outputs from different methods.
+
+## Outputs You Should Expect
+
+- OCR:
+  `$CACHE_DIR/01_ocr_output/dol_archive/document_*/page_####.txt`
+- segmentation:
+  `$CACHE_DIR/02_segmentation_output/dol_archive/document_*/segments/segment_*.txt`
+- classification:
+  `$CACHE_DIR/03_classification_output/dol_archive/document_*/segment_*.json`
+- generosity:
+  `$CACHE_DIR/04_generosity_{gab,ash,llm}_output/dol_archive/...`
+- figures:
+  repo-local `figures/`
+- checked-in analysis tables and caches:
+  repo-local `outputs/`
+
+## Experiments
+
+`experiments/` contains benchmarking and method-comparison code for OCR, segmentation, sentence parsing, and clause extraction. These folders are useful for research context and replication, but they are not the main collaborator onboarding path and are only summarized here.
+
+## Known Caveats
+
+- The OCR runner defaults to `01_ocr_output_qwen3_5`, but downstream pipeline code often expects `01_ocr_output`. Use explicit OCR output flags if you want the main pipeline stages to line up.
+- `pipeline/02_segment/runner.py` is currently configured for cached reruns in `main()`, not a polished first-run CLI.
+- `CACHE_DIR` is effectively required for most of the maintained pipeline, even when some scripts also have repo-local fallbacks.
+- `review_ui/app3.py` is the most useful dashboard; the other UI files are older variants with narrower or experiment-specific scope.
+- `main.py` is a placeholder and is not part of the real execution flow.
+- `pyproject.toml` does not appear to declare every third-party package used by all auxiliary scripts and dashboards. If a command fails after `uv sync`, inspect that script's imports and install the missing package.
+- `.devcontainer/devcontainer.json` currently points to Python `3.11`, while `pyproject.toml` declares `>=3.12`.

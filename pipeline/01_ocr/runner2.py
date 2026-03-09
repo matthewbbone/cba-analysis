@@ -1,3 +1,10 @@
+"""Legacy concurrent OCR runner kept for reference and ad hoc experiments.
+
+Unlike `pipeline/01_ocr/runner.py`, this variant manages a fixed vLLM server
+configuration in-process and writes page text directly into per-document output
+folders. It is not the primary entrypoint documented in the README.
+"""
+
 import asyncio
 import sys
 from time import time
@@ -21,7 +28,8 @@ except ModuleNotFoundError:
     from pipeline.utils.vllm_server import VLLMServer
 
 class OCRRunner:
-    
+    """Manage a queue-based OCR pass against a locally served vLLM model."""
+
     def __init__(
         self,
     ):
@@ -93,6 +101,7 @@ class OCRRunner:
         queue_size: int = 100,
         n_workers: int = 10,
     ):
+        """Process selected PDFs and write one OCR text file per page."""
         
         pdfs = sorted(input_dir.glob("*.pdf"))
         processed_pdfs = sorted(output_dir.glob("*/"))

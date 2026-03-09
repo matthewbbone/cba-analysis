@@ -1,3 +1,10 @@
+"""Count topic mentions over time from OCR output text.
+
+The script scans document-level OCR text for keyword families such as AI or
+automation, joins publication years from DOL metadata, and writes time-series
+tables plus figure artifacts.
+"""
+
 from __future__ import annotations
 
 import argparse
@@ -49,6 +56,7 @@ def _resolve_path(raw: str, base: Path) -> Path:
 
 
 def _default_ocr_dir() -> Path:
+    """Resolve the OCR directory from `CACHE_DIR`; this script requires it."""
     root = _project_root()
     cache_dir = _default_cache_dir()
     if not cache_dir:
@@ -193,6 +201,7 @@ def run(
     end_year: int | None = None,
     min_cbas_per_year: int = 10,
 ) -> dict[str, Any]:
+    """Create mention-by-year outputs for a given keyword topic family."""
     try:
         import pandas as pd
     except Exception as exc:
@@ -535,6 +544,7 @@ def run(
 
 
 def main() -> None:
+    """CLI entrypoint for OCR keyword time-series summaries."""
     parser = argparse.ArgumentParser(
         description=(
             "Build a time series of topic keywords (`automation` or `ai`) from OCR text using "

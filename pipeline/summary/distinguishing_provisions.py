@@ -1,3 +1,10 @@
+"""Summarize what differentiates high- and low-scoring clauses.
+
+This script reads LLM generosity outputs, samples the highest- and lowest-score
+documents within each clause type, and asks OpenRouter for a concise narrative
+about the provisions that appear to drive the difference.
+"""
+
 from __future__ import annotations
 
 import argparse
@@ -796,6 +803,7 @@ def run(
     timeout: float = 120.0,
     verbose: str = "low",
 ) -> dict[str, Any]:
+    """Generate clause-level high-vs-low comparison summaries and JSON artifacts."""
     verbose_level = _normalize_verbose_level(verbose)
     _log(
         f"Starting run for clause_type=`{clause_type}` "
@@ -1011,6 +1019,7 @@ def run(
 
 
 def main() -> None:
+    """CLI entrypoint for distinguishing-provisions summaries."""
     parser = argparse.ArgumentParser(
         description=(
             "Summarize top and bottom 10% provisions for a clause type using OpenRouter, "

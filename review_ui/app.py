@@ -1,3 +1,10 @@
+"""Streamlit dashboard for reviewing OCR, annotations, and experiment outputs.
+
+This is the older review UI focused on OCR inspection and experiment
+comparisons. It assumes the default collection is `dol_archive` and loads most
+paths relative to `CACHE_DIR` when that environment variable is set.
+"""
+
 import io
 import itertools
 import json
@@ -1896,6 +1903,7 @@ def render_segmentation_review():
 
 
 def main():
+    """Launch the experiment-oriented review dashboard."""
     st.set_page_config(page_title="CBA Review UI", layout="wide")
     st.title("CBA Review UI")
 
