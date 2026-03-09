@@ -2,10 +2,12 @@ import asyncio
 import os
 import datetime as dt
 import subprocess
+import sys
 from openai import AsyncOpenAI
 from dotenv import load_dotenv
 from pathlib import Path
 import argparse
+from pipeline.utils.transformers_compat import register_qwen35_compat
 
 load_dotenv()
 
@@ -26,10 +28,37 @@ class VLLMServer:
         
         self.log_dir = Path(os.environ.get("LOG_DIR"))
         self.cache_dir = Path(os.environ.get("CACHE_DIR"))
+
+    def _validate_model_dependencies(self) -> None:
+        if not self.model_name.startswith("Qwen/Qwen3.5"):
+            return
+
+        try:
+            import transformers
+            from transformers.models.auto.configuration_auto import CONFIG_MAPPING_NAMES
+        except Exception as exc:
+            raise RuntimeError(
+                "Unable to import transformers while validating vLLM model support."
+            ) from exc
+
+        if register_qwen35_compat():
+            return
+
+        raise RuntimeError(
+            "The installed transformers build does not support or cannot shim the "
+            f"`qwen3_5_moe` architecture required by {self.model_name}. "
+            f"Installed version: {transformers.__version__}. "
+            "Upgrade this environment with "
+            "`pip install --upgrade \"git+https://github.com/huggingface/transformers.git\"` "
+            "or switch `--vllm-model` to a model family supported by your current transformers install."
+        )
         
     def start(self):
+        self._validate_model_dependencies()
         
         cmd = [
+            sys.executable,
+            "-m",
             "vllm",
             "serve",
             self.model_name,
@@ -49,6 +78,10 @@ class VLLMServer:
         )
         env["HF_DATASETS_CACHE"] = os.path.join(
             os.environ["XDG_CACHE_HOME"], "datasets"
+        )
+        repo_root = Path(__file__).resolve().parents[2]
+        env["PYTHONPATH"] = os.pathsep.join(
+            [str(repo_root), env["PYTHONPATH"]] if env.get("PYTHONPATH") else [str(repo_root)]
         )
         cmd.extend(["--download_dir", os.environ["XDG_CACHE_HOME"]])
         

@@ -40,6 +40,55 @@ RESTRICTIVE_MODALS = {"shall", "must", "will", "should", "ought"}
 PERMISSIVE_MODALS = {"may", "can"}
 NEGATION_LEMMAS = {"not", "never", "no"}
 
+# Auth-style modal split from labor-contracts/src/main04_compute_auth.py.
+AUTH_STRICT_MODALS = {"shall", "must", "will"}
+
+# Verb groups from labor-contracts/src/main04_compute_auth.py.
+AUTH_OBLIGATION_VERBS_PASSIVE = {"require", "expect", "compel", "oblige", "obligate"}
+AUTH_OBLIGATION_VERBS_ACTIVE = {"agree", "promise"}
+AUTH_CONSTRAINT_VERBS_PASSIVE = {"prohibit", "forbid", "ban", "bar", "restrict", "proscribe"}
+AUTH_PERMISSION_VERBS_PASSIVE = {"allow", "permit", "authorize"}
+AUTH_ENTITLEMENT_VERBS_ACTIVE = {"receive", "gain", "earn"}
+AUTH_ENTITLEMENT_VERBS_PASSIVE = {
+    "entitle",
+    "give",
+    "offer",
+    "reimburse",
+    "pay",
+    "grant",
+    "provide",
+    "compensate",
+    "guarantee",
+    "hire",
+    "train",
+    "supply",
+    "protect",
+    "cover",
+    "inform",
+    "notify",
+    "grant_off",
+    "select",
+    "allow_off",
+    "award",
+    "give_off",
+    "pay_out",
+    "allow_up",
+}
+AUTH_PROMISE_VERBS_ACTIVE = {
+    "commit",
+    "recognize",
+    "consent",
+    "assent",
+    "affirm",
+    "assure",
+    "guarantee",
+    "insure",
+    "ensure",
+    "stipulate",
+    "undertake",
+    "pledge",
+}
+
 OBLIGATION_SPECIAL_LEMMAS = {
     "require",
     "expect",
@@ -546,10 +595,18 @@ def _reduce_clause(sent) -> dict[str, Any]:
 
     modal = _modal_features(sent, root)
     special_verb_type = _special_verb_type(sent, root)
+    root_variants: list[str] = []
+    if root is not None:
+        root_lemma = root.lemma_.lower()
+        root_variants.append(root_lemma)
+        # Keep phrasal forms (for example "pay out" -> "pay_out") for auth verb lists.
+        root_variants.extend(f"{root_lemma}_{child.lemma_.lower()}" for child in root.children if child.dep_ == "prt")
+    root_variants = list(dict.fromkeys(v for v in root_variants if v))
 
     return {
         "root_verb": root.lemma_.lower() if root is not None else "",
         "root_text": root.text if root is not None else "",
+        "root_verb_variants": root_variants,
         "subject_phrases": list(dict.fromkeys(subject_phrases)),
         "object_phrases": list(dict.fromkeys(object_phrases)),
         "modal_verbs": modal["modal_verbs"],
@@ -591,73 +648,118 @@ def _is_negated_obligation_protection(sentence_text: str, clause: dict[str, Any]
     )
 
 
-def _classify_sentence_type(sentence_text: str, clause: dict[str, Any]) -> tuple[str, list[str]]:
-    text = sentence_text.strip()
+def _compute_auth_style_categories(clause: dict[str, Any]) -> tuple[dict[str, bool], list[str]]:
+    """Mirror category formulas from labor-contracts/src/main04_compute_auth.py."""
     evidence: list[str] = []
 
-    def _match(patterns: tuple[re.Pattern[str], ...], label: str) -> bool:
-        local = [p.pattern for p in patterns if p.search(text)]
-        if local:
-            evidence.extend([f"{label}:{p}" for p in local])
-            return True
-        return False
+    root_variants = {
+        str(v).strip().lower()
+        for v in clause.get("root_verb_variants", [])
+        if str(v).strip()
+    }
+    root_verb = str(clause.get("root_verb", "")).strip().lower()
+    if root_verb:
+        root_variants.add(root_verb)
 
-    modal_force = str(clause.get("modal_force", "none"))
-    is_negative = bool(clause.get("is_negative", False))
-    special_verb_type = str(clause.get("special_verb_type", "none"))
-    root_verb = str(clause.get("root_verb", ""))
+    modal_verbs = {
+        str(m).strip().lower()
+        for m in clause.get("modal_verbs", [])
+        if str(m).strip()
+    }
+    # Keep "have_to" separate from modal-aux checks to stay close to source logic.
+    md = any(m != "have_to" for m in modal_verbs)
+    strict_modal = md and bool(modal_verbs.intersection(AUTH_STRICT_MODALS))
+    permissive_modal = md and not strict_modal
 
-    if is_negative:
-        evidence.append("dep:negated_modal")
-    if modal_force != "none":
-        evidence.append(f"modal_force:{modal_force}")
-    if special_verb_type != "none":
-        evidence.append(f"special_verb:{special_verb_type}")
-    if clause.get("voice") == "passive":
-        evidence.append("voice:passive")
+    passive = str(clause.get("voice", "active")) == "passive"
+    neg = bool(clause.get("is_negative", False))
+    not_passive = not passive
+    not_neg = not neg
 
-    # Rights-style protection against imposed duties:
-    # "workers may not be required ..." / "employees should not be expected ..."
-    if _is_negated_obligation_protection(text, clause):
-        evidence.append("rule:negated_obligation_protection")
-        return "rights", evidence
+    obligation_verb = (
+        (passive and bool(root_variants.intersection(AUTH_OBLIGATION_VERBS_PASSIVE)))
+        or (not_passive and bool(root_variants.intersection(AUTH_OBLIGATION_VERBS_ACTIVE)))
+    )
+    constraint_verb = passive and bool(root_variants.intersection(AUTH_CONSTRAINT_VERBS_PASSIVE))
+    permission_verb = passive and bool(root_variants.intersection(AUTH_PERMISSION_VERBS_PASSIVE))
+    entitlement_verb = (
+        (not_passive and bool(root_variants.intersection(AUTH_ENTITLEMENT_VERBS_ACTIVE)))
+        or (passive and bool(root_variants.intersection(AUTH_ENTITLEMENT_VERBS_PASSIVE)))
+    )
+    promise_verb = not_passive and bool(root_variants.intersection(AUTH_PROMISE_VERBS_ACTIVE))
 
-    if special_verb_type == "rights" or _match(RIGHTS_PATTERNS, "rights"):
-        return "rights", evidence
+    special_verb = obligation_verb or constraint_verb or permission_verb or entitlement_verb or promise_verb
+    active_verb = not_passive and not special_verb
 
-    # Prohibition has high precedence because it flips legal valence.
-    if is_negative and modal_force in {"restrictive", "permissive", "mixed"}:
-        return "prohibitions", evidence
-    if special_verb_type == "prohibition" or _match(PROHIBITION_PATTERNS, "prohibition"):
-        return "prohibitions", evidence
+    obligation = (
+        (not_neg and strict_modal and active_verb)
+        or (not_neg and strict_modal and obligation_verb)
+        or (not_neg and (not md) and obligation_verb)
+    )
+    constraint = (
+        (neg and md and active_verb)
+        or (not_neg and strict_modal and constraint_verb)
+        or (neg and passive and (entitlement_verb or permission_verb))
+    )
+    permission = (
+        (not_neg and ((permissive_modal and active_verb) or permission_verb))
+        or (neg and constraint_verb)
+    )
+    entitlement = (
+        (not_neg and entitlement_verb)
+        or (neg and obligation_verb)
+    )
 
-    # Permission only when not negated.
-    if not is_negative and (
-        special_verb_type == "permission"
-        or modal_force == "permissive"
-        or _match(PERMISSION_PATTERNS, "permission")
-    ):
-        return "permissions", evidence
+    evidence.append(f"auth:md={md}")
+    evidence.append(f"auth:strict_modal={strict_modal}")
+    evidence.append(f"auth:permissive_modal={permissive_modal}")
+    evidence.append(f"auth:neg={neg}")
+    evidence.append(f"auth:passive={passive}")
+    evidence.append(f"auth:root={root_verb or 'none'}")
+    if root_variants:
+        evidence.append(f"auth:root_variants={','.join(sorted(root_variants))}")
+    if obligation_verb:
+        evidence.append("auth:obligation_verb")
+    if constraint_verb:
+        evidence.append("auth:constraint_verb")
+    if permission_verb:
+        evidence.append("auth:permission_verb")
+    if entitlement_verb:
+        evidence.append("auth:entitlement_verb")
+    if promise_verb:
+        evidence.append("auth:promise_verb")
 
-    if (
-        special_verb_type == "obligation"
-        or modal_force in {"restrictive", "mixed"}
-        or _match(OBLIGATION_PATTERNS, "obligation")
-    ):
-        return "obligations", evidence
+    flags = {
+        "obligation": bool(obligation),
+        "constraint": bool(constraint),
+        "permission": bool(permission),
+        "entitlement": bool(entitlement),
+    }
+    active_labels = [k for k, is_on in flags.items() if is_on]
+    evidence.append("auth:labels=" + ",".join(active_labels) if active_labels else "auth:labels=none")
+    return flags, evidence
 
-    # Fallback for policy-style imperative constructions.
-    if root_verb in {"agree", "require"}:
-        evidence.append("dep:root_policy_verb")
-        return "obligations", evidence
 
-    return "other", evidence
+def _classify_sentence_type(sentence_text: str, clause: dict[str, Any]) -> tuple[str, list[str], dict[str, bool]]:
+    del sentence_text  # sentence-level text rules are intentionally not used in auth-style classifier.
+    auth_flags, evidence = _compute_auth_style_categories(clause)
+
+    # Convert auth categories to local sentence label vocabulary.
+    if auth_flags["constraint"]:
+        return "prohibitions", evidence, auth_flags
+    if auth_flags["entitlement"]:
+        return "rights", evidence, auth_flags
+    if auth_flags["permission"]:
+        return "permissions", evidence, auth_flags
+    if auth_flags["obligation"]:
+        return "obligations", evidence, auth_flags
+    return "other", evidence, auth_flags
 
 
 def _classify_sentence(sent) -> dict:
     clause = _reduce_clause(sent)
     subject_phrases = list(clause.get("subject_phrases", []))
-    sentence_type, evidence = _classify_sentence_type(sent.text, clause)
+    sentence_type, evidence, auth_flags = _classify_sentence_type(sent.text, clause)
     subject_agent_types = _classify_agent_types(subject_phrases, sent.text)
 
     return {
@@ -671,6 +773,7 @@ def _classify_sentence(sent) -> dict:
         "voice": clause.get("voice", "active"),
         "special_verb_type": clause.get("special_verb_type", "none"),
         "classification_evidence": evidence,
+        "auth_category_flags": auth_flags,
         "clause_reduction": clause,
     }
 
@@ -872,7 +975,7 @@ def main():
         help="Directory where parse JSON and HTML renders will be written.",
     )
     parser.add_argument("--document-id", type=str, default=None, help="Optional document id filter.")
-    parser.add_argument("--model", type=str, default="en_core_web_sm", help="spaCy model name.")
+    parser.add_argument("--model", type=str, default="en_core_web_lg", help="spaCy model name.")
     parser.add_argument("--max-segments", type=int, default=None, help="Optional max segments per document.")
     parser.add_argument(
         "--disable-embedding-clustering",
@@ -894,7 +997,7 @@ def main():
     parser.add_argument(
         "--dbscan-min-samples",
         type=int,
-        default=2,
+        default=5,
         help="DBSCAN min_samples value for sentence embedding clustering.",
     )
     parser.add_argument(

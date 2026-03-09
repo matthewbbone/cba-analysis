@@ -12,6 +12,7 @@ import re
 from tqdm import tqdm
 import sys
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+from typing import Literal
 
 try:
     import pipeline.utils.utils as utils
@@ -57,6 +58,7 @@ class SegmentationRunner:
         planning_perc: float,
         boundary_model: str,
         boundary_padding: int,
+        provider: str = Literal["openai", "openrouter"]
     ): 
         
         self.cache_dir: Path = Path(cache_dir)
@@ -66,9 +68,20 @@ class SegmentationRunner:
         
         self.planning_model: str = planning_model
         self.planning_perc: float = planning_perc
+        self.provider: str = provider
+        
+        if provider == "openai":
+            base_url = "https://api.openai.com/v1"
+            api_key = os.environ.get("OPENAI_API_KEY", "")
+        elif provider == "openrouter":
+            base_url = "https://openrouter.ai/api/v1"
+            api_key = os.environ.get("OPENROUTER_API_KEY", "")
+        
+        self.max_token_param: str = "max_completion_tokens" if provider == "openai" else "max_tokens"
+        
         self.client = OpenAI(
-            api_key=os.environ.get("OPENROUTER_API_KEY", ""),
-            base_url="https://openrouter.ai/api/v1", 
+            api_key=api_key,
+            base_url=base_url, 
             timeout=120
         )
         
@@ -170,8 +183,8 @@ class SegmentationRunner:
                 }
             ],
             response_format=schema,
-            max_tokens=4800,
-            temperature=0.0,
+            **{self.max_token_param: 4800},
+            **({"temperature": 0.0} if self.provider != "openai" else {}),
         )
         
         payload = json.loads(response.choices[0].message.content)
@@ -227,15 +240,13 @@ class SegmentationRunner:
             "You are an expert in understanding formal document structures.",
             "You've been asked to segment a collective bargaining agreement",
             f"by reviewing candidate boundaries between {plan['segment_type']} of the document.",
-            "Identify whether the boundary marked by <BOUNDARY/>",
-            f"is a valid boundary between two {plan['segment_type']} of the document.",
+            f"Decide whether the boundary marked by <BOUNDARY/> is above the {plan['segment_type']} header",
             f"Some examples of {plan['segment_type']} headers are: {', '.join(plan['segment_header_examples'])}",
             f"You should aim for high precision in identifying true {plan['segment_type']} boundaries,",
             f"so only mark a boundary as valid if you are confident it indicates the start of a new {plan['segment_type']}.",
             "If the boundary is in a list of sections like a table of contents, it is not a true boundary.",
             "Return a JSON object with the following fields:",
             '{',
-            '  "explanation": "...",',
             '  "is_new_segment": true/false,',
             "}",
             ''
@@ -249,10 +260,9 @@ class SegmentationRunner:
                     "type": "object",
                     "additionalProperties": False,
                     "properties": {
-                        "explanation": {"type": "string", "maxLength": 1000},
                         "is_new_segment": {"type": "boolean"},
                     },
-                    "required": ["explanation", "is_new_segment"],
+                    "required": ["is_new_segment"],
                 }
             }
         }
@@ -278,8 +288,8 @@ class SegmentationRunner:
                     }
                 ],
                 response_format=schema,
-                max_tokens=4800,
-                temperature=0.0,
+                **{self.max_token_param: 4800},
+                 **({"temperature": 0.0} if self.provider != "openai" else {}),
             )
             payload = json.loads(response.choices[0].message.content)
             return idx, payload
@@ -313,15 +323,19 @@ class SegmentationRunner:
         if not candidates:
             spans.append((0, len(text)))
         else:
-            spans.append((0, candidates[0].start()))
-            for i, candidate in enumerate(candidates):
-                
-                if not evaluations[i].get("is_new_segment", False):
-                    continue
-                
-                start = candidate.end()
-                end = candidates[i + 1].start() if i + 1 < len(candidates) else len(text)
-                spans.append((start, end))
+            valid_boundary_starts = [
+                candidate.start()
+                for i, candidate in enumerate(candidates)
+                if i < len(evaluations) and evaluations[i].get("is_new_segment", False)
+            ]
+
+            if not valid_boundary_starts:
+                spans.append((0, len(text)))
+            else:
+                span_starts = [0] + valid_boundary_starts
+                for i, start in enumerate(span_starts):
+                    end = span_starts[i + 1] if i + 1 < len(span_starts) else len(text)
+                    spans.append((start, end))
 
         for start, end in spans:
             if end <= start:
@@ -391,18 +405,29 @@ class SegmentationRunner:
         self,
         sample_size: int | None = None,
         document_id: str | None = None,
+        cached_only: bool = False,
     ):
         
-        paths = list(self.input_dir.glob("*/"))
+        paths = sorted(self.input_dir.glob("*/"), key=lambda p: p.name)
+
         if document_id is not None:
             paths = [p for p in paths if p.name == document_id]
-        elif sample_size is not None:
+
+        if cached_only:
+            paths = [
+                p for p in paths
+                if (self.output_dir / p.name / "document_meta.json").exists()
+                or (self.output_dir / p.name / "boundary_evaluations.json").exists()
+            ]
+
+        if sample_size is not None:
             random.shuffle(paths)
             paths = paths[:sample_size]
-        else:
-            paths = self.input_dir.glob("*/")
         
-        print(f"Processing {len(paths)} documents from {self.input_dir}")
+        print(
+            f"Processing {len(paths)} documents from {self.input_dir} "
+            f"(cached_only={cached_only})"
+        )
             
         for path in paths:
             print(f"Processing document: {path.name}")
@@ -419,14 +444,16 @@ def main():
         cache_dir=cache_dir,
         input_dir=input_dir,
         output_dir=output_dir,
-        planning_model='openai/gpt-oss-120b:exacto',
+        planning_model='gpt-5.2',
         planning_perc=.1,
-        boundary_model='openai/gpt-oss-120b:exacto',
+        boundary_model='gpt-5-mini',
         boundary_padding=300,
+        provider="openai"
     )
     runner.run(
-        sample_size=59,
+        # sample_size=75,
         # document_id="document_790"
+        cached_only=True
     )
     
 if __name__ == "__main__":

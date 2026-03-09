@@ -1,98 +1,104 @@
-# CBA Analysis Toolkit
+# CBA Dataset Construction Methodology
 
-This repository now uses a two-stage clause extraction pipeline:
+## Purpose and Scope
+This repository implements a document-transformation pipeline that converts archival collective bargaining agreements (CBAs) into a structured, document-linked dataset for clause-level and document-level generosity analysis.
 
-1. OCR each `document_*.pdf` page into text files.
-2. Run clause extraction on OCR text using taxonomy-constrained labels.
-3. Review outputs in Streamlit (OCR highlights + stats + metadata heatmaps).
+The canonical methodology is:
 
-## Pipeline Overview
+`01_ocr -> 02_segment -> 03_classification -> 04_generosity_gab`
 
-### Stage 1: OCR (`clause_extraction/ocr/runner.py`)
-- Input: PDF files named `document_*.pdf` (typically in `dol_archive/`).
-- Output: per-page OCR text files in `ocr_output/document_<id>/page_####.txt`.
-- Cache: `outputs/ocr_processing_cache.json`.
-- Model serving: OpenAI-compatible endpoint (default `http://localhost:1234/v1`).
-- Behavior: resumes from the most recently processed page.
-- Behavior: sampling prioritizes partially processed documents.
-- Behavior: optional page cap via `--max-pages`.
+The `04_generosity_ash` method is retained as a baseline comparison and is documented in Appendix A.
 
-Run:
+## End-to-End Transformation Path
+The pipeline transforms each source contract through the following representation sequence:
 
-```bash
-uv run python clause_extraction/ocr/runner.py --input-dir dol_archive --sample-size 5
-```
+`PDF document -> page text -> document text -> segment text -> clause-typed segment -> clause-type generosity score -> document composite score`
 
-### Stage 2: Clause Extraction (`clause_extraction/extraction/runner.py`)
-- Input: OCR text from `ocr_output/`.
-- Taxonomy: `references/feature_taxonomy_final.md` (uses clause headings + TLDR context, plus `OTHER`).
-- Backend: `vllm` (default) via LangExtract + vLLM-compatible endpoint.
-- Backend: `openai` via OpenAI Responses API (requires `OPENAI_API_KEY`).
-- Output CSV: `outputs/cba_features.csv` with exact columns `document_id, document_page, feature_name`.
-- `outputs/cba_features_annotated.jsonl` for highlighted review spans.
-- `outputs/extraction_processing_cache.json` for resumable extraction.
-- `outputs/extraction_debug/*.json` page-level debug artifacts.
+At each stage, `document_id` is preserved so intermediate and final records remain linkable across tables.
 
-Run with vLLM backend:
+## Stage 01: OCR Transformation (`01_ocr`)
+**Input:** Scanned CBA PDFs.
 
-```bash
-uv run python clause_extraction/extraction/runner.py --backend vllm --model-id vllm:http://localhost:8000/v1
-```
+**Transformation:** Page images are converted from non-machine-readable document scans into machine-readable text.
 
-Run with OpenAI backend:
+**Output:**
+- Document-aligned page text units.
+- Assembled document-level text.
 
-```bash
-uv run python clause_extraction/extraction/runner.py --backend openai --openai-model gpt-5-nano
-```
+**Dataset contribution:** Establishes the base textual corpus required for all downstream structuring and scoring.
 
-Useful options:
-- `--sample-size N` sample documents (partial docs prioritized first).
-- `--max-pages N` cap page number processed per document.
-- `--clear-cache` remove prior outputs/cache/debug and start fresh.
-- `--sleep S` add delay between page requests.
+## Stage 02: Segmentation Transformation (`02_segment`)
+**Input:** OCR-derived document text.
 
-## Review UI (`review_ui/app.py`)
+**Transformation:** Each CBA is partitioned into ordered top-level contractual units (segments/articles), producing standardized text units for later labeling and scoring.
 
-Run:
+**Output:**
+- Ordered segment text units per document.
+- Document-relative structural segmentation.
 
-```bash
-uv run streamlit run review_ui/app.py
-```
+**Dataset contribution:** Creates comparable segment-level records so semantic labels and generosity scores are attached to consistent contract units.
 
-Views:
-- `OCR Viewer`: PDF page + OCR text with highlighted extracted clauses.
-- `Stats`: page-level and document-level frequency bar charts.
-- `Heatmap`: partitioned clause prevalence by metadata dimensions (`naics`, `type`, `statefips1`, `union`, `expire_year`) with company lists per partition.
+## Stage 03: Clause Classification Transformation (`03_classification`)
+**Input:** Segmented contract text units.
 
-Defaults:
-- PDF source: `processed_cbas/`
-- OCR source: `ocr_output/`
-- Annotations: `outputs/cba_features_annotated.jsonl`
-- Metadata: `dol_archive/CBAList_with_statefips.dta`
+**Transformation:** Each segment is assigned a clause type from a fixed taxonomy, with `OTHER` used when no taxonomy class is appropriate.
 
-Auth:
-- Set a password in `.streamlit/secrets.toml`:
+**Output:**
+- Segment-level clause labels with one primary assigned class per segment.
 
-```toml
-REVIEW_UI_PASSWORD = "your-password-here"
-```
+**Dataset contribution:** Adds semantic clause typing, enabling within-clause comparisons across different documents.
 
-## Setup
+## Stage 04: Gabriel Generosity Transformation (Primary) (`04_generosity_gab`)
+**Input:** Segment text with clause-type labels.
 
-Install dependencies with `uv`:
+**Transformation:**
+1. Segments are ranked by generosity within each clause type across documents.
+2. Segment ranks are converted to within-clause percentiles.
+3. A clause-type score is computed per document as the mean segment percentile for that clause type.
+4. A document composite score is computed as the mean of available clause-type scores.
 
-```bash
-uv pip install -r requirements.txt
-uv sync
-```
+**Coverage rule for stability:**
+- If a clause type appears in fewer than 5 documents, no ranking is computed for that clause type.
+- The corresponding clause-type score is treated as `NA` and excluded from the document composite mean.
 
-Create `.env` in repo root when using OpenAI backend:
+**Output:**
+- Segment-level generosity table.
+- Clause-type-by-document generosity table.
+- Document-level composite ranking table.
 
-```env
-OPENAI_API_KEY=your_key_here
-```
+**Dataset contribution:** Produces comparable continuous generosity measures at segment, clause-type, and document levels.
 
-## Notes
+## Final Dataset Structure
+The final dataset is a linked set of tables keyed by `document_id` (and `segment_number` where applicable).
 
-- The legacy one-step script `scripts/extract_cba_features.py` is still present, but the primary workflow is the two-stage OCR + LangExtract pipeline above.
-- Document names must follow `document_<int>.pdf` for cache/sampling/metadata linking.
+Core analytical views:
+
+1. **Segment view**
+- Segment text unit.
+- Clause type.
+- Segment-level generosity outputs.
+
+2. **Clause-document view**
+- Clause-type score for each document.
+
+3. **Document view**
+- Composite generosity score.
+- Document rank.
+
+Interpretation:
+- Higher Gabriel values indicate language that is more worker-generous relative to peer segments in the same clause type.
+- Composite values summarize average clause-type standing for each document using available non-NA clause-type scores.
+
+## Appendix A: ASH Baseline Comparison Method (`04_generosity_ash`)
+`04_generosity_ash` is a baseline comparator, not the primary scoring method.
+
+Baseline transformation logic:
+
+1. Parse segment text into sentences and classify statement/agent roles.
+2. Derive worker-benefit and firm-benefit counts from classified statements.
+3. Compute worker-over-firm ratios at segment and clause-document levels.
+4. Compute a document composite from clause-type ratios.
+
+Comparison role:
+- ASH provides an alternative, rule-based generosity signal.
+- It is used to benchmark and triangulate Gabriel-based rankings.

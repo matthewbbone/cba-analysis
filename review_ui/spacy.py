@@ -11,6 +11,7 @@ import streamlit.components.v1 as components
 APP_DIR = Path(__file__).resolve().parent
 DEFAULT_PARSE_OUTPUT_DIR = APP_DIR.parent / "experiments" / "sentence_parse" / "output" / "spacy_parse"
 TABLE2_CLAUSE_ORDER = ("obligations", "rights", "permissions", "prohibitions", "other")
+TABLE2_DISPLAY_CLAUSE_ORDER = ("obligations", "rights", "permissions", "prohibitions")
 TABLE2_AGENT_ORDER = ("worker", "firm", "union", "manager")
 CLUSTER_VIEW_TABS = ("Sentence Review", "Cluster Word Clouds")
 CLUSTER_NOISE_ID = -1
@@ -551,6 +552,9 @@ def _table2_corpus_summary(parse_root_str: str) -> dict:
                     agent_totals[agent] += 1
 
     assignment_total = sum(pair_counts.values())
+    assignment_total_non_other = int(
+        sum(pair_counts.get((agent, clause), 0) for agent in TABLE2_AGENT_ORDER for clause in TABLE2_DISPLAY_CLAUSE_ORDER)
+    )
 
     def _pct(num: int, denom: int) -> float:
         if denom <= 0:
@@ -561,36 +565,38 @@ def _table2_corpus_summary(parse_root_str: str) -> dict:
     for agent in TABLE2_AGENT_ORDER:
         row = {"Agent": agent.title()}
         row_total = 0
-        for clause in TABLE2_CLAUSE_ORDER:
+        for clause in TABLE2_DISPLAY_CLAUSE_ORDER:
             count = int(pair_counts.get((agent, clause), 0))
             row_total += count
-            row[clause.title()] = f"{count:,} ({_pct(count, assignment_total):.1f}%)"
-        row["Total"] = f"{row_total:,} ({_pct(row_total, assignment_total):.1f}%)"
+            row[clause.title()] = f"{count:,} ({_pct(count, assignment_total_non_other):.1f}%)"
+        row["Total"] = f"{row_total:,} ({_pct(row_total, assignment_total_non_other):.1f}%)"
         table2_rows.append(row)
 
     total_row = {"Agent": "Total"}
-    for clause in TABLE2_CLAUSE_ORDER:
+    for clause in TABLE2_DISPLAY_CLAUSE_ORDER:
         count = int(sum(pair_counts.get((agent, clause), 0) for agent in TABLE2_AGENT_ORDER))
-        total_row[clause.title()] = f"{count:,} ({_pct(count, assignment_total):.1f}%)"
-    total_row["Total"] = f"{assignment_total:,} (100.0%)" if assignment_total > 0 else "0 (0.0%)"
+        total_row[clause.title()] = f"{count:,} ({_pct(count, assignment_total_non_other):.1f}%)"
+    total_row["Total"] = (
+        f"{assignment_total_non_other:,} (100.0%)" if assignment_total_non_other > 0 else "0 (0.0%)"
+    )
     table2_rows.append(total_row)
 
     counts_rows = []
     for agent in TABLE2_AGENT_ORDER:
         row = {"Agent": agent.title()}
         row_total = 0
-        for clause in TABLE2_CLAUSE_ORDER:
+        for clause in TABLE2_DISPLAY_CLAUSE_ORDER:
             count = int(pair_counts.get((agent, clause), 0))
             row_total += count
             row[clause.title()] = count
         row["Total"] = row_total
         counts_rows.append(row)
     counts_total_row = {"Agent": "Total"}
-    for clause in TABLE2_CLAUSE_ORDER:
+    for clause in TABLE2_DISPLAY_CLAUSE_ORDER:
         counts_total_row[clause.title()] = int(
             sum(pair_counts.get((agent, clause), 0) for agent in TABLE2_AGENT_ORDER)
         )
-    counts_total_row["Total"] = assignment_total
+    counts_total_row["Total"] = assignment_total_non_other
     counts_rows.append(counts_total_row)
 
     return {
@@ -600,7 +606,8 @@ def _table2_corpus_summary(parse_root_str: str) -> dict:
         "sentence_with_agent_count": sentence_with_agent_count,
         "sentence_without_agent_count": sentence_without_agent_count,
         "multi_agent_sentence_count": multi_agent_sentence_count,
-        "assignment_total": assignment_total,
+        "assignment_total": assignment_total_non_other,
+        "assignment_total_all": assignment_total,
         "table2_rows": table2_rows,
         "counts_rows": counts_rows,
         "clause_sentence_totals": {k: int(clause_totals.get(k, 0)) for k in TABLE2_CLAUSE_ORDER},
@@ -638,8 +645,7 @@ def main():
     m4.metric("Agent-Clause Assignments", corpus_summary["assignment_total"])
 
     st.caption(
-        "Percentages are shares of all agent-clause assignments in this parse output root "
-        "(mirroring the paper's Table 2 style)."
+        "Percentages are shares of non-'other' agent-clause assignments in this parse output root."
     )
     st.dataframe(corpus_summary["table2_rows"], use_container_width=True, hide_index=True)
 

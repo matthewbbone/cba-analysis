@@ -5,14 +5,17 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "kaleido>=1.2.0",
     "olmocr>=0.4.25",
     "openai>=2.21.0",
+    "openai-gabriel>=1.1.1",
     "pip>=26.0.1",
     "pypdf>=6.7.2",
     "python-dotenv>=1.2.1",
     "sentence-transformers>=5.2.3",
     "spacy>=3.8.11",
     "streamlit[pdf]>=1.54.0",
+    "top2vec>=1.0.36",
     "vllm>=0.15.1",
     "wordcloud>=1.9.4",
 ]

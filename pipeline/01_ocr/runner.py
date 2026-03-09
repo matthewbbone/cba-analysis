@@ -12,6 +12,7 @@ import time
 from typing import Any
 from tqdm import tqdm
 
+from dotenv import load_dotenv
 from openai import OpenAI
 from pypdf import PdfReader
 
@@ -27,7 +28,11 @@ except ModuleNotFoundError:
         sys.path.insert(0, str(ROOT_DIR))
     from pipeline.utils.vllm_server import VLLMServer
 
+load_dotenv()
+
+
 class OCRRunner:
+    GOOGLE_OPENAI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 
     def __init__(
         self,
@@ -390,9 +395,9 @@ async def main():
     parser = argparse.ArgumentParser(description="Run OlmoOCR over CBA PDFs with resumable caching.")
     parser.add_argument("--input-dir", type=Path, default=Path(os.environ.get("CACHE_DIR")) / "dol_archive",
                         help="Directory containing document_*.pdf files")
-    parser.add_argument("--output-dir", type=Path, default=Path(os.environ.get("CACHE_DIR")) / "01_ocr_output" / "dol_archive",
+    parser.add_argument("--output-dir", type=Path, default=Path(os.environ.get("CACHE_DIR")) / "01_ocr_output_qwen3_5" / "dol_archive",
                         help="Directory where OCR outputs are written")
-    parser.add_argument("--cache-file", type=Path, default=Path(os.environ.get("CACHE_DIR")) / "01_ocr_output" / "01_ocr_cache.json",
+    parser.add_argument("--cache-file", type=Path, default=Path(os.environ.get("CACHE_DIR")) / "01_ocr_output_qwen3_5" / "01_ocr_cache.json",
                         help="JSON file tracking processed pages")
     parser.add_argument("--sample-size", type=int, default=None,
                         help="Randomly sample N documents")
@@ -404,7 +409,14 @@ async def main():
         default=None,
         help="Process only a specific document (stem or filename), e.g. document_8",
     )
-    parser.add_argument("--vllm-model", type=str, default="allenai/olmOCR-2-7B-1025-FP8",
+    parser.add_argument(
+        "--provider",
+        type=str,
+        choices=["vllm", "google"],
+        default="vllm",
+        help="Inference backend. Use 'google' to call Google AI Studio via Gemini's OpenAI-compatible API.",
+    )
+    parser.add_argument("--vllm-model", type=str, default="Qwen/Qwen3.5-35B-A3B-FP8",
                         help="Model to serve with vLLM")
     parser.add_argument("--vllm-port", type=int, default=8102,
                         help="Port for the managed vLLM server")
@@ -415,7 +427,7 @@ async def main():
         help="Context length to configure on the managed vLLM server",
     )
     parser.add_argument("--model", type=str, default=None,
-                        help="Model name for chat completions; defaults to --vllm-model")
+                        help="Model name for chat completions; defaults to --vllm-model for vLLM or gemini-2.5-flash for Google")
     parser.add_argument(
         "--target-longest-image-dim",
         type=int,
@@ -427,25 +439,43 @@ async def main():
     )
     args = parser.parse_args()
 
-    if not args.vllm_model:
-        raise ValueError("--vllm-model is required (or set VLLM_MODEL)")
-
     OCRRunner.configure_logging()
+
+    if args.provider == "google":
+        api_key = os.environ.get("GOOGLE_API_KEY", "").strip()
+        if not api_key:
+            raise RuntimeError("GOOGLE_API_KEY is not set")
+
+        runner = OCRRunner(
+            base_url=OCRRunner.GOOGLE_OPENAI_BASE_URL,
+            api_key=api_key,
+            model_name=args.model or "gemini-2.5-flash",
+            target_longest_image_dim=args.target_longest_image_dim,
+        )
+        await runner.process_all(
+            input_dir=args.input_dir,
+            output_dir=args.output_dir,
+            cache_file=args.cache_file,
+            sample_size=args.sample_size,
+            seed=args.seed,
+            document=args.document,
+        )
+        return
+
+    if not args.vllm_model:
+        raise ValueError("--vllm-model is required when --provider vllm")
 
     vllm_server = VLLMServer(
         args.vllm_model,
         port=args.vllm_port,
-        served_model_name=args.model,
         max_model_len=args.vllm_max_model_len,
     )
     try:
         await asyncio.to_thread(vllm_server.start)
-        base_url = f"http://localhost:{args.vllm_port}/v1"
-        model_name = args.model or args.vllm_model
         runner = OCRRunner(
-            base_url=base_url,
+            base_url=f"http://localhost:{args.vllm_port}/v1",
             api_key="EMPTY",
-            model_name=model_name,
+            model_name=args.model or args.vllm_model,
             target_longest_image_dim=args.target_longest_image_dim,
         )
         await runner.process_all(
