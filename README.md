@@ -1,108 +1,100 @@
 # CBA Analysis
 
-This repository turns archival collective bargaining agreements (CBAs) into structured analysis artifacts. The maintained code is organized as a CLI-first pipeline for OCR, segmentation, clause classification, and generosity scoring, plus Streamlit dashboards for reviewing outputs and a set of summary scripts that generate figures.
-
-The main production path is:
-
-`PDFs -> OCR text -> document segments -> clause labels -> generosity scores -> summary figures`
-
-## What The Repo Contains
-
-### Maintained runnable code
+This repository is organized around two collaborator-facing areas:
 
 - `pipeline/`
-  Main OCR, segmentation, classification, generosity, and summary scripts.
+  The OCR, segmentation, classification, generosity, and summary-generation pipeline.
 - `review_ui/`
-  Streamlit dashboards for inspecting OCR, segmentation, classification, and generosity outputs.
-- `clause_extraction/`
-  Separate extraction-oriented runners for OCR and clause extraction workflows.
-- `generosity/`
-  Method-development utilities and comparison scripts for generosity scoring.
-- `scripts/`
-  Standalone utilities such as direct PDF clause-feature extraction.
+  Streamlit dashboards for inspecting pipeline inputs and outputs.
 
-### Experiments and references
+Everything else should be treated as supporting data/artifacts or internal development material.
 
-- `experiments/`
-  Evaluation harnesses, reports, and method-specific outputs for OCR, segmentation, sentence parsing, and clause extraction experiments.
-- `references/`
-  Research references and the clause taxonomy used by the classifier.
+## Repo Layout
 
-### Generated artifacts and source data
+### Collaborator-facing code
 
-- `outputs/`
-  Checked-in caches and generated CSV/JSONL artifacts.
-- `figures/`
-  Generated charts, HTML visualizations, and summary JSON files.
+- `pipeline/`
+  Production pipeline stages and summary scripts.
+- `review_ui/`
+  Review dashboards, with `app3.py` as the preferred entrypoint.
+
+### Supporting directories
+
 - `dol_archive/`
-  Source metadata and example archive files.
+  Source metadata and archived input files used by the pipeline.
+- `references/`
+  Supporting reference material, including `feature_taxonomy_final.md` used by classification.
+- `outputs/`
+  Generated CSV/JSON/JSONL artifacts and caches.
+- `figures/`
+  Generated charts and visual outputs.
 
-## Pipeline Overview
+### Internal / development material
+
+- `development/`
+  Research code, experiments, older utilities, and other non-collaborator workflows.
+
+## Main Pipeline
+
+The maintained workflow is:
+
+`PDFs -> OCR text -> segments -> clause labels -> generosity scores -> summary figures`
 
 ### 1. OCR
 
 Entry point: `pipeline/01_ocr/runner.py`
 
 - Input: `document_*.pdf`
-- Output: one directory per document containing `page_####.txt` files plus assembled full text
+- Output: one folder per document with `page_####.txt` files and assembled full text
 - Providers:
   - local vLLM
-  - Google AI Studio via the OpenAI-compatible Gemini endpoint
+  - Google AI Studio through the OpenAI-compatible Gemini endpoint
 
 ### 2. Segmentation
 
 Entry point: `pipeline/02_segment/runner.py`
 
-- Input: OCR output directories
+- Input: OCR output folders
 - Output: `document_meta.json`, `full_text.txt`, and `segments/segment_*.txt`
-- Method: use an LLM to infer the document structure, score candidate headers, then write top-level segments
 
 ### 3. Clause classification
 
 Entry point: `pipeline/03_classification/runner.py`
 
-- Input: segmented text files
+- Input: segmented text
 - Output: one JSON file per segment with clause labels
-- Method: embedding retrieval against `references/feature_taxonomy_final.md` plus an OpenRouter LLM decision step
+- Taxonomy source: `references/feature_taxonomy_final.md`
 
 ### 4. Generosity scoring
 
 - `pipeline/04_generosity_gab/runner.py`
-  Pairwise/ranking-style Gabriel score aggregation
+  Gabriel-style ranking/comparison scoring
 - `pipeline/04_generosity_ash/runner.py`
-  Rule-based ASH baseline from sentence/auth parsing
+  Rule-based baseline scoring
 - `pipeline/04_generosity_llm/runner.py`
-  Rubric-based LLM scoring with schema generation, extraction, and evaluation
+  Rubric-based LLM scoring
 
-### 5. Review and summaries
+### 5. Summaries and figures
 
-- `review_ui/app3.py`
-  Preferred review dashboard
 - `pipeline/summary/*.py`
-  Figure and table builders for clause prevalence, validation, time series, and document distributions
+  Figure and summary builders for clause prevalence, validation, distributions, and time-series outputs
 
 ## Environment Setup
 
-### Python and dependency manager
+### Python
 
-- Preferred Python: `3.12+` from `pyproject.toml`
-- Preferred package manager: `uv`
+- Preferred Python: `3.12+`
+- Preferred dependency manager: `uv`
 
-Bootstrap the environment:
+Install dependencies:
 
 ```bash
 uv sync
 ```
 
-If you want to use the project virtualenv directly:
-
-```bash
-source .venv/bin/activate
-```
-
 ### Environment variables
 
-Create a `.env` file or export the variables in your shell:
+Create a `.env` file or export variables directly:
 
 ```bash
 export CACHE_DIR=/absolute/path/to/run-cache
@@ -111,20 +103,20 @@ export OPENROUTER_API_KEY=...
 export GOOGLE_API_KEY=...
 ```
 
-What each variable is used for:
+What they are used for:
 
 - `CACHE_DIR`
-  Base directory for most pipeline inputs and outputs. Many scripts assume it is set.
+  Base directory for most pipeline inputs and outputs.
 - `OPENAI_API_KEY`
-  Needed by the segmentation stage and some utility scripts.
+  Used by segmentation and some utility paths inside the pipeline.
 - `OPENROUTER_API_KEY`
-  Needed by classification, `04_generosity_llm`, and some summary/experiment scripts.
+  Used by classification and `04_generosity_llm`.
 - `GOOGLE_API_KEY`
-  Needed only if OCR is run with `--provider google`.
+  Used only when OCR runs with `--provider google`.
 
-### Recommended cache layout
+## Recommended Data Layout
 
-The maintained pipeline works most predictably if `CACHE_DIR` contains:
+The maintained pipeline works best if `CACHE_DIR` contains:
 
 ```text
 $CACHE_DIR/
@@ -144,11 +136,11 @@ $CACHE_DIR/
     dol_archive/
 ```
 
-## How To Run The Main Workflow
+## How To Run
 
 ### OCR
 
-Use explicit output paths so downstream stages see the expected `01_ocr_output` directory name:
+Use explicit output paths so downstream stages see `01_ocr_output`:
 
 ```bash
 uv run python pipeline/01_ocr/runner.py \
@@ -159,19 +151,15 @@ uv run python pipeline/01_ocr/runner.py \
   --model gemini-2.5-flash
 ```
 
-If you want local vLLM instead, switch `--provider vllm` and configure the model-related flags.
-
 ### Segmentation
 
 ```bash
 uv run python pipeline/02_segment/runner.py
 ```
 
-This script currently assumes:
+Current caveat:
 
-- OCR input is at `$CACHE_DIR/01_ocr_output/dol_archive`
-- outputs should be written to `$CACHE_DIR/02_segmentation_output/dol_archive`
-- the checked-in `main()` runs with `cached_only=True`, which is useful for reruns but not ideal for a fresh first pass
+- `pipeline/02_segment/runner.py` is still configured for cached reruns in `main()`
 
 ### Clause classification
 
@@ -214,7 +202,7 @@ uv run python pipeline/04_generosity_llm/runner.py \
   --model openai/gpt-5-mini
 ```
 
-## Review UI
+### Review UI
 
 Preferred dashboard:
 
@@ -224,11 +212,10 @@ uv run streamlit run review_ui/app3.py
 
 Notes:
 
-- `review_ui/app3.py` is the broadest dashboard and the best starting point for collaborators.
-- `review_ui/app.py` is an older experiment-oriented UI.
-- both UIs read heavily from `CACHE_DIR`, plus checked-in `outputs/` and `figures/` artifacts
+- `review_ui/app3.py` is the main collaborator dashboard.
+- `review_ui/app.py` exists, but should be treated as a legacy/internal review UI rather than the default collaborator surface.
 
-## Summary And Figure Scripts
+### Summary scripts
 
 Examples:
 
@@ -238,20 +225,9 @@ uv run python pipeline/summary/validation.py --llm-output-dir "$CACHE_DIR/04_gen
 uv run python pipeline/summary/time_series_search.py --topic ai --ocr-dir "$CACHE_DIR/01_ocr_output/dol_archive"
 ```
 
-Most summary scripts write final charts into repo-local `figures/`, even when their inputs come from `CACHE_DIR`.
+Most summary scripts write charts into repo-local `figures/`, even when their inputs live under `CACHE_DIR`.
 
-## Other Maintained Utilities
-
-- `scripts/extract_cba_features.py`
-  Direct PDF-to-feature extraction utility using an OpenAI vision model.
-- `clause_extraction/ocr/runner.py`
-  Separate OCR workflow for clause-extraction experiments.
-- `clause_extraction/extraction/runner.py`
-  Extraction-focused pipeline outside the main `pipeline/01-04_*` path.
-- `generosity/compare_scores.py`
-  Compare generosity outputs from different methods.
-
-## Outputs You Should Expect
+## Expected Outputs
 
 - OCR:
   `$CACHE_DIR/01_ocr_output/dol_archive/document_*/page_####.txt`
@@ -263,19 +239,13 @@ Most summary scripts write final charts into repo-local `figures/`, even when th
   `$CACHE_DIR/04_generosity_{gab,ash,llm}_output/dol_archive/...`
 - figures:
   repo-local `figures/`
-- checked-in analysis tables and caches:
+- generated tables and caches:
   repo-local `outputs/`
-
-## Experiments
-
-`experiments/` contains benchmarking and method-comparison code for OCR, segmentation, sentence parsing, and clause extraction. These folders are useful for research context and replication, but they are not the main collaborator onboarding path and are only summarized here.
 
 ## Known Caveats
 
-- The OCR runner defaults to `01_ocr_output_qwen3_5`, but downstream pipeline code often expects `01_ocr_output`. Use explicit OCR output flags if you want the main pipeline stages to line up.
-- `pipeline/02_segment/runner.py` is currently configured for cached reruns in `main()`, not a polished first-run CLI.
-- `CACHE_DIR` is effectively required for most of the maintained pipeline, even when some scripts also have repo-local fallbacks.
-- `review_ui/app3.py` is the most useful dashboard; the other UI files are older variants with narrower or experiment-specific scope.
-- `main.py` is a placeholder and is not part of the real execution flow.
-- `pyproject.toml` does not appear to declare every third-party package used by all auxiliary scripts and dashboards. If a command fails after `uv sync`, inspect that script's imports and install the missing package.
-- `.devcontainer/devcontainer.json` currently points to Python `3.11`, while `pyproject.toml` declares `>=3.12`.
+- `pipeline/01_ocr/runner.py` still defaults to `01_ocr_output_qwen3_5`, while downstream stages often expect `01_ocr_output`. Use explicit OCR flags.
+- `pipeline/02_segment/runner.py` is not yet a polished first-run CLI.
+- `CACHE_DIR` is effectively required for most collaborator workflows.
+- `review_ui/app3.py` is the only review UI that should be treated as the primary collaborator entrypoint.
+- `development/` contains moved experimental and internal material and is not required for normal collaborator onboarding.

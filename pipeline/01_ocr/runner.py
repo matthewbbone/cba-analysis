@@ -395,9 +395,9 @@ async def main():
     parser = argparse.ArgumentParser(description="Run OlmoOCR over CBA PDFs with resumable caching.")
     parser.add_argument("--input-dir", type=Path, default=Path(os.environ.get("CACHE_DIR")) / "dol_archive",
                         help="Directory containing document_*.pdf files")
-    parser.add_argument("--output-dir", type=Path, default=Path(os.environ.get("CACHE_DIR")) / "01_ocr_output_qwen3_5" / "dol_archive",
+    parser.add_argument("--output-dir", type=Path, default=Path(os.environ.get("CACHE_DIR")) / "01_ocr_output" / "dol_archive",
                         help="Directory where OCR outputs are written")
-    parser.add_argument("--cache-file", type=Path, default=Path(os.environ.get("CACHE_DIR")) / "01_ocr_output_qwen3_5" / "01_ocr_cache.json",
+    parser.add_argument("--cache-file", type=Path, default=Path(os.environ.get("CACHE_DIR")) / "01_ocr_output" / "01_ocr_cache.json",
                         help="JSON file tracking processed pages")
     parser.add_argument("--sample-size", type=int, default=None,
                         help="Randomly sample N documents")

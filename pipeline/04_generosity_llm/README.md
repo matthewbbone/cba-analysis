@@ -16,9 +16,11 @@ All LLM calls are routed through OpenRouter.
 ## Input / Output
 
 - Input classification segments (default):
-  - `outputs/03_classification_output/dol_archive/document_*/segment_*.json`
+  - `$CACHE_DIR/03_classification_output/dol_archive/document_*/segment_*.json`
+  - or `outputs/03_classification_output/dol_archive/document_*/segment_*.json` when running without `CACHE_DIR`
 - Output directory (default):
-  - `outputs/04_generosity_llm_output/dol_archive`
+  - `$CACHE_DIR/04_generosity_llm_output/dol_archive`
+  - or `outputs/04_generosity_llm_output/dol_archive` when running without `CACHE_DIR`
 
 Artifacts written:
 
@@ -146,9 +148,10 @@ Existing artifacts are reused unless `--force` is set:
 Run:
 
 ```bash
-python pipeline/04_generosity_llm/runner.py \
-  --classification-dir outputs/03_classification_output/dol_archive \
-  --output-dir outputs/04_generosity_llm_output/dol_archive \
+uv run python pipeline/04_generosity_llm/runner.py \
+  --cache-dir "$CACHE_DIR" \
+  --classification-dir 03_classification_output/dol_archive \
+  --output-dir 04_generosity_llm_output/dol_archive \
   --model openai/gpt-5-mini
 ```
 
@@ -176,3 +179,4 @@ Key options:
 
 - This method is designed for relative generosity comparison across clauses/documents in the selected run scope.
 - Top clause selection is computed after any run filters (`--document-id`, `--sample-size`, etc.).
+- The collaborator-facing repo surface is `pipeline/` plus `review_ui/`; this README documents only the `04_generosity_llm` stage within that pipeline.
