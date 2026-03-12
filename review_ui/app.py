@@ -1,5 +1,13 @@
+"""Legacy Streamlit dashboard for reviewing OCR, annotations, and comparisons.
+
+Collaborator onboarding should use `review_ui/app3.py`. This older UI remains
+available for internal review flows and experiment comparisons.
+"""
+
 import io
+import itertools
 import json
+import os
 from pathlib import Path
 import datetime
 import html
@@ -12,13 +20,24 @@ import altair as alt
 import pandas as pd
 from pypdf import PdfReader, PdfWriter
 import streamlit.components.v1 as components
+from dotenv import load_dotenv
+
+load_dotenv()
 
 APP_DIR = Path(__file__).resolve().parent
-DEFAULT_DOC_DIR = APP_DIR.parent / "processed_cbas"
+CACHE_DIR_ENV = os.environ.get("CACHE_DIR", "").strip()
+DEFAULT_CACHE_DIR = Path(CACHE_DIR_ENV).expanduser() if CACHE_DIR_ENV else APP_DIR.parent
+DEFAULT_COLLECTION = "dol_archive"
+
+DEFAULT_DOC_DIR = DEFAULT_CACHE_DIR / DEFAULT_COLLECTION
 DEFAULT_FEATURES_OUTPUT = APP_DIR.parent / "outputs" / "cba_features_annotated.jsonl"
 DEFAULT_META_DTA = APP_DIR.parent / "dol_archive" / "CBAList_with_statefips.dta"
-DEFAULT_OCR_DIR = APP_DIR.parent / "ocr_output"
-DEFAULT_PDF_DIR = APP_DIR.parent / "processed_cbas"
+DEFAULT_OCR_DIR = DEFAULT_CACHE_DIR / "01_ocr_output" / DEFAULT_COLLECTION
+DEFAULT_OCR_EXPERIMENT_DIR = APP_DIR.parent / "development" / "experiments" / "ocr"
+DEFAULT_CLAUSE_EXPERIMENT_DIR = APP_DIR.parent / "development" / "experiments" / "clause_extraction"
+DEFAULT_PROVISION_EXPERIMENT_DIR = APP_DIR.parent / "development" / "experiments" / "provision_identification"
+DEFAULT_SEGMENTATION_EXPERIMENT_DIR = APP_DIR.parent / "development" / "experiments" / "segmentation"
+DEFAULT_PDF_DIR = DEFAULT_CACHE_DIR / DEFAULT_COLLECTION
 DEFAULT_ANNOTATED_JSONL = APP_DIR.parent / "outputs" / "cba_features_annotated.jsonl"
 
 
@@ -558,7 +577,7 @@ def render_ocr_viewer():
         # Get page text from individual page files
         page_text = ""
         if page_idx < len(page_files):
-            page_text = page_files[page_idx].read_text(encoding="utf-8")
+            page_text = page_files[page_idx + 1].read_text(encoding="utf-8")
 
         annotations = load_annotated_pages(annotated_jsonl) if annotated_jsonl.exists() else {}
         page_num = page_idx + 1
@@ -575,7 +594,1315 @@ def render_ocr_viewer():
                 st.caption("Annotated JSONL not found; showing plain OCR text.")
 
 
+def render_ocr_comparison():
+    """Compare OCR outputs from experiment methods side-by-side."""
+    experiment_dir = DEFAULT_OCR_EXPERIMENT_DIR.expanduser().resolve()
+    output_dir = experiment_dir / "output"
+    results_file = experiment_dir / "results.csv"
+    test_pdfs_dir = experiment_dir / "test_pdfs"
+
+    if not output_dir.exists():
+        st.warning("No experiment outputs found. Run the OCR experiment first.")
+        return
+
+    # Load results CSV for metrics and agreement scores
+    metrics = {}  # (pdf_stem, page, method_a, method_b) -> {cer, wer}
+    page_agreement = defaultdict(list)  # (pdf_stem, page) -> list of (cer+wer)/2
+    if results_file.exists():
+        with results_file.open(newline="") as f:
+            for row in csv.DictReader(f):
+                pdf_stem_r = Path(row["pdf"]).stem
+                page_r = int(row["page"])
+                cer = float(row["cer"])
+                wer = float(row["wer"])
+                key = (pdf_stem_r, page_r, row["method_a"], row["method_b"])
+                metrics[key] = {"cer": cer, "wer": wer}
+                page_agreement[(pdf_stem_r, page_r)].append((cer + wer) / 2)
+
+    # Compute agreement scores: higher = more agreement (1.0 = perfect)
+    agreement_scores = {k: 1 - sum(v) / len(v) for k, v in page_agreement.items()}
+
+    # Discover all (doc, page) pairs across all experiment output
+    doc_dirs = sorted(
+        [d for d in output_dir.iterdir() if d.is_dir()],
+        key=lambda p: p.name,
+    )
+    if not doc_dirs:
+        st.warning("No experiment output directories found.")
+        return
+
+    # Load all method data per document
+    all_doc_methods = {}  # pdf_stem -> {method_name -> {page -> text}}
+    all_entries = []  # list of (pdf_stem, page)
+    for doc_dir in doc_dirs:
+        stem = doc_dir.name
+        doc_methods = {}
+        for mf in sorted(doc_dir.glob("*.json")):
+            data = json.loads(mf.read_text())
+            doc_methods[mf.stem] = {int(k): v for k, v in data.items()}
+        if not doc_methods:
+            continue
+        all_doc_methods[stem] = doc_methods
+        pages = sorted(set().union(*(m.keys() for m in doc_methods.values())))
+        for p in pages:
+            all_entries.append((stem, p))
+
+    if not all_entries:
+        st.warning("No pages found in experiment output.")
+        return
+
+    # Rank all entries by agreement score (least agreeable first)
+    all_entries.sort(key=lambda x: agreement_scores.get(x, 1.0))
+
+    def entry_label(entry):
+        stem, p = entry
+        score = agreement_scores.get((stem, p))
+        if score is not None:
+            return f"{stem} p.{p} (agreement: {score:.4f})"
+        return f"{stem} p.{p}"
+
+    # Sidebar: page selection
+    selected_entry = st.sidebar.selectbox(
+        "Page",
+        all_entries,
+        format_func=entry_label,
+        key="ocr_cmp_page",
+    )
+    pdf_stem, page_num = selected_entry
+
+    methods = all_doc_methods[pdf_stem]
+    preferred_order = ["pdftotext", "vision_model", "olmocr"]
+    method_names = [m for m in preferred_order if m in methods]
+    method_names += [m for m in sorted(methods.keys()) if m not in preferred_order]
+
+    st.sidebar.markdown("---")
+    st.sidebar.markdown(f"**Methods:** {', '.join(method_names)}")
+    st.sidebar.markdown(f"**Total pages:** {len(all_entries)}")
+    current_score = agreement_scores.get((pdf_stem, page_num))
+    if current_score is not None:
+        st.sidebar.markdown(f"**Agreement score:** {current_score:.4f}")
+
+    # --- Pairwise metrics table ---
+    st.subheader(f"{pdf_stem} — Page {page_num}")
+
+    pairs = list(itertools.combinations(method_names, 2))
+    if pairs and metrics:
+        metric_rows = []
+        for m1, m2 in pairs:
+            # Try both orderings
+            key = (pdf_stem, page_num, m1, m2)
+            key_rev = (pdf_stem, page_num, m2, m1)
+            m = metrics.get(key) or metrics.get(key_rev)
+            if m:
+                metric_rows.append({
+                    "Method A": m1,
+                    "Method B": m2,
+                    "CER": f"{m['cer']:.4f}",
+                    "WER": f"{m['wer']:.4f}",
+                })
+            else:
+                metric_rows.append({
+                    "Method A": m1,
+                    "Method B": m2,
+                    "CER": "—",
+                    "WER": "—",
+                })
+        st.dataframe(pd.DataFrame(metric_rows), use_container_width=True, hide_index=True)
+
+    # --- PDF preview (left) + stacked OCR outputs (right) ---
+    pdf_path = test_pdfs_dir / f"{pdf_stem}.pdf"
+    show_pdf = pdf_path.exists()
+
+    col_left, col_right = st.columns([1, 1], gap="medium")
+
+    if show_pdf:
+        with col_left:
+            st.markdown("**PDF**")
+            try:
+                pdf_bytes = load_pdf_page(pdf_path, page_num - 1)
+                st.pdf(pdf_bytes, height=900)
+            except Exception as exc:
+                st.error(f"Failed to render PDF: {exc}")
+
+    with col_right:
+        for method in method_names:
+            text = methods[method].get(page_num, "")
+            char_count = len(text) if text else 0
+            st.markdown(f"**{method}** ({char_count} chars)")
+            st.text_area(
+                label=method,
+                value=text or "(no output)",
+                height=300,
+                key=f"ocr_cmp_text_{method}_{pdf_stem}_{page_num}",
+                label_visibility="collapsed",
+            )
+
+
+def _get_visible_spans(text: str, extractions: list[dict]) -> list[tuple[int, int, str]]:
+    """Return non-overlapping spans that will actually be highlighted."""
+    spans = []
+    for ex in extractions or []:
+        start = ex.get("start_pos")
+        end = ex.get("end_pos")
+        if not isinstance(start, int) or not isinstance(end, int):
+            continue
+        if start < 0 or end <= start or end > len(text):
+            continue
+        label = ex.get("clause_label", "Unknown")
+        spans.append((start, end, label))
+
+    spans.sort(key=lambda x: (x[0], x[1]))
+    filtered = []
+    last_end = -1
+    for start, end, label in spans:
+        if start < last_end:
+            continue
+        filtered.append((start, end, label))
+        last_end = end
+    return filtered
+
+
+def _render_experiment_highlights(
+    text: str,
+    extractions: list[dict],
+    label_to_color: dict[str, str],
+    height: int = 620,
+):
+    """Render highlighted spans (no legend — rendered separately)."""
+    if not text:
+        st.info("No text for this page.")
+        return
+
+    filtered = _get_visible_spans(text, extractions)
+
+    for _, _, label in filtered:
+        if label not in label_to_color:
+            idx = len(label_to_color) % len(_CLAUSE_PALETTE)
+            label_to_color[label] = _CLAUSE_PALETTE[idx]
+
+    chunks = []
+    cursor = 0
+    for start, end, label in filtered:
+        if cursor < start:
+            chunks.append(html.escape(text[cursor:start]))
+        color = label_to_color[label]
+        frag = html.escape(text[start:end])
+        title = html.escape(label)
+        chunks.append(
+            f'<mark style="background:{color};'
+            f' padding:0.05rem 0.15rem;'
+            f' border-radius:3px;"'
+            f' title="{title}">{frag}</mark>'
+        )
+        cursor = end
+    if cursor < len(text):
+        chunks.append(html.escape(text[cursor:]))
+
+    html_doc = f"""
+    <div style="font-family: ui-sans-serif, system-ui, sans-serif;">
+      <div style="
+          white-space: pre-wrap;
+          border: 1px solid #e5e7eb;
+          border-radius: 8px;
+          padding: 0.9rem;
+          height: {height}px;
+          overflow-y: auto;
+          line-height: 1.45;
+          background: #ffffff;
+          color: #111827;
+        ">{''.join(chunks)}</div>
+    </div>
+    """
+    components.html(html_doc, height=height + 40, scrolling=True)
+
+
+_CLAUSE_PALETTE = [
+    "#fde68a", "#bfdbfe", "#fecaca", "#c7d2fe", "#a7f3d0",
+    "#fbcfe8", "#fdba74", "#ddd6fe", "#86efac", "#fcd34d",
+    "#fed7aa", "#e9d5ff", "#99f6e4", "#fca5a5", "#a5b4fc",
+]
+
+
+def render_clause_extraction_comparison():
+    """Compare clause extraction methods side-by-side with highlighted spans."""
+    experiment_dir = DEFAULT_CLAUSE_EXPERIMENT_DIR.expanduser().resolve()
+    output_dir = experiment_dir / "output"
+    ocr_dir = DEFAULT_OCR_DIR.expanduser().resolve()
+
+    if not output_dir.exists():
+        st.warning("No clause extraction experiment outputs found. Run the experiment first.")
+        return
+
+    # Discover documents with output
+    doc_dirs = sorted(
+        [d for d in output_dir.iterdir() if d.is_dir()],
+        key=lambda p: p.name,
+    )
+    if not doc_dirs:
+        st.warning("No experiment output directories found.")
+        return
+
+    # Load method results per document
+    doc_methods: dict[str, dict[str, dict]] = {}  # doc_id -> {method -> {page_str -> extractions}}
+    for d in doc_dirs:
+        methods = {}
+        for mf in sorted(d.glob("*.json")):
+            methods[mf.stem] = json.loads(mf.read_text())
+        if methods:
+            doc_methods[d.name] = methods
+
+    if not doc_methods:
+        st.warning("No method outputs found.")
+        return
+
+    # Metadata for display labels
+    meta_df = load_metadata(DEFAULT_META_DTA.expanduser().resolve())
+    display_map = build_doc_display_map(meta_df)
+
+    doc_ids = sorted(doc_methods.keys())
+    selected_doc = st.sidebar.selectbox(
+        "Document",
+        doc_ids,
+        format_func=lambda d: display_map.get(d, d),
+        key="clause_cmp_doc",
+    )
+
+    methods = doc_methods[selected_doc]
+    method_names = sorted(methods.keys())
+
+    # Collect all pages across methods
+    all_pages = sorted(set(
+        int(p) for m in methods.values() for p in m.keys()
+    ))
+
+    if not all_pages:
+        st.warning("No pages found for this document.")
+        return
+
+    page_num = st.sidebar.selectbox("Page", all_pages, key="clause_cmp_page")
+
+    st.sidebar.markdown("---")
+    st.sidebar.markdown(f"**Methods:** {', '.join(method_names)}")
+    st.sidebar.markdown(f"**Pages:** {len(all_pages)}")
+
+    # Load page text from OCR output
+    page_file = ocr_dir / selected_doc / f"page_{page_num:04d}.txt"
+    page_text = ""
+    if page_file.exists():
+        page_text = page_file.read_text(encoding="utf-8", errors="replace")
+
+    st.subheader(f"{display_map.get(selected_doc, selected_doc)} — Page {page_num}")
+
+    # Collect only labels that actually appear as visible highlights
+    # across all methods (after overlap filtering + bounds checks)
+    visible_labels: set[str] = set()
+    method_extractions: dict[str, list[dict]] = {}
+    for method in method_names:
+        exts = methods[method].get(str(page_num), [])
+        method_extractions[method] = exts
+        for _, _, label in _get_visible_spans(page_text, exts):
+            visible_labels.add(label)
+
+    # Build shared color map from visible labels only
+    label_to_color: dict[str, str] = {}
+    for label in sorted(visible_labels):
+        label_to_color[label] = _CLAUSE_PALETTE[
+            len(label_to_color) % len(_CLAUSE_PALETTE)
+        ]
+
+    # Shared legend
+    if label_to_color:
+        legend_html = "".join(
+            f'<span style="display:inline-block;'
+            f' margin:0 0.5rem 0.35rem 0;">'
+            f'<span style="background:{color};'
+            f' padding:0.1rem 0.35rem;'
+            f' border-radius:3px;">&nbsp;</span> '
+            f'{html.escape(label)}</span>'
+            for label, color in label_to_color.items()
+        )
+        components.html(
+            f'<div style="font-family: ui-sans-serif, system-ui,'
+            f' sans-serif; font-size:0.9rem;">'
+            f'{legend_html}</div>',
+            height=60,
+            scrolling=True,
+        )
+
+    # Render side-by-side columns
+    cols = st.columns(len(method_names), gap="medium")
+    for col, method in zip(cols, method_names):
+        with col:
+            exts = method_extractions[method]
+            st.markdown(f"**{method}** ({len(exts)} extractions)")
+            _render_experiment_highlights(
+                page_text, exts, label_to_color, height=600,
+            )
+
+
+@st.cache_data(show_spinner=False)
+def load_provision_result_rows(results_path: Path):
+    if not results_path.exists():
+        return []
+    rows = []
+    with results_path.open(newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            rows.append(row)
+    return rows
+
+
+def _resolve_output_json_path(raw_path: str, experiment_dir: Path) -> Path | None:
+    if not raw_path:
+        return None
+    p = Path(raw_path)
+    candidates = []
+    if p.is_absolute():
+        candidates.append(p)
+    else:
+        candidates.extend([
+            (experiment_dir / p).resolve(),
+            (APP_DIR.parent / p).resolve(),
+            (Path.cwd() / p).resolve(),
+        ])
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+    return None
+
+
+def _canonical_segmentation_version(version: str) -> str:
+    v = str(version or "").strip()
+    if not v:
+        return v
+    for marker in ("__model_", "__plan_"):
+        if marker in v:
+            v = v.split(marker, 1)[0]
+    return v
+
+
+@st.cache_data(show_spinner=False)
+def load_page_extractions_json(path: Path):
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    if not isinstance(data, dict):
+        return {}
+
+    out = {}
+    for k, v in data.items():
+        try:
+            page = int(k)
+        except Exception:
+            continue
+        out[page] = v if isinstance(v, list) else []
+    return out
+
+
+@st.cache_data(show_spinner=False)
+def load_segmentation_output_json(path: Path):
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    if not isinstance(data, dict):
+        return {}
+
+    segments = data.get("segments", [])
+    if not isinstance(segments, list):
+        segments = []
+
+    clean_segments = []
+    for seg in segments:
+        if not isinstance(seg, dict):
+            continue
+        clean_segments.append(seg)
+
+    out = dict(data)
+    out["segments"] = clean_segments
+    return out
+
+
+def _load_doc_page_text_and_spans(doc_dir: Path):
+    page_numbers = []
+    text_by_page: dict[int, str] = {}
+    span_by_page: dict[int, tuple[int, int]] = {}
+
+    if not doc_dir.exists():
+        return {
+            "page_numbers": page_numbers,
+            "text_by_page": text_by_page,
+            "span_by_page": span_by_page,
+        }
+
+    offset = 0
+    has_non_empty = False
+    for pf in sorted(doc_dir.glob("page_*.txt")):
+        m = re.match(r"page_(\d+)\.txt$", pf.name)
+        if not m:
+            continue
+        page_num = int(m.group(1))
+        page_numbers.append(page_num)
+
+        text = pf.read_text(encoding="utf-8", errors="replace").strip()
+        text_by_page[page_num] = text
+        if not text:
+            continue
+
+        if has_non_empty:
+            offset += 2  # separator used by segmentation method: "\n\n"
+
+        start = offset
+        end = start + len(text)
+        span_by_page[page_num] = (start, end)
+        offset = end
+        has_non_empty = True
+
+    return {
+        "page_numbers": page_numbers,
+        "text_by_page": text_by_page,
+        "span_by_page": span_by_page,
+    }
+
+
+def _segmentation_segments_for_page(
+    segments: list[dict],
+    page_num: int,
+    page_text: str,
+    page_span: tuple[int, int] | None,
+) -> list[dict]:
+    if not page_text:
+        return []
+
+    page_len = len(page_text)
+    out = []
+
+    for seg in segments or []:
+        if not isinstance(seg, dict):
+            continue
+
+        local_start = None
+        local_end = None
+        start = seg.get("start_pos")
+        end = seg.get("end_pos")
+
+        if (
+            page_span is not None
+            and isinstance(start, int)
+            and isinstance(end, int)
+            and end > start
+        ):
+            page_start, page_end = page_span
+            if start < page_end and end > page_start:
+                local_start = max(0, start - page_start)
+                local_end = min(page_len, end - page_start)
+
+        if local_start is None or local_end is None:
+            start_page = seg.get("start_page")
+            end_page = seg.get("end_page")
+            if (
+                isinstance(start_page, int)
+                and isinstance(end_page, int)
+                and start_page <= page_num <= end_page
+            ):
+                snippet = str(seg.get("text", "")).strip()
+                if snippet:
+                    idx = page_text.find(snippet)
+                    if idx < 0 and len(snippet) > 200:
+                        idx = page_text.find(snippet[:200])
+                    if idx < 0:
+                        idx = page_text.lower().find(snippet.lower())
+                    if idx >= 0:
+                        local_start = idx
+                        local_end = min(page_len, idx + len(snippet))
+
+        if (
+            local_start is None
+            or local_end is None
+            or local_end <= local_start
+            or local_start < 0
+            or local_end > page_len
+        ):
+            continue
+
+        out.append({
+            "parent": str(seg.get("parent", "")).strip() or "Unknown Parent",
+            "title": str(seg.get("title", "")).strip() or "Untitled",
+            "text": str(seg.get("text", "")).strip(),
+            "local_start": int(local_start),
+            "local_end": int(local_end),
+        })
+
+    out.sort(key=lambda x: (x["local_start"], x["local_end"]))
+    filtered = []
+    last_end = -1
+    for seg in out:
+        if seg["local_start"] < last_end:
+            continue
+        filtered.append(seg)
+        last_end = seg["local_end"]
+    return filtered
+
+
+def _render_segmentation_highlights(text: str, page_segments: list[dict], height: int = 580):
+    if not text:
+        st.info("No text for this page.")
+        return
+
+    palette = [
+        "#fde68a", "#bfdbfe", "#fecaca", "#c7d2fe", "#a7f3d0",
+        "#fbcfe8", "#fdba74", "#ddd6fe", "#86efac", "#fcd34d",
+        "#fed7aa", "#99f6e4",
+    ]
+    chunks = []
+    cursor = 0
+
+    for idx, seg in enumerate(page_segments):
+        start = seg["local_start"]
+        end = seg["local_end"]
+        color = palette[idx % len(palette)]
+        if cursor < start:
+            chunks.append(html.escape(text[cursor:start]))
+        frag = html.escape(text[start:end])
+        tooltip = html.escape(f'{seg["parent"]} > {seg["title"]}')
+        chunks.append(
+            f'<mark style="background:{color};'
+            f' padding:0.05rem 0.15rem;'
+            f' border-radius:3px;" title="{tooltip}">{frag}</mark>'
+        )
+        cursor = end
+
+    if cursor < len(text):
+        chunks.append(html.escape(text[cursor:]))
+
+    html_doc = f"""
+    <div style="font-family: ui-sans-serif, system-ui, sans-serif;">
+      <div style="margin-bottom:0.45rem; font-size:0.9rem;">
+        Highlighted segments on page: {len(page_segments)}
+      </div>
+      <div style="
+          white-space: pre-wrap;
+          border: 1px solid #e5e7eb;
+          border-radius: 8px;
+          padding: 0.9rem;
+          height: {height}px;
+          overflow-y: auto;
+          line-height: 1.45;
+          background: #ffffff;
+          color: #111827;
+        ">{''.join(chunks)}</div>
+    </div>
+    """
+    components.html(html_doc, height=height + 65, scrolling=True)
+
+
+def _render_synced_segmentation_panes(
+    text: str,
+    panes: list[dict],
+    height: int = 520,
+    lock_scroll: bool = True,
+):
+    """Render multiple segmentation panes inside one component with optional scroll lock."""
+    if not text:
+        st.info("No text for this page.")
+        return
+    if not panes:
+        st.info("No segmentation runs selected.")
+        return
+
+    palette = [
+        "#fde68a", "#bfdbfe", "#fecaca", "#c7d2fe", "#a7f3d0",
+        "#fbcfe8", "#fdba74", "#ddd6fe", "#86efac", "#fcd34d",
+        "#fed7aa", "#99f6e4",
+    ]
+    pane_cards = []
+    for pane_idx, pane in enumerate(panes):
+        page_segments = pane.get("segments", [])
+        chunks = []
+        cursor = 0
+
+        for idx, seg in enumerate(page_segments):
+            start = seg["local_start"]
+            end = seg["local_end"]
+            color = palette[idx % len(palette)]
+            if cursor < start:
+                chunks.append(html.escape(text[cursor:start]))
+            frag = html.escape(text[start:end])
+            tooltip = html.escape(f'{seg["parent"]} > {seg["title"]}')
+            chunks.append(
+                f'<mark style="background:{color};'
+                f' padding:0.05rem 0.15rem;'
+                f' border-radius:3px;" title="{tooltip}">{frag}</mark>'
+            )
+            cursor = end
+
+        if cursor < len(text):
+            chunks.append(html.escape(text[cursor:]))
+
+        run_key = html.escape(str(pane.get("run_key", "Run")))
+        pane_cards.append(
+            f"""
+            <div class="seg-pane-card">
+              <div class="seg-pane-title">{run_key}</div>
+              <div class="seg-pane-subtitle">{len(page_segments)} segments on this page</div>
+              <div class="seg-pane-scroll" data-pane-index="{pane_idx}">
+                {''.join(chunks)}
+              </div>
+            </div>
+            """
+        )
+
+    cols = min(3, max(1, len(panes)))
+    rows = (len(panes) + cols - 1) // cols
+    component_height = rows * (height + 90) + 40
+
+    html_doc = f"""
+    <div style="font-family: ui-sans-serif, system-ui, sans-serif;">
+      <div style="margin-bottom:0.45rem; font-size:0.9rem;">
+        {("Pane scroll is locked." if lock_scroll else "Pane scroll is unlocked.")}
+      </div>
+      <div class="seg-grid">
+        {''.join(pane_cards)}
+      </div>
+    </div>
+    <style>
+      .seg-grid {{
+        display: grid;
+        grid-template-columns: repeat({cols}, minmax(0, 1fr));
+        gap: 0.75rem;
+      }}
+      .seg-pane-card {{
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 0.6rem;
+        background: #ffffff;
+      }}
+      .seg-pane-title {{
+        font-weight: 600;
+        margin-bottom: 0.15rem;
+      }}
+      .seg-pane-subtitle {{
+        font-size: 0.85rem;
+        color: #6b7280;
+        margin-bottom: 0.45rem;
+      }}
+      .seg-pane-scroll {{
+        white-space: pre-wrap;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 0.85rem;
+        height: {height}px;
+        overflow-y: auto;
+        line-height: 1.45;
+        background: #ffffff;
+        color: #111827;
+      }}
+    </style>
+    <script>
+      (() => {{
+        const lockScroll = {"true" if lock_scroll else "false"};
+        if (!lockScroll) return;
+        const panes = Array.from(document.querySelectorAll(".seg-pane-scroll"));
+        if (panes.length < 2) return;
+
+        let syncing = false;
+        panes.forEach((pane) => {{
+          pane.addEventListener("scroll", () => {{
+            if (syncing) return;
+            syncing = true;
+            const paneMax = Math.max(1, pane.scrollHeight - pane.clientHeight);
+            const ratio = pane.scrollTop / paneMax;
+            panes.forEach((other) => {{
+              if (other === pane) return;
+              const otherMax = Math.max(0, other.scrollHeight - other.clientHeight);
+              other.scrollTop = ratio * otherMax;
+            }});
+            syncing = false;
+          }}, {{ passive: true }});
+        }});
+      }})();
+    </script>
+    """
+    components.html(html_doc, height=component_height, scrolling=True)
+
+
+def _get_provision_spans(text: str, extractions: list[dict]) -> list[tuple[int, int]]:
+    spans = []
+    for ex in extractions or []:
+        if not isinstance(ex, dict):
+            continue
+        start = ex.get("start_pos")
+        end = ex.get("end_pos")
+        if not isinstance(start, int) or not isinstance(end, int):
+            continue
+        if start < 0 or end <= start or end > len(text):
+            continue
+        spans.append((start, end))
+
+    spans.sort(key=lambda x: (x[0], x[1]))
+    filtered = []
+    last_end = -1
+    for start, end in spans:
+        if start < last_end:
+            continue
+        filtered.append((start, end))
+        last_end = end
+    return filtered
+
+
+def _chars_for_spans(spans: list[tuple[int, int]]) -> set[int]:
+    chars = set()
+    for start, end in spans:
+        chars.update(range(start, end))
+    return chars
+
+
+def _span_iou(set_a: set[int], set_b: set[int]) -> float:
+    if not set_a and not set_b:
+        return 1.0
+    if not set_a or not set_b:
+        return 0.0
+    return len(set_a & set_b) / len(set_a | set_b)
+
+
+def _render_provision_highlights(text: str, extractions: list[dict], height: int = 580):
+    if not text:
+        st.info("No text for this page.")
+        return
+
+    spans = _get_provision_spans(text, extractions)
+    palette = [
+        "#fde68a", "#bfdbfe", "#fecaca", "#c7d2fe", "#a7f3d0",
+        "#fbcfe8", "#fdba74", "#ddd6fe", "#86efac", "#fcd34d",
+        "#fed7aa", "#99f6e4",
+    ]
+    chunks = []
+    cursor = 0
+
+    for idx, (start, end) in enumerate(spans):
+        color = palette[idx % len(palette)]
+        if cursor < start:
+            chunks.append(html.escape(text[cursor:start]))
+        frag = html.escape(text[start:end])
+        title = f"Provision {idx + 1}"
+        chunks.append(
+            f'<mark style="background:{color};'
+            f' padding:0.05rem 0.15rem;'
+            f' border-radius:3px;" title="{title}">{frag}</mark>'
+        )
+        cursor = end
+
+    if cursor < len(text):
+        chunks.append(html.escape(text[cursor:]))
+
+    html_doc = f"""
+    <div style="font-family: ui-sans-serif, system-ui, sans-serif;">
+      <div style="margin-bottom:0.45rem; font-size:0.9rem;">
+        Highlighted provision spans ({len(spans)}). Colors are assigned per span.
+      </div>
+      <div style="
+          white-space: pre-wrap;
+          border: 1px solid #e5e7eb;
+          border-radius: 8px;
+          padding: 0.9rem;
+          height: {height}px;
+          overflow-y: auto;
+          line-height: 1.45;
+          background: #ffffff;
+          color: #111827;
+        ">{''.join(chunks)}</div>
+    </div>
+    """
+    components.html(html_doc, height=height + 65, scrolling=True)
+
+
+def render_provision_identification_comparison():
+    """Compare provision-identification variants side-by-side."""
+    experiment_dir = DEFAULT_PROVISION_EXPERIMENT_DIR.expanduser().resolve()
+    output_dir = experiment_dir / "output"
+    results_file = experiment_dir / "results.csv"
+    ocr_dir = DEFAULT_OCR_DIR.expanduser().resolve()
+
+    if not output_dir.exists():
+        st.warning("No provision-identification outputs found. Run the experiment first.")
+        return
+
+    rows = load_provision_result_rows(results_file)
+    # doc_id -> version -> {page -> [extractions]}
+    doc_versions: dict[str, dict[str, dict[int, list[dict]]]] = {}
+
+    if rows:
+        cache_by_path: dict[str, dict[int, list[dict]]] = {}
+        for row in rows:
+            method = str(row.get("method", "")).strip()
+            if method and method != "doublepass":
+                continue
+            doc_id = str(row.get("document_id", "")).strip()
+            version = str(row.get("version", "")).strip()
+            raw_output_path = str(row.get("output_json_path", "")).strip()
+            if not doc_id or not version or not raw_output_path:
+                continue
+            resolved = _resolve_output_json_path(raw_output_path, experiment_dir)
+            if resolved is None:
+                continue
+            cache_key = str(resolved)
+            if cache_key not in cache_by_path:
+                cache_by_path[cache_key] = load_page_extractions_json(resolved)
+            doc_versions.setdefault(doc_id, {})[version] = cache_by_path[cache_key]
+
+    # Fallback: discover outputs directly if results.csv is missing/incomplete.
+    if not doc_versions:
+        for doc_dir in sorted([d for d in output_dir.iterdir() if d.is_dir()], key=lambda p: p.name):
+            for mf in sorted(doc_dir.glob("*.json")):
+                version = mf.stem
+                if version.startswith("doublepass__"):
+                    version = version[len("doublepass__"):]
+                doc_versions.setdefault(doc_dir.name, {})[version] = load_page_extractions_json(mf)
+
+    if not doc_versions:
+        st.warning("No provision-identification outputs discovered.")
+        return
+
+    meta_df = load_metadata(DEFAULT_META_DTA.expanduser().resolve())
+    display_map = build_doc_display_map(meta_df)
+
+    doc_ids = sorted(doc_versions.keys())
+    selected_doc = st.sidebar.selectbox(
+        "Document",
+        doc_ids,
+        format_func=lambda d: display_map.get(d, d),
+        key="prov_cmp_doc",
+    )
+
+    versions = sorted(doc_versions[selected_doc].keys())
+    selected_versions = st.sidebar.multiselect(
+        "Variants",
+        options=versions,
+        default=versions[: min(3, len(versions))],
+        key="prov_cmp_versions",
+    )
+    if not selected_versions:
+        st.info("Select at least one variant.")
+        return
+
+    all_pages = sorted(set(
+        p for version in selected_versions for p in doc_versions[selected_doc][version].keys()
+    ))
+    if not all_pages:
+        st.warning("No pages found for selected variant(s).")
+        return
+
+    ocr_doc_dir = ocr_dir / selected_doc
+    ocr_page_files = list_page_files(ocr_doc_dir) if ocr_doc_dir.exists() else []
+    max_page = len(ocr_page_files) if ocr_page_files else max(all_pages)
+    default_page = min(max(all_pages[0], 1), max_page)
+    page_num = int(
+        st.sidebar.number_input(
+            "Page",
+            min_value=1,
+            max_value=max_page,
+            value=default_page,
+            step=1,
+            key="prov_cmp_page_step",
+        )
+    )
+    st.sidebar.markdown("---")
+    st.sidebar.markdown(f"**Variants selected:** {len(selected_versions)}")
+    st.sidebar.markdown(f"**Pages with extractions:** {len(all_pages)}")
+    st.sidebar.markdown(f"**Document pages:** {max_page}")
+
+    page_file = ocr_dir / selected_doc / f"page_{page_num:04d}.txt"
+    page_text = ""
+    if page_file.exists():
+        page_text = page_file.read_text(encoding="utf-8", errors="replace")
+
+    st.subheader(f"{display_map.get(selected_doc, selected_doc)} — Page {page_num}")
+
+    summary_rows = []
+    variant_char_sets: dict[str, set[int]] = {}
+    for version in selected_versions:
+        exts = doc_versions[selected_doc][version].get(page_num, [])
+        spans = _get_provision_spans(page_text, exts)
+        covered_chars = sum(end - start for start, end in spans)
+        variant_char_sets[version] = _chars_for_spans(spans)
+
+        runtime = None
+        for row in rows:
+            if (
+                str(row.get("document_id", "")).strip() == selected_doc
+                and str(row.get("version", "")).strip() == version
+                and str(row.get("page", "")).strip() == str(page_num)
+            ):
+                try:
+                    runtime = float(row.get("runtime_sec"))
+                except Exception:
+                    runtime = None
+                break
+
+        summary_rows.append({
+            "variant": version,
+            "extractions": len(exts),
+            "visible_spans": len(spans),
+            "covered_chars": covered_chars,
+            "runtime_sec": runtime,
+        })
+
+    st.dataframe(pd.DataFrame(summary_rows), use_container_width=True, hide_index=True)
+
+    pairwise = []
+    for a, b in itertools.combinations(selected_versions, 2):
+        pairwise.append({
+            "variant_a": a,
+            "variant_b": b,
+            "char_iou": round(_span_iou(variant_char_sets[a], variant_char_sets[b]), 4),
+        })
+    if pairwise:
+        st.caption("Pairwise overlap between highlighted character spans (IoU).")
+        st.dataframe(pd.DataFrame(pairwise), use_container_width=True, hide_index=True)
+
+    if len(selected_versions) <= 3:
+        cols = st.columns(len(selected_versions), gap="medium")
+        for col, version in zip(cols, selected_versions):
+            with col:
+                exts = doc_versions[selected_doc][version].get(page_num, [])
+                st.markdown(f"**{version}**")
+                st.caption(f"{len(exts)} extracted spans")
+                _render_provision_highlights(page_text, exts, height=560)
+    else:
+        for version in selected_versions:
+            exts = doc_versions[selected_doc][version].get(page_num, [])
+            st.markdown(f"**{version}**")
+            st.caption(f"{len(exts)} extracted spans")
+            _render_provision_highlights(page_text, exts, height=450)
+
+
+def render_segmentation_review():
+    """Review segmentation experiment outputs with page-level highlights."""
+    experiment_dir = DEFAULT_SEGMENTATION_EXPERIMENT_DIR.expanduser().resolve()
+    output_dir = experiment_dir / "output"
+    results_file = experiment_dir / "results.csv"
+    ocr_dir = DEFAULT_OCR_DIR.expanduser().resolve()
+    pdf_dir = DEFAULT_PDF_DIR.expanduser().resolve()
+    supported_methods = {"llm_segment", "llm_segment_v2"}
+
+    if not output_dir.exists():
+        st.warning("No segmentation outputs found. Run the segmentation experiment first.")
+        return
+
+    rows = load_provision_result_rows(results_file)
+    # doc_id -> run_key(method:version) -> output_payload
+    doc_runs: dict[str, dict[str, dict]] = {}
+    runtime_by_run_key: dict[tuple[str, str], float] = {}
+
+    def parse_run_key(run_key: str) -> tuple[str, str]:
+        if ":" in run_key:
+            method, version = run_key.split(":", 1)
+            return method, version
+        return run_key, ""
+
+    if rows:
+        cache_by_path: dict[str, dict] = {}
+        for row in rows:
+            row_type = str(row.get("row_type", "run")).strip()
+            if row_type and row_type != "run":
+                continue
+            method = str(row.get("method", "")).strip()
+            if method not in supported_methods:
+                continue
+            doc_id = str(row.get("document_id", "")).strip()
+            version = _canonical_segmentation_version(str(row.get("version", "")).strip())
+            raw_output_path = str(row.get("output_json_path", "")).strip()
+            if not doc_id or not version or not raw_output_path:
+                continue
+            resolved = _resolve_output_json_path(raw_output_path, experiment_dir)
+            if resolved is None:
+                continue
+            cache_key = str(resolved)
+            if cache_key not in cache_by_path:
+                cache_by_path[cache_key] = load_segmentation_output_json(resolved)
+            run_key = f"{method}:{version}"
+            doc_runs.setdefault(doc_id, {})[run_key] = cache_by_path[cache_key]
+            try:
+                runtime = float(row.get("runtime_sec"))
+                runtime_by_run_key[(doc_id, run_key)] = runtime
+            except Exception:
+                pass
+
+    # Also discover directly from output folder in case results.csv is partial.
+    for doc_dir in sorted([d for d in output_dir.iterdir() if d.is_dir()], key=lambda p: p.name):
+        for method, pattern in [
+            ("llm_segment", "llm_segment__*.json"),
+            ("llm_segment_v2", "llm_segment_v2__*.json"),
+        ]:
+            for mf in sorted(doc_dir.glob(pattern)):
+                payload = load_segmentation_output_json(mf)
+                version = _canonical_segmentation_version(str(payload.get("version", "")).strip())
+                if not version:
+                    prefix = f"{method}__"
+                    version = mf.stem
+                    if version.startswith(prefix):
+                        version = version[len(prefix):]
+                    version = _canonical_segmentation_version(version)
+                if not version:
+                    continue
+                run_key = f"{method}:{version}"
+                doc_runs.setdefault(doc_dir.name, {}).setdefault(run_key, payload)
+
+    if not doc_runs:
+        st.warning("No segmentation outputs discovered.")
+        return
+
+    meta_df = load_metadata(DEFAULT_META_DTA.expanduser().resolve())
+    display_map = build_doc_display_map(meta_df)
+
+    doc_ids = sorted(doc_runs.keys())
+    selected_doc = st.sidebar.selectbox(
+        "Document",
+        doc_ids,
+        format_func=lambda d: display_map.get(d, d),
+        key="seg_review_doc",
+    )
+
+    run_keys_all = sorted(doc_runs[selected_doc].keys())
+    methods = sorted({parse_run_key(rk)[0] for rk in run_keys_all})
+    selected_methods = st.sidebar.multiselect(
+        "Methods",
+        options=methods,
+        default=methods,
+        key="seg_review_methods",
+    )
+    if not selected_methods:
+        st.info("Select at least one method.")
+        return
+
+    versions = sorted({
+        parse_run_key(rk)[1]
+        for rk in run_keys_all
+        if parse_run_key(rk)[0] in selected_methods
+    })
+    selected_versions = st.sidebar.multiselect(
+        "Variants",
+        options=versions,
+        default=versions,
+        key="seg_review_versions",
+    )
+    if not selected_versions:
+        st.info("Select at least one variant.")
+        return
+
+    selected_run_keys = []
+    for method in selected_methods:
+        for version in selected_versions:
+            run_key = f"{method}:{version}"
+            if run_key in doc_runs[selected_doc]:
+                selected_run_keys.append(run_key)
+    if not selected_run_keys:
+        st.warning("No runs found for selected method/variant filters.")
+        return
+
+    ocr_doc_dir = ocr_dir / selected_doc
+    page_payload = _load_doc_page_text_and_spans(ocr_doc_dir)
+    doc_page_numbers = page_payload["page_numbers"]
+    text_by_page = page_payload["text_by_page"]
+    span_by_page = page_payload["span_by_page"]
+
+    page_candidates = set(doc_page_numbers)
+    for run_key in selected_run_keys:
+        for seg in doc_runs[selected_doc][run_key].get("segments", []):
+            sp = seg.get("start_page")
+            ep = seg.get("end_page")
+            if isinstance(sp, int):
+                page_candidates.add(sp)
+            if isinstance(ep, int):
+                page_candidates.add(ep)
+
+    if not page_candidates:
+        st.warning("No pages found for selected document/variants.")
+        return
+
+    max_page = max(page_candidates)
+    default_page = min(page_candidates)
+    page_num = int(
+        st.sidebar.number_input(
+            "Page",
+            min_value=1,
+            max_value=max_page,
+            value=default_page,
+            step=1,
+            key="seg_review_page_step",
+        )
+    )
+    st.sidebar.markdown("---")
+    st.sidebar.markdown(f"**Methods selected:** {len(selected_methods)}")
+    st.sidebar.markdown(f"**Variants selected:** {len(selected_versions)}")
+    st.sidebar.markdown(f"**Run columns:** {len(selected_run_keys)}")
+    st.sidebar.markdown(f"**Document pages:** {len(doc_page_numbers) if doc_page_numbers else max_page}")
+    lock_pane_scroll = st.sidebar.checkbox(
+        "Lock pane scroll",
+        value=(len(selected_run_keys) > 1),
+        key="seg_review_lock_scroll",
+        help="Synchronize vertical scroll position between segmentation panes.",
+    )
+
+    page_text = text_by_page.get(page_num, "")
+    if not page_text:
+        page_file = ocr_doc_dir / f"page_{page_num:04d}.txt"
+        if page_file.exists():
+            page_text = page_file.read_text(encoding="utf-8", errors="replace").strip()
+    page_span = span_by_page.get(page_num)
+
+    st.subheader(f"{display_map.get(selected_doc, selected_doc)} — Page {page_num}")
+
+    pdf_path = pdf_dir / f"{selected_doc}.pdf"
+    if pdf_path.exists():
+        with st.expander("Show PDF page", expanded=False):
+            try:
+                st.pdf(load_pdf_page(pdf_path, page_num - 1), height=700)
+            except Exception as exc:
+                st.error(f"Failed to render PDF page: {exc}")
+
+    summary_rows = []
+    run_key_char_sets: dict[str, set[int]] = {}
+    run_key_page_segments: dict[str, list[dict]] = {}
+
+    for run_key in selected_run_keys:
+        payload = doc_runs[selected_doc][run_key]
+        segments = payload.get("segments", [])
+        page_segments = _segmentation_segments_for_page(
+            segments=segments,
+            page_num=page_num,
+            page_text=page_text,
+            page_span=page_span,
+        )
+        run_key_page_segments[run_key] = page_segments
+        run_key_char_sets[run_key] = _chars_for_spans(
+            [(s["local_start"], s["local_end"]) for s in page_segments]
+        )
+
+        method, version = parse_run_key(run_key)
+        runtime = runtime_by_run_key.get((selected_doc, run_key))
+
+        summary_rows.append({
+            "run_key": run_key,
+            "method": method,
+            "variant": version,
+            "total_segments": len(segments),
+            "segments_on_page": len(page_segments),
+            "covered_chars_on_page": sum(
+                s["local_end"] - s["local_start"] for s in page_segments
+            ),
+            "runtime_sec": runtime,
+        })
+
+    st.dataframe(pd.DataFrame(summary_rows), use_container_width=True, hide_index=True)
+
+    pairwise = []
+    for a, b in itertools.combinations(selected_run_keys, 2):
+        pairwise.append({
+            "run_a": a,
+            "run_b": b,
+            "char_iou_on_page": round(_span_iou(run_key_char_sets[a], run_key_char_sets[b]), 4),
+        })
+    if pairwise:
+        st.caption("Pairwise overlap between highlighted character spans on this page (IoU).")
+        st.dataframe(pd.DataFrame(pairwise), use_container_width=True, hide_index=True)
+
+    if lock_pane_scroll and len(selected_run_keys) > 1:
+        pane_height = 520 if len(selected_run_keys) <= 3 else 430
+        _render_synced_segmentation_panes(
+            text=page_text,
+            panes=[
+                {
+                    "run_key": run_key,
+                    "segments": run_key_page_segments[run_key],
+                }
+                for run_key in selected_run_keys
+            ],
+            height=pane_height,
+            lock_scroll=True,
+        )
+
+        for run_key in selected_run_keys:
+            payload = doc_runs[selected_doc][run_key]
+            page_segments = run_key_page_segments[run_key]
+            st.markdown(f"**{run_key}**")
+            if page_segments:
+                table_rows = []
+                for seg in page_segments:
+                    preview = seg["text"]
+                    if len(preview) > 180:
+                        preview = preview[:180] + "..."
+                    table_rows.append({
+                        "parent": seg["parent"],
+                        "title": seg["title"],
+                        "span": f'{seg["local_start"]}-{seg["local_end"]}',
+                        "text": preview,
+                    })
+                st.dataframe(pd.DataFrame(table_rows), use_container_width=True, hide_index=True, height=220)
+            else:
+                st.caption("No segments on this page.")
+            with st.expander(f"{run_key} hierarchy plan", expanded=False):
+                st.json(payload.get("hierarchy_plan", {}))
+        return
+
+    if len(selected_run_keys) <= 3:
+        cols = st.columns(len(selected_run_keys), gap="medium")
+        for col, run_key in zip(cols, selected_run_keys):
+            with col:
+                payload = doc_runs[selected_doc][run_key]
+                page_segments = run_key_page_segments[run_key]
+                st.markdown(f"**{run_key}**")
+                st.caption(f"{len(page_segments)} segments on this page")
+                _render_segmentation_highlights(page_text, page_segments, height=520)
+                if page_segments:
+                    table_rows = []
+                    for seg in page_segments:
+                        preview = seg["text"]
+                        if len(preview) > 140:
+                            preview = preview[:140] + "..."
+                        table_rows.append({
+                            "parent": seg["parent"],
+                            "title": seg["title"],
+                            "span": f'{seg["local_start"]}-{seg["local_end"]}',
+                            "text": preview,
+                        })
+                    st.dataframe(pd.DataFrame(table_rows), use_container_width=True, hide_index=True, height=240)
+                else:
+                    st.caption("No segments on this page.")
+                with st.expander("Hierarchy plan", expanded=False):
+                    st.json(payload.get("hierarchy_plan", {}))
+    else:
+        for run_key in selected_run_keys:
+            payload = doc_runs[selected_doc][run_key]
+            page_segments = run_key_page_segments[run_key]
+            st.markdown(f"**{run_key}**")
+            st.caption(f"{len(page_segments)} segments on this page")
+            _render_segmentation_highlights(page_text, page_segments, height=430)
+            if page_segments:
+                table_rows = []
+                for seg in page_segments:
+                    preview = seg["text"]
+                    if len(preview) > 180:
+                        preview = preview[:180] + "..."
+                    table_rows.append({
+                        "parent": seg["parent"],
+                        "title": seg["title"],
+                        "span": f'{seg["local_start"]}-{seg["local_end"]}',
+                        "text": preview,
+                    })
+                st.dataframe(pd.DataFrame(table_rows), use_container_width=True, hide_index=True, height=220)
+            else:
+                st.caption("No segments on this page.")
+            with st.expander(f"{run_key} hierarchy plan", expanded=False):
+                st.json(payload.get("hierarchy_plan", {}))
+
+
 def main():
+    """Launch the experiment-oriented review dashboard."""
     st.set_page_config(page_title="CBA Review UI", layout="wide")
     st.title("CBA Review UI")
 
@@ -593,10 +1920,37 @@ def main():
                 st.warning("Enter password to continue.")
                 return
 
-    page_choice = st.sidebar.radio("View", ["OCR Viewer", "Stats", "Heatmap"])
+    page_choice = st.sidebar.radio(
+        "View",
+        [
+            "OCR Viewer",
+            "OCR Comparison",
+            "Clause Extraction",
+            "Provision Identification",
+            "Segmentation",
+            "Stats",
+            "Heatmap",
+        ],
+    )
 
     if page_choice == "OCR Viewer":
         render_ocr_viewer()
+        return
+
+    if page_choice == "OCR Comparison":
+        render_ocr_comparison()
+        return
+
+    if page_choice == "Clause Extraction":
+        render_clause_extraction_comparison()
+        return
+
+    if page_choice == "Provision Identification":
+        render_provision_identification_comparison()
+        return
+
+    if page_choice == "Segmentation":
+        render_segmentation_review()
         return
 
     features_path = DEFAULT_FEATURES_OUTPUT.expanduser().resolve()
