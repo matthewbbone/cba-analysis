@@ -1,6 +1,8 @@
 import asyncio
+import atexit
 import os
 import datetime as dt
+import signal
 import subprocess
 import sys
 from openai import AsyncOpenAI
@@ -16,93 +18,24 @@ class VLLMServer:
     def __init__(
         self,
         model_name: str,
-        port: int = 8000,
+        port: int = 8123,
         max_model_len: int = 16384,
+        num_gpus: int = 1,
     ):
+        if num_gpus < 1:
+            raise ValueError("num_gpus must be at least 1")
         
         self.model_name = model_name
         self.port = port
         self.max_model_len = max_model_len
+        self.num_gpus = num_gpus
         self.server = None
         self.client = None
+        self.log_file = None
         
         self.log_dir = Path(os.environ.get("LOG_DIR"))
         self.cache_dir = Path(os.environ.get("CACHE_DIR"))
-
-    def _validate_model_dependencies(self) -> None:
-        if not self.model_name.startswith("Qwen/Qwen3.5"):
-            return
-
-        try:
-            import transformers
-            from transformers.models.auto.configuration_auto import CONFIG_MAPPING_NAMES
-        except Exception as exc:
-            raise RuntimeError(
-                "Unable to import transformers while validating vLLM model support."
-            ) from exc
-
-        if register_qwen35_compat():
-            return
-
-        raise RuntimeError(
-            "The installed transformers build does not support or cannot shim the "
-            f"`qwen3_5_moe` architecture required by {self.model_name}. "
-            f"Installed version: {transformers.__version__}. "
-            "Upgrade this environment with "
-            "`pip install --upgrade \"git+https://github.com/huggingface/transformers.git\"` "
-            "or switch `--vllm-model` to a model family supported by your current transformers install."
-        )
-        
-    def start(self):
-        self._validate_model_dependencies()
-        
-        cmd = [
-            sys.executable,
-            "-m",
-            "vllm",
-            "serve",
-            self.model_name,
-            "--port", str(self.port),
-            "--dtype", "bfloat16",
-            "--max-model-len", str(self.max_model_len),
-            "--trust-remote-code",
-        ]
-        
-        env = os.environ.copy()
-        env["VLLM_CACHE_ROOT"] = os.environ["XDG_CACHE_HOME"]
-        env["VLLM_ASSETS_CACHE"] = os.environ["XDG_CACHE_HOME"]
-        env["HF_HOME"] = os.environ["XDG_CACHE_HOME"]
-        env["HUGGINGFACE_HUB_CACHE"] = os.environ["XDG_CACHE_HOME"]
-        env["TRANSFORMERS_CACHE"] = os.path.join(
-            os.environ["XDG_CACHE_HOME"], "transformers"
-        )
-        env["HF_DATASETS_CACHE"] = os.path.join(
-            os.environ["XDG_CACHE_HOME"], "datasets"
-        )
-        repo_root = Path(__file__).resolve().parents[2]
-        env["PYTHONPATH"] = os.pathsep.join(
-            [str(repo_root), env["PYTHONPATH"]] if env.get("PYTHONPATH") else [str(repo_root)]
-        )
-        cmd.extend(["--download_dir", os.environ["XDG_CACHE_HOME"]])
-        
-        time = dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        log_file = open(
-            self.log_dir / f"vllm_server_{self.model_name.replace('/', '_')}_{time}.log", 
-            "w"
-        )
-        self.server = subprocess.Popen(
-            cmd, stdout=log_file, stderr=log_file,
-            env=env
-        )
-        
-        self.client = AsyncOpenAI(
-            api_key="EMPTY",
-            base_url=f"http://localhost:{self.port}/v1",
-        )
-        
-        print("Started VLLM server with model:", self.model_name)
-        asyncio.run(self._wait())
-        print(f"VLLM server is ready at http://localhost:{self.port}/v1")
+        atexit.register(self.close)
         
     async def _wait(self, timeout=3600):
         """
@@ -128,56 +61,79 @@ class VLLMServer:
                     ) from e
                 await asyncio.sleep(1)
         
+    def start(self):
+        if self.server is not None and self.server.poll() is None:
+            raise RuntimeError("VLLM server is already running")
+
+        # Launch the packaged vLLM CLI through the current interpreter so we use
+        # the same virtualenv as the caller.
+        cmd = [
+            sys.executable,
+            "-m",
+            "vllm.entrypoints.cli.main",
+            "serve",
+            self.model_name,
+            "--port", str(self.port),
+            "--dtype", "bfloat16",
+            "--max-model-len", str(self.max_model_len),
+            "--trust-remote-code",
+        ]
+        cmd.extend(["--tensor-parallel-size", str(self.num_gpus)])
+        
+        env = os.environ.copy()
+        # Keep all model, tokenizer, and asset downloads under the project's shared
+        # cache roots rather than each environment using its own defaults.
+        
+        self.log_dir.mkdir(parents=True, exist_ok=True)
+        self.log_file = open(
+            self.log_dir / f"vllm_{self.model_name.replace('/', '_')}.log", 
+            "w"
+        )
+        # Run the server as a child process and capture both stdout and stderr in a
+        # persistent log file for later debugging.
+        self.server = subprocess.Popen(
+            cmd,
+            stdout=self.log_file,
+            stderr=self.log_file,
+            env=env,
+            start_new_session=True,
+        )
+        
+        self.client = AsyncOpenAI(
+            api_key="EMPTY",
+            base_url=f"http://localhost:{self.port}/v1",
+        )
+        
+        print("Started VLLM server with model:", self.model_name)
+        # Block until the OpenAI-compatible API is responsive before returning to
+        # callers that will immediately start making OCR requests.
+        asyncio.run(self._wait())
+        print(f"VLLM server is ready at http://localhost:{self.port}/v1")
         
     def close(self):
-        
         if self.server is not None:
-            self.server.terminate()
-            
-            try:
-                self.server.wait(timeout=10)
-            except subprocess.TimeoutExpired:
-                self.server.kill()
+            # vLLM spawns EngineCore and worker children; launching the parent in a
+            # fresh session lets us terminate the whole process group reliably.
+            if self.server.poll() is None:
+                try:
+                    os.killpg(self.server.pid, signal.SIGTERM)
+                except ProcessLookupError:
+                    pass
+
+                try:
+                    self.server.wait(timeout=10)
+                except subprocess.TimeoutExpired:
+                    try:
+                        os.killpg(self.server.pid, signal.SIGKILL)
+                    except ProcessLookupError:
+                        pass
+                    self.server.wait(timeout=5)
+
             self.server = None
             self.client = None
-            print("VLLM server has been stopped.")
 
-def main():
+        if self.log_file is not None and not self.log_file.closed:
+            self.log_file.close()
+            self.log_file = None
 
-    parser = argparse.ArgumentParser(description="Run a vLLM server interactively.")
-    parser.add_argument("--model", help="Model name/path to serve")
-    parser.add_argument("--port", type=int, default=8000, help="Port to serve on")
-    parser.add_argument(
-        "--served-model-name",
-        type=str,
-        default=None,
-        help="Optional served model name exposed on the OpenAI-compatible endpoint",
-    )
-    parser.add_argument(
-        "--max-model-len",
-        type=int,
-        default=16384,
-        help="Context length for vLLM",
-    )
-    args = parser.parse_args()
-
-    server = VLLMServer(
-        args.model,
-        port=args.port,
-        max_model_len=args.max_model_len,
-    )
-    server.start()
-
-    try:
-        while True:
-            user_input = input('Server running. Type "quit" to stop: ')
-            if user_input.strip().lower() == "quit":
-                break
-    except (KeyboardInterrupt, EOFError):
-        print()
-    finally:
-        server.close()
-
-
-if __name__ == "__main__":
-    main()
+        print("VLLM server has been stopped.")
