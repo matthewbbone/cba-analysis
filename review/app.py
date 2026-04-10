@@ -631,7 +631,7 @@ with notes_tab:
             "- LLMs can incorporate context from the entire section to identify conditions on a provision (not currently implemented)",
             "- Ash's segmentation approach was highly customized for Canadian CBAs, LLMs are more flexible",
             "\nPotential Updates to Provision Extraction Approach\n",
-            "- We don't need to use Ash's exact taxonomy. We can tailor to our specific use case of generosity or focus on 'worker' vs 'firm' power"
+            "- We don't need to use Ash's exact taxonomy. We can tailor to our specific use case of generosity or focus on 'worker' vs 'firm' power",
             "- I used qwen-3.5-27b-fp8 for provision extraction because it's free for experimentation but these judgements would likely be much better from larger, more intelligent models",
             "- Provisions still need to be categorized into 'concepts' or 'clause types' like healthcare, wages, etc."
         ])
