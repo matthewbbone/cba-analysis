@@ -1,20 +1,48 @@
-import base64
+import html
 import json
-import mimetypes
 import os
 from pathlib import Path
 from typing import Any
 
 import fitz
 import streamlit as st
-import streamlit.components.v1 as components
 from dotenv import load_dotenv
 
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 ENV_PATH = ROOT_DIR / ".env"
 DOL_GROUPS = ["dol_archive", "cornell_dol", "cornell_retail_educ"]
-IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".bmp"}
+
+OCR_SYSTEM_PROMPT = " ".join(
+    [
+        "You are a helpful and precise assistant for transcribing the text",
+        "of collective bargaining agreements. You are given a single page of",
+        "a PDF document as an image, and your task is to extract the text content",
+        "as accurately as possible while preserving the original formatting and structure.",
+    ]
+)
+
+OCR_USER_PROMPT = " ".join(
+    [
+        "Transcribe the document image into markdown.",
+        "Any visually distinct header text that indicates a new article, preamble, or table of contents should be marked as a header in markdown with '##'",
+        "Return the markdown text in the following json format: { 'transcribed_text': '...' }",
+    ]
+)
+
+PROVISION_SYSTEM_PROMPT_TEMPLATE = " ".join(
+    [
+        "You are a legal assistant tasked with extracting and categorizing",
+        "provision types and which actors they refer to.",
+        "The actors you should identify and extract are configured in the runner.",
+        "The provision types you should identify and extract are configured in the runner.",
+        "Return your response in a JSON format with the following schema:",
+        "{provisions: [{'actor': the party involved in the provision, 'provision_type': one of the provision types listed above, 'text': the text of the provision from the contract}]}",
+        "If there are no provisions in the text, return {provisions: []}. Only extract provisions that are explicitly stated",
+    ]
+)
+
+PROVISION_USER_PROMPT = "Extract and categorize the provisions in the following text:"
 
 load_dotenv(ENV_PATH)
 
@@ -40,37 +68,9 @@ def list_model_cache_files(group: str) -> list[Path]:
 
 
 @st.cache_data
-def list_paddle_model_cache_files(group: str) -> list[Path]:
-    output_dir = get_cache_dir() / "01_paddleocr_output" / group
+def list_provision_model_cache_files(group: str) -> list[Path]:
+    output_dir = get_cache_dir() / "02_provision_extract" / group
     return sorted(output_dir.glob("*/cache.json"))
-
-
-@st.cache_data
-def list_cached_documents(group: str) -> set[str]:
-    document_ids = set()
-    for cache_file in list_model_cache_files(group):
-        try:
-            cache = json.loads(cache_file.read_text(encoding="utf-8"))
-        except Exception:
-            continue
-        document_ids.update(cache.get("documents", {}).keys())
-    return document_ids
-
-
-@st.cache_data
-def list_paddle_cached_documents(group: str) -> set[str]:
-    document_ids = set()
-    for cache_file in list_paddle_model_cache_files(group):
-        try:
-            cache = json.loads(cache_file.read_text(encoding="utf-8"))
-        except Exception:
-            continue
-        for document_id, metadata in cache.get("documents", {}).items():
-            if not isinstance(metadata, dict):
-                continue
-            if metadata.get("completed"):
-                document_ids.add(document_id)
-    return document_ids
 
 
 @st.cache_data
@@ -79,8 +79,40 @@ def list_models(group: str) -> list[str]:
 
 
 @st.cache_data
-def list_paddle_models(group: str) -> list[str]:
-    return [cache_file.parent.name for cache_file in list_paddle_model_cache_files(group)]
+def list_provision_models(group: str) -> list[str]:
+    return [cache_file.parent.name for cache_file in list_provision_model_cache_files(group)]
+
+
+@st.cache_data
+def list_cached_documents(group: str) -> list[str]:
+    document_ids: set[str] = set()
+    for cache_file in list_model_cache_files(group):
+        try:
+            cache = json.loads(cache_file.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        document_ids.update(cache.get("documents", {}).keys())
+    return sorted(document_ids)
+
+
+@st.cache_data
+def list_provision_cached_documents(group: str) -> list[str]:
+    document_ids: set[str] = set()
+    for cache_file in list_provision_model_cache_files(group):
+        try:
+            cache = json.loads(cache_file.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        document_ids.update(cache.get("documents", {}).keys())
+    return sorted(document_ids)
+
+
+@st.cache_data
+def read_binary_file(path: str) -> bytes | None:
+    file_path = Path(path)
+    if not file_path.exists():
+        return None
+    return file_path.read_bytes()
 
 
 @st.cache_data
@@ -104,22 +136,6 @@ def render_page(pdf_path: str, page_index: int) -> bytes:
 
 
 @st.cache_data
-def read_text_file(path: str) -> str | None:
-    file_path = Path(path)
-    if not file_path.exists():
-        return None
-    return file_path.read_text(encoding="utf-8")
-
-
-@st.cache_data
-def read_binary_file(path: str) -> bytes | None:
-    file_path = Path(path)
-    if not file_path.exists():
-        return None
-    return file_path.read_bytes()
-
-
-@st.cache_data
 def read_json_file(path: str) -> dict[str, Any] | None:
     file_path = Path(path)
     if not file_path.exists():
@@ -129,6 +145,19 @@ def read_json_file(path: str) -> dict[str, Any] | None:
     except Exception:
         return None
     return data if isinstance(data, dict) else None
+
+
+@st.cache_data
+def read_provisions(group: str, model_name: str, document_stem: str) -> dict[str, Any] | None:
+    provisions_file = (
+        get_cache_dir()
+        / "02_provision_extract"
+        / group
+        / model_name
+        / document_stem
+        / "provisions.json"
+    )
+    return read_json_file(str(provisions_file))
 
 
 @st.cache_data
@@ -146,230 +175,144 @@ def read_ocr_page(group: str, model_name: str, document_stem: str, page_index: i
     return page_file.read_text(encoding="utf-8")
 
 
-@st.cache_data
-def read_sections(group: str, model_name: str, document_stem: str) -> dict[str, str] | None:
-    sections_file = (
-        get_cache_dir()
-        / "01_ocr_output"
-        / group
-        / model_name
-        / document_stem
-        / "sections.json"
-    )
-    if not sections_file.exists():
-        return None
-    try:
-        return json.loads(sections_file.read_text(encoding="utf-8"))
-    except Exception:
-        return None
-
-
-@st.cache_data
-def list_segmented_documents(group: str) -> set[str]:
-    output_dir = get_cache_dir() / "02_segmentation_output" / group
-    if not output_dir.exists():
-        return set()
-    return {path.name for path in output_dir.glob("document_*") if path.is_dir()}
-
-
-def get_segmented_document_dir(group: str, document_stem: str) -> Path:
-    return get_cache_dir() / "02_segmentation_output" / group / document_stem
-
-
-@st.cache_data
-def read_segmented_document_meta(group: str, document_stem: str) -> dict[str, Any] | None:
-    return read_json_file(str(get_segmented_document_dir(group, document_stem) / "document_meta.json"))
-
-
-@st.cache_data
-def read_corrected_segment(group: str, document_stem: str, segment_number: int) -> str | None:
-    segment_path = get_segmented_document_dir(group, document_stem) / "segments" / f"segment_{segment_number}.txt"
-    return read_text_file(str(segment_path))
-
-
-def get_paddle_document_dir(group: str, model_name: str, document_stem: str) -> Path:
-    return (
-        get_cache_dir()
-        / "01_paddleocr_output"
-        / group
-        / model_name
-        / document_stem
-    )
-
-
-@st.cache_data
-def read_paddle_document_manifest(group: str, model_name: str, document_stem: str) -> dict[str, Any] | None:
-    return read_json_file(str(get_paddle_document_dir(group, model_name, document_stem) / "document.json"))
-
-
-def get_paddle_page_entry(
-    group: str,
-    model_name: str,
-    document_stem: str,
-    page_index: int,
-) -> dict[str, Any] | None:
-    manifest = read_paddle_document_manifest(group, model_name, document_stem)
-    if not manifest:
-        return None
-    for page in manifest.get("pages", []):
-        if isinstance(page, dict) and page.get("page_index") == page_index:
-            return page
-    return None
-
-
-@st.cache_data
-def has_paddle_document(group: str, model_name: str, document_stem: str) -> bool:
-    return read_paddle_document_manifest(group, model_name, document_stem) is not None
-
-
-@st.cache_data
-def inline_markdown_assets(base_dir: str, markdown_path: str) -> str | None:
-    base_path = Path(base_dir)
-    markdown_file = Path(markdown_path)
-    if not markdown_file.exists():
-        return None
-
-    text = markdown_file.read_text(encoding="utf-8")
-    replacements: dict[str, str] = {}
-    for asset_path in sorted(p for p in base_path.rglob("*") if p.is_file()):
-        if asset_path.suffix.lower() not in IMAGE_SUFFIXES:
-            continue
-        rel_path = asset_path.relative_to(base_path).as_posix()
-        mime_type = mimetypes.guess_type(asset_path.name)[0] or "application/octet-stream"
-        encoded = base64.b64encode(asset_path.read_bytes()).decode("ascii")
-        replacements[rel_path] = f"data:{mime_type};base64,{encoded}"
-
-    for rel_path in sorted(replacements, key=len, reverse=True):
-        text = text.replace(rel_path, replacements[rel_path])
-
+def _display_actor(value: Any) -> str:
+    text = str(value or "").strip()
+    if not text:
+        return "unknown"
     return text
 
 
-def _normalize_block_text(value: Any) -> str:
-    if not isinstance(value, str):
-        return ""
-    return value.strip()
+def _display_provision_type(value: Any) -> str:
+    text = str(value or "").strip()
+    if not text:
+        return "unknown"
+    return text
 
 
-def merge_markdown_with_headers_and_footers(markdown_text: str | None, page_json: dict[str, Any] | None) -> str | None:
-    if markdown_text is None:
-        return None
-    if not page_json:
-        return markdown_text
+def _normalize_actor_key(value: Any) -> str:
+    text = str(value or "").strip().lower()
+    aliases = {
+        "worker": "worker",
+        "workers": "worker",
+        "firm": "firm",
+        "firms": "firm",
+        "union": "union",
+        "unions": "union",
+        "manager": "manager",
+        "managers": "manager",
+    }
+    if text in aliases:
+        return aliases[text]
+    return "unknown"
 
-    parsing_res = page_json.get("parsing_res_list", [])
-    if not isinstance(parsing_res, list):
-        return markdown_text
 
-    headers = [
-        _normalize_block_text(block.get("block_content"))
-        for block in parsing_res
-        if isinstance(block, dict) and block.get("block_label") == "header"
+def _normalize_provision_type_key(value: Any) -> str:
+    text = str(value or "").strip().lower()
+    if text in {"right", "permission", "obligation", "prohibition"}:
+        return text
+    return "unknown"
+
+
+def _get_actor_provision_type_counts(provision_payload: dict[str, Any]) -> dict[str, int]:
+    document_meta = provision_payload.get("document_meta_data", {})
+    if isinstance(document_meta, dict):
+        raw_counts = document_meta.get("actor_provision_type_counts")
+        if isinstance(raw_counts, dict):
+            normalized_counts: dict[str, int] = {}
+            for key, value in raw_counts.items():
+                if not isinstance(value, int):
+                    continue
+                parts = str(key).split(" ", 1)
+                actor = _normalize_actor_key(parts[0] if parts else "")
+                provision_type = _normalize_provision_type_key(parts[1] if len(parts) > 1 else "")
+                combo_key = f"{actor} {provision_type}"
+                normalized_counts[combo_key] = normalized_counts.get(combo_key, 0) + int(value)
+            return normalized_counts
+
+    counts: dict[str, int] = {}
+    sections = provision_payload.get("sections", [])
+    if not isinstance(sections, list):
+        return counts
+
+    for section in sections:
+        if not isinstance(section, dict):
+            continue
+        provisions = section.get("provisions", [])
+        if not isinstance(provisions, list):
+            continue
+        for provision in provisions:
+            if not isinstance(provision, dict):
+                continue
+            actor = _normalize_actor_key(provision.get("actor"))
+            provision_type = _normalize_provision_type_key(provision.get("provision_type"))
+            combo_key = f"{actor} {provision_type}"
+            counts[combo_key] = counts.get(combo_key, 0) + 1
+    return counts
+
+
+def _build_actor_provision_type_table(provision_payload: dict[str, Any]) -> list[dict[str, Any]]:
+    combo_counts = _get_actor_provision_type_counts(provision_payload)
+    actor_rows = [
+        ("Worker", "worker"),
+        ("Firm", "firm"),
+        ("Union", "union"),
+        ("Manager", "manager"),
     ]
-    footers = [
-        _normalize_block_text(block.get("block_content"))
-        for block in parsing_res
-        if isinstance(block, dict) and block.get("block_label") == "footer"
+    return [
+        {
+            "Actor": label,
+            "Rights": combo_counts.get(f"{actor_key} right", 0),
+            "Permissions": combo_counts.get(f"{actor_key} permission", 0),
+            "Obligations": combo_counts.get(f"{actor_key} obligation", 0),
+            "Prohibitions": combo_counts.get(f"{actor_key} prohibition", 0),
+        }
+        for label, actor_key in actor_rows
     ]
-    headers = [text for text in headers if text]
-    footers = [text for text in footers if text]
-
-    parts: list[str] = []
-    if headers:
-        parts.append("\n\n".join(f"**Header:** {text}" for text in headers))
-    parts.append(markdown_text.strip())
-    if footers:
-        parts.append("\n\n".join(f"**Footer:** {text}" for text in footers))
-    return "\n\n".join(part for part in parts if part)
 
 
-def render_sections(group: str, model_name: str | None, document_stem: str, label: str) -> None:
-    st.subheader(label if model_name is None else f"{label}: {model_name}")
-
-    if model_name is None:
-        st.info("OCR output is unavailable for this group.")
-        return
-
-    sections = read_sections(group, model_name, document_stem)
-    if not sections:
-        st.warning("No sections.json found for this model and document.")
-        return
-
-    for title, content in sections.items():
-        st.markdown(f"### {title}")
-        st.markdown(content)
-
-
-def render_corrected_segments(group: str, document_stem: str) -> None:
-    document_meta = read_segmented_document_meta(group, document_stem)
-    if not document_meta:
-        st.warning("No corrected segmentation output found for this document.")
-        return
-
-    document_info = document_meta.get("document", {})
-    sections = document_meta.get("sections", [])
-    if not isinstance(document_info, dict) or not isinstance(sections, list) or not sections:
-        st.warning("Corrected segmentation metadata is missing or invalid.")
-        return
-
-    st.subheader("Corrected Segments")
-    st.caption(
-        f"{document_info.get('section_count', len(sections))} segments from "
-        f"`02_segmentation_output/{group}/{document_stem}`"
-    )
-
-    selected_section = st.selectbox(
-        "Segment",
-        sections,
-        index=0,
-        format_func=lambda section: (
-            f"{int(section.get('number', 0)):03d} - "
-            f"{str(section.get('header', 'Untitled')).strip() or 'Untitled'}"
-        ),
-        key=f"corrected-segment-{group}-{document_stem}",
-    )
-
-    segment_number = int(selected_section.get("number", 0))
-    segment_text = read_corrected_segment(group, document_stem, segment_number)
-
-    meta_col, text_col = st.columns([0.9, 1.7])
-
-    with meta_col:
-        st.markdown("### Segment Metadata")
-        st.json(
-            {
-                "number": selected_section.get("number"),
-                "header": selected_section.get("header"),
-                "level": selected_section.get("level"),
-                "parent_headers": selected_section.get("parent_headers", []),
-                "span": selected_section.get("span"),
-            }
-        )
-
-        with st.expander("Document Hierarchy", expanded=False):
-            st.json(document_info.get("hierarchy", []))
-
-        with st.expander("Document Metadata", expanded=False):
-            st.json(document_info)
-            render_download_button(
-                "Download document metadata",
-                get_segmented_document_dir(group, document_stem) / "document_meta.json",
-                "application/json",
-                key=f"segment-meta-{group}-{document_stem}",
-            )
-
-    with text_col:
-        st.markdown("### Segment Text")
-        if segment_text is None:
-            st.warning("No corrected segment text file found for this segment.")
+def _get_actor_counts(provision_payload: dict[str, Any]) -> dict[str, int]:
+    combo_counts = _get_actor_provision_type_counts(provision_payload)
+    counts = {"Worker": 0, "Firm": 0, "Union": 0, "Manager": 0, "unknown": 0}
+    for combo_key, count in combo_counts.items():
+        actor_key = combo_key.split(" ", 1)[0]
+        if actor_key == "worker":
+            counts["Worker"] += count
+        elif actor_key == "firm":
+            counts["Firm"] += count
+        elif actor_key == "union":
+            counts["Union"] += count
+        elif actor_key == "manager":
+            counts["Manager"] += count
         else:
-            st.markdown(segment_text)
-            render_download_button(
-                "Download corrected segment",
-                get_segmented_document_dir(group, document_stem) / "segments" / f"segment_{segment_number}.txt",
-                "text/plain",
-                key=f"segment-text-{group}-{document_stem}-{segment_number}",
-            )
+            counts["unknown"] += count
+    return counts
+
+
+def _format_worker_benefit_proxy_ratio(provision_payload: dict[str, Any]) -> str:
+    combo_counts = _get_actor_provision_type_counts(provision_payload)
+    numerator = (
+        combo_counts.get("worker right", 0)
+        + combo_counts.get("worker permission", 0)
+        + combo_counts.get("firm obligation", 0)
+        + combo_counts.get("firm prohibition", 0)
+        + combo_counts.get("union right", 0)
+        + combo_counts.get("union permission", 0)
+        + combo_counts.get("manager obligation", 0)
+        + combo_counts.get("manager prohibition", 0)
+    )
+    denominator = (
+        combo_counts.get("worker obligation", 0)
+        + combo_counts.get("worker prohibition", 0)
+        + combo_counts.get("firm right", 0)
+        + combo_counts.get("firm permission", 0)
+        + combo_counts.get("union obligation", 0)
+        + combo_counts.get("union prohibition", 0)
+        + combo_counts.get("manager right", 0)
+        + combo_counts.get("manager permission", 0)
+    )
+    if denominator == 0:
+        return "inf" if numerator > 0 else "n/a"
+    return f"{numerator / denominator:.2f}"
 
 
 def render_download_button(label: str, path: Path, mime: str, key: str) -> None:
@@ -385,72 +328,122 @@ def render_download_button(label: str, path: Path, mime: str, key: str) -> None:
     )
 
 
-st.set_page_config(page_title="OCR Review", layout="wide")
-st.title("OCR Review")
+def render_wrapped_text_box(text: str) -> None:
+    st.markdown(
+        (
+            "<div style='white-space: pre-wrap; word-break: break-word; "
+            "padding: 0.75rem 1rem; border: 1px solid rgba(128,128,128,0.35); "
+            "border-radius: 0.5rem;'>"
+            f"{html.escape(text)}"
+            "</div>"
+        ),
+        unsafe_allow_html=True,
+    )
 
-with st.sidebar:
-    st.header("Compare")
 
-    group = st.selectbox("DOL group", DOL_GROUPS)
-    cached_documents = list_cached_documents(group)
-    paddle_cached_documents = list_paddle_cached_documents(group)
-    segmented_documents = list_segmented_documents(group)
-    available_documents = cached_documents | paddle_cached_documents | segmented_documents
-    pdfs = [pdf for pdf in list_pdfs(group) if pdf.stem in available_documents]
-    models = list_models(group)
+def render_extracted_provisions(group: str, model_name: str, document_stem: str) -> None:
+    provision_payload = read_provisions(group, model_name, document_stem)
+    if not provision_payload:
+        st.warning("No provisions.json found for this model and document.")
+        return
 
-    if not pdfs:
-        st.warning(f"No cached OCR documents found for {group}.")
-        st.stop()
+    sections = provision_payload.get("sections", [])
+    if not isinstance(sections, list) or not sections:
+        st.warning("Provision extraction output is missing section data.")
+        return
 
-    pdf_names = [pdf.name for pdf in pdfs]
-    selected_pdf_name = st.selectbox("Document", pdf_names)
-    pdf_path = next(pdf for pdf in pdfs if pdf.name == selected_pdf_name)
-
-    page_count = get_page_count(str(pdf_path))
-    page_number = st.number_input("Page", min_value=1, max_value=page_count, value=1, step=1)
-    page_index = page_number - 1
-
-    if models:
-        left_default = 0
-        right_default = 1 if len(models) > 1 else 0
-        left_model = st.selectbox("Left model", models, index=left_default)
-        right_model = st.selectbox("Right model", models, index=right_default)
-    else:
-        st.info("No model-specific OCR cache files found for this group.")
-        left_model = None
-        right_model = None
-
-    paddle_models = [
-        model_name
-        for model_name in list_paddle_models(group)
-        if has_paddle_document(group, model_name, pdf_path.stem)
+    sections = [
+        section
+        for section in sections
+        if isinstance(section, dict)
+        and isinstance(section.get("provisions"), list)
+        and len(section.get("provisions", [])) > 0
     ]
-    if paddle_models:
-        paddle_model = st.selectbox("Paddle model", paddle_models, index=0)
-    else:
-        paddle_model = None
+    if not sections:
+        st.info("No extracted provisions were found in this document.")
+        return
 
-st.caption(f"{group} / {pdf_path.name} / page {page_number} of {page_count}")
+    st.markdown("### Document Provision Counts")
+    st.table(_build_actor_provision_type_table(provision_payload))
+    proxy_col, equation_col = st.columns([1, 2.4])
+    with proxy_col:
+        st.metric("Worker Benefit Proxy", _format_worker_benefit_proxy_ratio(provision_payload))
+    with equation_col:
+        st.markdown(
+            "`worker benefit proxy = (worker right + worker permission + firm obligation + firm prohibition + "
+            "union right + union permission + manager obligation + manager prohibition) / "
+            "(worker obligation + worker prohibition + firm right + firm permission + "
+            "union obligation + union prohibition + manager right + manager permission)`"
+        )
 
-page_tab, sections_tab, paddle_tab = st.tabs(["Page Compare", "Sections", "Paddle Layout"])
+    selected_section = st.selectbox(
+        "Select Section",
+        sections,
+        index=0,
+        format_func=lambda section: (
+            f"{int(section.get('section_index', 0)):03d} - "
+            f"{str(section.get('header', 'Untitled')).strip() or 'Untitled'} "
+            f"({len(section.get('provisions', [])) if isinstance(section.get('provisions', []), list) else 0} provision(s))"
+        ),
+        key=f"provision-section-{group}-{model_name}-{document_stem}",
+    )
 
-with page_tab:
+    source_col, extracted_col = st.columns([1.1, 1])
+
+    with source_col:
+        source_text = str(selected_section.get("text", "") or "")
+        st.markdown(source_text if source_text else "_Empty section_")
+
+    with extracted_col:
+        st.markdown("### Extracted Provisions")
+        provisions = selected_section.get("provisions", [])
+        if not isinstance(provisions, list) or not provisions:
+            st.info("No provisions extracted for this section.")
+        else:
+            for provision_index, provision in enumerate(provisions, start=1):
+                if not isinstance(provision, dict):
+                    continue
+
+                actor = _display_actor(provision.get("actor"))
+                provision_type = _display_provision_type(provision.get("provision_type"))
+                text = str(provision.get("text", "") or "")
+
+                with st.expander(
+                    f"{provision_index:02d}. {actor} / {provision_type}",
+                    expanded=provision_index == 1,
+                ):
+                    st.markdown(text if text else "_Empty provision text_")
+
+    render_download_button(
+        "Download extracted provisions",
+        get_cache_dir() / "02_provision_extract" / group / model_name / document_stem / "provisions.json",
+        "application/json",
+        key=f"provisions-json-{group}-{model_name}-{document_stem}",
+    )
+
+
+def render_page_compare(
+    group: str,
+    pdf_path: Path,
+    page_index: int,
+    left_model: str | None,
+    right_model: str | None,
+) -> None:
     pdf_col, left_col, right_col = st.columns([1.15, 1, 1])
 
     with pdf_col:
-        st.subheader("PDF page")
+        st.subheader("PDF Page")
         st.image(render_page(str(pdf_path), page_index), use_container_width=True)
 
     for column, model_name, label in [
-        (left_col, left_model, "Left OCR"),
-        (right_col, right_model, "Right OCR"),
+        (left_col, left_model, "OCR"),
+        (right_col, right_model, "OCR"),
     ]:
         with column:
-            st.subheader(label if model_name is None else f"{label}: {model_name}")
+            st.subheader(model_name if model_name is not None else label)
 
             if model_name is None:
-                st.info("OCR output is unavailable for this group.")
+                st.info("No OCR model is available for this group.")
                 continue
 
             text = read_ocr_page(group, model_name, pdf_path.stem, page_index)
@@ -459,120 +452,183 @@ with page_tab:
             else:
                 st.markdown(text)
 
-with sections_tab:
-    corrected_tab, legacy_tab = st.tabs(["Corrected Segments", "Legacy OCR Sections"])
 
-    with corrected_tab:
-        render_corrected_segments(group, pdf_path.stem)
+st.set_page_config(page_title="OCR Comparison and Provision Extraction Review", layout="wide")
+st.markdown(
+    """
+    <style>
+    .block-container {
+        padding-top: 1.5rem;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+st.header("OCR Comparison and Provision Extraction Review")
 
-    with legacy_tab:
-        left_col, right_col = st.columns(2)
+page_tab, provisions_tab, notes_tab = st.tabs(
+    ["OCR Model Compare", "Extracted Provisions", "Additional Notes"]
+)
 
-        with left_col:
-            render_sections(group, left_model, pdf_path.stem, "Left Sections")
+with page_tab:
+    st.markdown(
+        "\n".join(
+            [
+                "- Each PDF page is rendered as an image and transcribed independently.",
+                "- The model is prompted to preserve formatting in markdown and mark major headers with `##`.",
+                "- The text is sectioned deterministically using the markdown headers.",
+                "- This view compares page-level OCR output from two selected models against the original PDF image.",
+                "- Only the 'dol_archive' group has multiple OCR models available for comparison at this time.",
+            ]
+        )
+    )
+    with st.expander("OCR Prompts", expanded=False):
+        st.markdown("**System prompt**")
+        render_wrapped_text_box(OCR_SYSTEM_PROMPT)
+        st.markdown("**User prompt**")
+        render_wrapped_text_box(OCR_USER_PROMPT)
 
-        with right_col:
-            render_sections(group, right_model, pdf_path.stem, "Right Sections")
+    control_col1, control_col2, control_col3, control_col4, control_col5 = st.columns([1, 1.5, 0.8, 1, 1])
 
-with paddle_tab:
-    if paddle_model is None:
-        st.info("No Paddle-native OCR output is available for this document.")
+    with control_col1:
+        compare_group = st.selectbox("CBA Collection", DOL_GROUPS, key="compare-group")
+
+    compare_documents = set(list_cached_documents(compare_group))
+    compare_pdfs = [pdf for pdf in list_pdfs(compare_group) if pdf.stem in compare_documents]
+
+    if not compare_pdfs:
+        st.warning(f"No OCR review documents found for {compare_group}.")
     else:
-        document_dir = get_paddle_document_dir(group, paddle_model, pdf_path.stem)
-        document_manifest = read_paddle_document_manifest(group, paddle_model, pdf_path.stem)
-        page_entry = get_paddle_page_entry(group, paddle_model, pdf_path.stem, page_index)
+        compare_pdf_names = [pdf.name for pdf in compare_pdfs]
 
-        if not document_manifest or not page_entry:
-            st.warning("No Paddle page manifest found for this document and page.")
+        with control_col2:
+            selected_compare_pdf_name = st.selectbox("Document", compare_pdf_names, key="compare-document")
+
+        compare_pdf_path = next(pdf for pdf in compare_pdfs if pdf.name == selected_compare_pdf_name)
+        compare_page_count = get_page_count(str(compare_pdf_path))
+
+        with control_col3:
+            compare_page_number = st.number_input(
+                "Page",
+                min_value=1,
+                max_value=compare_page_count,
+                value=1,
+                step=1,
+                key="compare-page",
+            )
+
+        compare_models = list_models(compare_group)
+        if compare_models:
+            left_default = 0
+            right_default = 1 if len(compare_models) > 1 else 0
+            with control_col4:
+                compare_left_model = st.selectbox(
+                    "Left OCR model",
+                    compare_models,
+                    index=left_default,
+                    key="compare-left-model",
+                )
+            with control_col5:
+                compare_right_model = st.selectbox(
+                    "Right OCR model",
+                    compare_models,
+                    index=right_default,
+                    key="compare-right-model",
+                )
         else:
-            pdf_col, paddle_col = st.columns([1, 1.2])
+            compare_left_model = None
+            compare_right_model = None
 
-            with pdf_col:
-                st.subheader("PDF page")
-                st.image(render_page(str(pdf_path), page_index), use_container_width=True)
+        st.caption(
+            f"{compare_group} / {compare_pdf_path.name} / "
+            f"page {compare_page_number} of {compare_page_count}"
+        )
+        render_page_compare(
+            compare_group,
+            compare_pdf_path,
+            compare_page_number - 1,
+            compare_left_model,
+            compare_right_model,
+        )
 
-            with paddle_col:
-                st.subheader(f"Paddle page: {paddle_model}")
-                page_dir = document_dir / page_entry["page_dir"]
-                page_json_path = document_dir / page_entry["json_path"]
-                page_json = read_json_file(str(page_json_path))
-                page_markdown = inline_markdown_assets(
-                    str(page_dir),
-                    str(document_dir / page_entry["markdown_path"]),
+with provisions_tab:
+    st.markdown(
+        "\n".join(
+            [
+                "- Provision extraction is run section by section on OCR-derived markdown.",
+                "- The model assigns each extracted provision an actor, a type, and extracts the relevant text.",
+                "- Actor categories include Worker, Firm, Union, and Manager. Provision types include Right, Permission, Obligation, and Prohibition.",
+                "- Document-level counts and the worker-benefit proxy are aggregated from those structured section outputs.",
+            ]
+        )
+    )
+    with st.expander("Provision Extraction Prompts", expanded=False):
+        st.markdown("**System prompt**")
+        render_wrapped_text_box(PROVISION_SYSTEM_PROMPT_TEMPLATE)
+        st.markdown("**User prompt**")
+        render_wrapped_text_box(PROVISION_USER_PROMPT)
+
+    control_col1, control_col2, control_col3 = st.columns([1, 1.5, 1])
+
+    with control_col1:
+        provision_group = st.selectbox("DOL group", DOL_GROUPS, key="provision-group")
+
+    provision_documents = list_provision_cached_documents(provision_group)
+    if not provision_documents:
+        st.info(f"No provision-extraction output is available for {provision_group}.")
+    else:
+        with control_col2:
+            provision_document_stem = st.selectbox(
+                "Document",
+                provision_documents,
+                key="provision-document",
+            )
+
+        provision_models = [
+            model_name
+            for model_name in list_provision_models(provision_group)
+            if read_provisions(provision_group, model_name, provision_document_stem) is not None
+        ]
+
+        if not provision_models:
+            st.info("No provision-extraction model output is available for this document.")
+        else:
+            with control_col3:
+                provision_model = st.selectbox(
+                    "Provision model",
+                    provision_models,
+                    key="provision-model",
                 )
-                page_markdown = merge_markdown_with_headers_and_footers(page_markdown, page_json)
-                if page_markdown is None:
-                    st.warning("No Paddle markdown found for this page.")
-                else:
-                    st.markdown(page_markdown, unsafe_allow_html=True)
 
-            with st.expander("Document Markdown", expanded=False):
-                document_markdown = inline_markdown_assets(
-                    str(document_dir),
-                    str(document_dir / document_manifest["document_markdown_path"]),
-                )
-                if document_markdown is None:
-                    st.warning("No document markdown found.")
-                else:
-                    st.markdown(document_markdown, unsafe_allow_html=True)
-                    render_download_button(
-                        "Download document markdown",
-                        document_dir / document_manifest["document_markdown_path"],
-                        "text/markdown",
-                        key=f"doc-md-{paddle_model}-{pdf_path.stem}",
-                    )
+            render_extracted_provisions(provision_group, provision_model, provision_document_stem)
 
-            with st.expander("Raw Page JSON", expanded=False):
-                if page_json is None:
-                    st.warning("No page JSON found.")
-                else:
-                    st.json(page_json)
-                    render_download_button(
-                        "Download page JSON",
-                        page_json_path,
-                        "application/json",
-                        key=f"page-json-{paddle_model}-{pdf_path.stem}-{page_index}",
-                    )
-
-            with st.expander("Rendered Page Images", expanded=False):
-                render_paths = page_entry.get("render_paths", [])
-                if not render_paths:
-                    st.info("No rendered page images were saved for this page.")
-                for render_no, render_path in enumerate(render_paths, start=1):
-                    render_file = document_dir / render_path
-                    image_bytes = read_binary_file(str(render_file))
-                    if image_bytes is None:
-                        continue
-                    st.markdown(f"**Render {render_no}: {render_file.name}**")
-                    st.image(image_bytes, use_container_width=True)
-
-            with st.expander("Tables", expanded=False):
-                table_html_paths = page_entry.get("table_html_paths", [])
-                table_xlsx_paths = page_entry.get("table_xlsx_paths", [])
-                if not table_html_paths and not table_xlsx_paths:
-                    st.info("No saved table sidecars were found for this page.")
-
-                for table_no, table_path in enumerate(table_html_paths, start=1):
-                    html_file = document_dir / table_path
-                    html = read_text_file(str(html_file))
-                    if html is None:
-                        continue
-                    st.markdown(f"**Table HTML {table_no}: {html_file.name}**")
-                    components.html(html, height=420, scrolling=True)
-                    render_download_button(
-                        "Download HTML",
-                        html_file,
-                        "text/html",
-                        key=f"table-html-{paddle_model}-{pdf_path.stem}-{page_index}-{table_no}",
-                    )
-
-                for table_no, table_path in enumerate(table_xlsx_paths, start=1):
-                    xlsx_file = document_dir / table_path
-                    if not xlsx_file.exists():
-                        continue
-                    render_download_button(
-                        f"Download XLSX {table_no}",
-                        xlsx_file,
-                        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                        key=f"table-xlsx-{paddle_model}-{pdf_path.stem}-{page_index}-{table_no}",
-                    )
+with notes_tab:
+    st.markdown(
+        "\n".join([
+            "### OCR Extraction Notes",
+            "- transcription is easy for most models, the text is accurate but the formatting into sections is inconsistent. Models seem to struggle with title pages that have larger text that may look like 'headers'",
+            "- qwen-3.5-27b-fp8 is among the best performing models, is free, and faster than it's non-quantized counterpart, so it is the default OCR model",
+            "- OCR models generally fall into two categories, those that produce more structured output with custom formats (e.g. mistral, olmo, paddle) and general visual-language models (e.g. qwen, gemini) that produce high quality markdown. The former can be difficult to work with because they add a lot of structure you may or may not need. General VLMs are also typically more accurate in their transcriptions",
+            "- below are the estimated costs and runtime of performing OCR on the entire corpus (including all three collections of CBAs)",
+            "",
+            "| Model | Cost | Runtime |",
+            "| --- | ---: | ---: |",
+            "| gemini-3.1-flash-lite | $543 | 44 hours |",
+            "| gemini-3.1-pro | $5324 | 118 hours |",
+            "| claude-sonnet-4.6 | $7388 | 281 hours |",
+            "| qwen-3.5-9B | $0 | 147 hours |",
+            "| qwen-3.5-35B-A3B | $0 | 251 hours |",
+            "| qwen-3.5-27B | $0 | 283 hours |",
+            "| qwen-3.5-27B-FP8 | $0 | 87 hours |",
+            "### Provision Extraction Notes",
+            "- This follows Ash's provision taxonomy of actors and provision types",
+            "\nHow LLMs Can Improve on Ash's Baseline?\n",
+            "- Ash's approach miss implied actors (e.g. 'Compensation shall be paid weekly' implies a 'firm' obligation')",
+            "- LLMs can incorporate context from the entire section to identify conditions on a provision (not currently implemented)",
+            "- Ash's segmentation approach was highly customized for Canadian CBAs, LLMs are more flexible",
+            "\nPotential Updates to Provision Extraction Approach\n",
+            "- We don't need to use Ash's exact taxonomy. We can tailor to our specific use case of generosity or focus on 'worker' vs 'firm' power"
+            "- I used qwen-3.5-27b-fp8 for provision extraction because it's free for experimentation but these judgements would likely be much better from larger, more intelligent models",
+            "- Provisions still need to be categorized into 'concepts' or 'clause types' like healthcare, wages, etc."
+        ])
+    )

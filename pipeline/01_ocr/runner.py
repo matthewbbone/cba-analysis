@@ -51,7 +51,7 @@ class OCRRunner:
             self.client = OpenAI(
                 api_key=api_key,
                 base_url=base_url,
-                timeout=120
+                timeout=240
             )
         self.base_url = base_url
         self.model_name = model_name
@@ -97,6 +97,82 @@ class OCRRunner:
         (doc_dir / "full_text.txt").write_text(full_text, encoding="utf-8")
         (doc_dir / "full.txt").write_text(full_text, encoding="utf-8")
         return True
+
+    @staticmethod
+    def _split_markdown_sections(full_markdown: str) -> list[dict[str, str]]:
+        header_pattern = re.compile(r"^##(?!#)\s+(.*)$", flags=re.MULTILINE)
+        matches = list(header_pattern.finditer(full_markdown))
+
+        if not matches:
+            return [
+                {
+                    "header": "FULL_DOCUMENT",
+                    "text": full_markdown,
+                }
+            ]
+
+        sections: list[dict[str, str]] = []
+        if matches[0].start() > 0:
+            front_matter = full_markdown[: matches[0].start()]
+            sections.append(
+                {
+                    "header": "FRONT_MATTER",
+                    "text": front_matter,
+                }
+            )
+
+        for index, match in enumerate(matches):
+            start = match.start()
+            end = matches[index + 1].start() if index + 1 < len(matches) else len(full_markdown)
+            sections.append(
+                {
+                    "header": match.group(1).strip(),
+                    "text": full_markdown[start:end],
+                }
+            )
+
+        return sections
+
+    def _write_sections_json(self, doc_dir: Path, doc_id: str, doc_cache: dict[str, Any]) -> None:
+        full_text_path = doc_dir / "full_text.txt"
+        if not full_text_path.exists():
+            return
+
+        full_markdown = full_text_path.read_text(encoding="utf-8")
+        payload: dict[str, Any] = {
+            "document_meta_data": {
+                "document_id": doc_id,
+                "source_full_text_path": str(full_text_path),
+                "provider": self.provider,
+                "model_name": self.model_name,
+            },
+            "full_markdown": full_markdown,
+            "sections": self._split_markdown_sections(full_markdown),
+        }
+
+        for key in ["total_pages", "processed_pages", "last_processed_page"]:
+            if key in doc_cache:
+                payload["document_meta_data"][key] = doc_cache[key]
+
+        (doc_dir / "sections.json").write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False),
+            encoding="utf-8",
+        )
+
+    def _ensure_document_artifacts(self, doc_dir: Path, doc_id: str, doc_cache: dict[str, Any]) -> bool:
+        """Backfill derived document artifacts from saved page outputs when possible."""
+        wrote_artifacts = False
+        full_text_path = doc_dir / "full_text.txt"
+        sections_path = doc_dir / "sections.json"
+
+        if not full_text_path.exists():
+            wrote_artifacts = self._write_full_text_from_pages(doc_dir) or wrote_artifacts
+
+        if not sections_path.exists() and full_text_path.exists():
+            self._write_sections_json(doc_dir, doc_id, doc_cache)
+            wrote_artifacts = True
+
+        return wrote_artifacts
 
     @staticmethod
     def _safe_page_count(pdf_path: Path) -> int | None:
@@ -160,7 +236,7 @@ class OCRRunner:
         
         prompt = " ".join([
             "Transcribe the document image into markdown.",
-            "Any visually distinct header text should be marked as a header in markdown with ##",
+            "Any visually distinct header text that indicates a new article, preamble, or table of contents should be marked as a header in markdown with '##'",
             "Return the markdown text in the following json format: { 'transcribed_text': '...' }"
         ])
         
@@ -201,7 +277,7 @@ class OCRRunner:
                 }
             ],
             "response_format": schema,
-            "max_tokens": 8192,
+            "max_tokens": 16384,
         }
         
         # The OpenAI-compatible client is synchronous, so run it in a thread to
@@ -263,12 +339,18 @@ class OCRRunner:
             doc_cache = cache.setdefault("documents", {}).setdefault(doc_id, {})
             processed_pages = set(doc_cache.get("processed_pages", []))
             page_count = self._safe_page_count(pdf_path)
+            doc_dir = output_dir / doc_id
             
-            if (
-                page_count is None or 
-                len(processed_pages) >= page_count
-            ):
+            if page_count is None:
                 print(f"Will skip {doc_id}")
+                skipped_documents += 1
+                continue
+
+            if len(processed_pages) >= page_count:
+                if self._ensure_document_artifacts(doc_dir, doc_id, doc_cache):
+                    print(f"Will skip {doc_id}: backfilled missing derived OCR outputs")
+                else:
+                    print(f"Will skip {doc_id}")
                 skipped_documents += 1
                 continue
             
@@ -279,7 +361,7 @@ class OCRRunner:
             ]
             
             doc_pdf_paths[doc_id] = pdf_path
-            (output_dir / doc_id).mkdir(parents=True, exist_ok=True)
+            doc_dir.mkdir(parents=True, exist_ok=True)
             for page in pages_to_process:
                 page_jobs.append((doc_id, pdf_path, page))
 
@@ -344,15 +426,20 @@ class OCRRunner:
             # Rebuild the document-level text file from on-disk page outputs so the
             # combined artifact stays consistent with the resumable page cache.
             doc_dir = output_dir / doc_id
-            self._write_full_text_from_pages(doc_dir)
+            if self._write_full_text_from_pages(doc_dir):
+                self._write_sections_json(
+                    doc_dir=doc_dir,
+                    doc_id=doc_id,
+                    doc_cache=cache["documents"].get(doc_id, {}),
+                )
 
         if "openrouter.ai" in self.base_url and cost_pages:
             print(f"Average OpenRouter cost per page: {total_cost / cost_pages:.6f} credits")
             
 async def main():
     
-    PROVIDER = "mistral"  # "vllm", "openrouter", or "mistral"
-    MODEL_NAME = "mistral-ocr-latest"
+    PROVIDER = "vllm"  # "vllm", "openrouter", or "mistral"
+    MODEL_NAME = "Qwen/Qwen3.5-27B-FP8"
     # vllm: 
     #  Qwen/Qwen3.5-27B, 
     #  Qwen/Qwen3.5-9B, 
@@ -363,7 +450,7 @@ async def main():
     # openrouter: google/gemini-3.1-flash-lite-preview, google/gemini-3.1-pro-preview
     # mistral: 
     model_name = MODEL_NAME.replace("/", "-").replace("-", "_").replace(".", "_")
-    DOL_GROUP = "dol_archive"
+    DOL_GROUP = "cornell_dol" # "cornell_dol", "dol_archive", "cornell_retail_educ"
     
     CACHE_DIR = Path(os.environ.get("CACHE_DIR"))
     INPUT_DIRECTORY =  CACHE_DIR / DOL_GROUP
@@ -371,8 +458,9 @@ async def main():
     CACHE_FILE = OUTPUT_DIRECTORY / "cache.json"
     
     SAMPLE_SIZE = None
-    DOCUMENT_IDS = "document_1778,document_2690,document_3522,document_4027,document_549"
-    N_WORKERS = 20
+    DOCUMENT_IDS = "4208Abbyy,8102ABBYY,7929ABBYY,7423ABBYY,6018ABBYY,3693ABBYY,6513ABBYY,8433ABBYY,K830843_09_07,K800033_12ABBYY,K820213_12_02combined,K800147ABBYY,K811323_06_07combined,K830313_08_07combined"
+    # DOCUMENT_IDS = "6178_008b185f003_07,6178_008b186f003_01,6178_008b184f002_01,6178_001b022f001_02,6178_008b175f010_03,6178_008b178f008_02"
+    N_WORKERS = 10
     N_GPUS = 1
     
     if PROVIDER == "vllm":

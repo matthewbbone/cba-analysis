@@ -19,8 +19,9 @@ class VLLMServer:
         self,
         model_name: str,
         port: int = 8123,
-        max_model_len: int = 16384,
+        max_model_len: int = 32768,
         num_gpus: int = 1,
+        language_only: bool = False,
     ):
         if num_gpus < 1:
             raise ValueError("num_gpus must be at least 1")
@@ -32,7 +33,7 @@ class VLLMServer:
         self.server = None
         self.client = None
         self.log_file = None
-        
+        self.language_only = language_only
         self.log_dir = Path(os.environ.get("LOG_DIR"))
         self.cache_dir = Path(os.environ.get("CACHE_DIR"))
         atexit.register(self.close)
@@ -78,6 +79,8 @@ class VLLMServer:
             "--max-model-len", str(self.max_model_len),
             "--trust-remote-code",
         ]
+        if self.language_only:
+            cmd.extend(["--language-model-only"])
         cmd.extend(["--tensor-parallel-size", str(self.num_gpus)])
         
         env = os.environ.copy()
