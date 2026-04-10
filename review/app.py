@@ -11,6 +11,7 @@ from dotenv import load_dotenv
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 ENV_PATH = ROOT_DIR / ".env"
+DEFAULT_CACHE_DIR = ROOT_DIR / "cba_cache"
 DOL_GROUPS = ["dol_archive", "cornell_dol", "cornell_retail_educ"]
 
 OCR_SYSTEM_PROMPT = " ".join(
@@ -44,15 +45,18 @@ PROVISION_SYSTEM_PROMPT_TEMPLATE = " ".join(
 
 PROVISION_USER_PROMPT = "Extract and categorize the provisions in the following text:"
 
-load_dotenv(ENV_PATH)
+if ENV_PATH.exists():
+    load_dotenv(ENV_PATH)
 
 
 @st.cache_data
 def get_cache_dir() -> Path:
     cache_dir = os.environ.get("CACHE_DIR")
-    if not cache_dir:
-        raise RuntimeError("CACHE_DIR is not set in .env")
-    return Path(cache_dir).resolve()
+    if cache_dir:
+        resolved_cache_dir = Path(cache_dir).resolve()
+        if resolved_cache_dir.exists():
+            return resolved_cache_dir
+    return DEFAULT_CACHE_DIR.resolve()
 
 
 @st.cache_data
