@@ -1,0 +1,33 @@
+31.13 A full time or part time employee who retires from the Employer with a pension from the Pension Fund shall be paid on a pro rata basis for all sick leave for which the employee is eligible but did not use.
+
+## ARTICLE 32 LEAVE OF ABSENCE
+
+32.01 Full time and part time employees with more than one (1) years' service, requesting a leave of absence for reasons other than the employee's illness or injury, shall be given said leave of absence by the Employer at its sole discretion, provided, however, that granting of such leave of absence shall not be unreasonably withheld.
+
+32.02 All requests for leave of absence shall be in writing and must be submitted to the Employer at least two (2) weeks in advance of the date of the commencement of the requested leave of absence. The employee shall be notified in writing with a copy to the Union if the requested leave is approved or denied. The notice shall specify the time limit placed on an approved leave of absence. Advance written request for leave of absence is not necessary in case of family emergency. However, subsequent written notice and request shall be given as soon as is reasonably possible.
+
+32.03 A leave of absence granted by the Employer shall not constitute a break in seniority, but if the leave of absence exceeds three (3) months in duration, then service for purposes of progression increases, vacations and all other benefits required to be paid under this Agreement shall not be earned during said leaves.
+
+32.04 The Employer shall make all contributions to all funds required by this Agreement for any month in which the employee performs any work for which monthly contributions are required before taking the leave and after returning, but not for the months when no covered work is performed. However, in the case of an employee's illness or injury, contributions for Health and Welfare and Pension shall be made for a period not to exceed three (3) months while the employee is absent from work. An employee on an approved leave of absence will be automatically terminated if:
+
+(A) The employee does not return to work when the leave of absence expires, unless the Employer has agreed to an extension.
+
+(B) The employee works elsewhere while on leave without express permission in writing from the Employer to be so employed.
+
+32.05 An employee absent from work due to illness or injury shall retain his seniority for a period not to exceed twelve (12) months.
+
+## FAMILY OR MEDICAL LEAVE OF ABSENCE
+
+32.06 The employer shall grant an employee a Family Medical Leave of Absence if qualified, as required under Federal Law. The Employer will determine eligibility by the use of the rolling calendar year.
+
+## ARTICLE 33 INJURY ON THE JOB
+
+33.01 An employee who is injured on the job and is directed by a medical doctor not to continue work, shall be paid their usual day's wages for that day at straight time for the day on which the injury occurred and which time shall not be considered sick leave.
+
+## ARTICLE 34 JURY DUTY
+
+34.01 Employees who have completed ninety (90) days of continuous service called for jury duty in a court of law necessitating a loss of the employee's straight time scheduled working hours shall be paid while on jury duty, less jury pay, not to exceed ten (10) working days in any contract year. To be eligible for pay under this provision, the employee shall present the jury service notice to the Employer at least seven (7) days before the start of the term as a juror and shall present to the Employer a certificate of service showing dates, time of service and jury fees paid. Employees receiving jury duty pay from any other employer shall not be eligible to receive pay for jury duty under this Agreement.
+
+34.02 Any employee called for jury duty, who after having reported for such jury duty, is excused for the day after 1:00 P.M., shall not be required to report for work on that day.
+
+34.03 When an employee on jury duty has served five (5) days during the week, they shall not be required to work on Saturday.
