@@ -8,6 +8,7 @@ import asyncio
 from pathlib import Path
 import sys
 from typing import Any
+from dotenv import load_dotenv
 from tqdm import tqdm
 
 try:
@@ -17,6 +18,38 @@ except ModuleNotFoundError:
     if str(ROOT_DIR) not in sys.path:
         sys.path.insert(0, str(ROOT_DIR))
     from pipeline.utils.vllm_server import VLLMServer
+
+
+DEFAULT_OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+DEFAULT_OPENAI_BASE_URL = "https://api.openai.com/v1"
+
+load_dotenv()
+
+
+def resolve_provider_config(provider: str) -> dict[str, str | None]:
+    normalized_provider = str(provider or "").strip().lower()
+    if normalized_provider == "vllm":
+        return {
+            "provider": normalized_provider,
+            "base_url": None,
+            "api_key": None,
+        }
+    if normalized_provider == "openrouter":
+        return {
+            "provider": normalized_provider,
+            "base_url": os.environ.get("OPENROUTER_BASE_URL", "").strip() or DEFAULT_OPENROUTER_BASE_URL,
+            "api_key": os.environ["OPENROUTER_API_KEY"],
+        }
+    if normalized_provider == "openai":
+        return {
+            "provider": normalized_provider,
+            "base_url": os.environ.get("OPENAI_BASE_URL", "").strip() or DEFAULT_OPENAI_BASE_URL,
+            "api_key": os.environ["OPENAI_API_KEY"],
+        }
+    raise ValueError(
+        f"Unsupported provider {provider!r}. Expected one of: 'vllm', 'openrouter', 'openai'."
+    )
+
 
 class ExtractionRunner: 
     _MARKDOWN_ESCAPABLE_CHARACTERS = frozenset("\\`*_{}[]()#+-.!|$")
@@ -33,13 +66,39 @@ class ExtractionRunner:
         self.base_url = base_url
         self.api_key = api_key
         self.model_name = model_name
-        self.provider = provider
+        self.provider = str(provider or "").strip().lower()
         self.client = OpenAI(
             api_key=api_key,
             base_url=base_url,
             timeout=240
         )
         self.parties = parties
+
+    def _build_chat_completion_query(
+        self,
+        system_prompt: str,
+        prompt: str,
+        response_format: dict[str, Any],
+    ) -> dict[str, Any]:
+        query: dict[str, Any] = {
+            "model": self.model_name,
+            "messages": [
+                {
+                    "role": "system",
+                    "content": system_prompt
+                },
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "text", "text": prompt},
+                    ],
+                }
+            ],
+            "response_format": response_format,
+        }
+        token_param_name = "max_completion_tokens" if self.provider == "openai" else "max_tokens"
+        query[token_param_name] = 16384
+        return query
 
     def _normalize_party(self, value: Any) -> str:
         text = str(value or "").strip()
@@ -319,23 +378,11 @@ class ExtractionRunner:
             }
         }
         
-        query = {
-            "model": self.model_name,
-            "messages": [
-                {
-                    "role": "system",
-                    "content": system_prompt
-                },
-                {
-                    "role": "user",
-                    "content": [
-                        {"type": "text", "text": prompt},
-                    ],
-                }
-            ],
-            "response_format": schema,
-            "max_tokens": 16384,
-        }
+        query = self._build_chat_completion_query(
+            system_prompt=system_prompt,
+            prompt=prompt,
+            response_format=schema,
+        )
         
         # The OpenAI-compatible client is synchronous, so run it in a thread to
         # keep the async worker pool responsive.
@@ -542,7 +589,7 @@ class ExtractionRunner:
                 doc_id, sections_path, source_payload, section_index, section = job
                 try:
                     provisions, cost = await self.process_section(section.get("text", ""))
-                    if "openrouter.ai" in self.base_url and cost is not None:
+                    if self.provider == "openrouter" and cost is not None:
                         total_cost += float(cost)
                         cost_sections += 1
 
@@ -605,7 +652,7 @@ class ExtractionRunner:
             await asyncio.gather(*workers, return_exceptions=True)
             progress_bar.close()
 
-        if "openrouter.ai" in self.base_url and cost_sections:
+        if self.provider == "openrouter" and cost_sections:
             print(f"Average OpenRouter cost per section: {total_cost / cost_sections:.6f} credits")
 
 async def main():
@@ -616,14 +663,15 @@ async def main():
     MANAGER = "A manager is an individual who has authority over workers but is not the owner of the firm."
     parties = {"Worker": WORKER, "Firm": FIRM, "Union": UNION, "Manager": MANAGER}
     
-    PROVIDER = "vllm" # vllm or "openrouter"
-    MODEL_NAME = "Qwen/Qwen3.5-27B"
+    PROVIDER = "openai" # "vllm", "openrouter", or "openai"
+    MODEL_NAME = "gpt-5.4-mini"
     # vllm: Qwen/Qwen3.5-27B-FP8
     # openrouter: qwen/qwen3.5-27b
+    # openai: gpt-4.1-mini, gpt-5-mini
     
     input_model_name = "Qwen/Qwen3.5-27B".replace("/", "-").replace("-", "_").replace(".", "_")
     model_name = MODEL_NAME.replace("/", "-").replace("-", "_").replace(".", "_")
-    DOL_GROUP = "cornell_retail_educ" # "dol_archive" "cornell_dol" "cornell_retail_educ"
+    DOL_GROUP = "dol_archive" # "dol_archive" "cornell_dol" "cornell_retail_educ"
     
     CACHE_DIR = Path(os.environ.get("CACHE_DIR"))
     INPUT_DIRECTORY =  CACHE_DIR / "01_ocr_output" / DOL_GROUP / input_model_name
@@ -631,12 +679,12 @@ async def main():
     CACHE_FILE = OUTPUT_DIRECTORY / "cache.json"
     
     SAMPLE_SIZE = None
-    # DOCUMENT_IDS = "document_2690,document_4027,document_1778,document_3522,document_549"
+    DOCUMENT_IDS = "document_2690,document_4027,document_1778,document_3522,document_549"
     # DOCUMENT_IDS = "4208Abbyy,8102ABBYY,7929ABBYY,7423ABBYY,6018ABBYY,3693ABBYY,6513ABBYY,8433ABBYY,K830843_09_07,K800033_12ABBYY,K820213_12_02combined,K800147ABBYY,K811323_06_07combined,K830313_08_07combined"
-    DOCUMENT_IDS = "6178_008b185f003_07,6178_008b186f003_01,6178_008b184f002_01,6178_001b022f001_02,6178_008b175f010_03,6178_008b178f008_02"
+    # DOCUMENT_IDS = "6178_008b185f003_07,6178_008b186f003_01,6178_008b184f002_01,6178_001b022f001_02,6178_008b175f010_03,6178_008b178f008_02"
     N_WORKERS = 10
     N_GPUS = 1
-    BACKFILL_GROUNDED_SPANS_ONLY = True
+    BACKFILL_GROUNDED_SPANS_ONLY = False
     
     server = None
 
@@ -648,25 +696,24 @@ async def main():
             provider=PROVIDER,
             parties=parties,
         )
-    elif PROVIDER == "vllm":
-        # Start a local OpenAI-compatible API server backed by the selected vLLM model.
-        server = VLLMServer(model_name=MODEL_NAME, num_gpus=N_GPUS, language_only=True)
-        await asyncio.to_thread(server.start)
-        runner = ExtractionRunner(
-            base_url=f"http://localhost:{server.port}/v1",
-            api_key=None,
-            model_name=MODEL_NAME,
-            provider=PROVIDER,
-            parties=parties,
-        )
     else:
-        # OpenRouter exposes an OpenAI-compatible chat completions API, so the same
-        # Extraction request code can target hosted models without changing worker logic.
+        provider_config = resolve_provider_config(PROVIDER)
+
+        if provider_config["provider"] == "vllm":
+            # Start a local OpenAI-compatible API server backed by the selected vLLM model.
+            server = VLLMServer(model_name=MODEL_NAME, num_gpus=N_GPUS, language_only=True)
+            await asyncio.to_thread(server.start)
+            base_url = f"http://localhost:{server.port}/v1"
+        else:
+            # Hosted providers expose OpenAI-compatible chat completions APIs, so the same
+            # extraction request code can target OpenRouter or OpenAI directly.
+            base_url = str(provider_config["base_url"])
+
         runner = ExtractionRunner(
-            base_url="https://openrouter.ai/api/v1",
-            api_key=os.environ["OPENROUTER_API_KEY"],
+            base_url=base_url,
+            api_key=provider_config["api_key"],
             model_name=MODEL_NAME,
-            provider=PROVIDER,
+            provider=provider_config["provider"],
             parties=parties,
         )
         

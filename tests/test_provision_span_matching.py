@@ -1,8 +1,10 @@
 import importlib.util
+import os
 from pathlib import Path
 import sys
 import types
 import unittest
+from unittest.mock import patch
 
 
 MODULE_PATH = (
@@ -26,6 +28,7 @@ RUNNER_MODULE = importlib.util.module_from_spec(MODULE_SPEC)
 assert MODULE_SPEC is not None and MODULE_SPEC.loader is not None
 MODULE_SPEC.loader.exec_module(RUNNER_MODULE)
 ExtractionRunner = RUNNER_MODULE.ExtractionRunner
+resolve_provider_config = RUNNER_MODULE.resolve_provider_config
 
 PARTIES = {
     "Worker": "worker",
@@ -113,6 +116,57 @@ class ResolveUniqueSpanOffsetsTests(unittest.TestCase):
             output_payload["document_meta_data"]["actor_beneficiary_counts"]["firm worker"],
             1,
         )
+
+
+class ProviderConfigTests(unittest.TestCase):
+    def test_resolves_openai_provider_with_default_base_url(self) -> None:
+        with patch.dict(os.environ, {"OPENAI_API_KEY": "test-openai-key"}, clear=False):
+            with patch.dict(os.environ, {"OPENAI_BASE_URL": ""}, clear=False):
+                config = resolve_provider_config("openai")
+
+        self.assertEqual(config["provider"], "openai")
+        self.assertEqual(config["api_key"], "test-openai-key")
+        self.assertEqual(config["base_url"], "https://api.openai.com/v1")
+
+    def test_rejects_unknown_provider(self) -> None:
+        with self.assertRaises(ValueError):
+            resolve_provider_config("anthropic")
+
+    def test_openai_query_uses_max_completion_tokens(self) -> None:
+        runner = ExtractionRunner(
+            base_url="https://api.openai.com/v1",
+            api_key="test",
+            model_name="gpt-5-mini",
+            provider="openai",
+            parties=PARTIES,
+        )
+
+        query = runner._build_chat_completion_query(
+            system_prompt="system",
+            prompt="prompt",
+            response_format={"type": "json_schema"},
+        )
+
+        self.assertEqual(query["max_completion_tokens"], 16384)
+        self.assertNotIn("max_tokens", query)
+
+    def test_non_openai_query_uses_max_tokens(self) -> None:
+        runner = ExtractionRunner(
+            base_url="https://openrouter.ai/api/v1",
+            api_key="test",
+            model_name="qwen/qwen3.5-27b",
+            provider="openrouter",
+            parties=PARTIES,
+        )
+
+        query = runner._build_chat_completion_query(
+            system_prompt="system",
+            prompt="prompt",
+            response_format={"type": "json_schema"},
+        )
+
+        self.assertEqual(query["max_tokens"], 16384)
+        self.assertNotIn("max_completion_tokens", query)
 
 
 if __name__ == "__main__":
