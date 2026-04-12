@@ -6,6 +6,7 @@ from typing import Any
 
 import fitz
 import streamlit as st
+import streamlit.components.v1 as components
 from dotenv import load_dotenv
 
 
@@ -33,13 +34,14 @@ OCR_USER_PROMPT = " ".join(
 
 PROVISION_SYSTEM_PROMPT_TEMPLATE = " ".join(
     [
-        "You are a legal assistant tasked with extracting and categorizing",
-        "provision types and which actors they refer to.",
-        "The actors you should identify and extract are configured in the runner.",
-        "The provision types you should identify and extract are configured in the runner.",
+        "You are a legal assistant tasked with extracting provisions",
+        "and identifying who enacts them, who benefits from them,",
+        "any stated conditions, and the substantive value of the provision.",
+        "The legal parties you should identify are configured in the runner.",
         "Return your response in a JSON format with the following schema:",
-        "{provisions: [{'actor': the party involved in the provision, 'provision_type': one of the provision types listed above, 'text': the text of the provision from the contract}]}",
-        "If there are no provisions in the text, return {provisions: []}. Only extract provisions that are explicitly stated",
+        "{provisions: [{'subject': the party that enacts the provision, 'beneficiary': the party that benefits from the provision, 'conditions': the stated conditions or 'None', 'value': the substantive obligation, prohibition, permission, or right itself, 'span': a minimal verbatim contiguous substring grounding the provision}]}",
+        "If there are no provisions with clear subjects and beneficiaries in the text, return {provisions: []}.",
+        "If you cannot provide an exact verbatim span for a provision, omit that provision.",
     ]
 )
 
@@ -179,21 +181,21 @@ def read_ocr_page(group: str, model_name: str, document_stem: str, page_index: i
     return page_file.read_text(encoding="utf-8")
 
 
-def _display_actor(value: Any) -> str:
+def _display_party(value: Any) -> str:
     text = str(value or "").strip()
     if not text:
         return "unknown"
     return text
 
 
-def _display_provision_type(value: Any) -> str:
+def _display_text(value: Any, default: str = "None") -> str:
     text = str(value or "").strip()
     if not text:
-        return "unknown"
+        return default
     return text
 
 
-def _normalize_actor_key(value: Any) -> str:
+def _normalize_party_key(value: Any) -> str:
     text = str(value or "").strip().lower()
     aliases = {
         "worker": "worker",
@@ -210,26 +212,336 @@ def _normalize_actor_key(value: Any) -> str:
     return "unknown"
 
 
-def _normalize_provision_type_key(value: Any) -> str:
-    text = str(value or "").strip().lower()
-    if text in {"right", "permission", "obligation", "prohibition"}:
-        return text
-    return "unknown"
+def _get_provision_subject(provision: dict[str, Any]) -> Any:
+    return provision.get("subject", provision.get("actor"))
 
 
-def _get_actor_provision_type_counts(provision_payload: dict[str, Any]) -> dict[str, int]:
+def _get_provision_beneficiary(provision: dict[str, Any]) -> Any:
+    return provision.get("beneficiary")
+
+
+def _get_provision_conditions(provision: dict[str, Any]) -> Any:
+    return provision.get("conditions")
+
+
+def _get_provision_value(provision: dict[str, Any]) -> Any:
+    return provision.get("value", provision.get("text"))
+
+
+def _get_provision_span(provision: dict[str, Any]) -> str:
+    return str(provision.get("span", provision.get("text", "")) or "")
+
+
+def _get_provision_span_start(provision: dict[str, Any]) -> int | None:
+    value = provision.get("span_start")
+    return value if isinstance(value, int) else None
+
+
+def _get_provision_span_end(provision: dict[str, Any]) -> int | None:
+    value = provision.get("span_end")
+    return value if isinstance(value, int) else None
+
+
+def _get_provision_grounding_status(provision: dict[str, Any]) -> str:
+    status = str(provision.get("grounding_status", "") or "").strip().lower()
+    if status in {"exact", "unresolved"}:
+        return status
+    if (
+        isinstance(_get_provision_span_start(provision), int)
+        and isinstance(_get_provision_span_end(provision), int)
+    ):
+        return "exact"
+    return "unresolved"
+
+
+def _is_grounded_provision(provision: dict[str, Any], section_text: str) -> bool:
+    start = _get_provision_span_start(provision)
+    end = _get_provision_span_end(provision)
+    if not isinstance(start, int) or not isinstance(end, int):
+        return False
+    return 0 <= start < end <= len(section_text)
+
+
+def _display_party_label_from_key(value: str) -> str:
+    normalized = _normalize_party_key(value)
+    return normalized.capitalize() if normalized != "unknown" else "Unknown"
+
+
+_PARTY_HIGHLIGHT_COLORS = {
+    "worker": "#D2E3FC",
+    "firm": "#FFDDBE",
+    "union": "#C8E6C9",
+    "manager": "#EADDFF",
+    "unknown": "#E8EAED",
+}
+
+
+def _highlight_color_for_provision(provision: dict[str, Any]) -> str:
+    beneficiary_key = _normalize_party_key(_get_provision_beneficiary(provision))
+    return _PARTY_HIGHLIGHT_COLORS.get(beneficiary_key, _PARTY_HIGHLIGHT_COLORS["unknown"])
+
+
+def _get_grounded_section_provisions(section: dict[str, Any]) -> list[dict[str, Any]]:
+    section_text = str(section.get("text", "") or "")
+    provisions = section.get("provisions", [])
+    if not isinstance(provisions, list):
+        return []
+    return [
+        provision
+        for provision in provisions
+        if isinstance(provision, dict) and _is_grounded_provision(provision, section_text)
+    ]
+
+
+def _get_ungrounded_section_provisions(section: dict[str, Any]) -> list[dict[str, Any]]:
+    section_text = str(section.get("text", "") or "")
+    provisions = section.get("provisions", [])
+    if not isinstance(provisions, list):
+        return []
+    return [
+        provision
+        for provision in provisions
+        if isinstance(provision, dict) and not _is_grounded_provision(provision, section_text)
+    ]
+
+
+def _build_provision_attributes_html(provision: dict[str, Any]) -> str:
+    subject = html.escape(_display_party(_get_provision_subject(provision)))
+    beneficiary = html.escape(_display_party(_get_provision_beneficiary(provision)))
+    conditions = html.escape(_display_text(_get_provision_conditions(provision)))
+    value = html.escape(_display_text(_get_provision_value(provision)))
+
+    return "".join(
+        [
+            "<div><strong>Subject:</strong> ",
+            subject,
+            "</div>",
+            "<div><strong>Beneficiary:</strong> ",
+            beneficiary,
+            "</div>",
+            "<div><strong>Conditions:</strong> ",
+            conditions,
+            "</div>",
+            "<div><strong>Value:</strong> ",
+            value,
+            "</div>",
+        ]
+    )
+
+
+def _build_provision_viewer_html(section_text: str, grounded_provisions: list[dict[str, Any]]) -> str:
+    sorted_provisions = sorted(
+        grounded_provisions,
+        key=lambda provision: (
+            _get_provision_span_start(provision) or 0,
+            -((_get_provision_span_end(provision) or 0) - (_get_provision_span_start(provision) or 0)),
+        ),
+    )
+
+    span_lengths: dict[int, int] = {}
+    points: list[tuple[int, int, int, dict[str, Any]]] = []
+    for index, provision in enumerate(sorted_provisions):
+        start = _get_provision_span_start(provision)
+        end = _get_provision_span_end(provision)
+        if not isinstance(start, int) or not isinstance(end, int) or start >= end:
+            continue
+        span_lengths[index] = end - start
+        points.append((start, 1, index, provision))
+        points.append((end, 0, index, provision))
+
+    def _sort_point(point: tuple[int, int, int, dict[str, Any]]) -> tuple[int, int, int]:
+        position, boundary_type, span_index, _ = point
+        span_length = span_lengths.get(span_index, 0)
+        if boundary_type == 0:
+            return position, 0, span_length
+        return position, 1, -span_length
+
+    points.sort(key=_sort_point)
+
+    html_parts: list[str] = []
+    cursor = 0
+    for position, boundary_type, span_index, provision in points:
+        if position > cursor:
+            html_parts.append(html.escape(section_text[cursor:position]))
+
+        if boundary_type == 1:
+            color = _highlight_color_for_provision(provision)
+            html_parts.append(
+                f'<span class="px-highlight" data-idx="{span_index}" '
+                f'style="background-color:{color};">'
+            )
+        else:
+            html_parts.append("</span>")
+        cursor = position
+
+    if cursor < len(section_text):
+        html_parts.append(html.escape(section_text[cursor:]))
+
+    highlighted_text = "".join(html_parts)
+
+    legend_items = []
+    for party_key in ["worker", "firm", "union", "manager", "unknown"]:
+        legend_items.append(
+            '<span class="px-legend-item" '
+            f'style="background-color:{_PARTY_HIGHLIGHT_COLORS[party_key]};">'
+            f'{html.escape(_display_party_label_from_key(party_key))}'
+            "</span>"
+        )
+
+    provision_data = [
+        {
+            "subject": _display_party(_get_provision_subject(provision)),
+            "beneficiary": _display_party(_get_provision_beneficiary(provision)),
+            "conditions": _display_text(_get_provision_conditions(provision)),
+            "value": _display_text(_get_provision_value(provision)),
+            "span": _display_text(_get_provision_span(provision)),
+            "spanStart": _get_provision_span_start(provision),
+            "spanEnd": _get_provision_span_end(provision),
+            "groundingStatus": _get_provision_grounding_status(provision),
+            "attributesHtml": _build_provision_attributes_html(provision),
+        }
+        for provision in sorted_provisions
+    ]
+    serialized_data = json.dumps(provision_data)
+
+    return f"""
+    <style>
+      .px-viewer {{
+        font-family: Arial, sans-serif;
+        border: 1px solid rgba(128,128,128,0.3);
+        border-radius: 10px;
+        overflow: hidden;
+      }}
+      .px-meta {{
+        background: #fafafa;
+        border-bottom: 1px solid rgba(128,128,128,0.25);
+        padding: 10px 12px;
+        font-size: 13px;
+      }}
+      .px-legend {{
+        margin-bottom: 10px;
+      }}
+      .px-legend-item {{
+        display: inline-block;
+        padding: 2px 6px;
+        border-radius: 999px;
+        margin-right: 6px;
+        margin-bottom: 4px;
+        color: #111;
+        font-size: 12px;
+      }}
+      .px-text {{
+        white-space: pre-wrap;
+        font-family: monospace;
+        line-height: 1.65;
+        padding: 12px;
+        max-height: 320px;
+        overflow-y: auto;
+        background: white;
+      }}
+      .px-highlight {{
+        border-radius: 3px;
+        padding: 1px 2px;
+        cursor: pointer;
+      }}
+      .px-highlight-current {{
+        outline: 2px solid #d93025;
+        outline-offset: 1px;
+      }}
+      .px-attr-row {{
+        margin-bottom: 4px;
+      }}
+      .px-meta code {{
+        font-size: 12px;
+      }}
+    </style>
+    <div class="px-viewer">
+      <div class="px-meta">
+        <div class="px-legend"><strong>Beneficiary colors:</strong> {" ".join(legend_items)}</div>
+        <div id="px-attributes"></div>
+      </div>
+      <div class="px-text" id="px-text">{highlighted_text}</div>
+    </div>
+    <script>
+      (function() {{
+        const provisions = {serialized_data};
+        const attributeContainer = document.getElementById("px-attributes");
+        const textWindow = document.getElementById("px-text");
+        let currentIndex = 0;
+
+        function render() {{
+          if (!provisions.length) {{
+            attributeContainer.innerHTML = "<div>No grounded provisions available.</div>";
+            return;
+          }}
+
+          const provision = provisions[currentIndex];
+          attributeContainer.innerHTML = provision.attributesHtml;
+
+          const previous = textWindow.querySelector(".px-highlight-current");
+          if (previous) {{
+            previous.classList.remove("px-highlight-current");
+          }}
+
+          const current = textWindow.querySelector('[data-idx="' + currentIndex + '"]');
+          if (current) {{
+            current.classList.add("px-highlight-current");
+            current.scrollIntoView({{ block: "center", behavior: "smooth" }});
+          }}
+        }}
+
+        function jumpTo(index) {{
+          if (!provisions.length) {{
+            return;
+          }}
+          currentIndex = Math.max(0, Math.min(index, provisions.length - 1));
+          render();
+        }}
+
+        textWindow.querySelectorAll(".px-highlight").forEach(function(element) {{
+          element.addEventListener("click", function() {{
+            jumpTo(parseInt(element.dataset.idx, 10));
+          }});
+        }});
+
+        render();
+      }})();
+    </script>
+    """
+
+
+def _render_provision_metadata_list(
+    provisions: list[dict[str, Any]],
+) -> None:
+    for provision_index, provision in enumerate(provisions, start=1):
+        subject = _display_party(_get_provision_subject(provision))
+        beneficiary = _display_party(_get_provision_beneficiary(provision))
+        conditions = _display_text(_get_provision_conditions(provision))
+        value = _display_text(_get_provision_value(provision))
+
+        with st.expander(
+            f"{provision_index:02d}. {subject} -> {beneficiary}",
+            expanded=provision_index == 1,
+        ):
+            st.markdown(f"**Subject**: {subject}")
+            st.markdown(f"**Beneficiary**: {beneficiary}")
+            st.markdown(f"**Conditions**: {conditions}")
+            st.markdown(f"**Value**: {value}")
+
+
+def _get_actor_beneficiary_counts(provision_payload: dict[str, Any]) -> dict[str, int]:
     document_meta = provision_payload.get("document_meta_data", {})
     if isinstance(document_meta, dict):
-        raw_counts = document_meta.get("actor_provision_type_counts")
+        raw_counts = document_meta.get("actor_beneficiary_counts")
         if isinstance(raw_counts, dict):
             normalized_counts: dict[str, int] = {}
             for key, value in raw_counts.items():
                 if not isinstance(value, int):
                     continue
                 parts = str(key).split(" ", 1)
-                actor = _normalize_actor_key(parts[0] if parts else "")
-                provision_type = _normalize_provision_type_key(parts[1] if len(parts) > 1 else "")
-                combo_key = f"{actor} {provision_type}"
+                actor = _normalize_party_key(parts[0] if parts else "")
+                beneficiary = _normalize_party_key(parts[1] if len(parts) > 1 else "")
+                combo_key = f"{actor} {beneficiary}"
                 normalized_counts[combo_key] = normalized_counts.get(combo_key, 0) + int(value)
             return normalized_counts
 
@@ -247,35 +559,37 @@ def _get_actor_provision_type_counts(provision_payload: dict[str, Any]) -> dict[
         for provision in provisions:
             if not isinstance(provision, dict):
                 continue
-            actor = _normalize_actor_key(provision.get("actor"))
-            provision_type = _normalize_provision_type_key(provision.get("provision_type"))
-            combo_key = f"{actor} {provision_type}"
+            actor = _normalize_party_key(_get_provision_subject(provision))
+            beneficiary = _normalize_party_key(_get_provision_beneficiary(provision))
+            combo_key = f"{actor} {beneficiary}"
             counts[combo_key] = counts.get(combo_key, 0) + 1
     return counts
 
 
-def _build_actor_provision_type_table(provision_payload: dict[str, Any]) -> list[dict[str, Any]]:
-    combo_counts = _get_actor_provision_type_counts(provision_payload)
+def _build_actor_beneficiary_table(provision_payload: dict[str, Any]) -> list[dict[str, Any]]:
+    combo_counts = _get_actor_beneficiary_counts(provision_payload)
     actor_rows = [
         ("Worker", "worker"),
         ("Firm", "firm"),
         ("Union", "union"),
         ("Manager", "manager"),
+        ("Unknown", "unknown"),
     ]
     return [
         {
             "Actor": label,
-            "Rights": combo_counts.get(f"{actor_key} right", 0),
-            "Permissions": combo_counts.get(f"{actor_key} permission", 0),
-            "Obligations": combo_counts.get(f"{actor_key} obligation", 0),
-            "Prohibitions": combo_counts.get(f"{actor_key} prohibition", 0),
+            "Worker": combo_counts.get(f"{actor_key} worker", 0),
+            "Firm": combo_counts.get(f"{actor_key} firm", 0),
+            "Union": combo_counts.get(f"{actor_key} union", 0),
+            "Manager": combo_counts.get(f"{actor_key} manager", 0),
+            "Unknown": combo_counts.get(f"{actor_key} unknown", 0),
         }
         for label, actor_key in actor_rows
     ]
 
 
 def _get_actor_counts(provision_payload: dict[str, Any]) -> dict[str, int]:
-    combo_counts = _get_actor_provision_type_counts(provision_payload)
+    combo_counts = _get_actor_beneficiary_counts(provision_payload)
     counts = {"Worker": 0, "Firm": 0, "Union": 0, "Manager": 0, "unknown": 0}
     for combo_key, count in combo_counts.items():
         actor_key = combo_key.split(" ", 1)[0]
@@ -293,30 +607,13 @@ def _get_actor_counts(provision_payload: dict[str, Any]) -> dict[str, int]:
 
 
 def _format_worker_benefit_proxy_ratio(provision_payload: dict[str, Any]) -> str:
-    combo_counts = _get_actor_provision_type_counts(provision_payload)
-    numerator = (
-        combo_counts.get("worker right", 0)
-        + combo_counts.get("worker permission", 0)
-        + combo_counts.get("firm obligation", 0)
-        + combo_counts.get("firm prohibition", 0)
-        + combo_counts.get("union right", 0)
-        + combo_counts.get("union permission", 0)
-        + combo_counts.get("manager obligation", 0)
-        + combo_counts.get("manager prohibition", 0)
-    )
-    denominator = (
-        combo_counts.get("worker obligation", 0)
-        + combo_counts.get("worker prohibition", 0)
-        + combo_counts.get("firm right", 0)
-        + combo_counts.get("firm permission", 0)
-        + combo_counts.get("union obligation", 0)
-        + combo_counts.get("union prohibition", 0)
-        + combo_counts.get("manager right", 0)
-        + combo_counts.get("manager permission", 0)
-    )
-    if denominator == 0:
-        return "inf" if numerator > 0 else "n/a"
-    return f"{numerator / denominator:.2f}"
+    combo_counts = _get_actor_beneficiary_counts(provision_payload)
+    actor_keys = ["worker", "firm", "union", "manager", "unknown"]
+    worker_benefits = sum(combo_counts.get(f"{actor_key} worker", 0) for actor_key in actor_keys)
+    firm_benefits = sum(combo_counts.get(f"{actor_key} firm", 0) for actor_key in actor_keys)
+    if firm_benefits == 0:
+        return "inf" if worker_benefits > 0 else "n/a"
+    return f"{worker_benefits / firm_benefits:.2f}"
 
 
 def render_download_button(label: str, path: Path, mime: str, key: str) -> None:
@@ -368,16 +665,13 @@ def render_extracted_provisions(group: str, model_name: str, document_stem: str)
         return
 
     st.markdown("### Document Provision Counts")
-    st.table(_build_actor_provision_type_table(provision_payload))
+    st.table(_build_actor_beneficiary_table(provision_payload))
     proxy_col, equation_col = st.columns([1, 2.4])
     with proxy_col:
         st.metric("Worker Benefit Proxy", _format_worker_benefit_proxy_ratio(provision_payload))
     with equation_col:
         st.markdown(
-            "`worker benefit proxy = (worker right + worker permission + firm obligation + firm prohibition + "
-            "union right + union permission + manager obligation + manager prohibition) / "
-            "(worker obligation + worker prohibition + firm right + firm permission + "
-            "union obligation + union prohibition + manager right + manager permission)`"
+            "`worker benefit proxy = worker benefits / firm benefits`"
         )
 
     selected_section = st.selectbox(
@@ -392,31 +686,45 @@ def render_extracted_provisions(group: str, model_name: str, document_stem: str)
         key=f"provision-section-{group}-{model_name}-{document_stem}",
     )
 
-    source_col, extracted_col = st.columns([1.1, 1])
+    st.markdown("### Section Review")
+    section_text = str(selected_section.get("text", "") or "")
+    provisions = selected_section.get("provisions", [])
+    grounded_provisions = _get_grounded_section_provisions(selected_section)
+    ungrounded_provisions = _get_ungrounded_section_provisions(selected_section)
+    has_span_keys = any(
+        isinstance(provision, dict) and "span" in provision
+        for provision in provisions
+        if isinstance(provisions, list)
+    )
 
-    with source_col:
-        source_text = str(selected_section.get("text", "") or "")
-        st.markdown(source_text if source_text else "_Empty section_")
-
-    with extracted_col:
-        st.markdown("### Extracted Provisions")
-        provisions = selected_section.get("provisions", [])
-        if not isinstance(provisions, list) or not provisions:
-            st.info("No provisions extracted for this section.")
+    if grounded_provisions:
+        components.html(
+            _build_provision_viewer_html(section_text, grounded_provisions),
+            height=560,
+            scrolling=False,
+        )
+        if ungrounded_provisions:
+            st.warning(
+                f"{len(ungrounded_provisions)} provision(s) in this section could not be grounded exactly and are listed below."
+            )
+            with st.expander("Ungrounded Provision Metadata", expanded=False):
+                _render_provision_metadata_list(ungrounded_provisions)
+    else:
+        if has_span_keys:
+            st.info(
+                "No exact grounded spans are available for this section. The extracted provisions are listed below for review."
+            )
         else:
-            for provision_index, provision in enumerate(provisions, start=1):
-                if not isinstance(provision, dict):
-                    continue
-
-                actor = _display_actor(provision.get("actor"))
-                provision_type = _display_provision_type(provision.get("provision_type"))
-                text = str(provision.get("text", "") or "")
-
-                with st.expander(
-                    f"{provision_index:02d}. {actor} / {provision_type}",
-                    expanded=provision_index == 1,
-                ):
-                    st.markdown(text if text else "_Empty provision text_")
+            st.info(
+                "This provision file predates grounded spans. Rerun `02_provision_extract` to enable exact text highlighting."
+            )
+        render_wrapped_text_box(section_text if section_text else "Empty section")
+        if isinstance(provisions, list) and provisions:
+            _render_provision_metadata_list(
+                [provision for provision in provisions if isinstance(provision, dict)]
+            )
+        else:
+            st.info("No provisions extracted for this section.")
 
     render_download_button(
         "Download extracted provisions",
@@ -560,9 +868,10 @@ with provisions_tab:
         "\n".join(
             [
                 "- Provision extraction is run section by section on OCR-derived markdown.",
-                "- The model assigns each extracted provision an actor, a type, and extracts the relevant text.",
-                "- Actor categories include Worker, Firm, Union, and Manager. Provision types include Right, Permission, Obligation, and Prohibition.",
-                "- Document-level counts and the worker-benefit proxy are aggregated from those structured section outputs.",
+                "- The model assigns each extracted provision a subject, beneficiary, conditions, value, and a verbatim grounding span.",
+                "- Subject and beneficiary categories include Worker, Firm, Union, and Manager.",
+                "- Exact spans are resolved to section-relative character offsets for highlighting and auditability.",
+                "- Document-level counts and the worker-benefit proxy are aggregated from actor-by-beneficiary crosstabs.",
             ]
         )
     )
@@ -625,14 +934,14 @@ with notes_tab:
             "| qwen-3.5-27B | $0 | 283 hours |",
             "| qwen-3.5-27B-FP8 | $0 | 87 hours |",
             "### Provision Extraction Notes",
-            "- This follows Ash's provision taxonomy of actors and provision types",
+            "- This extraction now focuses on who enacts a provision, who benefits from it, its conditions, its substantive value, and a grounded evidence span",
             "\nHow LLMs Can Improve on Ash's Baseline?\n",
             "- Ash's approach miss implied actors (e.g. 'Compensation shall be paid weekly' implies a 'firm' obligation')",
-            "- LLMs can incorporate context from the entire section to identify conditions on a provision (not currently implemented)",
+            "- LLMs can incorporate context from the entire section to identify conditions on a provision",
             "- Ash's segmentation approach was highly customized for Canadian CBAs, LLMs are more flexible",
             "\nPotential Updates to Provision Extraction Approach\n",
             "- We don't need to use Ash's exact taxonomy. We can tailor to our specific use case of generosity or focus on 'worker' vs 'firm' power",
-            "- I used qwen-3.5-27b-fp8 for provision extraction because it's free for experimentation but these judgements would likely be much better from larger, more intelligent models",
+            "- I used qwen-3.5-27b for provision extraction because it's free for experimentation but these judgements would likely be much better from larger, more intelligent models",
             "- Provisions still need to be categorized into 'concepts' or 'clause types' like healthcare, wages, etc."
         ])
     )

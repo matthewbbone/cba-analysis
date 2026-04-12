@@ -55,6 +55,15 @@ class OCRRunner:
             )
         self.base_url = base_url
         self.model_name = model_name
+
+    @staticmethod
+    def _escape_markdown_special_characters(text: str) -> str:
+        if not text:
+            return ""
+        # Keep markdown structure intact and only escape the inline characters
+        # most likely to cause accidental emphasis or math formatting.
+        escaped = re.sub(r"(?<!\\)([\$_*])", r"\\\1", text)
+        return escaped
         
     @staticmethod
     def _load_cache(path: Path) -> dict[str, any]:
@@ -216,7 +225,7 @@ class OCRRunner:
                 markdown = pages[0].get("markdown")
             if markdown is None:
                 raise RuntimeError("Mistral OCR response did not include page markdown")
-            return markdown.strip(), None
+            return self._escape_markdown_special_characters(markdown.strip()), None
 
         # Render a single PDF page to a high-resolution PNG for vision OCR.
         doc = pymupdf.open(pdf_path)
@@ -231,12 +240,17 @@ class OCRRunner:
             "You are a helpful and precise assistant for transcribing the text",
             "of collective bargaining agreements. You are given a single page of",
             "a PDF document as an image, and your task is to extract the text content",
-            "as accurately as possible while preserving the original formatting and structure."
+            "as accurately as possible while preserving tables in markdown format and retaining paragraph spacing.",
+            "Everything should be transcribed with normal sized text except for",
+            "article titles. For instance, you see a section header 'Article 6: Leave of Abscence'",
+            ", then the markdown should be '## Article 6: Leave of Absence' to reflect that it's a header. Only do this for article titles.",
+            "Sometimes these headers are on multiple lines but they should be identified as a single header so for instance:",
+            "'Article 6\nLeave of Absence' should still be transcribed as '## Article 6: Leave of Absence' in markdown.",
+            "Do not add headers for section titles that are not explicitly labeled as 'Article X'."
         ])
         
         prompt = " ".join([
             "Transcribe the document image into markdown.",
-            "Any visually distinct header text that indicates a new article, preamble, or table of contents should be marked as a header in markdown with '##'",
             "Return the markdown text in the following json format: { 'transcribed_text': '...' }"
         ])
         
@@ -287,7 +301,8 @@ class OCRRunner:
         )
         raw = response.choices[0].message.content or ""
         cost = getattr(getattr(response, "usage", None), "cost", None)
-        return json.loads(raw)["transcribed_text"].strip(), cost
+        text = json.loads(raw)["transcribed_text"].strip()
+        return self._escape_markdown_special_characters(text), cost
         
     async def process_all(
         self,
@@ -439,7 +454,7 @@ class OCRRunner:
 async def main():
     
     PROVIDER = "vllm"  # "vllm", "openrouter", or "mistral"
-    MODEL_NAME = "Qwen/Qwen3.5-27B-FP8"
+    MODEL_NAME = "Qwen/Qwen3.5-27B"
     # vllm: 
     #  Qwen/Qwen3.5-27B, 
     #  Qwen/Qwen3.5-9B, 
@@ -450,7 +465,7 @@ async def main():
     # openrouter: google/gemini-3.1-flash-lite-preview, google/gemini-3.1-pro-preview
     # mistral: 
     model_name = MODEL_NAME.replace("/", "-").replace("-", "_").replace(".", "_")
-    DOL_GROUP = "cornell_dol" # "cornell_dol", "dol_archive", "cornell_retail_educ"
+    DOL_GROUP = "cornell_retail_educ" # "cornell_dol", "dol_archive", "cornell_retail_educ"
     
     CACHE_DIR = Path(os.environ.get("CACHE_DIR"))
     INPUT_DIRECTORY =  CACHE_DIR / DOL_GROUP
@@ -458,8 +473,9 @@ async def main():
     CACHE_FILE = OUTPUT_DIRECTORY / "cache.json"
     
     SAMPLE_SIZE = None
-    DOCUMENT_IDS = "4208Abbyy,8102ABBYY,7929ABBYY,7423ABBYY,6018ABBYY,3693ABBYY,6513ABBYY,8433ABBYY,K830843_09_07,K800033_12ABBYY,K820213_12_02combined,K800147ABBYY,K811323_06_07combined,K830313_08_07combined"
-    # DOCUMENT_IDS = "6178_008b185f003_07,6178_008b186f003_01,6178_008b184f002_01,6178_001b022f001_02,6178_008b175f010_03,6178_008b178f008_02"
+    # DOCUMENT_IDS = "document_2690,document_4027,document_1778,document_3522,document_549"
+    # DOCUMENT_IDS = "4208Abbyy,8102ABBYY,7929ABBYY,7423ABBYY,6018ABBYY,3693ABBYY,6513ABBYY,8433ABBYY,K830843_09_07,K800033_12ABBYY,K820213_12_02combined,K800147ABBYY,K811323_06_07combined,K830313_08_07combined"
+    DOCUMENT_IDS = "6178_008b185f003_07,6178_008b186f003_01,6178_008b184f002_01,6178_001b022f001_02,6178_008b175f010_03,6178_008b178f008_02"
     N_WORKERS = 10
     N_GPUS = 1
     
