@@ -1,3 +1,4 @@
+import json
 import subprocess
 import time
 from pathlib import Path
@@ -34,6 +35,19 @@ def stop_mlx_vlm_server(process):
         if log_file is not None:
             log_file.write(f"--- Stopped mlx_vlm.server at {time.ctime()} ---\n")
             log_file.close()
+
+def save_json_with_block_pages(res, save_path):
+    data = res.json["res"]
+
+    for block_obj, block_json in zip(res["parsing_res_list"], data["parsing_res_list"]):
+        page_index = getattr(block_obj, "page_index", None)
+        block_json["page_index"] = page_index
+        block_json["page_number"] = page_index + 1 if page_index is not None else None
+
+    input_stem = Path(data["input_path"]).stem
+    save_file = Path(save_path) / f"{input_stem}_res.json"
+    with save_file.open("w", encoding="utf-8") as f:
+        json.dump(data, f, indent=4, ensure_ascii=False)
     
 def process_cbas(pipeline, input_dir, output_dir):
     
@@ -48,11 +62,13 @@ def process_cbas(pipeline, input_dir, output_dir):
             continue
         
         output = pipeline.predict(str(cbas_file))
+        page_res = list(output)
+        output = pipeline.restructure_pages(page_res, merge_tables=True, relevel_titles=True, concatenate_pages=True)
         cba_output_dir.mkdir(parents=True, exist_ok=True)
         for res in output:
-            res.save_to_json(save_path=cba_output_dir)
+            save_json_with_block_pages(res, save_path=cba_output_dir)
             res.save_to_markdown(save_path=cba_output_dir)
-    
+            
 def main():
     
     SOURCE = "cornell_retail_educ"
@@ -62,10 +78,11 @@ def main():
     
     pipeline = PaddleOCRVL(
         vl_rec_backend="mlx-vlm-server", 
-        vl_rec_server_url="http://localhost:8111/",
-        vl_rec_max_concurrency=5,
+        vl_rec_server_url="http://0.0.0.0:8111",
         vl_rec_api_model_name="PaddlePaddle/PaddleOCR-VL-1.5",
+        vl_rec_max_concurrency=10,
         use_queues=True,
+        markdown_ignore_labels=['number','footnote','header_image','footer','footer_image','aside_text']
     )
     
     # Start the MLX VLM server
