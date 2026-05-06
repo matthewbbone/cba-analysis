@@ -1,0 +1,735 @@
+{
+    "input_path": "cache/cornell_dol/K800147ABBYY.pdf",
+    "page_index": 116,
+    "page_count": 125,
+    "width": 1283,
+    "height": 1625,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "Labor Day, Thanksgiving Day, and Christmas Day shall be paid one and one-half times their regular hourly rate.",
+            "block_bbox": [
+                180,
+                171,
+                1056,
+                233
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    180.0,
+                    171.0
+                ],
+                [
+                    1056.0,
+                    171.0
+                ],
+                [
+                    1056.0,
+                    233.0
+                ],
+                [
+                    180.0,
+                    233.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "No additional economic benefits will accrue to PRN Nurses under the terms of this Agreement or the Personnel Rules of the Commonwealth.",
+            "block_bbox": [
+                181,
+                255,
+                1056,
+                317
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    181.0,
+                    255.0
+                ],
+                [
+                    1056.0,
+                    255.0
+                ],
+                [
+                    1056.0,
+                    317.0
+                ],
+                [
+                    181.0,
+                    317.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "If you have any questions regarding this matter, please contact Carol Scott at 717 787 6549.",
+            "block_bbox": [
+                182,
+                338,
+                1056,
+                398
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    182.0,
+                    338.0
+                ],
+                [
+                    1056.0,
+                    338.0
+                ],
+                [
+                    1056.0,
+                    398.0
+                ],
+                [
+                    182.0,
+                    398.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Sincerely,\nNancy Deans Martin",
+            "block_bbox": [
+                494,
+                427,
+                847,
+                534
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    494.0,
+                    427.0
+                ],
+                [
+                    847.0,
+                    427.0
+                ],
+                [
+                    847.0,
+                    534.0
+                ],
+                [
+                    494.0,
+                    534.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Deputy Secretary for Human Resources and Management",
+            "block_bbox": [
+                346,
+                533,
+                897,
+                566
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    346.0,
+                    533.0
+                ],
+                [
+                    897.0,
+                    533.0
+                ],
+                [
+                    897.0,
+                    566.0
+                ],
+                [
+                    346.0,
+                    566.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "cc: Secretary Barnett",
+            "block_bbox": [
+                183,
+                616,
+                433,
+                646
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    183.0,
+                    616.0
+                ],
+                [
+                    433.0,
+                    616.0
+                ],
+                [
+                    433.0,
+                    646.0
+                ],
+                [
+                    183.0,
+                    646.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Donald O. Adams",
+            "block_bbox": [
+                255,
+                646,
+                439,
+                673
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    255.0,
+                    646.0
+                ],
+                [
+                    439.0,
+                    646.0
+                ],
+                [
+                    439.0,
+                    673.0
+                ],
+                [
+                    255.0,
+                    673.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Carol S. Scott",
+            "block_bbox": [
+                257,
+                675,
+                401,
+                702
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    257.0,
+                    675.0
+                ],
+                [
+                    401.0,
+                    675.0
+                ],
+                [
+                    401.0,
+                    702.0
+                ],
+                [
+                    257.0,
+                    702.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Ralph Winters",
+            "block_bbox": [
+                257,
+                702,
+                407,
+                730
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    257.0,
+                    702.0
+                ],
+                [
+                    407.0,
+                    702.0
+                ],
+                [
+                    407.0,
+                    730.0
+                ],
+                [
+                    257.0,
+                    730.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "HR Directors in agencies with 1199p represented employees",
+            "block_bbox": [
+                256,
+                726,
+                837,
+                757
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    256.0,
+                    726.0
+                ],
+                [
+                    837.0,
+                    726.0
+                ],
+                [
+                    837.0,
+                    757.0
+                ],
+                [
+                    256.0,
+                    757.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Labor Coordinators in agencies with 1199p represented employees",
+            "block_bbox": [
+                256,
+                756,
+                895,
+                789
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    256.0,
+                    756.0
+                ],
+                [
+                    895.0,
+                    756.0
+                ],
+                [
+                    895.0,
+                    789.0
+                ],
+                [
+                    256.0,
+                    789.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9101771116256714,
+                "coordinate": [
+                    180,
+                    171,
+                    1056,
+                    233
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        180.0,
+                        171.0
+                    ],
+                    [
+                        1056.0,
+                        171.0
+                    ],
+                    [
+                        1056.0,
+                        233.0
+                    ],
+                    [
+                        180.0,
+                        233.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8986775875091553,
+                "coordinate": [
+                    181,
+                    255,
+                    1056,
+                    317
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        181.0,
+                        255.0
+                    ],
+                    [
+                        1056.0,
+                        255.0
+                    ],
+                    [
+                        1056.0,
+                        317.0
+                    ],
+                    [
+                        181.0,
+                        317.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8831006288528442,
+                "coordinate": [
+                    182,
+                    338,
+                    1056,
+                    398
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        182.0,
+                        338.0
+                    ],
+                    [
+                        1056.0,
+                        338.0
+                    ],
+                    [
+                        1056.0,
+                        398.0
+                    ],
+                    [
+                        182.0,
+                        398.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.36403921246528625,
+                "coordinate": [
+                    494,
+                    427,
+                    847,
+                    534
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        494.0,
+                        427.0
+                    ],
+                    [
+                        847.0,
+                        427.0
+                    ],
+                    [
+                        847.0,
+                        534.0
+                    ],
+                    [
+                        494.0,
+                        534.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4041709303855896,
+                "coordinate": [
+                    514,
+                    488,
+                    848,
+                    533
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        514.0,
+                        488.0
+                    ],
+                    [
+                        848.0,
+                        488.0
+                    ],
+                    [
+                        848.0,
+                        533.0
+                    ],
+                    [
+                        514.0,
+                        533.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7877781391143799,
+                "coordinate": [
+                    346,
+                    533,
+                    897,
+                    566
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        346.0,
+                        533.0
+                    ],
+                    [
+                        897.0,
+                        533.0
+                    ],
+                    [
+                        897.0,
+                        566.0
+                    ],
+                    [
+                        346.0,
+                        566.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7800021767616272,
+                "coordinate": [
+                    183,
+                    616,
+                    433,
+                    646
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        183.0,
+                        616.0
+                    ],
+                    [
+                        433.0,
+                        616.0
+                    ],
+                    [
+                        433.0,
+                        646.0
+                    ],
+                    [
+                        183.0,
+                        646.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6852042078971863,
+                "coordinate": [
+                    255,
+                    646,
+                    439,
+                    673
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        255.0,
+                        646.0
+                    ],
+                    [
+                        439.0,
+                        646.0
+                    ],
+                    [
+                        439.0,
+                        673.0
+                    ],
+                    [
+                        255.0,
+                        673.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7660589814186096,
+                "coordinate": [
+                    257,
+                    675,
+                    401,
+                    702
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        257.0,
+                        675.0
+                    ],
+                    [
+                        401.0,
+                        675.0
+                    ],
+                    [
+                        401.0,
+                        702.0
+                    ],
+                    [
+                        257.0,
+                        702.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8024461269378662,
+                "coordinate": [
+                    257,
+                    702,
+                    407,
+                    730
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        257.0,
+                        702.0
+                    ],
+                    [
+                        407.0,
+                        702.0
+                    ],
+                    [
+                        407.0,
+                        730.0
+                    ],
+                    [
+                        257.0,
+                        730.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8071249127388,
+                "coordinate": [
+                    256,
+                    726,
+                    837,
+                    757
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        256.0,
+                        726.0
+                    ],
+                    [
+                        837.0,
+                        726.0
+                    ],
+                    [
+                        837.0,
+                        757.0
+                    ],
+                    [
+                        256.0,
+                        757.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8431082963943481,
+                "coordinate": [
+                    256,
+                    756,
+                    895,
+                    789
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        256.0,
+                        756.0
+                    ],
+                    [
+                        895.0,
+                        756.0
+                    ],
+                    [
+                        895.0,
+                        789.0
+                    ],
+                    [
+                        256.0,
+                        789.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

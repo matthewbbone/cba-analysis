@@ -1,0 +1,583 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 215,
+    "page_count": 439,
+    "width": 1234,
+    "height": 1592,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Local Memorandum",
+            "block_bbox": [
+                769,
+                83,
+                908,
+                100
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    769.0,
+                    83.0
+                ],
+                [
+                    907.0,
+                    83.0
+                ],
+                [
+                    907.0,
+                    99.0
+                ],
+                [
+                    769.0,
+                    99.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Company, outside candidates may be hired from the geographic area in which the MPOP is located.",
+            "block_bbox": [
+                386,
+                122,
+                908,
+                160
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    386.0,
+                    122.0
+                ],
+                [
+                    908.0,
+                    122.0
+                ],
+                [
+                    908.0,
+                    160.0
+                ],
+                [
+                    386.0,
+                    160.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "If a qualified employee is identified and selected for an MPOP position pursuant to Paragraphs 3 through 6, inclusive, the selected employee(s) will be permanently transferred to the MPOP and will receive Permanent Transfer expense treatment in accordance with contract provisions in effect at the time of the transfer.",
+            "block_bbox": [
+                357,
+                171,
+                910,
+                261
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    357.0,
+                    171.0
+                ],
+                [
+                    910.0,
+                    171.0
+                ],
+                [
+                    910.0,
+                    261.0
+                ],
+                [
+                    357.0,
+                    261.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The work site will become the MPOP Computation Point. Daily Miscellaneous Allowance will be provided per Article 13, Paragraph 3(a), zero (0) to five (5) miles.",
+            "block_bbox": [
+                357,
+                273,
+                909,
+                330
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    357.0,
+                    273.0
+                ],
+                [
+                    909.0,
+                    273.0
+                ],
+                [
+                    909.0,
+                    330.0
+                ],
+                [
+                    357.0,
+                    330.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "10 The selected employee will maintain the wage schedule from his/her originating Base Location per Article 12, Paragraph 4(b)(2) through 4(b)(2)(iv) At the expiration of the time periods set forth in Paragraphs 4(b)(2)/4(b)(2)(iv), employees assigned to an MPOP location will assume the wage schedule of the closest Base Location within 100 miles of the MPOP. If there is no Base Location within 100 miles of the MPOP, it will be assigned Wage Schedule 2.",
+            "block_bbox": [
+                354,
+                341,
+                909,
+                466
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    354.0,
+                    341.0
+                ],
+                [
+                    909.0,
+                    341.0
+                ],
+                [
+                    909.0,
+                    466.0
+                ],
+                [
+                    354.0,
+                    466.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "11 Should the maintenance service requirement at an MPOP be eliminated or reduced, thereby creating a surplus situation at the MPOP, an employee with more than 10 years service will be offered an opportunity to permanently transfer to another MPOP or Base Location and receive Permanent Transfer expense treatment in accordance with the contract provisions which are in effect at the time of the transfer. Should such an employee decline the Permanent Transfer, he/she will receive treatment per Article 13, Paragraph 2(j)(1)(ii). A surplus MPOP employee with less than ten (10) years service may be laid off or permanently transferred to another MPOP or Base Location at the option of the Company in accordance with current contract provisions. Seniority will be the determining factor for Permanent Transfers out of the MPOP. Junior employees will be permanently transferred before senior employees in the same skill category and may be from any one of the following skills:",
+            "block_bbox": [
+                351,
+                477,
+                910,
+                725
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    351.0,
+                    477.0
+                ],
+                [
+                    910.0,
+                    477.0
+                ],
+                [
+                    910.0,
+                    725.0
+                ],
+                [
+                    351.0,
+                    725.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>5ESS</td><td>Data Networking</td><td>Power</td><td>Transmission</td></tr><tr><td>5ESS - M</td><td>Systems</td><td>Power - M</td><td>Transmission - M</td></tr><tr><td>Wireless</td><td>Data Networking</td><td>1AESS</td><td>Non-AT&amp;T SW</td></tr><tr><td>Wireless - M</td><td>Systems - M</td><td>1AESS - M</td><td>Non-AT&amp;T SW - M</td></tr><tr><td>OSS</td><td>4ESS</td><td></td><td></td></tr><tr><td>OSS - M</td><td>4ESS - M</td><td></td><td></td></tr></table>",
+            "block_bbox": [
+                377,
+                742,
+                873,
+                851
+            ],
+            "block_id": 6,
+            "block_order": null,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    377.0,
+                    742.0
+                ],
+                [
+                    873.0,
+                    742.0
+                ],
+                [
+                    873.0,
+                    851.0
+                ],
+                [
+                    377.0,
+                    851.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "12 Force Reduction in a MPQP by layoff will be by the process in Article 20.",
+            "block_bbox": [
+                353,
+                856,
+                880,
+                877
+            ],
+            "block_id": 7,
+            "block_order": 6,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    353.0,
+                    856.0
+                ],
+                [
+                    880.0,
+                    856.0
+                ],
+                [
+                    880.0,
+                    877.0
+                ],
+                [
+                    353.0,
+                    877.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "207",
+            "block_bbox": [
+                876,
+                913,
+                905,
+                930
+            ],
+            "block_id": 8,
+            "block_order": null,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    876.0,
+                    913.0
+                ],
+                [
+                    904.0,
+                    913.0
+                ],
+                [
+                    904.0,
+                    929.0
+                ],
+                [
+                    876.0,
+                    929.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8201578259468079,
+                "coordinate": [
+                    769,
+                    83,
+                    908,
+                    100
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        769.0,
+                        83.0
+                    ],
+                    [
+                        907.0,
+                        83.0
+                    ],
+                    [
+                        907.0,
+                        99.0
+                    ],
+                    [
+                        769.0,
+                        99.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8677733540534973,
+                "coordinate": [
+                    386,
+                    122,
+                    908,
+                    160
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        386.0,
+                        122.0
+                    ],
+                    [
+                        908.0,
+                        122.0
+                    ],
+                    [
+                        908.0,
+                        160.0
+                    ],
+                    [
+                        386.0,
+                        160.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9158269762992859,
+                "coordinate": [
+                    357,
+                    171,
+                    910,
+                    261
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        357.0,
+                        171.0
+                    ],
+                    [
+                        910.0,
+                        171.0
+                    ],
+                    [
+                        910.0,
+                        261.0
+                    ],
+                    [
+                        357.0,
+                        261.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8751240968704224,
+                "coordinate": [
+                    357,
+                    273,
+                    909,
+                    330
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        357.0,
+                        273.0
+                    ],
+                    [
+                        909.0,
+                        273.0
+                    ],
+                    [
+                        909.0,
+                        330.0
+                    ],
+                    [
+                        357.0,
+                        330.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.932055652141571,
+                "coordinate": [
+                    354,
+                    341,
+                    909,
+                    466
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        354.0,
+                        341.0
+                    ],
+                    [
+                        909.0,
+                        341.0
+                    ],
+                    [
+                        909.0,
+                        466.0
+                    ],
+                    [
+                        354.0,
+                        466.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9500253796577454,
+                "coordinate": [
+                    351,
+                    477,
+                    910,
+                    725
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        351.0,
+                        477.0
+                    ],
+                    [
+                        910.0,
+                        477.0
+                    ],
+                    [
+                        910.0,
+                        725.0
+                    ],
+                    [
+                        351.0,
+                        725.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.8069453239440918,
+                "coordinate": [
+                    377,
+                    742,
+                    873,
+                    851
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        377.0,
+                        742.0
+                    ],
+                    [
+                        873.0,
+                        742.0
+                    ],
+                    [
+                        873.0,
+                        851.0
+                    ],
+                    [
+                        377.0,
+                        851.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6098658442497253,
+                "coordinate": [
+                    353,
+                    856,
+                    880,
+                    877
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        353.0,
+                        856.0
+                    ],
+                    [
+                        880.0,
+                        856.0
+                    ],
+                    [
+                        880.0,
+                        877.0
+                    ],
+                    [
+                        353.0,
+                        877.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7057622075080872,
+                "coordinate": [
+                    876,
+                    913,
+                    905,
+                    930
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        876.0,
+                        913.0
+                    ],
+                    [
+                        904.0,
+                        913.0
+                    ],
+                    [
+                        904.0,
+                        929.0
+                    ],
+                    [
+                        876.0,
+                        929.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

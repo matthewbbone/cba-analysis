@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 136,
+    "page_count": 189,
+    "width": 1233,
+    "height": 1581,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "WAGE RATES EFFECTIVE DECEMBER 31, 2000\nSTRUCTURE B2",
+            "block_bbox": [
+                381,
+                159,
+                846,
+                212
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    381.0,
+                    159.0
+                ],
+                [
+                    846.0,
+                    159.0
+                ],
+                [
+                    846.0,
+                    212.0
+                ],
+                [
+                    381.0,
+                    212.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Job Title</td><td>START</td><td>1 YEAR</td><td>2 YEARS</td><td>3 YEARS</td><td>4 YEARS</td><td>5 YEARS</td><td>6 YEARS</td></tr><tr><td>MEDICAL RECORD CODER I</td><td>15.5057</td><td>15.9134</td><td>16.3215</td><td>16.6654</td><td>17.1419</td><td>17.6184</td><td></td></tr><tr><td>MEDICAL RECORD CODER II</td><td>16.7374</td><td>17.1780</td><td>17.6184</td><td>17.9883</td><td>18.5026</td><td>19.0151</td><td></td></tr><tr><td>MEDICAL SECRETARY</td><td>15.8815</td><td>16.2998</td><td>16.7178</td><td>17.2163</td><td>17.7557</td><td>18.2941</td><td></td></tr><tr><td>MEDICAL SECRETARY SR</td><td>16.6754</td><td>17.1146</td><td>17.5535</td><td>18.0773</td><td>18.6435</td><td>19.2088</td><td></td></tr><tr><td>MEDICAL SECRETARY TRAINEE</td><td>12.8007</td><td>13.1287</td><td>13.4652</td><td>13.7160</td><td>14.0792</td><td>14.4427</td><td></td></tr><tr><td>MESSENGER DRIVER</td><td>12.1253</td><td>12.4364</td><td>12.7552</td><td>12.9763</td><td>13.1420</td><td></td><td></td></tr><tr><td>MESSENGER DRIVER SR</td><td>12.8441</td><td>13.1734</td><td>13.5116</td><td>13.7324</td><td>13.8976</td><td></td><td></td></tr><tr><td>MONITOR TECHNICIAN</td><td>13.2248</td><td>13.5567</td><td>13.8959</td><td>14.1787</td><td>14.4785</td><td>14.8280</td><td></td></tr><tr><td>MRI TECHNOLOGIST I</td><td>23.5881</td><td>24.0599</td><td>24.5412</td><td>25.0317</td><td>25.5180</td><td></td><td></td></tr><tr><td>MRI TECHNOLOGIST II</td><td>25.2149</td><td>25.7192</td><td>26.2335</td><td>26.7581</td><td>27.2934</td><td>27.8392</td><td></td></tr><tr><td>MRI TECHNOLOGIST SUPV</td><td>26.8417</td><td>27.3783</td><td>27.9260</td><td>28.4846</td><td>29.0542</td><td>29.6353</td><td></td></tr><tr><td>MRI TECHNOLOGIST TRAINEE</td><td>21.5307</td><td>21.9614</td><td>22.4005</td><td></td><td></td><td></td><td></td></tr><tr><td>NUCLEAR MED TECH SUPVR</td><td>25.1218</td><td>25.7829</td><td>26.4440</td><td>27.2119</td><td>28.0147</td><td>28.7831</td><td></td></tr><tr><td>NUCLEAR MEDICINE TECH I</td><td>22.7275</td><td>23.3254</td><td>23.9238</td><td>24.6919</td><td>25.4943</td><td>26.2621</td><td></td></tr><tr><td>NUCLEAR MEDICINE TECH II</td><td>24.1222</td><td>24.7572</td><td>25.3918</td><td>26.1600</td><td>26.9628</td><td>27.7310</td><td></td></tr><tr><td>NURSE ASSISTANT</td><td>12.4707</td><td>12.7903</td><td>13.1183</td><td>13.4194</td><td>13.7316</td><td>14.0106</td><td></td></tr><tr><td>NURSE ASSISTANT SR</td><td>12.6082</td><td>12.9316</td><td>13.2633</td><td>13.5638</td><td>13.8543</td><td>14.1549</td><td></td></tr><tr><td>NUTRITION AIDE</td><td>11.8841</td><td>12.1886</td><td>12.5010</td><td>12.9729</td><td>13.2872</td><td></td><td></td></tr><tr><td>NUTRITION CLERK</td><td>12.0335</td><td>12.3420</td><td>12.6585</td><td>13.1304</td><td>13.4447</td><td></td><td></td></tr><tr><td>NUTRITION CLERK SR</td><td>12.3275</td><td>12.6359</td><td>12.9525</td><td>13.4245</td><td>13.7387</td><td></td><td></td></tr><tr><td>OB TECHNICIAN</td><td>13.1358</td><td>13.4725</td><td>13.8178</td><td>14.1603</td><td>14.5357</td><td>14.8780</td><td></td></tr><tr><td>OB TECHNICIAN SR</td><td>13.4505</td><td>13.7954</td><td>14.1494</td><td>14.4919</td><td>14.8671</td><td>15.2095</td><td></td></tr><tr><td>OCCUPNL THERP ASST I CERT</td><td>15.2270</td><td>15.6174</td><td>16.0178</td><td>16.4057</td><td>16.8306</td><td>17.2182</td><td></td></tr><tr><td>OCCUPNL THERP ASST II CERT</td><td>16.1407</td><td>16.5543</td><td>16.9791</td><td>17.3902</td><td>17.8403</td><td>18.2513</td><td></td></tr><tr><td>OPTHALMIC PHOTOGRAPHER</td><td>16.3397</td><td>16.7586</td><td>17.1884</td><td>17.5928</td><td>18.9408</td><td>20.2892</td><td></td></tr><tr><td>OPTHALMIC TECH II CERT</td><td>18.3137</td><td>18.7831</td><td>19.2646</td><td>20.2785</td><td>21.2927</td><td>22.3067</td><td>23.3203</td></tr><tr><td>OPTHALMIC TECHNICIAN</td><td>17.4415</td><td>17.8888</td><td>18.3472</td><td>19.3128</td><td>20.2788</td><td>21.2444</td><td>22.2099</td></tr><tr><td>ORTHOPEDIC TECHNICIAN</td><td>14.8707</td><td>15.2520</td><td>15.6431</td><td>16.0305</td><td>16.4556</td><td>16.8428</td><td></td></tr><tr><td>ORTHOPEDIC TECHNICIAN SR</td><td>15.2270</td><td>15.6174</td><td>16.0178</td><td>16.4057</td><td>16.8306</td><td>17.2182</td><td></td></tr><tr><td>PACEMAKER TECHNICIAN</td><td>15.4173</td><td>15.7848</td><td>16.1616</td><td>16.5978</td><td>17.2259</td><td>17.6897</td><td></td></tr><tr><td>PACEMAKER TECHNICIAN SR</td><td>16.0391</td><td>16.4224</td><td>16.8156</td><td>17.2904</td><td>18.0545</td><td>18.6452</td><td></td></tr><tr><td>PATHOLOGY TECH ASST</td><td>14.2511</td><td>14.6165</td><td>14.9911</td><td>15.3625</td><td>15.7700</td><td>16.1410</td><td></td></tr><tr><td>PATHOLOGY TECH ASST SR</td><td>14.5927</td><td>14.9668</td><td>15.3508</td><td>15.7222</td><td>16.1293</td><td>16.5008</td><td></td></tr><tr><td>PATIENT TRANSPTION AIDE</td><td>11.7296</td><td>12.0300</td><td>12.3387</td><td>12.5264</td><td>12.7806</td><td>13.0347</td><td></td></tr></table>",
+            "block_bbox": [
+                96,
+                225,
+                1128,
+                1411
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    96.0,
+                    225.0
+                ],
+                [
+                    1128.0,
+                    225.0
+                ],
+                [
+                    1128.0,
+                    1411.0
+                ],
+                [
+                    96.0,
+                    1411.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "136",
+            "block_bbox": [
+                568,
+                1476,
+                610,
+                1500
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    567.9999389648438,
+                    1475.9998779296875
+                ],
+                [
+                    608.9999389648438,
+                    1475.9998779296875
+                ],
+                [
+                    608.9999389648438,
+                    1498.9998779296875
+                ],
+                [
+                    567.9999389648438,
+                    1498.9998779296875
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.8572266101837158,
+                "coordinate": [
+                    381,
+                    159,
+                    846,
+                    212
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        381.0,
+                        159.0
+                    ],
+                    [
+                        846.0,
+                        159.0
+                    ],
+                    [
+                        846.0,
+                        212.0
+                    ],
+                    [
+                        381.0,
+                        212.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9770176410675049,
+                "coordinate": [
+                    96,
+                    225,
+                    1128,
+                    1411
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        96.0,
+                        225.0
+                    ],
+                    [
+                        1128.0,
+                        225.0
+                    ],
+                    [
+                        1128.0,
+                        1411.0
+                    ],
+                    [
+                        96.0,
+                        1411.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7943296432495117,
+                "coordinate": [
+                    568,
+                    1476,
+                    610,
+                    1500
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        567.9999389648438,
+                        1475.9998779296875
+                    ],
+                    [
+                        608.9999389648438,
+                        1475.9998779296875
+                    ],
+                    [
+                        608.9999389648438,
+                        1498.9998779296875
+                    ],
+                    [
+                        567.9999389648438,
+                        1498.9998779296875
+                    ]
+                ]
+            }
+        ]
+    }
+}

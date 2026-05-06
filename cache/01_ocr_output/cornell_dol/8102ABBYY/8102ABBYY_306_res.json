@@ -1,0 +1,522 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 306,
+    "page_count": 439,
+    "width": 1232,
+    "height": 1580,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                320,
+                107,
+                481,
+                125
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    107.0
+                ],
+                [
+                    480.0,
+                    107.0
+                ],
+                [
+                    480.0,
+                    124.0
+                ],
+                [
+                    320.0,
+                    124.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "MILITARY LEAVES OF ABSENCE · MODIFICATIONS",
+            "block_bbox": [
+                409,
+                140,
+                787,
+                159
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    409.0,
+                    140.0
+                ],
+                [
+                    786.0,
+                    140.0
+                ],
+                [
+                    786.0,
+                    158.0
+                ],
+                [
+                    409.0,
+                    158.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The Military Leaves of Absence agreement will continue in effect with the following modifications and the agreement, as revised and amended, will be printed in the national section of the applicable collective bargaining agreements:",
+            "block_bbox": [
+                320,
+                192,
+                875,
+                247
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    192.0
+                ],
+                [
+                    875.0,
+                    192.0
+                ],
+                [
+                    875.0,
+                    247.0
+                ],
+                [
+                    320.0,
+                    247.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The Military Differential Pay limits are increased as follows:",
+            "block_bbox": [
+                321,
+                250,
+                739,
+                271
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    250.0
+                ],
+                [
+                    739.0,
+                    250.0
+                ],
+                [
+                    739.0,
+                    271.0
+                ],
+                [
+                    321.0,
+                    271.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1 Military Training Duty – A maximum of 20 scheduled work days (including holidays) in each military fiscal year",
+            "block_bbox": [
+                321,
+                290,
+                874,
+                327
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    290.0
+                ],
+                [
+                    874.0,
+                    290.0
+                ],
+                [
+                    874.0,
+                    327.0
+                ],
+                [
+                    321.0,
+                    327.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2 Initial Active Duty for Training – First 4 weeks (20 days)",
+            "block_bbox": [
+                320,
+                354,
+                733,
+                375
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    354.0
+                ],
+                [
+                    733.0,
+                    354.0
+                ],
+                [
+                    733.0,
+                    375.0
+                ],
+                [
+                    320.0,
+                    375.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3 Emergency Service – A maximum of 20 scheduled work days (including holidays) in each calendar year (See note 2)",
+            "block_bbox": [
+                320,
+                401,
+                874,
+                439
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    401.0
+                ],
+                [
+                    874.0,
+                    401.0
+                ],
+                [
+                    874.0,
+                    439.0
+                ],
+                [
+                    320.0,
+                    439.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "298",
+            "block_bbox": [
+                321,
+                898,
+                352,
+                915
+            ],
+            "block_id": 7,
+            "block_order": null,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    898.0
+                ],
+                [
+                    351.0,
+                    898.0
+                ],
+                [
+                    351.0,
+                    914.0
+                ],
+                [
+                    321.0,
+                    914.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.6522794961929321,
+                "coordinate": [
+                    320,
+                    107,
+                    481,
+                    125
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        320.0,
+                        107.0
+                    ],
+                    [
+                        480.0,
+                        107.0
+                    ],
+                    [
+                        480.0,
+                        124.0
+                    ],
+                    [
+                        320.0,
+                        124.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7806662917137146,
+                "coordinate": [
+                    409,
+                    140,
+                    787,
+                    159
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        409.0,
+                        140.0
+                    ],
+                    [
+                        786.0,
+                        140.0
+                    ],
+                    [
+                        786.0,
+                        158.0
+                    ],
+                    [
+                        409.0,
+                        158.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7440730333328247,
+                "coordinate": [
+                    320,
+                    192,
+                    875,
+                    247
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        320.0,
+                        192.0
+                    ],
+                    [
+                        875.0,
+                        192.0
+                    ],
+                    [
+                        875.0,
+                        247.0
+                    ],
+                    [
+                        320.0,
+                        247.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5976371169090271,
+                "coordinate": [
+                    321,
+                    250,
+                    739,
+                    271
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        321.0,
+                        250.0
+                    ],
+                    [
+                        739.0,
+                        250.0
+                    ],
+                    [
+                        739.0,
+                        271.0
+                    ],
+                    [
+                        321.0,
+                        271.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8532036542892456,
+                "coordinate": [
+                    321,
+                    290,
+                    874,
+                    327
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        321.0,
+                        290.0
+                    ],
+                    [
+                        874.0,
+                        290.0
+                    ],
+                    [
+                        874.0,
+                        327.0
+                    ],
+                    [
+                        321.0,
+                        327.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7912304401397705,
+                "coordinate": [
+                    320,
+                    354,
+                    733,
+                    375
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        320.0,
+                        354.0
+                    ],
+                    [
+                        733.0,
+                        354.0
+                    ],
+                    [
+                        733.0,
+                        375.0
+                    ],
+                    [
+                        320.0,
+                        375.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8578963279724121,
+                "coordinate": [
+                    320,
+                    401,
+                    874,
+                    439
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        320.0,
+                        401.0
+                    ],
+                    [
+                        874.0,
+                        401.0
+                    ],
+                    [
+                        874.0,
+                        439.0
+                    ],
+                    [
+                        320.0,
+                        439.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6868011951446533,
+                "coordinate": [
+                    321,
+                    898,
+                    352,
+                    915
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        321.0,
+                        898.0
+                    ],
+                    [
+                        351.0,
+                        898.0
+                    ],
+                    [
+                        351.0,
+                        914.0
+                    ],
+                    [
+                        321.0,
+                        914.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

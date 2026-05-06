@@ -1,0 +1,949 @@
+{
+    "input_path": "cache/cornell_dol/7423ABBYY.pdf",
+    "page_index": 164,
+    "page_count": 185,
+    "width": 1183,
+    "height": 1581,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "doc_title",
+            "block_content": "MEMORANDUM OF AGREEMENT",
+            "block_bbox": [
+                430,
+                69,
+                819,
+                98
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    430.0,
+                    69.0
+                ],
+                [
+                    819.0,
+                    69.0
+                ],
+                [
+                    819.0,
+                    98.0
+                ],
+                [
+                    430.0,
+                    98.0
+                ]
+            ]
+        },
+        {
+            "block_label": "doc_title",
+            "block_content": "Between",
+            "block_bbox": [
+                573,
+                125,
+                676,
+                154
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    573.0,
+                    125.0
+                ],
+                [
+                    676.0,
+                    125.0
+                ],
+                [
+                    676.0,
+                    154.0
+                ],
+                [
+                    573.0,
+                    154.0
+                ]
+            ]
+        },
+        {
+            "block_label": "doc_title",
+            "block_content": "VERIZON NORTH INC. (NORTH CENTRAL REGION)",
+            "block_bbox": [
+                324,
+                179,
+                921,
+                209
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    324.0,
+                    179.0
+                ],
+                [
+                    921.0,
+                    179.0
+                ],
+                [
+                    921.0,
+                    209.0
+                ],
+                [
+                    324.0,
+                    209.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "And",
+            "block_bbox": [
+                597,
+                236,
+                648,
+                264
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    597.0,
+                    236.0
+                ],
+                [
+                    647.0,
+                    236.0
+                ],
+                [
+                    647.0,
+                    263.0
+                ],
+                [
+                    597.0,
+                    263.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "INTERNATIONAL BROTHERHOOD OF ELECTRICAL WORKERS, LOCAL 986",
+            "block_bbox": [
+                324,
+                290,
+                919,
+                348
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    324.0,
+                    290.0
+                ],
+                [
+                    919.0,
+                    290.0
+                ],
+                [
+                    919.0,
+                    348.0
+                ],
+                [
+                    324.0,
+                    348.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "TEN-HOUR, FOUR-DAY WEEK",
+            "block_bbox": [
+                444,
+                373,
+                799,
+                403
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    444.0,
+                    373.0
+                ],
+                [
+                    799.0,
+                    373.0
+                ],
+                [
+                    799.0,
+                    403.0
+                ],
+                [
+                    444.0,
+                    403.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Effective November 21, 1993 through October 22, 2005, the Company and Union agree to establish a ten-hour, four-day week. The terms of this agreement shall take precedence over the principal agreement between the parties. This Memorandum of Agreement shall continue in force from year to year thereafter until terminated by either party serving thirty (30) days' written notice to the other party.",
+            "block_bbox": [
+                176,
+                458,
+                1059,
+                628
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    176.0,
+                    458.0
+                ],
+                [
+                    1059.0,
+                    458.0
+                ],
+                [
+                    1059.0,
+                    628.0
+                ],
+                [
+                    176.0,
+                    628.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. The Company shall select the employees and locations that are subject to the ten-hour, four-day week.",
+            "block_bbox": [
+                177,
+                651,
+                1036,
+                709
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    177.0,
+                    651.0
+                ],
+                [
+                    1036.0,
+                    651.0
+                ],
+                [
+                    1036.0,
+                    709.0
+                ],
+                [
+                    177.0,
+                    709.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. A scheduled tour on a ten-hour, four day week schedule shall consist of not more than ten (10) consecutive hours exclusive of a meal period. Meal periods of less than 1/2 hour shall be included as part of the tour.",
+            "block_bbox": [
+                173,
+                734,
+                1037,
+                821
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    173.0,
+                    734.0
+                ],
+                [
+                    1037.0,
+                    734.0
+                ],
+                [
+                    1037.0,
+                    821.0
+                ],
+                [
+                    173.0,
+                    821.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3. The tour (four-tens) will not be subject to overtime for the hours worked in excess of eight (8) in any one day. Hours worked in excess of ten (10) in any one day or forty (40) in any one week shall be paid at the overtime rate.",
+            "block_bbox": [
+                173,
+                845,
+                1054,
+                957
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    173.0,
+                    845.0
+                ],
+                [
+                    1054.0,
+                    845.0
+                ],
+                [
+                    1054.0,
+                    957.0
+                ],
+                [
+                    173.0,
+                    957.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "4. Payment for excused absence as provided in Articles 12 and 13 will be based on up to ten (10) hours per day rather than eight (8). Sickness disability will be paid on the basis of ten (10) hours.",
+            "block_bbox": [
+                170,
+                983,
+                1026,
+                1068
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    170.0,
+                    983.0
+                ],
+                [
+                    1026.0,
+                    983.0
+                ],
+                [
+                    1026.0,
+                    1068.0
+                ],
+                [
+                    170.0,
+                    1068.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "5. Employees scheduled for ten-hour tours shall in no case receive in excess of forty (40) hours' vacation pay per week or shall not gain an advantage over employees working eight-hour tours.",
+            "block_bbox": [
+                171,
+                1093,
+                1004,
+                1179
+            ],
+            "block_id": 11,
+            "block_order": 12,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    171.0,
+                    1093.0
+                ],
+                [
+                    1004.0,
+                    1093.0
+                ],
+                [
+                    1004.0,
+                    1179.0
+                ],
+                [
+                    171.0,
+                    1179.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "6. Weeks which contain a recognized holiday (except personal holidays) may be scheduled on the basis of five eight-hour tours or four ten-hour tours. With supervisory approval employees scheduled for four ten-hour tours may be permitted to make-up time to 40 hours in the week.",
+            "block_bbox": [
+                170,
+                1203,
+                1040,
+                1317
+            ],
+            "block_id": 12,
+            "block_order": 13,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    170.0,
+                    1203.0
+                ],
+                [
+                    1040.0,
+                    1203.0
+                ],
+                [
+                    1040.0,
+                    1317.0
+                ],
+                [
+                    170.0,
+                    1317.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "7. Personal holidays may be an exception to paragraph 6. With supervisory approval, the personal holidays may be scheduled during the ten-hour",
+            "block_bbox": [
+                168,
+                1340,
+                1050,
+                1399
+            ],
+            "block_id": 13,
+            "block_order": 14,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    168.0,
+                    1340.0
+                ],
+                [
+                    1050.0,
+                    1340.0
+                ],
+                [
+                    1050.0,
+                    1399.0
+                ],
+                [
+                    168.0,
+                    1399.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "156",
+            "block_bbox": [
+                591,
+                1456,
+                634,
+                1481
+            ],
+            "block_id": 14,
+            "block_order": null,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    591.0,
+                    1456.0
+                ],
+                [
+                    633.0,
+                    1456.0
+                ],
+                [
+                    633.0,
+                    1480.0
+                ],
+                [
+                    591.0,
+                    1480.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.6515557169914246,
+                "coordinate": [
+                    430,
+                    69,
+                    819,
+                    98
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        430.0,
+                        69.0
+                    ],
+                    [
+                        819.0,
+                        69.0
+                    ],
+                    [
+                        819.0,
+                        98.0
+                    ],
+                    [
+                        430.0,
+                        98.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.43241068720817566,
+                "coordinate": [
+                    573,
+                    125,
+                    676,
+                    154
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        573.0,
+                        125.0
+                    ],
+                    [
+                        676.0,
+                        125.0
+                    ],
+                    [
+                        676.0,
+                        154.0
+                    ],
+                    [
+                        573.0,
+                        154.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.6064245700836182,
+                "coordinate": [
+                    324,
+                    179,
+                    921,
+                    209
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        324.0,
+                        179.0
+                    ],
+                    [
+                        921.0,
+                        179.0
+                    ],
+                    [
+                        921.0,
+                        209.0
+                    ],
+                    [
+                        324.0,
+                        209.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.696044385433197,
+                "coordinate": [
+                    597,
+                    236,
+                    648,
+                    264
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        597.0,
+                        236.0
+                    ],
+                    [
+                        647.0,
+                        236.0
+                    ],
+                    [
+                        647.0,
+                        263.0
+                    ],
+                    [
+                        597.0,
+                        263.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.49690312147140503,
+                "coordinate": [
+                    324,
+                    290,
+                    919,
+                    348
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        324.0,
+                        290.0
+                    ],
+                    [
+                        919.0,
+                        290.0
+                    ],
+                    [
+                        919.0,
+                        348.0
+                    ],
+                    [
+                        324.0,
+                        348.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6672820448875427,
+                "coordinate": [
+                    444,
+                    373,
+                    799,
+                    403
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        444.0,
+                        373.0
+                    ],
+                    [
+                        799.0,
+                        373.0
+                    ],
+                    [
+                        799.0,
+                        403.0
+                    ],
+                    [
+                        444.0,
+                        403.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9438689351081848,
+                "coordinate": [
+                    176,
+                    458,
+                    1059,
+                    628
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        176.0,
+                        458.0
+                    ],
+                    [
+                        1059.0,
+                        458.0
+                    ],
+                    [
+                        1059.0,
+                        628.0
+                    ],
+                    [
+                        176.0,
+                        628.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9093071222305298,
+                "coordinate": [
+                    177,
+                    651,
+                    1036,
+                    709
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        177.0,
+                        651.0
+                    ],
+                    [
+                        1036.0,
+                        651.0
+                    ],
+                    [
+                        1036.0,
+                        709.0
+                    ],
+                    [
+                        177.0,
+                        709.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9193225502967834,
+                "coordinate": [
+                    173,
+                    734,
+                    1037,
+                    821
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        173.0,
+                        734.0
+                    ],
+                    [
+                        1037.0,
+                        734.0
+                    ],
+                    [
+                        1037.0,
+                        821.0
+                    ],
+                    [
+                        173.0,
+                        821.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9357587099075317,
+                "coordinate": [
+                    173,
+                    845,
+                    1054,
+                    957
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        173.0,
+                        845.0
+                    ],
+                    [
+                        1054.0,
+                        845.0
+                    ],
+                    [
+                        1054.0,
+                        957.0
+                    ],
+                    [
+                        173.0,
+                        957.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9305947422981262,
+                "coordinate": [
+                    170,
+                    983,
+                    1026,
+                    1068
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        170.0,
+                        983.0
+                    ],
+                    [
+                        1026.0,
+                        983.0
+                    ],
+                    [
+                        1026.0,
+                        1068.0
+                    ],
+                    [
+                        170.0,
+                        1068.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9342127442359924,
+                "coordinate": [
+                    171,
+                    1093,
+                    1004,
+                    1179
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        171.0,
+                        1093.0
+                    ],
+                    [
+                        1004.0,
+                        1093.0
+                    ],
+                    [
+                        1004.0,
+                        1179.0
+                    ],
+                    [
+                        171.0,
+                        1179.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9467325210571289,
+                "coordinate": [
+                    170,
+                    1203,
+                    1040,
+                    1317
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        170.0,
+                        1203.0
+                    ],
+                    [
+                        1040.0,
+                        1203.0
+                    ],
+                    [
+                        1040.0,
+                        1317.0
+                    ],
+                    [
+                        170.0,
+                        1317.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9138802289962769,
+                "coordinate": [
+                    168,
+                    1340,
+                    1050,
+                    1399
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        168.0,
+                        1340.0
+                    ],
+                    [
+                        1050.0,
+                        1340.0
+                    ],
+                    [
+                        1050.0,
+                        1399.0
+                    ],
+                    [
+                        168.0,
+                        1399.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8045710921287537,
+                "coordinate": [
+                    591,
+                    1456,
+                    634,
+                    1481
+                ],
+                "order": 15,
+                "polygon_points": [
+                    [
+                        591.0,
+                        1456.0
+                    ],
+                    [
+                        633.0,
+                        1456.0
+                    ],
+                    [
+                        633.0,
+                        1480.0
+                    ],
+                    [
+                        591.0,
+                        1480.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

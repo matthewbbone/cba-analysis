@@ -1,0 +1,461 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 106,
+    "page_count": 287,
+    "width": 725,
+    "height": 1006,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td colspan=\"3\">ARTICLE XVII</td></tr><tr><td>Building Repair Employee</td><td>$13.82</td><td>50e</td></tr><tr><td>Building Operator</td><td>$13.09</td><td>50e</td></tr><tr><td>Storekeeper</td><td>$13.93</td><td>50e</td></tr><tr><td>Utility Employee - Stock</td><td>$13.55</td><td>50e</td></tr><tr><td>Utility Employee - Transportation</td><td>$13.30</td><td>50e</td></tr><tr><td>Appliance Fitter</td><td>($8.75, $9.25, $9.75, $10.25)</td><td>--</td></tr><tr><td>Building Operator</td><td>($9.00, $9.50, $10.00, $10.50)</td><td>--</td></tr><tr><td>Technician</td><td></td><td></td></tr><tr><td>Meter Reader</td><td>$10.00</td><td>--</td></tr></table>",
+            "block_bbox": [
+                58,
+                45,
+                549,
+                319
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    58.0,
+                    45.0
+                ],
+                [
+                    549.0,
+                    45.0
+                ],
+                [
+                    549.0,
+                    319.0
+                ],
+                [
+                    58.0,
+                    319.0
+                ]
+            ]
+        },
+        {
+            "block_label": "vision_footnote",
+            "block_content": " $ ^{1} $Hourly rates listed for the first, second, third and fourth years of employment  \n $ ^{2} $New hire rate shown. Progression to 13.00/hour after three (3) years.",
+            "block_bbox": [
+                76,
+                333,
+                601,
+                379
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    76.0,
+                    333.0
+                ],
+                [
+                    601.0,
+                    333.0
+                ],
+                [
+                    601.0,
+                    379.0
+                ],
+                [
+                    76.0,
+                    379.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Upon completion of thirty-six (36) months within said classification; he/she will advance to the full contract rate, if qualified.",
+            "block_bbox": [
+                77,
+                398,
+                627,
+                445
+            ],
+            "block_id": 2,
+            "block_order": 1,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    77.0,
+                    398.0
+                ],
+                [
+                    627.0,
+                    398.0
+                ],
+                [
+                    627.0,
+                    445.0
+                ],
+                [
+                    77.0,
+                    445.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Bargaining unit employees who are on a thirty-six (36) month automatic wage progression and who transfer into the Local #80 bargaining unit with less than thirty-six (36) months of employment will be paid an appropriate flat rate as determined by the Company until such time as they complete their thirty-six (36) months. Such bargaining unit transferees with thirty-six (36) months of employment or more will be paid 95 percent of the base rate of the classification they are transferring into for the first nine (9) months. Thereafter, the employee shall be paid their full-classified rate.",
+            "block_bbox": [
+                76,
+                458,
+                628,
+                637
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    76.0,
+                    458.0
+                ],
+                [
+                    628.0,
+                    458.0
+                ],
+                [
+                    628.0,
+                    637.0
+                ],
+                [
+                    76.0,
+                    637.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Employees transferring into Special Skills classification with less than twelve (12) months Union, seniority will be paid 85 percent of the base rate of pay until they have accumulated a total of twelve (12) months of Union seniority. During the next six (6) month period, the employee will be paid 90 percent of the base rate of pay and thereafter receive the base rate of pay. Employees with more than twelve (12) months Union seniority but less than thirty-six (36) months of Union seniority will be paid 90 percent of the base rate of pay for the first six (6) months and thereafter receive the base rate of pay. Employees with more than thirty-six (36) months Union seniority will receive the base rate of pay.",
+            "block_bbox": [
+                76,
+                650,
+                628,
+                872
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    76.0,
+                    650.0
+                ],
+                [
+                    628.0,
+                    650.0
+                ],
+                [
+                    628.0,
+                    872.0
+                ],
+                [
+                    76.0,
+                    872.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Any employee newly hired into a special skills classification as defined in the Classification of Work and Wages section of the contract will be paid 85",
+            "block_bbox": [
+                76,
+                884,
+                627,
+                930
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    76.0,
+                    884.0
+                ],
+                [
+                    627.0,
+                    884.0
+                ],
+                [
+                    627.0,
+                    930.0
+                ],
+                [
+                    76.0,
+                    930.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "98",
+            "block_bbox": [
+                325,
+                935,
+                347,
+                951
+            ],
+            "block_id": 6,
+            "block_order": null,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    325.0,
+                    935.0
+                ],
+                [
+                    346.0,
+                    935.0
+                ],
+                [
+                    346.0,
+                    950.0
+                ],
+                [
+                    325.0,
+                    950.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.7844175100326538,
+                "coordinate": [
+                    58,
+                    45,
+                    549,
+                    319
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        58.0,
+                        45.0
+                    ],
+                    [
+                        549.0,
+                        45.0
+                    ],
+                    [
+                        549.0,
+                        319.0
+                    ],
+                    [
+                        58.0,
+                        319.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.6392737030982971,
+                "coordinate": [
+                    76,
+                    333,
+                    601,
+                    379
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        76.0,
+                        333.0
+                    ],
+                    [
+                        601.0,
+                        333.0
+                    ],
+                    [
+                        601.0,
+                        379.0
+                    ],
+                    [
+                        76.0,
+                        379.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9038338661193848,
+                "coordinate": [
+                    77,
+                    398,
+                    627,
+                    445
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        77.0,
+                        398.0
+                    ],
+                    [
+                        627.0,
+                        398.0
+                    ],
+                    [
+                        627.0,
+                        445.0
+                    ],
+                    [
+                        77.0,
+                        445.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9590132832527161,
+                "coordinate": [
+                    76,
+                    458,
+                    628,
+                    637
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        76.0,
+                        458.0
+                    ],
+                    [
+                        628.0,
+                        458.0
+                    ],
+                    [
+                        628.0,
+                        637.0
+                    ],
+                    [
+                        76.0,
+                        637.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9596948027610779,
+                "coordinate": [
+                    76,
+                    650,
+                    628,
+                    872
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        76.0,
+                        650.0
+                    ],
+                    [
+                        628.0,
+                        650.0
+                    ],
+                    [
+                        628.0,
+                        872.0
+                    ],
+                    [
+                        76.0,
+                        872.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8965696692466736,
+                "coordinate": [
+                    76,
+                    884,
+                    627,
+                    930
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        76.0,
+                        884.0
+                    ],
+                    [
+                        627.0,
+                        884.0
+                    ],
+                    [
+                        627.0,
+                        930.0
+                    ],
+                    [
+                        76.0,
+                        930.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7457420229911804,
+                "coordinate": [
+                    325,
+                    935,
+                    347,
+                    951
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        325.0,
+                        935.0
+                    ],
+                    [
+                        346.0,
+                        935.0
+                    ],
+                    [
+                        346.0,
+                        950.0
+                    ],
+                    [
+                        325.0,
+                        950.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

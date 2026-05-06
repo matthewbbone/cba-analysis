@@ -1,0 +1,522 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b184f002_01.pdf",
+    "page_index": 52,
+    "page_count": 73,
+    "width": 583,
+    "height": 981,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "SCHEDULE A",
+            "block_bbox": [
+                226,
+                76,
+                351,
+                97
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    226.0,
+                    76.0
+                ],
+                [
+                    350.0,
+                    76.0
+                ],
+                [
+                    350.0,
+                    96.0
+                ],
+                [
+                    226.0,
+                    96.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "September 1, 1978 to January 31, 1979",
+            "block_bbox": [
+                132,
+                106,
+                445,
+                125
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    135.0,
+                    106.0
+                ],
+                [
+                    444.0,
+                    106.0
+                ],
+                [
+                    444.0,
+                    124.0
+                ],
+                [
+                    135.0,
+                    124.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Step</td><td>Bachelor</td><td>Master or Bachelor  $ \\dagger $ 32</td><td>Master  $ \\dagger $ 32 or Bachelor  $ \\dagger $ 64</td><td>Earned Doctorate</td></tr><tr><td>1</td><td>11,400</td><td>12,100</td><td>12,800</td><td>13,500</td></tr><tr><td>2</td><td>11,850</td><td>12,550</td><td>13,250</td><td>13,950</td></tr><tr><td>3</td><td>12,300</td><td>13,000</td><td>13,700</td><td>14,400</td></tr><tr><td>4</td><td>13,650</td><td>14,350</td><td>15,050</td><td>15,750</td></tr><tr><td>5</td><td>14,100</td><td>14,800</td><td>15,500</td><td>16,200</td></tr><tr><td>6</td><td>14,550</td><td>15,250</td><td>15,950</td><td>16,650</td></tr><tr><td>7</td><td>15,000</td><td>15,700</td><td>16,400</td><td>17,100</td></tr><tr><td>8</td><td>15,450</td><td>16,150</td><td>16,850</td><td>17,550</td></tr><tr><td>9</td><td>15,900</td><td>16,600</td><td>17,300</td><td>18,000</td></tr><tr><td>10</td><td>16,350</td><td>17,050</td><td>17,750</td><td>18,450</td></tr><tr><td>11</td><td>16,800</td><td>17,500</td><td>18,200</td><td>18,900</td></tr><tr><td>12</td><td>17,750</td><td>18,450</td><td>19,150</td><td>19,850</td></tr><tr><td>13</td><td>18,100</td><td>19,800</td><td>20,500</td><td>21,200</td></tr></table>",
+            "block_bbox": [
+                69,
+                116,
+                509,
+                413
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    69.0,
+                    116.0
+                ],
+                [
+                    509.0,
+                    116.0
+                ],
+                [
+                    509.0,
+                    413.0
+                ],
+                [
+                    69.0,
+                    413.0
+                ]
+            ]
+        },
+        {
+            "block_label": "vision_footnote",
+            "block_content": "* This phase of the equivalency program is restricted to teachers appointed prior to September 1, 1963. Teachers appointed on or after September 1, 1963 must possess a Master's Degree to be eligible for advanced salary standing.",
+            "block_bbox": [
+                71,
+                416,
+                511,
+                503
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    71.00006103515625,
+                    416.0
+                ],
+                [
+                    510.0,
+                    416.0
+                ],
+                [
+                    510.0,
+                    498.0
+                ],
+                [
+                    71.00006103515625,
+                    498.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "Effective February 1, 1979 to January 1, 1980\nStep Bachelor † 32 *Bachelor † 64 Doctorate Master † 32 Master or",
+            "block_bbox": [
+                73,
+                514,
+                510,
+                566
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    73.0,
+                    514.0
+                ],
+                [
+                    510.0,
+                    514.0
+                ],
+                [
+                    510.0,
+                    566.0
+                ],
+                [
+                    73.0,
+                    566.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td></td><td></td><td>Master 1 32 or</td><td>Master 1 or * Bachelor</td><td>Earned</td></tr><tr><td>1</td><td>11,750</td><td>12,450</td><td>13,150</td><td>13,850</td></tr><tr><td>2</td><td>12,200</td><td>12,900</td><td>13,600</td><td>14,300</td></tr><tr><td>3</td><td>12,650</td><td>13,350</td><td>14,050</td><td>14,750</td></tr><tr><td>4</td><td>14,000</td><td>14,700</td><td>15,400</td><td>16,100</td></tr><tr><td>5</td><td>14,850</td><td>15,550</td><td>16,250</td><td>16,950</td></tr><tr><td>6</td><td>15,300</td><td>16,000</td><td>16,700</td><td>17,400</td></tr><tr><td>7</td><td>15,750</td><td>16,450</td><td>17,150</td><td>17,850</td></tr><tr><td>8</td><td>16,200</td><td>16,900</td><td>17,600</td><td>18,300</td></tr><tr><td>9</td><td>16,650</td><td>17,350</td><td>18,050</td><td>18,750</td></tr><tr><td>10</td><td>17,100</td><td>17,800</td><td>18,500</td><td>19,200</td></tr><tr><td>11</td><td>17,550</td><td>18,250</td><td>18,950</td><td>19,650</td></tr><tr><td>12</td><td>18,500</td><td>19,200</td><td>19,900</td><td>20,600</td></tr><tr><td>13</td><td>20,400</td><td>21,100</td><td>21,800</td><td>22,500</td></tr></table>",
+            "block_bbox": [
+                72,
+                556,
+                510,
+                803
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    72.0,
+                    556.0
+                ],
+                [
+                    510.0,
+                    556.0
+                ],
+                [
+                    510.0,
+                    803.0
+                ],
+                [
+                    72.0,
+                    803.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "* This phase of the equivalency program is restricted to teachers appointed prior to September 1, 1963. Teachers appointed on or after September 1, 1963 must possess a Masters Degree to be eligible for advanced salary standing.",
+            "block_bbox": [
+                73,
+                805,
+                512,
+                891
+            ],
+            "block_id": 6,
+            "block_order": 2,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    72.9999771118164,
+                    805.0000610351562
+                ],
+                [
+                    510.2182312011719,
+                    800.9796752929688
+                ],
+                [
+                    511.0000305175781,
+                    886.0000610351562
+                ],
+                [
+                    73.78177642822266,
+                    890.0204467773438
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "47",
+            "block_bbox": [
+                281,
+                905,
+                304,
+                921
+            ],
+            "block_id": 7,
+            "block_order": null,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    281.0,
+                    905.0
+                ],
+                [
+                    303.0,
+                    905.0
+                ],
+                [
+                    303.0,
+                    920.0
+                ],
+                [
+                    281.0,
+                    920.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5923492908477783,
+                "coordinate": [
+                    226,
+                    76,
+                    351,
+                    97
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        226.0,
+                        76.0
+                    ],
+                    [
+                        350.0,
+                        76.0
+                    ],
+                    [
+                        350.0,
+                        96.0
+                    ],
+                    [
+                        226.0,
+                        96.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.39260128140449524,
+                "coordinate": [
+                    132,
+                    106,
+                    445,
+                    125
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        135.0,
+                        106.0
+                    ],
+                    [
+                        444.0,
+                        106.0
+                    ],
+                    [
+                        444.0,
+                        124.0
+                    ],
+                    [
+                        135.0,
+                        124.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9179009795188904,
+                "coordinate": [
+                    69,
+                    116,
+                    509,
+                    413
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        69.0,
+                        116.0
+                    ],
+                    [
+                        509.0,
+                        116.0
+                    ],
+                    [
+                        509.0,
+                        413.0
+                    ],
+                    [
+                        69.0,
+                        413.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.857862114906311,
+                "coordinate": [
+                    71,
+                    416,
+                    511,
+                    503
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        71.00006103515625,
+                        416.0
+                    ],
+                    [
+                        510.0,
+                        416.0
+                    ],
+                    [
+                        510.0,
+                        498.0
+                    ],
+                    [
+                        71.00006103515625,
+                        498.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.5516970753669739,
+                "coordinate": [
+                    73,
+                    514,
+                    510,
+                    566
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        73.0,
+                        514.0
+                    ],
+                    [
+                        510.0,
+                        514.0
+                    ],
+                    [
+                        510.0,
+                        566.0
+                    ],
+                    [
+                        73.0,
+                        566.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9264964461326599,
+                "coordinate": [
+                    72,
+                    556,
+                    510,
+                    803
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        72.0,
+                        556.0
+                    ],
+                    [
+                        510.0,
+                        556.0
+                    ],
+                    [
+                        510.0,
+                        803.0
+                    ],
+                    [
+                        72.0,
+                        803.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5944170951843262,
+                "coordinate": [
+                    73,
+                    805,
+                    512,
+                    891
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        72.9999771118164,
+                        805.0000610351562
+                    ],
+                    [
+                        510.2182312011719,
+                        800.9796752929688
+                    ],
+                    [
+                        511.0000305175781,
+                        886.0000610351562
+                    ],
+                    [
+                        73.78177642822266,
+                        890.0204467773438
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7657447457313538,
+                "coordinate": [
+                    281,
+                    905,
+                    304,
+                    921
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        281.0,
+                        905.0
+                    ],
+                    [
+                        303.0,
+                        905.0
+                    ],
+                    [
+                        303.0,
+                        920.0
+                    ],
+                    [
+                        281.0,
+                        920.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

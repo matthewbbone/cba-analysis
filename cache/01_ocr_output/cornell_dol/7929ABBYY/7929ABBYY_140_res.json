@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 140,
+    "page_count": 189,
+    "width": 1223,
+    "height": 1573,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "WAGE RATES EFFECTIVE OCTOBER 7, 2001\nSTRUCTURE B2",
+            "block_bbox": [
+                395,
+                158,
+                833,
+                210
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    395.0,
+                    158.0
+                ],
+                [
+                    833.0,
+                    158.0
+                ],
+                [
+                    833.0,
+                    210.0
+                ],
+                [
+                    395.0,
+                    210.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Job Title</td><td>START</td><td>1 YEAR</td><td>2 YEARS</td><td>3 YEARS</td><td>4 YEARS</td><td>5 YEARS</td><td>6 YEARS</td></tr><tr><td>DIAG ULTRASONOGRAPHER I</td><td>23.5658</td><td>24.1858</td><td>24.8060</td><td>25.1971</td><td>25.7539</td><td>26.6400</td><td></td></tr><tr><td>DIAG ULTRASONOGRAPHER II</td><td>25.2155</td><td>25.8790</td><td>26.5426</td><td>27.2981</td><td>28.5852</td><td>29.9558</td><td>31.1594</td></tr><tr><td>DIAG ULTRASONOGRAPHER III</td><td>26.4764</td><td>27.1729</td><td>27.8696</td><td>28.6632</td><td>30.0146</td><td>31.4536</td><td>32.7178</td></tr><tr><td>DIAG ULTRASONOGRPHR SUPV</td><td>28.5144</td><td>29.2640</td><td>30.0146</td><td>31.3667</td><td>32.7179</td><td>34.1634</td><td>35.4203</td></tr><tr><td>DIAG ULTRASONO TRAINEE</td><td>20.6992</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>EEG TECHNOLOGIST I</td><td>15.6010</td><td>16.0012</td><td>16.4117</td><td>16.8551</td><td>17.6535</td><td>18.3632</td><td></td></tr><tr><td>EEG TECHNOLOGIST II</td><td>16.5289</td><td>16.9526</td><td>17.3876</td><td>17.8309</td><td>18.7180</td><td>19.6049</td><td></td></tr><tr><td>EKG TECHNICIAN</td><td>14.9010</td><td>15.2830</td><td>15.6748</td><td>16.1286</td><td>16.7819</td><td>17.2643</td><td></td></tr><tr><td>EKG TECHNICIAN SR</td><td>15.5475</td><td>15.9461</td><td>16.3551</td><td>16.8487</td><td>17.6436</td><td>18.2578</td><td></td></tr><tr><td>EMERGENCY DEPT TECH I</td><td>13.0750</td><td>13.4104</td><td>13.7538</td><td>14.0689</td><td>14.3836</td><td>14.6401</td><td></td></tr><tr><td>EMERGENCY DEPT TECHN II</td><td>15.4655</td><td>15.8621</td><td>16.2688</td><td>16.6717</td><td>17.1138</td><td>17.5165</td><td></td></tr><tr><td>GARDENER</td><td>13.7374</td><td>14.0897</td><td>14.4508</td><td>14.8019</td><td>15.1531</td><td></td><td></td></tr><tr><td>GARDENER SR</td><td>14.8084</td><td>15.1883</td><td>15.5774</td><td>15.9318</td><td>16.2828</td><td></td><td></td></tr><tr><td>HISTOLOGIC TECH I</td><td>19.3110</td><td>19.8192</td><td>20.3275</td><td>20.7424</td><td>21.0701</td><td>21.3468</td><td></td></tr><tr><td>HISTOLOGIC TECH II</td><td>20.8962</td><td>21.4464</td><td>21.9959</td><td>22.5664</td><td>22.9464</td><td>23.2057</td><td></td></tr><tr><td>HISTOLOGIC TECH TRAINEE</td><td>16.1626</td><td>16.5875</td><td>17.0132</td><td>17.2977</td><td>17.7015</td><td>18.1055</td><td></td></tr><tr><td>HISTOLOGIC TECHNICIAN SUPVR</td><td>23.1213</td><td>23.7302</td><td>24.3385</td><td>24.9439</td><td>25.4278</td><td>25.7906</td><td></td></tr><tr><td>HOME HEALTH AIDE</td><td>13.0346</td><td>13.3686</td><td>13.7116</td><td>14.0219</td><td>14.3434</td><td>14.6301</td><td></td></tr><tr><td>HOMEMAKER</td><td>8.1534</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>HOUSEKEEPING AIDE</td><td>12.5014</td><td>12.8218</td><td>13.1506</td><td>13.4954</td><td>13.8398</td><td></td><td></td></tr><tr><td>HOUSEKEEPING HEAD AIDE</td><td>12.8287</td><td>13.1577</td><td>13.4954</td><td>13.8398</td><td>14.1841</td><td></td><td></td></tr><tr><td>INVASIVE CARDIO SPECIALIST</td><td>25.5855</td><td>26.3531</td><td>27.1436</td><td>27.8221</td><td>28.5178</td><td>29.2304</td><td></td></tr><tr><td>LABORATORY ASSISTANT I</td><td>13.0097</td><td>13.3431</td><td>13.6856</td><td>13.9147</td><td>14.2394</td><td>14.5644</td><td></td></tr><tr><td>LABORATORY ASSISTANT II</td><td>13.5578</td><td>13.9056</td><td>14.2625</td><td>14.4893</td><td>14.9121</td><td>15.2974</td><td></td></tr><tr><td>LABORATORY ASSISTANT III</td><td>13.7870</td><td>14.1406</td><td>14.5030</td><td>14.7682</td><td>15.1529</td><td>15.5380</td><td></td></tr><tr><td>LABORATORY ASSISTANT SR</td><td>14.1036</td><td>14.4654</td><td>14.8362</td><td>15.1491</td><td>15.5827</td><td>16.0153</td><td></td></tr><tr><td>LICENSED VOCATIONAL NURSE</td><td>16.9279</td><td>17.3734</td><td>17.8187</td><td>18.2516</td><td>18.6720</td><td>19.0917</td><td>19.5121</td></tr><tr><td>LICENSED VOC NURSE SR</td><td>17.6795</td><td>18.1445</td><td>18.6099</td><td>19.0433</td><td>19.4632</td><td>19.8828</td><td>20.3029</td></tr><tr><td>LIFT TECHNICIAN</td><td>12.8466</td><td>13.1759</td><td>13.5138</td><td>13.8238</td><td>14.1455</td><td>14.4329</td><td></td></tr><tr><td>LINEN ROOM SUPERVISOR</td><td>12.8287</td><td>13.1577</td><td>13.4954</td><td>13.8398</td><td>14.1841</td><td></td><td></td></tr><tr><td>MEDICAL ASSISTANT</td><td>13.0750</td><td>13.4104</td><td>13.7538</td><td>14.0689</td><td>14.3836</td><td>14.6401</td><td></td></tr><tr><td>MEDICAL ASSISTANT SR</td><td>13.4074</td><td>13.7511</td><td>14.1038</td><td>14.4181</td><td>14.7328</td><td>14.9893</td><td></td></tr><tr><td>MEDICAL LEGAL SPEC SAC ONLY</td><td>15.8156</td><td>16.2224</td><td>16.6299</td><td>17.1155</td><td>17.6411</td><td>18.1655</td><td></td></tr></table>",
+            "block_bbox": [
+                100,
+                232,
+                1127,
+                1358
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    100.0,
+                    232.0
+                ],
+                [
+                    1127.0,
+                    232.0
+                ],
+                [
+                    1127.0,
+                    1358.0
+                ],
+                [
+                    100.0,
+                    1358.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "140",
+            "block_bbox": [
+                568,
+                1467,
+                610,
+                1493
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    567.9999389648438,
+                    1466.9998779296875
+                ],
+                [
+                    608.9999389648438,
+                    1466.9998779296875
+                ],
+                [
+                    608.9999389648438,
+                    1491.9998779296875
+                ],
+                [
+                    567.9999389648438,
+                    1491.9998779296875
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.8505710363388062,
+                "coordinate": [
+                    395,
+                    158,
+                    833,
+                    210
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        395.0,
+                        158.0
+                    ],
+                    [
+                        833.0,
+                        158.0
+                    ],
+                    [
+                        833.0,
+                        210.0
+                    ],
+                    [
+                        395.0,
+                        210.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9774748682975769,
+                "coordinate": [
+                    100,
+                    232,
+                    1127,
+                    1358
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        100.0,
+                        232.0
+                    ],
+                    [
+                        1127.0,
+                        232.0
+                    ],
+                    [
+                        1127.0,
+                        1358.0
+                    ],
+                    [
+                        100.0,
+                        1358.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7784908413887024,
+                "coordinate": [
+                    568,
+                    1467,
+                    610,
+                    1493
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        567.9999389648438,
+                        1466.9998779296875
+                    ],
+                    [
+                        608.9999389648438,
+                        1466.9998779296875
+                    ],
+                    [
+                        608.9999389648438,
+                        1491.9998779296875
+                    ],
+                    [
+                        567.9999389648438,
+                        1491.9998779296875
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 154,
+    "page_count": 189,
+    "width": 1223,
+    "height": 1572,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "WAGE RATES EFFECTIVE OCTOBER 5, 2003\nSTRUCTURE B2",
+            "block_bbox": [
+                383,
+                195,
+                822,
+                249
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    383.0,
+                    195.0
+                ],
+                [
+                    822.0,
+                    195.0
+                ],
+                [
+                    822.0,
+                    249.0
+                ],
+                [
+                    383.0,
+                    249.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Job Title</td><td>START</td><td>1 YEAR</td><td>2 YEARS</td><td>3 YEARS</td><td>4 YEARS</td><td>5 YEARS</td><td>6 YEARS</td></tr><tr><td>ALLRGY ASST SUPV CENTRL LAB</td><td>16.5030</td><td>16.7586</td><td>17.1884</td><td>17.5791</td><td>18.1721</td><td>18.7249</td><td></td></tr><tr><td>ALLERGY TECHNICIAN</td><td>15.4600</td><td>15.8565</td><td>16.2631</td><td>16.5764</td><td>17.0248</td><td>17.4609</td><td></td></tr><tr><td>ALLERGY TECHNICIAN SR</td><td>16.0872</td><td>16.4995</td><td>16.9228</td><td>17.2905</td><td>17.7939</td><td>18.2838</td><td></td></tr><tr><td>ALLERGY TECHNICIAN TRAINEE</td><td>14.6665</td><td>15.0427</td><td>15.4285</td><td>15.7140</td><td>16.1069</td><td>16.4764</td><td></td></tr><tr><td>ANESTHESIA SUPPLY AIDE</td><td>14.0339</td><td>14.3936</td><td>14.7627</td><td>15.1013</td><td>15.4528</td><td>15.7667</td><td></td></tr><tr><td>ANESTHESIA SUPPLY AIDE SR</td><td>14.2749</td><td>14.6409</td><td>15.0164</td><td>15.2929</td><td>15.6941</td><td>16.0955</td><td></td></tr><tr><td>ANESTHESIA TECH ASST SR</td><td>16.5955</td><td>17.0212</td><td>17.4570</td><td>17.8900</td><td>18.3644</td><td>18.7966</td><td></td></tr><tr><td>ANESTHESIA TECH ASST</td><td>16.1908</td><td>16.6061</td><td>17.0315</td><td>17.4536</td><td>17.9165</td><td>18.3381</td><td></td></tr><tr><td>BONE DENSITOMETRY TECH</td><td>16.2781</td><td>16.6953</td><td>17.1234</td><td>17.6192</td><td>18.3328</td><td>18.8598</td><td></td></tr><tr><td>CARDIOVASCULAR TECH</td><td>20.3239</td><td>20.8449</td><td>21.3794</td><td>22.1720</td><td>23.3589</td><td>24.5470</td><td></td></tr><tr><td>CARDIOVASCULAR TECH SR</td><td>21.8292</td><td>22.3891</td><td>22.9632</td><td>23.7550</td><td>24.9425</td><td>26.1302</td><td></td></tr><tr><td>CARE PARTNER</td><td>14.1681</td><td>14.5312</td><td>14.9038</td><td>15.2460</td><td>15.6006</td><td>15.9174</td><td></td></tr><tr><td>CENTRAL SUPPLY TECHNICIAN</td><td>14.0339</td><td>14.3936</td><td>14.7627</td><td>15.1013</td><td>15.4528</td><td>15.7667</td><td></td></tr><tr><td>CLERICAL GRADE 1</td><td>13.0179</td><td>13.3518</td><td>13.6938</td><td>13.9072</td><td>14.1964</td><td>14.4846</td><td></td></tr><tr><td>CLERICAL GRADE 2</td><td>13.5653</td><td>13.9133</td><td>14.2697</td><td>14.5088</td><td>14.8477</td><td>15.1864</td><td></td></tr><tr><td>CLERICAL GRADE 3</td><td>13.8511</td><td>14.2063</td><td>14.5704</td><td>14.8712</td><td>15.1988</td><td>15.5689</td><td></td></tr><tr><td>CLERICAL GRADE 4</td><td>14.1371</td><td>14.4994</td><td>14.8712</td><td>15.1480</td><td>15.5491</td><td>15.9506</td><td></td></tr><tr><td>CLERICAL GRADE 5</td><td>14.7064</td><td>15.0832</td><td>15.4701</td><td>15.7961</td><td>16.2480</td><td>16.6993</td><td></td></tr><tr><td>CLERICAL GRADE 6</td><td>15.3729</td><td>15.7673</td><td>16.1718</td><td>16.5479</td><td>17.0622</td><td>17.5764</td><td></td></tr><tr><td>CLERICAL GRADE 7</td><td>16.0339</td><td>16.4447</td><td>16.8664</td><td>17.2805</td><td>17.8828</td><td>18.4849</td><td></td></tr><tr><td>COMMUNICATION OPERATOR</td><td>13.8249</td><td>14.1796</td><td>14.5427</td><td>14.7866</td><td>15.1318</td><td>15.3486</td><td>15.8730</td></tr><tr><td>COMMUNICATION OPERATOR SR</td><td>14.1161</td><td>14.4782</td><td>14.8492</td><td>15.1557</td><td>15.4897</td><td>15.7066</td><td>16.2558</td></tr><tr><td>COOK A</td><td>15.1498</td><td>15.5381</td><td>15.9369</td><td>16.3272</td><td>16.7183</td><td></td><td></td></tr><tr><td>COOK IN CHARGE (SR)</td><td>15.8007</td><td>16.2058</td><td>16.6215</td><td>17.0126</td><td>17.4030</td><td></td><td></td></tr><tr><td>CT SCHEDULING ASSISTANT</td><td>14.1371</td><td>14.4994</td><td>14.8712</td><td>15.1480</td><td>15.5491</td><td>15.9506</td><td></td></tr><tr><td>CUSTODIAN/WATCHMAN</td><td>14.6218</td><td>14.9967</td><td>15.3811</td><td>15.7570</td><td>16.1341</td><td></td><td></td></tr><tr><td>CYTO-HISTO TECHNOL SUPV</td><td>31.2881</td><td>32.1115</td><td>32.9346</td><td>34.3162</td><td>35.4479</td><td>36.1124</td><td></td></tr><tr><td>CYTOLOGY TECHNOL CHIEF</td><td>30.2629</td><td>31.0593</td><td>31.8550</td><td>32.5193</td><td>33.5058</td><td>34.5130</td><td></td></tr><tr><td>CYTOTECHNOLOGIST I</td><td>26.8566</td><td>27.5634</td><td>28.2706</td><td>28.6445</td><td>29.6519</td><td>30.6385</td><td></td></tr><tr><td>CYTOTECHNOLOGIST II</td><td>27.7452</td><td>28.4754</td><td>29.2053</td><td>29.7667</td><td>30.7530</td><td>31.8433</td><td></td></tr><tr><td>CYTOTECHNOLOGIST III</td><td>28.6927</td><td>29.4477</td><td>30.2027</td><td>30.8671</td><td>31.9992</td><td>33.1109</td><td></td></tr><tr><td>DARK ROOM TECHNICIAN</td><td>14.2418</td><td>14.6070</td><td>14.9816</td><td>15.2702</td><td>15.7970</td><td>16.1737</td><td></td></tr><tr><td>DEPARTMENT SECRETARY</td><td>15.2040</td><td>15.5937</td><td>15.9938</td><td>16.2913</td><td>16.7225</td><td>17.1545</td><td></td></tr></table>",
+            "block_bbox": [
+                107,
+                274,
+                1134,
+                1402
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    107.0,
+                    274.0
+                ],
+                [
+                    1134.0,
+                    274.0
+                ],
+                [
+                    1134.0,
+                    1402.0
+                ],
+                [
+                    107.0,
+                    1402.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "154",
+            "block_bbox": [
+                574,
+                1477,
+                615,
+                1501
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    574.0,
+                    1477.0
+                ],
+                [
+                    614.0,
+                    1477.0
+                ],
+                [
+                    614.0,
+                    1500.0
+                ],
+                [
+                    574.0,
+                    1500.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.8072050213813782,
+                "coordinate": [
+                    383,
+                    195,
+                    822,
+                    249
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        383.0,
+                        195.0
+                    ],
+                    [
+                        822.0,
+                        195.0
+                    ],
+                    [
+                        822.0,
+                        249.0
+                    ],
+                    [
+                        383.0,
+                        249.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9709708094596863,
+                "coordinate": [
+                    107,
+                    274,
+                    1134,
+                    1402
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        107.0,
+                        274.0
+                    ],
+                    [
+                        1134.0,
+                        274.0
+                    ],
+                    [
+                        1134.0,
+                        1402.0
+                    ],
+                    [
+                        107.0,
+                        1402.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7763678431510925,
+                "coordinate": [
+                    574,
+                    1477,
+                    615,
+                    1501
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        574.0,
+                        1477.0
+                    ],
+                    [
+                        614.0,
+                        1477.0
+                    ],
+                    [
+                        614.0,
+                        1500.0
+                    ],
+                    [
+                        574.0,
+                        1500.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

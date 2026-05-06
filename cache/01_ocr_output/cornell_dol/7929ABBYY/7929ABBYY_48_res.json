@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 48,
+    "page_count": 189,
+    "width": 1224,
+    "height": 1574,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "The Employer agrees to provide Kaiser Foundation Health Plan benefits currently described as “SS” coverage, the Psychiatric Plan, pre-paid maternity, durable medical equipment coverage and the Optical Plan for Regular employees, spouse/domestic partner and eligible dependents or to pay the premium required to provide the alternate medical plan coverage as described in the plan document. Effective August 1, 1996, the Employer agrees to provide the drug benefit currently described as Kaiser Foundation Health Plan Drug Program Benefit “N” ($5.00 co-pay) or the Drug Program Benefit ($5.00 co-pay) included under the alternate medical plan to all Regular employees/retirees, their spouses/domestic partners and their dependents. The $5.00 drug co-pay shall apply to eligible employees who retire on or after January 1, 1998.",
+            "block_bbox": [
+                309,
+                165,
+                1090,
+                533
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    309.0,
+                    165.0
+                ],
+                [
+                    1090.0,
+                    165.0
+                ],
+                [
+                    1090.0,
+                    533.0
+                ],
+                [
+                    309.0,
+                    533.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "232. Eligible Dependents",
+            "block_bbox": [
+                146,
+                553,
+                534,
+                586
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    146.0,
+                    553.0
+                ],
+                [
+                    534.0,
+                    553.0
+                ],
+                [
+                    534.0,
+                    586.0
+                ],
+                [
+                    146.0,
+                    586.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": ".Eligible dependents shall also include unmarried children of the employee and the employee's spouse/domestic partner to age twenty five (25) provided they have the same regular residence as the employee and are dependent upon the employee for support and maintenance.",
+            "block_bbox": [
+                296,
+                609,
+                1088,
+                751
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    296.0,
+                    609.0
+                ],
+                [
+                    1088.0,
+                    609.0
+                ],
+                [
+                    1088.0,
+                    751.0
+                ],
+                [
+                    296.0,
+                    751.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "233. Maintenance of Benefits",
+            "block_bbox": [
+                146,
+                773,
+                578,
+                806
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    146.0,
+                    773.0
+                ],
+                [
+                    578.0,
+                    773.0
+                ],
+                [
+                    578.0,
+                    806.0
+                ],
+                [
+                    146.0,
+                    806.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The Employer agrees to pay any additional premium payments required to maintain the benefits described in Section 1 during the term of this Agreement, except as otherwise stated.",
+            "block_bbox": [
+                305,
+                829,
+                1084,
+                916
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    305.0,
+                    829.0
+                ],
+                [
+                    1084.0,
+                    829.0
+                ],
+                [
+                    1084.0,
+                    916.0
+                ],
+                [
+                    305.0,
+                    916.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "234.  $ \\underline{\\text{Effective Date of Coverage}} $",
+            "block_bbox": [
+                143,
+                937,
+                606,
+                970
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    143.0,
+                    937.0
+                ],
+                [
+                    606.0,
+                    937.0
+                ],
+                [
+                    606.0,
+                    970.0
+                ],
+                [
+                    143.0,
+                    970.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Hospital-medical-surgical and drug coverage for employees and dependents shall become effective the first day of the month following the date the employee becomes a regular employee.",
+            "block_bbox": [
+                300,
+                993,
+                1083,
+                1080
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    300.0,
+                    993.0
+                ],
+                [
+                    1083.0,
+                    993.0
+                ],
+                [
+                    1083.0,
+                    1080.0
+                ],
+                [
+                    300.0,
+                    1080.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "235. Change in Plans",
+            "block_bbox": [
+                142,
+                1100,
+                493,
+                1135
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    142.0,
+                    1100.0
+                ],
+                [
+                    493.0,
+                    1100.0
+                ],
+                [
+                    493.0,
+                    1135.0
+                ],
+                [
+                    142.0,
+                    1135.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Employees may change from one hospital-medical-surgical plan to another on January 1 of any year, provided they submit a notice in writing to the Employer's Human Resources Service Center of their desire to change Plans at least thirty (30) days prior to any January 1.",
+            "block_bbox": [
+                299,
+                1158,
+                1082,
+                1273
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    299.0,
+                    1158.0
+                ],
+                [
+                    1082.0,
+                    1158.0
+                ],
+                [
+                    1082.0,
+                    1273.0
+                ],
+                [
+                    299.0,
+                    1273.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "236. Ineligible Dependents",
+            "block_bbox": [
+                141,
+                1294,
+                546,
+                1327
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    141.0,
+                    1294.0
+                ],
+                [
+                    546.0,
+                    1294.0
+                ],
+                [
+                    546.0,
+                    1327.0
+                ],
+                [
+                    141.0,
+                    1327.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "An employee's dependents who otherwise receive Kaiser Foundation Health Plan coverage by virtue of eligibility or membership through employment with another employer with benefits at least equal to",
+            "block_bbox": [
+                301,
+                1350,
+                1082,
+                1439
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    301.0,
+                    1350.0
+                ],
+                [
+                    1082.0,
+                    1350.0
+                ],
+                [
+                    1082.0,
+                    1439.0
+                ],
+                [
+                    301.0,
+                    1439.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "48",
+            "block_bbox": [
+                596,
+                1475,
+                625,
+                1498
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    596.0,
+                    1475.0
+                ],
+                [
+                    624.0,
+                    1475.0
+                ],
+                [
+                    624.0,
+                    1497.0
+                ],
+                [
+                    596.0,
+                    1497.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9589459300041199,
+                "coordinate": [
+                    309,
+                    165,
+                    1090,
+                    533
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        309.0,
+                        165.0
+                    ],
+                    [
+                        1090.0,
+                        165.0
+                    ],
+                    [
+                        1090.0,
+                        533.0
+                    ],
+                    [
+                        309.0,
+                        533.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7687205672264099,
+                "coordinate": [
+                    146,
+                    553,
+                    534,
+                    586
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        146.0,
+                        553.0
+                    ],
+                    [
+                        534.0,
+                        553.0
+                    ],
+                    [
+                        534.0,
+                        586.0
+                    ],
+                    [
+                        146.0,
+                        586.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.897803008556366,
+                "coordinate": [
+                    296,
+                    609,
+                    1088,
+                    751
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        296.0,
+                        609.0
+                    ],
+                    [
+                        1088.0,
+                        609.0
+                    ],
+                    [
+                        1088.0,
+                        751.0
+                    ],
+                    [
+                        296.0,
+                        751.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5983619093894958,
+                "coordinate": [
+                    146,
+                    773,
+                    578,
+                    806
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        146.0,
+                        773.0
+                    ],
+                    [
+                        578.0,
+                        773.0
+                    ],
+                    [
+                        578.0,
+                        806.0
+                    ],
+                    [
+                        146.0,
+                        806.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.879467785358429,
+                "coordinate": [
+                    305,
+                    829,
+                    1084,
+                    916
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        305.0,
+                        829.0
+                    ],
+                    [
+                        1084.0,
+                        829.0
+                    ],
+                    [
+                        1084.0,
+                        916.0
+                    ],
+                    [
+                        305.0,
+                        916.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6389535665512085,
+                "coordinate": [
+                    143,
+                    937,
+                    606,
+                    970
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        143.0,
+                        937.0
+                    ],
+                    [
+                        606.0,
+                        937.0
+                    ],
+                    [
+                        606.0,
+                        970.0
+                    ],
+                    [
+                        143.0,
+                        970.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8862122893333435,
+                "coordinate": [
+                    300,
+                    993,
+                    1083,
+                    1080
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        300.0,
+                        993.0
+                    ],
+                    [
+                        1083.0,
+                        993.0
+                    ],
+                    [
+                        1083.0,
+                        1080.0
+                    ],
+                    [
+                        300.0,
+                        1080.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6684823036193848,
+                "coordinate": [
+                    142,
+                    1100,
+                    493,
+                    1135
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        142.0,
+                        1100.0
+                    ],
+                    [
+                        493.0,
+                        1100.0
+                    ],
+                    [
+                        493.0,
+                        1135.0
+                    ],
+                    [
+                        142.0,
+                        1135.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9080957174301147,
+                "coordinate": [
+                    299,
+                    1158,
+                    1082,
+                    1273
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        299.0,
+                        1158.0
+                    ],
+                    [
+                        1082.0,
+                        1158.0
+                    ],
+                    [
+                        1082.0,
+                        1273.0
+                    ],
+                    [
+                        299.0,
+                        1273.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6742121577262878,
+                "coordinate": [
+                    141,
+                    1294,
+                    546,
+                    1327
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        141.0,
+                        1294.0
+                    ],
+                    [
+                        546.0,
+                        1294.0
+                    ],
+                    [
+                        546.0,
+                        1327.0
+                    ],
+                    [
+                        141.0,
+                        1327.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9047030806541443,
+                "coordinate": [
+                    301,
+                    1350,
+                    1082,
+                    1439
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        301.0,
+                        1350.0
+                    ],
+                    [
+                        1082.0,
+                        1350.0
+                    ],
+                    [
+                        1082.0,
+                        1439.0
+                    ],
+                    [
+                        301.0,
+                        1439.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7498344779014587,
+                "coordinate": [
+                    596,
+                    1475,
+                    625,
+                    1498
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        596.0,
+                        1475.0
+                    ],
+                    [
+                        624.0,
+                        1475.0
+                    ],
+                    [
+                        624.0,
+                        1497.0
+                    ],
+                    [
+                        596.0,
+                        1497.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

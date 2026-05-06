@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_dol/7423ABBYY.pdf",
+    "page_index": 39,
+    "page_count": 185,
+    "width": 1193,
+    "height": 1595,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "20 years +",
+            "block_bbox": [
+                147,
+                69,
+                268,
+                99
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    147.0,
+                    69.0
+                ],
+                [
+                    268.0,
+                    69.0
+                ],
+                [
+                    268.0,
+                    99.0
+                ],
+                [
+                    147.0,
+                    99.0
+                ]
+            ]
+        },
+        {
+            "block_label": "header",
+            "block_content": "26 Full\n26 Half",
+            "block_bbox": [
+                432,
+                68,
+                520,
+                124
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    432.0,
+                    68.0
+                ],
+                [
+                    520.0,
+                    68.0
+                ],
+                [
+                    520.0,
+                    124.0
+                ],
+                [
+                    432.0,
+                    124.0
+                ]
+            ]
+        },
+        {
+            "block_label": "header",
+            "block_content": "1 $ ^{st} $ Consecutive Sch. Work Day Absent",
+            "block_bbox": [
+                697,
+                67,
+                923,
+                126
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    697.0,
+                    67.0
+                ],
+                [
+                    923.0,
+                    67.0
+                ],
+                [
+                    923.0,
+                    126.0
+                ],
+                [
+                    697.0,
+                    126.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "For regular employees with over one (1) year of accredited service, all days of the waiting period will be waived if the employee has not been absent for personal illness and/or injury in the previous six (6) months or; the employee is hospitalized on the first scheduled day of absence or; a surgical procedure in an outpatient surgical facility or hospital when the employee provides documentation of the surgical procedure performed.",
+            "block_bbox": [
+                143,
+                151,
+                994,
+                325
+            ],
+            "block_id": 3,
+            "block_order": 1,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    143.0,
+                    151.0
+                ],
+                [
+                    994.0,
+                    151.0
+                ],
+                [
+                    994.0,
+                    325.0
+                ],
+                [
+                    143.0,
+                    325.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 12.4. A second waiting period will not be required if a regular employee is again forced because of illness or injury to be absent from work within fourteen (14) calendar days following the end of the prior absence for which benefits were paid.",
+            "block_bbox": [
+                142,
+                347,
+                1024,
+                463
+            ],
+            "block_id": 4,
+            "block_order": 2,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    142.0,
+                    347.0
+                ],
+                [
+                    1024.0,
+                    347.0
+                ],
+                [
+                    1024.0,
+                    463.0
+                ],
+                [
+                    142.0,
+                    463.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 12.5. An employee may elect with supervisory approval to offset scheduled lost time through sickness disability by using earned day-at-a-time vacation and/or personal holiday(s).",
+            "block_bbox": [
+                141,
+                487,
+                981,
+                576
+            ],
+            "block_id": 5,
+            "block_order": 3,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    141.0,
+                    487.0
+                ],
+                [
+                    981.0,
+                    487.0
+                ],
+                [
+                    981.0,
+                    576.0
+                ],
+                [
+                    141.0,
+                    576.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(Note: Employees with absence beyond three (3) consecutive scheduled work days must notify the GTE Short Term Disability Administrator immediately. Failure to do so may result in denial of Short Term Disability Benefits.)",
+            "block_bbox": [
+                142,
+                600,
+                997,
+                689
+            ],
+            "block_id": 6,
+            "block_order": 4,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    142.0,
+                    600.0
+                ],
+                [
+                    997.0,
+                    600.0
+                ],
+                [
+                    997.0,
+                    689.0
+                ],
+                [
+                    142.0,
+                    689.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 12.6. Absences must be authorized by the appropriate management representative and prior to authorization of absences exceeding three (3) consecutive scheduled days, the Company may require the employee to furnish a medical physician's report to support the illness or injury. Illness or physical injuries in excess of three (3) consecutive scheduled days not substantiated by a medical physician's report will be ineligible for Short Term Disability.",
+            "block_bbox": [
+                140,
+                711,
+                1020,
+                912
+            ],
+            "block_id": 7,
+            "block_order": 5,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    140.0,
+                    711.0
+                ],
+                [
+                    1020.0,
+                    711.0
+                ],
+                [
+                    1020.0,
+                    912.0
+                ],
+                [
+                    140.0,
+                    912.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 12.7. Management will reserve the right to investigate any case of disability due to illness or injury, for which benefits are requested. The Company may require a second opinion from a physician other than the one in regular attendance at Company expense.",
+            "block_bbox": [
+                140,
+                934,
+                1010,
+                1052
+            ],
+            "block_id": 8,
+            "block_order": 6,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    140.0,
+                    934.0
+                ],
+                [
+                    1010.0,
+                    934.0
+                ],
+                [
+                    1010.0,
+                    1052.0
+                ],
+                [
+                    140.0,
+                    1052.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 12.8. Successive periods of Short Term Disability shall be subject to the waiting days outlined in Section 12.3 and shall be counted together as one period in computing the period during which an employee shall be entitled to benefits. Any absent sick reported time would interrupt the thirteen (13) week restoration period. Any sickness or injury occurring after an employee has been continuously engaged in the performance of duty for thirteen (13) weeks shall be considered as new sickness or injury and not part of any disability which preceded such period of thirteen (13) weeks.",
+            "block_bbox": [
+                140,
+                1073,
+                1010,
+                1331
+            ],
+            "block_id": 9,
+            "block_order": 7,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    140.0,
+                    1073.0
+                ],
+                [
+                    1010.0,
+                    1073.0
+                ],
+                [
+                    1010.0,
+                    1331.0
+                ],
+                [
+                    140.0,
+                    1331.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 12.9. Employees shall not be entitled to receive Short Term Disability Benefits for time for which any other payments are paid them by",
+            "block_bbox": [
+                143,
+                1351,
+                1009,
+                1414
+            ],
+            "block_id": 10,
+            "block_order": 8,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    143.0,
+                    1351.0
+                ],
+                [
+                    1009.0,
+                    1351.0
+                ],
+                [
+                    1009.0,
+                    1414.0
+                ],
+                [
+                    143.0,
+                    1414.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "31",
+            "block_bbox": [
+                619,
+                1483,
+                651,
+                1509
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    619.0,
+                    1483.0
+                ],
+                [
+                    650.0,
+                    1483.0
+                ],
+                [
+                    650.0,
+                    1508.0
+                ],
+                [
+                    619.0,
+                    1508.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7621122002601624,
+                "coordinate": [
+                    147,
+                    69,
+                    268,
+                    99
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        147.0,
+                        69.0
+                    ],
+                    [
+                        268.0,
+                        69.0
+                    ],
+                    [
+                        268.0,
+                        99.0
+                    ],
+                    [
+                        147.0,
+                        99.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8583167195320129,
+                "coordinate": [
+                    432,
+                    68,
+                    520,
+                    124
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        432.0,
+                        68.0
+                    ],
+                    [
+                        520.0,
+                        68.0
+                    ],
+                    [
+                        520.0,
+                        124.0
+                    ],
+                    [
+                        432.0,
+                        124.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8564038276672363,
+                "coordinate": [
+                    697,
+                    67,
+                    923,
+                    126
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        697.0,
+                        67.0
+                    ],
+                    [
+                        923.0,
+                        67.0
+                    ],
+                    [
+                        923.0,
+                        126.0
+                    ],
+                    [
+                        697.0,
+                        126.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9488908648490906,
+                "coordinate": [
+                    143,
+                    151,
+                    994,
+                    325
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        143.0,
+                        151.0
+                    ],
+                    [
+                        994.0,
+                        151.0
+                    ],
+                    [
+                        994.0,
+                        325.0
+                    ],
+                    [
+                        143.0,
+                        325.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9331827163696289,
+                "coordinate": [
+                    142,
+                    347,
+                    1024,
+                    463
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        142.0,
+                        347.0
+                    ],
+                    [
+                        1024.0,
+                        347.0
+                    ],
+                    [
+                        1024.0,
+                        463.0
+                    ],
+                    [
+                        142.0,
+                        463.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9269280433654785,
+                "coordinate": [
+                    141,
+                    487,
+                    981,
+                    576
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        141.0,
+                        487.0
+                    ],
+                    [
+                        981.0,
+                        487.0
+                    ],
+                    [
+                        981.0,
+                        576.0
+                    ],
+                    [
+                        141.0,
+                        576.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9293763637542725,
+                "coordinate": [
+                    142,
+                    600,
+                    997,
+                    689
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        142.0,
+                        600.0
+                    ],
+                    [
+                        997.0,
+                        600.0
+                    ],
+                    [
+                        997.0,
+                        689.0
+                    ],
+                    [
+                        142.0,
+                        689.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9494990706443787,
+                "coordinate": [
+                    140,
+                    711,
+                    1020,
+                    912
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        140.0,
+                        711.0
+                    ],
+                    [
+                        1020.0,
+                        711.0
+                    ],
+                    [
+                        1020.0,
+                        912.0
+                    ],
+                    [
+                        140.0,
+                        912.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9444722533226013,
+                "coordinate": [
+                    140,
+                    934,
+                    1010,
+                    1052
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        140.0,
+                        934.0
+                    ],
+                    [
+                        1010.0,
+                        934.0
+                    ],
+                    [
+                        1010.0,
+                        1052.0
+                    ],
+                    [
+                        140.0,
+                        1052.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9631014466285706,
+                "coordinate": [
+                    140,
+                    1073,
+                    1010,
+                    1331
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        140.0,
+                        1073.0
+                    ],
+                    [
+                        1010.0,
+                        1073.0
+                    ],
+                    [
+                        1010.0,
+                        1331.0
+                    ],
+                    [
+                        140.0,
+                        1331.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8950639367103577,
+                "coordinate": [
+                    143,
+                    1351,
+                    1009,
+                    1414
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        143.0,
+                        1351.0
+                    ],
+                    [
+                        1009.0,
+                        1351.0
+                    ],
+                    [
+                        1009.0,
+                        1414.0
+                    ],
+                    [
+                        143.0,
+                        1414.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7794054746627808,
+                "coordinate": [
+                    619,
+                    1483,
+                    651,
+                    1509
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        619.0,
+                        1483.0
+                    ],
+                    [
+                        650.0,
+                        1483.0
+                    ],
+                    [
+                        650.0,
+                        1508.0
+                    ],
+                    [
+                        619.0,
+                        1508.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

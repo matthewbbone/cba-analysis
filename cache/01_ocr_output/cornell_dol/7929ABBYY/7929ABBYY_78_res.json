@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 78,
+    "page_count": 189,
+    "width": 1224,
+    "height": 1580,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "D. CLERICAL CLASSIFICATIONS",
+            "block_bbox": [
+                150,
+                165,
+                568,
+                193
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    150.0,
+                    165.0
+                ],
+                [
+                    568.0,
+                    165.0
+                ],
+                [
+                    568.0,
+                    193.0
+                ],
+                [
+                    150.0,
+                    193.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Grades 1-7\nMedical Secretary Trainee\nMedical Secretary\nSr. Medical Secretary\nMedical Records Coder I\nMedical Records Coder II\nDepartment Secretary\nSr. Communication Operator\nCommunication Operator",
+            "block_bbox": [
+                220,
+                221,
+                539,
+                470
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    220.0,
+                    221.0
+                ],
+                [
+                    539.0,
+                    221.0
+                ],
+                [
+                    539.0,
+                    470.0
+                ],
+                [
+                    220.0,
+                    470.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "E. TECHNICAL CLASSIFICATIONS",
+            "block_bbox": [
+                147,
+                495,
+                585,
+                524
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    147.0,
+                    495.0
+                ],
+                [
+                    585.0,
+                    495.0
+                ],
+                [
+                    585.0,
+                    524.0
+                ],
+                [
+                    147.0,
+                    524.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "1. Licensed Technical Classifications",
+            "block_bbox": [
+                221,
+                551,
+                667,
+                578
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    221.0,
+                    551.0
+                ],
+                [
+                    667.0,
+                    551.0
+                ],
+                [
+                    667.0,
+                    578.0
+                ],
+                [
+                    221.0,
+                    578.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Cytotechnologist I\nCytotechnologist II\nCytotechnologist III\nChief Cytotechnologist\nSupervising Cyto-Histology Technologist\nNuclear Medicine Technologist I\nNuclear Medicine Technologist II\nSupervising Nuclear Medicine Technologist\nRespiratory Care Permittee\nRespiratory Care Practitioner I\nRespiratory Care Practitioner II\nRegistered Respiratory Care Practitioner I\nRegistered Respiratory Care Practitioner II\nSupervising Respiratory Care Practitioner\nPhysical Therapy Assistant I\nPhysical Therapy Assistant II\nRadiologic Technologist I\nRadiologic Technologist II\nRadiologic Technologist III\nSupervising Radiologic Technologist\nMRI Technologist Trainee\nMRI Technologist I\nMRI Technologist II\nSupervising MRI Technologist",
+            "block_bbox": [
+                251,
+                604,
+                758,
+                1265
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    251.0,
+                    604.0
+                ],
+                [
+                    758.0,
+                    604.0
+                ],
+                [
+                    758.0,
+                    1265.0
+                ],
+                [
+                    251.0,
+                    1265.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "78",
+            "block_bbox": [
+                597,
+                1473,
+                626,
+                1495
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    597.0,
+                    1473.0
+                ],
+                [
+                    625.0,
+                    1473.0
+                ],
+                [
+                    625.0,
+                    1494.0
+                ],
+                [
+                    597.0,
+                    1494.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8597885966300964,
+                "coordinate": [
+                    150,
+                    165,
+                    568,
+                    193
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        150.0,
+                        165.0
+                    ],
+                    [
+                        568.0,
+                        165.0
+                    ],
+                    [
+                        568.0,
+                        193.0
+                    ],
+                    [
+                        150.0,
+                        193.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9103015661239624,
+                "coordinate": [
+                    220,
+                    221,
+                    539,
+                    470
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        220.0,
+                        221.0
+                    ],
+                    [
+                        539.0,
+                        221.0
+                    ],
+                    [
+                        539.0,
+                        470.0
+                    ],
+                    [
+                        220.0,
+                        470.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8675923347473145,
+                "coordinate": [
+                    147,
+                    495,
+                    585,
+                    524
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        147.0,
+                        495.0
+                    ],
+                    [
+                        585.0,
+                        495.0
+                    ],
+                    [
+                        585.0,
+                        524.0
+                    ],
+                    [
+                        147.0,
+                        524.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8115851283073425,
+                "coordinate": [
+                    221,
+                    551,
+                    667,
+                    578
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        221.0,
+                        551.0
+                    ],
+                    [
+                        667.0,
+                        551.0
+                    ],
+                    [
+                        667.0,
+                        578.0
+                    ],
+                    [
+                        221.0,
+                        578.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9208430647850037,
+                "coordinate": [
+                    251,
+                    604,
+                    758,
+                    1265
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        251.0,
+                        604.0
+                    ],
+                    [
+                        758.0,
+                        604.0
+                    ],
+                    [
+                        758.0,
+                        1265.0
+                    ],
+                    [
+                        251.0,
+                        1265.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7448318004608154,
+                "coordinate": [
+                    597,
+                    1473,
+                    626,
+                    1495
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        597.0,
+                        1473.0
+                    ],
+                    [
+                        625.0,
+                        1473.0
+                    ],
+                    [
+                        625.0,
+                        1494.0
+                    ],
+                    [
+                        597.0,
+                        1494.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

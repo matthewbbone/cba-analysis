@@ -1,0 +1,583 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 211,
+    "page_count": 287,
+    "width": 675,
+    "height": 1016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "CLASSIFICATIONS",
+            "block_bbox": [
+                517,
+                49,
+                627,
+                66
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    516.9999389648438,
+                    49.0
+                ],
+                [
+                    625.9999389648438,
+                    49.0
+                ],
+                [
+                    625.9999389648438,
+                    65.0
+                ],
+                [
+                    516.9999389648438,
+                    65.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3. That the departmental average for attempts and actual accurate reads established annually by MichCon are met or exceeded. In establishing said average for attempts and actual accurate reads MichCon shall bear the terms and provisions on Attachment \"A\" in mind.",
+            "block_bbox": [
+                46,
+                78,
+                628,
+                168
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    46.0,
+                    78.0
+                ],
+                [
+                    628.0,
+                    78.0
+                ],
+                [
+                    628.0,
+                    168.0
+                ],
+                [
+                    46.0,
+                    168.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "4. MichCon has not implemented automated meter reading (AMR) or some other technology for collecting consumption data from customers.",
+            "block_bbox": [
+                45,
+                188,
+                627,
+                234
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    45.0,
+                    188.0
+                ],
+                [
+                    627.0,
+                    188.0
+                ],
+                [
+                    627.0,
+                    234.0
+                ],
+                [
+                    45.0,
+                    234.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "5. The number of MichCon residential customers in the geographical areas whose meters said incumbents read does not fall below a level which, in management's opinion, is required to retain all of the named incumbent Service Consumption Technicians.",
+            "block_bbox": [
+                46,
+                255,
+                628,
+                344
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    46.0,
+                    255.0
+                ],
+                [
+                    628.0,
+                    255.0
+                ],
+                [
+                    628.0,
+                    344.0
+                ],
+                [
+                    46.0,
+                    344.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "6. This guarantee in no way limits MichCon's right to terminate any named incumbent Service Consumption Technicians for disciplinary reasons; for poor performance or for any other reason provided for under the Local #80 Collective Bargaining Agreement or its successors.",
+            "block_bbox": [
+                45,
+                365,
+                628,
+                456
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    45.0,
+                    365.0
+                ],
+                [
+                    628.0,
+                    365.0
+                ],
+                [
+                    628.0,
+                    456.0
+                ],
+                [
+                    45.0,
+                    456.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Nothing relating to paragraph 3(G)(9) of this Letter of Agreement is subject to the grievance procedure.",
+            "block_bbox": [
+                45,
+                476,
+                628,
+                522
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    45.0,
+                    476.0
+                ],
+                [
+                    628.0,
+                    476.0
+                ],
+                [
+                    628.0,
+                    522.0
+                ],
+                [
+                    45.0,
+                    522.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Meter Reading Productivity Specifications",
+            "block_bbox": [
+                149,
+                540,
+                523,
+                565
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    149.0,
+                    540.0
+                ],
+                [
+                    523.0,
+                    540.0
+                ],
+                [
+                    523.0,
+                    565.0
+                ],
+                [
+                    149.0,
+                    565.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Number of</td><td>Year 2</td><td>Year 3</td><td>Year 4</td><td>Year 5</td><td>Year 6</td></tr><tr><td>Meter Reader Routes</td><td>93</td><td>93</td><td>93</td><td>73</td><td>73</td></tr><tr><td>Attempts Per Year</td><td>20,760,000</td><td>20,760,000</td><td>20,760,000</td><td>20,760,000</td><td>20,760,000</td></tr><tr><td>Attempts Per Day Per Person</td><td>930</td><td>930</td><td>930</td><td>1,185</td><td>1,185</td></tr><tr><td>Actual Reads Per Year (95% of Attempts)</td><td>19,722,000</td><td>19,722,000</td><td>19,722,000</td><td>19,722,000</td><td>19,722,000</td></tr><tr><td>Actual Reads Per Day Per Person (95%)</td><td>$884</td><td>$884</td><td>$884</td><td>$1,126</td><td>$1,126</td></tr><tr><td>Cost Per Road Per Year (at 95%)</td><td>$0.277</td><td>$0.276</td><td>$0.282</td><td>$0.255</td><td>$0.259</td></tr></table>",
+            "block_bbox": [
+                44,
+                581,
+                626,
+                858
+            ],
+            "block_id": 7,
+            "block_order": null,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    44.0,
+                    581.0
+                ],
+                [
+                    626.0,
+                    581.0
+                ],
+                [
+                    626.0,
+                    858.0
+                ],
+                [
+                    44.0,
+                    858.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "201",
+            "block_bbox": [
+                319,
+                946,
+                348,
+                963
+            ],
+            "block_id": 8,
+            "block_order": null,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    319.0,
+                    946.0
+                ],
+                [
+                    347.0,
+                    946.0
+                ],
+                [
+                    347.0,
+                    962.0
+                ],
+                [
+                    319.0,
+                    962.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8532050251960754,
+                "coordinate": [
+                    517,
+                    49,
+                    627,
+                    66
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        516.9999389648438,
+                        49.0
+                    ],
+                    [
+                        625.9999389648438,
+                        49.0
+                    ],
+                    [
+                        625.9999389648438,
+                        65.0
+                    ],
+                    [
+                        516.9999389648438,
+                        65.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9507762789726257,
+                "coordinate": [
+                    46,
+                    78,
+                    628,
+                    168
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        46.0,
+                        78.0
+                    ],
+                    [
+                        628.0,
+                        78.0
+                    ],
+                    [
+                        628.0,
+                        168.0
+                    ],
+                    [
+                        46.0,
+                        168.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9210872650146484,
+                "coordinate": [
+                    45,
+                    188,
+                    627,
+                    234
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        45.0,
+                        188.0
+                    ],
+                    [
+                        627.0,
+                        188.0
+                    ],
+                    [
+                        627.0,
+                        234.0
+                    ],
+                    [
+                        45.0,
+                        234.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9490097165107727,
+                "coordinate": [
+                    46,
+                    255,
+                    628,
+                    344
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        46.0,
+                        255.0
+                    ],
+                    [
+                        628.0,
+                        255.0
+                    ],
+                    [
+                        628.0,
+                        344.0
+                    ],
+                    [
+                        46.0,
+                        344.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9523677825927734,
+                "coordinate": [
+                    45,
+                    365,
+                    628,
+                    456
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        45.0,
+                        365.0
+                    ],
+                    [
+                        628.0,
+                        365.0
+                    ],
+                    [
+                        628.0,
+                        456.0
+                    ],
+                    [
+                        45.0,
+                        456.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9160178303718567,
+                "coordinate": [
+                    45,
+                    476,
+                    628,
+                    522
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        45.0,
+                        476.0
+                    ],
+                    [
+                        628.0,
+                        476.0
+                    ],
+                    [
+                        628.0,
+                        522.0
+                    ],
+                    [
+                        45.0,
+                        522.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.552457332611084,
+                "coordinate": [
+                    149,
+                    540,
+                    523,
+                    565
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        149.0,
+                        540.0
+                    ],
+                    [
+                        523.0,
+                        540.0
+                    ],
+                    [
+                        523.0,
+                        565.0
+                    ],
+                    [
+                        149.0,
+                        565.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9571054577827454,
+                "coordinate": [
+                    44,
+                    581,
+                    626,
+                    858
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        44.0,
+                        581.0
+                    ],
+                    [
+                        626.0,
+                        581.0
+                    ],
+                    [
+                        626.0,
+                        858.0
+                    ],
+                    [
+                        44.0,
+                        858.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7871127724647522,
+                "coordinate": [
+                    319,
+                    946,
+                    348,
+                    963
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        319.0,
+                        946.0
+                    ],
+                    [
+                        347.0,
+                        946.0
+                    ],
+                    [
+                        347.0,
+                        962.0
+                    ],
+                    [
+                        319.0,
+                        962.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

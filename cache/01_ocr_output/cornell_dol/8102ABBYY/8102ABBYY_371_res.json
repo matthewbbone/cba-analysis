@@ -1,0 +1,644 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 371,
+    "page_count": 439,
+    "width": 1234,
+    "height": 1592,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                749,
+                117,
+                908,
+                136
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    749.0,
+                    117.0
+                ],
+                [
+                    907.0,
+                    117.0
+                ],
+                [
+                    907.0,
+                    135.0
+                ],
+                [
+                    749.0,
+                    135.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "9 OVERSIGHT AND REVIEW BOARD",
+            "block_bbox": [
+                353,
+                151,
+                649,
+                171
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    353.0,
+                    151.0
+                ],
+                [
+                    648.0,
+                    151.0
+                ],
+                [
+                    648.0,
+                    170.0
+                ],
+                [
+                    353.0,
+                    170.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) The Company and the Unions will establish a Joint LTP Oversight and Review Board. This Board will be comprised of two (2) CWA representatives, two (2) IBEW representatives and two (2) representatives from the Company. The responsibilities of the Board will include:",
+            "block_bbox": [
+                386,
+                184,
+                910,
+                274
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    386.0,
+                    184.0
+                ],
+                [
+                    910.0,
+                    184.0
+                ],
+                [
+                    910.0,
+                    274.0
+                ],
+                [
+                    386.0,
+                    274.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(1) monitoring the ongoing operation of the LTP.",
+            "block_bbox": [
+                433,
+                286,
+                795,
+                307
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    433.0,
+                    286.0
+                ],
+                [
+                    794.0,
+                    286.0
+                ],
+                [
+                    794.0,
+                    306.0
+                ],
+                [
+                    433.0,
+                    306.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(2) analyzing overall LTP results, and",
+            "block_bbox": [
+                434,
+                319,
+                719,
+                339
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    434.0,
+                    319.0
+                ],
+                [
+                    718.0,
+                    319.0
+                ],
+                [
+                    718.0,
+                    338.0
+                ],
+                [
+                    434.0,
+                    338.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(3) addressing concerns raised as to the staffing of positions through the LTP.",
+            "block_bbox": [
+                431,
+                352,
+                907,
+                389
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    431.0,
+                    352.0
+                ],
+                [
+                    907.0,
+                    352.0
+                ],
+                [
+                    907.0,
+                    389.0
+                ],
+                [
+                    431.0,
+                    389.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) The Board shall meet on a regular basis, but not less than once each quarter.",
+            "block_bbox": [
+                386,
+                401,
+                908,
+                439
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    386.0,
+                    401.0
+                ],
+                [
+                    908.0,
+                    401.0
+                ],
+                [
+                    908.0,
+                    439.0
+                ],
+                [
+                    386.0,
+                    439.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(c) The Communications Workers of America and the International Brotherhood of Electrical Workers shall each appoint one (1) person to be the LTP Board Coordinator whose duties shall include assisting the Union members of the LTP Review Board in preparing cases that were not resolved in the appropriate grievance procedure. Additional appropriate duties will be identified.",
+            "block_bbox": [
+                386,
+                451,
+                908,
+                560
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    386.0,
+                    451.0
+                ],
+                [
+                    908.0,
+                    451.0
+                ],
+                [
+                    908.0,
+                    560.0
+                ],
+                [
+                    386.0,
+                    560.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(d) The Company's decision made pursuant to the LTP shall be subject to the grievance procedure contained in any applicable local collective bargaining agreement. Issues not resolved in such grievance procedure may be presented to the Joint LTP Oversight and Review Board for final and binding resolution. Issues concerning the Company's decision involving the placement of LTP Rehire candidates may be presented directly to the Joint LTP Oversight and Review Board which shall have the sole responsibility for final and binding resolution. Neither the LTP, nor its administration shall be subject to arbitration.",
+            "block_bbox": [
+                385,
+                571,
+                909,
+                748
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    385.0,
+                    571.0
+                ],
+                [
+                    909.0,
+                    571.0
+                ],
+                [
+                    909.0,
+                    748.0
+                ],
+                [
+                    385.0,
+                    748.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "363",
+            "block_bbox": [
+                875,
+                915,
+                906,
+                933
+            ],
+            "block_id": 9,
+            "block_order": null,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    875.0,
+                    915.0
+                ],
+                [
+                    905.0,
+                    915.0
+                ],
+                [
+                    905.0,
+                    932.0
+                ],
+                [
+                    875.0,
+                    932.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8311696648597717,
+                "coordinate": [
+                    749,
+                    117,
+                    908,
+                    136
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        749.0,
+                        117.0
+                    ],
+                    [
+                        907.0,
+                        117.0
+                    ],
+                    [
+                        907.0,
+                        135.0
+                    ],
+                    [
+                        749.0,
+                        135.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7918033599853516,
+                "coordinate": [
+                    353,
+                    151,
+                    649,
+                    171
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        353.0,
+                        151.0
+                    ],
+                    [
+                        648.0,
+                        151.0
+                    ],
+                    [
+                        648.0,
+                        170.0
+                    ],
+                    [
+                        353.0,
+                        170.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9312213659286499,
+                "coordinate": [
+                    386,
+                    184,
+                    910,
+                    274
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        386.0,
+                        184.0
+                    ],
+                    [
+                        910.0,
+                        184.0
+                    ],
+                    [
+                        910.0,
+                        274.0
+                    ],
+                    [
+                        386.0,
+                        274.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8202808499336243,
+                "coordinate": [
+                    433,
+                    286,
+                    795,
+                    307
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        433.0,
+                        286.0
+                    ],
+                    [
+                        794.0,
+                        286.0
+                    ],
+                    [
+                        794.0,
+                        306.0
+                    ],
+                    [
+                        433.0,
+                        306.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8064979910850525,
+                "coordinate": [
+                    434,
+                    319,
+                    719,
+                    339
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        434.0,
+                        319.0
+                    ],
+                    [
+                        718.0,
+                        319.0
+                    ],
+                    [
+                        718.0,
+                        338.0
+                    ],
+                    [
+                        434.0,
+                        338.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8688093423843384,
+                "coordinate": [
+                    431,
+                    352,
+                    907,
+                    389
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        431.0,
+                        352.0
+                    ],
+                    [
+                        907.0,
+                        352.0
+                    ],
+                    [
+                        907.0,
+                        389.0
+                    ],
+                    [
+                        431.0,
+                        389.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.873489260673523,
+                "coordinate": [
+                    386,
+                    401,
+                    908,
+                    439
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        386.0,
+                        401.0
+                    ],
+                    [
+                        908.0,
+                        401.0
+                    ],
+                    [
+                        908.0,
+                        439.0
+                    ],
+                    [
+                        386.0,
+                        439.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9409708976745605,
+                "coordinate": [
+                    386,
+                    451,
+                    908,
+                    560
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        386.0,
+                        451.0
+                    ],
+                    [
+                        908.0,
+                        451.0
+                    ],
+                    [
+                        908.0,
+                        560.0
+                    ],
+                    [
+                        386.0,
+                        560.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9544971585273743,
+                "coordinate": [
+                    385,
+                    571,
+                    909,
+                    748
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        385.0,
+                        571.0
+                    ],
+                    [
+                        909.0,
+                        571.0
+                    ],
+                    [
+                        909.0,
+                        748.0
+                    ],
+                    [
+                        385.0,
+                        748.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6775215268135071,
+                "coordinate": [
+                    875,
+                    915,
+                    906,
+                    933
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        875.0,
+                        915.0
+                    ],
+                    [
+                        905.0,
+                        915.0
+                    ],
+                    [
+                        905.0,
+                        932.0
+                    ],
+                    [
+                        875.0,
+                        932.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,827 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 80,
+    "page_count": 189,
+    "width": 1224,
+    "height": 1574,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "doc_title",
+            "block_content": "POSITION SPECIFICATIONS\nFOR\nALL GEOGRAPHIC AREAS INCLUDING FRESNO",
+            "block_bbox": [
+                338,
+                190,
+                897,
+                277
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    338.0,
+                    190.0
+                ],
+                [
+                    897.0,
+                    190.0
+                ],
+                [
+                    897.0,
+                    277.0
+                ],
+                [
+                    338.0,
+                    277.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "MAINTENANCE AND SERVICE CLASSIFICATIONS",
+            "block_bbox": [
+                283,
+                329,
+                952,
+                363
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    283.0,
+                    329.0
+                ],
+                [
+                    952.0,
+                    329.0
+                ],
+                [
+                    952.0,
+                    363.0
+                ],
+                [
+                    283.0,
+                    363.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "HEAD HOUSEKEEPING AIDE",
+            "block_bbox": [
+                149,
+                388,
+                486,
+                418
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    149.0,
+                    388.0
+                ],
+                [
+                    486.0,
+                    388.0
+                ],
+                [
+                    486.0,
+                    418.0
+                ],
+                [
+                    149.0,
+                    418.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "This classification shall apply to those employees who are responsible for directing, checking and coordinating the work of Housekeeping Aides.",
+            "block_bbox": [
+                148,
+                436,
+                1084,
+                496
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    148.0,
+                    436.0
+                ],
+                [
+                    1084.0,
+                    436.0
+                ],
+                [
+                    1084.0,
+                    496.0
+                ],
+                [
+                    148.0,
+                    496.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "LINEN ROOM SUPERVISOR",
+            "block_bbox": [
+                148,
+                518,
+                474,
+                549
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    148.0,
+                    518.0
+                ],
+                [
+                    474.0,
+                    518.0
+                ],
+                [
+                    474.0,
+                    549.0
+                ],
+                [
+                    148.0,
+                    549.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "This classification shall apply to those employees who are responsible for directing, checking and coordinating the work of other linen room employees and who were classified as Linen Room Supervisor as of 10/27/74.",
+            "block_bbox": [
+                146,
+                567,
+                1086,
+                653
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    146.0,
+                    567.0
+                ],
+                [
+                    1086.0,
+                    567.0
+                ],
+                [
+                    1086.0,
+                    653.0
+                ],
+                [
+                    146.0,
+                    653.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "NUTRITION AIDE AND NUTRITION CLERK",
+            "block_bbox": [
+                147,
+                676,
+                634,
+                706
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    147.0,
+                    676.0
+                ],
+                [
+                    634.0,
+                    676.0
+                ],
+                [
+                    634.0,
+                    706.0
+                ],
+                [
+                    147.0,
+                    706.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Specifications for Nutrition Aide and Nutrition Clerk are outlined in the Nutrition Classifications Agreement dated 10/26/83. Classifications replace Dietary Aide I, II, and III, effective 01/04/84. Nutrition Clerk specifications can be located in the Clerical Manual.",
+            "block_bbox": [
+                145,
+                724,
+                1086,
+                837
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    145.0,
+                    724.0
+                ],
+                [
+                    1086.0,
+                    724.0
+                ],
+                [
+                    1086.0,
+                    837.0
+                ],
+                [
+                    145.0,
+                    837.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "SENIOR NUTRITION CLERK",
+            "block_bbox": [
+                146,
+                860,
+                471,
+                890
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    146.0,
+                    860.0
+                ],
+                [
+                    471.0,
+                    860.0
+                ],
+                [
+                    471.0,
+                    890.0
+                ],
+                [
+                    146.0,
+                    890.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "This classification shall apply to those employees who regularly and routinely direct and check the work of three or more Nutrition Aides and/or Nutrition Clerks.",
+            "block_bbox": [
+                144,
+                908,
+                1084,
+                967
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    144.0,
+                    908.0
+                ],
+                [
+                    1084.0,
+                    908.0
+                ],
+                [
+                    1084.0,
+                    967.0
+                ],
+                [
+                    144.0,
+                    967.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "STOREKEEPER",
+            "block_bbox": [
+                145,
+                990,
+                347,
+                1020
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    145.0,
+                    990.0
+                ],
+                [
+                    347.0,
+                    990.0
+                ],
+                [
+                    347.0,
+                    1020.0
+                ],
+                [
+                    145.0,
+                    1020.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Receives deliveries. Unloads supplies, materiel and equipment. Unpacks items received. Verifies accuracy of shipment. Delivers supplies and equipment and obtains appropriate signatures from receiving department. Maintains a clean and orderly work place. May use forklifts, hand trucks, panel trucks and other equipment. Uses automated and manual systems in the above processes.",
+            "block_bbox": [
+                142,
+                1039,
+                1084,
+                1180
+            ],
+            "block_id": 11,
+            "block_order": 12,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    142.0,
+                    1039.0
+                ],
+                [
+                    1084.0,
+                    1039.0
+                ],
+                [
+                    1084.0,
+                    1180.0
+                ],
+                [
+                    142.0,
+                    1180.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "80",
+            "block_bbox": [
+                597,
+                1472,
+                626,
+                1495
+            ],
+            "block_id": 12,
+            "block_order": null,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    597.0,
+                    1472.0
+                ],
+                [
+                    625.0,
+                    1472.0
+                ],
+                [
+                    625.0,
+                    1494.0
+                ],
+                [
+                    597.0,
+                    1494.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.8053902387619019,
+                "coordinate": [
+                    338,
+                    190,
+                    897,
+                    277
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        338.0,
+                        190.0
+                    ],
+                    [
+                        897.0,
+                        190.0
+                    ],
+                    [
+                        897.0,
+                        277.0
+                    ],
+                    [
+                        338.0,
+                        277.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7852093577384949,
+                "coordinate": [
+                    283,
+                    329,
+                    952,
+                    363
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        283.0,
+                        329.0
+                    ],
+                    [
+                        952.0,
+                        329.0
+                    ],
+                    [
+                        952.0,
+                        363.0
+                    ],
+                    [
+                        283.0,
+                        363.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8574187755584717,
+                "coordinate": [
+                    149,
+                    388,
+                    486,
+                    418
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        149.0,
+                        388.0
+                    ],
+                    [
+                        486.0,
+                        388.0
+                    ],
+                    [
+                        486.0,
+                        418.0
+                    ],
+                    [
+                        149.0,
+                        418.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9102067351341248,
+                "coordinate": [
+                    148,
+                    436,
+                    1084,
+                    496
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        148.0,
+                        436.0
+                    ],
+                    [
+                        1084.0,
+                        436.0
+                    ],
+                    [
+                        1084.0,
+                        496.0
+                    ],
+                    [
+                        148.0,
+                        496.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8553096055984497,
+                "coordinate": [
+                    148,
+                    518,
+                    474,
+                    549
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        148.0,
+                        518.0
+                    ],
+                    [
+                        474.0,
+                        518.0
+                    ],
+                    [
+                        474.0,
+                        549.0
+                    ],
+                    [
+                        148.0,
+                        549.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9357810616493225,
+                "coordinate": [
+                    146,
+                    567,
+                    1086,
+                    653
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        146.0,
+                        567.0
+                    ],
+                    [
+                        1086.0,
+                        567.0
+                    ],
+                    [
+                        1086.0,
+                        653.0
+                    ],
+                    [
+                        146.0,
+                        653.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.856844961643219,
+                "coordinate": [
+                    147,
+                    676,
+                    634,
+                    706
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        147.0,
+                        676.0
+                    ],
+                    [
+                        634.0,
+                        676.0
+                    ],
+                    [
+                        634.0,
+                        706.0
+                    ],
+                    [
+                        147.0,
+                        706.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9394177794456482,
+                "coordinate": [
+                    145,
+                    724,
+                    1086,
+                    837
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        145.0,
+                        724.0
+                    ],
+                    [
+                        1086.0,
+                        724.0
+                    ],
+                    [
+                        1086.0,
+                        837.0
+                    ],
+                    [
+                        145.0,
+                        837.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8536577820777893,
+                "coordinate": [
+                    146,
+                    860,
+                    471,
+                    890
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        146.0,
+                        860.0
+                    ],
+                    [
+                        471.0,
+                        860.0
+                    ],
+                    [
+                        471.0,
+                        890.0
+                    ],
+                    [
+                        146.0,
+                        890.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.920802891254425,
+                "coordinate": [
+                    144,
+                    908,
+                    1084,
+                    967
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        144.0,
+                        908.0
+                    ],
+                    [
+                        1084.0,
+                        908.0
+                    ],
+                    [
+                        1084.0,
+                        967.0
+                    ],
+                    [
+                        144.0,
+                        967.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8619893789291382,
+                "coordinate": [
+                    145,
+                    990,
+                    347,
+                    1020
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        145.0,
+                        990.0
+                    ],
+                    [
+                        347.0,
+                        990.0
+                    ],
+                    [
+                        347.0,
+                        1020.0
+                    ],
+                    [
+                        145.0,
+                        1020.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9539106488227844,
+                "coordinate": [
+                    142,
+                    1039,
+                    1084,
+                    1180
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        142.0,
+                        1039.0
+                    ],
+                    [
+                        1084.0,
+                        1039.0
+                    ],
+                    [
+                        1084.0,
+                        1180.0
+                    ],
+                    [
+                        142.0,
+                        1180.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7560983300209045,
+                "coordinate": [
+                    597,
+                    1472,
+                    626,
+                    1495
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        597.0,
+                        1472.0
+                    ],
+                    [
+                        625.0,
+                        1472.0
+                    ],
+                    [
+                        625.0,
+                        1494.0
+                    ],
+                    [
+                        597.0,
+                        1494.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

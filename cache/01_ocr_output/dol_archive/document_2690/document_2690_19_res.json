@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/dol_archive/document_2690.pdf",
+    "page_index": 19,
+    "page_count": 77,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "The titles of assistant professor, associate professor, and professor shall be used to denote rank of tenure track unit member.",
+            "block_bbox": [
+                245,
+                145,
+                1046,
+                202
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    245.0,
+                    145.0
+                ],
+                [
+                    1046.0,
+                    145.0
+                ],
+                [
+                    1046.0,
+                    202.0
+                ],
+                [
+                    245.0,
+                    202.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "9.1.3 Non-tenure Track Term Appointment",
+            "block_bbox": [
+                173,
+                224,
+                619,
+                253
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    173.0,
+                    224.0
+                ],
+                [
+                    619.0,
+                    224.0
+                ],
+                [
+                    619.0,
+                    253.0
+                ],
+                [
+                    173.0,
+                    253.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A non-tenure track term appointment may be made at less than 100 percent, but no less than 51 percent, of FTE status, for a specific length of time. Performance expectations shall be specified by individual appointment letters.",
+            "block_bbox": [
+                244,
+                277,
+                1042,
+                362
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    244.0,
+                    277.0
+                ],
+                [
+                    1042.0,
+                    277.0
+                ],
+                [
+                    1042.0,
+                    362.0
+                ],
+                [
+                    244.0,
+                    362.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A non-tenure track term appointment shall not lead to consideration for tenure. Except as otherwise agreed between the unit member and the hiring authority in writing at the time of hire into a tenure track position, time spent in a non-tenure track term appointment shall not count in the calculation of the time for promotion or mandatory review for tenure in any subsequent tenure track appointment in the University of Alaska.",
+            "block_bbox": [
+                245,
+                384,
+                1030,
+                553
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    245.0,
+                    384.0
+                ],
+                [
+                    1030.0,
+                    384.0
+                ],
+                [
+                    1030.0,
+                    553.0
+                ],
+                [
+                    245.0,
+                    553.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Non-tenure track term appointments may be made for a period up to but no longer than five (5) years. Non-tenure track term appointments shall expire at the end of the specified period of appointment, unless renewed or provided notice in accordance with Article 9.4.2. In addition to provisions for termination provided in this Agreement, a non-tenure track term appointment may be terminated early if the terms of the performance assignment are not fulfilled, if the duration of the funded activity has expired, or if the program has been discontinued or reduced.",
+            "block_bbox": [
+                245,
+                573,
+                1049,
+                769
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    245.0,
+                    573.0
+                ],
+                [
+                    1049.0,
+                    573.0
+                ],
+                [
+                    1049.0,
+                    769.0
+                ],
+                [
+                    245.0,
+                    769.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The titles of instructor, lecturer, assistant professor, associate professor, and professor may be used to denote rank of non-tenure track unit members. In addition, qualified titles of rank, as specified below, may be used.",
+            "block_bbox": [
+                245,
+                789,
+                986,
+                876
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    245.0,
+                    789.0
+                ],
+                [
+                    986.0,
+                    789.0
+                ],
+                [
+                    986.0,
+                    876.0
+                ],
+                [
+                    245.0,
+                    876.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The titles of research assistant professor, research associate professor, or research professor shall be used to denote rank of non-tenure track unit member conducting research as a primary assignment and supported primarily by research funds.",
+            "block_bbox": [
+                245,
+                896,
+                1041,
+                1008
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    245.0,
+                    896.0
+                ],
+                [
+                    1041.0,
+                    896.0
+                ],
+                [
+                    1041.0,
+                    1008.0
+                ],
+                [
+                    245.0,
+                    1008.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The titles of clinical lecturer, clinical instructor, clinical assistant professor, clinical associate professor or clinical professor shall be used for unit members who are also practitioners in health care delivery professions or in other professions to which such titles would be applicable.",
+            "block_bbox": [
+                245,
+                1031,
+                1016,
+                1144
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    245.0,
+                    1031.0
+                ],
+                [
+                    1016.0,
+                    1031.0
+                ],
+                [
+                    1016.0,
+                    1144.0
+                ],
+                [
+                    245.0,
+                    1144.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "9.1.4 Appointment Duration",
+            "block_bbox": [
+                175,
+                1165,
+                474,
+                1194
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    175.0,
+                    1165.0
+                ],
+                [
+                    474.0,
+                    1165.0
+                ],
+                [
+                    474.0,
+                    1194.0
+                ],
+                [
+                    175.0,
+                    1194.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A unit member's base appointment shall be for the academic year as determined by the campus or for an alternative nine (9) month period. A nine (9) month appointment may be extended by up to three (3) months at the discretion of the University. Such an extension may be included in the base assignment letter, but in any event an extension does not modify the tenured or tenure-track base appointment period of nine (9) months.",
+            "block_bbox": [
+                245,
+                1217,
+                1038,
+                1387
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    245.0,
+                    1217.0
+                ],
+                [
+                    1038.0,
+                    1217.0
+                ],
+                [
+                    1038.0,
+                    1387.0
+                ],
+                [
+                    245.0,
+                    1387.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "Tentative Agreement",
+            "block_bbox": [
+                177,
+                1487,
+                369,
+                1513
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    177.0,
+                    1487.0
+                ],
+                [
+                    369.0,
+                    1487.0
+                ],
+                [
+                    369.0,
+                    1513.0
+                ],
+                [
+                    177.0,
+                    1513.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 20 of 77",
+            "block_bbox": [
+                919,
+                1487,
+                1047,
+                1514
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    919.0,
+                    1487.0
+                ],
+                [
+                    1047.0,
+                    1487.0
+                ],
+                [
+                    1047.0,
+                    1514.0
+                ],
+                [
+                    919.0,
+                    1514.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9194703102111816,
+                "coordinate": [
+                    245,
+                    145,
+                    1046,
+                    202
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        245.0,
+                        145.0
+                    ],
+                    [
+                        1046.0,
+                        145.0
+                    ],
+                    [
+                        1046.0,
+                        202.0
+                    ],
+                    [
+                        245.0,
+                        202.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8901337385177612,
+                "coordinate": [
+                    173,
+                    224,
+                    619,
+                    253
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        173.0,
+                        224.0
+                    ],
+                    [
+                        619.0,
+                        224.0
+                    ],
+                    [
+                        619.0,
+                        253.0
+                    ],
+                    [
+                        173.0,
+                        253.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9346674084663391,
+                "coordinate": [
+                    244,
+                    277,
+                    1042,
+                    362
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        244.0,
+                        277.0
+                    ],
+                    [
+                        1042.0,
+                        277.0
+                    ],
+                    [
+                        1042.0,
+                        362.0
+                    ],
+                    [
+                        244.0,
+                        362.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9507626295089722,
+                "coordinate": [
+                    245,
+                    384,
+                    1030,
+                    553
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        245.0,
+                        384.0
+                    ],
+                    [
+                        1030.0,
+                        384.0
+                    ],
+                    [
+                        1030.0,
+                        553.0
+                    ],
+                    [
+                        245.0,
+                        553.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9604107737541199,
+                "coordinate": [
+                    245,
+                    573,
+                    1049,
+                    769
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        245.0,
+                        573.0
+                    ],
+                    [
+                        1049.0,
+                        573.0
+                    ],
+                    [
+                        1049.0,
+                        769.0
+                    ],
+                    [
+                        245.0,
+                        769.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9329102039337158,
+                "coordinate": [
+                    245,
+                    789,
+                    986,
+                    876
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        245.0,
+                        789.0
+                    ],
+                    [
+                        986.0,
+                        789.0
+                    ],
+                    [
+                        986.0,
+                        876.0
+                    ],
+                    [
+                        245.0,
+                        876.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9446856379508972,
+                "coordinate": [
+                    245,
+                    896,
+                    1041,
+                    1008
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        245.0,
+                        896.0
+                    ],
+                    [
+                        1041.0,
+                        896.0
+                    ],
+                    [
+                        1041.0,
+                        1008.0
+                    ],
+                    [
+                        245.0,
+                        1008.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9480011463165283,
+                "coordinate": [
+                    245,
+                    1031,
+                    1016,
+                    1144
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        245.0,
+                        1031.0
+                    ],
+                    [
+                        1016.0,
+                        1031.0
+                    ],
+                    [
+                        1016.0,
+                        1144.0
+                    ],
+                    [
+                        245.0,
+                        1144.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8691962957382202,
+                "coordinate": [
+                    175,
+                    1165,
+                    474,
+                    1194
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        175.0,
+                        1165.0
+                    ],
+                    [
+                        474.0,
+                        1165.0
+                    ],
+                    [
+                        474.0,
+                        1194.0
+                    ],
+                    [
+                        175.0,
+                        1194.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9554327726364136,
+                "coordinate": [
+                    245,
+                    1217,
+                    1038,
+                    1387
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        245.0,
+                        1217.0
+                    ],
+                    [
+                        1038.0,
+                        1217.0
+                    ],
+                    [
+                        1038.0,
+                        1387.0
+                    ],
+                    [
+                        245.0,
+                        1387.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.86964350938797,
+                "coordinate": [
+                    177,
+                    1487,
+                    369,
+                    1513
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        177.0,
+                        1487.0
+                    ],
+                    [
+                        369.0,
+                        1487.0
+                    ],
+                    [
+                        369.0,
+                        1513.0
+                    ],
+                    [
+                        177.0,
+                        1513.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8649746179580688,
+                "coordinate": [
+                    919,
+                    1487,
+                    1047,
+                    1514
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        919.0,
+                        1487.0
+                    ],
+                    [
+                        1047.0,
+                        1487.0
+                    ],
+                    [
+                        1047.0,
+                        1514.0
+                    ],
+                    [
+                        919.0,
+                        1514.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

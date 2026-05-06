@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 165,
+    "page_count": 206,
+    "width": 1224,
+    "height": 2016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "APPENDIX A",
+            "block_bbox": [
+                544,
+                98,
+                700,
+                125
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    544.0,
+                    98.0
+                ],
+                [
+                    700.0,
+                    98.0
+                ],
+                [
+                    700.0,
+                    125.0
+                ],
+                [
+                    544.0,
+                    125.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>LINK CODE</td><td>TITLE CODE</td><td>TITLE NAME</td><td>STEP</td><td>MONTHLY RATE</td><td>HOURLY RATE</td><td>EVE</td><td>NIGHT</td><td>WKEND</td><td colspan=\"3\">ON CALL RATES</td></tr><tr><td colspan=\"12\">SAN FRANCISCO - cont. January 1, 2004</td></tr><tr><td>019</td><td>8683</td><td>TECHNICIAN, ELEC-MED FAC</td><td>6.</td><td>$3,778</td><td>$21.71</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8683</td><td>TECHNICIAN, ELEC-MED FAC</td><td>7.</td><td>$3,823</td><td>$21.97</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8683</td><td>TECHNICIAN, ELEC-MED FAC</td><td>8.</td><td>$3,873</td><td>$22.26</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8683</td><td>TECHNICIAN, ELEC-MED FAC</td><td>9.</td><td>$3,919</td><td>$22.52</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8683</td><td>TECHNICIAN, ELEC-MED FAC</td><td>10.</td><td>$3,971</td><td>$22.82</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8683</td><td>TECHNICIAN, ELEC-MED FAC</td><td>11.</td><td>$4,020</td><td>$23.10</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8683</td><td>TECHNICIAN, ELEC-MED FAC</td><td>12.</td><td>$4,070</td><td>$23.39</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8683</td><td>TECHNICIAN, ELEC-MED FAC</td><td>13.</td><td>$4,122</td><td>$23.69</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8683</td><td>TECHNICIAN, ELEC-MED FAC</td><td>14.</td><td>$4,173</td><td>$23.98</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8683</td><td>TECHNICIAN, ELEC-MED FAC</td><td>15.</td><td>$4,225</td><td>$24.28</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8683</td><td>TECHNICIAN, ELEC-MED FAC</td><td>16.</td><td>$4,278</td><td>$24.59</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8683</td><td>TECHNICIAN, ELEC-MED FAC</td><td>17.</td><td>$4,332</td><td>$24.90</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8683</td><td>TECHNICIAN, ELEC-MED FAC</td><td>18.</td><td>$4,386</td><td>$25.21</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8683</td><td>TECHNICIAN, ELEC-MED FAC</td><td>19.</td><td>$4,440</td><td>$25.52</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>1.</td><td>$2,866</td><td>$16.47</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>2.</td><td>$2,903</td><td>$16.68</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>3.</td><td>$2,941</td><td>$16.90</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>4.</td><td>$2,976</td><td>$17.10</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>5.</td><td>$3,014</td><td>$17.32</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>6.</td><td>$3,050</td><td>$17.53</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>7.</td><td>$3,092</td><td>$17.77</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>8.</td><td>$3,126</td><td>$17.97</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>9.</td><td>$3,166</td><td>$18.20</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>10.</td><td>$3,206</td><td>$18.43</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>11.</td><td>$3,248</td><td>$18.67</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>12.</td><td>$3,287</td><td>$18.89</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>13.</td><td>$3,327</td><td>$19.12</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>14.</td><td>$3,370</td><td>$19.37</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>15.</td><td>$3,412</td><td>$19.61</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>16.</td><td>$3,454</td><td>$19.85</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>17.</td><td>$3,499</td><td>$20.11</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>18.</td><td>$3,540</td><td>$20.34</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>19.</td><td>$3,586</td><td>$20.61</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>20.</td><td>$3,631</td><td>$20.87</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>1.</td><td>$3,521</td><td>$20.24</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>2.</td><td>$3,566</td><td>$20.49</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>3.</td><td>$3,607</td><td>$20.73</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>4.</td><td>$3,653</td><td>$20.99</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>5.</td><td>$3,700</td><td>$21.26</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>6.</td><td>$3,744</td><td>$21.52</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>7.</td><td>$3,791</td><td>$21.79</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>8.</td><td>$3,841</td><td>$22.07</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>9.</td><td>$3,886</td><td>$22.33</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>10.</td><td>$3,936</td><td>$22.62</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>11.</td><td>$3,985</td><td>$22.90</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>12.</td><td>$4,034</td><td>$23.18</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>13.</td><td>$4,086</td><td>$23.48</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>14.</td><td>$4,136</td><td>$23.77</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>15.</td><td>$4,187</td><td>$24.06</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>16.</td><td>$4,240</td><td>$24.37</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>17.</td><td>$4,292</td><td>$24.67</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>18.</td><td>$4,347</td><td>$24.98</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>19.</td><td>$4,402</td><td>$25.30</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>20.</td><td>$4,457</td><td>$25.61</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>21.</td><td>$4,511</td><td>$25.93</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>22.</td><td>$4,569</td><td>$26.26</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>23.</td><td>$4,626</td><td>$26.59</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8782</td><td>BRACE MAKER, SR</td><td>24.</td><td>$4,684</td><td>$26.92</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8792</td><td>INSTRUMENT MAKER, SURGICAL, SR</td><td>1.</td><td>$3,521</td><td>$20.24</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8792</td><td>INSTRUMENT MAKER, SURGICAL, SR</td><td>2.</td><td>$3,566</td><td>$20.49</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8792</td><td>INSTRUMENT MAKER, SURGICAL, SR</td><td>3.</td><td>$3,607</td><td>$20.73</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8792</td><td>INSTRUMENT MAKER, SURGICAL, SR</td><td>4.</td><td>$3,653</td><td>$20.99</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr></table>",
+            "block_bbox": [
+                69,
+                159,
+                1174,
+                1838
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    69.0,
+                    159.0
+                ],
+                [
+                    1174.0,
+                    159.0
+                ],
+                [
+                    1174.0,
+                    1838.0
+                ],
+                [
+                    69.0,
+                    1838.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "163",
+            "block_bbox": [
+                575,
+                1918,
+                622,
+                1942
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    575.0,
+                    1918.0
+                ],
+                [
+                    621.0,
+                    1918.0
+                ],
+                [
+                    621.0,
+                    1941.0
+                ],
+                [
+                    575.0,
+                    1941.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.5657979846000671,
+                "coordinate": [
+                    544,
+                    98,
+                    700,
+                    125
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        544.0,
+                        98.0
+                    ],
+                    [
+                        700.0,
+                        98.0
+                    ],
+                    [
+                        700.0,
+                        125.0
+                    ],
+                    [
+                        544.0,
+                        125.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9656361937522888,
+                "coordinate": [
+                    69,
+                    159,
+                    1174,
+                    1838
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        69.0,
+                        159.0
+                    ],
+                    [
+                        1174.0,
+                        159.0
+                    ],
+                    [
+                        1174.0,
+                        1838.0
+                    ],
+                    [
+                        69.0,
+                        1838.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.765807032585144,
+                "coordinate": [
+                    575,
+                    1918,
+                    622,
+                    1942
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        575.0,
+                        1918.0
+                    ],
+                    [
+                        621.0,
+                        1918.0
+                    ],
+                    [
+                        621.0,
+                        1941.0
+                    ],
+                    [
+                        575.0,
+                        1941.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,278 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 99,
+    "page_count": 287,
+    "width": 698,
+    "height": 1030,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "ARTICLE XIII",
+            "block_bbox": [
+                541,
+                62,
+                632,
+                81
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    541.0,
+                    62.0
+                ],
+                [
+                    631.0,
+                    62.0
+                ],
+                [
+                    631.0,
+                    80.0
+                ],
+                [
+                    541.0,
+                    80.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "sentatives shall deliver to the Union office their answer and the reasons therefore, in writing, within four (4) working days after the conclusion of this meeting. If the answer is not accepted, the Union may appeal the decision to Step D, in writing, within seven (7) working days after the conclusion of the Step C meeting. It is mutually agreed that new issues, not previously discussed, will not be considered in the event any grievance is processed to arbitration.",
+            "block_bbox": [
+                71,
+                93,
+                634,
+                248
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    71.0,
+                    93.0
+                ],
+                [
+                    634.0,
+                    93.0
+                ],
+                [
+                    634.0,
+                    248.0
+                ],
+                [
+                    71.0,
+                    248.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "STEP D – A Step D meeting shall be held within four (4) working days after the date of the appeal, and at said meeting, the Union and the Company shall undertake to select an impartial arbitrator by mutual agreement from a list of five (5) arbitrators selected by each party and submitted at this meeting. If the parties cannot agree upon an arbitrator at the aforementioned meeting, the party demanding arbitration may request the Federal Mediation and Conciliation Service to submit a list of seven (7) arbitrators. Within five (5) working days, after receiving this list of arbitrators, the parties shall meet and each party, alternately, will strike one (1) name from the list until one (1) name remains, and that person will be asked to hear the case. The moving party will strike the first name and from then on, in each succeeding arbitration case, the parties shall alternate in striking the first name from the list submitted. The parties shall attempt, in good faith, to agree upon a joint stipulation of the issues involved. In the absence of such agreement, each party shall submit to the arbitrator its own statement of the issues involved. Either party may submit a written brief to the arbitrator before the hearing, provided that all pre-hearing briefs must be filed and served upon the opposing party at least three (3) working days before the time set for the hearing. Post-hearing briefs may be filed within such times as may be fixed by the arbitrator. The arbitrator shall have no power to add to, or subtract from, or modify any of the terms of this Collective Bargaining Agreement. The arbitrator's decision shall be final and binding upon the Company, the Union and the employees. The arbitrator's fees and expenses shall be divided equally between the parties. If the arbitrator requires a transcript of an arbitration hearing, or the Company and the Union mutually agree that an arbitration hearing shall be stenographically reported or recorded, the cost of such reporting or recording and the cost of the minimum number of transcripts required shall be divided equally between the parties. If only one of the parties desires that an arbitration hearing be stenographically reported or recorded, and the arbitrator does not require a transcription of such hearing, such party shall pay the entire",
+            "block_bbox": [
+                73,
+                269,
+                634,
+                952
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    73.0,
+                    269.0
+                ],
+                [
+                    634.0,
+                    269.0
+                ],
+                [
+                    634.0,
+                    952.0
+                ],
+                [
+                    73.0,
+                    952.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "91",
+            "block_bbox": [
+                326,
+                957,
+                347,
+                972
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    326.0,
+                    957.0
+                ],
+                [
+                    346.0,
+                    957.0
+                ],
+                [
+                    346.0,
+                    971.0
+                ],
+                [
+                    326.0,
+                    971.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8068557977676392,
+                "coordinate": [
+                    541,
+                    62,
+                    632,
+                    81
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        541.0,
+                        62.0
+                    ],
+                    [
+                        631.0,
+                        62.0
+                    ],
+                    [
+                        631.0,
+                        80.0
+                    ],
+                    [
+                        541.0,
+                        80.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.94578617811203,
+                "coordinate": [
+                    71,
+                    93,
+                    634,
+                    248
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        71.0,
+                        93.0
+                    ],
+                    [
+                        634.0,
+                        93.0
+                    ],
+                    [
+                        634.0,
+                        248.0
+                    ],
+                    [
+                        71.0,
+                        248.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9594234824180603,
+                "coordinate": [
+                    73,
+                    269,
+                    634,
+                    952
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        73.0,
+                        269.0
+                    ],
+                    [
+                        634.0,
+                        269.0
+                    ],
+                    [
+                        634.0,
+                        952.0
+                    ],
+                    [
+                        73.0,
+                        952.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7083814740180969,
+                "coordinate": [
+                    326,
+                    957,
+                    347,
+                    972
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        326.0,
+                        957.0
+                    ],
+                    [
+                        346.0,
+                        957.0
+                    ],
+                    [
+                        346.0,
+                        971.0
+                    ],
+                    [
+                        326.0,
+                        971.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

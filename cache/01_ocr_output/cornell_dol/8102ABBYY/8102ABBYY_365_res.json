@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 365,
+    "page_count": 439,
+    "width": 1234,
+    "height": 1592,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                751,
+                116,
+                908,
+                134
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    751.0,
+                    116.0
+                ],
+                [
+                    907.0,
+                    116.0
+                ],
+                [
+                    907.0,
+                    133.0
+                ],
+                [
+                    751.0,
+                    133.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(4) When a former employee accepts a job offer made under the Surplus Rehire feature of the LTP, all other requests on file shall be canceled and the employee may not submit any new Career Placement Requests until the applicable Time-in-Title and Grade and Time-in-Location requirement(s) for the position to be filled have been met.",
+            "block_bbox": [
+                436,
+                149,
+                909,
+                256
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    436.0,
+                    149.0
+                ],
+                [
+                    909.0,
+                    149.0
+                ],
+                [
+                    909.0,
+                    256.0
+                ],
+                [
+                    436.0,
+                    256.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(5) Upon the completion of sixty (60) days of surplus eligibility or the loss of surplus eligibility as described in 4((e))((2))((ii)):",
+            "block_bbox": [
+                435,
+                268,
+                910,
+                307
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    435.0,
+                    268.0
+                ],
+                [
+                    910.0,
+                    268.0
+                ],
+                [
+                    910.0,
+                    307.0
+                ],
+                [
+                    435.0,
+                    307.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(i) any Surplus Placement Requests and Career Requests for current vacancies which the former employee has on file will continue;",
+            "block_bbox": [
+                484,
+                318,
+                909,
+                375
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    484.0,
+                    318.0
+                ],
+                [
+                    909.0,
+                    318.0
+                ],
+                [
+                    909.0,
+                    375.0
+                ],
+                [
+                    484.0,
+                    375.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(ii) any future Career Placement Requests will be canceled; and",
+            "block_bbox": [
+                484,
+                386,
+                908,
+                423
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    484.0,
+                    386.0
+                ],
+                [
+                    908.0,
+                    386.0
+                ],
+                [
+                    908.0,
+                    423.0
+                ],
+                [
+                    484.0,
+                    423.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(iii) The former employee may continue to participate as a Career Rehire candidate, as specified in paragraph 4(c) above, for the remainder of the three (3) years.",
+            "block_bbox": [
+                484,
+                436,
+                907,
+                492
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    484.0,
+                    436.0
+                ],
+                [
+                    907.0,
+                    436.0
+                ],
+                [
+                    907.0,
+                    492.0
+                ],
+                [
+                    484.0,
+                    492.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "5 REQUESTS FOR TIME-IN-TITLE AND GRADE AND TIME-IN-LOCATION WAIVER OR RETREAT FROM PROMOTION",
+            "block_bbox": [
+                352,
+                502,
+                908,
+                541
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    352.0,
+                    502.0
+                ],
+                [
+                    908.0,
+                    502.0
+                ],
+                [
+                    908.0,
+                    541.0
+                ],
+                [
+                    352.0,
+                    541.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "(a) Time-In-Title and Grade And Time-In-Location Waivers",
+            "block_bbox": [
+                386,
+                554,
+                798,
+                575
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    386.0,
+                    554.0
+                ],
+                [
+                    798.0,
+                    554.0
+                ],
+                [
+                    798.0,
+                    575.0
+                ],
+                [
+                    386.0,
+                    575.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Employees requesting Time-In-Title and Grade and Time-In-Location waivers as trailing spouses or because of a hardship, may participate in the LTP without meeting Time-In-Title and Grade or Time-In-Location criteria, if approved by the Company. However they are subject to all other LTP eligibility criteria.",
+            "block_bbox": [
+                432,
+                583,
+                907,
+                673
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    432.0,
+                    583.0
+                ],
+                [
+                    907.0,
+                    583.0
+                ],
+                [
+                    907.0,
+                    673.0
+                ],
+                [
+                    432.0,
+                    673.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "(b) Retreat from Promotion",
+            "block_bbox": [
+                387,
+                681,
+                587,
+                702
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    387.0,
+                    681.0
+                ],
+                [
+                    586.0,
+                    681.0
+                ],
+                [
+                    586.0,
+                    701.0
+                ],
+                [
+                    387.0,
+                    701.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "An employee who accepts an Promotion through the LTP to a position in any Lucent organization may, within six (6) months of placement, request to return to his/her former job, or equivalent job if the former is not available. The Company shall consider any such request, and if approved, the employee will not have to meet Time-in-Title and Grade and Time-in-Location for movement to his/her former job or an equivalent. If the employee has moved to different LPA, he or she may request such treatment in his/her former or new LPA. An employee so returned will be required to satisfy anew any applicable Time-in-Title and Grade or Time-in-Location",
+            "block_bbox": [
+                433,
+                710,
+                909,
+                887
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    433.0,
+                    710.0
+                ],
+                [
+                    909.0,
+                    710.0
+                ],
+                [
+                    909.0,
+                    887.0
+                ],
+                [
+                    433.0,
+                    887.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "357",
+            "block_bbox": [
+                875,
+                913,
+                905,
+                931
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    875.0,
+                    913.0
+                ],
+                [
+                    904.0,
+                    913.0
+                ],
+                [
+                    904.0,
+                    930.0
+                ],
+                [
+                    875.0,
+                    930.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8360323905944824,
+                "coordinate": [
+                    751,
+                    116,
+                    908,
+                    134
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        751.0,
+                        116.0
+                    ],
+                    [
+                        907.0,
+                        116.0
+                    ],
+                    [
+                        907.0,
+                        133.0
+                    ],
+                    [
+                        751.0,
+                        133.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.934399425983429,
+                "coordinate": [
+                    436,
+                    149,
+                    909,
+                    256
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        436.0,
+                        149.0
+                    ],
+                    [
+                        909.0,
+                        149.0
+                    ],
+                    [
+                        909.0,
+                        256.0
+                    ],
+                    [
+                        436.0,
+                        256.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8973003625869751,
+                "coordinate": [
+                    435,
+                    268,
+                    910,
+                    307
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        435.0,
+                        268.0
+                    ],
+                    [
+                        910.0,
+                        268.0
+                    ],
+                    [
+                        910.0,
+                        307.0
+                    ],
+                    [
+                        435.0,
+                        307.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9110050201416016,
+                "coordinate": [
+                    484,
+                    318,
+                    909,
+                    375
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        484.0,
+                        318.0
+                    ],
+                    [
+                        909.0,
+                        318.0
+                    ],
+                    [
+                        909.0,
+                        375.0
+                    ],
+                    [
+                        484.0,
+                        375.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.877442479133606,
+                "coordinate": [
+                    484,
+                    386,
+                    908,
+                    423
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        484.0,
+                        386.0
+                    ],
+                    [
+                        908.0,
+                        386.0
+                    ],
+                    [
+                        908.0,
+                        423.0
+                    ],
+                    [
+                        484.0,
+                        423.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9106320738792419,
+                "coordinate": [
+                    484,
+                    436,
+                    907,
+                    492
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        484.0,
+                        436.0
+                    ],
+                    [
+                        907.0,
+                        436.0
+                    ],
+                    [
+                        907.0,
+                        492.0
+                    ],
+                    [
+                        484.0,
+                        492.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8031629323959351,
+                "coordinate": [
+                    352,
+                    502,
+                    908,
+                    541
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        352.0,
+                        502.0
+                    ],
+                    [
+                        908.0,
+                        502.0
+                    ],
+                    [
+                        908.0,
+                        541.0
+                    ],
+                    [
+                        352.0,
+                        541.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7828937768936157,
+                "coordinate": [
+                    386,
+                    554,
+                    798,
+                    575
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        386.0,
+                        554.0
+                    ],
+                    [
+                        798.0,
+                        554.0
+                    ],
+                    [
+                        798.0,
+                        575.0
+                    ],
+                    [
+                        386.0,
+                        575.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9251415133476257,
+                "coordinate": [
+                    432,
+                    583,
+                    907,
+                    673
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        432.0,
+                        583.0
+                    ],
+                    [
+                        907.0,
+                        583.0
+                    ],
+                    [
+                        907.0,
+                        673.0
+                    ],
+                    [
+                        432.0,
+                        673.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.828499972820282,
+                "coordinate": [
+                    387,
+                    681,
+                    587,
+                    702
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        387.0,
+                        681.0
+                    ],
+                    [
+                        586.0,
+                        681.0
+                    ],
+                    [
+                        586.0,
+                        701.0
+                    ],
+                    [
+                        387.0,
+                        701.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9519451260566711,
+                "coordinate": [
+                    433,
+                    710,
+                    909,
+                    887
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        433.0,
+                        710.0
+                    ],
+                    [
+                        909.0,
+                        710.0
+                    ],
+                    [
+                        909.0,
+                        887.0
+                    ],
+                    [
+                        433.0,
+                        887.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7127156257629395,
+                "coordinate": [
+                    875,
+                    913,
+                    905,
+                    931
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        875.0,
+                        913.0
+                    ],
+                    [
+                        904.0,
+                        913.0
+                    ],
+                    [
+                        904.0,
+                        930.0
+                    ],
+                    [
+                        875.0,
+                        930.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,583 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 307,
+    "page_count": 439,
+    "width": 1235,
+    "height": 1592,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                750,
+                115,
+                907,
+                133
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    750.0,
+                    115.0
+                ],
+                [
+                    906.0,
+                    115.0
+                ],
+                [
+                    906.0,
+                    132.0
+                ],
+                [
+                    750.0,
+                    132.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "MILITARY LEAVES OF ABSENCE",
+            "block_bbox": [
+                508,
+                149,
+                758,
+                169
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    508.0,
+                    148.99998474121094
+                ],
+                [
+                    757.0,
+                    148.99998474121094
+                ],
+                [
+                    757.0,
+                    167.99998474121094
+                ],
+                [
+                    508.0,
+                    167.99998474121094
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A regular employee (not temporary, term or occasional) who enters the United States Uniformed Services for Active Duty for Military Service shall be granted a Military Leave of Absence for the period of his/her necessary absence. Voluntary extension of military service beyond five (5) years shall not be construed as necessary absence. A regular employee (not temporary, term or occasional) who is a member of a reserve component or organized militia of the state and enters upon Military Training Duty will be granted a Military Leave of Absence for the period of the necessary absence for such training. The term \"Uniformed Services\" as used herein shall mean Uniformed Services of the United States as specified in the Uniformed Services Employment and Reemployment Rights Act of 1994.",
+            "block_bbox": [
+                351,
+                201,
+                909,
+                395
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    351.0,
+                    201.0
+                ],
+                [
+                    909.0,
+                    201.0
+                ],
+                [
+                    909.0,
+                    395.0
+                ],
+                [
+                    351.0,
+                    395.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "An employee, on a Military Leave of Absence for Active Duty for Military Service or military training duty and who has re-employment rights under the Uniformed Services Employment and Reemployment Rights Act of 1994 and who makes application for reinstatement within the period provided in the law, will receive upon reinstatement, full service credit for the period of absence for military service or training duty.",
+            "block_bbox": [
+                351,
+                414,
+                909,
+                522
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    351.0,
+                    414.0
+                ],
+                [
+                    909.0,
+                    414.0
+                ],
+                [
+                    909.0,
+                    522.0
+                ],
+                [
+                    351.0,
+                    522.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Military Leaves of Absence will be with eligibility to sickness disability benefits at the termination of the leave if the employee is then disabled but otherwise entitled to reinstatement in accordance with the terms of the Lucent Benefit Plans.",
+            "block_bbox": [
+                351,
+                540,
+                908,
+                612
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    351.0,
+                    540.0
+                ],
+                [
+                    908.0,
+                    540.0
+                ],
+                [
+                    908.0,
+                    612.0
+                ],
+                [
+                    351.0,
+                    612.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "In death cases occurring during a Military Leave of Absence, sickness death benefits, where payable, shall be based upon the term of net credited service at the time the leave was granted, plus the elapsed time of Military Leave of Absence to the date of death, and shall be computed at the time the leave began.",
+            "block_bbox": [
+                350,
+                632,
+                908,
+                706
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    350.0,
+                    632.0
+                ],
+                [
+                    908.0,
+                    632.0
+                ],
+                [
+                    908.0,
+                    706.0
+                ],
+                [
+                    350.0,
+                    706.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Sickness disability benefits, where payable, shall be granted upon the net credited service at the time the leave was granted plus the elapsed time on Military Leave of Absence to the termination of such leave, and shall be computed on the basis of Lucent pay in effect at the time of the employee's reinstatement.",
+            "block_bbox": [
+                351,
+                725,
+                908,
+                814
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    351.0,
+                    725.0
+                ],
+                [
+                    908.0,
+                    725.0
+                ],
+                [
+                    908.0,
+                    814.0
+                ],
+                [
+                    351.0,
+                    814.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "It is the policy of Lucent to pay a Military Differential Pay to regular employees (not temporary, term or occasional) who receive and provide the Company with a",
+            "block_bbox": [
+                351,
+                833,
+                908,
+                872
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    351.0,
+                    833.0
+                ],
+                [
+                    908.0,
+                    833.0
+                ],
+                [
+                    908.0,
+                    872.0
+                ],
+                [
+                    351.0,
+                    872.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "299",
+            "block_bbox": [
+                875,
+                912,
+                905,
+                929
+            ],
+            "block_id": 8,
+            "block_order": null,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    875.0,
+                    912.0
+                ],
+                [
+                    904.0,
+                    912.0
+                ],
+                [
+                    904.0,
+                    928.0
+                ],
+                [
+                    875.0,
+                    928.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8298088908195496,
+                "coordinate": [
+                    750,
+                    115,
+                    907,
+                    133
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        750.0,
+                        115.0
+                    ],
+                    [
+                        906.0,
+                        115.0
+                    ],
+                    [
+                        906.0,
+                        132.0
+                    ],
+                    [
+                        750.0,
+                        132.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7808286547660828,
+                "coordinate": [
+                    508,
+                    149,
+                    758,
+                    169
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        508.0,
+                        148.99998474121094
+                    ],
+                    [
+                        757.0,
+                        148.99998474121094
+                    ],
+                    [
+                        757.0,
+                        167.99998474121094
+                    ],
+                    [
+                        508.0,
+                        167.99998474121094
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9490221738815308,
+                "coordinate": [
+                    351,
+                    201,
+                    909,
+                    395
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        351.0,
+                        201.0
+                    ],
+                    [
+                        909.0,
+                        201.0
+                    ],
+                    [
+                        909.0,
+                        395.0
+                    ],
+                    [
+                        351.0,
+                        395.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9391726851463318,
+                "coordinate": [
+                    351,
+                    414,
+                    909,
+                    522
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        351.0,
+                        414.0
+                    ],
+                    [
+                        909.0,
+                        414.0
+                    ],
+                    [
+                        909.0,
+                        522.0
+                    ],
+                    [
+                        351.0,
+                        522.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9227055907249451,
+                "coordinate": [
+                    351,
+                    540,
+                    908,
+                    612
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        351.0,
+                        540.0
+                    ],
+                    [
+                        908.0,
+                        540.0
+                    ],
+                    [
+                        908.0,
+                        612.0
+                    ],
+                    [
+                        351.0,
+                        612.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9182531237602234,
+                "coordinate": [
+                    350,
+                    632,
+                    908,
+                    706
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        350.0,
+                        632.0
+                    ],
+                    [
+                        908.0,
+                        632.0
+                    ],
+                    [
+                        908.0,
+                        706.0
+                    ],
+                    [
+                        350.0,
+                        706.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9331856369972229,
+                "coordinate": [
+                    351,
+                    725,
+                    908,
+                    814
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        351.0,
+                        725.0
+                    ],
+                    [
+                        908.0,
+                        725.0
+                    ],
+                    [
+                        908.0,
+                        814.0
+                    ],
+                    [
+                        351.0,
+                        814.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8868969082832336,
+                "coordinate": [
+                    351,
+                    833,
+                    908,
+                    872
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        351.0,
+                        833.0
+                    ],
+                    [
+                        908.0,
+                        833.0
+                    ],
+                    [
+                        908.0,
+                        872.0
+                    ],
+                    [
+                        351.0,
+                        872.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6928922533988953,
+                "coordinate": [
+                    875,
+                    912,
+                    905,
+                    929
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        875.0,
+                        912.0
+                    ],
+                    [
+                        904.0,
+                        912.0
+                    ],
+                    [
+                        904.0,
+                        928.0
+                    ],
+                    [
+                        875.0,
+                        928.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

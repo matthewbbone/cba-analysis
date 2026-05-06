@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b178f008_02.pdf",
+    "page_index": 32,
+    "page_count": 42,
+    "width": 1225,
+    "height": 1594,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "and the remedy requested. The Shop Steward and employee will meet\nwithin ten (10) days of the notice of appeal with the administrative\nofficial referred to above or that person's designee and discuss the\ngrievance. The administrative official or designee shall respond to\nthe grievance in writing within ten (10) days from the discussion of\nsuch grievance with the Shop Steward. If the grievance is not adjusted\nto the Association's satisfaction, it may appeal the matter to Step 3.",
+            "block_bbox": [
+                197,
+                177,
+                1097,
+                507
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    197.0,
+                    177.0
+                ],
+                [
+                    1097.0,
+                    177.0
+                ],
+                [
+                    1097.0,
+                    507.0
+                ],
+                [
+                    197.0,
+                    507.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Step 3. A grievance not settled in Step 2 may be appealed in writing to the Director of Personnel Services within ten (10) days of the Step 2 denial. The Association representative and the Director of Personnel Services or that person's designee shall, within ten (10) days, meet to discuss the grievance. The Employer will render a decision in writing to the Association within ten (10) days of the Step 3 meeting.",
+            "block_bbox": [
+                193,
+                523,
+                1142,
+                802
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    193.0,
+                    523.0
+                ],
+                [
+                    1142.0,
+                    523.0
+                ],
+                [
+                    1142.0,
+                    802.0
+                ],
+                [
+                    193.0,
+                    802.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Anything to the contrary herein notwithstanding, without waiving its statutory or other rights, the Employer may present a grievance initially at Step 3 by notice in writing addressed to the Association at its offices. The Association must meet with the Employer's representative within five (5) days and render its decision in writing within ten (10) days of the Step 3 meeting.",
+            "block_bbox": [
+                193,
+                818,
+                1151,
+                1099
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    193.0,
+                    818.0
+                ],
+                [
+                    1151.0,
+                    818.0
+                ],
+                [
+                    1151.0,
+                    1099.0
+                ],
+                [
+                    193.0,
+                    1099.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Anything to the contrary herein notwithstanding, a grievance concerning discharge or suspension may be presented initially at Step 3 within eight (8) working days of the time the employee is notified of the discharge or suspension.",
+            "block_bbox": [
+                193,
+                1115,
+                1082,
+                1295
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    193.0,
+                    1115.0
+                ],
+                [
+                    1082.0,
+                    1115.0
+                ],
+                [
+                    1082.0,
+                    1295.0
+                ],
+                [
+                    193.0,
+                    1295.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "All time limits herein specified shall be deemed to be exclusive of Saturdays, Sundays and holidays. The time limits herein may be",
+            "block_bbox": [
+                195,
+                1310,
+                1078,
+                1392
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    195.0,
+                    1310.0
+                ],
+                [
+                    1078.0,
+                    1310.0
+                ],
+                [
+                    1078.0,
+                    1392.0
+                ],
+                [
+                    195.0,
+                    1392.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "31",
+            "block_bbox": [
+                628,
+                1489,
+                657,
+                1510
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    628.0,
+                    1489.0
+                ],
+                [
+                    656.0,
+                    1489.0
+                ],
+                [
+                    656.0,
+                    1509.0
+                ],
+                [
+                    628.0,
+                    1509.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8849849700927734,
+                "coordinate": [
+                    197,
+                    177,
+                    1097,
+                    507
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        197.0,
+                        177.0
+                    ],
+                    [
+                        1097.0,
+                        177.0
+                    ],
+                    [
+                        1097.0,
+                        507.0
+                    ],
+                    [
+                        197.0,
+                        507.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9378502368927002,
+                "coordinate": [
+                    193,
+                    523,
+                    1142,
+                    802
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        193.0,
+                        523.0
+                    ],
+                    [
+                        1142.0,
+                        523.0
+                    ],
+                    [
+                        1142.0,
+                        802.0
+                    ],
+                    [
+                        193.0,
+                        802.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9404685497283936,
+                "coordinate": [
+                    193,
+                    818,
+                    1151,
+                    1099
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        193.0,
+                        818.0
+                    ],
+                    [
+                        1151.0,
+                        818.0
+                    ],
+                    [
+                        1151.0,
+                        1099.0
+                    ],
+                    [
+                        193.0,
+                        1099.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9238241910934448,
+                "coordinate": [
+                    193,
+                    1115,
+                    1082,
+                    1295
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        193.0,
+                        1115.0
+                    ],
+                    [
+                        1082.0,
+                        1115.0
+                    ],
+                    [
+                        1082.0,
+                        1295.0
+                    ],
+                    [
+                        193.0,
+                        1295.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8209065198898315,
+                "coordinate": [
+                    195,
+                    1310,
+                    1078,
+                    1392
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        195.0,
+                        1310.0
+                    ],
+                    [
+                        1078.0,
+                        1310.0
+                    ],
+                    [
+                        1078.0,
+                        1392.0
+                    ],
+                    [
+                        195.0,
+                        1392.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6844398975372314,
+                "coordinate": [
+                    628,
+                    1489,
+                    657,
+                    1510
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        628.0,
+                        1489.0
+                    ],
+                    [
+                        656.0,
+                        1489.0
+                    ],
+                    [
+                        656.0,
+                        1509.0
+                    ],
+                    [
+                        628.0,
+                        1509.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

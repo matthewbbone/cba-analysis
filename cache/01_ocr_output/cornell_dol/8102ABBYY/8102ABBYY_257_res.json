@@ -1,0 +1,278 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 257,
+    "page_count": 439,
+    "width": 1237,
+    "height": 1593,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                750,
+                117,
+                911,
+                137
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    750.0,
+                    117.0
+                ],
+                [
+                    910.0,
+                    117.0
+                ],
+                [
+                    910.0,
+                    136.0
+                ],
+                [
+                    750.0,
+                    136.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "(i) General Wage Increase – 2011",
+            "block_bbox": [
+                388,
+                150,
+                640,
+                172
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    388.0,
+                    150.0
+                ],
+                [
+                    640.0,
+                    150.0
+                ],
+                [
+                    640.0,
+                    172.0
+                ],
+                [
+                    388.0,
+                    172.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Effective May 22, 2011, wage schedules shall be increased by 2% on the Minimum Rates and by 2% on the Maximum Rates in effect on May 21, 2011.",
+            "block_bbox": [
+                420,
+                176,
+                912,
+                232
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    420.0,
+                    176.0
+                ],
+                [
+                    912.0,
+                    176.0
+                ],
+                [
+                    912.0,
+                    232.0
+                ],
+                [
+                    420.0,
+                    232.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "249",
+            "block_bbox": [
+                875,
+                914,
+                908,
+                934
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    875.0,
+                    914.0
+                ],
+                [
+                    907.0,
+                    914.0
+                ],
+                [
+                    907.0,
+                    933.0
+                ],
+                [
+                    875.0,
+                    933.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8412614464759827,
+                "coordinate": [
+                    750,
+                    117,
+                    911,
+                    137
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        750.0,
+                        117.0
+                    ],
+                    [
+                        910.0,
+                        117.0
+                    ],
+                    [
+                        910.0,
+                        136.0
+                    ],
+                    [
+                        750.0,
+                        136.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.4089418649673462,
+                "coordinate": [
+                    388,
+                    150,
+                    640,
+                    172
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        388.0,
+                        150.0
+                    ],
+                    [
+                        640.0,
+                        150.0
+                    ],
+                    [
+                        640.0,
+                        172.0
+                    ],
+                    [
+                        388.0,
+                        172.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8418186902999878,
+                "coordinate": [
+                    420,
+                    176,
+                    912,
+                    232
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        420.0,
+                        176.0
+                    ],
+                    [
+                        912.0,
+                        176.0
+                    ],
+                    [
+                        912.0,
+                        232.0
+                    ],
+                    [
+                        420.0,
+                        232.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6334691047668457,
+                "coordinate": [
+                    875,
+                    914,
+                    908,
+                    934
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        875.0,
+                        914.0
+                    ],
+                    [
+                        907.0,
+                        914.0
+                    ],
+                    [
+                        907.0,
+                        933.0
+                    ],
+                    [
+                        875.0,
+                        933.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

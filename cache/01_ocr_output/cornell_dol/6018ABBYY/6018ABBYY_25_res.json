@@ -1,0 +1,491 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 25,
+    "page_count": 287,
+    "width": 728,
+    "height": 1013,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "ARTICLE V",
+            "block_bbox": [
+                600,
+                53,
+                674,
+                72
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    600.0,
+                    53.0
+                ],
+                [
+                    673.0,
+                    53.0
+                ],
+                [
+                    673.0,
+                    71.0
+                ],
+                [
+                    600.0,
+                    71.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE V",
+            "block_bbox": [
+                326,
+                80,
+                443,
+                106
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    326.0,
+                    80.0
+                ],
+                [
+                    443.0,
+                    80.0
+                ],
+                [
+                    443.0,
+                    106.0
+                ],
+                [
+                    326.0,
+                    106.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(1) Vacation Credits/Entitlement – Vacation credits shall be accrued by an employee at the rate indicated below, for each month worked during the calendar year in which the employee completes the indicated number of years of continuous employment:",
+            "block_bbox": [
+                94,
+                128,
+                674,
+                219
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    94.0,
+                    128.0
+                ],
+                [
+                    674.0,
+                    128.0
+                ],
+                [
+                    674.0,
+                    219.0
+                ],
+                [
+                    94.0,
+                    219.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td colspan=\"2\">ACCRUAL POLICY</td></tr><tr><td>If The Employee&#x27;s Years of Continuous Service Are:</td><td>For Each Month Worked The Employee Shall Accrue:</td></tr><tr><td>Less Than 1</td><td>10/12 Vacation Credit</td></tr><tr><td>1 Through 5</td><td>10/12 Vacation Credit</td></tr><tr><td>6 Through 14</td><td>15/12 Vacation Credit</td></tr><tr><td>15 Through 19</td><td>20/12 Vacation Credit</td></tr><tr><td>20 and Over</td><td>25/12 Vacation Credit</td></tr></table>",
+            "block_bbox": [
+                165,
+                235,
+                599,
+                508
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    165.0,
+                    235.0
+                ],
+                [
+                    599.0,
+                    235.0
+                ],
+                [
+                    599.0,
+                    508.0
+                ],
+                [
+                    165.0,
+                    508.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The vacation policy as shown below indicates when the accrued vacation days can be taken:",
+            "block_bbox": [
+                121,
+                529,
+                670,
+                576
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    121.0,
+                    529.0
+                ],
+                [
+                    670.0,
+                    529.0
+                ],
+                [
+                    670.0,
+                    576.0
+                ],
+                [
+                    121.0,
+                    576.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td colspan=\"2\">VACATION POLICY</td></tr><tr><td>If The Employee&#x27;s Years of Continuous Employment Are:</td><td>Vacation Days Available During Calendar Year Are:</td></tr><tr><td>Less Than 1</td><td>As Accrued</td></tr><tr><td>1 Through 6</td><td>10 Working Days</td></tr><tr><td>7 Through 15</td><td>15 Working Days</td></tr><tr><td>16 Through 20</td><td>20 Working Days</td></tr><tr><td>21 Through 29</td><td>25 Working Days</td></tr><tr><td>30 Through 33</td><td>26 Working Days</td></tr><tr><td>34 and Over</td><td>27 Working Days</td></tr></table>",
+            "block_bbox": [
+                168,
+                614,
+                596,
+                936
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    168.0,
+                    614.0
+                ],
+                [
+                    596.0,
+                    614.0
+                ],
+                [
+                    596.0,
+                    936.0
+                ],
+                [
+                    168.0,
+                    936.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "17",
+            "block_bbox": [
+                370,
+                945,
+                392,
+                961
+            ],
+            "block_id": 6,
+            "block_order": null,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    370.0,
+                    945.0
+                ],
+                [
+                    391.0,
+                    945.0
+                ],
+                [
+                    391.0,
+                    960.0
+                ],
+                [
+                    370.0,
+                    960.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.838543176651001,
+                "coordinate": [
+                    600,
+                    53,
+                    674,
+                    72
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        600.0,
+                        53.0
+                    ],
+                    [
+                        673.0,
+                        53.0
+                    ],
+                    [
+                        673.0,
+                        71.0
+                    ],
+                    [
+                        600.0,
+                        71.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8098297715187073,
+                "coordinate": [
+                    326,
+                    80,
+                    443,
+                    106
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        326.0,
+                        80.0
+                    ],
+                    [
+                        443.0,
+                        80.0
+                    ],
+                    [
+                        443.0,
+                        106.0
+                    ],
+                    [
+                        326.0,
+                        106.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9376519918441772,
+                "coordinate": [
+                    94,
+                    128,
+                    674,
+                    219
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        94.0,
+                        128.0
+                    ],
+                    [
+                        674.0,
+                        128.0
+                    ],
+                    [
+                        674.0,
+                        219.0
+                    ],
+                    [
+                        94.0,
+                        219.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9012161493301392,
+                "coordinate": [
+                    165,
+                    235,
+                    599,
+                    508
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        165.0,
+                        235.0
+                    ],
+                    [
+                        599.0,
+                        235.0
+                    ],
+                    [
+                        599.0,
+                        508.0
+                    ],
+                    [
+                        165.0,
+                        508.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9056869149208069,
+                "coordinate": [
+                    121,
+                    529,
+                    670,
+                    576
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        121.0,
+                        529.0
+                    ],
+                    [
+                        670.0,
+                        529.0
+                    ],
+                    [
+                        670.0,
+                        576.0
+                    ],
+                    [
+                        121.0,
+                        576.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.31209805607795715,
+                "coordinate": [
+                    284,
+                    614,
+                    478,
+                    641
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        284.0,
+                        614.0
+                    ],
+                    [
+                        478.0,
+                        614.0
+                    ],
+                    [
+                        478.0,
+                        641.0
+                    ],
+                    [
+                        284.0,
+                        641.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.8517149686813354,
+                "coordinate": [
+                    168,
+                    614,
+                    596,
+                    936
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        168.0,
+                        614.0
+                    ],
+                    [
+                        596.0,
+                        614.0
+                    ],
+                    [
+                        596.0,
+                        936.0
+                    ],
+                    [
+                        168.0,
+                        936.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7440289258956909,
+                "coordinate": [
+                    370,
+                    945,
+                    392,
+                    961
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        370.0,
+                        945.0
+                    ],
+                    [
+                        391.0,
+                        945.0
+                    ],
+                    [
+                        391.0,
+                        960.0
+                    ],
+                    [
+                        370.0,
+                        960.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

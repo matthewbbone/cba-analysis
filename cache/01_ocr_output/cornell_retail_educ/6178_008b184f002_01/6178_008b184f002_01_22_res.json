@@ -1,0 +1,827 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b184f002_01.pdf",
+    "page_index": 22,
+    "page_count": 73,
+    "width": 584,
+    "height": 985,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "14-4. Completed evaluation forms are to be kept in personnel folders of all teachers.",
+            "block_bbox": [
+                65,
+                62,
+                504,
+                101
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    65.0,
+                    62.0
+                ],
+                [
+                    504.0,
+                    62.0
+                ],
+                [
+                    504.0,
+                    101.0
+                ],
+                [
+                    65.0,
+                    101.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 15",
+            "block_bbox": [
+                228,
+                123,
+                341,
+                144
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    228.0,
+                    123.0
+                ],
+                [
+                    340.0,
+                    123.0
+                ],
+                [
+                    340.0,
+                    143.0
+                ],
+                [
+                    228.0,
+                    143.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "TEACHER MEETINGS",
+            "block_bbox": [
+                184,
+                151,
+                384,
+                173
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    184.0,
+                    151.0
+                ],
+                [
+                    383.0,
+                    151.0
+                ],
+                [
+                    383.0,
+                    172.0
+                ],
+                [
+                    184.0,
+                    172.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "15-1. Principals of individual schools or other duly authorized personnel shall notify the faculty of any meeting to be held at which their attendance is required at least two (2) days in advance of the meeting date, except in emergencies. Notice of the meeting shall include the proposed agenda.",
+            "block_bbox": [
+                66,
+                182,
+                506,
+                287
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    66.0,
+                    182.0
+                ],
+                [
+                    506.0,
+                    182.0
+                ],
+                [
+                    506.0,
+                    287.0
+                ],
+                [
+                    66.0,
+                    287.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "15-2. The Board and the Association recognize that meetings requiring attendance of the entire faculty of a building after regular school hours should only be called for such items as those which relate to the safety and welfare of students and teachers and for other significant purposes.",
+            "block_bbox": [
+                67,
+                291,
+                507,
+                395
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    67.0,
+                    291.0
+                ],
+                [
+                    507.0,
+                    291.0
+                ],
+                [
+                    507.0,
+                    395.0
+                ],
+                [
+                    67.0,
+                    395.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "15-3. Normally, no more than two (2) meetings per month shall be called and, normally, such meetings shall not exceed forty-five (45) minutes. If, in the judgment of the principal, it is necessary to hold any additional meetings, the Association representative will be notified, under normal circumstances, two (2) days in advance and, in all circumstances, in advance.",
+            "block_bbox": [
+                68,
+                403,
+                508,
+                541
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    68.0,
+                    403.0
+                ],
+                [
+                    508.0,
+                    403.0
+                ],
+                [
+                    508.0,
+                    541.0
+                ],
+                [
+                    68.0,
+                    541.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "15-4. The Association Director shall have an opportunity to speak during any meeting for a period normally not longer than five (5) minutes.",
+            "block_bbox": [
+                70,
+                549,
+                508,
+                603
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    70.0,
+                    549.0
+                ],
+                [
+                    508.0,
+                    549.0
+                ],
+                [
+                    508.0,
+                    603.0
+                ],
+                [
+                    70.0,
+                    603.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "15-5. Should the teachers in any building feel that an excessive number of meetings are being called, they may act according to the Grievance Procedure beginning at Step III.",
+            "block_bbox": [
+                70,
+                610,
+                509,
+                681
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    70.0,
+                    610.0
+                ],
+                [
+                    509.0,
+                    610.0
+                ],
+                [
+                    509.0,
+                    681.0
+                ],
+                [
+                    70.0,
+                    681.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 16",
+            "block_bbox": [
+                234,
+                699,
+                346,
+                719
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    234.0,
+                    699.0
+                ],
+                [
+                    345.0,
+                    699.0
+                ],
+                [
+                    345.0,
+                    718.0
+                ],
+                [
+                    234.0,
+                    718.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "PROMOTIONS",
+            "block_bbox": [
+                226,
+                727,
+                355,
+                747
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    226.0,
+                    727.0
+                ],
+                [
+                    354.0,
+                    727.0
+                ],
+                [
+                    354.0,
+                    746.0
+                ],
+                [
+                    226.0,
+                    746.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "16-1. The administrative and supervisory positions listed below shall be filled by Board appointment, in order of numerical ranking from appropriate eligibility lists.",
+            "block_bbox": [
+                71,
+                757,
+                510,
+                827
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    71.0,
+                    757.0
+                ],
+                [
+                    510.0,
+                    757.0
+                ],
+                [
+                    510.0,
+                    827.0
+                ],
+                [
+                    71.0,
+                    827.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "16-1.1. Numerical ranking shall be determined through competitive examinations conducted by the",
+            "block_bbox": [
+                73,
+                830,
+                511,
+                868
+            ],
+            "block_id": 11,
+            "block_order": 12,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    73.0,
+                    830.0
+                ],
+                [
+                    511.0,
+                    830.0
+                ],
+                [
+                    511.0,
+                    868.0
+                ],
+                [
+                    73.0,
+                    868.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "17",
+            "block_bbox": [
+                281,
+                889,
+                302,
+                905
+            ],
+            "block_id": 12,
+            "block_order": null,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    281.0,
+                    889.0
+                ],
+                [
+                    301.0,
+                    889.0
+                ],
+                [
+                    301.0,
+                    904.0
+                ],
+                [
+                    281.0,
+                    904.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8990399241447449,
+                "coordinate": [
+                    65,
+                    62,
+                    504,
+                    101
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        65.0,
+                        62.0
+                    ],
+                    [
+                        504.0,
+                        62.0
+                    ],
+                    [
+                        504.0,
+                        101.0
+                    ],
+                    [
+                        65.0,
+                        101.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7854172587394714,
+                "coordinate": [
+                    228,
+                    123,
+                    341,
+                    144
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        228.0,
+                        123.0
+                    ],
+                    [
+                        340.0,
+                        123.0
+                    ],
+                    [
+                        340.0,
+                        143.0
+                    ],
+                    [
+                        228.0,
+                        143.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8057051301002502,
+                "coordinate": [
+                    184,
+                    151,
+                    384,
+                    173
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        184.0,
+                        151.0
+                    ],
+                    [
+                        383.0,
+                        151.0
+                    ],
+                    [
+                        383.0,
+                        172.0
+                    ],
+                    [
+                        184.0,
+                        172.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9487237930297852,
+                "coordinate": [
+                    66,
+                    182,
+                    506,
+                    287
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        66.0,
+                        182.0
+                    ],
+                    [
+                        506.0,
+                        182.0
+                    ],
+                    [
+                        506.0,
+                        287.0
+                    ],
+                    [
+                        66.0,
+                        287.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9519279599189758,
+                "coordinate": [
+                    67,
+                    291,
+                    507,
+                    395
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        67.0,
+                        291.0
+                    ],
+                    [
+                        507.0,
+                        291.0
+                    ],
+                    [
+                        507.0,
+                        395.0
+                    ],
+                    [
+                        67.0,
+                        395.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9572087526321411,
+                "coordinate": [
+                    68,
+                    403,
+                    508,
+                    541
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        68.0,
+                        403.0
+                    ],
+                    [
+                        508.0,
+                        403.0
+                    ],
+                    [
+                        508.0,
+                        541.0
+                    ],
+                    [
+                        68.0,
+                        541.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.930510938167572,
+                "coordinate": [
+                    70,
+                    549,
+                    508,
+                    603
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        70.0,
+                        549.0
+                    ],
+                    [
+                        508.0,
+                        549.0
+                    ],
+                    [
+                        508.0,
+                        603.0
+                    ],
+                    [
+                        70.0,
+                        603.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9423525929450989,
+                "coordinate": [
+                    70,
+                    610,
+                    509,
+                    681
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        70.0,
+                        610.0
+                    ],
+                    [
+                        509.0,
+                        610.0
+                    ],
+                    [
+                        509.0,
+                        681.0
+                    ],
+                    [
+                        70.0,
+                        681.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8147549033164978,
+                "coordinate": [
+                    234,
+                    699,
+                    346,
+                    719
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        234.0,
+                        699.0
+                    ],
+                    [
+                        345.0,
+                        699.0
+                    ],
+                    [
+                        345.0,
+                        718.0
+                    ],
+                    [
+                        234.0,
+                        718.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8275104761123657,
+                "coordinate": [
+                    226,
+                    727,
+                    355,
+                    747
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        226.0,
+                        727.0
+                    ],
+                    [
+                        354.0,
+                        727.0
+                    ],
+                    [
+                        354.0,
+                        746.0
+                    ],
+                    [
+                        226.0,
+                        746.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.948615312576294,
+                "coordinate": [
+                    71,
+                    757,
+                    510,
+                    827
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        71.0,
+                        757.0
+                    ],
+                    [
+                        510.0,
+                        757.0
+                    ],
+                    [
+                        510.0,
+                        827.0
+                    ],
+                    [
+                        71.0,
+                        827.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9081835150718689,
+                "coordinate": [
+                    73,
+                    830,
+                    511,
+                    868
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        73.0,
+                        830.0
+                    ],
+                    [
+                        511.0,
+                        830.0
+                    ],
+                    [
+                        511.0,
+                        868.0
+                    ],
+                    [
+                        73.0,
+                        868.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7843791842460632,
+                "coordinate": [
+                    281,
+                    889,
+                    302,
+                    905
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        281.0,
+                        889.0
+                    ],
+                    [
+                        301.0,
+                        889.0
+                    ],
+                    [
+                        301.0,
+                        904.0
+                    ],
+                    [
+                        281.0,
+                        904.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

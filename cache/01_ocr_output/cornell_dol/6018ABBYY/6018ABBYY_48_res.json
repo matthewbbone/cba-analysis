@@ -1,0 +1,156 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 48,
+    "page_count": 287,
+    "width": 695,
+    "height": 1021,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td colspan=\"2\">ARTICLE VI</td></tr><tr><td>Department</td><td>Eligible Classifications (Type Shoe/Reimbursement Criteria)</td></tr><tr><td>• Metering</td><td>All non-clerical classifications.</td></tr><tr><td>• Property Operations and Maintenance</td><td>(Safety shoes only/once every twelve (12) months.</td></tr><tr><td>• Stock</td><td></td></tr><tr><td>• Field Service</td><td>General Service Technicians, Service Technicians and Service Operator classifications (safety shoes only/ once every twelve (12) months).</td></tr><tr><td>• Transportation</td><td>Field Service Dispatcher classification (work shoes/one (1) pair every four (4) years).</td></tr><tr><td>• Transportation</td><td>All non-clerical classifications (safety shoes only/once every twelve (12) months). Shoes damaged beyond repair will be replaced on an as needed exchange basis.</td></tr><tr><td>• Distribution</td><td>Field and Drafting Classifications (safety or work shoes/once every twelve (12) months.</td></tr><tr><td>Note: New hires or employees transferring into the Distribution Department on or after November 1, 1986, will be required to wear safety shoes in order to be eligible for reimbursement unless there is a valid, documented medical reason why said employee cannot wear safety shoes. Shoes damaged beyond repair will be replaced on an as needed exchange basis.</td><td>Field Clerk classification (work or safety shoes/one (1) pair every four (4) years).</td></tr><tr><td>• Meter Reading</td><td>Meter Readers may purchase shoes and receive reimbursement, as stipulated below, or purchase vendor shoes per the approved style listing. Replacements for vendor shoes will be provided by the Company.</td></tr></table>",
+            "block_bbox": [
+                50,
+                39,
+                661,
+                934
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    50.0,
+                    39.0
+                ],
+                [
+                    661.0,
+                    39.0
+                ],
+                [
+                    661.0,
+                    934.0
+                ],
+                [
+                    50.0,
+                    934.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "40",
+            "block_bbox": [
+                330,
+                949,
+                353,
+                965
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    330.0,
+                    949.0
+                ],
+                [
+                    352.0,
+                    949.0
+                ],
+                [
+                    352.0,
+                    964.0
+                ],
+                [
+                    330.0,
+                    964.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.8146430253982544,
+                "coordinate": [
+                    50,
+                    39,
+                    661,
+                    934
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        50.0,
+                        39.0
+                    ],
+                    [
+                        661.0,
+                        39.0
+                    ],
+                    [
+                        661.0,
+                        934.0
+                    ],
+                    [
+                        50.0,
+                        934.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6929969787597656,
+                "coordinate": [
+                    330,
+                    949,
+                    353,
+                    965
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        330.0,
+                        949.0
+                    ],
+                    [
+                        352.0,
+                        949.0
+                    ],
+                    [
+                        352.0,
+                        964.0
+                    ],
+                    [
+                        330.0,
+                        964.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

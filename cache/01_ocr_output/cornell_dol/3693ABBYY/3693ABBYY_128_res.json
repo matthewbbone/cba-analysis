@@ -1,0 +1,156 @@
+{
+    "input_path": "cache/cornell_dol/3693ABBYY.pdf",
+    "page_index": 128,
+    "page_count": 135,
+    "width": 803,
+    "height": 1223,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "content",
+            "block_content": "77163 FIELD MATERIAL & ACCOUNTABILITY WORKER 14\n77183 FIELD MATERIAL WORKER 11\n48843 FLIGHT LINE AVIONICS TECHNICIAN A 22\n48844 FLIGHT LINE AVIONICS TECHNICIAN B 14\n48846 FLIGHT LINE AVIONICS TECHNICIAN SR 24\n48953 FLIGHT TST MODIFICATION MECHANIC A 24\n48954 FLIGHT TST MODIFICATION MECHANIC B 14\n48993 FLOW SOLDER MACHINE OPERATOR 09\n49103 GARAGE SERVICE ATTENDANT 08\n49203 GARDENER 13\n50683 HELPER MAINTENANCE 09\n50903 INFRARED TECHNICIAN A 22\n50904 INFRARED TECHNICIAN B 14\n51033 INSPECTOR BONDING 14\n51043 INSPECTOR CIRCUIT BOARDS 11\n51143 INSPECTOR ELECTRO-OPTOMECHANICAL A 22\n51144 INSPECTOR ELECTRO-OPTOMECHANICAL B 14\n51146 INSPECTOR ELECTRO-OPTOMECHANICAL SR 24\n51203 INSPECTOR ELECTRONIC ASSEMBLY A 12\n51204 INSPECTOR ELECTRONIC ASSEMBLY B 07\n51243 INSPECTOR ELECTRONIC FINAL ACCEPTANCE 18\n51603 INSPECTOR FLIGHT & SERVICE 24\n51703 INSPECTOR GAUGES A 22\n51706 INSPECTOR GAUGES SR 24\n51793 INSPECTOR LABORATORY FABRICATION 23\n51903 INSPECTOR MACHINED PARTS A 22\n51904 INSPECTOR MACHINED PARTS B 14\n52424 INSPECTOR PRECISION ASSEMBLY B 13\n52603 INSPECTOR RECEIVING A 13\n52604 INSPECTOR RECEIVING B 09\n52703 INSPECTOR SHIPPING A 13\n52704 INSPECTOR SHIPPING B 09\n53004 INSPECTOR TOOLING B 18\n51923 INSPECTOR TOOLING/MACHINED PARTS PROTOTYPE 24\n51933 INSPECTOR TRIDENT TEAM B 15\n51934 INSPECTOR TRIDENT TEAM A 16\n53323 INSTRUMENT TECHNICIAN A 22\n53324 INSTRUMENT TECHNICIAN B 14\n53326 INSTRUMENT TECHNICIAN SR 24\n50963 ION IMPLANT OPERATOR 07\n54503 LASER EL OP TECH A 22\n54504 LASER EL OP TECH B 14\n54506 LASER EL OP TECH SR 24\n54553 LAYOUT ELECTRONIC WIRING A 22\n54554 LAYOUT ELECTRONIC WIRING B 14",
+            "block_bbox": [
+                121,
+                76,
+                697,
+                1105
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    121.0,
+                    76.0
+                ],
+                [
+                    697.0,
+                    76.0
+                ],
+                [
+                    697.0,
+                    1105.0
+                ],
+                [
+                    121.0,
+                    1105.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "120",
+            "block_bbox": [
+                381,
+                1142,
+                409,
+                1160
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    381.0,
+                    1142.0
+                ],
+                [
+                    408.0,
+                    1142.0
+                ],
+                [
+                    408.0,
+                    1159.0
+                ],
+                [
+                    381.0,
+                    1159.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.9835581183433533,
+                "coordinate": [
+                    121,
+                    76,
+                    697,
+                    1105
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        121.0,
+                        76.0
+                    ],
+                    [
+                        697.0,
+                        76.0
+                    ],
+                    [
+                        697.0,
+                        1105.0
+                    ],
+                    [
+                        121.0,
+                        1105.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.725124716758728,
+                "coordinate": [
+                    381,
+                    1142,
+                    409,
+                    1160
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        381.0,
+                        1142.0
+                    ],
+                    [
+                        408.0,
+                        1142.0
+                    ],
+                    [
+                        408.0,
+                        1159.0
+                    ],
+                    [
+                        381.0,
+                        1159.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

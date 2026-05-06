@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_dol/K830313_08_07combined.pdf",
+    "page_index": 75,
+    "page_count": 139,
+    "width": 1225,
+    "height": 1585,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Jeffco Schools: JCEA Negotiated Agreement",
+            "block_bbox": [
+                36,
+                30,
+                479,
+                57
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    30.0
+                ],
+                [
+                    479.0,
+                    30.0
+                ],
+                [
+                    479.0,
+                    57.0
+                ],
+                [
+                    36.0,
+                    57.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 1 of 1",
+            "block_bbox": [
+                1080,
+                29,
+                1194,
+                57
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    1080.0,
+                    29.0
+                ],
+                [
+                    1194.0,
+                    29.0
+                ],
+                [
+                    1194.0,
+                    57.0
+                ],
+                [
+                    1080.0,
+                    57.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 32",
+            "block_bbox": [
+                37,
+                69,
+                215,
+                99
+            ],
+            "block_id": 2,
+            "block_order": 1,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    37.0,
+                    69.0
+                ],
+                [
+                    215.0,
+                    69.0
+                ],
+                [
+                    215.0,
+                    99.0
+                ],
+                [
+                    37.0,
+                    99.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Application for Administrative Positions",
+            "block_bbox": [
+                37,
+                127,
+                388,
+                151
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    37.0,
+                    127.0
+                ],
+                [
+                    388.0,
+                    127.0
+                ],
+                [
+                    388.0,
+                    151.0
+                ],
+                [
+                    37.0,
+                    151.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "32-1 Openings for administrative positions, including the position of special projects administrator under programs funded by the federal government, will be posted in the following manner:",
+            "block_bbox": [
+                35,
+                175,
+                1130,
+                220
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    35.0,
+                    175.0
+                ],
+                [
+                    1130.0,
+                    175.0
+                ],
+                [
+                    1130.0,
+                    220.0
+                ],
+                [
+                    35.0,
+                    220.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "32-1-1 When school is in session, a notice must be in the District's current communication media and posted, whenever possible, at least ten (10) days before the final date when applications must be submitted. Each teacher who desires to apply for such vacancy shall submit his/her application in writing to the teacher employment administrator, or his/her designee, within the time limit specified in the notice.",
+            "block_bbox": [
+                36,
+                244,
+                1170,
+                311
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    244.0
+                ],
+                [
+                    1170.0,
+                    244.0
+                ],
+                [
+                    1170.0,
+                    311.0
+                ],
+                [
+                    36.0,
+                    311.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "32-1-2 Each teacher who has been an applicant and wishes to apply for an administrative position for which a vacancy may occur during the summer vacation period shall submit his/her application to the teacher employment administrator, or his/her designee, and provide an address where he/she can be reached during the summer vacation period. The teacher employment administrator, or his/her designee, shall notify such teacher of any vacancy.",
+            "block_bbox": [
+                36,
+                334,
+                1186,
+                419
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    334.0
+                ],
+                [
+                    1186.0,
+                    334.0
+                ],
+                [
+                    1186.0,
+                    419.0
+                ],
+                [
+                    36.0,
+                    419.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "32-2 All qualified teachers will be given adequate opportunity to make application for such positions, and the Board agrees to give consideration to the professional background of all applicants, the length of time each has been in the District, and other related factors. In filling vacancies, where applicant qualifications are equal, preference will be given to teachers already employed by the District. Each applicant not selected will be notified by the teacher employment administrator, or his/her designee, immediately upon the filling of the vacancy.",
+            "block_bbox": [
+                37,
+                442,
+                1187,
+                529
+            ],
+            "block_id": 7,
+            "block_order": 6,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    37.0,
+                    442.0
+                ],
+                [
+                    1187.0,
+                    442.0
+                ],
+                [
+                    1187.0,
+                    529.0
+                ],
+                [
+                    37.0,
+                    529.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Jefferson County Public Schools\nJefferson County, Colorado",
+            "block_bbox": [
+                472,
+                573,
+                761,
+                619
+            ],
+            "block_id": 8,
+            "block_order": 7,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    472.0,
+                    573.0
+                ],
+                [
+                    761.0,
+                    573.0
+                ],
+                [
+                    761.0,
+                    619.0
+                ],
+                [
+                    472.0,
+                    619.0
+                ]
+            ]
+        },
+        {
+            "block_label": "image",
+            "block_content": "",
+            "block_bbox": [
+                547,
+                638,
+                685,
+                709
+            ],
+            "block_id": 9,
+            "block_order": null,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    547.0,
+                    638.0
+                ],
+                [
+                    685.0,
+                    638.0
+                ],
+                [
+                    685.0,
+                    709.0
+                ],
+                [
+                    547.0,
+                    709.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "http://jeffcoweb.jeffco.k12.co.us/emprelations/jcea/article_32.html",
+            "block_bbox": [
+                39,
+                1543,
+                687,
+                1572
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    39.0,
+                    1543.0
+                ],
+                [
+                    687.0,
+                    1543.0
+                ],
+                [
+                    687.0,
+                    1572.0
+                ],
+                [
+                    39.0,
+                    1572.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "2/5/04",
+            "block_bbox": [
+                1128,
+                1543,
+                1195,
+                1568
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    1128.0,
+                    1543.0
+                ],
+                [
+                    1194.0,
+                    1543.0
+                ],
+                [
+                    1194.0,
+                    1567.0
+                ],
+                [
+                    1128.0,
+                    1567.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8298173546791077,
+                "coordinate": [
+                    36,
+                    30,
+                    479,
+                    57
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        36.0,
+                        30.0
+                    ],
+                    [
+                        479.0,
+                        30.0
+                    ],
+                    [
+                        479.0,
+                        57.0
+                    ],
+                    [
+                        36.0,
+                        57.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8273547887802124,
+                "coordinate": [
+                    1080,
+                    29,
+                    1194,
+                    57
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        1080.0,
+                        29.0
+                    ],
+                    [
+                        1194.0,
+                        29.0
+                    ],
+                    [
+                        1194.0,
+                        57.0
+                    ],
+                    [
+                        1080.0,
+                        57.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.4886574149131775,
+                "coordinate": [
+                    37,
+                    69,
+                    215,
+                    99
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        37.0,
+                        69.0
+                    ],
+                    [
+                        215.0,
+                        69.0
+                    ],
+                    [
+                        215.0,
+                        99.0
+                    ],
+                    [
+                        37.0,
+                        99.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8593004941940308,
+                "coordinate": [
+                    37,
+                    127,
+                    388,
+                    151
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        37.0,
+                        127.0
+                    ],
+                    [
+                        388.0,
+                        127.0
+                    ],
+                    [
+                        388.0,
+                        151.0
+                    ],
+                    [
+                        37.0,
+                        151.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9026254415512085,
+                "coordinate": [
+                    35,
+                    175,
+                    1130,
+                    220
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        35.0,
+                        175.0
+                    ],
+                    [
+                        1130.0,
+                        175.0
+                    ],
+                    [
+                        1130.0,
+                        220.0
+                    ],
+                    [
+                        35.0,
+                        220.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9279711842536926,
+                "coordinate": [
+                    36,
+                    244,
+                    1170,
+                    311
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        36.0,
+                        244.0
+                    ],
+                    [
+                        1170.0,
+                        244.0
+                    ],
+                    [
+                        1170.0,
+                        311.0
+                    ],
+                    [
+                        36.0,
+                        311.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9400392174720764,
+                "coordinate": [
+                    36,
+                    334,
+                    1186,
+                    419
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        36.0,
+                        334.0
+                    ],
+                    [
+                        1186.0,
+                        334.0
+                    ],
+                    [
+                        1186.0,
+                        419.0
+                    ],
+                    [
+                        36.0,
+                        419.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9440944790840149,
+                "coordinate": [
+                    37,
+                    442,
+                    1187,
+                    529
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        37.0,
+                        442.0
+                    ],
+                    [
+                        1187.0,
+                        442.0
+                    ],
+                    [
+                        1187.0,
+                        529.0
+                    ],
+                    [
+                        37.0,
+                        529.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.887939453125,
+                "coordinate": [
+                    472,
+                    573,
+                    761,
+                    619
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        472.0,
+                        573.0
+                    ],
+                    [
+                        761.0,
+                        573.0
+                    ],
+                    [
+                        761.0,
+                        619.0
+                    ],
+                    [
+                        472.0,
+                        619.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.7687870264053345,
+                "coordinate": [
+                    547,
+                    638,
+                    685,
+                    709
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        547.0,
+                        638.0
+                    ],
+                    [
+                        685.0,
+                        638.0
+                    ],
+                    [
+                        685.0,
+                        709.0
+                    ],
+                    [
+                        547.0,
+                        709.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8652470111846924,
+                "coordinate": [
+                    39,
+                    1543,
+                    687,
+                    1572
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        39.0,
+                        1543.0
+                    ],
+                    [
+                        687.0,
+                        1543.0
+                    ],
+                    [
+                        687.0,
+                        1572.0
+                    ],
+                    [
+                        39.0,
+                        1572.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.6642910838127136,
+                "coordinate": [
+                    1128,
+                    1543,
+                    1195,
+                    1568
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1128.0,
+                        1543.0
+                    ],
+                    [
+                        1194.0,
+                        1543.0
+                    ],
+                    [
+                        1194.0,
+                        1567.0
+                    ],
+                    [
+                        1128.0,
+                        1567.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

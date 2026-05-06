@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/3693ABBYY.pdf",
+    "page_index": 89,
+    "page_count": 135,
+    "width": 803,
+    "height": 1235,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE XXX\nSUPPLEMENTAL AGREEMENTS",
+            "block_bbox": [
+                297,
+                89,
+                536,
+                129
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    297.0,
+                    89.0
+                ],
+                [
+                    536.0,
+                    89.0
+                ],
+                [
+                    536.0,
+                    129.0
+                ],
+                [
+                    297.0,
+                    129.0
+                ]
+            ]
+        },
+        {
+            "block_label": "content",
+            "block_content": "The following Supplemental Agreements are included in the Collective Bargaining Agreement by reference to this Article.\n\n1. Interstate Sleeper-Cab Trucking Operations ..... 82\n2. Assembler Job Consolidation ..... 85\n3. Domestic Field Allowance and Travel to Temporary Work Location ..... 87\n4. Graveyard Shift Differential ..... 91\n5. Leaves of Absence for Union Officers ..... 92\n6. Release of Department Stewards ..... 93\n7. Offset Press Operators ..... 94\n8. Facilities in the San Diego Area ..... 95\n9. PDT Microwave Technician Microwave / RF Devices Job Consolidation ..... 96\n10. Raytheon Severance Pay Plan ..... 98\n11. Source Surveillance ..... 100\n12. Benefit Plan Dispute Resolutions ..... 101\n13. Drug Free Workplace ..... 102\n14. Paid Time Off Policy ..... 104\n15. Computer Maintenance ..... 105\n16. Displacement Rights and Clearances ..... 106\n17. Educational Assistance Program ..... 107\n18. Facilities Job Consolidation ..... 108\n19. Job Posting ..... 110\n20. Engineering and Bargaining Unit Work ..... 112\n21. Retiree Medical Benefits ..... 115\n22. Letters or Understanding ..... 116",
+            "block_bbox": [
+                52,
+                146,
+                738,
+                1026
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    52.0,
+                    146.0
+                ],
+                [
+                    738.0,
+                    146.0
+                ],
+                [
+                    738.0,
+                    1026.0
+                ],
+                [
+                    52.0,
+                    1026.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "81",
+            "block_bbox": [
+                388,
+                1157,
+                410,
+                1177
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    388.0,
+                    1157.0
+                ],
+                [
+                    409.0,
+                    1157.0
+                ],
+                [
+                    409.0,
+                    1176.0
+                ],
+                [
+                    388.0,
+                    1176.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8616478443145752,
+                "coordinate": [
+                    297,
+                    89,
+                    536,
+                    129
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        297.0,
+                        89.0
+                    ],
+                    [
+                        536.0,
+                        89.0
+                    ],
+                    [
+                        536.0,
+                        129.0
+                    ],
+                    [
+                        297.0,
+                        129.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.9742471575737,
+                "coordinate": [
+                    52,
+                    146,
+                    738,
+                    1026
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        52.0,
+                        146.0
+                    ],
+                    [
+                        738.0,
+                        146.0
+                    ],
+                    [
+                        738.0,
+                        1026.0
+                    ],
+                    [
+                        52.0,
+                        1026.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7390764355659485,
+                "coordinate": [
+                    388,
+                    1157,
+                    410,
+                    1177
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        388.0,
+                        1157.0
+                    ],
+                    [
+                        409.0,
+                        1157.0
+                    ],
+                    [
+                        409.0,
+                        1176.0
+                    ],
+                    [
+                        388.0,
+                        1176.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

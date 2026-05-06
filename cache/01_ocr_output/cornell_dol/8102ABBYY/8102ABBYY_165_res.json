@@ -1,0 +1,949 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 165,
+    "page_count": 439,
+    "width": 1235,
+    "height": 1592,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Appendix 1",
+            "block_bbox": [
+                826,
+                80,
+                907,
+                99
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    826.0,
+                    80.0
+                ],
+                [
+                    906.0,
+                    80.0
+                ],
+                [
+                    906.0,
+                    98.0
+                ],
+                [
+                    826.0,
+                    98.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Beginning at the point where 18th St. meets the Missouri River in Kansas City, Kansas, east along the southern shore of the Missouri River to Monroe Ave. in Kansas City, Missouri.",
+            "block_bbox": [
+                352,
+                120,
+                909,
+                175
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    352.0,
+                    120.0
+                ],
+                [
+                    909.0,
+                    120.0
+                ],
+                [
+                    909.0,
+                    175.0
+                ],
+                [
+                    352.0,
+                    175.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "LOS ANGELES ZONE",
+            "block_bbox": [
+                550,
+                194,
+                712,
+                213
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    550.0,
+                    194.0
+                ],
+                [
+                    711.0,
+                    194.0
+                ],
+                [
+                    711.0,
+                    212.0
+                ],
+                [
+                    550.0,
+                    212.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Eastern Boundary",
+            "block_bbox": [
+                352,
+                235,
+                481,
+                255
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    352.0,
+                    235.0
+                ],
+                [
+                    480.0,
+                    235.0
+                ],
+                [
+                    480.0,
+                    254.0
+                ],
+                [
+                    352.0,
+                    254.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Beginning at the intersection of the Pasadena Freeway and York Blvd., south and east along the Los Angeles city limits to Huntington Dr., then southwest on Huntington Dr. to Winchester Ave., then south on Winchester Ave. to the Long Beach Freeway, then south on the Long Beach Freeway to Imperial Hwy.",
+            "block_bbox": [
+                351,
+                274,
+                908,
+                348
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    351.0,
+                    274.0
+                ],
+                [
+                    908.0,
+                    274.0
+                ],
+                [
+                    908.0,
+                    348.0
+                ],
+                [
+                    351.0,
+                    348.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Southern Boundary",
+            "block_bbox": [
+                352,
+                367,
+                490,
+                387
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    352.0,
+                    367.0
+                ],
+                [
+                    489.0,
+                    367.0
+                ],
+                [
+                    489.0,
+                    386.0
+                ],
+                [
+                    352.0,
+                    386.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Beginning at the intersection of the Long Beach Freeway and Imperial Hwy., west on Imperial Hwy. to Harbor Freeway, then north on Harbor Freeway to Manchester Ave., then west on Manchester Ave. to Western Ave.",
+            "block_bbox": [
+                350,
+                406,
+                908,
+                462
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    350.0,
+                    406.0
+                ],
+                [
+                    908.0,
+                    406.0
+                ],
+                [
+                    908.0,
+                    462.0
+                ],
+                [
+                    350.0,
+                    462.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Western Boundary",
+            "block_bbox": [
+                351,
+                481,
+                485,
+                502
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    351.0,
+                    481.0
+                ],
+                [
+                    484.0,
+                    481.0
+                ],
+                [
+                    484.0,
+                    501.0
+                ],
+                [
+                    351.0,
+                    501.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Beginning at the intersection of Manchester Ave. and Western Ave. north on Western Ave. to the Santa Monica Freeway, then west on the Santa Monica Freeway to Fairfax Ave., then north on Fairfax Ave. to Hollywood Blvd.",
+            "block_bbox": [
+                350,
+                521,
+                907,
+                577
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    350.0,
+                    521.0
+                ],
+                [
+                    907.0,
+                    521.0
+                ],
+                [
+                    907.0,
+                    577.0
+                ],
+                [
+                    350.0,
+                    577.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Northern Boundary",
+            "block_bbox": [
+                351,
+                596,
+                488,
+                616
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    351.0,
+                    596.0
+                ],
+                [
+                    487.0,
+                    596.0
+                ],
+                [
+                    487.0,
+                    615.0
+                ],
+                [
+                    351.0,
+                    615.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Beginning at the intersection of Fairfax Ave. and Hollywood Blvd., east on Hollywood Blvd. to Highland Ave., then north on Highland Ave. to the Hollywood Freeway then south on Hollywood Freeway to Sunset Blvd., then east and southeast on Sunset Blvd. to Elysian Park Ave., then east on Elysian Park Ave. to Dodger Stadium, then clockwise around the northern half of Dodger Stadium to the Pasadena Freeway, then northeast on the Pasadena Freeway to York Blvd.",
+            "block_bbox": [
+                350,
+                636,
+                907,
+                760
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    350.0,
+                    636.0
+                ],
+                [
+                    907.0,
+                    636.0
+                ],
+                [
+                    907.0,
+                    760.0
+                ],
+                [
+                    350.0,
+                    760.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "MIAMI ZONE",
+            "block_bbox": [
+                580,
+                779,
+                678,
+                798
+            ],
+            "block_id": 11,
+            "block_order": 11,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    579.9999389648438,
+                    779.0
+                ],
+                [
+                    676.9999389648438,
+                    779.0
+                ],
+                [
+                    676.9999389648438,
+                    797.0
+                ],
+                [
+                    579.9999389648438,
+                    797.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Eastern Boundary",
+            "block_bbox": [
+                350,
+                819,
+                479,
+                840
+            ],
+            "block_id": 12,
+            "block_order": 12,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    350.0,
+                    819.0
+                ],
+                [
+                    478.0,
+                    819.0
+                ],
+                [
+                    478.0,
+                    839.0
+                ],
+                [
+                    350.0,
+                    839.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Beginning at the point on the Miami city limits where 87th St. meets Biscayne Bay, south along the western shore of Biscayne Bay to the Tamiami Trail.",
+            "block_bbox": [
+                349,
+                859,
+                906,
+                898
+            ],
+            "block_id": 13,
+            "block_order": 13,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    349.0,
+                    859.0
+                ],
+                [
+                    906.0,
+                    859.0
+                ],
+                [
+                    906.0,
+                    898.0
+                ],
+                [
+                    349.0,
+                    898.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "157",
+            "block_bbox": [
+                876,
+                911,
+                905,
+                928
+            ],
+            "block_id": 14,
+            "block_order": null,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    876.0,
+                    911.0
+                ],
+                [
+                    904.0,
+                    911.0
+                ],
+                [
+                    904.0,
+                    927.0
+                ],
+                [
+                    876.0,
+                    927.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8256361484527588,
+                "coordinate": [
+                    826,
+                    80,
+                    907,
+                    99
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        826.0,
+                        80.0
+                    ],
+                    [
+                        906.0,
+                        80.0
+                    ],
+                    [
+                        906.0,
+                        98.0
+                    ],
+                    [
+                        826.0,
+                        98.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9288114309310913,
+                "coordinate": [
+                    352,
+                    120,
+                    909,
+                    175
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        352.0,
+                        120.0
+                    ],
+                    [
+                        909.0,
+                        120.0
+                    ],
+                    [
+                        909.0,
+                        175.0
+                    ],
+                    [
+                        352.0,
+                        175.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7894123196601868,
+                "coordinate": [
+                    550,
+                    194,
+                    712,
+                    213
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        550.0,
+                        194.0
+                    ],
+                    [
+                        711.0,
+                        194.0
+                    ],
+                    [
+                        711.0,
+                        212.0
+                    ],
+                    [
+                        550.0,
+                        212.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8477583527565002,
+                "coordinate": [
+                    352,
+                    235,
+                    481,
+                    255
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        352.0,
+                        235.0
+                    ],
+                    [
+                        480.0,
+                        235.0
+                    ],
+                    [
+                        480.0,
+                        254.0
+                    ],
+                    [
+                        352.0,
+                        254.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9348515272140503,
+                "coordinate": [
+                    351,
+                    274,
+                    908,
+                    348
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        351.0,
+                        274.0
+                    ],
+                    [
+                        908.0,
+                        274.0
+                    ],
+                    [
+                        908.0,
+                        348.0
+                    ],
+                    [
+                        351.0,
+                        348.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8300660252571106,
+                "coordinate": [
+                    352,
+                    367,
+                    490,
+                    387
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        352.0,
+                        367.0
+                    ],
+                    [
+                        489.0,
+                        367.0
+                    ],
+                    [
+                        489.0,
+                        386.0
+                    ],
+                    [
+                        352.0,
+                        386.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9205377101898193,
+                "coordinate": [
+                    350,
+                    406,
+                    908,
+                    462
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        350.0,
+                        406.0
+                    ],
+                    [
+                        908.0,
+                        406.0
+                    ],
+                    [
+                        908.0,
+                        462.0
+                    ],
+                    [
+                        350.0,
+                        462.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8315365314483643,
+                "coordinate": [
+                    351,
+                    481,
+                    485,
+                    502
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        351.0,
+                        481.0
+                    ],
+                    [
+                        484.0,
+                        481.0
+                    ],
+                    [
+                        484.0,
+                        501.0
+                    ],
+                    [
+                        351.0,
+                        501.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9233901500701904,
+                "coordinate": [
+                    350,
+                    521,
+                    907,
+                    577
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        350.0,
+                        521.0
+                    ],
+                    [
+                        907.0,
+                        521.0
+                    ],
+                    [
+                        907.0,
+                        577.0
+                    ],
+                    [
+                        350.0,
+                        577.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8301771283149719,
+                "coordinate": [
+                    351,
+                    596,
+                    488,
+                    616
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        351.0,
+                        596.0
+                    ],
+                    [
+                        487.0,
+                        596.0
+                    ],
+                    [
+                        487.0,
+                        615.0
+                    ],
+                    [
+                        351.0,
+                        615.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.953713595867157,
+                "coordinate": [
+                    350,
+                    636,
+                    907,
+                    760
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        350.0,
+                        636.0
+                    ],
+                    [
+                        907.0,
+                        636.0
+                    ],
+                    [
+                        907.0,
+                        760.0
+                    ],
+                    [
+                        350.0,
+                        760.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8063493371009827,
+                "coordinate": [
+                    580,
+                    779,
+                    678,
+                    798
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        579.9999389648438,
+                        779.0
+                    ],
+                    [
+                        676.9999389648438,
+                        779.0
+                    ],
+                    [
+                        676.9999389648438,
+                        797.0
+                    ],
+                    [
+                        579.9999389648438,
+                        797.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8453077673912048,
+                "coordinate": [
+                    350,
+                    819,
+                    479,
+                    840
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        350.0,
+                        819.0
+                    ],
+                    [
+                        478.0,
+                        819.0
+                    ],
+                    [
+                        478.0,
+                        839.0
+                    ],
+                    [
+                        350.0,
+                        839.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.908023476600647,
+                "coordinate": [
+                    349,
+                    859,
+                    906,
+                    898
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        349.0,
+                        859.0
+                    ],
+                    [
+                        906.0,
+                        859.0
+                    ],
+                    [
+                        906.0,
+                        898.0
+                    ],
+                    [
+                        349.0,
+                        898.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7374725341796875,
+                "coordinate": [
+                    876,
+                    911,
+                    905,
+                    928
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        876.0,
+                        911.0
+                    ],
+                    [
+                        904.0,
+                        911.0
+                    ],
+                    [
+                        904.0,
+                        927.0
+                    ],
+                    [
+                        876.0,
+                        927.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/8433ABBYY.pdf",
+    "page_index": 61,
+    "page_count": 81,
+    "width": 483,
+    "height": 871,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "ployer during the month which the remittance report is made. For months in which no Brick-layers were employed, the remittance report of the Employer for that month shall so state. The reports required to be furnished pursuant to this section shall be received by the Bank on or before the twentieth (20th) day of each month.",
+            "block_bbox": [
+                143,
+                30,
+                477,
+                184
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    143.0,
+                    30.0
+                ],
+                [
+                    477.0,
+                    30.0
+                ],
+                [
+                    477.0,
+                    184.0
+                ],
+                [
+                    143.0,
+                    184.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(3) Each Employer shall furnish to the Union on a weekly basis a report listing the name and address of each job site where work covered by this Agreement was performed during the week for which the report is made and the name of the foreman employed on each job.",
+            "block_bbox": [
+                109,
+                202,
+                477,
+                319
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    109.0,
+                    202.0
+                ],
+                [
+                    477.0,
+                    202.0
+                ],
+                [
+                    477.0,
+                    319.0
+                ],
+                [
+                    109.0,
+                    319.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "B. If any Employer fails to file the required reports provided for above and such failure continues for seventy-two (72) hours after the Employer has received written notice thereof, the Union may stop any job of that Employer and/or withdraw the employees from such Employer's employment and may publicize such stoppage or attempted stoppage of work, until all required reports have been provided, anything in this Agreement to the contrary notwithstanding.",
+            "block_bbox": [
+                35,
+                336,
+                477,
+                493
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    35.0,
+                    336.0
+                ],
+                [
+                    477.0,
+                    336.0
+                ],
+                [
+                    477.0,
+                    493.0
+                ],
+                [
+                    35.0,
+                    493.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "33.32 Payment Bond:",
+            "block_bbox": [
+                36,
+                508,
+                223,
+                528
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    508.0
+                ],
+                [
+                    222.0,
+                    508.0
+                ],
+                [
+                    222.0,
+                    527.0
+                ],
+                [
+                    36.0,
+                    527.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A. Any Employer who is delinquent for sixty (60) days or more in making payments of wages, fringe benefit fund contributions, or any Union dues which have been deducted from the wages of employees pursuant to a check-off authorization shall, at the request of the Union, furnish a satisfactory surety company's bond to guarantee payment of wages and contributions to said funds and Union dues which have been deducted from the wages of an employee pursuant to a check-off authorization as required by this Agreement. The bond shall be in the amount of $5,000.00 if the Employer has three (3) employees or fewer working under this Agreement; in the amount of $15,000.00 if the Employer has four (4) to ten (10) such employees; in the amount of $30,000.00 if the Employer has eleven (11) to twenty (20) such employees; in",
+            "block_bbox": [
+                35,
+                547,
+                477,
+                818
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    35.0,
+                    547.0
+                ],
+                [
+                    477.0,
+                    547.0
+                ],
+                [
+                    477.0,
+                    818.0
+                ],
+                [
+                    35.0,
+                    818.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "58",
+            "block_bbox": [
+                275,
+                821,
+                294,
+                837
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    275.0,
+                    821.0
+                ],
+                [
+                    293.0,
+                    821.0
+                ],
+                [
+                    293.0,
+                    836.0
+                ],
+                [
+                    275.0,
+                    836.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9527179002761841,
+                "coordinate": [
+                    143,
+                    30,
+                    477,
+                    184
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        143.0,
+                        30.0
+                    ],
+                    [
+                        477.0,
+                        30.0
+                    ],
+                    [
+                        477.0,
+                        184.0
+                    ],
+                    [
+                        143.0,
+                        184.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9474964737892151,
+                "coordinate": [
+                    109,
+                    202,
+                    477,
+                    319
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        109.0,
+                        202.0
+                    ],
+                    [
+                        477.0,
+                        202.0
+                    ],
+                    [
+                        477.0,
+                        319.0
+                    ],
+                    [
+                        109.0,
+                        319.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9500492215156555,
+                "coordinate": [
+                    35,
+                    336,
+                    477,
+                    493
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        35.0,
+                        336.0
+                    ],
+                    [
+                        477.0,
+                        336.0
+                    ],
+                    [
+                        477.0,
+                        493.0
+                    ],
+                    [
+                        35.0,
+                        493.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8257067203521729,
+                "coordinate": [
+                    36,
+                    508,
+                    223,
+                    528
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        36.0,
+                        508.0
+                    ],
+                    [
+                        222.0,
+                        508.0
+                    ],
+                    [
+                        222.0,
+                        527.0
+                    ],
+                    [
+                        36.0,
+                        527.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9637664556503296,
+                "coordinate": [
+                    35,
+                    547,
+                    477,
+                    818
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        35.0,
+                        547.0
+                    ],
+                    [
+                        477.0,
+                        547.0
+                    ],
+                    [
+                        477.0,
+                        818.0
+                    ],
+                    [
+                        35.0,
+                        818.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7994835376739502,
+                "coordinate": [
+                    275,
+                    821,
+                    294,
+                    837
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        275.0,
+                        821.0
+                    ],
+                    [
+                        293.0,
+                        821.0
+                    ],
+                    [
+                        293.0,
+                        836.0
+                    ],
+                    [
+                        275.0,
+                        836.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

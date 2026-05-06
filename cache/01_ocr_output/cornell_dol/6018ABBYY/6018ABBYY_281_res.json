@@ -1,0 +1,95 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 281,
+    "page_count": 287,
+    "width": 724,
+    "height": 1005,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td colspan=\"2\">2001</td></tr></table>",
+            "block_bbox": [
+                86,
+                27,
+                629,
+                964
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    86.0,
+                    27.0
+                ],
+                [
+                    629.0,
+                    27.0
+                ],
+                [
+                    629.0,
+                    964.0
+                ],
+                [
+                    86.0,
+                    964.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.789757490158081,
+                "coordinate": [
+                    86,
+                    27,
+                    629,
+                    964
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        86.0,
+                        27.0
+                    ],
+                    [
+                        629.0,
+                        27.0
+                    ],
+                    [
+                        629.0,
+                        964.0
+                    ],
+                    [
+                        86.0,
+                        964.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 96,
+    "page_count": 287,
+    "width": 723,
+    "height": 1008,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "ARTICLE XII",
+            "block_bbox": [
+                47,
+                46,
+                134,
+                67
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    47.0,
+                    46.0
+                ],
+                [
+                    133.0,
+                    46.0
+                ],
+                [
+                    133.0,
+                    66.0
+                ],
+                [
+                    47.0,
+                    66.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "employee shall be entitled to all sick leave credits previously accrued and not used prior to his or her layoff.",
+            "block_bbox": [
+                74,
+                75,
+                629,
+                122
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    74.0,
+                    75.0
+                ],
+                [
+                    629.0,
+                    75.0
+                ],
+                [
+                    629.0,
+                    122.0
+                ],
+                [
+                    74.0,
+                    122.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(5) Rights of Employee Regarding Insurance Plan, Retirement Plan, etc. While an employee is on the preferred recall list, or if he or she is recalled within such period, or if his or her employment is terminated without recall, the employee's rights under the Group Life Insurance Plan, Retirement Plan, MichCon Traditional Medical Plan or Health Maintenance Insurance Plans, Group Dental Plan, Surviving Spouse Annuity Plan and Prescription Drug Co-Pay Plan shall be governed by the provisions of such plans.",
+            "block_bbox": [
+                48,
+                141,
+                629,
+                297
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    48.0,
+                    141.0
+                ],
+                [
+                    629.0,
+                    141.0
+                ],
+                [
+                    629.0,
+                    297.0
+                ],
+                [
+                    48.0,
+                    297.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(6) Notice of Recall and Reporting for Work – Notice of recall shall be mailed by registered mail to the employee's last address on the Company's records. It is the employee's responsibility to provide the Company with any address changes. The employee so notified must, within seven (7) days after such notice is mailed, report for an interview or advise the Company of his or her intentions with respect to such notice recall. Failure to report or advise the Company, as provided above, or failure to accept a job as offered in the department from which the employee was laid off shall result in his or her removal from the recall list and shall void such employee's seniority rights. Failure to accept a job as offered in any other department shall not alter his or her place on the preferred recall list, nor alter the employee's seniority rights.",
+            "block_bbox": [
+                46,
+                314,
+                629,
+                580
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    46.0,
+                    314.0
+                ],
+                [
+                    629.0,
+                    314.0
+                ],
+                [
+                    629.0,
+                    580.0
+                ],
+                [
+                    46.0,
+                    580.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(7) Seniority Rights of Union Officers, Departmental Representatives and Executive Board Members – The Union officers and departmental representatives referred to in Article II. (8), and up to thirty-five (35) Executive Board members shall, for the purpose of layoff, have top seniority rights.",
+            "block_bbox": [
+                46,
+                598,
+                628,
+                689
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    46.0,
+                    598.0
+                ],
+                [
+                    627.0,
+                    598.0
+                ],
+                [
+                    627.0,
+                    683.0
+                ],
+                [
+                    46.0,
+                    683.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "88",
+            "block_bbox": [
+                323,
+                933,
+                347,
+                949
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    323.0,
+                    933.0
+                ],
+                [
+                    346.0,
+                    933.0
+                ],
+                [
+                    346.0,
+                    948.0
+                ],
+                [
+                    323.0,
+                    948.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.47090137004852295,
+                "coordinate": [
+                    47,
+                    46,
+                    134,
+                    67
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        47.0,
+                        46.0
+                    ],
+                    [
+                        133.0,
+                        46.0
+                    ],
+                    [
+                        133.0,
+                        66.0
+                    ],
+                    [
+                        47.0,
+                        66.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8825119733810425,
+                "coordinate": [
+                    74,
+                    75,
+                    629,
+                    122
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        74.0,
+                        75.0
+                    ],
+                    [
+                        629.0,
+                        75.0
+                    ],
+                    [
+                        629.0,
+                        122.0
+                    ],
+                    [
+                        74.0,
+                        122.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9496146440505981,
+                "coordinate": [
+                    48,
+                    141,
+                    629,
+                    297
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        48.0,
+                        141.0
+                    ],
+                    [
+                        629.0,
+                        141.0
+                    ],
+                    [
+                        629.0,
+                        297.0
+                    ],
+                    [
+                        48.0,
+                        297.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9547827839851379,
+                "coordinate": [
+                    46,
+                    314,
+                    629,
+                    580
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        46.0,
+                        314.0
+                    ],
+                    [
+                        629.0,
+                        314.0
+                    ],
+                    [
+                        629.0,
+                        580.0
+                    ],
+                    [
+                        46.0,
+                        580.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9335852265357971,
+                "coordinate": [
+                    46,
+                    598,
+                    628,
+                    689
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        46.0,
+                        598.0
+                    ],
+                    [
+                        627.0,
+                        598.0
+                    ],
+                    [
+                        627.0,
+                        683.0
+                    ],
+                    [
+                        46.0,
+                        683.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.741769015789032,
+                "coordinate": [
+                    323,
+                    933,
+                    347,
+                    949
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        323.0,
+                        933.0
+                    ],
+                    [
+                        346.0,
+                        933.0
+                    ],
+                    [
+                        346.0,
+                        948.0
+                    ],
+                    [
+                        323.0,
+                        948.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

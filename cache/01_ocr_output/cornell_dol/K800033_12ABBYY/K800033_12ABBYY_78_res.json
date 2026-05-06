@@ -1,0 +1,156 @@
+{
+    "input_path": "cache/cornell_dol/K800033_12ABBYY.pdf",
+    "page_index": 78,
+    "page_count": 123,
+    "width": 1225,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td colspan=\"9\">Appendix A-2 Weekly Schedule of Weekly Salary Rates Unit 9</td></tr><tr><td></td><td></td><td></td><td></td><td>Effective January 2, 2000</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Job Group</td><td>Step 1</td><td>Step 2</td><td>Step 3</td><td>Step 4</td><td>Step 5</td><td>Step 6</td><td>Step 7</td><td>Promotion Factor</td></tr><tr><td>9</td><td>$423.85</td><td>$435.81</td><td>$447.77</td><td>$459.75</td><td>$471.73</td><td>$483.69</td><td>$507.64</td><td>$11.97</td></tr><tr><td>10</td><td>$441.37</td><td>$454.11</td><td>$466.86</td><td>$479.61</td><td>$492.35</td><td>$505.09</td><td>$530.58</td><td>$12.74</td></tr><tr><td>11</td><td>$458.70</td><td>$472.54</td><td>$486.39</td><td>$500.23</td><td>$514.06</td><td>$527.90</td><td>$555.59</td><td>$13.84</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>12</td><td>$479.68</td><td>$494.17</td><td>$508.67</td><td>$523.15</td><td>$537.64</td><td>$552.13</td><td>$581.11</td><td>$14.49</td></tr><tr><td>13</td><td>$507.22</td><td>$522.47</td><td>$537.73</td><td>$552.99</td><td>$568.25</td><td>$583.51</td><td>$614.01</td><td>$15.25</td></tr><tr><td>14</td><td>$532.93</td><td>$550.85</td><td>$568.79</td><td>$586.73</td><td>$604.65</td><td>$622.58</td><td>$658.45</td><td>$17.92</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>15</td><td>$560.99</td><td>$580.55</td><td>$600.11</td><td>$619.67</td><td>$639.22</td><td>$658.78</td><td>$697.90</td><td>$19.55</td></tr><tr><td>16</td><td>$589.82</td><td>$611.75</td><td>$633.64</td><td>$655.56</td><td>$677.47</td><td>$699.38</td><td>$743.22</td><td>$21.92</td></tr><tr><td>17</td><td>$623.89</td><td>$646.78</td><td>$669.66</td><td>$692.55</td><td>$715.43</td><td>$738.31</td><td>$784.08</td><td>$22.88</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>18</td><td>$652.64</td><td>$677.36</td><td>$702.08</td><td>$726.79</td><td>$751.51</td><td>$776.22</td><td>$825.65</td><td>$24.72</td></tr><tr><td>19</td><td>$684.98</td><td>$711.60</td><td>$738.22</td><td>$764.85</td><td>$791.48</td><td>$818.10</td><td>$871.35</td><td>$26.62</td></tr><tr><td>20</td><td>$720.36</td><td>$747.87</td><td>$775.38</td><td>$802.87</td><td>$830.39</td><td>$857.91</td><td>$912.91</td><td>$27.51</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>21</td><td>$752.68</td><td>$782.27</td><td>$811.90</td><td>$841.50</td><td>$871.09</td><td>$900.71</td><td>$959.91</td><td>$29.60</td></tr><tr><td>22</td><td>$788.87</td><td>$820.45</td><td>$852.03</td><td>$883.61</td><td>$915.18</td><td>$946.77</td><td>$1,009.92</td><td>$31.58</td></tr><tr><td>23</td><td>$827.90</td><td>$860.35</td><td>$892.79</td><td>$925.24</td><td>$957.68</td><td>$990.14</td><td>$1,055.02</td><td>$32.46</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>24</td><td>$864.14</td><td>$898.38</td><td>$932.63</td><td>$966.89</td><td>$1,001.15</td><td>$1,035.40</td><td>$1,103.90</td><td>$34.26</td></tr><tr><td>25</td><td>$900.46</td><td>$936.66</td><td>$972.87</td><td>$1,009.07</td><td>$1,045.27</td><td>$1,081.48</td><td>$1,153.87</td><td>$36.20</td></tr><tr><td>26</td><td>$932.73</td><td>$970.71</td><td>$1,008.71</td><td>$1,046.70</td><td>$1,084.65</td><td>$1,122.64</td><td>$1,198.61</td><td>$37.99</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>27</td><td>$971.79</td><td>$1,010.99</td><td>$1,050.18</td><td>$1,089.38</td><td>$1,128.57</td><td>$1,167.76</td><td>$1,246.16</td><td>$39.19</td></tr><tr><td>28</td><td>$1,010.30</td><td>$1,051.39</td><td>$1,092.48</td><td>$1,133.57</td><td>$1,174.67</td><td>$1,215.75</td><td>$1,297.94</td><td>$41.09</td></tr><tr><td>29</td><td>$1,047.97</td><td>$1,090.92</td><td>$1,133.89</td><td>$1,176.86</td><td>$1,219.82</td><td>$1,262.78</td><td>$1,348.70</td><td>$42.97</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>30</td><td>$1,091.73</td><td>$1,136.55</td><td>$1,181.37</td><td>$1,226.19</td><td>$1,271.01</td><td>$1,315.84</td><td>$1,405.50</td><td>$44.83</td></tr><tr><td>31</td><td>$1,131.75</td><td>$1,178.56</td><td>$1,225.36</td><td>$1,272.14</td><td>$1,318.95</td><td>$1,365.74</td><td>$1,459.33</td><td>$46.79</td></tr><tr><td>32</td><td>$1,175.60</td><td>$1,224.27</td><td>$1,272.94</td><td>$1,321.60</td><td>$1,370.26</td><td>$1,418.94</td><td>$1,516.25</td><td>$48.66</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>33</td><td>$1,219.43</td><td>$1,269.97</td><td>$1,320.50</td><td>$1,371.03</td><td>$1,421.59</td><td>$1,472.12</td><td>$1,573.19</td><td>$50.53</td></tr></table>",
+            "block_bbox": [
+                164,
+                265,
+                1059,
+                1044
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    164.0,
+                    265.0
+                ],
+                [
+                    1059.0,
+                    265.0
+                ],
+                [
+                    1059.0,
+                    1044.0
+                ],
+                [
+                    164.0,
+                    1044.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "74",
+            "block_bbox": [
+                601,
+                1462,
+                626,
+                1481
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    601.0,
+                    1462.0
+                ],
+                [
+                    625.0,
+                    1462.0
+                ],
+                [
+                    625.0,
+                    1480.0
+                ],
+                [
+                    601.0,
+                    1480.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9769272804260254,
+                "coordinate": [
+                    164,
+                    265,
+                    1059,
+                    1044
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        164.0,
+                        265.0
+                    ],
+                    [
+                        1059.0,
+                        265.0
+                    ],
+                    [
+                        1059.0,
+                        1044.0
+                    ],
+                    [
+                        164.0,
+                        1044.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7120895385742188,
+                "coordinate": [
+                    601,
+                    1462,
+                    626,
+                    1481
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        601.0,
+                        1462.0
+                    ],
+                    [
+                        625.0,
+                        1462.0
+                    ],
+                    [
+                        625.0,
+                        1480.0
+                    ],
+                    [
+                        601.0,
+                        1480.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,522 @@
+{
+    "input_path": "cache/cornell_dol/K811323_06_07combined.pdf",
+    "page_index": 1,
+    "page_count": 62,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "2005-2007",
+            "block_bbox": [
+                531,
+                282,
+                722,
+                325
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    531.0,
+                    282.0
+                ],
+                [
+                    722.0,
+                    282.0
+                ],
+                [
+                    722.0,
+                    325.0
+                ],
+                [
+                    531.0,
+                    325.0
+                ]
+            ]
+        },
+        {
+            "block_label": "image",
+            "block_content": "",
+            "block_bbox": [
+                277,
+                358,
+                464,
+                543
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    277.0,
+                    358.0
+                ],
+                [
+                    464.0,
+                    358.0
+                ],
+                [
+                    464.0,
+                    543.0
+                ],
+                [
+                    277.0,
+                    543.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "COLLECTIVE\nBARGAINING\nAGREEMENT",
+            "block_bbox": [
+                514,
+                374,
+                742,
+                511
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    514.0,
+                    374.0
+                ],
+                [
+                    742.0,
+                    374.0
+                ],
+                [
+                    742.0,
+                    511.0
+                ],
+                [
+                    514.0,
+                    511.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Between",
+            "block_bbox": [
+                560,
+                552,
+                694,
+                586
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    560.0,
+                    552.0
+                ],
+                [
+                    694.0,
+                    552.0
+                ],
+                [
+                    694.0,
+                    586.0
+                ],
+                [
+                    560.0,
+                    586.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "THE STATE OF OREGON\nDEPARTMENT OF ADMINISTRATIVE SERVICES",
+            "block_bbox": [
+                305,
+                627,
+                950,
+                718
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    305.0,
+                    627.0
+                ],
+                [
+                    950.0,
+                    627.0
+                ],
+                [
+                    950.0,
+                    718.0
+                ],
+                [
+                    305.0,
+                    718.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "THE DEPARTMENT OF CORRECTIONS\nSECURITY EMPLOYEES",
+            "block_bbox": [
+                359,
+                832,
+                895,
+                921
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    359.0,
+                    832.0
+                ],
+                [
+                    895.0,
+                    832.0
+                ],
+                [
+                    895.0,
+                    921.0
+                ],
+                [
+                    359.0,
+                    921.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "and the",
+            "block_bbox": [
+                568,
+                961,
+                686,
+                996
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    568.0,
+                    961.0
+                ],
+                [
+                    686.0,
+                    961.0
+                ],
+                [
+                    686.0,
+                    996.0
+                ],
+                [
+                    568.0,
+                    996.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "AMERICAN FEDERATION OF STATE, COUNTY,\nAND MUNICIPAL EMPLOYEES",
+            "block_bbox": [
+                294,
+                1036,
+                955,
+                1124
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    294.0,
+                    1036.0
+                ],
+                [
+                    955.0,
+                    1036.0
+                ],
+                [
+                    955.0,
+                    1124.0
+                ],
+                [
+                    294.0,
+                    1124.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8398695588111877,
+                "coordinate": [
+                    531,
+                    282,
+                    722,
+                    325
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        531.0,
+                        282.0
+                    ],
+                    [
+                        722.0,
+                        282.0
+                    ],
+                    [
+                        722.0,
+                        325.0
+                    ],
+                    [
+                        531.0,
+                        325.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.9059086441993713,
+                "coordinate": [
+                    277,
+                    358,
+                    464,
+                    543
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        277.0,
+                        358.0
+                    ],
+                    [
+                        464.0,
+                        358.0
+                    ],
+                    [
+                        464.0,
+                        543.0
+                    ],
+                    [
+                        277.0,
+                        543.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5419740080833435,
+                "coordinate": [
+                    514,
+                    374,
+                    742,
+                    511
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        514.0,
+                        374.0
+                    ],
+                    [
+                        742.0,
+                        374.0
+                    ],
+                    [
+                        742.0,
+                        511.0
+                    ],
+                    [
+                        514.0,
+                        511.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7290342450141907,
+                "coordinate": [
+                    560,
+                    552,
+                    694,
+                    586
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        560.0,
+                        552.0
+                    ],
+                    [
+                        694.0,
+                        552.0
+                    ],
+                    [
+                        694.0,
+                        586.0
+                    ],
+                    [
+                        560.0,
+                        586.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6023561954498291,
+                "coordinate": [
+                    305,
+                    627,
+                    950,
+                    718
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        305.0,
+                        627.0
+                    ],
+                    [
+                        950.0,
+                        627.0
+                    ],
+                    [
+                        950.0,
+                        718.0
+                    ],
+                    [
+                        305.0,
+                        718.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6071668267250061,
+                "coordinate": [
+                    359,
+                    832,
+                    895,
+                    921
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        359.0,
+                        832.0
+                    ],
+                    [
+                        895.0,
+                        832.0
+                    ],
+                    [
+                        895.0,
+                        921.0
+                    ],
+                    [
+                        359.0,
+                        921.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7650492787361145,
+                "coordinate": [
+                    568,
+                    961,
+                    686,
+                    996
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        568.0,
+                        961.0
+                    ],
+                    [
+                        686.0,
+                        961.0
+                    ],
+                    [
+                        686.0,
+                        996.0
+                    ],
+                    [
+                        568.0,
+                        996.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8787604570388794,
+                "coordinate": [
+                    294,
+                    1036,
+                    955,
+                    1124
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        294.0,
+                        1036.0
+                    ],
+                    [
+                        955.0,
+                        1036.0
+                    ],
+                    [
+                        955.0,
+                        1124.0
+                    ],
+                    [
+                        294.0,
+                        1124.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,3 @@
+## ARTICLE 20 Meet and Confer
+
+The parties agree that they shall meet no fewer than two times each semester to discuss the administration and interpretation of this agreement and any related issues. Such meetings shall not substitute for meetings required under Article 7, Dispute Resolution, with respect to the processing of any grievance.

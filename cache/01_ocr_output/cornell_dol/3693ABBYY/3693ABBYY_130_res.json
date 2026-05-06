@@ -1,0 +1,156 @@
+{
+    "input_path": "cache/cornell_dol/3693ABBYY.pdf",
+    "page_index": 130,
+    "page_count": 135,
+    "width": 803,
+    "height": 1223,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "content",
+            "block_content": "88524 PDT DIGITAL INTEGRATION B 14\n88523 PDT DIGITAL INTEGRATION A 22\n88526 PDT DIGITAL INTEGRATION SR 24\n88554 PDT ELECTROMAGNETIC B 14\n88553 PDT ELECTROMAGNETIC A 22\n88556 PDT ELECTROMAGNETIC SR 24\n88544 PDT ELECTRONIC COMPONENTS B 14\n88543 PDT ELECTRONIC COMPONENTS A 22\n88546 PDT ELECTRONIC COMPONENTS SR 24\n88574 PDT HYBRID MECHANICAL UNIT B 14\n88573 PDT HYBRID MECHANICAL UNIT A 22\n88576 PDT HYBRID MECHANICAL UNIT SR 24\n88564 PDT HYBRID MICRO-INTEGRATED CIRCUIT B 14\n88563 PDT HYBRID MICRO-INTEGRATED CIRCUIT A 22\n88566 PDT HYBRID MICRO-INTEGRATED CIRCUIT SR 24\n88586 PDT MW ANTENNA RCS SR 24\n88674 PDT MW COMPONENTS B 14\n88673 PDT MW COMPONENTS A 22\n88676 PDT MW COMPONENTS SR 24\n88664 PDT MW INTEGRATED CIRCUITS B 14\n88663 PDT MW INTEGRATED CIRCUITS A 22\n88666 PDT MW INTEGRATED CIRCUITS SR 24\n88604 PDT MW RECEIVER UNIT B 14\n88603 PDT MW RECEIVER UNIT A 22\n88606 PDT MW RECEIVER UNIT SR 24\n88686 PDT MW TECH MW/RF DEVICES SR 24\n88683 PDT MW TECH MW/RF DEVICES A 22\n88624 PDT MW TRANSMITTER UNIT B 14\n88623 PDT MW TRANSMITTER UNIT A 22\n88626 PDT MW Transmitter Unit SR 24\n88644 PDT OPTO-MECHANICAL COMPONENTS B 14\n88643 PDT OPTO-MECHANICAL COMPONENTS A 22\n88646 PDT OPTO-MECHANICAL COMPONENTS SR 24\n59553 PLASTICS FABRICATOR A 09\n59554 PLASTICS FABRICATOR B 06\n59556 PLASTICS FABRICATOR SR 14\n59573 PLASTICS TECHNICIAN A 22\n59574 PLASTICS TECHNICIAN B 14\n59576 PLASTICS TECHNICIAN SR 24\n59803 PLUMBER MAINTENANCE A 21\n59804 PLUMBER MAINTENANCE B 14\n60653 PRECISION MICROWAVE MECHANIC A 20\n60654 PRECISION MICROWAVE MECHANIC B 14\n60656 PRECISION MW MECHANIC SR 22\n60903 PROCESS HELPER A 06",
+            "block_bbox": [
+                109,
+                70,
+                684,
+                1104
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    109.0,
+                    70.0
+                ],
+                [
+                    684.0,
+                    70.0
+                ],
+                [
+                    684.0,
+                    1104.0
+                ],
+                [
+                    109.0,
+                    1104.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "122",
+            "block_bbox": [
+                379,
+                1142,
+                408,
+                1161
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    379.0,
+                    1142.0
+                ],
+                [
+                    407.0,
+                    1142.0
+                ],
+                [
+                    407.0,
+                    1160.0
+                ],
+                [
+                    379.0,
+                    1160.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.9821583032608032,
+                "coordinate": [
+                    109,
+                    70,
+                    684,
+                    1104
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        109.0,
+                        70.0
+                    ],
+                    [
+                        684.0,
+                        70.0
+                    ],
+                    [
+                        684.0,
+                        1104.0
+                    ],
+                    [
+                        109.0,
+                        1104.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7556108236312866,
+                "coordinate": [
+                    379,
+                    1142,
+                    408,
+                    1161
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        379.0,
+                        1142.0
+                    ],
+                    [
+                        407.0,
+                        1142.0
+                    ],
+                    [
+                        407.0,
+                        1160.0
+                    ],
+                    [
+                        379.0,
+                        1160.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

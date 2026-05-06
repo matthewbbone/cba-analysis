@@ -1,0 +1,336 @@
+{
+    "input_path": "cache/cornell_dol/4208Abbyy.pdf",
+    "page_index": 68,
+    "page_count": 128,
+    "width": 785,
+    "height": 1208,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Traditional Medical Plan</td><td>Coordinated Care Plans</td><td>1</td></tr><tr><td>b. Mail service</td><td>A $10 co-payment applies to prescription drug program</td><td>A mail service prescription drug program may not be available in all coordinated care plans.</td></tr><tr><td>A $10 co-payment applies to each covered generic prescription or refill obtained from the network&#x27;s mail service prescription</td><td>If a program is available, a $10 co-payment applies to each covered genetic prescription or refill obtained from the network&#x27;s mail service prescription drug program. A $60 co-payment applies to each covered non-formulary prescription or refill obtained from the network&#x27;s mail service prescription drug program. These co-payment amounts provide up to a ninety (90)-day supply.</td><td>2</td></tr><tr><td>A $15 co-payment applies to each covered eye examination performed by a network provider.</td><td>A $60 co-payment applies to each covered brand-name formulary prescription or refill obtained from the network&#x27;s mail service prescription drug program. A $60 co-payment applies to each covered brand-name formulary prescription or refill obtained from the network&#x27;s mail service prescription drug program. A $60 co-payment</td><td></td></tr></table>",
+            "block_bbox": [
+                72,
+                18,
+                738,
+                1133
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    72.0,
+                    18.0
+                ],
+                [
+                    738.0,
+                    18.0
+                ],
+                [
+                    738.0,
+                    1133.0
+                ],
+                [
+                    72.0,
+                    1133.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "A-15",
+            "block_bbox": [
+                367,
+                1161,
+                402,
+                1179
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    367.0,
+                    1161.0
+                ],
+                [
+                    401.0,
+                    1161.0
+                ],
+                [
+                    401.0,
+                    1178.0
+                ],
+                [
+                    367.0,
+                    1178.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.39578190445899963,
+                "coordinate": [
+                    72,
+                    18,
+                    738,
+                    1133
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        72.0,
+                        18.0
+                    ],
+                    [
+                        738.0,
+                        18.0
+                    ],
+                    [
+                        738.0,
+                        1133.0
+                    ],
+                    [
+                        72.0,
+                        1133.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.4965188205242157,
+                "coordinate": [
+                    77,
+                    75,
+                    708,
+                    689
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        77.0,
+                        75.0
+                    ],
+                    [
+                        708.0,
+                        75.0
+                    ],
+                    [
+                        708.0,
+                        689.0
+                    ],
+                    [
+                        77.0,
+                        689.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7131023406982422,
+                "coordinate": [
+                    73,
+                    701,
+                    233,
+                    723
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        72.99998474121094,
+                        700.9999389648438
+                    ],
+                    [
+                        231.9999542236328,
+                        700.9999389648438
+                    ],
+                    [
+                        231.9999542236328,
+                        721.9999389648438
+                    ],
+                    [
+                        72.99998474121094,
+                        721.9999389648438
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8274936676025391,
+                "coordinate": [
+                    71,
+                    740,
+                    701,
+                    782
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        71.0,
+                        740.0
+                    ],
+                    [
+                        701.0,
+                        740.0
+                    ],
+                    [
+                        701.0,
+                        782.0
+                    ],
+                    [
+                        71.0,
+                        782.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8751592636108398,
+                "coordinate": [
+                    72,
+                    797,
+                    701,
+                    858
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        72.0,
+                        797.0
+                    ],
+                    [
+                        701.0,
+                        797.0
+                    ],
+                    [
+                        701.0,
+                        858.0
+                    ],
+                    [
+                        72.0,
+                        858.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.7517269849777222,
+                "coordinate": [
+                    76,
+                    889,
+                    702,
+                    1144
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        76.0,
+                        889.0
+                    ],
+                    [
+                        702.0,
+                        889.0
+                    ],
+                    [
+                        702.0,
+                        1144.0
+                    ],
+                    [
+                        76.0,
+                        1144.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.678166925907135,
+                "coordinate": [
+                    367,
+                    1161,
+                    402,
+                    1179
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        367.0,
+                        1161.0
+                    ],
+                    [
+                        401.0,
+                        1161.0
+                    ],
+                    [
+                        401.0,
+                        1178.0
+                    ],
+                    [
+                        367.0,
+                        1178.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 2,
+                "label": "aside_text",
+                "score": 0.684222400188446,
+                "coordinate": [
+                    714,
+                    73,
+                    739,
+                    1142
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        714.0,
+                        73.0
+                    ],
+                    [
+                        739.0,
+                        73.0
+                    ],
+                    [
+                        739.0,
+                        1142.0
+                    ],
+                    [
+                        714.0,
+                        1142.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

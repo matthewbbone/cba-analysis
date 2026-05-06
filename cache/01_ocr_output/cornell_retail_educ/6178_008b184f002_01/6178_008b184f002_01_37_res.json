@@ -1,0 +1,949 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b184f002_01.pdf",
+    "page_index": 37,
+    "page_count": 73,
+    "width": 575,
+    "height": 978,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "31-2. Whenever a vacancy exists in a position classified as an extra-compensation position, notice shall be posted in all schools inviting those qualified to apply in writing. (The notice shall contain experience and training criteria in addition to the duties and requirements of the position.)",
+            "block_bbox": [
+                70,
+                80,
+                510,
+                185
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    70.0,
+                    80.0
+                ],
+                [
+                    510.0,
+                    80.0
+                ],
+                [
+                    510.0,
+                    185.0
+                ],
+                [
+                    70.0,
+                    185.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "31-2.1. In instances when immediate assignment is imperative, temporary assignment may be made. Notice of a vacancy shall be posted within five (5) school days after the vacancy occurs.",
+            "block_bbox": [
+                70,
+                192,
+                508,
+                263
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    69.99991607666016,
+                    192.0
+                ],
+                [
+                    506.3545837402344,
+                    187.978271484375
+                ],
+                [
+                    506.9999694824219,
+                    258.0
+                ],
+                [
+                    70.64530181884766,
+                    262.021728515625
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "31-2.2. Selection of personnel to fill such vacancies shall be made by the Board from an alphabetical list of those who apply within the time specified in the announcement.",
+            "block_bbox": [
+                70,
+                271,
+                508,
+                341
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    70.0,
+                    271.0
+                ],
+                [
+                    508.0,
+                    271.0
+                ],
+                [
+                    508.0,
+                    341.0
+                ],
+                [
+                    70.0,
+                    341.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "31-2.3. Notice of a vacancy shall be posted on the official school bulletin board in every school within five (5) school days after the vacancy occurs.",
+            "block_bbox": [
+                69,
+                350,
+                508,
+                404
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    69.0,
+                    350.0
+                ],
+                [
+                    508.0,
+                    350.0
+                ],
+                [
+                    508.0,
+                    404.0
+                ],
+                [
+                    69.0,
+                    404.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "31-2.4. This category shall include, but not be limited to, such positions as:",
+            "block_bbox": [
+                70,
+                412,
+                507,
+                448
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    70.0,
+                    412.0
+                ],
+                [
+                    507.0,
+                    412.0
+                ],
+                [
+                    507.0,
+                    448.0
+                ],
+                [
+                    70.0,
+                    448.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Summer School and After School Teaching",
+            "block_bbox": [
+                86,
+                449,
+                440,
+                468
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    86.0,
+                    449.0
+                ],
+                [
+                    439.0,
+                    449.0
+                ],
+                [
+                    439.0,
+                    467.0
+                ],
+                [
+                    86.0,
+                    467.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Accredited Evening High School Teaching",
+            "block_bbox": [
+                87,
+                467,
+                435,
+                485
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    87.0,
+                    467.0
+                ],
+                [
+                    434.0,
+                    467.0
+                ],
+                [
+                    434.0,
+                    484.0
+                ],
+                [
+                    87.0,
+                    484.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Athletic Coaches",
+            "block_bbox": [
+                87,
+                484,
+                230,
+                501
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    87.0,
+                    484.0
+                ],
+                [
+                    229.0,
+                    484.0
+                ],
+                [
+                    229.0,
+                    500.0
+                ],
+                [
+                    87.0,
+                    500.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Book and Curriculum Evaluation positions",
+            "block_bbox": [
+                87,
+                500,
+                437,
+                518
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    87.0,
+                    500.0
+                ],
+                [
+                    436.0,
+                    500.0
+                ],
+                [
+                    436.0,
+                    517.0
+                ],
+                [
+                    87.0,
+                    517.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Special Project positions",
+            "block_bbox": [
+                87,
+                517,
+                293,
+                536
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    87.0,
+                    517.0
+                ],
+                [
+                    292.0,
+                    517.0
+                ],
+                [
+                    292.0,
+                    535.0
+                ],
+                [
+                    87.0,
+                    535.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The Board shall select personnel to fill such positions on the basis of criteria published. Priority in selection of personnel for positions in the Accredited Evening High School shall be based on prior teaching experience in the Accredited Evening High School. Additional assignments shall be made from a list of those teachers in the Jersey City school system who apply in writing.",
+            "block_bbox": [
+                67,
+                544,
+                507,
+                681
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    67.0,
+                    544.0
+                ],
+                [
+                    507.0,
+                    544.0
+                ],
+                [
+                    507.0,
+                    681.0
+                ],
+                [
+                    67.0,
+                    681.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "31-2.5. New positions, if and when established by the Board, shall be filled, by selection by the Board from those who apply in writing.",
+            "block_bbox": [
+                67,
+                688,
+                505,
+                742
+            ],
+            "block_id": 11,
+            "block_order": 12,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    67.0,
+                    688.0
+                ],
+                [
+                    505.0,
+                    688.0
+                ],
+                [
+                    505.0,
+                    742.0
+                ],
+                [
+                    67.0,
+                    742.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "31-2.6. Notice of such new positions will be posted in all schools. Published notices will contain the duties, requirements and qualifications for the position.",
+            "block_bbox": [
+                67,
+                750,
+                506,
+                820
+            ],
+            "block_id": 12,
+            "block_order": 13,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    67.0,
+                    750.0
+                ],
+                [
+                    506.0,
+                    750.0
+                ],
+                [
+                    506.0,
+                    820.0
+                ],
+                [
+                    67.0,
+                    820.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "31-3. Summer school openings shall be publicized, and teachers shall be notified of the action taken as early as possible.",
+            "block_bbox": [
+                67,
+                828,
+                505,
+                881
+            ],
+            "block_id": 13,
+            "block_order": 14,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    67.0,
+                    828.0
+                ],
+                [
+                    505.0,
+                    828.0
+                ],
+                [
+                    505.0,
+                    881.0
+                ],
+                [
+                    67.0,
+                    881.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "32",
+            "block_bbox": [
+                273,
+                906,
+                294,
+                921
+            ],
+            "block_id": 14,
+            "block_order": null,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    273.0,
+                    906.0
+                ],
+                [
+                    293.0,
+                    906.0
+                ],
+                [
+                    293.0,
+                    920.0
+                ],
+                [
+                    273.0,
+                    920.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9467985033988953,
+                "coordinate": [
+                    70,
+                    80,
+                    510,
+                    185
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        70.0,
+                        80.0
+                    ],
+                    [
+                        510.0,
+                        80.0
+                    ],
+                    [
+                        510.0,
+                        185.0
+                    ],
+                    [
+                        70.0,
+                        185.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9331404566764832,
+                "coordinate": [
+                    70,
+                    192,
+                    508,
+                    263
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        69.99991607666016,
+                        192.0
+                    ],
+                    [
+                        506.3545837402344,
+                        187.978271484375
+                    ],
+                    [
+                        506.9999694824219,
+                        258.0
+                    ],
+                    [
+                        70.64530181884766,
+                        262.021728515625
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9329084157943726,
+                "coordinate": [
+                    70,
+                    271,
+                    508,
+                    341
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        70.0,
+                        271.0
+                    ],
+                    [
+                        508.0,
+                        271.0
+                    ],
+                    [
+                        508.0,
+                        341.0
+                    ],
+                    [
+                        70.0,
+                        341.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9233793020248413,
+                "coordinate": [
+                    69,
+                    350,
+                    508,
+                    404
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        69.0,
+                        350.0
+                    ],
+                    [
+                        508.0,
+                        350.0
+                    ],
+                    [
+                        508.0,
+                        404.0
+                    ],
+                    [
+                        69.0,
+                        404.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8623480796813965,
+                "coordinate": [
+                    70,
+                    412,
+                    507,
+                    448
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        70.0,
+                        412.0
+                    ],
+                    [
+                        507.0,
+                        412.0
+                    ],
+                    [
+                        507.0,
+                        448.0
+                    ],
+                    [
+                        70.0,
+                        448.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7349247932434082,
+                "coordinate": [
+                    86,
+                    449,
+                    440,
+                    468
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        86.0,
+                        449.0
+                    ],
+                    [
+                        439.0,
+                        449.0
+                    ],
+                    [
+                        439.0,
+                        467.0
+                    ],
+                    [
+                        86.0,
+                        467.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7277997732162476,
+                "coordinate": [
+                    87,
+                    467,
+                    435,
+                    485
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        87.0,
+                        467.0
+                    ],
+                    [
+                        434.0,
+                        467.0
+                    ],
+                    [
+                        434.0,
+                        484.0
+                    ],
+                    [
+                        87.0,
+                        484.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7973707318305969,
+                "coordinate": [
+                    87,
+                    484,
+                    230,
+                    501
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        87.0,
+                        484.0
+                    ],
+                    [
+                        229.0,
+                        484.0
+                    ],
+                    [
+                        229.0,
+                        500.0
+                    ],
+                    [
+                        87.0,
+                        500.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7101032733917236,
+                "coordinate": [
+                    87,
+                    500,
+                    437,
+                    518
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        87.0,
+                        500.0
+                    ],
+                    [
+                        436.0,
+                        500.0
+                    ],
+                    [
+                        436.0,
+                        517.0
+                    ],
+                    [
+                        87.0,
+                        517.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7192142009735107,
+                "coordinate": [
+                    87,
+                    517,
+                    293,
+                    536
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        87.0,
+                        517.0
+                    ],
+                    [
+                        292.0,
+                        517.0
+                    ],
+                    [
+                        292.0,
+                        535.0
+                    ],
+                    [
+                        87.0,
+                        535.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9569342136383057,
+                "coordinate": [
+                    67,
+                    544,
+                    507,
+                    681
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        67.0,
+                        544.0
+                    ],
+                    [
+                        507.0,
+                        544.0
+                    ],
+                    [
+                        507.0,
+                        681.0
+                    ],
+                    [
+                        67.0,
+                        681.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9231946468353271,
+                "coordinate": [
+                    67,
+                    688,
+                    505,
+                    742
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        67.0,
+                        688.0
+                    ],
+                    [
+                        505.0,
+                        688.0
+                    ],
+                    [
+                        505.0,
+                        742.0
+                    ],
+                    [
+                        67.0,
+                        742.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9464560151100159,
+                "coordinate": [
+                    67,
+                    750,
+                    506,
+                    820
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        67.0,
+                        750.0
+                    ],
+                    [
+                        506.0,
+                        750.0
+                    ],
+                    [
+                        506.0,
+                        820.0
+                    ],
+                    [
+                        67.0,
+                        820.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9241260290145874,
+                "coordinate": [
+                    67,
+                    828,
+                    505,
+                    881
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        67.0,
+                        828.0
+                    ],
+                    [
+                        505.0,
+                        828.0
+                    ],
+                    [
+                        505.0,
+                        881.0
+                    ],
+                    [
+                        67.0,
+                        881.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7732040882110596,
+                "coordinate": [
+                    273,
+                    906,
+                    294,
+                    921
+                ],
+                "order": 15,
+                "polygon_points": [
+                    [
+                        273.0,
+                        906.0
+                    ],
+                    [
+                        293.0,
+                        906.0
+                    ],
+                    [
+                        293.0,
+                        920.0
+                    ],
+                    [
+                        273.0,
+                        920.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,339 @@
+{
+    "input_path": "cache/dol_archive/document_3522.pdf",
+    "page_index": 34,
+    "page_count": 62,
+    "width": 1223,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Section 10.3 – Qualitative Retention Boards (QRB)",
+            "block_bbox": [
+                136,
+                160,
+                719,
+                188
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    136.0,
+                    160.0
+                ],
+                [
+                    719.0,
+                    160.0
+                ],
+                [
+                    719.0,
+                    188.0
+                ],
+                [
+                    136.0,
+                    188.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. A military technician (dual status) not selected for retention may submit a request for retention IAW AR 135-205 paragraph 2-17, which provides: A military technician may request retention in a current assignment provided they are not eligible for an immediate unreduced retirement annuity, have at least 15 years of service creditable toward such an annuity on the date they would otherwise be removed from the unit, and will become eligible for such unreduced annuity on or before the last day of the month in which they become 64 years of age. Requests must be submitted through the military chain of command to The Adjutant General within 15 days of announcement of the board results.",
+            "block_bbox": [
+                135,
+                215,
+                1087,
+                466
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    135.0,
+                    215.0
+                ],
+                [
+                    1087.0,
+                    215.0
+                ],
+                [
+                    1087.0,
+                    466.0
+                ],
+                [
+                    135.0,
+                    466.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. This section does not create a new entitlement and is not grievable.",
+            "block_bbox": [
+                134,
+                492,
+                897,
+                522
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    134.0,
+                    492.0
+                ],
+                [
+                    897.0,
+                    492.0
+                ],
+                [
+                    897.0,
+                    522.0
+                ],
+                [
+                    134.0,
+                    522.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "Agreement Between the Adjutant General of Michigan and the Laborers International Union of North America (LIUNA) September 2015",
+            "block_bbox": [
+                142,
+                1460,
+                933,
+                1499
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    142.0,
+                    1460.0
+                ],
+                [
+                    933.0,
+                    1460.0
+                ],
+                [
+                    933.0,
+                    1499.0
+                ],
+                [
+                    142.0,
+                    1499.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "35",
+            "block_bbox": [
+                1047,
+                1464,
+                1074,
+                1485
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    1047.0,
+                    1464.0
+                ],
+                [
+                    1073.0,
+                    1464.0
+                ],
+                [
+                    1073.0,
+                    1484.0
+                ],
+                [
+                    1047.0,
+                    1484.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.876545250415802,
+                "coordinate": [
+                    136,
+                    160,
+                    719,
+                    188
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        136.0,
+                        160.0
+                    ],
+                    [
+                        719.0,
+                        160.0
+                    ],
+                    [
+                        719.0,
+                        188.0
+                    ],
+                    [
+                        136.0,
+                        188.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9575124979019165,
+                "coordinate": [
+                    135,
+                    215,
+                    1087,
+                    466
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        135.0,
+                        215.0
+                    ],
+                    [
+                        1087.0,
+                        215.0
+                    ],
+                    [
+                        1087.0,
+                        466.0
+                    ],
+                    [
+                        135.0,
+                        466.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8602229952812195,
+                "coordinate": [
+                    134,
+                    492,
+                    897,
+                    522
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        134.0,
+                        492.0
+                    ],
+                    [
+                        897.0,
+                        492.0
+                    ],
+                    [
+                        897.0,
+                        522.0
+                    ],
+                    [
+                        134.0,
+                        522.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8808490037918091,
+                "coordinate": [
+                    142,
+                    1460,
+                    933,
+                    1499
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        142.0,
+                        1460.0
+                    ],
+                    [
+                        933.0,
+                        1460.0
+                    ],
+                    [
+                        933.0,
+                        1499.0
+                    ],
+                    [
+                        142.0,
+                        1499.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.751022458076477,
+                "coordinate": [
+                    1047,
+                    1464,
+                    1074,
+                    1485
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        1047.0,
+                        1464.0
+                    ],
+                    [
+                        1073.0,
+                        1464.0
+                    ],
+                    [
+                        1073.0,
+                        1484.0
+                    ],
+                    [
+                        1047.0,
+                        1484.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,949 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 205,
+    "page_count": 287,
+    "width": 739,
+    "height": 1026,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "CLASSIFICATIONS",
+            "block_bbox": [
+                568,
+                65,
+                679,
+                83
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    567.9999389648438,
+                    64.99999237060547
+                ],
+                [
+                    677.9999389648438,
+                    64.99999237060547
+                ],
+                [
+                    677.9999389648438,
+                    81.99999237060547
+                ],
+                [
+                    567.9999389648438,
+                    81.99999237060547
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "route quota for four (4) consecutive months, will have their pay reinstated to 100% upon meeting their route quota average eight (8) of twelve (12) months following the date of their reduction to 80%. Pay will be reinstated following the completion of the eight (8) months of meeting their route quota average.",
+            "block_bbox": [
+                147,
+                95,
+                681,
+                205
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    147.0,
+                    95.0
+                ],
+                [
+                    681.0,
+                    95.0
+                ],
+                [
+                    681.0,
+                    205.0
+                ],
+                [
+                    147.0,
+                    205.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "G.",
+            "block_bbox": [
+                123,
+                225,
+                147,
+                245
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    123.0,
+                    225.0
+                ],
+                [
+                    146.0,
+                    225.0
+                ],
+                [
+                    146.0,
+                    244.0
+                ],
+                [
+                    123.0,
+                    244.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "(1) Walking Routes",
+            "block_bbox": [
+                148,
+                247,
+                308,
+                269
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    148.0,
+                    247.0
+                ],
+                [
+                    306.99993896484375,
+                    247.0
+                ],
+                [
+                    306.99993896484375,
+                    268.0
+                ],
+                [
+                    147.99998474121094,
+                    268.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Rain",
+            "block_bbox": [
+                178,
+                279,
+                220,
+                300
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    178.0,
+                    279.0
+                ],
+                [
+                    219.0,
+                    279.0
+                ],
+                [
+                    219.0,
+                    299.0
+                ],
+                [
+                    178.0,
+                    299.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Under severe weather conditions, the decision to have Service Consumption Technicians read meters on walking routes will be made at the regional Director level. Technicians will not be required to read during lightning storms. Rain gear will be issued for all Technicians. It will be the Technician's responsibility to have the rain gear ready and available at all times. Lack of rain gear does not excuse a Technician from reading in the rain.",
+            "block_bbox": [
+                175,
+                311,
+                680,
+                467
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    175.0,
+                    311.0
+                ],
+                [
+                    680.0,
+                    311.0
+                ],
+                [
+                    680.0,
+                    467.0
+                ],
+                [
+                    175.0,
+                    467.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Wind-Chill",
+            "block_bbox": [
+                177,
+                486,
+                266,
+                509
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    177.0,
+                    486.0
+                ],
+                [
+                    265.0,
+                    486.0
+                ],
+                [
+                    265.0,
+                    508.0
+                ],
+                [
+                    177.0,
+                    508.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Under severe weather conditions, the decision to have Technicians read meters on walking routes will be made at the regional Director level.",
+            "block_bbox": [
+                175,
+                521,
+                679,
+                587
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    175.0,
+                    521.0
+                ],
+                [
+                    679.0,
+                    521.0
+                ],
+                [
+                    679.0,
+                    587.0
+                ],
+                [
+                    175.0,
+                    587.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "(2) Driving Routes",
+            "block_bbox": [
+                146,
+                609,
+                301,
+                631
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    146.0,
+                    609.0
+                ],
+                [
+                    300.0,
+                    609.0
+                ],
+                [
+                    300.0,
+                    630.0
+                ],
+                [
+                    146.0,
+                    630.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Service Consumption Technicians with driving routes will be expected to begin work at the start of their shift and perform their normal duties exercising care and caution regardless of rain or cold weather conditions at anytime.",
+            "block_bbox": [
+                174,
+                640,
+                678,
+                729
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    174.0,
+                    640.0
+                ],
+                [
+                    678.0,
+                    640.0
+                ],
+                [
+                    678.0,
+                    729.0
+                ],
+                [
+                    174.0,
+                    729.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "(3) Clothing",
+            "block_bbox": [
+                146,
+                750,
+                251,
+                772
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    146.0,
+                    750.0
+                ],
+                [
+                    250.0,
+                    750.0
+                ],
+                [
+                    250.0,
+                    771.0
+                ],
+                [
+                    146.0,
+                    771.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Service Consumption Technicians should be advised that when outside during these weather conditions, care and caution should be taken to ensure proper clothing is worn and exposed skin is covered.",
+            "block_bbox": [
+                174,
+                781,
+                678,
+                849
+            ],
+            "block_id": 11,
+            "block_order": 11,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    174.0,
+                    781.0
+                ],
+                [
+                    678.0,
+                    781.0
+                ],
+                [
+                    678.0,
+                    849.0
+                ],
+                [
+                    174.0,
+                    849.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "(4) Guidelines for Short Pants",
+            "block_bbox": [
+                145,
+                869,
+                389,
+                891
+            ],
+            "block_id": 12,
+            "block_order": 12,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    145.0,
+                    869.0
+                ],
+                [
+                    389.0,
+                    869.0
+                ],
+                [
+                    389.0,
+                    891.0
+                ],
+                [
+                    145.0,
+                    891.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Service Consumption Technicians who so desire will be allowed to wear short pants from May 1 to September 30 of each year. However,",
+            "block_bbox": [
+                174,
+                901,
+                678,
+                945
+            ],
+            "block_id": 13,
+            "block_order": 13,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    174.0,
+                    901.0
+                ],
+                [
+                    678.0,
+                    901.0
+                ],
+                [
+                    678.0,
+                    945.0
+                ],
+                [
+                    174.0,
+                    945.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "195",
+            "block_bbox": [
+                375,
+                957,
+                402,
+                972
+            ],
+            "block_id": 14,
+            "block_order": null,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    375.0,
+                    957.0
+                ],
+                [
+                    401.0,
+                    957.0
+                ],
+                [
+                    401.0,
+                    971.0
+                ],
+                [
+                    375.0,
+                    971.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8514108657836914,
+                "coordinate": [
+                    568,
+                    65,
+                    679,
+                    83
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        567.9999389648438,
+                        64.99999237060547
+                    ],
+                    [
+                        677.9999389648438,
+                        64.99999237060547
+                    ],
+                    [
+                        677.9999389648438,
+                        81.99999237060547
+                    ],
+                    [
+                        567.9999389648438,
+                        81.99999237060547
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9511982798576355,
+                "coordinate": [
+                    147,
+                    95,
+                    681,
+                    205
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        147.0,
+                        95.0
+                    ],
+                    [
+                        681.0,
+                        95.0
+                    ],
+                    [
+                        681.0,
+                        205.0
+                    ],
+                    [
+                        147.0,
+                        205.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7445112466812134,
+                "coordinate": [
+                    123,
+                    225,
+                    147,
+                    245
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        123.0,
+                        225.0
+                    ],
+                    [
+                        146.0,
+                        225.0
+                    ],
+                    [
+                        146.0,
+                        244.0
+                    ],
+                    [
+                        123.0,
+                        244.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8452295064926147,
+                "coordinate": [
+                    148,
+                    247,
+                    308,
+                    269
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        148.0,
+                        247.0
+                    ],
+                    [
+                        306.99993896484375,
+                        247.0
+                    ],
+                    [
+                        306.99993896484375,
+                        268.0
+                    ],
+                    [
+                        147.99998474121094,
+                        268.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7120086550712585,
+                "coordinate": [
+                    178,
+                    279,
+                    220,
+                    300
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        178.0,
+                        279.0
+                    ],
+                    [
+                        219.0,
+                        279.0
+                    ],
+                    [
+                        219.0,
+                        299.0
+                    ],
+                    [
+                        178.0,
+                        299.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.956773042678833,
+                "coordinate": [
+                    175,
+                    311,
+                    680,
+                    467
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        175.0,
+                        311.0
+                    ],
+                    [
+                        680.0,
+                        311.0
+                    ],
+                    [
+                        680.0,
+                        467.0
+                    ],
+                    [
+                        175.0,
+                        467.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8146733641624451,
+                "coordinate": [
+                    177,
+                    486,
+                    266,
+                    509
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        177.0,
+                        486.0
+                    ],
+                    [
+                        265.0,
+                        486.0
+                    ],
+                    [
+                        265.0,
+                        508.0
+                    ],
+                    [
+                        177.0,
+                        508.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9327133297920227,
+                "coordinate": [
+                    175,
+                    521,
+                    679,
+                    587
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        175.0,
+                        521.0
+                    ],
+                    [
+                        679.0,
+                        521.0
+                    ],
+                    [
+                        679.0,
+                        587.0
+                    ],
+                    [
+                        175.0,
+                        587.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8518629670143127,
+                "coordinate": [
+                    146,
+                    609,
+                    301,
+                    631
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        146.0,
+                        609.0
+                    ],
+                    [
+                        300.0,
+                        609.0
+                    ],
+                    [
+                        300.0,
+                        630.0
+                    ],
+                    [
+                        146.0,
+                        630.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9477066397666931,
+                "coordinate": [
+                    174,
+                    640,
+                    678,
+                    729
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        174.0,
+                        640.0
+                    ],
+                    [
+                        678.0,
+                        640.0
+                    ],
+                    [
+                        678.0,
+                        729.0
+                    ],
+                    [
+                        174.0,
+                        729.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8559061884880066,
+                "coordinate": [
+                    146,
+                    750,
+                    251,
+                    772
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        146.0,
+                        750.0
+                    ],
+                    [
+                        250.0,
+                        750.0
+                    ],
+                    [
+                        250.0,
+                        771.0
+                    ],
+                    [
+                        146.0,
+                        771.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.94818514585495,
+                "coordinate": [
+                    174,
+                    781,
+                    678,
+                    849
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        174.0,
+                        781.0
+                    ],
+                    [
+                        678.0,
+                        781.0
+                    ],
+                    [
+                        678.0,
+                        849.0
+                    ],
+                    [
+                        174.0,
+                        849.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8557373881340027,
+                "coordinate": [
+                    145,
+                    869,
+                    389,
+                    891
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        145.0,
+                        869.0
+                    ],
+                    [
+                        389.0,
+                        869.0
+                    ],
+                    [
+                        389.0,
+                        891.0
+                    ],
+                    [
+                        145.0,
+                        891.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9210471510887146,
+                "coordinate": [
+                    174,
+                    901,
+                    678,
+                    945
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        174.0,
+                        901.0
+                    ],
+                    [
+                        678.0,
+                        901.0
+                    ],
+                    [
+                        678.0,
+                        945.0
+                    ],
+                    [
+                        174.0,
+                        945.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7802610397338867,
+                "coordinate": [
+                    375,
+                    957,
+                    402,
+                    972
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        375.0,
+                        957.0
+                    ],
+                    [
+                        401.0,
+                        957.0
+                    ],
+                    [
+                        401.0,
+                        971.0
+                    ],
+                    [
+                        375.0,
+                        971.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

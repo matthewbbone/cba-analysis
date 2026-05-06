@@ -1,0 +1,888 @@
+{
+    "input_path": "cache/cornell_dol/K830313_08_07combined.pdf",
+    "page_index": 43,
+    "page_count": 139,
+    "width": 1228,
+    "height": 1587,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Jeffco Schools: JCEA Negotiated Agreement",
+            "block_bbox": [
+                37,
+                29,
+                478,
+                56
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    37.0,
+                    29.0
+                ],
+                [
+                    478.0,
+                    29.0
+                ],
+                [
+                    478.0,
+                    56.0
+                ],
+                [
+                    37.0,
+                    56.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 1 of 3",
+            "block_bbox": [
+                1080,
+                29,
+                1196,
+                57
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    1080.0,
+                    29.0
+                ],
+                [
+                    1196.0,
+                    29.0
+                ],
+                [
+                    1196.0,
+                    57.0
+                ],
+                [
+                    1080.0,
+                    57.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 18",
+            "block_bbox": [
+                37,
+                69,
+                213,
+                98
+            ],
+            "block_id": 2,
+            "block_order": 1,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    37.0,
+                    69.0
+                ],
+                [
+                    213.0,
+                    69.0
+                ],
+                [
+                    213.0,
+                    98.0
+                ],
+                [
+                    37.0,
+                    98.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Class Size",
+            "block_bbox": [
+                37,
+                126,
+                134,
+                150
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    37.0,
+                    126.0
+                ],
+                [
+                    133.0,
+                    126.0
+                ],
+                [
+                    133.0,
+                    149.0
+                ],
+                [
+                    37.0,
+                    149.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "18-1 The parties recognize that maximum attention to students by the teacher is desirable to ensure the high quality education that is the goal of both the Association and the Board. It is also acknowledged that the primary duty and responsibility of the teacher is to teach, and that the organization of the school, the school day and assignment of students to classes should be directed toward ensuring that the energies of the teacher are primarily utilized to this end.",
+            "block_bbox": [
+                36,
+                175,
+                1191,
+                261
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    175.0
+                ],
+                [
+                    1191.0,
+                    175.0
+                ],
+                [
+                    1191.0,
+                    261.0
+                ],
+                [
+                    36.0,
+                    261.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "18-2 The Board and the Association further acknowledge that proper class size is a function of many factors, including course objectives, subject matter, teaching process, scheduling patterns, and style of educational activity. Further, that every effort will be made to adjust class size to allow individual attention to each student when that is the required mode of instruction, and except in any emergency situations, pupils will not be placed in any classroom in larger numbers than the capacity of the teaching facilities and stations available in that classroom.",
+            "block_bbox": [
+                36,
+                284,
+                1195,
+                371
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    284.0
+                ],
+                [
+                    1195.0,
+                    284.0
+                ],
+                [
+                    1195.0,
+                    371.0
+                ],
+                [
+                    36.0,
+                    371.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "18-3 The Association and the Board recognize all grades as being very critical in the educational development of the student. Further, both parties recognize that class size has an effect upon the students' experience. Accordingly, it is mutually agreed that every effort will be made to limit the class size as follows:",
+            "block_bbox": [
+                36,
+                394,
+                1183,
+                459
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    394.0
+                ],
+                [
+                    1183.0,
+                    394.0
+                ],
+                [
+                    1183.0,
+                    459.0
+                ],
+                [
+                    36.0,
+                    459.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "18-3-1 Average class size in grades K-6 and Specials are defined below beginning in the fall of 2003:",
+            "block_bbox": [
+                99,
+                482,
+                910,
+                507
+            ],
+            "block_id": 7,
+            "block_order": 6,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    99.0,
+                    482.0
+                ],
+                [
+                    910.0,
+                    482.0
+                ],
+                [
+                    910.0,
+                    507.0
+                ],
+                [
+                    99.0,
+                    507.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Grade Level</td><td>Class Size Target</td><td>Acceptable Range</td></tr><tr><td>Kindergarten</td><td>24</td><td>22-26</td></tr><tr><td>Grades One, Two and Three</td><td>20</td><td>18-22</td></tr><tr><td>Grade Four</td><td>24</td><td>22-26</td></tr><tr><td>Grades Five and Six</td><td>28</td><td>26-30</td></tr></table>",
+            "block_bbox": [
+                241,
+                529,
+                989,
+                738
+            ],
+            "block_id": 8,
+            "block_order": null,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    241.0,
+                    529.0
+                ],
+                [
+                    989.0,
+                    529.0
+                ],
+                [
+                    989.0,
+                    738.0
+                ],
+                [
+                    241.0,
+                    738.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "Elementary Specials staffing is as follows:",
+            "block_bbox": [
+                99,
+                767,
+                439,
+                792
+            ],
+            "block_id": 9,
+            "block_order": null,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    99.0,
+                    767.0
+                ],
+                [
+                    439.0,
+                    767.0
+                ],
+                [
+                    439.0,
+                    792.0
+                ],
+                [
+                    99.0,
+                    792.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Enrollment 1-(5) 6</td><td>Specials FTE</td><td colspan=\"3\">Number Of Sections</td></tr><tr><td>000 to 111</td><td>0.5</td><td>2</td><td>3</td><td>4</td></tr><tr><td>112 to 185</td><td>1.0</td><td>5</td><td>6</td><td>7</td></tr><tr><td>186 to 259</td><td>1.5</td><td>8</td><td>9</td><td>10</td></tr><tr><td>260 to 333</td><td>2.0</td><td>11</td><td>12</td><td>13</td></tr><tr><td>334 to 407</td><td>2.5</td><td>14</td><td>15</td><td>16</td></tr><tr><td>408 to 481</td><td>3.0</td><td>17</td><td>18</td><td>19</td></tr><tr><td>482 to 555</td><td>3.5</td><td>20</td><td>21</td><td>22</td></tr><tr><td>556 to 629</td><td>4.0</td><td>23</td><td>24</td><td>25</td></tr><tr><td>630 to 703</td><td>4.5</td><td>26</td><td>27</td><td>28</td></tr><tr><td>704 to 777</td><td>5.0</td><td>29</td><td>30</td><td>31</td></tr><tr><td>778 to 851</td><td>5.5</td><td>32</td><td>33</td><td>34</td></tr><tr><td>852 to 925</td><td>6.0</td><td>35</td><td>36</td><td>37</td></tr></table>",
+            "block_bbox": [
+                242,
+                812,
+                991,
+                1460
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    242.0,
+                    812.0
+                ],
+                [
+                    991.0,
+                    812.0
+                ],
+                [
+                    991.0,
+                    1460.0
+                ],
+                [
+                    242.0,
+                    1460.0
+                ]
+            ]
+        },
+        {
+            "block_label": "vision_footnote",
+            "block_content": "When combining specials classes there may be no more than thirty (30) students per class.",
+            "block_bbox": [
+                98,
+                1463,
+                831,
+                1487
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    98.0,
+                    1463.0
+                ],
+                [
+                    831.0,
+                    1463.0
+                ],
+                [
+                    831.0,
+                    1487.0
+                ],
+                [
+                    98.0,
+                    1487.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "http://jeffcoweb.jeffco.k12.co.us/emprelations/jcea/article_18.html",
+            "block_bbox": [
+                39,
+                1543,
+                687,
+                1571
+            ],
+            "block_id": 12,
+            "block_order": null,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    39.0,
+                    1543.0
+                ],
+                [
+                    687.0,
+                    1543.0
+                ],
+                [
+                    687.0,
+                    1571.0
+                ],
+                [
+                    39.0,
+                    1571.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "2/5/04",
+            "block_bbox": [
+                1128,
+                1543,
+                1194,
+                1568
+            ],
+            "block_id": 13,
+            "block_order": null,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    1128.0,
+                    1543.0
+                ],
+                [
+                    1193.0,
+                    1543.0
+                ],
+                [
+                    1193.0,
+                    1567.0
+                ],
+                [
+                    1128.0,
+                    1567.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8421087861061096,
+                "coordinate": [
+                    37,
+                    29,
+                    478,
+                    56
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        37.0,
+                        29.0
+                    ],
+                    [
+                        478.0,
+                        29.0
+                    ],
+                    [
+                        478.0,
+                        56.0
+                    ],
+                    [
+                        37.0,
+                        56.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8095085024833679,
+                "coordinate": [
+                    1080,
+                    29,
+                    1196,
+                    57
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        1080.0,
+                        29.0
+                    ],
+                    [
+                        1196.0,
+                        29.0
+                    ],
+                    [
+                        1196.0,
+                        57.0
+                    ],
+                    [
+                        1080.0,
+                        57.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5463542938232422,
+                "coordinate": [
+                    37,
+                    69,
+                    213,
+                    98
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        37.0,
+                        69.0
+                    ],
+                    [
+                        213.0,
+                        69.0
+                    ],
+                    [
+                        213.0,
+                        98.0
+                    ],
+                    [
+                        37.0,
+                        98.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8162992000579834,
+                "coordinate": [
+                    37,
+                    126,
+                    134,
+                    150
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        37.0,
+                        126.0
+                    ],
+                    [
+                        133.0,
+                        126.0
+                    ],
+                    [
+                        133.0,
+                        149.0
+                    ],
+                    [
+                        37.0,
+                        149.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9363739490509033,
+                "coordinate": [
+                    36,
+                    175,
+                    1191,
+                    261
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        36.0,
+                        175.0
+                    ],
+                    [
+                        1191.0,
+                        175.0
+                    ],
+                    [
+                        1191.0,
+                        261.0
+                    ],
+                    [
+                        36.0,
+                        261.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9348119497299194,
+                "coordinate": [
+                    36,
+                    284,
+                    1195,
+                    371
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        36.0,
+                        284.0
+                    ],
+                    [
+                        1195.0,
+                        284.0
+                    ],
+                    [
+                        1195.0,
+                        371.0
+                    ],
+                    [
+                        36.0,
+                        371.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9230437874794006,
+                "coordinate": [
+                    36,
+                    394,
+                    1183,
+                    459
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        36.0,
+                        394.0
+                    ],
+                    [
+                        1183.0,
+                        394.0
+                    ],
+                    [
+                        1183.0,
+                        459.0
+                    ],
+                    [
+                        36.0,
+                        459.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5480178594589233,
+                "coordinate": [
+                    99,
+                    482,
+                    910,
+                    507
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        99.0,
+                        482.0
+                    ],
+                    [
+                        910.0,
+                        482.0
+                    ],
+                    [
+                        910.0,
+                        507.0
+                    ],
+                    [
+                        99.0,
+                        507.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9606091976165771,
+                "coordinate": [
+                    241,
+                    529,
+                    989,
+                    738
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        241.0,
+                        529.0
+                    ],
+                    [
+                        989.0,
+                        529.0
+                    ],
+                    [
+                        989.0,
+                        738.0
+                    ],
+                    [
+                        241.0,
+                        738.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.516466498374939,
+                "coordinate": [
+                    99,
+                    767,
+                    439,
+                    792
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        99.0,
+                        767.0
+                    ],
+                    [
+                        439.0,
+                        767.0
+                    ],
+                    [
+                        439.0,
+                        792.0
+                    ],
+                    [
+                        99.0,
+                        792.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9695152044296265,
+                "coordinate": [
+                    242,
+                    812,
+                    991,
+                    1460
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        242.0,
+                        812.0
+                    ],
+                    [
+                        991.0,
+                        812.0
+                    ],
+                    [
+                        991.0,
+                        1460.0
+                    ],
+                    [
+                        242.0,
+                        1460.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.8321042060852051,
+                "coordinate": [
+                    98,
+                    1463,
+                    831,
+                    1487
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        98.0,
+                        1463.0
+                    ],
+                    [
+                        831.0,
+                        1463.0
+                    ],
+                    [
+                        831.0,
+                        1487.0
+                    ],
+                    [
+                        98.0,
+                        1487.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8539153337478638,
+                "coordinate": [
+                    39,
+                    1543,
+                    687,
+                    1571
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        39.0,
+                        1543.0
+                    ],
+                    [
+                        687.0,
+                        1543.0
+                    ],
+                    [
+                        687.0,
+                        1571.0
+                    ],
+                    [
+                        39.0,
+                        1571.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.5025125741958618,
+                "coordinate": [
+                    1128,
+                    1543,
+                    1194,
+                    1568
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1128.0,
+                        1543.0
+                    ],
+                    [
+                        1193.0,
+                        1543.0
+                    ],
+                    [
+                        1193.0,
+                        1567.0
+                    ],
+                    [
+                        1128.0,
+                        1567.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

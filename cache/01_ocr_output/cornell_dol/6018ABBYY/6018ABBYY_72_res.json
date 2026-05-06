@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 72,
+    "page_count": 287,
+    "width": 724,
+    "height": 1010,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article VII",
+            "block_bbox": [
+                48,
+                51,
+                138,
+                70
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    48.0,
+                    51.0
+                ],
+                [
+                    137.0,
+                    51.0
+                ],
+                [
+                    137.0,
+                    69.0
+                ],
+                [
+                    48.0,
+                    69.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "minimum monthly pension benefit payable to age 62, including the \"supplement,\" will be $2,100. Union members between the ages of 62 and Social Security normal retirement age may elect to continue his/her Company pension supplement until Social Security normal retirement age or begin drawing on any Social Security benefits prior to that date. Members may elect either option but not both. Each member will be required to sign a Social Security Release form and Pension Withholding Authorization form allowing recovery of overpayments should the retiree begin receipt of Social Security benefits and not advise the Company. If an employee retires with 30 years of credited service before age 55, the minimum monthly pension benefit shown above will be reduced to reflect the number of additional years the minimum monthly pension benefit will be received.",
+            "block_bbox": [
+                104,
+                80,
+                629,
+                366
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    104.0,
+                    80.0
+                ],
+                [
+                    629.0,
+                    80.0
+                ],
+                [
+                    629.0,
+                    366.0
+                ],
+                [
+                    104.0,
+                    366.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(d) Early Retirement Reduction Factor – The Company subsidizes the reduction factor used to determine pensions for employees who retire under age 62. Employees retiring between 55 and 62 will have their pension reduced by 5% per year. True actuarial reduction factors will be used for retirements prior to age 55 and combined with the subsidized rate to form a blended rate.",
+            "block_bbox": [
+                76,
+                377,
+                628,
+                510
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    76.0,
+                    377.0
+                ],
+                [
+                    628.0,
+                    377.0
+                ],
+                [
+                    628.0,
+                    510.0
+                ],
+                [
+                    76.0,
+                    510.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(e) Early Retirement Date – You may retire anytime after your 55th birthday, provided your age (as of your last birthday) plus your Years of Credited Service (as of the last anniversary of your employment commencement date) total at least 70. If you want to retire at age 60, you must have at least 10 Years of Credited Service. You may retire earlier than your 55th birthday if you have at least 30 Years of Credited Service. If you retire early, you may choose to have your pension payments begin immediately on your 65th birthday or on the first of any month between these dates. If you choose to have payments begin at age 62 or later, you will receive a benefit figured the same way as the normal retirement benefit based on your Years of Credited Service and final average monthly earnings as of the day you retired. Payments will be smaller than if you had worked until your normal retirement date.",
+            "block_bbox": [
+                75,
+                522,
+                628,
+                809
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    75.0,
+                    522.0
+                ],
+                [
+                    628.0,
+                    522.0
+                ],
+                [
+                    628.0,
+                    809.0
+                ],
+                [
+                    75.0,
+                    809.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(f) Normal Retirement Date - Your Normal Retirement Age under the Retirement Plan is 65. You will be eligible for a Normal Retirement Benefit on your Normal Retirement Date - the first of the month that falls on or follows your 65th birthday.",
+            "block_bbox": [
+                76,
+                820,
+                626,
+                909
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    76.0,
+                    820.0
+                ],
+                [
+                    626.0,
+                    820.0
+                ],
+                [
+                    626.0,
+                    909.0
+                ],
+                [
+                    76.0,
+                    909.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "4",
+            "block_bbox": [
+                324,
+                939,
+                346,
+                955
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    324.0,
+                    939.0
+                ],
+                [
+                    345.0,
+                    939.0
+                ],
+                [
+                    345.0,
+                    954.0
+                ],
+                [
+                    324.0,
+                    954.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.712850034236908,
+                "coordinate": [
+                    48,
+                    51,
+                    138,
+                    70
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        48.0,
+                        51.0
+                    ],
+                    [
+                        137.0,
+                        51.0
+                    ],
+                    [
+                        137.0,
+                        69.0
+                    ],
+                    [
+                        48.0,
+                        69.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9562878608703613,
+                "coordinate": [
+                    104,
+                    80,
+                    629,
+                    366
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        104.0,
+                        80.0
+                    ],
+                    [
+                        629.0,
+                        80.0
+                    ],
+                    [
+                        629.0,
+                        366.0
+                    ],
+                    [
+                        104.0,
+                        366.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.950924813747406,
+                "coordinate": [
+                    76,
+                    377,
+                    628,
+                    510
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        76.0,
+                        377.0
+                    ],
+                    [
+                        628.0,
+                        377.0
+                    ],
+                    [
+                        628.0,
+                        510.0
+                    ],
+                    [
+                        76.0,
+                        510.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9602692723274231,
+                "coordinate": [
+                    75,
+                    522,
+                    628,
+                    809
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        75.0,
+                        522.0
+                    ],
+                    [
+                        628.0,
+                        522.0
+                    ],
+                    [
+                        628.0,
+                        809.0
+                    ],
+                    [
+                        75.0,
+                        809.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9372188448905945,
+                "coordinate": [
+                    76,
+                    820,
+                    626,
+                    909
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        76.0,
+                        820.0
+                    ],
+                    [
+                        626.0,
+                        820.0
+                    ],
+                    [
+                        626.0,
+                        909.0
+                    ],
+                    [
+                        76.0,
+                        909.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.729394257068634,
+                "coordinate": [
+                    324,
+                    939,
+                    346,
+                    955
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        324.0,
+                        939.0
+                    ],
+                    [
+                        345.0,
+                        939.0
+                    ],
+                    [
+                        345.0,
+                        954.0
+                    ],
+                    [
+                        324.0,
+                        954.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

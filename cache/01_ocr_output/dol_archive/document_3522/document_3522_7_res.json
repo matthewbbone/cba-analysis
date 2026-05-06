@@ -1,0 +1,705 @@
+{
+    "input_path": "cache/dol_archive/document_3522.pdf",
+    "page_index": 7,
+    "page_count": 62,
+    "width": 1223,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 1 - RECOGNITION",
+            "block_bbox": [
+                136,
+                154,
+                475,
+                183
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    136.0,
+                    154.0
+                ],
+                [
+                    475.0,
+                    154.0
+                ],
+                [
+                    475.0,
+                    183.0
+                ],
+                [
+                    136.0,
+                    183.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Section 1.1 - Recognition",
+            "block_bbox": [
+                135,
+                211,
+                447,
+                240
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    135.0,
+                    211.0
+                ],
+                [
+                    447.0,
+                    211.0
+                ],
+                [
+                    447.0,
+                    240.0
+                ],
+                [
+                    135.0,
+                    240.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "LIUNA is the exclusive representative for all dual status (DS) and non-dual status (NDS) General Schedule (GS) and Federal Wage Survey (WG/WL) Technicians of the MIARNG bargaining unit.",
+            "block_bbox": [
+                134,
+                266,
+                1055,
+                352
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    133.9998779296875,
+                    266.0
+                ],
+                [
+                    1053.9998779296875,
+                    274.00006103515625
+                ],
+                [
+                    1053.2608642578125,
+                    358.99365234375
+                ],
+                [
+                    133.26087951660156,
+                    350.99359130859375
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Section 1.2 – Excluded Positions",
+            "block_bbox": [
+                135,
+                377,
+                530,
+                406
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    135.0,
+                    377.0
+                ],
+                [
+                    530.0,
+                    377.0
+                ],
+                [
+                    530.0,
+                    406.0
+                ],
+                [
+                    135.0,
+                    406.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. Excluded from the Bargaining Unit covered by this agreement are Management officials, Supervisors, Employees (Technicians) engaged in personnel work in other than a purely clerical capacity, Confidential Employees (Technicians) as defined in Title 5 USC §7103 and §7112 (b), (2), (3), (4), (6), and (7) and military personnel as defined in 10 USC §976.",
+            "block_bbox": [
+                133,
+                434,
+                1069,
+                574
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    133.0,
+                    434.0
+                ],
+                [
+                    1069.0,
+                    434.0
+                ],
+                [
+                    1069.0,
+                    574.0
+                ],
+                [
+                    133.0,
+                    574.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. The Parties agree that as a result of reductions, reorganizations, reclassifications, and changes to the Agency's mission, it may become necessary to modify the bargaining unit status of a Technician's position that is not normally covered by one of the categories listed in Paragraph 1 (above). The agency will notify the union when it determines to change a given positions bargaining unit status. The notice will be given prior to effecting that change.",
+            "block_bbox": [
+                132,
+                600,
+                1070,
+                772
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    132.0,
+                    600.0
+                ],
+                [
+                    1070.0,
+                    600.0
+                ],
+                [
+                    1070.0,
+                    772.0
+                ],
+                [
+                    132.0,
+                    772.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3. The parties understand that the movement of an individual technician from a position that is included in the bargaining unit to a position excluded from the bargaining unit is not subject to this provision.",
+            "block_bbox": [
+                133,
+                794,
+                1010,
+                881
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    133.0,
+                    794.0
+                ],
+                [
+                    1010.0,
+                    794.0
+                ],
+                [
+                    1010.0,
+                    881.0
+                ],
+                [
+                    133.0,
+                    881.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Section 1.3 - Bargaining Unit Employees",
+            "block_bbox": [
+                132,
+                905,
+                627,
+                936
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    132.0,
+                    905.0
+                ],
+                [
+                    627.0,
+                    905.0
+                ],
+                [
+                    627.0,
+                    936.0
+                ],
+                [
+                    132.0,
+                    936.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The Agency shall provide to the Union, on a quarterly basis, a list of bargaining unit employees showing the name, pay plan, series, grade, position title, official duty station, and organization. Due to security and privacy concerns, the union will not provide this list or any part of the list to anyone not a union representative covered by this agreement. The union will secure this information from unauthorized access.",
+            "block_bbox": [
+                130,
+                961,
+                1069,
+                1104
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    130.0,
+                    969.0
+                ],
+                [
+                    1068.0,
+                    969.0
+                ],
+                [
+                    1068.0,
+                    1103.0
+                ],
+                [
+                    130.0,
+                    1103.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "Agreement Between the Adjutant General of Michigan and the Laborers International Union of North America (LIUNA) September 2015",
+            "block_bbox": [
+                140,
+                1456,
+                931,
+                1494
+            ],
+            "block_id": 9,
+            "block_order": null,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    140.0,
+                    1456.0
+                ],
+                [
+                    931.0,
+                    1456.0
+                ],
+                [
+                    931.0,
+                    1494.0
+                ],
+                [
+                    140.0,
+                    1494.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "8",
+            "block_bbox": [
+                1056,
+                1460,
+                1071,
+                1481
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    1056.0,
+                    1460.0
+                ],
+                [
+                    1070.0,
+                    1460.0
+                ],
+                [
+                    1070.0,
+                    1480.0
+                ],
+                [
+                    1056.0,
+                    1480.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8486396074295044,
+                "coordinate": [
+                    136,
+                    154,
+                    475,
+                    183
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        136.0,
+                        154.0
+                    ],
+                    [
+                        475.0,
+                        154.0
+                    ],
+                    [
+                        475.0,
+                        183.0
+                    ],
+                    [
+                        136.0,
+                        183.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8641873598098755,
+                "coordinate": [
+                    135,
+                    211,
+                    447,
+                    240
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        135.0,
+                        211.0
+                    ],
+                    [
+                        447.0,
+                        211.0
+                    ],
+                    [
+                        447.0,
+                        240.0
+                    ],
+                    [
+                        135.0,
+                        240.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9311017990112305,
+                "coordinate": [
+                    134,
+                    266,
+                    1055,
+                    352
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        133.9998779296875,
+                        266.0
+                    ],
+                    [
+                        1053.9998779296875,
+                        274.00006103515625
+                    ],
+                    [
+                        1053.2608642578125,
+                        358.99365234375
+                    ],
+                    [
+                        133.26087951660156,
+                        350.99359130859375
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8693848252296448,
+                "coordinate": [
+                    135,
+                    377,
+                    530,
+                    406
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        135.0,
+                        377.0
+                    ],
+                    [
+                        530.0,
+                        377.0
+                    ],
+                    [
+                        530.0,
+                        406.0
+                    ],
+                    [
+                        135.0,
+                        406.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9514661431312561,
+                "coordinate": [
+                    133,
+                    434,
+                    1069,
+                    574
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        133.0,
+                        434.0
+                    ],
+                    [
+                        1069.0,
+                        434.0
+                    ],
+                    [
+                        1069.0,
+                        574.0
+                    ],
+                    [
+                        133.0,
+                        574.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9536057114601135,
+                "coordinate": [
+                    132,
+                    600,
+                    1070,
+                    772
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        132.0,
+                        600.0
+                    ],
+                    [
+                        1070.0,
+                        600.0
+                    ],
+                    [
+                        1070.0,
+                        772.0
+                    ],
+                    [
+                        132.0,
+                        772.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9410480856895447,
+                "coordinate": [
+                    133,
+                    794,
+                    1010,
+                    881
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        133.0,
+                        794.0
+                    ],
+                    [
+                        1010.0,
+                        794.0
+                    ],
+                    [
+                        1010.0,
+                        881.0
+                    ],
+                    [
+                        133.0,
+                        881.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8616225123405457,
+                "coordinate": [
+                    132,
+                    905,
+                    627,
+                    936
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        132.0,
+                        905.0
+                    ],
+                    [
+                        627.0,
+                        905.0
+                    ],
+                    [
+                        627.0,
+                        936.0
+                    ],
+                    [
+                        132.0,
+                        936.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9541634321212769,
+                "coordinate": [
+                    130,
+                    961,
+                    1069,
+                    1104
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        130.0,
+                        969.0
+                    ],
+                    [
+                        1068.0,
+                        969.0
+                    ],
+                    [
+                        1068.0,
+                        1103.0
+                    ],
+                    [
+                        130.0,
+                        1103.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8748742938041687,
+                "coordinate": [
+                    140,
+                    1456,
+                    931,
+                    1494
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        140.0,
+                        1456.0
+                    ],
+                    [
+                        931.0,
+                        1456.0
+                    ],
+                    [
+                        931.0,
+                        1494.0
+                    ],
+                    [
+                        140.0,
+                        1494.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7005895376205444,
+                "coordinate": [
+                    1056,
+                    1460,
+                    1071,
+                    1481
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        1056.0,
+                        1460.0
+                    ],
+                    [
+                        1070.0,
+                        1460.0
+                    ],
+                    [
+                        1070.0,
+                        1480.0
+                    ],
+                    [
+                        1056.0,
+                        1480.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,247 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 2,
+    "page_count": 206,
+    "width": 1224,
+    "height": 2016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "PATIENT CARE TECHNICAL UNIT AGREEMENT\nTABLE OF CONTENTS",
+            "block_bbox": [
+                375,
+                27,
+                929,
+                87
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    375.0,
+                    27.0
+                ],
+                [
+                    929.0,
+                    27.0
+                ],
+                [
+                    929.0,
+                    87.0
+                ],
+                [
+                    375.0,
+                    87.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "PAGE NO.",
+            "block_bbox": [
+                927,
+                111,
+                1046,
+                142
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    927.0,
+                    111.0
+                ],
+                [
+                    1046.0,
+                    111.0
+                ],
+                [
+                    1046.0,
+                    142.0
+                ],
+                [
+                    927.0,
+                    142.0
+                ]
+            ]
+        },
+        {
+            "block_label": "content",
+            "block_content": "ARTICLE TITLE PAGE N\n\n1 Access ..... 1\n2 Agreement ..... 5\n3 Arbitration Procedure ..... 9\n4 Benefits ..... 13\n5 Contracting Out ..... 15\n6 Development ..... 16\n7 Discipline and Dismissal ..... 18\n8 Duration of Agreement ..... 19\n9 Grievance Procedure ..... 20\n10 Health and Safety ..... 27\n11 Holidays ..... 30\n12 Hours of Work ..... 32\n13 Layoff and Reduction in Time ..... 36\n14 Leaves of Absence ..... 41\n15 Leaves of Absence for Union Business ..... 55\n16 Management Rights ..... 57\n17 Medical Separation ..... 59\n18 Miscellaneous ..... 60\n19 Moving Expenses ..... 62\n20 Multiple Appointments ..... 62\n21 Non-discrimination in Employment ..... 63\n22 No Strikes ..... 63\n23 Out of Classification Assignments ..... 64\n24 Parking ..... 65\n25 Past Practice Not Covered By Agreement ..... 65\n26 Payroll Deductions ..... 66\n27 Performance Evaluation ..... 68\n28 Personnel Files ..... 69\n29 Position Appointments ..... 70\n30 Probationary Period ..... 73\n31 Reasonable Accommodation ..... 74\n32 Release Time for Negotiations ..... 75\n33 Resignation ..... 75\n34 Severability ..... 76\n35 Shift Differential ..... 76\n36 Sick Leave ..... 77\n37 Staffing Committee ..... 81\n38 Transfer and Promotion ..... 82\n39 Travel Reimbursement ..... 84\n40 Uniforms ..... 85\n41 Vacation Leave ..... 85\n42 Wages ..... 88\n43 Waiver ..... 90\n44 Work-Incurred Injury of Illness ..... 90\n45 Work Rules ..... 93\n46 Memorandum of the Negotiators ..... 94\n47 Execution of Agreement/ Bargaining Team Members ..... 95-96\n48 Appendix A: Salary Range Tables ..... 97-173\n49 Appendix B: Vacation Credit Tables ..... 174-175\n50 Appendix C: Enumeration of University Benefits ..... 176-178\n51 Appendix D: Meeting Rooms and Bulletin Boards ..... 179-186\n52 Appendix E: Sideletters ..... 187-195\n53 Agricultural Workers ..... 187\n54 Capital Accumulation Provision (CAP) ..... 188\n55 Contracting Guidelines ..... 189\n56 Contracting Out ..... 190\n57 Hours of Work – Overtime Compensation for Alternative Schedules ..... 191\n58 Probationary Period ..... 192\n59 Staffing Committee ..... 193\n60 University Benefits ..... 194\n61 Wages ..... 195\n62 Index ..... 196-203",
+            "block_bbox": [
+                139,
+                116,
+                1020,
+                1915
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    139.0,
+                    116.0
+                ],
+                [
+                    1020.0,
+                    116.0
+                ],
+                [
+                    1020.0,
+                    1915.0
+                ],
+                [
+                    139.0,
+                    1915.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 2,
+                "label": "aside_text",
+                "score": 0.4005681276321411,
+                "coordinate": [
+                    143,
+                    149,
+                    180,
+                    1413
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        143.0,
+                        149.0
+                    ],
+                    [
+                        180.0,
+                        149.0
+                    ],
+                    [
+                        180.0,
+                        1413.0
+                    ],
+                    [
+                        143.0,
+                        1413.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5658972859382629,
+                "coordinate": [
+                    375,
+                    27,
+                    929,
+                    87
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        375.0,
+                        27.0
+                    ],
+                    [
+                        929.0,
+                        27.0
+                    ],
+                    [
+                        929.0,
+                        87.0
+                    ],
+                    [
+                        375.0,
+                        87.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.45109307765960693,
+                "coordinate": [
+                    927,
+                    111,
+                    1046,
+                    142
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        927.0,
+                        111.0
+                    ],
+                    [
+                        1046.0,
+                        111.0
+                    ],
+                    [
+                        1046.0,
+                        142.0
+                    ],
+                    [
+                        927.0,
+                        142.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.9654202461242676,
+                "coordinate": [
+                    139,
+                    116,
+                    1020,
+                    1915
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        139.0,
+                        116.0
+                    ],
+                    [
+                        1020.0,
+                        116.0
+                    ],
+                    [
+                        1020.0,
+                        1915.0
+                    ],
+                    [
+                        139.0,
+                        1915.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

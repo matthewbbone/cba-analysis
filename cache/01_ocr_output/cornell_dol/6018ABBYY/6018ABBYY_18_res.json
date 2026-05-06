@@ -1,0 +1,487 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 18,
+    "page_count": 287,
+    "width": 726,
+    "height": 1006,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE II",
+            "block_bbox": [
+                51,
+                51,
+                126,
+                73
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    51.0,
+                    51.0
+                ],
+                [
+                    125.0,
+                    51.0
+                ],
+                [
+                    125.0,
+                    72.0
+                ],
+                [
+                    51.0,
+                    72.0
+                ]
+            ]
+        },
+        {
+            "block_label": "abstract",
+            "block_content": "of the grievance procedure and also prior to beginning the arbitration procedure, shall advise the grievant, in writing, of the reasonable costs of using such procedure and shall have no obligation to proceed on behalf of the employee prior to receiving the full payment of such costs. Moreover, should the costs of the grievance-arbitration procedure exceed the Union's estimate of the reasonable costs, the employee shall be thereafter liable for any such difference.\nFurther, it is understood that the Union shall have the responsibility for collecting any of the above mentioned charges assessed to employees for use of the grievance and/or arbitration procedures.\nIn all other respects the existing agreement between the undersigned parties shall remain in full force and effect.\nThe Company will maintain a voluntary C.O.P.E. and P.A.C. Fund check-off for bargaining unit employees.\n5) Non-Discrimination – There shall be no discrimination, interference, restraints or coercion by the Company or any of its agents against members of the Union because of membership therein.\n6) Union Activities – The Union agrees that its officers, representatives, and members will not solicit memberships nor engage in Union activities on Company time, except as provided herein, and that its officers, representatives, and members will not intimidate or coerce employees in any manner at any time.\n(a) An employee's departmental representative and the Union Vice President in charge of grievances or an alternative officer shall be allowed time off, without loss of pay, during their scheduled work hours, for the purpose of investigating the employee's difference or processing his or her grievance, subject to the following conditions:\n(i) They shall report to their immediate supervisors who shall be informed of the reason for the meeting or meetings, with whom, when, and where held, and what time they expect to return to their regular assignments;\n(ii) They shall receive a clearance from the supervisor of the employee whom they plan to contact; and",
+            "block_bbox": [
+                59,
+                78,
+                634,
+                938
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    59.0,
+                    78.0
+                ],
+                [
+                    634.0,
+                    78.0
+                ],
+                [
+                    634.0,
+                    938.0
+                ],
+                [
+                    59.0,
+                    938.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "10",
+            "block_bbox": [
+                330,
+                941,
+                351,
+                956
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    330.0,
+                    941.0
+                ],
+                [
+                    350.0,
+                    941.0
+                ],
+                [
+                    350.0,
+                    955.0
+                ],
+                [
+                    330.0,
+                    955.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.791576623916626,
+                "coordinate": [
+                    51,
+                    51,
+                    126,
+                    73
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        51.0,
+                        51.0
+                    ],
+                    [
+                        125.0,
+                        51.0
+                    ],
+                    [
+                        125.0,
+                        72.0
+                    ],
+                    [
+                        51.0,
+                        72.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 0,
+                "label": "abstract",
+                "score": 0.42658761143684387,
+                "coordinate": [
+                    78,
+                    81,
+                    633,
+                    238
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        78.0,
+                        81.0
+                    ],
+                    [
+                        633.0,
+                        81.0
+                    ],
+                    [
+                        633.0,
+                        238.0
+                    ],
+                    [
+                        78.0,
+                        238.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 0,
+                "label": "abstract",
+                "score": 0.4592535197734833,
+                "coordinate": [
+                    59,
+                    78,
+                    634,
+                    938
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        59.0,
+                        78.0
+                    ],
+                    [
+                        634.0,
+                        78.0
+                    ],
+                    [
+                        634.0,
+                        938.0
+                    ],
+                    [
+                        59.0,
+                        938.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5620235800743103,
+                "coordinate": [
+                    80,
+                    251,
+                    632,
+                    322
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        80.0,
+                        251.0
+                    ],
+                    [
+                        632.0,
+                        251.0
+                    ],
+                    [
+                        632.0,
+                        322.0
+                    ],
+                    [
+                        80.0,
+                        322.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6800973415374756,
+                "coordinate": [
+                    80,
+                    335,
+                    632,
+                    382
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        80.0,
+                        335.0
+                    ],
+                    [
+                        632.0,
+                        335.0
+                    ],
+                    [
+                        632.0,
+                        382.0
+                    ],
+                    [
+                        80.0,
+                        382.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6124126315116882,
+                "coordinate": [
+                    78,
+                    396,
+                    631,
+                    444
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        78.0,
+                        396.0
+                    ],
+                    [
+                        631.0,
+                        396.0
+                    ],
+                    [
+                        631.0,
+                        444.0
+                    ],
+                    [
+                        78.0,
+                        444.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3857715129852295,
+                "coordinate": [
+                    51,
+                    463,
+                    631,
+                    532
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        51.0,
+                        463.0
+                    ],
+                    [
+                        631.0,
+                        463.0
+                    ],
+                    [
+                        631.0,
+                        532.0
+                    ],
+                    [
+                        51.0,
+                        532.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.45117148756980896,
+                "coordinate": [
+                    51,
+                    550,
+                    632,
+                    663
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        51.0,
+                        550.0
+                    ],
+                    [
+                        632.0,
+                        550.0
+                    ],
+                    [
+                        632.0,
+                        663.0
+                    ],
+                    [
+                        51.0,
+                        663.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6522682309150696,
+                "coordinate": [
+                    81,
+                    677,
+                    632,
+                    791
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        81.0,
+                        677.0
+                    ],
+                    [
+                        632.0,
+                        677.0
+                    ],
+                    [
+                        632.0,
+                        791.0
+                    ],
+                    [
+                        81.0,
+                        791.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.49513739347457886,
+                "coordinate": [
+                    110,
+                    796,
+                    631,
+                    885
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        110.0,
+                        796.0
+                    ],
+                    [
+                        631.0,
+                        796.0
+                    ],
+                    [
+                        631.0,
+                        885.0
+                    ],
+                    [
+                        110.0,
+                        885.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.664844274520874,
+                "coordinate": [
+                    110,
+                    890,
+                    631,
+                    935
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        110.0,
+                        890.0
+                    ],
+                    [
+                        631.0,
+                        890.0
+                    ],
+                    [
+                        631.0,
+                        935.0
+                    ],
+                    [
+                        110.0,
+                        935.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7290564775466919,
+                "coordinate": [
+                    330,
+                    941,
+                    351,
+                    956
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        330.0,
+                        941.0
+                    ],
+                    [
+                        350.0,
+                        941.0
+                    ],
+                    [
+                        350.0,
+                        955.0
+                    ],
+                    [
+                        330.0,
+                        955.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

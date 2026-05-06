@@ -1,0 +1,23 @@
+All full time employees with two (2) years or more of full time service shall receive six (6) days per year. The six (6) days are granted at the beginning of the calendar year.
+
+If an employee is absent and receives Weekly Disability, he may supplement his Weekly Disability by drawing on his accrued sick timê, if any.
+
+At the end of each calendar year, any unused days granted in that year will be paid the employee within thirty (30) days of the end of each period.
+
+If a full time employee is laid off (and does not accept part time), he or she shall be paid for such unused sick time as he or she may have accumulated. If a full or part time employee, at the time of his or her retirement, has accrued sick time, he or she shall be paid for such unused sick time. Unused sick time shall, in the event of the death of an employee, be paid to the beneficiary.
+
+The employee's scheduled working day directly before and directly following a holiday shall not be considered as paid sick leave days.
+
+## Sick Leave - Part Time
+
+Part time employees, including packers/baggers, employed continuously for a period of two (2) years or more shall be eligible for fifteen (15) hours sick leave per year, and such sick leave shall only be paid for scheduled days lost.
+
+Part time employees, including packers/baggers, employed continuously for a period of three (3) years or
+
+more shall be eligible for twenty (20) hours sick leave per year, and such sick leave shall only be paid for scheduled days lost.
+
+At the end of each calendar year, any unused days granted in that year will be paid the employee within thirty (30) days of the end of each period.
+
+## ARTICLE 14 DEATH IN THE IMMEDIATE FAMILY
+
+In the event of a death in the immediate family of any employee, full time employees shall be granted three (3) scheduled working days leave without loss in basic pay (except in the event of the death of a spouse or child, in which case the leave shall be five (5) days). Part time employees shall be granted three (3) days (except in the event of the death of a spouse or child, in which case the leave shall be five (5) days leave) without loss in pay, only according to the hours they are regularly scheduled to work during this period. For the purpose of this Article, it is agreed that a member of the immediate family shall be considered to be the employee's wife, husband, child, father, mother, brother, sister, mother-in-law, father-in-law, or any member of the family residing in the employee's home. The date of notification of death for those employees who are on the job shall not be counted as one of the three (3) days funeral leave. In the event of a death of a grandparent, grandchild, brother-in-law, or sister-in-law of an employee, full or part time, the employee shall receive one (1) day leave without loss in basic pay.

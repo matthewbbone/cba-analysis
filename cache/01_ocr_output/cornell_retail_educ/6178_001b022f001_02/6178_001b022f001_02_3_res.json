@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_001b022f001_02.pdf",
+    "page_index": 3,
+    "page_count": 28,
+    "width": 577,
+    "height": 840,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "A G R E E M E N T",
+            "block_bbox": [
+                200,
+                82,
+                378,
+                102
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    200.0,
+                    82.0
+                ],
+                [
+                    377.0,
+                    82.0
+                ],
+                [
+                    377.0,
+                    101.0
+                ],
+                [
+                    200.0,
+                    101.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "This Agreement made and entered into this 17th day of December, 1962 by and between ACME MARKETS, INC. of Forty Fort, Pennsylvania, hereinafter referred to as the Company, and LOCAL No. 72, AMALGAMATED FOOD EMPLOYEES UNION, chartered by AMALGAMATED MEAT CUTTERS AND BUTCHER WORKMEN OF NORTH AMERICA, AFL-CIO, hereinafter referred to as the Union.",
+            "block_bbox": [
+                45,
+                110,
+                533,
+                233
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    45.0,
+                    110.0
+                ],
+                [
+                    533.0,
+                    110.0
+                ],
+                [
+                    533.0,
+                    233.0
+                ],
+                [
+                    45.0,
+                    233.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "PURPOSE: Whereas the parties to this Agreement desire to establish and maintain a mutual understanding, to create harmonious relations between the Company and the employees, and to abide by this Agreement to settle any and whatever disputes may arise between them, it is therefore understood and agreed by both parties as follows:",
+            "block_bbox": [
+                44,
+                237,
+                532,
+                342
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    44.0,
+                    237.0
+                ],
+                [
+                    532.0,
+                    237.0
+                ],
+                [
+                    532.0,
+                    342.0
+                ],
+                [
+                    44.0,
+                    342.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE I",
+            "block_bbox": [
+                238,
+                356,
+                341,
+                375
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    238.0,
+                    356.0
+                ],
+                [
+                    340.0,
+                    356.0
+                ],
+                [
+                    340.0,
+                    374.0
+                ],
+                [
+                    238.0,
+                    374.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "UNION RECOGNITION",
+            "block_bbox": [
+                184,
+                380,
+                393,
+                400
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    184.0,
+                    380.0
+                ],
+                [
+                    392.0,
+                    380.0
+                ],
+                [
+                    392.0,
+                    399.0
+                ],
+                [
+                    184.0,
+                    399.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 1. The Company recognizes the Union as the sole representative of its Store Employees except Store Managers in all stores and markets operated in the Company's No. 5 Division.",
+            "block_bbox": [
+                44,
+                404,
+                532,
+                475
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    44.0,
+                    404.0
+                ],
+                [
+                    532.0,
+                    404.0
+                ],
+                [
+                    532.0,
+                    475.0
+                ],
+                [
+                    44.0,
+                    475.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 2. The Company reserves the right to hire its own employees, inclusive of such acceptable applicants as may be obtained through the cooperation of the Union.",
+            "block_bbox": [
+                44,
+                479,
+                532,
+                532
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    44.0,
+                    479.0
+                ],
+                [
+                    532.0,
+                    479.0
+                ],
+                [
+                    532.0,
+                    532.0
+                ],
+                [
+                    44.0,
+                    532.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE II.",
+            "block_bbox": [
+                231,
+                546,
+                344,
+                565
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    231.0,
+                    546.0
+                ],
+                [
+                    343.0,
+                    546.0
+                ],
+                [
+                    343.0,
+                    564.0
+                ],
+                [
+                    231.0,
+                    564.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "UNION SHOP",
+            "block_bbox": [
+                228,
+                569,
+                350,
+                589
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    228.0,
+                    568.9999389648438
+                ],
+                [
+                    349.0,
+                    568.9999389648438
+                ],
+                [
+                    349.0,
+                    587.9999389648438
+                ],
+                [
+                    228.0,
+                    587.9999389648438
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 1. Except as provided in Section 2 immediately below, every employee shall become a member of the Union on or after the thirtieth (30) day following the commencement of employment or the effective date of this Agreement, whichever is later.",
+            "block_bbox": [
+                44,
+                594,
+                531,
+                681
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    44.0,
+                    594.0
+                ],
+                [
+                    531.0,
+                    594.0
+                ],
+                [
+                    531.0,
+                    681.0
+                ],
+                [
+                    44.0,
+                    681.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 2. The provisions of Section 1 above shall be modified in the case of new employees hired to staff newly opened stores where a sixty (60) day trial period will apply. During the period, seniority will not apply and layoffs can be made at management's discretion.",
+            "block_bbox": [
+                44,
+                684,
+                531,
+                771
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    44.0,
+                    684.0
+                ],
+                [
+                    531.0,
+                    684.0
+                ],
+                [
+                    531.0,
+                    771.0
+                ],
+                [
+                    44.0,
+                    771.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "3",
+            "block_bbox": [
+                280,
+                780,
+                291,
+                796
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    280.0,
+                    780.0
+                ],
+                [
+                    290.0,
+                    780.0
+                ],
+                [
+                    290.0,
+                    795.0
+                ],
+                [
+                    280.0,
+                    795.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.4527169167995453,
+                "coordinate": [
+                    200,
+                    82,
+                    378,
+                    102
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        200.0,
+                        82.0
+                    ],
+                    [
+                        377.0,
+                        82.0
+                    ],
+                    [
+                        377.0,
+                        101.0
+                    ],
+                    [
+                        200.0,
+                        101.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.953309178352356,
+                "coordinate": [
+                    45,
+                    110,
+                    533,
+                    233
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        45.0,
+                        110.0
+                    ],
+                    [
+                        533.0,
+                        110.0
+                    ],
+                    [
+                        533.0,
+                        233.0
+                    ],
+                    [
+                        45.0,
+                        233.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9491748213768005,
+                "coordinate": [
+                    44,
+                    237,
+                    532,
+                    342
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        44.0,
+                        237.0
+                    ],
+                    [
+                        532.0,
+                        237.0
+                    ],
+                    [
+                        532.0,
+                        342.0
+                    ],
+                    [
+                        44.0,
+                        342.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.830431342124939,
+                "coordinate": [
+                    238,
+                    356,
+                    341,
+                    375
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        238.0,
+                        356.0
+                    ],
+                    [
+                        340.0,
+                        356.0
+                    ],
+                    [
+                        340.0,
+                        374.0
+                    ],
+                    [
+                        238.0,
+                        374.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8426898717880249,
+                "coordinate": [
+                    184,
+                    380,
+                    393,
+                    400
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        184.0,
+                        380.0
+                    ],
+                    [
+                        392.0,
+                        380.0
+                    ],
+                    [
+                        392.0,
+                        399.0
+                    ],
+                    [
+                        184.0,
+                        399.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.940621554851532,
+                "coordinate": [
+                    44,
+                    404,
+                    532,
+                    475
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        44.0,
+                        404.0
+                    ],
+                    [
+                        532.0,
+                        404.0
+                    ],
+                    [
+                        532.0,
+                        475.0
+                    ],
+                    [
+                        44.0,
+                        475.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9313732981681824,
+                "coordinate": [
+                    44,
+                    479,
+                    532,
+                    532
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        44.0,
+                        479.0
+                    ],
+                    [
+                        532.0,
+                        479.0
+                    ],
+                    [
+                        532.0,
+                        532.0
+                    ],
+                    [
+                        44.0,
+                        532.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8067058324813843,
+                "coordinate": [
+                    231,
+                    546,
+                    344,
+                    565
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        231.0,
+                        546.0
+                    ],
+                    [
+                        343.0,
+                        546.0
+                    ],
+                    [
+                        343.0,
+                        564.0
+                    ],
+                    [
+                        231.0,
+                        564.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8032300472259521,
+                "coordinate": [
+                    228,
+                    569,
+                    350,
+                    589
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        228.0,
+                        568.9999389648438
+                    ],
+                    [
+                        349.0,
+                        568.9999389648438
+                    ],
+                    [
+                        349.0,
+                        587.9999389648438
+                    ],
+                    [
+                        228.0,
+                        587.9999389648438
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9511374235153198,
+                "coordinate": [
+                    44,
+                    594,
+                    531,
+                    681
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        44.0,
+                        594.0
+                    ],
+                    [
+                        531.0,
+                        594.0
+                    ],
+                    [
+                        531.0,
+                        681.0
+                    ],
+                    [
+                        44.0,
+                        681.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9510147571563721,
+                "coordinate": [
+                    44,
+                    684,
+                    531,
+                    771
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        44.0,
+                        684.0
+                    ],
+                    [
+                        531.0,
+                        684.0
+                    ],
+                    [
+                        531.0,
+                        771.0
+                    ],
+                    [
+                        44.0,
+                        771.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7285143733024597,
+                "coordinate": [
+                    280,
+                    780,
+                    291,
+                    796
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        280.0,
+                        780.0
+                    ],
+                    [
+                        290.0,
+                        780.0
+                    ],
+                    [
+                        290.0,
+                        795.0
+                    ],
+                    [
+                        280.0,
+                        795.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,857 @@
+{
+    "input_path": "cache/dol_archive/document_1778.pdf",
+    "page_index": 24,
+    "page_count": 32,
+    "width": 557,
+    "height": 1223,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>$ 9.20</td><td>$ 9.35</td><td>$ 9.55</td><td>$ 9.55</td><td>$ 9.75</td><td>$ 9.95</td><td>$ 10.10</td></tr><tr><td>$ 9.15</td><td>$ 9.30</td><td>$ 9.50</td><td>$ 9.50</td><td>$ 9.70</td><td>$ 9.90</td><td>$ 10.10</td></tr><tr><td>$ 8.85</td><td>$ 9.00</td><td>$ 9.20</td><td>$ 9.20</td><td>$ 9.40</td><td>$ 9.60</td><td>$ 9.75</td></tr><tr><td>$ 8.75</td><td>$ 8.90</td><td>$ 9.10</td><td>$ 9.10</td><td>$ 9.30</td><td>$ 9.50</td><td>$ 9.75</td></tr><tr><td>$ 8.65</td><td>$ 8.80</td><td>$ 9.00</td><td>$ 9.00</td><td>$ 9.20</td><td>$ 9.40</td><td>$ 9.50</td></tr><tr><td>$ 8.55</td><td>$ 8.70</td><td>$ 8.90</td><td>$ 9.00</td><td>$ 9.15</td><td>$ 9.35</td><td>$ 9.50</td></tr><tr><td>$ 8.50</td><td>$ 8.65</td><td>$ 8.85</td><td>$ 9.00</td><td>$ 9.15</td><td>$ 9.35</td><td>$ 9.50</td></tr><tr><td>$ 8.40</td><td>$ 8.55</td><td>$ 8.75</td><td>$ 9.00</td><td>$ 9.15</td><td>$ 9.30</td><td>$ 9.50</td></tr><tr><td>$ 8.35</td><td>$ 8.50</td><td>$ 8.70</td><td>$ 9.00</td><td>$ 9.15</td><td>$ 9.30</td><td>$ 9.50</td></tr><tr><td>$ 8.25</td><td>$ 8.40</td><td>$ 8.60</td><td>$ 9.00</td><td>$ 9.15</td><td>$ 9.30</td><td>$ 9.40</td></tr><tr><td>$ 8.20</td><td>$ 8.35</td><td>$ 8.55</td><td>$ 9.00</td><td>$ 9.15</td><td>$ 9.30</td><td>$ 9.40</td></tr><tr><td>$ 8.15</td><td>$ 8.30</td><td>$ 8.50</td><td>$ 9.00</td><td>$ 9.15</td><td>$ 9.30</td><td>$ 9.40</td></tr><tr><td>$ 8.10</td><td>$ 8.25</td><td>$ 8.45</td><td>$ 9.00</td><td>$ 9.15</td><td>$ 9.30</td><td>$ 9.40</td></tr><tr><td>$ 8.05</td><td>$ 8.25</td><td>$ 8.45</td><td>$ 9.00</td><td>$ 9.15</td><td>$ 9.30</td><td>$ 9.40</td></tr><tr><td>$ 8.00</td><td>$ 8.25</td><td>$ 8.45</td><td>$ 9.00</td><td>$ 9.15</td><td>$ 9.30</td><td>$ 9.40</td></tr><tr><td>$ 7.95</td><td>$ 8.25</td><td>$ 8.45</td><td>$ 9.00</td><td>$ 9.15</td><td>$ 9.30</td><td>$ 9.40</td></tr><tr><td>$ 7.75</td><td>$ 8.25</td><td>$ 8.45</td><td>$ 9.00</td><td>$ 9.15</td><td>$ 9.30</td><td>$ 9.40</td></tr><tr><td>$ 7.65</td><td>$ 8.25</td><td>$ 8.45</td><td>$ 9.00</td><td>$ 9.15</td><td>$ 9.30</td><td>$ 9.40</td></tr><tr><td>$ 7.50</td><td>$ 8.25</td><td>$ 8.45</td><td>$ 9.00</td><td>$ 9.00</td><td>$ 9.25</td><td>$ 9.35</td></tr><tr><td>$ 7.25</td><td>$ 8.25</td><td>$ 8.45</td><td>$ 9.00</td><td>$ 9.00</td><td>$ 9.25</td><td>$ 9.35</td></tr></table>",
+            "block_bbox": [
+                21,
+                28,
+                526,
+                394
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    21.0,
+                    28.0
+                ],
+                [
+                    526.0,
+                    28.0
+                ],
+                [
+                    526.0,
+                    394.0
+                ],
+                [
+                    21.0,
+                    394.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "(F) WEEKLY WAGE PROGRESSIONS FOR FULL TIME CLERKS HIRED ON OR AFTER DECEMBER 29, 2013:",
+            "block_bbox": [
+                45,
+                408,
+                490,
+                444
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    45.0,
+                    408.0
+                ],
+                [
+                    490.0,
+                    408.0
+                ],
+                [
+                    490.0,
+                    444.0
+                ],
+                [
+                    45.0,
+                    444.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "5/1/14",
+            "block_bbox": [
+                252,
+                455,
+                298,
+                474
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    252.0,
+                    455.0
+                ],
+                [
+                    297.0,
+                    455.0
+                ],
+                [
+                    297.0,
+                    473.0
+                ],
+                [
+                    252.0,
+                    473.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "After 60 days ..... $490.00",
+            "block_bbox": [
+                28,
+                492,
+                524,
+                512
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    27.85853385925293,
+                    497.00140380859375
+                ],
+                [
+                    522.9999389648438,
+                    492.0
+                ],
+                [
+                    523.141357421875,
+                    505.99859619140625
+                ],
+                [
+                    27.99995231628418,
+                    511.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "And will receive an increase of an additional twenty ($20) dollars per week semi-annually in accordance with the schedule of semi-annual wage increases.",
+            "block_bbox": [
+                28,
+                528,
+                524,
+                578
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    28.0,
+                    528.0
+                ],
+                [
+                    524.0,
+                    528.0
+                ],
+                [
+                    524.0,
+                    578.0
+                ],
+                [
+                    28.0,
+                    578.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(1) Full time Clerks hired or appointed on or after December 29, 2013, shall not receive the general across the board wage increases. However, an employee who reaches the top of the progression scale during the term of the Agreement as a result of having been hired above the minimum or reclassified from part time to full time shall be eligible to receive the across the board increases December 29, 2013, September 28, 2014 and June 28, 2015 if applicable, provided that in no event shall such employee exceed the applicable top clerks' rate of pay.",
+            "block_bbox": [
+                26,
+                578,
+                525,
+                710
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    26.0,
+                    578.0
+                ],
+                [
+                    525.0,
+                    578.0
+                ],
+                [
+                    525.0,
+                    710.0
+                ],
+                [
+                    26.0,
+                    710.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(2) All new Full Time Clerks hired at or above the minimum sixty (60) day rate, in any event, shall receive a minimum wage increase of Ten ($10.00) Dollars after sixty (60) days employment and thereafter, Twenty ($20) Dollars per week on a semi-annual basis in accordance with the schedule of semi-annual wage increases.",
+            "block_bbox": [
+                26,
+                710,
+                525,
+                794
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    26.0,
+                    710.0
+                ],
+                [
+                    525.0,
+                    710.0
+                ],
+                [
+                    525.0,
+                    794.0
+                ],
+                [
+                    26.0,
+                    794.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "(G) HOURLY WAGE PROGRESSIONS FOR PART TIME CLERKS HIRED ON OR AFTER DECEMBER 29, 2013:",
+            "block_bbox": [
+                45,
+                810,
+                492,
+                846
+            ],
+            "block_id": 7,
+            "block_order": 6,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    45.0,
+                    810.0
+                ],
+                [
+                    492.0,
+                    810.0
+                ],
+                [
+                    492.0,
+                    846.0
+                ],
+                [
+                    45.0,
+                    846.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "NEW HIRES Effective 1/1/14 Effective 1/1/15 Effective 1/1/16\nAfter 60 Days $ 8.25 per hr. 9.00 per hr. $9.25 per hr.",
+            "block_bbox": [
+                28,
+                861,
+                523,
+                900
+            ],
+            "block_id": 8,
+            "block_order": 7,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    28.0,
+                    861.0
+                ],
+                [
+                    523.0,
+                    861.0
+                ],
+                [
+                    523.0,
+                    900.0
+                ],
+                [
+                    28.0,
+                    900.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "And will receive an increase of an additional fifteen (15¢) cents per hour on a semi-annual basis in accordance with the schedule of semi-annual wage increases.",
+            "block_bbox": [
+                26,
+                917,
+                524,
+                966
+            ],
+            "block_id": 9,
+            "block_order": 8,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    26.0,
+                    917.0
+                ],
+                [
+                    524.0,
+                    917.0
+                ],
+                [
+                    524.0,
+                    966.0
+                ],
+                [
+                    26.0,
+                    966.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(1) Part time Clerks and Porters hired on or after December 29, 2013 shall not receive the general across the board wage increases. However, an employee who reaches the top of the progression scale during the term of the Agreement as a result of having been hired above the minimum or reclassified from full time to part time, shall be eligible to receive the across the board increases on December 29, 2013, September 28, 2014, June 28, 2015 and December 27, 2015 if applicable, provided that in no event shall such employee exceed the top clerks' rate of pay.",
+            "block_bbox": [
+                25,
+                967,
+                525,
+                1097
+            ],
+            "block_id": 10,
+            "block_order": 9,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    25.0,
+                    967.0
+                ],
+                [
+                    525.0,
+                    967.0
+                ],
+                [
+                    525.0,
+                    1097.0
+                ],
+                [
+                    25.0,
+                    1097.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(2) All new Part Time Clerks and Porters hired at or above the minimum rate, in any event, shall receive a minimum wage increase of twenty five (25¢) cents per hour after sixty (60) days employment and,",
+            "block_bbox": [
+                26,
+                1097,
+                526,
+                1148
+            ],
+            "block_id": 11,
+            "block_order": 10,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    26.0,
+                    1097.0
+                ],
+                [
+                    526.0,
+                    1097.0
+                ],
+                [
+                    526.0,
+                    1148.0
+                ],
+                [
+                    26.0,
+                    1148.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "23",
+            "block_bbox": [
+                266,
+                1177,
+                286,
+                1193
+            ],
+            "block_id": 12,
+            "block_order": null,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    266.0,
+                    1177.0
+                ],
+                [
+                    285.0,
+                    1177.0
+                ],
+                [
+                    285.0,
+                    1192.0
+                ],
+                [
+                    266.0,
+                    1192.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9408213496208191,
+                "coordinate": [
+                    21,
+                    28,
+                    526,
+                    394
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        21.0,
+                        28.0
+                    ],
+                    [
+                        526.0,
+                        28.0
+                    ],
+                    [
+                        526.0,
+                        394.0
+                    ],
+                    [
+                        21.0,
+                        394.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6186448931694031,
+                "coordinate": [
+                    45,
+                    408,
+                    490,
+                    444
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        45.0,
+                        408.0
+                    ],
+                    [
+                        490.0,
+                        408.0
+                    ],
+                    [
+                        490.0,
+                        444.0
+                    ],
+                    [
+                        45.0,
+                        444.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.3412196636199951,
+                "coordinate": [
+                    252,
+                    455,
+                    298,
+                    474
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        252.0,
+                        455.0
+                    ],
+                    [
+                        297.0,
+                        455.0
+                    ],
+                    [
+                        297.0,
+                        473.0
+                    ],
+                    [
+                        252.0,
+                        473.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.310186505317688,
+                "coordinate": [
+                    28,
+                    492,
+                    524,
+                    512
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        27.85853385925293,
+                        497.00140380859375
+                    ],
+                    [
+                        522.9999389648438,
+                        492.0
+                    ],
+                    [
+                        523.141357421875,
+                        505.99859619140625
+                    ],
+                    [
+                        27.99995231628418,
+                        511.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3041638433933258,
+                "coordinate": [
+                    467,
+                    491,
+                    524,
+                    509
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        467.0,
+                        491.0
+                    ],
+                    [
+                        467.0,
+                        508.0
+                    ],
+                    [
+                        523.0,
+                        508.0
+                    ],
+                    [
+                        523.0,
+                        491.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9227184653282166,
+                "coordinate": [
+                    28,
+                    528,
+                    524,
+                    578
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        28.0,
+                        528.0
+                    ],
+                    [
+                        524.0,
+                        528.0
+                    ],
+                    [
+                        524.0,
+                        578.0
+                    ],
+                    [
+                        28.0,
+                        578.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9560535550117493,
+                "coordinate": [
+                    26,
+                    578,
+                    525,
+                    710
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        26.0,
+                        578.0
+                    ],
+                    [
+                        525.0,
+                        578.0
+                    ],
+                    [
+                        525.0,
+                        710.0
+                    ],
+                    [
+                        26.0,
+                        710.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9446223378181458,
+                "coordinate": [
+                    26,
+                    710,
+                    525,
+                    794
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        26.0,
+                        710.0
+                    ],
+                    [
+                        525.0,
+                        710.0
+                    ],
+                    [
+                        525.0,
+                        794.0
+                    ],
+                    [
+                        26.0,
+                        794.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8417854309082031,
+                "coordinate": [
+                    45,
+                    810,
+                    492,
+                    846
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        45.0,
+                        810.0
+                    ],
+                    [
+                        492.0,
+                        810.0
+                    ],
+                    [
+                        492.0,
+                        846.0
+                    ],
+                    [
+                        45.0,
+                        846.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.45143336057662964,
+                "coordinate": [
+                    28,
+                    861,
+                    523,
+                    900
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        28.0,
+                        861.0
+                    ],
+                    [
+                        523.0,
+                        861.0
+                    ],
+                    [
+                        523.0,
+                        900.0
+                    ],
+                    [
+                        28.0,
+                        900.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.934639036655426,
+                "coordinate": [
+                    26,
+                    917,
+                    524,
+                    966
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        26.0,
+                        917.0
+                    ],
+                    [
+                        524.0,
+                        917.0
+                    ],
+                    [
+                        524.0,
+                        966.0
+                    ],
+                    [
+                        26.0,
+                        966.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9599516987800598,
+                "coordinate": [
+                    25,
+                    967,
+                    525,
+                    1097
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        25.0,
+                        967.0
+                    ],
+                    [
+                        525.0,
+                        967.0
+                    ],
+                    [
+                        525.0,
+                        1097.0
+                    ],
+                    [
+                        25.0,
+                        1097.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9226930141448975,
+                "coordinate": [
+                    26,
+                    1097,
+                    526,
+                    1148
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        26.0,
+                        1097.0
+                    ],
+                    [
+                        526.0,
+                        1097.0
+                    ],
+                    [
+                        526.0,
+                        1148.0
+                    ],
+                    [
+                        26.0,
+                        1148.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7868977785110474,
+                "coordinate": [
+                    266,
+                    1177,
+                    286,
+                    1193
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        266.0,
+                        1177.0
+                    ],
+                    [
+                        285.0,
+                        1177.0
+                    ],
+                    [
+                        285.0,
+                        1192.0
+                    ],
+                    [
+                        266.0,
+                        1192.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

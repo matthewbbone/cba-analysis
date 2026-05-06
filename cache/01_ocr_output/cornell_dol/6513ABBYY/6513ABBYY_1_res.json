@@ -1,0 +1,1131 @@
+{
+    "input_path": "cache/cornell_dol/6513ABBYY.pdf",
+    "page_index": 1,
+    "page_count": 91,
+    "width": 1582,
+    "height": 1226,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Contract",
+            "block_bbox": [
+                38,
+                18,
+                125,
+                46
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    38.0,
+                    18.0
+                ],
+                [
+                    125.0,
+                    18.0
+                ],
+                [
+                    125.0,
+                    46.0
+                ],
+                [
+                    38.0,
+                    46.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 1 of 94",
+            "block_bbox": [
+                1423,
+                18,
+                1552,
+                50
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    1423.0,
+                    18.0
+                ],
+                [
+                    1552.0,
+                    18.0
+                ],
+                [
+                    1552.0,
+                    50.0
+                ],
+                [
+                    1423.0,
+                    50.0
+                ]
+            ]
+        },
+        {
+            "block_label": "header",
+            "block_content": "6513\n2,000ee",
+            "block_bbox": [
+                1174,
+                25,
+                1335,
+                152
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    1174.0,
+                    25.0
+                ],
+                [
+                    1335.0,
+                    25.0
+                ],
+                [
+                    1335.0,
+                    152.0
+                ],
+                [
+                    1174.0,
+                    152.0
+                ]
+            ]
+        },
+        {
+            "block_label": "image",
+            "block_content": "",
+            "block_bbox": [
+                46,
+                55,
+                431,
+                341
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    46.0,
+                    55.0
+                ],
+                [
+                    431.0,
+                    55.0
+                ],
+                [
+                    431.0,
+                    341.0
+                ],
+                [
+                    46.0,
+                    341.0
+                ]
+            ]
+        },
+        {
+            "block_label": "header",
+            "block_content": "92 pages",
+            "block_bbox": [
+                1433,
+                120,
+                1563,
+                181
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    1433.0,
+                    120.0
+                ],
+                [
+                    1563.0,
+                    120.0
+                ],
+                [
+                    1563.0,
+                    181.0
+                ],
+                [
+                    1433.0,
+                    181.0
+                ]
+            ]
+        },
+        {
+            "block_label": "doc_title",
+            "block_content": "Contract",
+            "block_bbox": [
+                427,
+                143,
+                725,
+                214
+            ],
+            "block_id": 5,
+            "block_order": 1,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    427.0,
+                    143.0
+                ],
+                [
+                    725.0,
+                    143.0
+                ],
+                [
+                    725.0,
+                    214.0
+                ],
+                [
+                    427.0,
+                    214.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Local 101 2005 Scholarship Pre-Application Deadline, January 31, 2005 - click here for information",
+            "block_bbox": [
+                46,
+                345,
+                1171,
+                378
+            ],
+            "block_id": 6,
+            "block_order": 2,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    46.0,
+                    345.0
+                ],
+                [
+                    1171.0,
+                    345.0
+                ],
+                [
+                    1171.0,
+                    378.0
+                ],
+                [
+                    46.0,
+                    378.0
+                ]
+            ]
+        },
+        {
+            "block_label": "image",
+            "block_content": "",
+            "block_bbox": [
+                47,
+                379,
+                266,
+                1162
+            ],
+            "block_id": 7,
+            "block_order": null,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    47.0,
+                    379.0
+                ],
+                [
+                    266.0,
+                    379.0
+                ],
+                [
+                    266.0,
+                    1162.0
+                ],
+                [
+                    47.0,
+                    1162.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "COLLECTIVE BARGAINING AGREEMENT\nbetween\nMACY'S WEST, INC\nand\nUNITED FOOD AND COMMERCIAL WORKERS\nLOCAL 101",
+            "block_bbox": [
+                647,
+                430,
+                1198,
+                626
+            ],
+            "block_id": 8,
+            "block_order": 3,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    647.0,
+                    430.0
+                ],
+                [
+                    1198.0,
+                    430.0
+                ],
+                [
+                    1198.0,
+                    626.0
+                ],
+                [
+                    647.0,
+                    626.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "June 1, 2004 through May 31, 2008",
+            "block_bbox": [
+                714,
+                647,
+                1131,
+                685
+            ],
+            "block_id": 9,
+            "block_order": 4,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    714.0,
+                    647.0
+                ],
+                [
+                    1131.0,
+                    647.0
+                ],
+                [
+                    1131.0,
+                    685.0
+                ],
+                [
+                    714.0,
+                    685.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "THIS AGREEMENT, made and entered into, by and between MACY'S WEST, Inc., hereinafter referred to as the Employer, and United Food and Commercial Workers Union, LOCAL 101, chartered by the United Food and Commercial Workers Union AFL-CIO & CLC, hereinafter referred to as the Union.",
+            "block_bbox": [
+                349,
+                706,
+                1476,
+                798
+            ],
+            "block_id": 10,
+            "block_order": 5,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    349.0,
+                    706.0
+                ],
+                [
+                    1476.0,
+                    706.0
+                ],
+                [
+                    1476.0,
+                    798.0
+                ],
+                [
+                    349.0,
+                    798.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "SECTION 1 - RECOGNITION",
+            "block_bbox": [
+                772,
+                819,
+                1074,
+                852
+            ],
+            "block_id": 11,
+            "block_order": 6,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    772.0,
+                    819.0
+                ],
+                [
+                    1074.0,
+                    819.0
+                ],
+                [
+                    1074.0,
+                    852.0
+                ],
+                [
+                    772.0,
+                    852.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The Union is recognized as the sole collective bargaining agent for all employees employed at the Macy's Downtown San Francisco Store, Stonestown Store and Divisional Offices except executives as defined in Section 2. (Definition of Executives) and for the classifications listed in Appendix A.",
+            "block_bbox": [
+                349,
+                878,
+                1493,
+                969
+            ],
+            "block_id": 12,
+            "block_order": 7,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    349.0,
+                    878.0
+                ],
+                [
+                    1493.0,
+                    878.0
+                ],
+                [
+                    1493.0,
+                    969.0
+                ],
+                [
+                    349.0,
+                    969.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Any department covered by the terms of this agreement which moves from the Downtown San Francisco Store or Stonestown Store to another location, within the Local 101 jurisdiction in the City and County of San Francisco, shall be covered by the terms and conditions of this Collective Bargaining Agreement, provided, the employees remain on the payroll of the employer.",
+            "block_bbox": [
+                349,
+                991,
+                1486,
+                1111
+            ],
+            "block_id": 13,
+            "block_order": 8,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    349.0,
+                    991.0
+                ],
+                [
+                    1486.0,
+                    991.0
+                ],
+                [
+                    1486.0,
+                    1111.0
+                ],
+                [
+                    349.0,
+                    1111.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "“Satellite” operations of a department of the Downtown San Francisco Store(s) or Stonestown Store shall",
+            "block_bbox": [
+                350,
+                1132,
+                1497,
+                1165
+            ],
+            "block_id": 14,
+            "block_order": 9,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    350.0,
+                    1132.0
+                ],
+                [
+                    1497.0,
+                    1132.0
+                ],
+                [
+                    1497.0,
+                    1165.0
+                ],
+                [
+                    350.0,
+                    1165.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "http://macys.local101.com/contract.htm",
+            "block_bbox": [
+                38,
+                1181,
+                430,
+                1211
+            ],
+            "block_id": 15,
+            "block_order": null,
+            "group_id": 15,
+            "block_polygon_points": [
+                [
+                    38.0,
+                    1181.0
+                ],
+                [
+                    430.0,
+                    1181.0
+                ],
+                [
+                    430.0,
+                    1211.0
+                ],
+                [
+                    38.0,
+                    1211.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "1/31/2005",
+            "block_bbox": [
+                1453,
+                1181,
+                1554,
+                1209
+            ],
+            "block_id": 16,
+            "block_order": null,
+            "group_id": 16,
+            "block_polygon_points": [
+                [
+                    1453.0,
+                    1181.0
+                ],
+                [
+                    1554.0,
+                    1181.0
+                ],
+                [
+                    1554.0,
+                    1209.0
+                ],
+                [
+                    1453.0,
+                    1209.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.6081376671791077,
+                "coordinate": [
+                    38,
+                    18,
+                    125,
+                    46
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        38.0,
+                        18.0
+                    ],
+                    [
+                        125.0,
+                        18.0
+                    ],
+                    [
+                        125.0,
+                        46.0
+                    ],
+                    [
+                        38.0,
+                        46.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.5808402895927429,
+                "coordinate": [
+                    1423,
+                    18,
+                    1552,
+                    50
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        1423.0,
+                        18.0
+                    ],
+                    [
+                        1552.0,
+                        18.0
+                    ],
+                    [
+                        1552.0,
+                        50.0
+                    ],
+                    [
+                        1423.0,
+                        50.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.4126853942871094,
+                "coordinate": [
+                    1175,
+                    26,
+                    1332,
+                    86
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1175.0,
+                        26.0
+                    ],
+                    [
+                        1332.0,
+                        26.0
+                    ],
+                    [
+                        1332.0,
+                        86.0
+                    ],
+                    [
+                        1175.0,
+                        86.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.4075637757778168,
+                "coordinate": [
+                    1174,
+                    25,
+                    1335,
+                    152
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1174.0,
+                        25.0
+                    ],
+                    [
+                        1335.0,
+                        25.0
+                    ],
+                    [
+                        1335.0,
+                        152.0
+                    ],
+                    [
+                        1174.0,
+                        152.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.840268611907959,
+                "coordinate": [
+                    46,
+                    55,
+                    431,
+                    341
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        46.0,
+                        55.0
+                    ],
+                    [
+                        431.0,
+                        55.0
+                    ],
+                    [
+                        431.0,
+                        341.0
+                    ],
+                    [
+                        46.0,
+                        341.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.4147276282310486,
+                "coordinate": [
+                    1178,
+                    110,
+                    1334,
+                    150
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1178.0,
+                        110.0
+                    ],
+                    [
+                        1334.0,
+                        110.0
+                    ],
+                    [
+                        1334.0,
+                        150.0
+                    ],
+                    [
+                        1178.0,
+                        150.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.40666463971138,
+                "coordinate": [
+                    1433,
+                    120,
+                    1563,
+                    181
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1433.0,
+                        120.0
+                    ],
+                    [
+                        1563.0,
+                        120.0
+                    ],
+                    [
+                        1563.0,
+                        181.0
+                    ],
+                    [
+                        1433.0,
+                        181.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.7116618156433105,
+                "coordinate": [
+                    427,
+                    143,
+                    725,
+                    214
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        427.0,
+                        143.0
+                    ],
+                    [
+                        725.0,
+                        143.0
+                    ],
+                    [
+                        725.0,
+                        214.0
+                    ],
+                    [
+                        427.0,
+                        214.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5320413112640381,
+                "coordinate": [
+                    46,
+                    345,
+                    1171,
+                    378
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        46.0,
+                        345.0
+                    ],
+                    [
+                        1171.0,
+                        345.0
+                    ],
+                    [
+                        1171.0,
+                        378.0
+                    ],
+                    [
+                        46.0,
+                        378.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.8833743929862976,
+                "coordinate": [
+                    47,
+                    379,
+                    266,
+                    1162
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        47.0,
+                        379.0
+                    ],
+                    [
+                        266.0,
+                        379.0
+                    ],
+                    [
+                        266.0,
+                        1162.0
+                    ],
+                    [
+                        47.0,
+                        1162.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9026092886924744,
+                "coordinate": [
+                    647,
+                    430,
+                    1198,
+                    626
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        647.0,
+                        430.0
+                    ],
+                    [
+                        1198.0,
+                        430.0
+                    ],
+                    [
+                        1198.0,
+                        626.0
+                    ],
+                    [
+                        647.0,
+                        626.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7891274094581604,
+                "coordinate": [
+                    714,
+                    647,
+                    1131,
+                    685
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        714.0,
+                        647.0
+                    ],
+                    [
+                        1131.0,
+                        647.0
+                    ],
+                    [
+                        1131.0,
+                        685.0
+                    ],
+                    [
+                        714.0,
+                        685.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9204168915748596,
+                "coordinate": [
+                    349,
+                    706,
+                    1476,
+                    798
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        349.0,
+                        706.0
+                    ],
+                    [
+                        1476.0,
+                        706.0
+                    ],
+                    [
+                        1476.0,
+                        798.0
+                    ],
+                    [
+                        349.0,
+                        798.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8292304277420044,
+                "coordinate": [
+                    772,
+                    819,
+                    1074,
+                    852
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        772.0,
+                        819.0
+                    ],
+                    [
+                        1074.0,
+                        819.0
+                    ],
+                    [
+                        1074.0,
+                        852.0
+                    ],
+                    [
+                        772.0,
+                        852.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9373822808265686,
+                "coordinate": [
+                    349,
+                    878,
+                    1493,
+                    969
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        349.0,
+                        878.0
+                    ],
+                    [
+                        1493.0,
+                        878.0
+                    ],
+                    [
+                        1493.0,
+                        969.0
+                    ],
+                    [
+                        349.0,
+                        969.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9488730430603027,
+                "coordinate": [
+                    349,
+                    991,
+                    1486,
+                    1111
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        349.0,
+                        991.0
+                    ],
+                    [
+                        1486.0,
+                        991.0
+                    ],
+                    [
+                        1486.0,
+                        1111.0
+                    ],
+                    [
+                        349.0,
+                        1111.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8469991087913513,
+                "coordinate": [
+                    350,
+                    1132,
+                    1497,
+                    1165
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        350.0,
+                        1132.0
+                    ],
+                    [
+                        1497.0,
+                        1132.0
+                    ],
+                    [
+                        1497.0,
+                        1165.0
+                    ],
+                    [
+                        350.0,
+                        1165.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8356119394302368,
+                "coordinate": [
+                    38,
+                    1181,
+                    430,
+                    1211
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        38.0,
+                        1181.0
+                    ],
+                    [
+                        430.0,
+                        1181.0
+                    ],
+                    [
+                        430.0,
+                        1211.0
+                    ],
+                    [
+                        38.0,
+                        1211.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8096063137054443,
+                "coordinate": [
+                    1453,
+                    1181,
+                    1554,
+                    1209
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1453.0,
+                        1181.0
+                    ],
+                    [
+                        1554.0,
+                        1181.0
+                    ],
+                    [
+                        1554.0,
+                        1209.0
+                    ],
+                    [
+                        1453.0,
+                        1209.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

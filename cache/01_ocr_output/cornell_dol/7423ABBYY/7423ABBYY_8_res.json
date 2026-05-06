@@ -1,0 +1,156 @@
+{
+    "input_path": "cache/cornell_dol/7423ABBYY.pdf",
+    "page_index": 8,
+    "page_count": 185,
+    "width": 1188,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>SUBJECT</td><td>ARTICLE</td><td>SECTION</td><td>PAGE</td></tr><tr><td>Vacation</td><td>11</td><td>11.1</td><td>27</td></tr><tr><td>Vacation (Day-at-a-Time)</td><td>Memo</td><td></td><td>68</td></tr><tr><td>Vacation Donation</td><td>Memo</td><td></td><td>158</td></tr><tr><td>Vacation (Eligibility)</td><td>11</td><td>11.2</td><td>28</td></tr><tr><td>Vacation (Enhanced)</td><td>Memo</td><td></td><td>80</td></tr><tr><td>Vacation (Recall from Lay-Off)</td><td>11</td><td>11.2.b</td><td>28</td></tr><tr><td>Vacation Scheduling</td><td>11</td><td>11.4</td><td>28</td></tr><tr><td>Vacation (Separations)</td><td>11</td><td>11.2.b</td><td>28</td></tr><tr><td>Vision Plan</td><td>Memo</td><td></td><td>160</td></tr><tr><td>Vision Plan Highlights</td><td></td><td></td><td>162</td></tr><tr><td>Voluntary Employee Beneficiary</td><td></td><td></td><td></td></tr><tr><td>Association (VEBA)</td><td>Memo</td><td></td><td>164</td></tr><tr><td>Voluntary Layoff Leave of Absence (VLLOA)</td><td>Memo</td><td></td><td>168</td></tr><tr><td>Voluntary Part-Time Assignment (VPTA)</td><td>Memo</td><td></td><td>170</td></tr><tr><td>Wage Progression</td><td>6</td><td>6.7</td><td>12</td></tr><tr><td>Wage Progression Schedules</td><td></td><td></td><td>49-54</td></tr><tr><td>Wage Schedule Administration</td><td>Exhibit A</td><td></td><td>46</td></tr></table>",
+            "block_bbox": [
+                138,
+                29,
+                1038,
+                624
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    138.0,
+                    29.0
+                ],
+                [
+                    1038.0,
+                    29.0
+                ],
+                [
+                    1038.0,
+                    624.0
+                ],
+                [
+                    138.0,
+                    624.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "vii",
+            "block_bbox": [
+                620,
+                1472,
+                650,
+                1497
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    620.0,
+                    1472.0
+                ],
+                [
+                    649.0,
+                    1472.0
+                ],
+                [
+                    649.0,
+                    1496.0
+                ],
+                [
+                    620.0,
+                    1496.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.8934656977653503,
+                "coordinate": [
+                    138,
+                    29,
+                    1038,
+                    624
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        138.0,
+                        29.0
+                    ],
+                    [
+                        1038.0,
+                        29.0
+                    ],
+                    [
+                        1038.0,
+                        624.0
+                    ],
+                    [
+                        138.0,
+                        624.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7274143099784851,
+                "coordinate": [
+                    620,
+                    1472,
+                    650,
+                    1497
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        620.0,
+                        1472.0
+                    ],
+                    [
+                        649.0,
+                        1472.0
+                    ],
+                    [
+                        649.0,
+                        1496.0
+                    ],
+                    [
+                        620.0,
+                        1496.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

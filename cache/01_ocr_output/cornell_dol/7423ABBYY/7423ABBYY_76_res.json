@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_dol/7423ABBYY.pdf",
+    "page_index": 76,
+    "page_count": 185,
+    "width": 1185,
+    "height": 1578,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "doc_title",
+            "block_content": "MEMORANDUM OF AGREEMENT\nBetween\nVERIZON NORTH INC. (NORTH CENTRAL REGION)\nAnd\nINTERNATIONAL BROTHERHOOD OF ELECTRICAL WORKERS, LOCAL 986",
+            "block_bbox": [
+                338,
+                70,
+                938,
+                348
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    338.0,
+                    70.0
+                ],
+                [
+                    938.0,
+                    70.0
+                ],
+                [
+                    938.0,
+                    348.0
+                ],
+                [
+                    338.0,
+                    348.0
+                ]
+            ]
+        },
+        {
+            "block_label": "doc_title",
+            "block_content": "DAY-AT-A-TIME VACATION",
+            "block_bbox": [
+                477,
+                370,
+                795,
+                400
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    477.0,
+                    370.0
+                ],
+                [
+                    795.0,
+                    370.0
+                ],
+                [
+                    795.0,
+                    400.0
+                ],
+                [
+                    477.0,
+                    400.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Employees will be permitted to take two (2) weeks of their vacation on a one day-at-a-time basis with the following restrictions:",
+            "block_bbox": [
+                192,
+                454,
+                1074,
+                513
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    192.0,
+                    454.0
+                ],
+                [
+                    1074.0,
+                    454.0
+                ],
+                [
+                    1074.0,
+                    513.0
+                ],
+                [
+                    192.0,
+                    513.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. Employees must be eligible for two (2) weeks of vacation before vacation on a day-at-a-time basis may be taken.",
+            "block_bbox": [
+                191,
+                536,
+                1069,
+                595
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    191.0,
+                    536.0
+                ],
+                [
+                    1069.0,
+                    536.0
+                ],
+                [
+                    1069.0,
+                    595.0
+                ],
+                [
+                    191.0,
+                    595.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. Employees must elect to take one week of vacation on a one day-at-a-time basis at the time the vacation schedules are chosen. The second week of day-at-a-time vacation may be taken on a half (1/2) day or one (1) day-at-a-time basis at the time the vacation schedules are chosen.",
+            "block_bbox": [
+                189,
+                620,
+                1046,
+                736
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    189.0,
+                    620.0
+                ],
+                [
+                    1046.0,
+                    620.0
+                ],
+                [
+                    1046.0,
+                    736.0
+                ],
+                [
+                    189.0,
+                    736.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3. Employees must notify and receive approval by their supervisor at least ten (10) working days prior to changing a day of vacation. The supervisor may waive this requirement.",
+            "block_bbox": [
+                188,
+                759,
+                1051,
+                844
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    188.0,
+                    759.0
+                ],
+                [
+                    1051.0,
+                    759.0
+                ],
+                [
+                    1051.0,
+                    844.0
+                ],
+                [
+                    188.0,
+                    844.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "4. A day of vacation shall not be scheduled in conjunction with a holiday. Also, the last workday preceding or the first day following a holiday will not be scheduled as a vacation day. The supervisor may waive this requirement.",
+            "block_bbox": [
+                185,
+                869,
+                1038,
+                983
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    185.0,
+                    869.0
+                ],
+                [
+                    1038.0,
+                    869.0
+                ],
+                [
+                    1038.0,
+                    983.0
+                ],
+                [
+                    185.0,
+                    983.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "5. In selection of day-at-a-time vacation, weeks vacation shall have precedence over day-at-a-time vacation selection.",
+            "block_bbox": [
+                187,
+                1007,
+                979,
+                1067
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    187.0,
+                    1007.0
+                ],
+                [
+                    979.0,
+                    1007.0
+                ],
+                [
+                    979.0,
+                    1067.0
+                ],
+                [
+                    187.0,
+                    1067.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "6. Day-at-a-time vacation shall not be carried over to the next vacation year.",
+            "block_bbox": [
+                186,
+                1090,
+                1066,
+                1121
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    186.0,
+                    1090.0
+                ],
+                [
+                    1066.0,
+                    1090.0
+                ],
+                [
+                    1066.0,
+                    1121.0
+                ],
+                [
+                    186.0,
+                    1121.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "7. Day-at-a-time vacation shall be considered as time worked for purposes of computing the number of hours in excess of forty hours in any work week, for which overtime is paid.",
+            "block_bbox": [
+                186,
+                1144,
+                1052,
+                1230
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    186.0,
+                    1144.0
+                ],
+                [
+                    1052.0,
+                    1144.0
+                ],
+                [
+                    1052.0,
+                    1230.0
+                ],
+                [
+                    186.0,
+                    1230.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "This Memorandum of Agreement shall have the same effective date as the effective date set forth in the Primary Agreement between the parties and shall terminate on the termination date thereof.",
+            "block_bbox": [
+                185,
+                1255,
+                1040,
+                1341
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    185.0,
+                    1255.0
+                ],
+                [
+                    1040.0,
+                    1255.0
+                ],
+                [
+                    1040.0,
+                    1341.0
+                ],
+                [
+                    185.0,
+                    1341.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "68",
+            "block_bbox": [
+                660,
+                1466,
+                694,
+                1490
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    660.0,
+                    1466.0
+                ],
+                [
+                    693.0,
+                    1466.0
+                ],
+                [
+                    693.0,
+                    1489.0
+                ],
+                [
+                    660.0,
+                    1489.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.43298402428627014,
+                "coordinate": [
+                    338,
+                    70,
+                    938,
+                    348
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        338.0,
+                        70.0
+                    ],
+                    [
+                        938.0,
+                        70.0
+                    ],
+                    [
+                        938.0,
+                        348.0
+                    ],
+                    [
+                        338.0,
+                        348.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.5030010342597961,
+                "coordinate": [
+                    477,
+                    370,
+                    795,
+                    400
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        477.0,
+                        370.0
+                    ],
+                    [
+                        795.0,
+                        370.0
+                    ],
+                    [
+                        795.0,
+                        400.0
+                    ],
+                    [
+                        477.0,
+                        400.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9036609530448914,
+                "coordinate": [
+                    192,
+                    454,
+                    1074,
+                    513
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        192.0,
+                        454.0
+                    ],
+                    [
+                        1074.0,
+                        454.0
+                    ],
+                    [
+                        1074.0,
+                        513.0
+                    ],
+                    [
+                        192.0,
+                        513.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9013447165489197,
+                "coordinate": [
+                    191,
+                    536,
+                    1069,
+                    595
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        191.0,
+                        536.0
+                    ],
+                    [
+                        1069.0,
+                        536.0
+                    ],
+                    [
+                        1069.0,
+                        595.0
+                    ],
+                    [
+                        191.0,
+                        595.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9416666030883789,
+                "coordinate": [
+                    189,
+                    620,
+                    1046,
+                    736
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        189.0,
+                        620.0
+                    ],
+                    [
+                        1046.0,
+                        620.0
+                    ],
+                    [
+                        1046.0,
+                        736.0
+                    ],
+                    [
+                        189.0,
+                        736.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9206458926200867,
+                "coordinate": [
+                    188,
+                    759,
+                    1051,
+                    844
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        188.0,
+                        759.0
+                    ],
+                    [
+                        1051.0,
+                        759.0
+                    ],
+                    [
+                        1051.0,
+                        844.0
+                    ],
+                    [
+                        188.0,
+                        844.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9383082389831543,
+                "coordinate": [
+                    185,
+                    869,
+                    1038,
+                    983
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        185.0,
+                        869.0
+                    ],
+                    [
+                        1038.0,
+                        869.0
+                    ],
+                    [
+                        1038.0,
+                        983.0
+                    ],
+                    [
+                        185.0,
+                        983.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9151430130004883,
+                "coordinate": [
+                    187,
+                    1007,
+                    979,
+                    1067
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        187.0,
+                        1007.0
+                    ],
+                    [
+                        979.0,
+                        1007.0
+                    ],
+                    [
+                        979.0,
+                        1067.0
+                    ],
+                    [
+                        187.0,
+                        1067.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8657256364822388,
+                "coordinate": [
+                    186,
+                    1090,
+                    1066,
+                    1121
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        186.0,
+                        1090.0
+                    ],
+                    [
+                        1066.0,
+                        1090.0
+                    ],
+                    [
+                        1066.0,
+                        1121.0
+                    ],
+                    [
+                        186.0,
+                        1121.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9342457056045532,
+                "coordinate": [
+                    186,
+                    1144,
+                    1052,
+                    1230
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        186.0,
+                        1144.0
+                    ],
+                    [
+                        1052.0,
+                        1144.0
+                    ],
+                    [
+                        1052.0,
+                        1230.0
+                    ],
+                    [
+                        186.0,
+                        1230.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9293748736381531,
+                "coordinate": [
+                    185,
+                    1255,
+                    1040,
+                    1341
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        185.0,
+                        1255.0
+                    ],
+                    [
+                        1040.0,
+                        1255.0
+                    ],
+                    [
+                        1040.0,
+                        1341.0
+                    ],
+                    [
+                        185.0,
+                        1341.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7683199048042297,
+                "coordinate": [
+                    660,
+                    1466,
+                    694,
+                    1490
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        660.0,
+                        1466.0
+                    ],
+                    [
+                        693.0,
+                        1466.0
+                    ],
+                    [
+                        693.0,
+                        1489.0
+                    ],
+                    [
+                        660.0,
+                        1489.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

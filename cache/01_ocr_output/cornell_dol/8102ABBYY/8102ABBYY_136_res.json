@@ -1,0 +1,827 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 136,
+    "page_count": 439,
+    "width": 1233,
+    "height": 1585,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article 20",
+            "block_bbox": [
+                322,
+                73,
+                392,
+                90
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    73.0
+                ],
+                [
+                    391.0,
+                    73.0
+                ],
+                [
+                    391.0,
+                    89.0
+                ],
+                [
+                    322.0,
+                    89.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 20 - ADJUSTMENTS TO THE WORKING FORCE",
+            "block_bbox": [
+                392,
+                134,
+                808,
+                154
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    392.0,
+                    134.0
+                ],
+                [
+                    807.0,
+                    134.0
+                ],
+                [
+                    807.0,
+                    153.0
+                ],
+                [
+                    392.0,
+                    153.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1 The Company desires to maintain employment as near to a constant level as possible. Both parties recognize, however, that the needs of the business and its efficient operation may necessitate reassignment of personnel or the addition to, or decrease in the working force.",
+            "block_bbox": [
+                323,
+                167,
+                877,
+                238
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    323.0,
+                    167.0
+                ],
+                [
+                    877.0,
+                    167.0
+                ],
+                [
+                    877.0,
+                    238.0
+                ],
+                [
+                    323.0,
+                    238.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2 The Company shall give the National or Local involved advance notice of thirty (30) calendar days prior to the effective date of a Layoff.",
+            "block_bbox": [
+                322,
+                243,
+                879,
+                280
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    243.0
+                ],
+                [
+                    879.0,
+                    243.0
+                ],
+                [
+                    879.0,
+                    280.0
+                ],
+                [
+                    322.0,
+                    280.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3 When lack of work necessitates Layoff, Employees shall be Laid-Off in accordance with Term of Employment and by Layoff groups as set forth in the following:",
+            "block_bbox": [
+                322,
+                284,
+                877,
+                338
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    284.0
+                ],
+                [
+                    877.0,
+                    284.0
+                ],
+                [
+                    877.0,
+                    338.0
+                ],
+                [
+                    322.0,
+                    338.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) Employees with less than five (5) years' Term of Employment shall be first Laid-Off in inverse order of Term of Employment, except that 10% of the total number of such Employees as of the time Layoffs start may be exempt from the Layoff and retained on the roll. The Layoff group shall be the Employees assigned to a Base Location.",
+            "block_bbox": [
+                346,
+                343,
+                878,
+                432
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    346.0,
+                    343.0
+                ],
+                [
+                    878.0,
+                    343.0
+                ],
+                [
+                    878.0,
+                    432.0
+                ],
+                [
+                    346.0,
+                    432.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) Employees retained on the roll under the provisions of Paragraph 3(a) shall be next Laid-Off.",
+            "block_bbox": [
+                346,
+                437,
+                877,
+                474
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    346.0,
+                    437.0
+                ],
+                [
+                    877.0,
+                    437.0
+                ],
+                [
+                    877.0,
+                    474.0
+                ],
+                [
+                    346.0,
+                    474.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(c) Employees with a Term of Employment of five (5) years but less than eight (8) years shall be next Laid-Off, in inverse order of Term of Employment, except that 10% of the total number of such Employees as of the time Layoffs start may be exempt from the Layoff and retained on the roll. The Layoff group shall be the Employees assigned to a Base Location.",
+            "block_bbox": [
+                346,
+                479,
+                878,
+                583
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    346.0,
+                    479.0
+                ],
+                [
+                    878.0,
+                    479.0
+                ],
+                [
+                    878.0,
+                    583.0
+                ],
+                [
+                    346.0,
+                    583.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(d) Employees retained on the roll under the provisions of Paragraph 3(c) shall be the next Laid-Off.",
+            "block_bbox": [
+                346,
+                590,
+                877,
+                627
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    346.0,
+                    590.0
+                ],
+                [
+                    877.0,
+                    590.0
+                ],
+                [
+                    877.0,
+                    627.0
+                ],
+                [
+                    346.0,
+                    627.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(e) Employees with a Term of Employment of eight (8) years but less than ten (10) years shall be next Laid-Off, in inverse order of Term of Employment, except that 10% of the total number of such Employees as of the time Layoffs start may be exempt from Layoff and retained on the roll. The Layoff group shall be the Employees assigned to a Base Location.",
+            "block_bbox": [
+                346,
+                632,
+                878,
+                737
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    346.0,
+                    632.0
+                ],
+                [
+                    878.0,
+                    632.0
+                ],
+                [
+                    878.0,
+                    737.0
+                ],
+                [
+                    346.0,
+                    737.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(f) Employees retained on the roll under the provisions of Paragraph 3(e) shall be next Laid-Off.",
+            "block_bbox": [
+                346,
+                742,
+                876,
+                779
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    346.0,
+                    742.0
+                ],
+                [
+                    876.0,
+                    742.0
+                ],
+                [
+                    876.0,
+                    779.0
+                ],
+                [
+                    346.0,
+                    779.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(g) An Employee who, based on Term of Employment, would otherwise fail within a Layoff group set forth in Paragraph 3(a) but who, as of the effective date of the Layoff, is within one year of having his/her service bridged under the Pension Plan will be placed in a Layoff group based on the Term of Employment he or she will have at the time of such bridging but only for purposes of determining the order of Layoff. Such Employee",
+            "block_bbox": [
+                346,
+                784,
+                878,
+                891
+            ],
+            "block_id": 11,
+            "block_order": 11,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    346.0,
+                    784.0
+                ],
+                [
+                    878.0,
+                    784.0
+                ],
+                [
+                    878.0,
+                    891.0
+                ],
+                [
+                    346.0,
+                    891.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "128",
+            "block_bbox": [
+                325,
+                909,
+                354,
+                926
+            ],
+            "block_id": 12,
+            "block_order": null,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    325.0,
+                    909.0
+                ],
+                [
+                    353.0,
+                    909.0
+                ],
+                [
+                    353.0,
+                    925.0
+                ],
+                [
+                    325.0,
+                    925.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7783466577529907,
+                "coordinate": [
+                    322,
+                    73,
+                    392,
+                    90
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        322.0,
+                        73.0
+                    ],
+                    [
+                        391.0,
+                        73.0
+                    ],
+                    [
+                        391.0,
+                        89.0
+                    ],
+                    [
+                        322.0,
+                        89.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7695162296295166,
+                "coordinate": [
+                    392,
+                    134,
+                    808,
+                    154
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        392.0,
+                        134.0
+                    ],
+                    [
+                        807.0,
+                        134.0
+                    ],
+                    [
+                        807.0,
+                        153.0
+                    ],
+                    [
+                        392.0,
+                        153.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9291775226593018,
+                "coordinate": [
+                    323,
+                    167,
+                    877,
+                    238
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        323.0,
+                        167.0
+                    ],
+                    [
+                        877.0,
+                        167.0
+                    ],
+                    [
+                        877.0,
+                        238.0
+                    ],
+                    [
+                        323.0,
+                        238.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8935425877571106,
+                "coordinate": [
+                    322,
+                    243,
+                    879,
+                    280
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        322.0,
+                        243.0
+                    ],
+                    [
+                        879.0,
+                        243.0
+                    ],
+                    [
+                        879.0,
+                        280.0
+                    ],
+                    [
+                        322.0,
+                        280.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9105772972106934,
+                "coordinate": [
+                    322,
+                    284,
+                    877,
+                    338
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        322.0,
+                        284.0
+                    ],
+                    [
+                        877.0,
+                        284.0
+                    ],
+                    [
+                        877.0,
+                        338.0
+                    ],
+                    [
+                        322.0,
+                        338.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9240958094596863,
+                "coordinate": [
+                    346,
+                    343,
+                    878,
+                    432
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        346.0,
+                        343.0
+                    ],
+                    [
+                        878.0,
+                        343.0
+                    ],
+                    [
+                        878.0,
+                        432.0
+                    ],
+                    [
+                        346.0,
+                        432.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8781583905220032,
+                "coordinate": [
+                    346,
+                    437,
+                    877,
+                    474
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        346.0,
+                        437.0
+                    ],
+                    [
+                        877.0,
+                        437.0
+                    ],
+                    [
+                        877.0,
+                        474.0
+                    ],
+                    [
+                        346.0,
+                        474.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9362152814865112,
+                "coordinate": [
+                    346,
+                    479,
+                    878,
+                    583
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        346.0,
+                        479.0
+                    ],
+                    [
+                        878.0,
+                        479.0
+                    ],
+                    [
+                        878.0,
+                        583.0
+                    ],
+                    [
+                        346.0,
+                        583.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8632931113243103,
+                "coordinate": [
+                    346,
+                    590,
+                    877,
+                    627
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        346.0,
+                        590.0
+                    ],
+                    [
+                        877.0,
+                        590.0
+                    ],
+                    [
+                        877.0,
+                        627.0
+                    ],
+                    [
+                        346.0,
+                        627.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9340046048164368,
+                "coordinate": [
+                    346,
+                    632,
+                    878,
+                    737
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        346.0,
+                        632.0
+                    ],
+                    [
+                        878.0,
+                        632.0
+                    ],
+                    [
+                        878.0,
+                        737.0
+                    ],
+                    [
+                        346.0,
+                        737.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8685272336006165,
+                "coordinate": [
+                    346,
+                    742,
+                    876,
+                    779
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        346.0,
+                        742.0
+                    ],
+                    [
+                        876.0,
+                        742.0
+                    ],
+                    [
+                        876.0,
+                        779.0
+                    ],
+                    [
+                        346.0,
+                        779.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9393947124481201,
+                "coordinate": [
+                    346,
+                    784,
+                    878,
+                    891
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        346.0,
+                        784.0
+                    ],
+                    [
+                        878.0,
+                        784.0
+                    ],
+                    [
+                        878.0,
+                        891.0
+                    ],
+                    [
+                        346.0,
+                        891.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6657729744911194,
+                "coordinate": [
+                    325,
+                    909,
+                    354,
+                    926
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        325.0,
+                        909.0
+                    ],
+                    [
+                        353.0,
+                        909.0
+                    ],
+                    [
+                        353.0,
+                        925.0
+                    ],
+                    [
+                        325.0,
+                        925.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

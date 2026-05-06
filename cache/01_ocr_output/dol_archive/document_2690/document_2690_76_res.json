@@ -1,0 +1,278 @@
+{
+    "input_path": "cache/dol_archive/document_2690.pdf",
+    "page_index": 76,
+    "page_count": 77,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 23\nTotality of the Agreement",
+            "block_bbox": [
+                440,
+                145,
+                789,
+                235
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    440.0,
+                    145.0
+                ],
+                [
+                    789.0,
+                    145.0
+                ],
+                [
+                    789.0,
+                    235.0
+                ],
+                [
+                    440.0,
+                    235.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The parties acknowledge that during the negotiations which resulted in this Agreement, each had the unlimited right and opportunity to make demands and proposals with respect to any subject or matter not removed by law from the area of collective bargaining, and that the understandings and agreements arrived at by the parties after the exercise of that right and opportunity are set forth in this Agreement. Therefore, the Union and the University, for the life of this Agreement, each voluntarily and unqualifiedly waives the right, and each agrees that the other shall not be obligated, to bargain collectively with respect to any subject or matter referred to or covered by this Agreement and with respect to any subject or matter not specifically referred to or covered by this Agreement, even though such subject may not have been within the knowledge and contemplation of either or both of the parties at the time that they negotiated or signed this Agreement.",
+            "block_bbox": [
+                173,
+                280,
+                1051,
+                587
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    173.0,
+                    280.0
+                ],
+                [
+                    1051.0,
+                    280.0
+                ],
+                [
+                    1051.0,
+                    587.0
+                ],
+                [
+                    173.0,
+                    587.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "Tentative Agreement",
+            "block_bbox": [
+                176,
+                1487,
+                370,
+                1514
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    176.0,
+                    1487.0
+                ],
+                [
+                    370.0,
+                    1487.0
+                ],
+                [
+                    370.0,
+                    1514.0
+                ],
+                [
+                    176.0,
+                    1514.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 77 of 77",
+            "block_bbox": [
+                919,
+                1487,
+                1047,
+                1515
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    919.0,
+                    1487.0
+                ],
+                [
+                    1047.0,
+                    1487.0
+                ],
+                [
+                    1047.0,
+                    1515.0
+                ],
+                [
+                    919.0,
+                    1515.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.44834133982658386,
+                "coordinate": [
+                    440,
+                    145,
+                    789,
+                    235
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        440.0,
+                        145.0
+                    ],
+                    [
+                        789.0,
+                        145.0
+                    ],
+                    [
+                        789.0,
+                        235.0
+                    ],
+                    [
+                        440.0,
+                        235.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9517480134963989,
+                "coordinate": [
+                    173,
+                    280,
+                    1051,
+                    587
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        173.0,
+                        280.0
+                    ],
+                    [
+                        1051.0,
+                        280.0
+                    ],
+                    [
+                        1051.0,
+                        587.0
+                    ],
+                    [
+                        173.0,
+                        587.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8608905673027039,
+                "coordinate": [
+                    176,
+                    1487,
+                    370,
+                    1514
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        176.0,
+                        1487.0
+                    ],
+                    [
+                        370.0,
+                        1487.0
+                    ],
+                    [
+                        370.0,
+                        1514.0
+                    ],
+                    [
+                        176.0,
+                        1514.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8422387838363647,
+                "coordinate": [
+                    919,
+                    1487,
+                    1047,
+                    1515
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        919.0,
+                        1487.0
+                    ],
+                    [
+                        1047.0,
+                        1487.0
+                    ],
+                    [
+                        1047.0,
+                        1515.0
+                    ],
+                    [
+                        919.0,
+                        1515.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

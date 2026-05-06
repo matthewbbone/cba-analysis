@@ -1,0 +1,278 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 135,
+    "page_count": 189,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "aside_text",
+            "block_content": "・・・・・・・・",
+            "block_bbox": [
+                0,
+                1382,
+                10,
+                1570
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    -1.0,
+                    1382.0
+                ],
+                [
+                    9.0,
+                    1382.0
+                ],
+                [
+                    9.0,
+                    1569.0
+                ],
+                [
+                    -1.0,
+                    1569.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "WAGE RATES EFFECTIVE DECEMBER 31, 2000\nSTRUCTURE B2",
+            "block_bbox": [
+                385,
+                136,
+                849,
+                189
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    385.0,
+                    136.0
+                ],
+                [
+                    849.0,
+                    136.0
+                ],
+                [
+                    849.0,
+                    189.0
+                ],
+                [
+                    385.0,
+                    189.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Job Title</td><td>START</td><td>1 YEAR</td><td>2 YEARS</td><td>3 YEARS</td><td>4 YEARS</td><td>5 YEARS</td><td>6 YEARS</td></tr><tr><td>DIAG ULTRASONOGRAPHER I</td><td>22.6594</td><td>23.2556</td><td>23.8519</td><td>24.2280</td><td>24.7634</td><td>25.6154</td><td></td></tr><tr><td>DIAG ULTRASONOGRAPHER II</td><td>24.2457</td><td>24.8837</td><td>25.5217</td><td>26.2482</td><td>27.4858</td><td>28.8037</td><td>29.9610</td></tr><tr><td>DIAG ULTRASONOGRAPHER III</td><td>25.4581</td><td>26.1278</td><td>26.7977</td><td>27.5608</td><td>28.8602</td><td>30.2438</td><td>31.4594</td></tr><tr><td>DIAG ULTRASONOGRPHR SUPV</td><td>27.4177</td><td>28.1385</td><td>28.8602</td><td>30.1603</td><td>31.4595</td><td>32.8494</td><td>34.0580</td></tr><tr><td>DIAG ULTRASNGRPHR TRAINEE</td><td>19.9031</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>EEG TECHNOLOGIST I</td><td>15.0010</td><td>15.3858</td><td>15.7805</td><td>16.2068</td><td>16.9745</td><td>17.6569</td><td></td></tr><tr><td>EEG TECHNOLOGIST II</td><td>15.8932</td><td>16.3006</td><td>16.7188</td><td>17.1451</td><td>17.9981</td><td>18.8509</td><td></td></tr><tr><td>EKG TECHNICIAN</td><td>14.3279</td><td>14.6952</td><td>15.0719</td><td>15.5083</td><td>16.1364</td><td>16.6003</td><td></td></tr><tr><td>EKG TECHNICIAN SR</td><td>14.9495</td><td>15.3328</td><td>15.7261</td><td>16.2007</td><td>16.9650</td><td>17.5556</td><td></td></tr><tr><td>EMERGENCY DEPT TECH I</td><td>12.5721</td><td>12.8946</td><td>13.2248</td><td>13.5278</td><td>13.8304</td><td>14.0770</td><td></td></tr><tr><td>EMERGENCY DEPT TECH II</td><td>14.8707</td><td>15.2520</td><td>15.6431</td><td>16.0305</td><td>16.4556</td><td>16.8428</td><td></td></tr><tr><td>GARDENER</td><td>13.2090</td><td>13.5478</td><td>13.8950</td><td>14.2326</td><td>14.5703</td><td></td><td></td></tr><tr><td>GARDENER - SENIOR</td><td>14.2388</td><td>14.6041</td><td>14.9783</td><td>15.3190</td><td>15.6565</td><td></td><td></td></tr><tr><td>HISTOLOGIC TECH I</td><td>18.5683</td><td>19.0569</td><td>19.5457</td><td>19.9446</td><td>20.2597</td><td>20.5258</td><td></td></tr><tr><td>HISTOLOGIC TECH II</td><td>20.0925</td><td>20.6215</td><td>21.1499</td><td>21.6985</td><td>22.0638</td><td>22.3132</td><td></td></tr><tr><td>HISTOLOGIC TECH TRAINEE</td><td>15.5410</td><td>15.9495</td><td>16.3588</td><td>16.6324</td><td>17.0207</td><td>17.4091</td><td></td></tr><tr><td>HISTOLOGIC TECHNICIAN SUPV</td><td>22.2320</td><td>22.8175</td><td>23.4024</td><td>23.9845</td><td>24.4498</td><td>24.7987</td><td></td></tr><tr><td>HOME HEALTH AIDE</td><td>12.5333</td><td>12.8544</td><td>13.1842</td><td>13.4826</td><td>13.7917</td><td>14.0674</td><td></td></tr><tr><td>HOMEMAKER</td><td>7.8398</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>HOUSEKEEPING AIDE</td><td>12.0206</td><td>12.3287</td><td>12.6448</td><td>12.9763</td><td>13.3075</td><td></td><td></td></tr><tr><td>HOUSEKEEPING HEAD AIDE</td><td>12.3353</td><td>12.6516</td><td>12.9763</td><td>13.3075</td><td>13.6386</td><td></td><td></td></tr><tr><td>INVASIVE CARDIO SPECIALIST</td><td>24.6014</td><td>25.3395</td><td>26.0996</td><td>26.7520</td><td>27.4210</td><td>28.1062</td><td></td></tr><tr><td>LABORATORY ASSISTANT I</td><td>12.5093</td><td>12.8299</td><td>13.1592</td><td>13.3795</td><td>13.6917</td><td>14.0042</td><td></td></tr><tr><td>LABORATORY ASSISTANT II</td><td>13.0363</td><td>13.3708</td><td>13.7139</td><td>13.9320</td><td>14.3386</td><td>14.7090</td><td></td></tr><tr><td>LABORATORY ASSISTANT III</td><td>13.2567</td><td>13.5967</td><td>13.9452</td><td>14.2002</td><td>14.5701</td><td>14.9404</td><td></td></tr><tr><td>LABORATORY ASSISTANT SR</td><td>13.5612</td><td>13.9090</td><td>14.2656</td><td>14.5664</td><td>14.9834</td><td>15.3993</td><td></td></tr><tr><td>LICENSED VOC NURSE</td><td>16.2768</td><td>16.7052</td><td>17.1334</td><td>17.5496</td><td>17.9538</td><td>18.3574</td><td>18.7616</td></tr><tr><td>LICENSED VOC NURSE SR</td><td>16.9995</td><td>17.4466</td><td>17.8941</td><td>18.3109</td><td>18.7146</td><td>19.1181</td><td>19.5220</td></tr><tr><td>LIFT TECHNICIAN</td><td>12.3525</td><td>12.6691</td><td>12.9940</td><td>13.2921</td><td>13.6014</td><td>13.8778</td><td></td></tr><tr><td>LINEN ROOM SUPERVISOR</td><td>12.3353</td><td>12.6516</td><td>12.9763</td><td>13.3075</td><td>13.6386</td><td></td><td></td></tr><tr><td>MEDICAL ASSISTANT</td><td>12.5721</td><td>12.8946</td><td>13.2248</td><td>13.5278</td><td>13.8304</td><td>14.0770</td><td></td></tr><tr><td>MEDICAL ASSISTANT SR</td><td>12.8917</td><td>13.2222</td><td>13.5613</td><td>13.8636</td><td>14.1662</td><td>14.4128</td><td></td></tr><tr><td>MEDICAL LEGL SPEC SAC ONLY</td><td>15.2073</td><td>15.5985</td><td>15.9903</td><td>16.4572</td><td>16.9626</td><td>17.4668</td><td></td></tr></table>",
+            "block_bbox": [
+                107,
+                208,
+                1126,
+                1372
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    107.0,
+                    208.0
+                ],
+                [
+                    1126.0,
+                    208.0
+                ],
+                [
+                    1126.0,
+                    1372.0
+                ],
+                [
+                    107.0,
+                    1372.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "135",
+            "block_bbox": [
+                578,
+                1453,
+                620,
+                1480
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    578.0,
+                    1453.0
+                ],
+                [
+                    619.0,
+                    1453.0
+                ],
+                [
+                    619.0,
+                    1479.0
+                ],
+                [
+                    578.0,
+                    1479.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 2,
+                "label": "aside_text",
+                "score": 0.33344683051109314,
+                "coordinate": [
+                    0,
+                    1382,
+                    10,
+                    1570
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        -1.0,
+                        1382.0
+                    ],
+                    [
+                        9.0,
+                        1382.0
+                    ],
+                    [
+                        9.0,
+                        1569.0
+                    ],
+                    [
+                        -1.0,
+                        1569.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.8278456330299377,
+                "coordinate": [
+                    385,
+                    136,
+                    849,
+                    189
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        385.0,
+                        136.0
+                    ],
+                    [
+                        849.0,
+                        136.0
+                    ],
+                    [
+                        849.0,
+                        189.0
+                    ],
+                    [
+                        385.0,
+                        189.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9764755964279175,
+                "coordinate": [
+                    107,
+                    208,
+                    1126,
+                    1372
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        107.0,
+                        208.0
+                    ],
+                    [
+                        1126.0,
+                        208.0
+                    ],
+                    [
+                        1126.0,
+                        1372.0
+                    ],
+                    [
+                        107.0,
+                        1372.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7864518761634827,
+                "coordinate": [
+                    578,
+                    1453,
+                    620,
+                    1480
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        578.0,
+                        1453.0
+                    ],
+                    [
+                        619.0,
+                        1453.0
+                    ],
+                    [
+                        619.0,
+                        1479.0
+                    ],
+                    [
+                        578.0,
+                        1479.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

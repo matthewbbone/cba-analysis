@@ -1,0 +1,1071 @@
+{
+    "input_path": "cache/cornell_dol/6513ABBYY.pdf",
+    "page_index": 35,
+    "page_count": 91,
+    "width": 1589,
+    "height": 1226,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Contract",
+            "block_bbox": [
+                36,
+                22,
+                126,
+                49
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    22.0
+                ],
+                [
+                    126.0,
+                    22.0
+                ],
+                [
+                    126.0,
+                    49.0
+                ],
+                [
+                    36.0,
+                    49.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 35 of 94",
+            "block_bbox": [
+                1411,
+                22,
+                1550,
+                50
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    1411.0,
+                    22.0
+                ],
+                [
+                    1550.0,
+                    22.0
+                ],
+                [
+                    1550.0,
+                    50.0
+                ],
+                [
+                    1411.0,
+                    50.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. Stock functions executed for purposes other than training, merchandising or customer service including recovering merchandise from dressing rooms.",
+            "block_bbox": [
+                349,
+                62,
+                1400,
+                122
+            ],
+            "block_id": 2,
+            "block_order": 1,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    349.0,
+                    62.0
+                ],
+                [
+                    1400.0,
+                    62.0
+                ],
+                [
+                    1400.0,
+                    122.0
+                ],
+                [
+                    349.0,
+                    122.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. Taking markdowns on merchandise on the selling floor or in the stockroom.",
+            "block_bbox": [
+                349,
+                145,
+                1198,
+                177
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    349.0,
+                    145.0
+                ],
+                [
+                    1198.0,
+                    145.0
+                ],
+                [
+                    1198.0,
+                    177.0
+                ],
+                [
+                    349.0,
+                    177.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3. Other than permitted by the above:",
+            "block_bbox": [
+                351,
+                203,
+                777,
+                234
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    351.0,
+                    203.0
+                ],
+                [
+                    777.0,
+                    203.0
+                ],
+                [
+                    777.0,
+                    234.0
+                ],
+                [
+                    351.0,
+                    234.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a. Bringing new receiving or existing back stock merchandise to/from the selling floor/stockroom.",
+            "block_bbox": [
+                349,
+                259,
+                1415,
+                292
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    349.0,
+                    259.0
+                ],
+                [
+                    1415.0,
+                    259.0
+                ],
+                [
+                    1415.0,
+                    292.0
+                ],
+                [
+                    349.0,
+                    292.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b. Back stocking, organizing, or prepping/receiving merchandise in the stockroom.",
+            "block_bbox": [
+                350,
+                316,
+                1252,
+                347
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    350.0,
+                    316.0
+                ],
+                [
+                    1252.0,
+                    316.0
+                ],
+                [
+                    1252.0,
+                    347.0
+                ],
+                [
+                    350.0,
+                    347.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "c. Packing or processing transfers, claims, RTV's, or other outbound merchandise from the selling floor or stockroom.",
+            "block_bbox": [
+                350,
+                373,
+                1468,
+                432
+            ],
+            "block_id": 7,
+            "block_order": 6,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    350.0,
+                    373.0
+                ],
+                [
+                    1468.0,
+                    373.0
+                ],
+                [
+                    1468.0,
+                    432.0
+                ],
+                [
+                    350.0,
+                    432.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "4. Unpacking, prepping, or filling-in new receiving or existing back stock merchandise to maintain/fill-in existing fixturing or merchandise presentation.",
+            "block_bbox": [
+                350,
+                458,
+                1490,
+                519
+            ],
+            "block_id": 8,
+            "block_order": 7,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    350.0,
+                    458.0
+                ],
+                [
+                    1490.0,
+                    458.0
+                ],
+                [
+                    1490.0,
+                    519.0
+                ],
+                [
+                    350.0,
+                    519.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "5. The use of rolling equipment to transport stock except as set forth in item 5 under the \"permitted section\".",
+            "block_bbox": [
+                350,
+                543,
+                1451,
+                602
+            ],
+            "block_id": 9,
+            "block_order": 8,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    350.0,
+                    543.0
+                ],
+                [
+                    1451.0,
+                    543.0
+                ],
+                [
+                    1451.0,
+                    602.0
+                ],
+                [
+                    350.0,
+                    602.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Unresolved grievances shall be given priority at the regularly scheduled grievance meetings. Any such grievance not resolved at the regularly scheduled grievance meeting shall be assigned to mediation per Section 31. It is agreed by the parties that any unresolved mediations arising from this Section 26 shall be arbitrated by Thomas Angelo.",
+            "block_bbox": [
+                349,
+                629,
+                1478,
+                746
+            ],
+            "block_id": 10,
+            "block_order": 9,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    349.0,
+                    629.0
+                ],
+                [
+                    1478.0,
+                    629.0
+                ],
+                [
+                    1478.0,
+                    746.0
+                ],
+                [
+                    349.0,
+                    746.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "SECTION 27 - SELLING SUPERVISORS AND WORKING SUPERVISORS",
+            "block_bbox": [
+                557,
+                768,
+                1291,
+                799
+            ],
+            "block_id": 11,
+            "block_order": 10,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    557.0,
+                    768.0
+                ],
+                [
+                    1291.0,
+                    768.0
+                ],
+                [
+                    1291.0,
+                    799.0
+                ],
+                [
+                    557.0,
+                    799.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Selling Supervisors and Working Supervisors covered by the terms of this Agreement may perform supervisorial functions to assist executives in the performance of their duties, including coaching and counseling employees on their respective job duties, assigning work duties and other supervisorial assignments necessary for the effective operation of the department and the store. Such duties shall only be assumed upon the successful bidding for the assignment under Section 17E, assignment by the employer and a three (3) hour orientation held jointly with the Union and the Employer. The Employer agrees to notify the Union as to the names(s) of the Supervisor(s) and to arrange for the orientation.",
+            "block_bbox": [
+                350,
+                826,
+                1473,
+                1029
+            ],
+            "block_id": 12,
+            "block_order": 11,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    350.0,
+                    826.0
+                ],
+                [
+                    1473.0,
+                    826.0
+                ],
+                [
+                    1473.0,
+                    1029.0
+                ],
+                [
+                    350.0,
+                    1029.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "SECTION 28 - HEALTH AND LIFE INSURANCE PLAN",
+            "block_bbox": [
+                645,
+                1052,
+                1206,
+                1083
+            ],
+            "block_id": 13,
+            "block_order": 12,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    645.0,
+                    1052.0
+                ],
+                [
+                    1206.0,
+                    1052.0
+                ],
+                [
+                    1206.0,
+                    1083.0
+                ],
+                [
+                    645.0,
+                    1083.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A. The Employer shall provide a health plan(s) for eligible employees covered by this Agreement and for qualified dependents of such employees. The health care plan(s) shall be the same plan(s) as that",
+            "block_bbox": [
+                351,
+                1109,
+                1489,
+                1170
+            ],
+            "block_id": 14,
+            "block_order": 13,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    351.0,
+                    1109.0
+                ],
+                [
+                    1489.0,
+                    1109.0
+                ],
+                [
+                    1489.0,
+                    1170.0
+                ],
+                [
+                    351.0,
+                    1170.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "http://macys.local101.com/contract.htm",
+            "block_bbox": [
+                40,
+                1182,
+                430,
+                1211
+            ],
+            "block_id": 15,
+            "block_order": null,
+            "group_id": 15,
+            "block_polygon_points": [
+                [
+                    40.0,
+                    1182.0
+                ],
+                [
+                    430.0,
+                    1182.0
+                ],
+                [
+                    430.0,
+                    1211.0
+                ],
+                [
+                    40.0,
+                    1211.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "1/31/2005",
+            "block_bbox": [
+                1455,
+                1182,
+                1556,
+                1209
+            ],
+            "block_id": 16,
+            "block_order": null,
+            "group_id": 16,
+            "block_polygon_points": [
+                [
+                    1455.0,
+                    1182.0
+                ],
+                [
+                    1556.0,
+                    1182.0
+                ],
+                [
+                    1556.0,
+                    1209.0
+                ],
+                [
+                    1455.0,
+                    1209.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.773330569267273,
+                "coordinate": [
+                    36,
+                    22,
+                    126,
+                    49
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        36.0,
+                        22.0
+                    ],
+                    [
+                        126.0,
+                        22.0
+                    ],
+                    [
+                        126.0,
+                        49.0
+                    ],
+                    [
+                        36.0,
+                        49.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8525068759918213,
+                "coordinate": [
+                    1411,
+                    22,
+                    1550,
+                    50
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        1411.0,
+                        22.0
+                    ],
+                    [
+                        1550.0,
+                        22.0
+                    ],
+                    [
+                        1550.0,
+                        50.0
+                    ],
+                    [
+                        1411.0,
+                        50.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9305524230003357,
+                "coordinate": [
+                    349,
+                    62,
+                    1400,
+                    122
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        349.0,
+                        62.0
+                    ],
+                    [
+                        1400.0,
+                        62.0
+                    ],
+                    [
+                        1400.0,
+                        122.0
+                    ],
+                    [
+                        349.0,
+                        122.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8942306637763977,
+                "coordinate": [
+                    349,
+                    145,
+                    1198,
+                    177
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        349.0,
+                        145.0
+                    ],
+                    [
+                        1198.0,
+                        145.0
+                    ],
+                    [
+                        1198.0,
+                        177.0
+                    ],
+                    [
+                        349.0,
+                        177.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8719624280929565,
+                "coordinate": [
+                    351,
+                    203,
+                    777,
+                    234
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        351.0,
+                        203.0
+                    ],
+                    [
+                        777.0,
+                        203.0
+                    ],
+                    [
+                        777.0,
+                        234.0
+                    ],
+                    [
+                        351.0,
+                        234.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8799148797988892,
+                "coordinate": [
+                    349,
+                    259,
+                    1415,
+                    292
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        349.0,
+                        259.0
+                    ],
+                    [
+                        1415.0,
+                        259.0
+                    ],
+                    [
+                        1415.0,
+                        292.0
+                    ],
+                    [
+                        349.0,
+                        292.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8686996102333069,
+                "coordinate": [
+                    350,
+                    316,
+                    1252,
+                    347
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        350.0,
+                        316.0
+                    ],
+                    [
+                        1252.0,
+                        316.0
+                    ],
+                    [
+                        1252.0,
+                        347.0
+                    ],
+                    [
+                        350.0,
+                        347.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9205129742622375,
+                "coordinate": [
+                    350,
+                    373,
+                    1468,
+                    432
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        350.0,
+                        373.0
+                    ],
+                    [
+                        1468.0,
+                        373.0
+                    ],
+                    [
+                        1468.0,
+                        432.0
+                    ],
+                    [
+                        350.0,
+                        432.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9275768399238586,
+                "coordinate": [
+                    350,
+                    458,
+                    1490,
+                    519
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        350.0,
+                        458.0
+                    ],
+                    [
+                        1490.0,
+                        458.0
+                    ],
+                    [
+                        1490.0,
+                        519.0
+                    ],
+                    [
+                        350.0,
+                        519.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9203314781188965,
+                "coordinate": [
+                    350,
+                    543,
+                    1451,
+                    602
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        350.0,
+                        543.0
+                    ],
+                    [
+                        1451.0,
+                        543.0
+                    ],
+                    [
+                        1451.0,
+                        602.0
+                    ],
+                    [
+                        350.0,
+                        602.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9537596702575684,
+                "coordinate": [
+                    349,
+                    629,
+                    1478,
+                    746
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        349.0,
+                        629.0
+                    ],
+                    [
+                        1478.0,
+                        629.0
+                    ],
+                    [
+                        1478.0,
+                        746.0
+                    ],
+                    [
+                        349.0,
+                        746.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8877332806587219,
+                "coordinate": [
+                    557,
+                    768,
+                    1291,
+                    799
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        557.0,
+                        768.0
+                    ],
+                    [
+                        1291.0,
+                        768.0
+                    ],
+                    [
+                        1291.0,
+                        799.0
+                    ],
+                    [
+                        557.0,
+                        799.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9652882814407349,
+                "coordinate": [
+                    350,
+                    826,
+                    1473,
+                    1029
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        350.0,
+                        826.0
+                    ],
+                    [
+                        1473.0,
+                        826.0
+                    ],
+                    [
+                        1473.0,
+                        1029.0
+                    ],
+                    [
+                        350.0,
+                        1029.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8894661664962769,
+                "coordinate": [
+                    645,
+                    1052,
+                    1206,
+                    1083
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        645.0,
+                        1052.0
+                    ],
+                    [
+                        1206.0,
+                        1052.0
+                    ],
+                    [
+                        1206.0,
+                        1083.0
+                    ],
+                    [
+                        645.0,
+                        1083.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9346919655799866,
+                "coordinate": [
+                    351,
+                    1109,
+                    1489,
+                    1170
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        351.0,
+                        1109.0
+                    ],
+                    [
+                        1489.0,
+                        1109.0
+                    ],
+                    [
+                        1489.0,
+                        1170.0
+                    ],
+                    [
+                        351.0,
+                        1170.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8709553480148315,
+                "coordinate": [
+                    40,
+                    1182,
+                    430,
+                    1211
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        40.0,
+                        1182.0
+                    ],
+                    [
+                        430.0,
+                        1182.0
+                    ],
+                    [
+                        430.0,
+                        1211.0
+                    ],
+                    [
+                        40.0,
+                        1211.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8498950004577637,
+                "coordinate": [
+                    1455,
+                    1182,
+                    1556,
+                    1209
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1455.0,
+                        1182.0
+                    ],
+                    [
+                        1556.0,
+                        1182.0
+                    ],
+                    [
+                        1556.0,
+                        1209.0
+                    ],
+                    [
+                        1455.0,
+                        1209.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,245 @@
+{
+    "input_path": "cache/cornell_dol/K820213_12_02combined.pdf",
+    "page_index": 3,
+    "page_count": 23,
+    "width": 1591,
+    "height": 1232,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "content",
+            "block_content": "15",
+            "block_bbox": [
+                87,
+                96,
+                1429,
+                1006
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    87.0,
+                    96.0
+                ],
+                [
+                    1429.0,
+                    96.0
+                ],
+                [
+                    1429.0,
+                    1006.0
+                ],
+                [
+                    87.0,
+                    1006.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.37704360485076904,
+                "coordinate": [
+                    234,
+                    108,
+                    569,
+                    132
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        234.0,
+                        108.0
+                    ],
+                    [
+                        569.0,
+                        108.0
+                    ],
+                    [
+                        569.0,
+                        132.0
+                    ],
+                    [
+                        234.0,
+                        132.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.8182708024978638,
+                "coordinate": [
+                    96,
+                    125,
+                    640,
+                    999
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        96.0,
+                        125.0
+                    ],
+                    [
+                        640.0,
+                        125.0
+                    ],
+                    [
+                        640.0,
+                        999.0
+                    ],
+                    [
+                        96.0,
+                        999.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.3233385682106018,
+                "coordinate": [
+                    87,
+                    96,
+                    1429,
+                    1006
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        87.0,
+                        96.0
+                    ],
+                    [
+                        1429.0,
+                        96.0
+                    ],
+                    [
+                        1429.0,
+                        1006.0
+                    ],
+                    [
+                        87.0,
+                        1006.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.5102676153182983,
+                "coordinate": [
+                    310,
+                    153,
+                    637,
+                    1003
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        310.0,
+                        153.0
+                    ],
+                    [
+                        637.0,
+                        153.0
+                    ],
+                    [
+                        637.0,
+                        1003.0
+                    ],
+                    [
+                        310.0,
+                        1003.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.9198840856552124,
+                "coordinate": [
+                    882,
+                    108,
+                    1415,
+                    938
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        882.0,
+                        108.0
+                    ],
+                    [
+                        1415.0,
+                        108.0
+                    ],
+                    [
+                        1415.0,
+                        938.0
+                    ],
+                    [
+                        882.0,
+                        938.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.5687587261199951,
+                "coordinate": [
+                    1175,
+                    991,
+                    1188,
+                    1007
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        1175.0,
+                        991.0
+                    ],
+                    [
+                        1187.0,
+                        991.0
+                    ],
+                    [
+                        1187.0,
+                        1006.0
+                    ],
+                    [
+                        1175.0,
+                        1006.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

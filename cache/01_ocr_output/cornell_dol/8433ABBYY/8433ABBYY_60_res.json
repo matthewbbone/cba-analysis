@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/8433ABBYY.pdf",
+    "page_index": 60,
+    "page_count": 81,
+    "width": 488,
+    "height": 880,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "within or without the geographical jurisdiction of the Union's jurisdiction, except that when work is performed outside the Union's jurisdiction wherein another Welfare Plan or Pension Plan is effective and the Employer makes contributions to that fund, then the said Employer shall not be required to make a double contribution; provided, however, that the primary duty to make payments for work performed within the jurisdiction of the Union shall be for all Employers to pay to the Health and Welfare Funds, the Pension Funds, the Apprenticeship Programs, the Promotion Trust Funds, the Annuity Funds, the District Council Training Center Fund, and the International Pension Fund, the contributions provided for in this Agreement.",
+            "block_bbox": [
+                8,
+                29,
+                451,
+                263
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    8.0,
+                    29.0
+                ],
+                [
+                    451.0,
+                    29.0
+                ],
+                [
+                    451.0,
+                    263.0
+                ],
+                [
+                    8.0,
+                    263.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "33.31 Reports to Union and Trustees:",
+            "block_bbox": [
+                9,
+                280,
+                310,
+                300
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    9.0,
+                    280.0
+                ],
+                [
+                    309.0,
+                    280.0
+                ],
+                [
+                    309.0,
+                    299.0
+                ],
+                [
+                    9.0,
+                    299.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A. In order to assist in the collection of the contributions required pursuant to this Agreement, all Employers shall furnish the following reports to the Trustees of the Health and Welfare Funds, Pension Funds, Apprenticeship Programs, Promotion Trust Funds, Annuity Funds, District Council Training Center Fund, International Pension Fund, or to the Union as indicated:",
+            "block_bbox": [
+                8,
+                319,
+                449,
+                455
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    8.0,
+                    319.0
+                ],
+                [
+                    449.0,
+                    319.0
+                ],
+                [
+                    449.0,
+                    455.0
+                ],
+                [
+                    8.0,
+                    455.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(1) All Employers shall annually furnish to the Trustees of the Health and Welfare Funds, Pension Funds, Apprenticeship Programs, Promotion Trust Funds, Annuity Funds, District Council Training Center Fund, and International Pension Fund on dates determined by the respective Trustees, a statement showing whether (1) the Employer is a corporation and the names of all officers and directors of said Employer; (2) if not a corporation, a certificate stating who are the constituent persons composing the Employer and their respective Interest in the same.",
+            "block_bbox": [
+                83,
+                472,
+                449,
+                724
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    83.0,
+                    472.0
+                ],
+                [
+                    449.0,
+                    472.0
+                ],
+                [
+                    449.0,
+                    724.0
+                ],
+                [
+                    83.0,
+                    724.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(2) Each Employer shall furnish to the Bricklayers Northern Trust Fringe Benefit Account, on a monthly basis, a remittance report listing the names of all Bricklayers employed by the Em-",
+            "block_bbox": [
+                81,
+                742,
+                448,
+                820
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    81.0,
+                    742.0
+                ],
+                [
+                    448.0,
+                    742.0
+                ],
+                [
+                    448.0,
+                    820.0
+                ],
+                [
+                    81.0,
+                    820.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "57",
+            "block_bbox": [
+                192,
+                826,
+                211,
+                841
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    192.0,
+                    826.0
+                ],
+                [
+                    210.0,
+                    826.0
+                ],
+                [
+                    210.0,
+                    840.0
+                ],
+                [
+                    192.0,
+                    840.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9628384709358215,
+                "coordinate": [
+                    8,
+                    29,
+                    451,
+                    263
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        8.0,
+                        29.0
+                    ],
+                    [
+                        451.0,
+                        29.0
+                    ],
+                    [
+                        451.0,
+                        263.0
+                    ],
+                    [
+                        8.0,
+                        263.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8607833981513977,
+                "coordinate": [
+                    9,
+                    280,
+                    310,
+                    300
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        9.0,
+                        280.0
+                    ],
+                    [
+                        309.0,
+                        280.0
+                    ],
+                    [
+                        309.0,
+                        299.0
+                    ],
+                    [
+                        9.0,
+                        299.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9535402059555054,
+                "coordinate": [
+                    8,
+                    319,
+                    449,
+                    455
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        8.0,
+                        319.0
+                    ],
+                    [
+                        449.0,
+                        319.0
+                    ],
+                    [
+                        449.0,
+                        455.0
+                    ],
+                    [
+                        8.0,
+                        455.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.959463894367218,
+                "coordinate": [
+                    83,
+                    472,
+                    449,
+                    724
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        83.0,
+                        472.0
+                    ],
+                    [
+                        449.0,
+                        472.0
+                    ],
+                    [
+                        449.0,
+                        724.0
+                    ],
+                    [
+                        83.0,
+                        724.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.944366455078125,
+                "coordinate": [
+                    81,
+                    742,
+                    448,
+                    820
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        81.0,
+                        742.0
+                    ],
+                    [
+                        448.0,
+                        742.0
+                    ],
+                    [
+                        448.0,
+                        820.0
+                    ],
+                    [
+                        81.0,
+                        820.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8019244074821472,
+                "coordinate": [
+                    192,
+                    826,
+                    211,
+                    841
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        192.0,
+                        826.0
+                    ],
+                    [
+                        210.0,
+                        826.0
+                    ],
+                    [
+                        210.0,
+                        840.0
+                    ],
+                    [
+                        192.0,
+                        840.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

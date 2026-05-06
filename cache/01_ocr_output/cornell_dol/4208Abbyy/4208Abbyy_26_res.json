@@ -1,0 +1,888 @@
+{
+    "input_path": "cache/cornell_dol/4208Abbyy.pdf",
+    "page_index": 26,
+    "page_count": 128,
+    "width": 785,
+    "height": 1205,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "aside_text",
+            "block_content": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56",
+            "block_bbox": [
+                31,
+                73,
+                55,
+                1139
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    31.0,
+                    73.0
+                ],
+                [
+                    55.0,
+                    73.0
+                ],
+                [
+                    55.0,
+                    1139.0
+                ],
+                [
+                    31.0,
+                    1139.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "disregarded in ensuing computations. [E.g., if the BLS Index for October, November, and December 2003 represented a 12.0 percent increase over the base period (yielding a 2.5 percent Cost of Living Adjustment effective March 5, 2004), no Cost of Living Adjustment would result for the March 4, 2005, effective date unless, and to the extent, the BLS Index for October, November, and December 2004 represented an increase in excess of 18.2 percent (18.2%) over the base period.] BLS Index three (3)-month averages, BLS Index increase percentages, and salary increase percentages will be rounded to the nearest tenth, with five hundredths rounded upward to the nearest tenth.",
+            "block_bbox": [
+                126,
+                72,
+                706,
+                226
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    126.0,
+                    72.0
+                ],
+                [
+                    706.0,
+                    72.0
+                ],
+                [
+                    706.0,
+                    226.0
+                ],
+                [
+                    126.0,
+                    226.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "TABLE II",
+            "block_bbox": [
+                354,
+                242,
+                423,
+                262
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    354.0,
+                    242.0
+                ],
+                [
+                    422.0,
+                    242.0
+                ],
+                [
+                    422.0,
+                    261.0
+                ],
+                [
+                    354.0,
+                    261.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Effective Date of Adjustment</td><td>BLS Index Comparison Quarter</td><td>BLS Index Threshold Percentage</td></tr><tr><td>3/5/2004</td><td>Oct, Nov, Dec 2003</td><td>7.0%</td></tr><tr><td>3/4/2005</td><td>Oct, Nov, Dec 2004</td><td>13.2%</td></tr><tr><td>3/3/2006</td><td>Oct, Nov, Dec 2005</td><td>19.6%</td></tr><tr><td>3/2/2007</td><td>Oct, Nov, Dec 2006</td><td>26.2%</td></tr></table>",
+            "block_bbox": [
+                76,
+                273,
+                698,
+                415
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    76.0,
+                    273.0
+                ],
+                [
+                    698.0,
+                    273.0
+                ],
+                [
+                    698.0,
+                    415.0
+                ],
+                [
+                    76.0,
+                    415.0
+                ]
+            ]
+        },
+        {
+            "block_label": "vision_footnote",
+            "block_content": "11.5(e)(5) In connection with each of the effective dates in Table II, the computations set forth in 11.5(e)(4) will be made.",
+            "block_bbox": [
+                126,
+                433,
+                702,
+                473
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    126.0,
+                    433.0
+                ],
+                [
+                    702.0,
+                    433.0
+                ],
+                [
+                    702.0,
+                    473.0
+                ],
+                [
+                    126.0,
+                    473.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 11.6 Temporary Military Leave. An employee who is a member of a reserve component of the Armed Forces, who is absent due to required active annual training duty or temporary special services duty, shall be paid his or her normal straight time earnings, including shift differential where applicable, up to a maximum of 80 hours each military service fiscal year. The amount due the employee under this 11.6 shall be reduced by the amount received from the government body identified with such active or temporary special duty, for the period of such duty (up to the maximum period mentioned above). Such items as subsistence, uniform and travel allowance shall not be included in determining pay received from the state or federal government. An employee who elects to work or use available vacation credits while on temporary active duty shall not be eligible for military pay differential for that period.",
+            "block_bbox": [
+                68,
+                489,
+                703,
+                666
+            ],
+            "block_id": 5,
+            "block_order": 2,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    68.0,
+                    489.0
+                ],
+                [
+                    703.0,
+                    489.0
+                ],
+                [
+                    703.0,
+                    666.0
+                ],
+                [
+                    68.0,
+                    666.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Members of a reserve component of a uniformed service ordered to annual active duty are eligible for military differential pay up to a maximum of eighty (80) hours each military fiscal year (October 1 - September 30).",
+            "block_bbox": [
+                68,
+                681,
+                702,
+                741
+            ],
+            "block_id": 6,
+            "block_order": 3,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    68.0,
+                    681.0
+                ],
+                [
+                    702.0,
+                    681.0
+                ],
+                [
+                    702.0,
+                    741.0
+                ],
+                [
+                    68.0,
+                    741.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Members of a reserve component of a uniformed service ordered to temporary special duty under Military U.S. Code Title 10 or mobilized by the applicable state agency are eligible for military differential pay up to a maximum of ninety (90) calendar days for each occurrence.",
+            "block_bbox": [
+                68,
+                757,
+                701,
+                818
+            ],
+            "block_id": 7,
+            "block_order": 4,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    68.0,
+                    757.0
+                ],
+                [
+                    701.0,
+                    757.0
+                ],
+                [
+                    701.0,
+                    818.0
+                ],
+                [
+                    68.0,
+                    818.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Employees will retain all compensation received from the uniformed services. If this compensation is less than their regular Company pay (base rate plus applicable additives), the Company will provide pay equal to the difference between the employee's base rate (plus applicable additives) and the compensation received from the uniformed services. This pay will be provided upon receipt of the employee's leave and earnings statement. Subsistence (does not include quarters), uniform, and travel allowances will not be included in determining military pay.",
+            "block_bbox": [
+                67,
+                834,
+                701,
+                950
+            ],
+            "block_id": 8,
+            "block_order": 5,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    67.0,
+                    840.0000610351562
+                ],
+                [
+                    700.0,
+                    834.0000610351562
+                ],
+                [
+                    701.0425415039062,
+                    943.9901733398438
+                ],
+                [
+                    68.04254150390625,
+                    949.9901733398438
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 11.7 Jury Duty and Witness Service. Time off with pay, up to thirty (30) days each calendar year, will be granted for absence necessary for an employee to perform jury duty or witness service. The employee will retain all fees received. Time off with pay will not be granted if the employee:",
+            "block_bbox": [
+                67,
+                967,
+                701,
+                1027
+            ],
+            "block_id": 9,
+            "block_order": 6,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    67.0,
+                    967.0
+                ],
+                [
+                    701.0,
+                    967.0
+                ],
+                [
+                    701.0,
+                    1027.0
+                ],
+                [
+                    67.0,
+                    1027.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(1) Is subpoenaed as a witness against the Company or its interests.",
+            "block_bbox": [
+                93,
+                1043,
+                505,
+                1064
+            ],
+            "block_id": 10,
+            "block_order": 7,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    93.0,
+                    1043.0
+                ],
+                [
+                    505.0,
+                    1043.0
+                ],
+                [
+                    505.0,
+                    1064.0
+                ],
+                [
+                    93.0,
+                    1064.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(2) Is subpoenaed as a witness as a direct party in the action.",
+            "block_bbox": [
+                94,
+                1081,
+                465,
+                1102
+            ],
+            "block_id": 11,
+            "block_order": 8,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    94.0,
+                    1081.0
+                ],
+                [
+                    464.0,
+                    1081.0
+                ],
+                [
+                    464.0,
+                    1101.0
+                ],
+                [
+                    94.0,
+                    1101.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(3) Voluntarily seeks to testify as a witness.",
+            "block_bbox": [
+                94,
+                1119,
+                359,
+                1141
+            ],
+            "block_id": 12,
+            "block_order": 9,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    94.0,
+                    1119.0
+                ],
+                [
+                    359.0,
+                    1119.0
+                ],
+                [
+                    359.0,
+                    1141.0
+                ],
+                [
+                    94.0,
+                    1141.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "28",
+            "block_bbox": [
+                373,
+                1159,
+                392,
+                1175
+            ],
+            "block_id": 13,
+            "block_order": null,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    373.0,
+                    1159.0
+                ],
+                [
+                    391.0,
+                    1159.0
+                ],
+                [
+                    391.0,
+                    1174.0
+                ],
+                [
+                    373.0,
+                    1174.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 2,
+                "label": "aside_text",
+                "score": 0.873029351234436,
+                "coordinate": [
+                    31,
+                    73,
+                    55,
+                    1139
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        31.0,
+                        73.0
+                    ],
+                    [
+                        55.0,
+                        73.0
+                    ],
+                    [
+                        55.0,
+                        1139.0
+                    ],
+                    [
+                        31.0,
+                        1139.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9468017816543579,
+                "coordinate": [
+                    126,
+                    72,
+                    706,
+                    226
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        126.0,
+                        72.0
+                    ],
+                    [
+                        706.0,
+                        72.0
+                    ],
+                    [
+                        706.0,
+                        226.0
+                    ],
+                    [
+                        126.0,
+                        226.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.7635892033576965,
+                "coordinate": [
+                    354,
+                    242,
+                    423,
+                    262
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        354.0,
+                        242.0
+                    ],
+                    [
+                        422.0,
+                        242.0
+                    ],
+                    [
+                        422.0,
+                        261.0
+                    ],
+                    [
+                        354.0,
+                        261.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9157695174217224,
+                "coordinate": [
+                    76,
+                    273,
+                    698,
+                    415
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        76.0,
+                        273.0
+                    ],
+                    [
+                        698.0,
+                        273.0
+                    ],
+                    [
+                        698.0,
+                        415.0
+                    ],
+                    [
+                        76.0,
+                        415.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.6552095413208008,
+                "coordinate": [
+                    126,
+                    433,
+                    702,
+                    473
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        126.0,
+                        433.0
+                    ],
+                    [
+                        702.0,
+                        433.0
+                    ],
+                    [
+                        702.0,
+                        473.0
+                    ],
+                    [
+                        126.0,
+                        473.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9509956240653992,
+                "coordinate": [
+                    68,
+                    489,
+                    703,
+                    666
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        68.0,
+                        489.0
+                    ],
+                    [
+                        703.0,
+                        489.0
+                    ],
+                    [
+                        703.0,
+                        666.0
+                    ],
+                    [
+                        68.0,
+                        666.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9234886765480042,
+                "coordinate": [
+                    68,
+                    681,
+                    702,
+                    741
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        68.0,
+                        681.0
+                    ],
+                    [
+                        702.0,
+                        681.0
+                    ],
+                    [
+                        702.0,
+                        741.0
+                    ],
+                    [
+                        68.0,
+                        741.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9259954690933228,
+                "coordinate": [
+                    68,
+                    757,
+                    701,
+                    818
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        68.0,
+                        757.0
+                    ],
+                    [
+                        701.0,
+                        757.0
+                    ],
+                    [
+                        701.0,
+                        818.0
+                    ],
+                    [
+                        68.0,
+                        818.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9535629749298096,
+                "coordinate": [
+                    67,
+                    834,
+                    701,
+                    950
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        67.0,
+                        840.0000610351562
+                    ],
+                    [
+                        700.0,
+                        834.0000610351562
+                    ],
+                    [
+                        701.0425415039062,
+                        943.9901733398438
+                    ],
+                    [
+                        68.04254150390625,
+                        949.9901733398438
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9403566718101501,
+                "coordinate": [
+                    67,
+                    967,
+                    701,
+                    1027
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        67.0,
+                        967.0
+                    ],
+                    [
+                        701.0,
+                        967.0
+                    ],
+                    [
+                        701.0,
+                        1027.0
+                    ],
+                    [
+                        67.0,
+                        1027.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8364788293838501,
+                "coordinate": [
+                    93,
+                    1043,
+                    505,
+                    1064
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        93.0,
+                        1043.0
+                    ],
+                    [
+                        505.0,
+                        1043.0
+                    ],
+                    [
+                        505.0,
+                        1064.0
+                    ],
+                    [
+                        93.0,
+                        1064.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8429240584373474,
+                "coordinate": [
+                    94,
+                    1081,
+                    465,
+                    1102
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        94.0,
+                        1081.0
+                    ],
+                    [
+                        464.0,
+                        1081.0
+                    ],
+                    [
+                        464.0,
+                        1101.0
+                    ],
+                    [
+                        94.0,
+                        1101.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8327268362045288,
+                "coordinate": [
+                    94,
+                    1119,
+                    359,
+                    1141
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        94.0,
+                        1119.0
+                    ],
+                    [
+                        359.0,
+                        1119.0
+                    ],
+                    [
+                        359.0,
+                        1141.0
+                    ],
+                    [
+                        94.0,
+                        1141.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7679915428161621,
+                "coordinate": [
+                    373,
+                    1159,
+                    392,
+                    1175
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        373.0,
+                        1159.0
+                    ],
+                    [
+                        391.0,
+                        1159.0
+                    ],
+                    [
+                        391.0,
+                        1174.0
+                    ],
+                    [
+                        373.0,
+                        1174.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

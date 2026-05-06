@@ -1,0 +1,156 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 204,
+    "page_count": 206,
+    "width": 1224,
+    "height": 2016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "content",
+            "block_content": "Extended Sick Leave .....92\nLeave Without Pay .....92\nReturn From Work-Incurred Injury or Illness Leave .....92\nSeparation .....93\nWORK RULES .....93\nGeneral Provisions .....93\nNotice .....93\nApplication and Grievability .....93\nMemorandum of the Negotiators .....94\nExecution of Agreement/ Bargaining Team Members .....95-96\nAppendix A: Salary Range Tables .....97-173\nBerkeley .....97\nDavis .....97-104\nIrvine .....104-109\nLos Angeles .....109-115\nRiverside .....115-116\nSan Diego .....116-122\nSan Francisco .....123-172\nSanta Barbara .....173\nSanta Cruz .....173\nAppendix B: Vacation Credit Tables .....174-175\nAppendix C: Enumeration of University Benefits .....176-178\nHealth Benefits .....176\nMedical Program .....176\nDental Program .....176\nVision Program .....176\nLife Insurance .....176\nLife Insurance Program .....176\nUniversity-Paid .....176\nSupplemental .....176\nOther Insurance .....176\nAccidental Death & Dismemberment Insurance .....176\nBusiness Travel Accident Insurance .....176\nDisability Insurance .....176\nShort-Term Disability Insurance .....176\nSupplemental Disability Insurance .....176\nLegal Expense Insurance Plan .....177\nSavings Program .....177\nTax-Deferred 403(b) Plan .....177\nUC Managed Funds .....177\nCalvert Socially Responsible Mutual Funds .....177\nFidelity Investments Mutual Funds .....177\nUniversity Retirement Plan .....177\nDefined Contribution Plan (DC Plan) .....177\nUS Savings Bonds & Benham CA Tax Free & Municipal Funds .....177\nTax Effective Salary Reduction Programs .....178\nRetirement Tax Savings Plan .....178\nTax Savings on Insurance Premiums (TIP) .....178\nDependent Care Assistance Program (DepCare) .....178\nAuto/Homeowner Insurance .....178\nDeath Payments .....178\nUCRP Tier Two Benefits .....178\nAlternate Retirement Plans .....178\nAppendix D: Meeting Rooms and Bulletin Boards .....179-186\nAppendix E: Side letters .....187-195\nAgricultural Workers .....187\nCapital Accumulation Provision (CAP) .....188",
+            "block_bbox": [
+                108,
+                85,
+                1045,
+                1901
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    108.0,
+                    85.0
+                ],
+                [
+                    1045.0,
+                    85.0
+                ],
+                [
+                    1045.0,
+                    1901.0
+                ],
+                [
+                    108.0,
+                    1901.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "202",
+            "block_bbox": [
+                593,
+                1918,
+                640,
+                1942
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    593.0,
+                    1918.0
+                ],
+                [
+                    639.0,
+                    1918.0
+                ],
+                [
+                    639.0,
+                    1941.0
+                ],
+                [
+                    593.0,
+                    1941.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.9667097330093384,
+                "coordinate": [
+                    108,
+                    85,
+                    1045,
+                    1901
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        108.0,
+                        85.0
+                    ],
+                    [
+                        1045.0,
+                        85.0
+                    ],
+                    [
+                        1045.0,
+                        1901.0
+                    ],
+                    [
+                        108.0,
+                        1901.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7610973119735718,
+                "coordinate": [
+                    593,
+                    1918,
+                    640,
+                    1942
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        593.0,
+                        1918.0
+                    ],
+                    [
+                        639.0,
+                        1918.0
+                    ],
+                    [
+                        639.0,
+                        1941.0
+                    ],
+                    [
+                        593.0,
+                        1941.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

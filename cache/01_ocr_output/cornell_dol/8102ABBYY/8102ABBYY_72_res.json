@@ -1,0 +1,522 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 72,
+    "page_count": 439,
+    "width": 1234,
+    "height": 1581,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "Article 12",
+            "block_bbox": [
+                321,
+                78,
+                392,
+                97
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    78.0
+                ],
+                [
+                    386.0,
+                    78.0
+                ],
+                [
+                    386.0,
+                    96.0
+                ],
+                [
+                    321.0,
+                    96.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "EFFECTIVE MAY 29, 2005",
+            "block_bbox": [
+                504,
+                118,
+                695,
+                139
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    504.0,
+                    118.0
+                ],
+                [
+                    694.0,
+                    118.0
+                ],
+                [
+                    694.0,
+                    138.0
+                ],
+                [
+                    504.0,
+                    138.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "WAGE SCHEDULE 2E",
+            "block_bbox": [
+                517,
+                158,
+                682,
+                178
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    517.0,
+                    158.0
+                ],
+                [
+                    681.0,
+                    158.0
+                ],
+                [
+                    681.0,
+                    177.0
+                ],
+                [
+                    517.0,
+                    177.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Step</td><td>ACST</td><td>Step</td><td>CST</td><td>Step</td><td>SCST</td><td>Step</td><td>S-1</td><td>Step</td><td>S-2</td></tr><tr><td>1</td><td>$9.17</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>2</td><td>$9.78</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>3</td><td>$10.44</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>4</td><td>$11.14</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>5</td><td>$11.88</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>6</td><td>$12.68</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>7</td><td>$13.53</td><td>1</td><td>$15.79</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>8</td><td>$14.43</td><td>2</td><td>$16.67</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9</td><td>$15.40</td><td>3</td><td>$18.02</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>10</td><td>$16.43</td><td>4</td><td>$19.25</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>11</td><td>$17.53</td><td>5</td><td>$20.57</td><td>1</td><td>$19.02</td><td></td><td></td><td></td><td></td></tr><tr><td>12</td><td>$18.71</td><td>6</td><td>$21.97</td><td>2</td><td>$21.53</td><td></td><td></td><td></td><td></td></tr><tr><td>13</td><td>$19.95</td><td>7</td><td>$23.47</td><td>3</td><td>$24.36</td><td></td><td></td><td></td><td></td></tr><tr><td>14</td><td>$21.29</td><td>8</td><td>$25.08</td><td>4</td><td>$27.58</td><td></td><td></td><td></td><td></td></tr><tr><td>15</td><td>$22.72</td><td>9</td><td>$28.79</td><td>5</td><td>$31.21</td><td>1</td><td>$28.11</td><td>1</td><td>$29.82</td></tr><tr><td>PB</td><td>111</td><td></td><td>118</td><td></td><td>124</td><td></td><td>124</td><td></td><td>124</td></tr></table>",
+            "block_bbox": [
+                317,
+                187,
+                879,
+                431
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    317.0,
+                    187.0
+                ],
+                [
+                    879.0,
+                    187.0
+                ],
+                [
+                    879.0,
+                    431.0
+                ],
+                [
+                    317.0,
+                    431.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "EFFECTIVE MAY 28, 2006",
+            "block_bbox": [
+                504,
+                476,
+                693,
+                495
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    504.0,
+                    476.0
+                ],
+                [
+                    692.0,
+                    476.0
+                ],
+                [
+                    692.0,
+                    494.0
+                ],
+                [
+                    504.0,
+                    494.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "WAGE SCHEDULE 2E",
+            "block_bbox": [
+                516,
+                516,
+                680,
+                535
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    516.0,
+                    516.0
+                ],
+                [
+                    679.0,
+                    516.0
+                ],
+                [
+                    679.0,
+                    534.0
+                ],
+                [
+                    516.0,
+                    534.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Step</td><td>ACST</td><td>Step</td><td>CST</td><td>Step</td><td>SCST</td><td>Step</td><td>S-1</td><td>Step</td><td>S-2</td></tr><tr><td>1</td><td>$9.40</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>2</td><td>$10.03</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>3</td><td>$10.70</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>4</td><td>$11.42</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>5</td><td>$12.18</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>6</td><td>$13.00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>7</td><td>$13.87</td><td>1</td><td>$18.18</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>8</td><td>$14.80</td><td>2</td><td>$17.29</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>9</td><td>$15.79</td><td>3</td><td>$18.47</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>10</td><td>$18.84</td><td>4</td><td>$19.73</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>11</td><td>$17.97</td><td>5</td><td>$21.08</td><td>1</td><td>$19.50</td><td></td><td></td><td></td><td></td></tr><tr><td>12</td><td>$19.17</td><td>6</td><td>$22.52</td><td>2</td><td>$22.07</td><td></td><td></td><td></td><td></td></tr><tr><td>13</td><td>$20.46</td><td>7</td><td>$24.06</td><td>3</td><td>$24.96</td><td></td><td></td><td></td><td></td></tr><tr><td>14</td><td>$21.83</td><td>8</td><td>$25.70</td><td>4</td><td>$26.27</td><td></td><td></td><td></td><td></td></tr><tr><td>15</td><td>$23.29</td><td>9</td><td>$27.46</td><td>5</td><td>$31.99</td><td>1</td><td>$28.81</td><td>1</td><td>$30.57</td></tr><tr><td>PB</td><td>111</td><td></td><td>118</td><td></td><td>124</td><td></td><td>124</td><td></td><td>124</td></tr></table>",
+            "block_bbox": [
+                318,
+                544,
+                875,
+                788
+            ],
+            "block_id": 6,
+            "block_order": null,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    318.0,
+                    544.0
+                ],
+                [
+                    875.0,
+                    544.0
+                ],
+                [
+                    875.0,
+                    788.0
+                ],
+                [
+                    318.0,
+                    788.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "84",
+            "block_bbox": [
+                322,
+                917,
+                342,
+                932
+            ],
+            "block_id": 7,
+            "block_order": null,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    917.0
+                ],
+                [
+                    341.0,
+                    917.0
+                ],
+                [
+                    341.0,
+                    931.0
+                ],
+                [
+                    322.0,
+                    931.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.6083066463470459,
+                "coordinate": [
+                    321,
+                    78,
+                    392,
+                    97
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        321.0,
+                        78.0
+                    ],
+                    [
+                        386.0,
+                        78.0
+                    ],
+                    [
+                        386.0,
+                        96.0
+                    ],
+                    [
+                        321.0,
+                        96.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.7846217155456543,
+                "coordinate": [
+                    504,
+                    118,
+                    695,
+                    139
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        504.0,
+                        118.0
+                    ],
+                    [
+                        694.0,
+                        118.0
+                    ],
+                    [
+                        694.0,
+                        138.0
+                    ],
+                    [
+                        504.0,
+                        138.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.7365710139274597,
+                "coordinate": [
+                    517,
+                    158,
+                    682,
+                    178
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        517.0,
+                        158.0
+                    ],
+                    [
+                        681.0,
+                        158.0
+                    ],
+                    [
+                        681.0,
+                        177.0
+                    ],
+                    [
+                        517.0,
+                        177.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9047608375549316,
+                "coordinate": [
+                    317,
+                    187,
+                    879,
+                    431
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        317.0,
+                        187.0
+                    ],
+                    [
+                        879.0,
+                        187.0
+                    ],
+                    [
+                        879.0,
+                        431.0
+                    ],
+                    [
+                        317.0,
+                        431.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.7254942655563354,
+                "coordinate": [
+                    504,
+                    476,
+                    693,
+                    495
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        504.0,
+                        476.0
+                    ],
+                    [
+                        692.0,
+                        476.0
+                    ],
+                    [
+                        692.0,
+                        494.0
+                    ],
+                    [
+                        504.0,
+                        494.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.6476703882217407,
+                "coordinate": [
+                    516,
+                    516,
+                    680,
+                    535
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        516.0,
+                        516.0
+                    ],
+                    [
+                        679.0,
+                        516.0
+                    ],
+                    [
+                        679.0,
+                        534.0
+                    ],
+                    [
+                        516.0,
+                        534.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9000927805900574,
+                "coordinate": [
+                    318,
+                    544,
+                    875,
+                    788
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        318.0,
+                        544.0
+                    ],
+                    [
+                        875.0,
+                        544.0
+                    ],
+                    [
+                        875.0,
+                        788.0
+                    ],
+                    [
+                        318.0,
+                        788.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6713314056396484,
+                "coordinate": [
+                    322,
+                    917,
+                    342,
+                    932
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        322.0,
+                        917.0
+                    ],
+                    [
+                        341.0,
+                        917.0
+                    ],
+                    [
+                        341.0,
+                        931.0
+                    ],
+                    [
+                        322.0,
+                        931.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

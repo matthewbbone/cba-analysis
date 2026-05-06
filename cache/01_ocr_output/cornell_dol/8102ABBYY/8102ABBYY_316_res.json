@@ -1,0 +1,339 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 316,
+    "page_count": 439,
+    "width": 1232,
+    "height": 1580,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                320,
+                106,
+                481,
+                126
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    106.0
+                ],
+                [
+                    480.0,
+                    106.0
+                ],
+                [
+                    480.0,
+                    125.0
+                ],
+                [
+                    320.0,
+                    125.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) Participation in either the Personal/Career Development or the Job Displacement curricula is voluntary and will be made available at convenient times and locations, such as after hours at the work site, local community colleges, or CWA offices. Time spent by participants in Alliance activities will be outside scheduled working hours, and not paid or considered as time worked. In selected instances, Lucent, at its discretion, may permit active employees to receive such training during working hours.",
+            "block_bbox": [
+                353,
+                139,
+                878,
+                282
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    353.0,
+                    139.0
+                ],
+                [
+                    878.0,
+                    139.0
+                ],
+                [
+                    878.0,
+                    282.0
+                ],
+                [
+                    353.0,
+                    282.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Reports",
+            "block_bbox": [
+                320,
+                303,
+                384,
+                324
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    303.0
+                ],
+                [
+                    383.0,
+                    303.0
+                ],
+                [
+                    383.0,
+                    323.0
+                ],
+                [
+                    320.0,
+                    323.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "6 The Alliance will publish an Annual Report, detailing the training that was made available to Lucent employees, the number of participants who received such training, the funds expended and the manner in which funds were utilized.",
+            "block_bbox": [
+                318,
+                342,
+                863,
+                414
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    318.0,
+                    342.0
+                ],
+                [
+                    863.0,
+                    342.0
+                ],
+                [
+                    863.0,
+                    414.0
+                ],
+                [
+                    318.0,
+                    414.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "308",
+            "block_bbox": [
+                321,
+                897,
+                351,
+                917
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    897.0
+                ],
+                [
+                    350.0,
+                    897.0
+                ],
+                [
+                    350.0,
+                    916.0
+                ],
+                [
+                    321.0,
+                    916.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7992360591888428,
+                "coordinate": [
+                    320,
+                    106,
+                    481,
+                    126
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        320.0,
+                        106.0
+                    ],
+                    [
+                        480.0,
+                        106.0
+                    ],
+                    [
+                        480.0,
+                        125.0
+                    ],
+                    [
+                        320.0,
+                        125.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9373731017112732,
+                "coordinate": [
+                    353,
+                    139,
+                    878,
+                    282
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        353.0,
+                        139.0
+                    ],
+                    [
+                        878.0,
+                        139.0
+                    ],
+                    [
+                        878.0,
+                        282.0
+                    ],
+                    [
+                        353.0,
+                        282.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7794798612594604,
+                "coordinate": [
+                    320,
+                    303,
+                    384,
+                    324
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        320.0,
+                        303.0
+                    ],
+                    [
+                        383.0,
+                        303.0
+                    ],
+                    [
+                        383.0,
+                        323.0
+                    ],
+                    [
+                        320.0,
+                        323.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.902931272983551,
+                "coordinate": [
+                    318,
+                    342,
+                    863,
+                    414
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        318.0,
+                        342.0
+                    ],
+                    [
+                        863.0,
+                        342.0
+                    ],
+                    [
+                        863.0,
+                        414.0
+                    ],
+                    [
+                        318.0,
+                        414.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6783502697944641,
+                "coordinate": [
+                    321,
+                    897,
+                    351,
+                    917
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        321.0,
+                        897.0
+                    ],
+                    [
+                        350.0,
+                        897.0
+                    ],
+                    [
+                        350.0,
+                        916.0
+                    ],
+                    [
+                        321.0,
+                        916.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b184f002_01.pdf",
+    "page_index": 63,
+    "page_count": 73,
+    "width": 597,
+    "height": 981,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "doc_title",
+            "block_content": "JERSEY CITY BOARD OF EDUCATION\nOFFICERS — 1978-79",
+            "block_bbox": [
+                129,
+                95,
+                477,
+                157
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    129.0,
+                    95.0
+                ],
+                [
+                    477.0,
+                    95.0
+                ],
+                [
+                    477.0,
+                    157.0
+                ],
+                [
+                    129.0,
+                    157.0
+                ]
+            ]
+        },
+        {
+            "block_label": "doc_title",
+            "block_content": "Anthony M. Venutolo, M.A., President\nJoseph Scott, M.A., Vice-President",
+            "block_bbox": [
+                139,
+                176,
+                468,
+                226
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    139.0,
+                    176.0
+                ],
+                [
+                    468.0,
+                    176.0
+                ],
+                [
+                    468.0,
+                    226.0
+                ],
+                [
+                    139.0,
+                    226.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "MEMBERS",
+            "block_bbox": [
+                254,
+                244,
+                353,
+                265
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    254.0,
+                    244.0
+                ],
+                [
+                    352.0,
+                    244.0
+                ],
+                [
+                    352.0,
+                    264.0
+                ],
+                [
+                    254.0,
+                    264.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Gladys C. Nunery, M.A.",
+            "block_bbox": [
+                84,
+                275,
+                292,
+                295
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    84.0,
+                    275.0
+                ],
+                [
+                    291.0,
+                    275.0
+                ],
+                [
+                    291.0,
+                    294.0
+                ],
+                [
+                    84.0,
+                    294.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Santiago Bonilla",
+            "block_bbox": [
+                84,
+                296,
+                226,
+                315
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    83.99998474121094,
+                    295.9999694824219
+                ],
+                [
+                    224.9999542236328,
+                    295.9999694824219
+                ],
+                [
+                    224.9999542236328,
+                    313.9999694824219
+                ],
+                [
+                    83.99998474121094,
+                    313.9999694824219
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Dominick Pugliese",
+            "block_bbox": [
+                84,
+                317,
+                241,
+                335
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    84.0,
+                    317.0
+                ],
+                [
+                    240.0,
+                    317.0
+                ],
+                [
+                    240.0,
+                    334.0
+                ],
+                [
+                    84.0,
+                    334.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Robert C. Janiszewski, M.A.",
+            "block_bbox": [
+                84,
+                337,
+                328,
+                356
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    84.0,
+                    336.9999694824219
+                ],
+                [
+                    326.99993896484375,
+                    336.9999694824219
+                ],
+                [
+                    326.99993896484375,
+                    354.9999694824219
+                ],
+                [
+                    83.99998474121094,
+                    354.9999694824219
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Thornton Smith, M.A.",
+            "block_bbox": [
+                84,
+                358,
+                274,
+                377
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    84.0,
+                    357.9999694824219
+                ],
+                [
+                    272.99993896484375,
+                    357.9999694824219
+                ],
+                [
+                    272.99993896484375,
+                    375.9999694824219
+                ],
+                [
+                    83.99998474121094,
+                    375.9999694824219
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Pearl Gaither",
+            "block_bbox": [
+                85,
+                379,
+                202,
+                397
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    85.0,
+                    379.0
+                ],
+                [
+                    201.0,
+                    379.0
+                ],
+                [
+                    201.0,
+                    396.0
+                ],
+                [
+                    85.0,
+                    396.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Joseph Kraus",
+            "block_bbox": [
+                85,
+                400,
+                201,
+                418
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    85.0,
+                    400.0
+                ],
+                [
+                    199.99996948242188,
+                    400.0
+                ],
+                [
+                    199.99996948242188,
+                    417.0
+                ],
+                [
+                    84.99999237060547,
+                    417.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Michael Ross ..... Superintendent of Schools",
+            "block_bbox": [
+                84,
+                419,
+                524,
+                440
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    84.0,
+                    419.0
+                ],
+                [
+                    520.9999389648438,
+                    419.0
+                ],
+                [
+                    520.9999389648438,
+                    439.0
+                ],
+                [
+                    84.0,
+                    439.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "58",
+            "block_bbox": [
+                291,
+                903,
+                314,
+                919
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    291.0,
+                    903.0
+                ],
+                [
+                    313.0,
+                    903.0
+                ],
+                [
+                    313.0,
+                    918.0
+                ],
+                [
+                    291.0,
+                    918.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.7996256947517395,
+                "coordinate": [
+                    129,
+                    95,
+                    477,
+                    157
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        129.0,
+                        95.0
+                    ],
+                    [
+                        477.0,
+                        95.0
+                    ],
+                    [
+                        477.0,
+                        157.0
+                    ],
+                    [
+                        129.0,
+                        157.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.45063692331314087,
+                "coordinate": [
+                    139,
+                    176,
+                    468,
+                    226
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        139.0,
+                        176.0
+                    ],
+                    [
+                        468.0,
+                        176.0
+                    ],
+                    [
+                        468.0,
+                        226.0
+                    ],
+                    [
+                        139.0,
+                        226.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7803729176521301,
+                "coordinate": [
+                    254,
+                    244,
+                    353,
+                    265
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        254.0,
+                        244.0
+                    ],
+                    [
+                        352.0,
+                        244.0
+                    ],
+                    [
+                        352.0,
+                        264.0
+                    ],
+                    [
+                        254.0,
+                        264.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7752312421798706,
+                "coordinate": [
+                    84,
+                    275,
+                    292,
+                    295
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        84.0,
+                        275.0
+                    ],
+                    [
+                        291.0,
+                        275.0
+                    ],
+                    [
+                        291.0,
+                        294.0
+                    ],
+                    [
+                        84.0,
+                        294.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.76899653673172,
+                "coordinate": [
+                    84,
+                    296,
+                    226,
+                    315
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        83.99998474121094,
+                        295.9999694824219
+                    ],
+                    [
+                        224.9999542236328,
+                        295.9999694824219
+                    ],
+                    [
+                        224.9999542236328,
+                        313.9999694824219
+                    ],
+                    [
+                        83.99998474121094,
+                        313.9999694824219
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7848926782608032,
+                "coordinate": [
+                    84,
+                    317,
+                    241,
+                    335
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        84.0,
+                        317.0
+                    ],
+                    [
+                        240.0,
+                        317.0
+                    ],
+                    [
+                        240.0,
+                        334.0
+                    ],
+                    [
+                        84.0,
+                        334.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8136848211288452,
+                "coordinate": [
+                    84,
+                    337,
+                    328,
+                    356
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        84.0,
+                        336.9999694824219
+                    ],
+                    [
+                        326.99993896484375,
+                        336.9999694824219
+                    ],
+                    [
+                        326.99993896484375,
+                        354.9999694824219
+                    ],
+                    [
+                        83.99998474121094,
+                        354.9999694824219
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7844659090042114,
+                "coordinate": [
+                    84,
+                    358,
+                    274,
+                    377
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        84.0,
+                        357.9999694824219
+                    ],
+                    [
+                        272.99993896484375,
+                        357.9999694824219
+                    ],
+                    [
+                        272.99993896484375,
+                        375.9999694824219
+                    ],
+                    [
+                        83.99998474121094,
+                        375.9999694824219
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7631641626358032,
+                "coordinate": [
+                    85,
+                    379,
+                    202,
+                    397
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        85.0,
+                        379.0
+                    ],
+                    [
+                        201.0,
+                        379.0
+                    ],
+                    [
+                        201.0,
+                        396.0
+                    ],
+                    [
+                        85.0,
+                        396.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7733300924301147,
+                "coordinate": [
+                    85,
+                    400,
+                    201,
+                    418
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        85.0,
+                        400.0
+                    ],
+                    [
+                        199.99996948242188,
+                        400.0
+                    ],
+                    [
+                        199.99996948242188,
+                        417.0
+                    ],
+                    [
+                        84.99999237060547,
+                        417.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7605643272399902,
+                "coordinate": [
+                    84,
+                    419,
+                    524,
+                    440
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        84.0,
+                        419.0
+                    ],
+                    [
+                        520.9999389648438,
+                        419.0
+                    ],
+                    [
+                        520.9999389648438,
+                        439.0
+                    ],
+                    [
+                        84.0,
+                        439.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7488535046577454,
+                "coordinate": [
+                    291,
+                    903,
+                    314,
+                    919
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        291.0,
+                        903.0
+                    ],
+                    [
+                        313.0,
+                        903.0
+                    ],
+                    [
+                        313.0,
+                        918.0
+                    ],
+                    [
+                        291.0,
+                        918.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

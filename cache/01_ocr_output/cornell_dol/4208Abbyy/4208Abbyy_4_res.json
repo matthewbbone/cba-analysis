@@ -1,0 +1,827 @@
+{
+    "input_path": "cache/cornell_dol/4208Abbyy.pdf",
+    "page_index": 4,
+    "page_count": 128,
+    "width": 811,
+    "height": 1197,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "aside_text",
+            "block_content": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56",
+            "block_bbox": [
+                69,
+                73,
+                94,
+                1134
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    73.00029754638672,
+                    72.924560546875
+                ],
+                [
+                    93.00000762939453,
+                    73.0
+                ],
+                [
+                    88.99971771240234,
+                    1133.075439453125
+                ],
+                [
+                    69.00000762939453,
+                    1133.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3.3(b) The grievance shall be signed by the President of the Union or the designated Company Representative, as the case may be, or their designated representatives. If no settlement is reached within ten (10) workdays from the submission of the grievance to the designated Company Representative or the designated representative of the Union, as the case may be, both shall sign the grievance and indicate it has been discussed and considered by them and that no settlement has been reached and the party responding to the grievance will promptly confirm in writing to the other party the denial of the grievance. Within ten (10) workdays thereafter either party may in writing request that the matter be submitted to an arbiter for a prompt hearing as provided in 3.4 through 3.6.",
+            "block_bbox": [
+                139,
+                73,
+                742,
+                246
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    139.0,
+                    73.0
+                ],
+                [
+                    742.0,
+                    73.0
+                ],
+                [
+                    742.0,
+                    246.0
+                ],
+                [
+                    139.0,
+                    246.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3.3(c) No matter shall be considered as a grievance under 3.3 unless it is presented to the designated persons within ten (10) workdays after occurrence of the last event on which the grievance is based.",
+            "block_bbox": [
+                137,
+                261,
+                739,
+                320
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    137.0,
+                    261.0
+                ],
+                [
+                    739.0,
+                    261.0
+                ],
+                [
+                    739.0,
+                    320.0
+                ],
+                [
+                    137.0,
+                    320.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 3.4 Selection of Arbiter. In regard to each case that reaches arbitration, the parties will attempt to agree on an arbiter to hear and decide the particular case. If the parties are unable to agree to an arbiter within ten (10) workdays after submission of the written request for arbitration, the provision of 3.5 (Selection of Arbiter-American Arbitration Association) shall apply to the selection of an arbiter.",
+            "block_bbox": [
+                110,
+                338,
+                739,
+                416
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    110.0,
+                    338.0
+                ],
+                [
+                    739.0,
+                    338.0
+                ],
+                [
+                    739.0,
+                    416.0
+                ],
+                [
+                    110.0,
+                    416.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 3.5 Selection of Arbiter – American Arbitration Association. In the event an arbiter is not agreed upon as provided in 3.4, the parties shall jointly request the American Arbitration Association to submit a panel of seven arbiters. Such request shall state the general nature of the case and ask that the nominees be qualified to handle the type of case involved. When notification of the names of the panel of seven arbiters is received, the parties in turn shall have the right to strike a name from the panel until only one name remains. The remaining person shall be the arbiter. The right to strike the first name from the panel shall be determined by lot.",
+            "block_bbox": [
+                108,
+                432,
+                738,
+                568
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    108.0,
+                    432.0
+                ],
+                [
+                    738.0,
+                    432.0
+                ],
+                [
+                    738.0,
+                    568.0
+                ],
+                [
+                    108.0,
+                    568.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "In the event either party is dissatisfied with the credentials of each of the arbiters whose names are contained on the first panel offered by the American Arbitration Association, such party can summarily reject the panel and insist on a second panel. Selection must be made from the second panel.",
+            "block_bbox": [
+                106,
+                583,
+                736,
+                662
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    106.0,
+                    583.0
+                ],
+                [
+                    735.0,
+                    589.0
+                ],
+                [
+                    734.3037109375,
+                    661.993408203125
+                ],
+                [
+                    105.3037109375,
+                    655.993408203125
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 3.6 Arbitration – Rules of Procedure. Arbitration proceedings shall be in accordance with the following:",
+            "block_bbox": [
+                107,
+                678,
+                734,
+                719
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    107.0,
+                    678.0
+                ],
+                [
+                    734.0,
+                    678.0
+                ],
+                [
+                    734.0,
+                    719.0
+                ],
+                [
+                    107.0,
+                    719.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3.6(a) The arbiter shall hear and accept pertinent evidence submitted by both parties and shall be empowered to request such data as the arbiter deems pertinent to the grievance and shall render a decision in writing to both parties within sixty (60) days (unless mutually extended) of the completion of the hearing.",
+            "block_bbox": [
+                131,
+                734,
+                734,
+                815
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    131.0,
+                    734.0
+                ],
+                [
+                    734.0,
+                    734.0
+                ],
+                [
+                    734.0,
+                    815.0
+                ],
+                [
+                    131.0,
+                    815.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3.6(b) The arbiter shall be authorized to rule and issue a decision in writing on the issue presented for arbitration, which decision shall be final and binding on both parties.",
+            "block_bbox": [
+                126,
+                829,
+                736,
+                871
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    126.0,
+                    829.0
+                ],
+                [
+                    736.0,
+                    829.0
+                ],
+                [
+                    736.0,
+                    871.0
+                ],
+                [
+                    126.0,
+                    871.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3.6(c) The arbiter shall rule only on the basis of information presented in the hearing and shall refuse to receive any information after the hearing except when there is mutual agreement, in the presence of both parties.",
+            "block_bbox": [
+                130,
+                886,
+                733,
+                946
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    130.0,
+                    886.0
+                ],
+                [
+                    733.0,
+                    886.0
+                ],
+                [
+                    733.0,
+                    946.0
+                ],
+                [
+                    130.0,
+                    946.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3.6(d) Each party to the proceedings may call such witnesses as may be necessary in the order in which their testimony is to be heard. Such testimony shall be limited to the matters set forth in the written statement of the grievance. The arguments of the parties may be supported by oral comment and rebuttal. Either or both parties may submit written briefs within a time period mutually agreed upon. Such arguments of the parties, whether oral or written, shall be confined to and directed at the matters set forth in the grievance.",
+            "block_bbox": [
+                130,
+                962,
+                732,
+                1080
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    130.0,
+                    962.0
+                ],
+                [
+                    732.0,
+                    962.0
+                ],
+                [
+                    732.0,
+                    1080.0
+                ],
+                [
+                    130.0,
+                    1080.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3.6(e) Each party shall pay any compensation and expenses relating to its own witnesses or representatives.",
+            "block_bbox": [
+                129,
+                1095,
+                729,
+                1135
+            ],
+            "block_id": 11,
+            "block_order": 11,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    129.0,
+                    1095.0
+                ],
+                [
+                    729.0,
+                    1095.0
+                ],
+                [
+                    729.0,
+                    1135.0
+                ],
+                [
+                    129.0,
+                    1135.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "4",
+            "block_bbox": [
+                410,
+                1153,
+                422,
+                1168
+            ],
+            "block_id": 12,
+            "block_order": null,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    410.0,
+                    1153.0
+                ],
+                [
+                    421.0,
+                    1153.0
+                ],
+                [
+                    421.0,
+                    1167.0
+                ],
+                [
+                    410.0,
+                    1167.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 2,
+                "label": "aside_text",
+                "score": 0.7685317397117615,
+                "coordinate": [
+                    69,
+                    73,
+                    94,
+                    1134
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        73.00029754638672,
+                        72.924560546875
+                    ],
+                    [
+                        93.00000762939453,
+                        73.0
+                    ],
+                    [
+                        88.99971771240234,
+                        1133.075439453125
+                    ],
+                    [
+                        69.00000762939453,
+                        1133.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9518383145332336,
+                "coordinate": [
+                    139,
+                    73,
+                    742,
+                    246
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        139.0,
+                        73.0
+                    ],
+                    [
+                        742.0,
+                        73.0
+                    ],
+                    [
+                        742.0,
+                        246.0
+                    ],
+                    [
+                        139.0,
+                        246.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8974059224128723,
+                "coordinate": [
+                    137,
+                    261,
+                    739,
+                    320
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        137.0,
+                        261.0
+                    ],
+                    [
+                        739.0,
+                        261.0
+                    ],
+                    [
+                        739.0,
+                        320.0
+                    ],
+                    [
+                        137.0,
+                        320.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9314079284667969,
+                "coordinate": [
+                    110,
+                    338,
+                    739,
+                    416
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        110.0,
+                        338.0
+                    ],
+                    [
+                        739.0,
+                        338.0
+                    ],
+                    [
+                        739.0,
+                        416.0
+                    ],
+                    [
+                        110.0,
+                        416.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9524753093719482,
+                "coordinate": [
+                    108,
+                    432,
+                    738,
+                    568
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        108.0,
+                        432.0
+                    ],
+                    [
+                        738.0,
+                        432.0
+                    ],
+                    [
+                        738.0,
+                        568.0
+                    ],
+                    [
+                        108.0,
+                        568.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9290683269500732,
+                "coordinate": [
+                    106,
+                    583,
+                    736,
+                    662
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        106.0,
+                        583.0
+                    ],
+                    [
+                        735.0,
+                        589.0
+                    ],
+                    [
+                        734.3037109375,
+                        661.993408203125
+                    ],
+                    [
+                        105.3037109375,
+                        655.993408203125
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7384188771247864,
+                "coordinate": [
+                    107,
+                    678,
+                    734,
+                    719
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        107.0,
+                        678.0
+                    ],
+                    [
+                        734.0,
+                        678.0
+                    ],
+                    [
+                        734.0,
+                        719.0
+                    ],
+                    [
+                        107.0,
+                        719.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9288386106491089,
+                "coordinate": [
+                    131,
+                    734,
+                    734,
+                    815
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        131.0,
+                        734.0
+                    ],
+                    [
+                        734.0,
+                        734.0
+                    ],
+                    [
+                        734.0,
+                        815.0
+                    ],
+                    [
+                        131.0,
+                        815.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8903332948684692,
+                "coordinate": [
+                    126,
+                    829,
+                    736,
+                    871
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        126.0,
+                        829.0
+                    ],
+                    [
+                        736.0,
+                        829.0
+                    ],
+                    [
+                        736.0,
+                        871.0
+                    ],
+                    [
+                        126.0,
+                        871.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9288347959518433,
+                "coordinate": [
+                    130,
+                    886,
+                    733,
+                    946
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        130.0,
+                        886.0
+                    ],
+                    [
+                        733.0,
+                        886.0
+                    ],
+                    [
+                        733.0,
+                        946.0
+                    ],
+                    [
+                        130.0,
+                        946.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.949446976184845,
+                "coordinate": [
+                    130,
+                    962,
+                    732,
+                    1080
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        130.0,
+                        962.0
+                    ],
+                    [
+                        732.0,
+                        962.0
+                    ],
+                    [
+                        732.0,
+                        1080.0
+                    ],
+                    [
+                        130.0,
+                        1080.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8845394849777222,
+                "coordinate": [
+                    129,
+                    1095,
+                    729,
+                    1135
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        129.0,
+                        1095.0
+                    ],
+                    [
+                        729.0,
+                        1095.0
+                    ],
+                    [
+                        729.0,
+                        1135.0
+                    ],
+                    [
+                        129.0,
+                        1135.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7092991471290588,
+                "coordinate": [
+                    410,
+                    1153,
+                    422,
+                    1168
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        410.0,
+                        1153.0
+                    ],
+                    [
+                        421.0,
+                        1153.0
+                    ],
+                    [
+                        421.0,
+                        1167.0
+                    ],
+                    [
+                        410.0,
+                        1167.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

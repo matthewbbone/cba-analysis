@@ -1,0 +1,827 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 302,
+    "page_count": 439,
+    "width": 1234,
+    "height": 1586,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                321,
+                105,
+                481,
+                125
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    320.99993896484375,
+                    105.0
+                ],
+                [
+                    479.99993896484375,
+                    105.0
+                ],
+                [
+                    479.99993896484375,
+                    124.0
+                ],
+                [
+                    320.99993896484375,
+                    124.0
+                ]
+            ]
+        },
+        {
+            "block_label": "doc_title",
+            "block_content": "FINANCIAL COUNSELING SERVICES",
+            "block_bbox": [
+                462,
+                138,
+                735,
+                159
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    462.0,
+                    138.0
+                ],
+                [
+                    734.0,
+                    138.0
+                ],
+                [
+                    734.0,
+                    158.0
+                ],
+                [
+                    462.0,
+                    158.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "November 1, 2004",
+            "block_bbox": [
+                320,
+                185,
+                453,
+                205
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    185.0
+                ],
+                [
+                    452.0,
+                    185.0
+                ],
+                [
+                    452.0,
+                    204.0
+                ],
+                [
+                    320.0,
+                    204.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Mr. Ralph V. Maly, Jr., Vice President, CWA\nMr. Troy A. Johnson, International Representative, IBEW",
+            "block_bbox": [
+                320,
+                219,
+                713,
+                257
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    219.0
+                ],
+                [
+                    713.0,
+                    219.0
+                ],
+                [
+                    713.0,
+                    257.0
+                ],
+                [
+                    320.0,
+                    257.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Re: Financial Counseling Services",
+            "block_bbox": [
+                320,
+                271,
+                580,
+                292
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    271.0
+                ],
+                [
+                    579.0,
+                    271.0
+                ],
+                [
+                    579.0,
+                    291.0
+                ],
+                [
+                    320.0,
+                    291.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "During bargaining, the IBEW and CWA expressed an interest in obtaining certain personal financial and investment counseling, including active money management, for LTSSP participants, distinct from the web-based and personal asset manager services proposed by Lucent.",
+            "block_bbox": [
+                320,
+                305,
+                877,
+                378
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    305.0
+                ],
+                [
+                    877.0,
+                    305.0
+                ],
+                [
+                    877.0,
+                    378.0
+                ],
+                [
+                    320.0,
+                    378.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Due to the complexities of offering this type of service as part of the LTSSP and given the limited amount of time available to the parties during bargaining, we agree to meet as soon as is practicable following the signing of the agreement to consider the feasibility of offering such services in light of the applicable fiduciary requirements, the administrative burdens to Lucent and the plan, and the fees that would be payable by LTSSP participants.",
+            "block_bbox": [
+                320,
+                389,
+                878,
+                497
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    389.0
+                ],
+                [
+                    878.0,
+                    389.0
+                ],
+                [
+                    878.0,
+                    497.0
+                ],
+                [
+                    320.0,
+                    497.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Sincerely,",
+            "block_bbox": [
+                321,
+                510,
+                393,
+                531
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    510.0
+                ],
+                [
+                    392.0,
+                    510.0
+                ],
+                [
+                    392.0,
+                    530.0
+                ],
+                [
+                    321.0,
+                    530.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "/s/ William L. Schecter\nWorkforce Relations Vice President",
+            "block_bbox": [
+                321,
+                578,
+                567,
+                616
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    578.0
+                ],
+                [
+                    567.0,
+                    578.0
+                ],
+                [
+                    567.0,
+                    616.0
+                ],
+                [
+                    321.0,
+                    616.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Concurred:",
+            "block_bbox": [
+                321,
+                629,
+                403,
+                650
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    629.0
+                ],
+                [
+                    402.0,
+                    629.0
+                ],
+                [
+                    402.0,
+                    649.0
+                ],
+                [
+                    321.0,
+                    649.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "/s/ Ralph V. Maly, Jr. Vice President, CWA",
+            "block_bbox": [
+                321,
+                699,
+                470,
+                737
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    699.0
+                ],
+                [
+                    470.0,
+                    699.0
+                ],
+                [
+                    470.0,
+                    737.0
+                ],
+                [
+                    321.0,
+                    737.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "/s/ Troy A. Johnson\nInternational Representative, IBEW",
+            "block_bbox": [
+                320,
+                785,
+                566,
+                823
+            ],
+            "block_id": 11,
+            "block_order": 11,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    785.0
+                ],
+                [
+                    566.0,
+                    785.0
+                ],
+                [
+                    566.0,
+                    823.0
+                ],
+                [
+                    320.0,
+                    823.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "294",
+            "block_bbox": [
+                322,
+                897,
+                353,
+                914
+            ],
+            "block_id": 12,
+            "block_order": null,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    897.0
+                ],
+                [
+                    352.0,
+                    897.0
+                ],
+                [
+                    352.0,
+                    913.0
+                ],
+                [
+                    322.0,
+                    913.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.5515992045402527,
+                "coordinate": [
+                    321,
+                    105,
+                    481,
+                    125
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        320.99993896484375,
+                        105.0
+                    ],
+                    [
+                        479.99993896484375,
+                        105.0
+                    ],
+                    [
+                        479.99993896484375,
+                        124.0
+                    ],
+                    [
+                        320.99993896484375,
+                        124.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.6151849627494812,
+                "coordinate": [
+                    462,
+                    138,
+                    735,
+                    159
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        462.0,
+                        138.0
+                    ],
+                    [
+                        734.0,
+                        138.0
+                    ],
+                    [
+                        734.0,
+                        158.0
+                    ],
+                    [
+                        462.0,
+                        158.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7098255753517151,
+                "coordinate": [
+                    320,
+                    185,
+                    453,
+                    205
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        320.0,
+                        185.0
+                    ],
+                    [
+                        452.0,
+                        185.0
+                    ],
+                    [
+                        452.0,
+                        204.0
+                    ],
+                    [
+                        320.0,
+                        204.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8107273578643799,
+                "coordinate": [
+                    320,
+                    219,
+                    713,
+                    257
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        320.0,
+                        219.0
+                    ],
+                    [
+                        713.0,
+                        219.0
+                    ],
+                    [
+                        713.0,
+                        257.0
+                    ],
+                    [
+                        320.0,
+                        257.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4827374517917633,
+                "coordinate": [
+                    320,
+                    271,
+                    580,
+                    292
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        320.0,
+                        271.0
+                    ],
+                    [
+                        579.0,
+                        271.0
+                    ],
+                    [
+                        579.0,
+                        291.0
+                    ],
+                    [
+                        320.0,
+                        291.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8874306082725525,
+                "coordinate": [
+                    320,
+                    305,
+                    877,
+                    378
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        320.0,
+                        305.0
+                    ],
+                    [
+                        877.0,
+                        305.0
+                    ],
+                    [
+                        877.0,
+                        378.0
+                    ],
+                    [
+                        320.0,
+                        378.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9018471837043762,
+                "coordinate": [
+                    320,
+                    389,
+                    878,
+                    497
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        320.0,
+                        389.0
+                    ],
+                    [
+                        878.0,
+                        389.0
+                    ],
+                    [
+                        878.0,
+                        497.0
+                    ],
+                    [
+                        320.0,
+                        497.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6188376545906067,
+                "coordinate": [
+                    321,
+                    510,
+                    393,
+                    531
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        321.0,
+                        510.0
+                    ],
+                    [
+                        392.0,
+                        510.0
+                    ],
+                    [
+                        392.0,
+                        530.0
+                    ],
+                    [
+                        321.0,
+                        530.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7016063928604126,
+                "coordinate": [
+                    321,
+                    578,
+                    567,
+                    616
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        321.0,
+                        578.0
+                    ],
+                    [
+                        567.0,
+                        578.0
+                    ],
+                    [
+                        567.0,
+                        616.0
+                    ],
+                    [
+                        321.0,
+                        616.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6433221697807312,
+                "coordinate": [
+                    321,
+                    629,
+                    403,
+                    650
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        321.0,
+                        629.0
+                    ],
+                    [
+                        402.0,
+                        629.0
+                    ],
+                    [
+                        402.0,
+                        649.0
+                    ],
+                    [
+                        321.0,
+                        649.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7614274621009827,
+                "coordinate": [
+                    321,
+                    699,
+                    470,
+                    737
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        321.0,
+                        699.0
+                    ],
+                    [
+                        470.0,
+                        699.0
+                    ],
+                    [
+                        470.0,
+                        737.0
+                    ],
+                    [
+                        321.0,
+                        737.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8166700005531311,
+                "coordinate": [
+                    320,
+                    785,
+                    566,
+                    823
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        320.0,
+                        785.0
+                    ],
+                    [
+                        566.0,
+                        785.0
+                    ],
+                    [
+                        566.0,
+                        823.0
+                    ],
+                    [
+                        320.0,
+                        823.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6933469772338867,
+                "coordinate": [
+                    322,
+                    897,
+                    353,
+                    914
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        322.0,
+                        897.0
+                    ],
+                    [
+                        352.0,
+                        897.0
+                    ],
+                    [
+                        352.0,
+                        913.0
+                    ],
+                    [
+                        322.0,
+                        913.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

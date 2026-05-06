@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 68,
+    "page_count": 189,
+    "width": 1225,
+    "height": 1574,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "ENT",
+            "block_bbox": [
+                150,
+                166,
+                699,
+                194
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    407.7159729003906,
+                    272.74945068359375
+                ],
+                [
+                    150.0,
+                    193.0
+                ],
+                [
+                    698.0,
+                    193.0
+                ],
+                [
+                    698.0,
+                    166.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "319. Except as otherwise specifically provided, this Agreement shall be effective as of October 1, 2000, and shall continue in effect through the month, day, and year as specified in the National Agreement, Section 3: Scope of The Agreement, D. Term of Agreement and shall be automatically renewed from year to year thereafter, unless either party serves upon the other ninety (90) days prior written notice of a desire to modify this agreement, it shall contain the provisions of the Agreement which that party desires to be modified. If such notice to modify or terminate is timely served, negotiations shall commence between the parties within fifteen (15) days after receipt thereof.",
+            "block_bbox": [
+                149,
+                222,
+                1090,
+                504
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    149.0,
+                    222.0
+                ],
+                [
+                    1090.0,
+                    222.0
+                ],
+                [
+                    1090.0,
+                    504.0
+                ],
+                [
+                    149.0,
+                    504.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "68",
+            "block_bbox": [
+                596,
+                1474,
+                625,
+                1497
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    596.0,
+                    1474.0
+                ],
+                [
+                    624.0,
+                    1474.0
+                ],
+                [
+                    624.0,
+                    1496.0
+                ],
+                [
+                    596.0,
+                    1496.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7266237139701843,
+                "coordinate": [
+                    150,
+                    166,
+                    699,
+                    194
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        407.7159729003906,
+                        272.74945068359375
+                    ],
+                    [
+                        150.0,
+                        193.0
+                    ],
+                    [
+                        698.0,
+                        193.0
+                    ],
+                    [
+                        698.0,
+                        166.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9505836367607117,
+                "coordinate": [
+                    149,
+                    222,
+                    1090,
+                    504
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        149.0,
+                        222.0
+                    ],
+                    [
+                        1090.0,
+                        222.0
+                    ],
+                    [
+                        1090.0,
+                        504.0
+                    ],
+                    [
+                        149.0,
+                        504.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.720655083656311,
+                "coordinate": [
+                    596,
+                    1474,
+                    625,
+                    1497
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        596.0,
+                        1474.0
+                    ],
+                    [
+                        624.0,
+                        1474.0
+                    ],
+                    [
+                        624.0,
+                        1496.0
+                    ],
+                    [
+                        596.0,
+                        1496.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

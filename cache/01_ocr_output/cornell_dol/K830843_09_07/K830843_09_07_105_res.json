@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 105,
+    "page_count": 206,
+    "width": 2016,
+    "height": 1224,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "APPENDIX A",
+            "block_bbox": [
+                934,
+                116,
+                1093,
+                145
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    934.0,
+                    116.0
+                ],
+                [
+                    1093.0,
+                    116.0
+                ],
+                [
+                    1093.0,
+                    145.0
+                ],
+                [
+                    934.0,
+                    145.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>LINK CODE</td><td>TITLE CODE</td><td>TITLE NAME</td><td>MONTHLY MINIMUM RATE</td><td>HOURLY MINIMUM RATE</td><td>MONTHLY MIDPOINT RATE</td><td>HOURLY MIDPOINT RATE</td><td>MONTHLY MAXIMUM RATE</td><td>HOURLY MAXIMUM RATE</td><td>SHIFT DIFFERENTIAL EVE</td><td>NIGHT</td><td>WKEND</td><td>1</td></tr><tr><td colspan=\"13\">Davis - cont</td></tr><tr><td colspan=\"13\">Date - October 2003 and January 2004</td></tr><tr><td>019</td><td>8673</td><td>MECHANIAN LAB MED FAC</td><td>$3,656</td><td>$21.01</td><td>$4,204</td><td>$24.16</td><td>$4,753</td><td>$27.32</td><td>$1.20</td><td>$2.00</td><td>$1.40</td><td>$7.00</td></tr><tr><td>019</td><td>8674</td><td>MECHANIAN LAB HELPER MED FAC</td><td>$3,172</td><td>$18.23</td><td>$3,649</td><td>$20.97</td><td>$4,124</td><td>$23.70</td><td>$1.20</td><td>$2.00</td><td>$1.40</td><td>$7.00</td></tr><tr><td>019</td><td>8681</td><td>TECHNICIAN, ELEC PRIN MED FAC</td><td>$4,444</td><td>$25.54</td><td>$5,110</td><td>$29.37</td><td>$5,777</td><td>$33.20</td><td>$2.30</td><td>$4.00</td><td>$1.40</td><td>$9.00</td></tr><tr><td>019</td><td>8682</td><td>TECHNICIAN, ELEC SENIOR MED FAC</td><td>$3,857</td><td>$22.17</td><td>$4,435</td><td>$25.49</td><td>$5,013</td><td>$28.81</td><td>$2.30</td><td>$4.00</td><td>$1.40</td><td>$9.00</td></tr><tr><td>019</td><td>8683</td><td>TECHNICIAN, ELEC MED FAC</td><td>$3,521</td><td>$20.24</td><td>$4,049</td><td>$23.27</td><td>$4,577</td><td>$26.30</td><td>$2.30</td><td>$4.00</td><td>$1.40</td><td>$9.00</td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC TRAINEE MED FAC</td><td>$3,082</td><td>$17.71</td><td>$3,544</td><td>$20.37</td><td>$4,007</td><td>$23.03</td><td>$2.30</td><td>$4.00</td><td>$1.40</td><td>$9.00</td></tr><tr><td>019</td><td>9027</td><td>PERFUSIONIST, SENIOR</td><td>$6,594</td><td>$37.90</td><td>$7,583</td><td>$43.58</td><td>$8,572</td><td>$49.26</td><td>$1.20</td><td>$2.00</td><td>$1.40</td><td>$9.00</td></tr><tr><td>019</td><td>9028</td><td>PERFUSIONIST</td><td>$6,001</td><td>$34.49</td><td>$6,901</td><td>$39.66</td><td>$7,801</td><td>$44.83</td><td>$1.20</td><td>$2.00</td><td>$1.40</td><td>$9.00</td></tr><tr><td>019</td><td>9036</td><td>PERFUSIONIST, PRINCIPAL</td><td>$7,252</td><td>$41.68</td><td>$8,340</td><td>$47.93</td><td>$9,428</td><td>$54.18</td><td>$1.20</td><td>$2.00</td><td>$1.40</td><td>$9.00</td></tr><tr><td>019</td><td>9039</td><td>PERFUSIONIST SENIOR, PER DIEM</td><td>$8,829</td><td>$50.74</td><td>$10,229</td><td>$58.79</td><td>$11,630</td><td>$66.84</td><td>$1.20</td><td>$2.00</td><td>$1.40</td><td>$9.00</td></tr><tr><td>019</td><td>9041</td><td>PROSTHETIST/ORTHOTIST, SENIOR</td><td>$4,870</td><td>$27.99</td><td>$5,601</td><td>$32.19</td><td>$6,331</td><td>$36.39</td><td>$1.20</td><td>$2.00</td><td>$1.40</td><td>$6.00</td></tr><tr><td>019</td><td>9042</td><td>PROSTHETIST/ORTHOTIST</td><td>$4,259</td><td>$24.48</td><td>$4,898</td><td>$28.15</td><td>$5,537</td><td>$31.82</td><td>$1.20</td><td>$2.00</td><td>$1.40</td><td>$6.00</td></tr><tr><td>019</td><td>9044</td><td>PROSTHETIST/ORTHOTIST, ASST</td><td>$3,581</td><td>$20.58</td><td>$4,119</td><td>$23.67</td><td>$4,655</td><td>$26.75</td><td>$1.20</td><td>$2.00</td><td>$1.40</td><td>$6.00</td></tr><tr><td>019</td><td>9048</td><td>THERAPIST RESPIRATORY II</td><td>$4,123</td><td>$23.70</td><td>$4,742</td><td>$27.25</td><td>$5,360</td><td>$30.80</td><td>$1.20</td><td>$2.00</td><td>$1.40</td><td>$7.00</td></tr><tr><td>019</td><td>9072</td><td>RADIATION EQUIPMENT SPEC, SENIOR</td><td>$4,983</td><td>$28.64</td><td>$5,730</td><td>$32.93</td><td>$6,478</td><td>$37.23</td><td>$2.30</td><td>$4.00</td><td>$1.40</td><td>$9.00</td></tr><tr><td>019</td><td>9073</td><td>RADIATION EQUIPMENT SPEC</td><td>$4,623</td><td>$26.57</td><td>$5,316</td><td>$30.55</td><td>$6,010</td><td>$34.54</td><td>$2.30</td><td>$4.00</td><td>$1.40</td><td>$9.00</td></tr><tr><td>019</td><td>9194</td><td>OPTICIAN</td><td>$2,661</td><td>$15.29</td><td>$3,061</td><td>$17.59</td><td>$3,459</td><td>$19.88</td><td>$0.95</td><td>$1.70</td><td>$1.05</td><td></td></tr><tr><td>020</td><td>5419</td><td>REGISTERED DIETETIC TECH</td><td>$2,410</td><td>$13.85</td><td>$2,772</td><td>$15.93</td><td>$3,133</td><td>$18.01</td><td>$0.95</td><td>$1.70</td><td>$1.05</td><td>$4.70</td></tr><tr><td>020</td><td>5430</td><td>DIETITIC ASSISTANT</td><td>$2,355</td><td>$13.53</td><td>$2,709</td><td>$15.57</td><td>$3,062</td><td>$17.60</td><td>$0.95</td><td>$1.70</td><td>$1.05</td><td>$4.70</td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASST III</td><td>$2,328</td><td>$18.55</td><td>$3,711</td><td>$21.33</td><td>$4,196</td><td>$24.11</td><td>$1.20</td><td>$2.00</td><td>$1.40</td><td>$6.00</td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASST II</td><td>$2,851</td><td>$16.39</td><td>$3,278</td><td>$18.84</td><td>$3,706</td><td>$21.30</td><td>$1.20</td><td>$2.00</td><td>$1.40</td><td>$6.00</td></tr><tr><td>033</td><td>8946</td><td>PHYSICAL THERAPY ASST I</td><td>$2,550</td><td>$14.66</td><td>$2,932</td><td>$16.85</td><td>$3,315</td><td>$19.05</td><td>$1.20</td><td>$2.00</td><td>$1.40</td><td>$6.00</td></tr><tr><td>033</td><td>8947</td><td>OCCU THERAPY ASST CERT III</td><td>$3,228</td><td>$18.55</td><td>$3,711</td><td>$21.33</td><td>$4,196</td><td>$24.11</td><td>$1.20</td><td>$2.00</td><td>$1.40</td><td>$6.00</td></tr><tr><td>033</td><td>8948</td><td>OCCU THERAPY ASST CERT II</td><td>$2,851</td><td>$16.39</td><td>$3,278</td><td>$18.84</td><td>$3,706</td><td>$21.30</td><td>$1.20</td><td>$2.00</td><td>$1.40</td><td>$6.00</td></tr><tr><td>033</td><td>8949</td><td>OCCU THERAPY ASST CERT I</td><td>$2,550</td><td>$14.66</td><td>$2,932</td><td>$16.85</td><td>$3,315</td><td>$19.05</td><td>$1.20</td><td>$2.00</td><td>$1.40</td><td>$6.00</td></tr><tr><td>033</td><td>8951</td><td>PHYSICAL THERAPY ASST, PER DIEM</td><td></td><td>$20.24</td><td></td><td></td><td></td><td></td><td>$1.20</td><td>$2.00</td><td>$1.40</td><td>$6.00</td></tr><tr><td>033</td><td>8952</td><td>CERT OCCUP THERAPY ASST, PER DIEM</td><td></td><td>$20.24</td><td></td><td></td><td></td><td></td><td>$1.20</td><td>$2.00</td><td>$1.40</td><td>$6.00</td></tr><tr><td>034</td><td>8987</td><td>TECHNOLOGIST CYTOGENETIC II</td><td>$4,671</td><td>$26.85</td><td>$5,605</td><td>$32.31</td><td>$6,539</td><td>$37.58</td><td>$1.90</td><td>$2.80</td><td>$1.40</td><td>$7.00</td></tr><tr><td>034</td><td>8988</td><td>TECHNOLOGIST CYTOGENETIC I</td><td>$4,260</td><td>$24.48</td><td>$4,900</td><td>$28.16</td><td>$5,538</td><td>$31.83</td><td>$1.90</td><td>$2.80</td><td>$1.40</td><td>$7.00</td></tr><tr><td>034</td><td>8989</td><td>TECHNOLOGIST CYTO TRAINEE</td><td>$2,830</td><td>$16.26</td><td>$3,535</td><td>$20.32</td><td>$4,242</td><td>$24.38</td><td>$1.90</td><td>$2.80</td><td>$1.40</td><td>$7.00</td></tr></table>",
+            "block_bbox": [
+                69,
+                177,
+                1621,
+                1119
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    69.0,
+                    177.0
+                ],
+                [
+                    1621.0,
+                    177.0
+                ],
+                [
+                    1621.0,
+                    1119.0
+                ],
+                [
+                    69.0,
+                    1119.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "103",
+            "block_bbox": [
+                633,
+                1155,
+                681,
+                1178
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    632.9999389648438,
+                    1154.9998779296875
+                ],
+                [
+                    679.9999389648438,
+                    1154.9998779296875
+                ],
+                [
+                    679.9999389648438,
+                    1176.9998779296875
+                ],
+                [
+                    632.9999389648438,
+                    1176.9998779296875
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.32268068194389343,
+                "coordinate": [
+                    934,
+                    116,
+                    1093,
+                    145
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        934.0,
+                        116.0
+                    ],
+                    [
+                        1093.0,
+                        116.0
+                    ],
+                    [
+                        1093.0,
+                        145.0
+                    ],
+                    [
+                        934.0,
+                        145.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9042981863021851,
+                "coordinate": [
+                    69,
+                    177,
+                    1621,
+                    1119
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        69.0,
+                        177.0
+                    ],
+                    [
+                        1621.0,
+                        177.0
+                    ],
+                    [
+                        1621.0,
+                        1119.0
+                    ],
+                    [
+                        69.0,
+                        1119.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7282738089561462,
+                "coordinate": [
+                    633,
+                    1155,
+                    681,
+                    1178
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        632.9999389648438,
+                        1154.9998779296875
+                    ],
+                    [
+                        679.9999389648438,
+                        1154.9998779296875
+                    ],
+                    [
+                        679.9999389648438,
+                        1176.9998779296875
+                    ],
+                    [
+                        632.9999389648438,
+                        1176.9998779296875
+                    ]
+                ]
+            }
+        ]
+    }
+}

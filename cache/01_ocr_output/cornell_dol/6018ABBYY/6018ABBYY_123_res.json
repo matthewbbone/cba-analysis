@@ -1,0 +1,156 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 123,
+    "page_count": 287,
+    "width": 264,
+    "height": 172,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "CUSTOMER",
+            "block_bbox": [
+                19,
+                17,
+                232,
+                52
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    19.0,
+                    17.0
+                ],
+                [
+                    232.0,
+                    17.0
+                ],
+                [
+                    232.0,
+                    52.0
+                ],
+                [
+                    19.0,
+                    52.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "DEPARTMENT",
+            "block_bbox": [
+                0,
+                125,
+                255,
+                158
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    -1.0,
+                    125.0
+                ],
+                [
+                    255.0,
+                    125.0
+                ],
+                [
+                    255.0,
+                    158.0
+                ],
+                [
+                    -1.0,
+                    158.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.3842201232910156,
+                "coordinate": [
+                    19,
+                    17,
+                    232,
+                    52
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        19.0,
+                        17.0
+                    ],
+                    [
+                        232.0,
+                        17.0
+                    ],
+                    [
+                        232.0,
+                        52.0
+                    ],
+                    [
+                        19.0,
+                        52.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3285617232322693,
+                "coordinate": [
+                    0,
+                    125,
+                    255,
+                    158
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        -1.0,
+                        125.0
+                    ],
+                    [
+                        255.0,
+                        125.0
+                    ],
+                    [
+                        255.0,
+                        158.0
+                    ],
+                    [
+                        -1.0,
+                        158.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

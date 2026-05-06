@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 310,
+    "page_count": 439,
+    "width": 1232,
+    "height": 1580,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                322,
+                105,
+                483,
+                125
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    105.0
+                ],
+                [
+                    482.0,
+                    105.0
+                ],
+                [
+                    482.0,
+                    124.0
+                ],
+                [
+                    322.0,
+                    124.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Military Service. The employee is not again eligible for the maximum payments, regardless of the number of times the employee enters Active Duty for Military Service.",
+            "block_bbox": [
+                575,
+                139,
+                877,
+                227
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    575.0,
+                    139.0
+                ],
+                [
+                    877.0,
+                    139.0
+                ],
+                [
+                    877.0,
+                    227.0
+                ],
+                [
+                    575.0,
+                    227.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Regular employees who volunteer for Military Training Duty (including attendance at schools for special military courses or instruction) or Emergency Service without receiving military pay, will be authorized time off, but without Lucent pay or Military Differential Pay.",
+            "block_bbox": [
+                320,
+                251,
+                877,
+                324
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    251.0
+                ],
+                [
+                    877.0,
+                    251.0
+                ],
+                [
+                    877.0,
+                    324.0
+                ],
+                [
+                    320.0,
+                    324.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Upon furnishing official written documentation to his/her supervisor, a regular employee may be granted up to three (3) scheduled workdays off with pay to report for registration, testing and/or a physical examination for induction into Active Duty for Military Service or Initial Active Duty for Training.",
+            "block_bbox": [
+                320,
+                342,
+                877,
+                415
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    342.0
+                ],
+                [
+                    877.0,
+                    342.0
+                ],
+                [
+                    877.0,
+                    415.0
+                ],
+                [
+                    320.0,
+                    415.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "An employee who receives a notice to report for Active Duty for Military Service or any Military Training Duty, shall immediately present such notice to his/her supervisor.",
+            "block_bbox": [
+                320,
+                433,
+                877,
+                489
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    433.0
+                ],
+                [
+                    877.0,
+                    433.0
+                ],
+                [
+                    877.0,
+                    489.0
+                ],
+                [
+                    320.0,
+                    489.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "302",
+            "block_bbox": [
+                322,
+                896,
+                353,
+                915
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    896.0
+                ],
+                [
+                    352.0,
+                    896.0
+                ],
+                [
+                    352.0,
+                    914.0
+                ],
+                [
+                    322.0,
+                    914.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.6830126643180847,
+                "coordinate": [
+                    322,
+                    105,
+                    483,
+                    125
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        322.0,
+                        105.0
+                    ],
+                    [
+                        482.0,
+                        105.0
+                    ],
+                    [
+                        482.0,
+                        124.0
+                    ],
+                    [
+                        322.0,
+                        124.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9254926443099976,
+                "coordinate": [
+                    575,
+                    139,
+                    877,
+                    227
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        575.0,
+                        139.0
+                    ],
+                    [
+                        877.0,
+                        139.0
+                    ],
+                    [
+                        877.0,
+                        227.0
+                    ],
+                    [
+                        575.0,
+                        227.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9275043606758118,
+                "coordinate": [
+                    320,
+                    251,
+                    877,
+                    324
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        320.0,
+                        251.0
+                    ],
+                    [
+                        877.0,
+                        251.0
+                    ],
+                    [
+                        877.0,
+                        324.0
+                    ],
+                    [
+                        320.0,
+                        324.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9256240725517273,
+                "coordinate": [
+                    320,
+                    342,
+                    877,
+                    415
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        320.0,
+                        342.0
+                    ],
+                    [
+                        877.0,
+                        342.0
+                    ],
+                    [
+                        877.0,
+                        415.0
+                    ],
+                    [
+                        320.0,
+                        415.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9067801833152771,
+                "coordinate": [
+                    320,
+                    433,
+                    877,
+                    489
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        320.0,
+                        433.0
+                    ],
+                    [
+                        877.0,
+                        433.0
+                    ],
+                    [
+                        877.0,
+                        489.0
+                    ],
+                    [
+                        320.0,
+                        489.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6994749903678894,
+                "coordinate": [
+                    322,
+                    896,
+                    353,
+                    915
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        322.0,
+                        896.0
+                    ],
+                    [
+                        352.0,
+                        896.0
+                    ],
+                    [
+                        352.0,
+                        914.0
+                    ],
+                    [
+                        322.0,
+                        914.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

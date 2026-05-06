@@ -1,0 +1,278 @@
+{
+    "input_path": "cache/dol_archive/document_2690.pdf",
+    "page_index": 43,
+    "page_count": 77,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "commitments, provided that the overall teaching, research, and service needs of the unit, as determined by the administrator, are met.",
+            "block_bbox": [
+                245,
+                145,
+                1024,
+                203
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    245.0,
+                    145.0
+                ],
+                [
+                    1024.0,
+                    145.0
+                ],
+                [
+                    1024.0,
+                    203.0
+                ],
+                [
+                    245.0,
+                    203.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "13.3.8 United Academics recognizes the University's need for flexibility in determining unit members' workloads as the needs of the University change. When the need arises, an appropriate administrator may revise a unit member's workload. When possible, there will be consultation with the department head/chair and the unit member before a unit member's workload is revised. When a workload is revised, the appropriate administrator shall provide a copy of the revised workload to the unit member as soon as practicable and the unit member's salary shall not be reduced during the remainder of the unit member's contract period.",
+            "block_bbox": [
+                175,
+                224,
+                1035,
+                448
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    175.0,
+                    224.0
+                ],
+                [
+                    1035.0,
+                    224.0
+                ],
+                [
+                    1035.0,
+                    448.0
+                ],
+                [
+                    175.0,
+                    448.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "Tentative Agreement",
+            "block_bbox": [
+                177,
+                1487,
+                370,
+                1513
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    177.0,
+                    1487.0
+                ],
+                [
+                    370.0,
+                    1487.0
+                ],
+                [
+                    370.0,
+                    1513.0
+                ],
+                [
+                    177.0,
+                    1513.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 44 of 77",
+            "block_bbox": [
+                919,
+                1487,
+                1047,
+                1515
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    919.0,
+                    1487.0
+                ],
+                [
+                    1047.0,
+                    1487.0
+                ],
+                [
+                    1047.0,
+                    1515.0
+                ],
+                [
+                    919.0,
+                    1515.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9036890268325806,
+                "coordinate": [
+                    245,
+                    145,
+                    1024,
+                    203
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        245.0,
+                        145.0
+                    ],
+                    [
+                        1024.0,
+                        145.0
+                    ],
+                    [
+                        1024.0,
+                        203.0
+                    ],
+                    [
+                        245.0,
+                        203.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9551775455474854,
+                "coordinate": [
+                    175,
+                    224,
+                    1035,
+                    448
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        175.0,
+                        224.0
+                    ],
+                    [
+                        1035.0,
+                        224.0
+                    ],
+                    [
+                        1035.0,
+                        448.0
+                    ],
+                    [
+                        175.0,
+                        448.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.867326557636261,
+                "coordinate": [
+                    177,
+                    1487,
+                    370,
+                    1513
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        177.0,
+                        1487.0
+                    ],
+                    [
+                        370.0,
+                        1487.0
+                    ],
+                    [
+                        370.0,
+                        1513.0
+                    ],
+                    [
+                        177.0,
+                        1513.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8531731963157654,
+                "coordinate": [
+                    919,
+                    1487,
+                    1047,
+                    1515
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        919.0,
+                        1487.0
+                    ],
+                    [
+                        1047.0,
+                        1487.0
+                    ],
+                    [
+                        1047.0,
+                        1515.0
+                    ],
+                    [
+                        919.0,
+                        1515.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

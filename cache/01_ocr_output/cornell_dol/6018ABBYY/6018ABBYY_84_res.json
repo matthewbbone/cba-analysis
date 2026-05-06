@@ -1,0 +1,705 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 84,
+    "page_count": 287,
+    "width": 728,
+    "height": 1012,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE IX",
+            "block_bbox": [
+                52,
+                50,
+                133,
+                72
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    52.0,
+                    50.0
+                ],
+                [
+                    132.0,
+                    50.0
+                ],
+                [
+                    132.0,
+                    71.0
+                ],
+                [
+                    52.0,
+                    71.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(3) Seniority of Laid-Off Employees – Employees laid off by the Company shall continue to accrue Company and departmental seniority for a period of three (3) years.",
+            "block_bbox": [
+                51,
+                81,
+                630,
+                149
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    51.0,
+                    81.0
+                ],
+                [
+                    630.0,
+                    81.0
+                ],
+                [
+                    630.0,
+                    149.0
+                ],
+                [
+                    51.0,
+                    149.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(4) Loss of Company and Departmental Seniority – An employee shall lose both Company and departmental seniority if:",
+            "block_bbox": [
+                52,
+                165,
+                630,
+                211
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    52.0,
+                    165.0
+                ],
+                [
+                    630.0,
+                    165.0
+                ],
+                [
+                    630.0,
+                    211.0
+                ],
+                [
+                    52.0,
+                    211.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a) The employee resigns;",
+            "block_bbox": [
+                80,
+                219,
+                283,
+                243
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    80.0,
+                    219.0
+                ],
+                [
+                    283.0,
+                    219.0
+                ],
+                [
+                    283.0,
+                    243.0
+                ],
+                [
+                    80.0,
+                    243.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b) The employee is discharged and not reinstated;",
+            "block_bbox": [
+                79,
+                251,
+                460,
+                275
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    79.0,
+                    251.0
+                ],
+                [
+                    460.0,
+                    251.0
+                ],
+                [
+                    460.0,
+                    275.0
+                ],
+                [
+                    79.0,
+                    275.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "c) The employee fails to comply with the provisions of Article XII; paragraph (6);",
+            "block_bbox": [
+                80,
+                282,
+                629,
+                328
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    80.0,
+                    282.0
+                ],
+                [
+                    629.0,
+                    282.0
+                ],
+                [
+                    629.0,
+                    328.0
+                ],
+                [
+                    80.0,
+                    328.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "d) The employee was hired prior to June 12, 1960, and he or she is laid off for a continuous period exceeding such employee's length of continuous service with the Company",
+            "block_bbox": [
+                79,
+                336,
+                630,
+                404
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    79.0,
+                    336.0
+                ],
+                [
+                    630.0,
+                    336.0
+                ],
+                [
+                    630.0,
+                    404.0
+                ],
+                [
+                    79.0,
+                    404.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "e) The employee was hired on or after June 12, 1960, and he or she is laid off for a continuous period exceeding thirty-six (36) months.",
+            "block_bbox": [
+                78,
+                412,
+                629,
+                457
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    78.0,
+                    412.0
+                ],
+                [
+                    629.0,
+                    412.0
+                ],
+                [
+                    629.0,
+                    457.0
+                ],
+                [
+                    78.0,
+                    457.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(5) Employees Transferred Outside the Bargaining Unit – Any member of the bargaining unit who voluntarily transfers to a Non-Union position or to a position within another MichCon bargaining unit as a result of a successful job bid may, either at the election of the employee or the Company, be returned to his or her former classification within the Local #80 bargaining unit without loss of seniority at any time within ninety (90) days from the date of such transfer. Effective March 1, 1995, if he or she is reassigned to the bargaining unit after said ninety (90) day period, such employee shall not be entitled to any department or Union seniority he or she had at the time of leaving the bargaining unit, and he or she will not be assigned to any classification within the bargaining unit until the then members of the bargaining unit have had an opportunity to fill such classification under the provisions of Article X.",
+            "block_bbox": [
+                51,
+                474,
+                630,
+                761
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    51.0,
+                    474.0
+                ],
+                [
+                    630.0,
+                    474.0
+                ],
+                [
+                    630.0,
+                    761.0
+                ],
+                [
+                    51.0,
+                    761.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(6) Loans Outside the Bargaining Unit - With the exception of the Customer Service Department (see Customer Service section of contract). When the Company loans Union members to work outside the bargaining unit, and such work is the same as the work normally performed by members of the bargaining unit, employees shall be elected for loan from volunteers who are qualified in the needed classification on the basis of departmental seniority; provided that the Company may select, without",
+            "block_bbox": [
+                49,
+                777,
+                629,
+                932
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    49.0,
+                    777.0
+                ],
+                [
+                    629.0,
+                    777.0
+                ],
+                [
+                    629.0,
+                    932.0
+                ],
+                [
+                    49.0,
+                    932.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "76",
+            "block_bbox": [
+                328,
+                937,
+                349,
+                954
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    328.0,
+                    937.0
+                ],
+                [
+                    348.0,
+                    937.0
+                ],
+                [
+                    348.0,
+                    953.0
+                ],
+                [
+                    328.0,
+                    953.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6426803469657898,
+                "coordinate": [
+                    52,
+                    50,
+                    133,
+                    72
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        52.0,
+                        50.0
+                    ],
+                    [
+                        132.0,
+                        50.0
+                    ],
+                    [
+                        132.0,
+                        71.0
+                    ],
+                    [
+                        52.0,
+                        71.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9167578220367432,
+                "coordinate": [
+                    51,
+                    81,
+                    630,
+                    149
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        51.0,
+                        81.0
+                    ],
+                    [
+                        630.0,
+                        81.0
+                    ],
+                    [
+                        630.0,
+                        149.0
+                    ],
+                    [
+                        51.0,
+                        149.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9030980467796326,
+                "coordinate": [
+                    52,
+                    165,
+                    630,
+                    211
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        52.0,
+                        165.0
+                    ],
+                    [
+                        630.0,
+                        165.0
+                    ],
+                    [
+                        630.0,
+                        211.0
+                    ],
+                    [
+                        52.0,
+                        211.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8151109218597412,
+                "coordinate": [
+                    80,
+                    219,
+                    283,
+                    243
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        80.0,
+                        219.0
+                    ],
+                    [
+                        283.0,
+                        219.0
+                    ],
+                    [
+                        283.0,
+                        243.0
+                    ],
+                    [
+                        80.0,
+                        243.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.838558554649353,
+                "coordinate": [
+                    79,
+                    251,
+                    460,
+                    275
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        79.0,
+                        251.0
+                    ],
+                    [
+                        460.0,
+                        251.0
+                    ],
+                    [
+                        460.0,
+                        275.0
+                    ],
+                    [
+                        79.0,
+                        275.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9051346778869629,
+                "coordinate": [
+                    80,
+                    282,
+                    629,
+                    328
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        80.0,
+                        282.0
+                    ],
+                    [
+                        629.0,
+                        282.0
+                    ],
+                    [
+                        629.0,
+                        328.0
+                    ],
+                    [
+                        80.0,
+                        328.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9253575801849365,
+                "coordinate": [
+                    79,
+                    336,
+                    630,
+                    404
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        79.0,
+                        336.0
+                    ],
+                    [
+                        630.0,
+                        336.0
+                    ],
+                    [
+                        630.0,
+                        404.0
+                    ],
+                    [
+                        79.0,
+                        404.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9023225903511047,
+                "coordinate": [
+                    78,
+                    412,
+                    629,
+                    457
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        78.0,
+                        412.0
+                    ],
+                    [
+                        629.0,
+                        412.0
+                    ],
+                    [
+                        629.0,
+                        457.0
+                    ],
+                    [
+                        78.0,
+                        457.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9630570411682129,
+                "coordinate": [
+                    51,
+                    474,
+                    630,
+                    761
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        51.0,
+                        474.0
+                    ],
+                    [
+                        630.0,
+                        474.0
+                    ],
+                    [
+                        630.0,
+                        761.0
+                    ],
+                    [
+                        51.0,
+                        761.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9550341367721558,
+                "coordinate": [
+                    49,
+                    777,
+                    629,
+                    932
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        49.0,
+                        777.0
+                    ],
+                    [
+                        629.0,
+                        777.0
+                    ],
+                    [
+                        629.0,
+                        932.0
+                    ],
+                    [
+                        49.0,
+                        932.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7568765878677368,
+                "coordinate": [
+                    328,
+                    937,
+                    349,
+                    954
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        328.0,
+                        937.0
+                    ],
+                    [
+                        348.0,
+                        937.0
+                    ],
+                    [
+                        348.0,
+                        953.0
+                    ],
+                    [
+                        328.0,
+                        953.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

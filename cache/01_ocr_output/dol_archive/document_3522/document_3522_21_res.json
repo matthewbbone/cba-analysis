@@ -1,0 +1,949 @@
+{
+    "input_path": "cache/dol_archive/document_3522.pdf",
+    "page_index": 21,
+    "page_count": 62,
+    "width": 1223,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "doc_title",
+            "block_content": "ARTICLE 7 - VOLUNTARY ALLOTMENT OF UNION DUES",
+            "block_bbox": [
+                136,
+                127,
+                830,
+                157
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    136.0,
+                    127.0
+                ],
+                [
+                    830.0,
+                    127.0
+                ],
+                [
+                    830.0,
+                    157.0
+                ],
+                [
+                    136.0,
+                    157.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Section 7.1 - The Union is Responsible For",
+            "block_bbox": [
+                136,
+                184,
+                633,
+                212
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    136.0,
+                    184.0
+                ],
+                [
+                    633.0,
+                    184.0
+                ],
+                [
+                    633.0,
+                    212.0
+                ],
+                [
+                    136.0,
+                    212.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. Obtaining and distributing standard form 1187, “Request for Payroll Deductions of Labor Organization Dues”.",
+            "block_bbox": [
+                135,
+                239,
+                1051,
+                297
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    135.0,
+                    239.0
+                ],
+                [
+                    1051.0,
+                    239.0
+                ],
+                [
+                    1051.0,
+                    297.0
+                ],
+                [
+                    135.0,
+                    297.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. Educating eligible Employee's during non-working hours as to the program for allotment of dues, its voluntary nature, and the availability and use of the SF 1187.",
+            "block_bbox": [
+                134,
+                322,
+                1021,
+                381
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    134.0,
+                    322.0
+                ],
+                [
+                    1021.0,
+                    322.0
+                ],
+                [
+                    1021.0,
+                    381.0
+                ],
+                [
+                    134.0,
+                    381.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3. Educating eligible Employee's during non-working hours as to the procedure to revoking the allotment of dues. New members shall have the option of dues revocation on the first annual anniversary date after the Employee's election to participate. After the first anniversary of the allotment, Employee's may only cancel allotments during the first full pay period in September of each year. Termination of dues withholding will become effective the first full pay period beginning on or after 1 September. It is the Employee's responsibility to ensure the written revocation is received in the appropriate payroll office not later than 1 September to be considered.",
+            "block_bbox": [
+                133,
+                407,
+                1078,
+                632
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    133.0,
+                    407.0
+                ],
+                [
+                    1078.0,
+                    407.0
+                ],
+                [
+                    1078.0,
+                    632.0
+                ],
+                [
+                    133.0,
+                    632.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "4. Certification of SF 1187 completed by an eligible Employee as to the amount of the dues.",
+            "block_bbox": [
+                133,
+                656,
+                1064,
+                713
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    133.0,
+                    656.0
+                ],
+                [
+                    1064.0,
+                    656.0
+                ],
+                [
+                    1064.0,
+                    713.0
+                ],
+                [
+                    133.0,
+                    713.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "5. Delivery of completed SF 1187 to the payroll office.",
+            "block_bbox": [
+                133,
+                739,
+                721,
+                769
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    133.0,
+                    739.0
+                ],
+                [
+                    721.0,
+                    739.0
+                ],
+                [
+                    721.0,
+                    769.0
+                ],
+                [
+                    133.0,
+                    769.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "6. Immediate notification to the payroll office when a member is expelled or suspended from the Union.",
+            "block_bbox": [
+                133,
+                795,
+                1077,
+                852
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    133.0,
+                    795.0
+                ],
+                [
+                    1077.0,
+                    795.0
+                ],
+                [
+                    1077.0,
+                    852.0
+                ],
+                [
+                    133.0,
+                    852.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Section 7.2 - The Employer is Responsible For",
+            "block_bbox": [
+                134,
+                878,
+                675,
+                907
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    134.0,
+                    878.0
+                ],
+                [
+                    675.0,
+                    878.0
+                ],
+                [
+                    675.0,
+                    907.0
+                ],
+                [
+                    134.0,
+                    907.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. Ensuring that payroll deductions are accomplished beginning the second pay period after the properly completed and certified SF 1187 has been received by the payroll office. When an Employee's pay is insufficient to cover the allotment, no deduction will be made from future pay to cover past amounts.",
+            "block_bbox": [
+                132,
+                933,
+                1074,
+                1047
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    132.0,
+                    933.0
+                ],
+                [
+                    1074.0,
+                    933.0
+                ],
+                [
+                    1074.0,
+                    1047.0
+                ],
+                [
+                    132.0,
+                    1047.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. Making available and distributing SF 1188, “Revocation of Voluntary Authorization of Allotment of Compensation for Payment of Employee Organization Dues.”",
+            "block_bbox": [
+                131,
+                1071,
+                1081,
+                1130
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    131.0,
+                    1071.0
+                ],
+                [
+                    1081.0,
+                    1071.0
+                ],
+                [
+                    1081.0,
+                    1130.0
+                ],
+                [
+                    131.0,
+                    1130.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3. Ensuring that the Union is notified by the Payroll section of any revocation within a ten work day period after receipt of a properly executed SF 1188.",
+            "block_bbox": [
+                131,
+                1155,
+                1055,
+                1214
+            ],
+            "block_id": 11,
+            "block_order": 12,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    131.0,
+                    1155.0
+                ],
+                [
+                    1055.0,
+                    1155.0
+                ],
+                [
+                    1055.0,
+                    1214.0
+                ],
+                [
+                    131.0,
+                    1214.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "4. Any allotments for non-bargaining unit employees for supplemental pension plans or other benefits may not be processed via SF 1187. SF-50's reverting temporarily promoted LIUNA members from supervisory positions back to the bargaining unit will include a statement reinstating the Employee's Union dues withholding. Finance offices will verify membership status prior to the temporary promotion and will place them in their original status.",
+            "block_bbox": [
+                130,
+                1239,
+                1083,
+                1409
+            ],
+            "block_id": 12,
+            "block_order": 13,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    130.0,
+                    1239.0
+                ],
+                [
+                    1083.0,
+                    1239.0
+                ],
+                [
+                    1083.0,
+                    1409.0
+                ],
+                [
+                    130.0,
+                    1409.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "Agreement Between the Adjutant General of Michigan and the Laborers International Union of North America (LIUNA) September 2015",
+            "block_bbox": [
+                141,
+                1457,
+                934,
+                1496
+            ],
+            "block_id": 13,
+            "block_order": null,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    141.0,
+                    1457.0
+                ],
+                [
+                    934.0,
+                    1457.0
+                ],
+                [
+                    934.0,
+                    1496.0
+                ],
+                [
+                    141.0,
+                    1496.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "22",
+            "block_bbox": [
+                1048,
+                1460,
+                1074,
+                1481
+            ],
+            "block_id": 14,
+            "block_order": null,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    1048.0,
+                    1460.0
+                ],
+                [
+                    1073.0,
+                    1460.0
+                ],
+                [
+                    1073.0,
+                    1480.0
+                ],
+                [
+                    1048.0,
+                    1480.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.7795236706733704,
+                "coordinate": [
+                    136,
+                    127,
+                    830,
+                    157
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        136.0,
+                        127.0
+                    ],
+                    [
+                        830.0,
+                        127.0
+                    ],
+                    [
+                        830.0,
+                        157.0
+                    ],
+                    [
+                        136.0,
+                        157.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8647822141647339,
+                "coordinate": [
+                    136,
+                    184,
+                    633,
+                    212
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        136.0,
+                        184.0
+                    ],
+                    [
+                        633.0,
+                        184.0
+                    ],
+                    [
+                        633.0,
+                        212.0
+                    ],
+                    [
+                        136.0,
+                        212.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.925792932510376,
+                "coordinate": [
+                    135,
+                    239,
+                    1051,
+                    297
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        135.0,
+                        239.0
+                    ],
+                    [
+                        1051.0,
+                        239.0
+                    ],
+                    [
+                        1051.0,
+                        297.0
+                    ],
+                    [
+                        135.0,
+                        297.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9210259914398193,
+                "coordinate": [
+                    134,
+                    322,
+                    1021,
+                    381
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        134.0,
+                        322.0
+                    ],
+                    [
+                        1021.0,
+                        322.0
+                    ],
+                    [
+                        1021.0,
+                        381.0
+                    ],
+                    [
+                        134.0,
+                        381.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9625685811042786,
+                "coordinate": [
+                    133,
+                    407,
+                    1078,
+                    632
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        133.0,
+                        407.0
+                    ],
+                    [
+                        1078.0,
+                        407.0
+                    ],
+                    [
+                        1078.0,
+                        632.0
+                    ],
+                    [
+                        133.0,
+                        632.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9269284605979919,
+                "coordinate": [
+                    133,
+                    656,
+                    1064,
+                    713
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        133.0,
+                        656.0
+                    ],
+                    [
+                        1064.0,
+                        656.0
+                    ],
+                    [
+                        1064.0,
+                        713.0
+                    ],
+                    [
+                        133.0,
+                        713.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8575322031974792,
+                "coordinate": [
+                    133,
+                    739,
+                    721,
+                    769
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        133.0,
+                        739.0
+                    ],
+                    [
+                        721.0,
+                        739.0
+                    ],
+                    [
+                        721.0,
+                        769.0
+                    ],
+                    [
+                        133.0,
+                        769.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9228622913360596,
+                "coordinate": [
+                    133,
+                    795,
+                    1077,
+                    852
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        133.0,
+                        795.0
+                    ],
+                    [
+                        1077.0,
+                        795.0
+                    ],
+                    [
+                        1077.0,
+                        852.0
+                    ],
+                    [
+                        133.0,
+                        852.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8552271127700806,
+                "coordinate": [
+                    134,
+                    878,
+                    675,
+                    907
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        134.0,
+                        878.0
+                    ],
+                    [
+                        675.0,
+                        878.0
+                    ],
+                    [
+                        675.0,
+                        907.0
+                    ],
+                    [
+                        134.0,
+                        907.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9504913687705994,
+                "coordinate": [
+                    132,
+                    933,
+                    1074,
+                    1047
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        132.0,
+                        933.0
+                    ],
+                    [
+                        1074.0,
+                        933.0
+                    ],
+                    [
+                        1074.0,
+                        1047.0
+                    ],
+                    [
+                        132.0,
+                        1047.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9348804950714111,
+                "coordinate": [
+                    131,
+                    1071,
+                    1081,
+                    1130
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        131.0,
+                        1071.0
+                    ],
+                    [
+                        1081.0,
+                        1071.0
+                    ],
+                    [
+                        1081.0,
+                        1130.0
+                    ],
+                    [
+                        131.0,
+                        1130.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9354813098907471,
+                "coordinate": [
+                    131,
+                    1155,
+                    1055,
+                    1214
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        131.0,
+                        1155.0
+                    ],
+                    [
+                        1055.0,
+                        1155.0
+                    ],
+                    [
+                        1055.0,
+                        1214.0
+                    ],
+                    [
+                        131.0,
+                        1214.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9625873565673828,
+                "coordinate": [
+                    130,
+                    1239,
+                    1083,
+                    1409
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        130.0,
+                        1239.0
+                    ],
+                    [
+                        1083.0,
+                        1239.0
+                    ],
+                    [
+                        1083.0,
+                        1409.0
+                    ],
+                    [
+                        130.0,
+                        1409.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8728456497192383,
+                "coordinate": [
+                    141,
+                    1457,
+                    934,
+                    1496
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        141.0,
+                        1457.0
+                    ],
+                    [
+                        934.0,
+                        1457.0
+                    ],
+                    [
+                        934.0,
+                        1496.0
+                    ],
+                    [
+                        141.0,
+                        1496.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7623357176780701,
+                "coordinate": [
+                    1048,
+                    1460,
+                    1074,
+                    1481
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        1048.0,
+                        1460.0
+                    ],
+                    [
+                        1073.0,
+                        1460.0
+                    ],
+                    [
+                        1073.0,
+                        1480.0
+                    ],
+                    [
+                        1048.0,
+                        1480.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

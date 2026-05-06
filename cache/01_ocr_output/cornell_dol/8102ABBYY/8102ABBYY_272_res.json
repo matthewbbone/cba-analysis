@@ -1,0 +1,1132 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 272,
+    "page_count": 439,
+    "width": 1233,
+    "height": 1581,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                322,
+                105,
+                483,
+                123
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    105.0
+                ],
+                [
+                    482.0,
+                    105.0
+                ],
+                [
+                    482.0,
+                    122.0
+                ],
+                [
+                    322.0,
+                    122.0
+                ]
+            ]
+        },
+        {
+            "block_label": "doc_title",
+            "block_content": "ATTACHMENT A",
+            "block_bbox": [
+                751,
+                139,
+                877,
+                158
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    751.0,
+                    139.0
+                ],
+                [
+                    876.0,
+                    139.0
+                ],
+                [
+                    876.0,
+                    157.0
+                ],
+                [
+                    751.0,
+                    157.0
+                ]
+            ]
+        },
+        {
+            "block_label": "doc_title",
+            "block_content": "ACTIVE HEALTH BENEFITS",
+            "block_bbox": [
+                497,
+                178,
+                701,
+                198
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    497.0,
+                    178.0
+                ],
+                [
+                    700.0,
+                    178.0
+                ],
+                [
+                    700.0,
+                    197.0
+                ],
+                [
+                    497.0,
+                    197.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "MEDICAL EXPENSE PLAN",
+            "block_bbox": [
+                321,
+                224,
+                519,
+                245
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    224.0
+                ],
+                [
+                    518.0,
+                    224.0
+                ],
+                [
+                    518.0,
+                    244.0
+                ],
+                [
+                    321.0,
+                    244.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Point of Service Plan",
+            "block_bbox": [
+                322,
+                259,
+                479,
+                281
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    259.0
+                ],
+                [
+                    478.0,
+                    259.0
+                ],
+                [
+                    478.0,
+                    280.0
+                ],
+                [
+                    322.0,
+                    280.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1 In-network office visit copayments (including preventative care visits, but excluding Mental Health/Chemical Dependency) will be $30 per visit.",
+            "block_bbox": [
+                323,
+                300,
+                850,
+                339
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    323.0,
+                    300.0
+                ],
+                [
+                    850.0,
+                    300.0
+                ],
+                [
+                    850.0,
+                    339.0
+                ],
+                [
+                    323.0,
+                    339.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2 Coinsurance for hospitalization, outpatient and inpatient surgery and other services will be:",
+            "block_bbox": [
+                321,
+                364,
+                860,
+                401
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    364.0
+                ],
+                [
+                    860.0,
+                    364.0
+                ],
+                [
+                    860.0,
+                    401.0
+                ],
+                [
+                    321.0,
+                    401.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) In-network: 5%",
+            "block_bbox": [
+                356,
+                414,
+                502,
+                435
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    356.0,
+                    414.0
+                ],
+                [
+                    501.0,
+                    414.0
+                ],
+                [
+                    501.0,
+                    434.0
+                ],
+                [
+                    356.0,
+                    434.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) Out-of-network: 25%",
+            "block_bbox": [
+                356,
+                446,
+                540,
+                467
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    356.0,
+                    446.0
+                ],
+                [
+                    539.0,
+                    446.0
+                ],
+                [
+                    539.0,
+                    466.0
+                ],
+                [
+                    356.0,
+                    466.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3 In-network hospital admission copayment will be $100 per admission",
+            "block_bbox": [
+                321,
+                493,
+                824,
+                515
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    493.0
+                ],
+                [
+                    824.0,
+                    493.0
+                ],
+                [
+                    824.0,
+                    515.0
+                ],
+                [
+                    321.0,
+                    515.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "4 Annual in-network out-of-pocket maximum will be:",
+            "block_bbox": [
+                321,
+                540,
+                697,
+                561
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    540.0
+                ],
+                [
+                    696.0,
+                    540.0
+                ],
+                [
+                    696.0,
+                    560.0
+                ],
+                [
+                    321.0,
+                    560.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) $1,250 Individual",
+            "block_bbox": [
+                356,
+                573,
+                512,
+                594
+            ],
+            "block_id": 11,
+            "block_order": 11,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    356.0,
+                    573.0
+                ],
+                [
+                    511.0,
+                    573.0
+                ],
+                [
+                    511.0,
+                    593.0
+                ],
+                [
+                    356.0,
+                    593.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) $2,500 Two Person",
+            "block_bbox": [
+                356,
+                605,
+                528,
+                626
+            ],
+            "block_id": 12,
+            "block_order": 12,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    356.0,
+                    605.0
+                ],
+                [
+                    527.0,
+                    605.0
+                ],
+                [
+                    527.0,
+                    625.0
+                ],
+                [
+                    356.0,
+                    625.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(c) $3,750 Family",
+            "block_bbox": [
+                356,
+                637,
+                493,
+                660
+            ],
+            "block_id": 13,
+            "block_order": 13,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    356.0,
+                    637.0
+                ],
+                [
+                    492.0,
+                    637.0
+                ],
+                [
+                    492.0,
+                    659.0
+                ],
+                [
+                    356.0,
+                    659.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "5 In-network and out-of-network emergency use of emergency room copayment will be $60 (waived if admitted)",
+            "block_bbox": [
+                321,
+                685,
+                805,
+                723
+            ],
+            "block_id": 14,
+            "block_order": 14,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    685.0
+                ],
+                [
+                    805.0,
+                    685.0
+                ],
+                [
+                    805.0,
+                    723.0
+                ],
+                [
+                    321.0,
+                    723.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "8 In-network and out-of-network non emergency use of emergency room copayment will be $60 plus 25% coinsurance",
+            "block_bbox": [
+                321,
+                749,
+                835,
+                788
+            ],
+            "block_id": 15,
+            "block_order": 15,
+            "group_id": 15,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    749.0
+                ],
+                [
+                    835.0,
+                    749.0
+                ],
+                [
+                    835.0,
+                    788.0
+                ],
+                [
+                    321.0,
+                    788.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "7 Out-of-network hospital admission copayment will be $300 per admission",
+            "block_bbox": [
+                321,
+                813,
+                852,
+                835
+            ],
+            "block_id": 16,
+            "block_order": 16,
+            "group_id": 16,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    813.0
+                ],
+                [
+                    852.0,
+                    813.0
+                ],
+                [
+                    852.0,
+                    835.0
+                ],
+                [
+                    321.0,
+                    835.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "8 Out-of-network annual deductible will be:",
+            "block_bbox": [
+                320,
+                860,
+                635,
+                881
+            ],
+            "block_id": 17,
+            "block_order": 17,
+            "group_id": 17,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    860.0
+                ],
+                [
+                    634.0,
+                    860.0
+                ],
+                [
+                    634.0,
+                    880.0
+                ],
+                [
+                    320.0,
+                    880.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7789533734321594,
+                "coordinate": [
+                    322,
+                    105,
+                    483,
+                    123
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        322.0,
+                        105.0
+                    ],
+                    [
+                        482.0,
+                        105.0
+                    ],
+                    [
+                        482.0,
+                        122.0
+                    ],
+                    [
+                        322.0,
+                        122.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.4163157045841217,
+                "coordinate": [
+                    751,
+                    139,
+                    877,
+                    158
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        751.0,
+                        139.0
+                    ],
+                    [
+                        876.0,
+                        139.0
+                    ],
+                    [
+                        876.0,
+                        157.0
+                    ],
+                    [
+                        751.0,
+                        157.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.8155596256256104,
+                "coordinate": [
+                    497,
+                    178,
+                    701,
+                    198
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        497.0,
+                        178.0
+                    ],
+                    [
+                        700.0,
+                        178.0
+                    ],
+                    [
+                        700.0,
+                        197.0
+                    ],
+                    [
+                        497.0,
+                        197.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7033389806747437,
+                "coordinate": [
+                    321,
+                    224,
+                    519,
+                    245
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        321.0,
+                        224.0
+                    ],
+                    [
+                        518.0,
+                        224.0
+                    ],
+                    [
+                        518.0,
+                        244.0
+                    ],
+                    [
+                        321.0,
+                        244.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5961213111877441,
+                "coordinate": [
+                    322,
+                    259,
+                    479,
+                    281
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        322.0,
+                        259.0
+                    ],
+                    [
+                        478.0,
+                        259.0
+                    ],
+                    [
+                        478.0,
+                        280.0
+                    ],
+                    [
+                        322.0,
+                        280.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8625004887580872,
+                "coordinate": [
+                    323,
+                    300,
+                    850,
+                    339
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        323.0,
+                        300.0
+                    ],
+                    [
+                        850.0,
+                        300.0
+                    ],
+                    [
+                        850.0,
+                        339.0
+                    ],
+                    [
+                        323.0,
+                        339.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.84224933385849,
+                "coordinate": [
+                    321,
+                    364,
+                    860,
+                    401
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        321.0,
+                        364.0
+                    ],
+                    [
+                        860.0,
+                        364.0
+                    ],
+                    [
+                        860.0,
+                        401.0
+                    ],
+                    [
+                        321.0,
+                        401.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7292382717132568,
+                "coordinate": [
+                    356,
+                    414,
+                    502,
+                    435
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        356.0,
+                        414.0
+                    ],
+                    [
+                        501.0,
+                        414.0
+                    ],
+                    [
+                        501.0,
+                        434.0
+                    ],
+                    [
+                        356.0,
+                        434.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7494863271713257,
+                "coordinate": [
+                    356,
+                    446,
+                    540,
+                    467
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        356.0,
+                        446.0
+                    ],
+                    [
+                        539.0,
+                        446.0
+                    ],
+                    [
+                        539.0,
+                        466.0
+                    ],
+                    [
+                        356.0,
+                        466.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7890134453773499,
+                "coordinate": [
+                    321,
+                    493,
+                    824,
+                    515
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        321.0,
+                        493.0
+                    ],
+                    [
+                        824.0,
+                        493.0
+                    ],
+                    [
+                        824.0,
+                        515.0
+                    ],
+                    [
+                        321.0,
+                        515.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7657472491264343,
+                "coordinate": [
+                    321,
+                    540,
+                    697,
+                    561
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        321.0,
+                        540.0
+                    ],
+                    [
+                        696.0,
+                        540.0
+                    ],
+                    [
+                        696.0,
+                        560.0
+                    ],
+                    [
+                        321.0,
+                        560.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7439184784889221,
+                "coordinate": [
+                    356,
+                    573,
+                    512,
+                    594
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        356.0,
+                        573.0
+                    ],
+                    [
+                        511.0,
+                        573.0
+                    ],
+                    [
+                        511.0,
+                        593.0
+                    ],
+                    [
+                        356.0,
+                        593.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7539560198783875,
+                "coordinate": [
+                    356,
+                    605,
+                    528,
+                    626
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        356.0,
+                        605.0
+                    ],
+                    [
+                        527.0,
+                        605.0
+                    ],
+                    [
+                        527.0,
+                        625.0
+                    ],
+                    [
+                        356.0,
+                        625.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7547315955162048,
+                "coordinate": [
+                    356,
+                    637,
+                    493,
+                    660
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        356.0,
+                        637.0
+                    ],
+                    [
+                        492.0,
+                        637.0
+                    ],
+                    [
+                        492.0,
+                        659.0
+                    ],
+                    [
+                        356.0,
+                        659.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8484869003295898,
+                "coordinate": [
+                    321,
+                    685,
+                    805,
+                    723
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        321.0,
+                        685.0
+                    ],
+                    [
+                        805.0,
+                        685.0
+                    ],
+                    [
+                        805.0,
+                        723.0
+                    ],
+                    [
+                        321.0,
+                        723.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8416548371315002,
+                "coordinate": [
+                    321,
+                    749,
+                    835,
+                    788
+                ],
+                "order": 15,
+                "polygon_points": [
+                    [
+                        321.0,
+                        749.0
+                    ],
+                    [
+                        835.0,
+                        749.0
+                    ],
+                    [
+                        835.0,
+                        788.0
+                    ],
+                    [
+                        321.0,
+                        788.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8058013319969177,
+                "coordinate": [
+                    321,
+                    813,
+                    852,
+                    835
+                ],
+                "order": 16,
+                "polygon_points": [
+                    [
+                        321.0,
+                        813.0
+                    ],
+                    [
+                        852.0,
+                        813.0
+                    ],
+                    [
+                        852.0,
+                        835.0
+                    ],
+                    [
+                        321.0,
+                        835.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8025884032249451,
+                "coordinate": [
+                    320,
+                    860,
+                    635,
+                    881
+                ],
+                "order": 17,
+                "polygon_points": [
+                    [
+                        320.0,
+                        860.0
+                    ],
+                    [
+                        634.0,
+                        860.0
+                    ],
+                    [
+                        634.0,
+                        880.0
+                    ],
+                    [
+                        320.0,
+                        880.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,339 @@
+{
+    "input_path": "cache/cornell_dol/7423ABBYY.pdf",
+    "page_index": 52,
+    "page_count": 185,
+    "width": 1188,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "safety atmosphere.",
+            "block_bbox": [
+                187,
+                41,
+                402,
+                71
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    187.0,
+                    41.0
+                ],
+                [
+                    402.0,
+                    41.0
+                ],
+                [
+                    402.0,
+                    71.0
+                ],
+                [
+                    187.0,
+                    71.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) Both the Company and the Union will continually strive to educate the employees and pursue compliance regarding the use of safety equipment and safe work practices.",
+            "block_bbox": [
+                270,
+                93,
+                1032,
+                182
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    270.0,
+                    93.0
+                ],
+                [
+                    1032.0,
+                    93.0
+                ],
+                [
+                    1032.0,
+                    182.0
+                ],
+                [
+                    270.0,
+                    182.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) The Company Safety Administrator or designate and two Company employees so designated by the Union will meet quarterly for the purpose of discussing specific safety matters. It shall be the responsibility of the Company to set the time and place for such meetings. Regular scheduled work hours spent by the two (2) employees shall be compensated for at their basic hourly rates of pay.",
+            "block_bbox": [
+                268,
+                205,
+                1066,
+                403
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    268.0,
+                    205.0
+                ],
+                [
+                    1066.0,
+                    205.0
+                ],
+                [
+                    1066.0,
+                    403.0
+                ],
+                [
+                    268.0,
+                    403.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(c) With respect to Article 19, Section 19.5 of the Labor Agreement, Verizon North Inc. (North Central Region) and the International Brotherhood of Electrical Workers, Local 986 agree that the Company has the exclusive responsibility to provide a safe and healthful workplace and conditions of employment.",
+            "block_bbox": [
+                266,
+                427,
+                1056,
+                572
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    266.0,
+                    427.0
+                ],
+                [
+                    1056.0,
+                    427.0
+                ],
+                [
+                    1056.0,
+                    572.0
+                ],
+                [
+                    266.0,
+                    572.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "44",
+            "block_bbox": [
+                655,
+                1472,
+                688,
+                1497
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    655.0,
+                    1472.0
+                ],
+                [
+                    687.0,
+                    1472.0
+                ],
+                [
+                    687.0,
+                    1496.0
+                ],
+                [
+                    655.0,
+                    1496.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7071633338928223,
+                "coordinate": [
+                    187,
+                    41,
+                    402,
+                    71
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        187.0,
+                        41.0
+                    ],
+                    [
+                        402.0,
+                        41.0
+                    ],
+                    [
+                        402.0,
+                        71.0
+                    ],
+                    [
+                        187.0,
+                        71.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8981583118438721,
+                "coordinate": [
+                    270,
+                    93,
+                    1032,
+                    182
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        270.0,
+                        93.0
+                    ],
+                    [
+                        1032.0,
+                        93.0
+                    ],
+                    [
+                        1032.0,
+                        182.0
+                    ],
+                    [
+                        270.0,
+                        182.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9422895312309265,
+                "coordinate": [
+                    268,
+                    205,
+                    1066,
+                    403
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        268.0,
+                        205.0
+                    ],
+                    [
+                        1066.0,
+                        205.0
+                    ],
+                    [
+                        1066.0,
+                        403.0
+                    ],
+                    [
+                        268.0,
+                        403.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9359304308891296,
+                "coordinate": [
+                    266,
+                    427,
+                    1056,
+                    572
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        266.0,
+                        427.0
+                    ],
+                    [
+                        1056.0,
+                        427.0
+                    ],
+                    [
+                        1056.0,
+                        572.0
+                    ],
+                    [
+                        266.0,
+                        572.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.730795681476593,
+                "coordinate": [
+                    655,
+                    1472,
+                    688,
+                    1497
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        655.0,
+                        1472.0
+                    ],
+                    [
+                        687.0,
+                        1472.0
+                    ],
+                    [
+                        687.0,
+                        1496.0
+                    ],
+                    [
+                        655.0,
+                        1496.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

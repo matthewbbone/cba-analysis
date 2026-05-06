@@ -1,0 +1,339 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 172,
+    "page_count": 439,
+    "width": 1233,
+    "height": 1581,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Appendix 1",
+            "block_bbox": [
+                320,
+                71,
+                403,
+                91
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    71.0
+                ],
+                [
+                    402.0,
+                    71.0
+                ],
+                [
+                    402.0,
+                    90.0
+                ],
+                [
+                    320.0,
+                    90.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Beginning at the intersection of Tacoma Avenue and Division Avenue, north-east along Division Avenue and an extension of Division Avenue to Commencement Bay, then south-east along the banks of Commencement Bay and the City Waterway to 12th Street, then west along 12th Street to Tacoma Avenue, then north on Tacoma Avenue to Division Avenue and the point of beginning.",
+            "block_bbox": [
+                320,
+                112,
+                877,
+                202
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    112.0
+                ],
+                [
+                    877.0,
+                    112.0
+                ],
+                [
+                    877.0,
+                    202.0
+                ],
+                [
+                    320.0,
+                    202.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "WASHINGTON, DC ZONE",
+            "block_bbox": [
+                504,
+                220,
+                694,
+                239
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    504.0,
+                    220.0
+                ],
+                [
+                    693.0,
+                    220.0
+                ],
+                [
+                    693.0,
+                    238.0
+                ],
+                [
+                    504.0,
+                    238.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The Washington, DC Zone is the area within the boundaries of the District of Columbia.",
+            "block_bbox": [
+                319,
+                259,
+                877,
+                297
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    319.0,
+                    259.0
+                ],
+                [
+                    877.0,
+                    259.0
+                ],
+                [
+                    877.0,
+                    297.0
+                ],
+                [
+                    319.0,
+                    297.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "184",
+            "block_bbox": [
+                324,
+                908,
+                354,
+                927
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    324.0,
+                    908.0
+                ],
+                [
+                    353.0,
+                    908.0
+                ],
+                [
+                    353.0,
+                    926.0
+                ],
+                [
+                    324.0,
+                    926.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6673753261566162,
+                "coordinate": [
+                    320,
+                    71,
+                    403,
+                    91
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        320.0,
+                        71.0
+                    ],
+                    [
+                        402.0,
+                        71.0
+                    ],
+                    [
+                        402.0,
+                        90.0
+                    ],
+                    [
+                        320.0,
+                        90.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9243946671485901,
+                "coordinate": [
+                    320,
+                    112,
+                    877,
+                    202
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        320.0,
+                        112.0
+                    ],
+                    [
+                        877.0,
+                        112.0
+                    ],
+                    [
+                        877.0,
+                        202.0
+                    ],
+                    [
+                        320.0,
+                        202.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7968798279762268,
+                "coordinate": [
+                    504,
+                    220,
+                    694,
+                    239
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        504.0,
+                        220.0
+                    ],
+                    [
+                        693.0,
+                        220.0
+                    ],
+                    [
+                        693.0,
+                        238.0
+                    ],
+                    [
+                        504.0,
+                        238.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.857393205165863,
+                "coordinate": [
+                    319,
+                    259,
+                    877,
+                    297
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        319.0,
+                        259.0
+                    ],
+                    [
+                        877.0,
+                        259.0
+                    ],
+                    [
+                        877.0,
+                        297.0
+                    ],
+                    [
+                        319.0,
+                        297.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6383137106895447,
+                "coordinate": [
+                    324,
+                    908,
+                    354,
+                    927
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        324.0,
+                        908.0
+                    ],
+                    [
+                        353.0,
+                        908.0
+                    ],
+                    [
+                        353.0,
+                        926.0
+                    ],
+                    [
+                        324.0,
+                        926.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

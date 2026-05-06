@@ -1,0 +1,461 @@
+{
+    "input_path": "cache/cornell_dol/7423ABBYY.pdf",
+    "page_index": 173,
+    "page_count": 185,
+    "width": 1186,
+    "height": 1603,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Years of Accredited Service at Retirement</td><td>Percent of Health Care Premium Paid by Retiree</td></tr><tr><td>Less than 10</td><td>100%</td></tr><tr><td>10 to 14</td><td>80%</td></tr><tr><td>15 to 19</td><td>60%</td></tr><tr><td>20 to 24</td><td>40%</td></tr><tr><td>25 to 29</td><td>20%</td></tr><tr><td>30 and over</td><td>10%</td></tr></table>",
+            "block_bbox": [
+                330,
+                41,
+                947,
+                298
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    330.0,
+                    41.0
+                ],
+                [
+                    947.0,
+                    41.0
+                ],
+                [
+                    947.0,
+                    298.0
+                ],
+                [
+                    330.0,
+                    298.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "5. (a) The Company shall determine the cost of providing Retiree Medical coverage (\"Retiree Medical Benefits Premiums\"). Further, it is the Company's intention to cap the amount it pays toward such Retiree Medical Benefits Premiums for employees who retire on or after July 1, 1997.",
+            "block_bbox": [
+                123,
+                322,
+                982,
+                468
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    123.0,
+                    322.0
+                ],
+                [
+                    982.0,
+                    322.0
+                ],
+                [
+                    982.0,
+                    468.0
+                ],
+                [
+                    123.0,
+                    468.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) When the Retiree Medical Benefits Premiums for the $350 deductible coverage option under GTE RETIREE OPTIONS reach the figures set forth in the chart below (\"Capped Retiree Medical Benefits Premiums\"), the Company Contribution Amount shall be capped and the Company shall make no additional contributions towards Retiree Medical Benefits Premiums.",
+            "block_bbox": [
+                207,
+                490,
+                1000,
+                665
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    207.0,
+                    490.0
+                ],
+                [
+                    1000.0,
+                    490.0
+                ],
+                [
+                    1000.0,
+                    665.0
+                ],
+                [
+                    207.0,
+                    665.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Coverage Category</td><td>Capped Retiree Medical Benefits Premium</td></tr><tr><td>Retiree only (primary coverage)</td><td>$ 6,314</td></tr><tr><td>Retiree plus one dependent coverage</td><td>$ 12,628</td></tr><tr><td>Family coverage</td><td>$ 14,144</td></tr><tr><td>Medicare covered retiree (per eligible life)</td><td>$ 1,642</td></tr></table>",
+            "block_bbox": [
+                306,
+                685,
+                1006,
+                918
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    306.0,
+                    685.0
+                ],
+                [
+                    1006.0,
+                    685.0
+                ],
+                [
+                    1006.0,
+                    918.0
+                ],
+                [
+                    306.0,
+                    918.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(c) The Maximum Company Contribution Amount applicable to each Coverage Category shall be determined by multiplying the applicable Company Contribution Percentage times the Capped retiree Medical Benefits Premium as set forth above for that coverage. The applicable Maximum Company Contribution Amount shall not increase when the Retiree Medical Benefits Premium exceeds the amount set forth in the chart above.",
+            "block_bbox": [
+                205,
+                939,
+                978,
+                1139
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    205.0,
+                    939.0
+                ],
+                [
+                    978.0,
+                    939.0
+                ],
+                [
+                    978.0,
+                    1139.0
+                ],
+                [
+                    205.0,
+                    1139.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "6. In order to receive Retiree Medical Benefits, the retiree must pay the Company the amount the Retiree Medical Premium exceeds the Company Contribution Amount as described in paragraphs 4 and 5 above (\"Retiree Contribution Amount\"). When the Retiree Medical Benefits Premium reaches or exceeds the Capped Retiree Medical Benefit Premium, the retiree must pay the Company the amount the Retiree Medical Benefits Premium exceeds the Maximum Company Contribution Amount.",
+            "block_bbox": [
+                118,
+                1161,
+                953,
+                1392
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    118.0,
+                    1161.0
+                ],
+                [
+                    953.0,
+                    1161.0
+                ],
+                [
+                    953.0,
+                    1392.0
+                ],
+                [
+                    118.0,
+                    1392.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "165",
+            "block_bbox": [
+                546,
+                1476,
+                590,
+                1503
+            ],
+            "block_id": 6,
+            "block_order": null,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    546.0,
+                    1476.0
+                ],
+                [
+                    589.0,
+                    1476.0
+                ],
+                [
+                    589.0,
+                    1502.0
+                ],
+                [
+                    546.0,
+                    1502.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9203253388404846,
+                "coordinate": [
+                    330,
+                    41,
+                    947,
+                    298
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        330.0,
+                        41.0
+                    ],
+                    [
+                        947.0,
+                        41.0
+                    ],
+                    [
+                        947.0,
+                        298.0
+                    ],
+                    [
+                        330.0,
+                        298.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9248999953269958,
+                "coordinate": [
+                    123,
+                    322,
+                    982,
+                    468
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        123.0,
+                        322.0
+                    ],
+                    [
+                        982.0,
+                        322.0
+                    ],
+                    [
+                        982.0,
+                        468.0
+                    ],
+                    [
+                        123.0,
+                        468.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9403340220451355,
+                "coordinate": [
+                    207,
+                    490,
+                    1000,
+                    665
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        207.0,
+                        490.0
+                    ],
+                    [
+                        1000.0,
+                        490.0
+                    ],
+                    [
+                        1000.0,
+                        665.0
+                    ],
+                    [
+                        207.0,
+                        665.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9281467795372009,
+                "coordinate": [
+                    306,
+                    685,
+                    1006,
+                    918
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        306.0,
+                        685.0
+                    ],
+                    [
+                        1006.0,
+                        685.0
+                    ],
+                    [
+                        1006.0,
+                        918.0
+                    ],
+                    [
+                        306.0,
+                        918.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9500986337661743,
+                "coordinate": [
+                    205,
+                    939,
+                    978,
+                    1139
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        205.0,
+                        939.0
+                    ],
+                    [
+                        978.0,
+                        939.0
+                    ],
+                    [
+                        978.0,
+                        1139.0
+                    ],
+                    [
+                        205.0,
+                        1139.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9542375802993774,
+                "coordinate": [
+                    118,
+                    1161,
+                    953,
+                    1392
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        118.0,
+                        1161.0
+                    ],
+                    [
+                        953.0,
+                        1161.0
+                    ],
+                    [
+                        953.0,
+                        1392.0
+                    ],
+                    [
+                        118.0,
+                        1392.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8130462765693665,
+                "coordinate": [
+                    546,
+                    1476,
+                    590,
+                    1503
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        546.0,
+                        1476.0
+                    ],
+                    [
+                        589.0,
+                        1476.0
+                    ],
+                    [
+                        589.0,
+                        1502.0
+                    ],
+                    [
+                        546.0,
+                        1502.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,583 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 164,
+    "page_count": 287,
+    "width": 726,
+    "height": 1011,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "CUSTOMER SERVICE DEPARTMENT",
+            "block_bbox": [
+                460,
+                59,
+                676,
+                77
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    460.0,
+                    59.0
+                ],
+                [
+                    675.0,
+                    59.0
+                ],
+                [
+                    675.0,
+                    76.0
+                ],
+                [
+                    460.0,
+                    76.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "STATION ASSISTANT UNIT\nOVERTIME AGREEMENT",
+            "block_bbox": [
+                243,
+                88,
+                529,
+                149
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    243.0,
+                    88.0
+                ],
+                [
+                    529.0,
+                    88.0
+                ],
+                [
+                    529.0,
+                    149.0
+                ],
+                [
+                    243.0,
+                    149.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "All overtime is at the discretion of each station's management and is independent of other stations. If additional overtime is required at a station, the station Management will first solicit overtime from the Assistants at the originating location. If additional overtime is required, at the discretion of station Management, management may solicit overtime assistance from Assistants at other stations.",
+            "block_bbox": [
+                94,
+                170,
+                677,
+                304
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    94.0,
+                    170.0
+                ],
+                [
+                    677.0,
+                    170.0
+                ],
+                [
+                    677.0,
+                    304.0
+                ],
+                [
+                    94.0,
+                    304.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "LETTER #1",
+            "block_bbox": [
+                324,
+                367,
+                446,
+                391
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    324.0,
+                    367.0
+                ],
+                [
+                    446.0,
+                    367.0
+                ],
+                [
+                    446.0,
+                    391.0
+                ],
+                [
+                    324.0,
+                    391.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Guarantee (Standards, Pay Ranges)",
+            "block_bbox": [
+                212,
+                403,
+                558,
+                429
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    216.0,
+                    403.0
+                ],
+                [
+                    557.0,
+                    403.0
+                ],
+                [
+                    557.0,
+                    428.0
+                ],
+                [
+                    216.0,
+                    428.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "This letter will confirm that Local #80 and Michigan Consolidated Gas Company (the Company) have agreed as follows:",
+            "block_bbox": [
+                95,
+                450,
+                674,
+                496
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    95.0,
+                    450.0
+                ],
+                [
+                    674.0,
+                    450.0
+                ],
+                [
+                    674.0,
+                    496.0
+                ],
+                [
+                    95.0,
+                    496.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "If the merger is completed, and if the pay ranges for the Customer Service Employees at Detroit Edison, represented by Local #223 of the Utility Workers of America, increase in consideration of those employees handling universal duties, similar in nature to those currently handled by MichCon Local #80 members in the Customer Service Department, or said pay ranges are otherwise improved upon during the term of the Local #80 contract, the Company agrees to incorporate the same pay ranges in the Local #80 contract and to apply them to the Customer Service Employees as appropriate. At no time will there be any reduction in pay or benefits, except as negotiated by the parties.",
+            "block_bbox": [
+                94,
+                515,
+                676,
+                737
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    94.0,
+                    515.0
+                ],
+                [
+                    676.0,
+                    515.0
+                ],
+                [
+                    676.0,
+                    737.0
+                ],
+                [
+                    94.0,
+                    737.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Six months after the new customer service system is installed for both MichCon and Detroit Edison, if the Customer Service Employees at Detroit Edison, represented by Local #223 of the Utility Workers of America, are subject to different performance standards than those negotiated by Local #80 and the Company, the Detroit Edison standards will be adopted for the Local #80 employees in the Customer Service unit if they are the same or lower than the negotiated MichCon standards.",
+            "block_bbox": [
+                93,
+                755,
+                675,
+                912
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    93.0,
+                    755.0
+                ],
+                [
+                    675.0,
+                    755.0
+                ],
+                [
+                    675.0,
+                    912.0
+                ],
+                [
+                    93.0,
+                    912.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "155",
+            "block_bbox": [
+                370,
+                949,
+                399,
+                966
+            ],
+            "block_id": 8,
+            "block_order": null,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    370.0,
+                    949.0
+                ],
+                [
+                    398.0,
+                    949.0
+                ],
+                [
+                    398.0,
+                    965.0
+                ],
+                [
+                    370.0,
+                    965.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8494972586631775,
+                "coordinate": [
+                    460,
+                    59,
+                    676,
+                    77
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        460.0,
+                        59.0
+                    ],
+                    [
+                        675.0,
+                        59.0
+                    ],
+                    [
+                        675.0,
+                        76.0
+                    ],
+                    [
+                        460.0,
+                        76.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.41524094343185425,
+                "coordinate": [
+                    243,
+                    88,
+                    529,
+                    149
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        243.0,
+                        88.0
+                    ],
+                    [
+                        529.0,
+                        88.0
+                    ],
+                    [
+                        529.0,
+                        149.0
+                    ],
+                    [
+                        243.0,
+                        149.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9069539308547974,
+                "coordinate": [
+                    94,
+                    170,
+                    677,
+                    304
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        94.0,
+                        170.0
+                    ],
+                    [
+                        677.0,
+                        170.0
+                    ],
+                    [
+                        677.0,
+                        304.0
+                    ],
+                    [
+                        94.0,
+                        304.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7917307615280151,
+                "coordinate": [
+                    324,
+                    367,
+                    446,
+                    391
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        324.0,
+                        367.0
+                    ],
+                    [
+                        446.0,
+                        367.0
+                    ],
+                    [
+                        446.0,
+                        391.0
+                    ],
+                    [
+                        324.0,
+                        391.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8338321447372437,
+                "coordinate": [
+                    212,
+                    403,
+                    558,
+                    429
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        216.0,
+                        403.0
+                    ],
+                    [
+                        557.0,
+                        403.0
+                    ],
+                    [
+                        557.0,
+                        428.0
+                    ],
+                    [
+                        216.0,
+                        428.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9202448725700378,
+                "coordinate": [
+                    95,
+                    450,
+                    674,
+                    496
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        95.0,
+                        450.0
+                    ],
+                    [
+                        674.0,
+                        450.0
+                    ],
+                    [
+                        674.0,
+                        496.0
+                    ],
+                    [
+                        95.0,
+                        496.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9572621583938599,
+                "coordinate": [
+                    94,
+                    515,
+                    676,
+                    737
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        94.0,
+                        515.0
+                    ],
+                    [
+                        676.0,
+                        515.0
+                    ],
+                    [
+                        676.0,
+                        737.0
+                    ],
+                    [
+                        94.0,
+                        737.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9603631496429443,
+                "coordinate": [
+                    93,
+                    755,
+                    675,
+                    912
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        93.0,
+                        755.0
+                    ],
+                    [
+                        675.0,
+                        755.0
+                    ],
+                    [
+                        675.0,
+                        912.0
+                    ],
+                    [
+                        93.0,
+                        912.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8055152893066406,
+                "coordinate": [
+                    370,
+                    949,
+                    399,
+                    966
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        370.0,
+                        949.0
+                    ],
+                    [
+                        398.0,
+                        949.0
+                    ],
+                    [
+                        398.0,
+                        965.0
+                    ],
+                    [
+                        370.0,
+                        965.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,246 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 119,
+    "page_count": 287,
+    "width": 675,
+    "height": 1016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "content",
+            "block_content": "CLASSIFICATION RATE\nEffective\n12/01/02\nField Operator Classification:\nGeneral Field Operator (Incumbent)* ..... $24.63\nGeneral Field Operator ..... $24.42\nField Operator ..... $22.94\nField Operator Apprentice ..... $22.34\n*Pay rate for the original fifty-four (54) General Field Operators\n\nDispatch Section:\nGeneral Clerk Dispatcher Operations* ..... $23.73\nClerk Dispatcher Operations – Second Year or More* ..... $23.49\nClerk Dispatcher Operations – First Year* ..... $23.31\nGeneral Clerk Dispatcher Operations ..... $23.14\nClerk Dispatcher Operations – Second Year or More ..... $22.94\nClerk Dispatcher Operations – First Year ..... $22.74\n*Dispatch Section\n\nDistribution Operations:\nDistribution General Fitter ..... $23.73\nDistribution Maintenance Fitter ..... $22.94\nDistribution Maintenance Fitter Apprentice ..... $22.34\nSenior Welder ..... $25.41\nWelder ..... $23.73\nWelder Apprentice ..... $22.94\nSenior Drafter ..... $24.62\nDrafter ..... $23.86\nGeneral Drafting Clerk ..... $23.14\nPrinting Machine Operator ..... $23.14\n\nField Service Operations:\nGeneral Service Technician ..... $23.73\nService Technician ..... $22.94\nService Technician Apprentice ..... $22.34\nAppliance Repair Employee ..... $21.56\nAppliance Delivery Employee ..... $21.90",
+            "block_bbox": [
+                54,
+                49,
+                629,
+                944
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    54.0,
+                    49.0
+                ],
+                [
+                    629.0,
+                    49.0
+                ],
+                [
+                    629.0,
+                    944.0
+                ],
+                [
+                    54.0,
+                    944.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "111",
+            "block_bbox": [
+                331,
+                948,
+                357,
+                963
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    331.0,
+                    948.0
+                ],
+                [
+                    356.0,
+                    948.0
+                ],
+                [
+                    356.0,
+                    962.0
+                ],
+                [
+                    331.0,
+                    962.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8024168610572815,
+                "coordinate": [
+                    489,
+                    50,
+                    637,
+                    68
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        489.0,
+                        50.0
+                    ],
+                    [
+                        636.0,
+                        50.0
+                    ],
+                    [
+                        636.0,
+                        67.0
+                    ],
+                    [
+                        489.0,
+                        67.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.3036673665046692,
+                "coordinate": [
+                    55,
+                    121,
+                    629,
+                    260
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        55.0,
+                        121.0
+                    ],
+                    [
+                        629.0,
+                        121.0
+                    ],
+                    [
+                        629.0,
+                        260.0
+                    ],
+                    [
+                        55.0,
+                        260.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.8166175484657288,
+                "coordinate": [
+                    54,
+                    49,
+                    629,
+                    944
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        54.0,
+                        49.0
+                    ],
+                    [
+                        629.0,
+                        49.0
+                    ],
+                    [
+                        629.0,
+                        944.0
+                    ],
+                    [
+                        54.0,
+                        944.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.32415926456451416,
+                "coordinate": [
+                    54,
+                    292,
+                    628,
+                    478
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        54.0,
+                        292.0
+                    ],
+                    [
+                        628.0,
+                        292.0
+                    ],
+                    [
+                        628.0,
+                        478.0
+                    ],
+                    [
+                        54.0,
+                        478.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7574977874755859,
+                "coordinate": [
+                    331,
+                    948,
+                    357,
+                    963
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        331.0,
+                        948.0
+                    ],
+                    [
+                        356.0,
+                        948.0
+                    ],
+                    [
+                        356.0,
+                        962.0
+                    ],
+                    [
+                        331.0,
+                        962.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

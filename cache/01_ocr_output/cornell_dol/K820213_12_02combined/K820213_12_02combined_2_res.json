@@ -1,0 +1,307 @@
+{
+    "input_path": "cache/cornell_dol/K820213_12_02combined.pdf",
+    "page_index": 2,
+    "page_count": 23,
+    "width": 1587,
+    "height": 1228,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>1999, 2000, 2001, 2002</td></tr><tr><td>AGREEMENT BETWEEN</td></tr><tr><td>NIAGARA COUNTY UNIT</td></tr><tr><td>LOCAL 832, CIVIL SERVICE</td></tr><tr><td>EMPLOYEES ASSOCIATION, INC.</td></tr><tr><td>LOCAL 1000, AFSCME, AFL-CIO</td></tr></table>",
+            "block_bbox": [
+                1017,
+                267,
+                1360,
+                555
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    1017.0,
+                    267.0
+                ],
+                [
+                    1360.0,
+                    267.0
+                ],
+                [
+                    1360.0,
+                    555.0
+                ],
+                [
+                    1017.0,
+                    555.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "AND",
+            "block_bbox": [
+                1162,
+                598,
+                1217,
+                621
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    1162.0,
+                    598.0
+                ],
+                [
+                    1216.0,
+                    598.0
+                ],
+                [
+                    1216.0,
+                    620.0
+                ],
+                [
+                    1162.0,
+                    620.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "THE COUNTY OF NIAGARA,\nNEW YORK",
+            "block_bbox": [
+                1044,
+                667,
+                1332,
+                718
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    1044.0,
+                    667.0
+                ],
+                [
+                    1332.0,
+                    667.0
+                ],
+                [
+                    1332.0,
+                    718.0
+                ],
+                [
+                    1044.0,
+                    718.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.32115522027015686,
+                "coordinate": [
+                    1089,
+                    265,
+                    1291,
+                    289
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        1089.0,
+                        265.0
+                    ],
+                    [
+                        1291.0,
+                        265.0
+                    ],
+                    [
+                        1291.0,
+                        289.0
+                    ],
+                    [
+                        1089.0,
+                        289.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.4126986265182495,
+                "coordinate": [
+                    1017,
+                    267,
+                    1360,
+                    555
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1017.0,
+                        267.0
+                    ],
+                    [
+                        1360.0,
+                        267.0
+                    ],
+                    [
+                        1360.0,
+                        555.0
+                    ],
+                    [
+                        1017.0,
+                        555.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3020740747451782,
+                "coordinate": [
+                    1057,
+                    383,
+                    1319,
+                    408
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        1057.0,
+                        383.0
+                    ],
+                    [
+                        1319.0,
+                        383.0
+                    ],
+                    [
+                        1319.0,
+                        408.0
+                    ],
+                    [
+                        1057.0,
+                        408.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.36743199825286865,
+                "coordinate": [
+                    1025,
+                    525,
+                    1352,
+                    553
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        1025.0,
+                        525.0
+                    ],
+                    [
+                        1352.0,
+                        525.0
+                    ],
+                    [
+                        1352.0,
+                        553.0
+                    ],
+                    [
+                        1025.0,
+                        553.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5857365131378174,
+                "coordinate": [
+                    1162,
+                    598,
+                    1217,
+                    621
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        1162.0,
+                        598.0
+                    ],
+                    [
+                        1216.0,
+                        598.0
+                    ],
+                    [
+                        1216.0,
+                        620.0
+                    ],
+                    [
+                        1162.0,
+                        620.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.35569626092910767,
+                "coordinate": [
+                    1044,
+                    667,
+                    1332,
+                    718
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        1044.0,
+                        667.0
+                    ],
+                    [
+                        1332.0,
+                        667.0
+                    ],
+                    [
+                        1332.0,
+                        718.0
+                    ],
+                    [
+                        1044.0,
+                        718.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

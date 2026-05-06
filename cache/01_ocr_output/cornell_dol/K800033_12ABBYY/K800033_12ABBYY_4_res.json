@@ -1,0 +1,186 @@
+{
+    "input_path": "cache/cornell_dol/K800033_12ABBYY.pdf",
+    "page_index": 4,
+    "page_count": 123,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "PREAMBLE",
+            "block_bbox": [
+                524,
+                176,
+                697,
+                216
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    524.0,
+                    176.0
+                ],
+                [
+                    697.0,
+                    176.0
+                ],
+                [
+                    697.0,
+                    216.0
+                ],
+                [
+                    524.0,
+                    216.0
+                ]
+            ]
+        },
+        {
+            "block_label": "abstract",
+            "block_content": "This collective bargaining agreement entered into this  $ 16^{th} $ day of November, 1999 by the Commonwealth of Massachusetts, acting through the Secretary for Administration and his/her Human Resource Division, hereinafter referred to as the \"EMPLOYER\", or the Commonwealth; and by the Massachusetts Organization of State Engineers and Scientists, hereinafter referred to as \"MOSES\", and has as its purpose the promotion of harmonious relations between MOSES and the Employer.",
+            "block_bbox": [
+                136,
+                248,
+                1087,
+                504
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    136.0,
+                    248.0
+                ],
+                [
+                    1087.0,
+                    248.0
+                ],
+                [
+                    1087.0,
+                    504.0
+                ],
+                [
+                    136.0,
+                    504.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7566981911659241,
+                "coordinate": [
+                    524,
+                    176,
+                    697,
+                    216
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        524.0,
+                        176.0
+                    ],
+                    [
+                        697.0,
+                        176.0
+                    ],
+                    [
+                        697.0,
+                        216.0
+                    ],
+                    [
+                        524.0,
+                        216.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 0,
+                "label": "abstract",
+                "score": 0.6105920076370239,
+                "coordinate": [
+                    136,
+                    248,
+                    1087,
+                    504
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        136.0,
+                        248.0
+                    ],
+                    [
+                        1087.0,
+                        248.0
+                    ],
+                    [
+                        1087.0,
+                        504.0
+                    ],
+                    [
+                        136.0,
+                        504.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 15,
+                "label": "inline_formula",
+                "score": 0.5723816752433777,
+                "coordinate": [
+                    915,
+                    250,
+                    969,
+                    285
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        915.0,
+                        250.0
+                    ],
+                    [
+                        969.0,
+                        250.0
+                    ],
+                    [
+                        969.0,
+                        285.0
+                    ],
+                    [
+                        915.0,
+                        285.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

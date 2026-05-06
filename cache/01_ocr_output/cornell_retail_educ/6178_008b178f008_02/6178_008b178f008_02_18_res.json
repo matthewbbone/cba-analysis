@@ -1,0 +1,827 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b178f008_02.pdf",
+    "page_index": 18,
+    "page_count": 42,
+    "width": 1234,
+    "height": 1603,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "pension, or any aspect of the plan are to be resolved in accordance with the procedures contained in the plan and are not subject to the grievance and arbitration provisions of this Agreement.",
+            "block_bbox": [
+                168,
+                196,
+                1074,
+                324
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    168.0,
+                    196.0
+                ],
+                [
+                    1074.0,
+                    196.0
+                ],
+                [
+                    1074.0,
+                    324.0
+                ],
+                [
+                    168.0,
+                    324.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "8. The Employer will continue to maintain its present TIAA-CREF coverage for those employees covered by this Agreement who are currently included in that plan. No additional employees are to be included.",
+            "block_bbox": [
+                168,
+                343,
+                1061,
+                475
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    168.0,
+                    343.0
+                ],
+                [
+                    1061.0,
+                    343.0
+                ],
+                [
+                    1061.0,
+                    475.0
+                ],
+                [
+                    168.0,
+                    475.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "ARTICLE XVII - HOLIDAYS *",
+            "block_bbox": [
+                168,
+                540,
+                508,
+                570
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    168.0,
+                    540.0
+                ],
+                [
+                    508.0,
+                    540.0
+                ],
+                [
+                    508.0,
+                    570.0
+                ],
+                [
+                    168.0,
+                    570.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. The following days are recognized as paid holidays for all permanent full-time employees:",
+            "block_bbox": [
+                167,
+                589,
+                1023,
+                671
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    167.0,
+                    589.0
+                ],
+                [
+                    1023.0,
+                    589.0
+                ],
+                [
+                    1023.0,
+                    671.0
+                ],
+                [
+                    167.0,
+                    671.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "New Year's Day",
+            "block_bbox": [
+                434,
+                687,
+                618,
+                718
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    434.0,
+                    687.0
+                ],
+                [
+                    618.0,
+                    687.0
+                ],
+                [
+                    618.0,
+                    718.0
+                ],
+                [
+                    434.0,
+                    718.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Independence Day",
+            "block_bbox": [
+                435,
+                737,
+                642,
+                768
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    435.0,
+                    737.0
+                ],
+                [
+                    642.0,
+                    737.0
+                ],
+                [
+                    642.0,
+                    768.0
+                ],
+                [
+                    435.0,
+                    768.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Labor Day",
+            "block_bbox": [
+                400,
+                787,
+                558,
+                819
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    400.0,
+                    787.0
+                ],
+                [
+                    558.0,
+                    787.0
+                ],
+                [
+                    558.0,
+                    819.0
+                ],
+                [
+                    400.0,
+                    819.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Thanksgiving Day",
+            "block_bbox": [
+                434,
+                835,
+                677,
+                871
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    434.0,
+                    835.0
+                ],
+                [
+                    677.0,
+                    835.0
+                ],
+                [
+                    677.0,
+                    871.0
+                ],
+                [
+                    434.0,
+                    871.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Christmas Day",
+            "block_bbox": [
+                435,
+                885,
+                606,
+                916
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    435.0,
+                    885.0
+                ],
+                [
+                    606.0,
+                    885.0
+                ],
+                [
+                    606.0,
+                    916.0
+                ],
+                [
+                    435.0,
+                    916.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. In addition, the Employer will schedule eight (8) more paid holidays for each academic year (September 1 - August 31) for all permanent full-time employees prior to the applicable September 1 or within thirty (30) days of the effective date of this Agreement, whichever occurs later. The schedule may vary for a particular area depending on operational needs but the total number of paid holidays will remain the same.",
+            "block_bbox": [
+                164,
+                935,
+                1093,
+                1216
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    164.0,
+                    935.0
+                ],
+                [
+                    1093.0,
+                    935.0
+                ],
+                [
+                    1093.0,
+                    1216.0
+                ],
+                [
+                    164.0,
+                    1216.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3. In addition to the holidays listed above, Martin Luther King, Jr.'s",
+            "block_bbox": [
+                249,
+                1232,
+                1134,
+                1263
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    249.0,
+                    1232.0
+                ],
+                [
+                    1134.0,
+                    1232.0
+                ],
+                [
+                    1134.0,
+                    1263.0
+                ],
+                [
+                    249.0,
+                    1263.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footnote",
+            "block_content": "* Attached as Appendix B is the holiday schedule for the academic year 1981-82. The schedule also lists Labor Day, 1982 which is a holiday under this agreement.",
+            "block_bbox": [
+                166,
+                1354,
+                1048,
+                1433
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    166.0,
+                    1354.0
+                ],
+                [
+                    1048.0,
+                    1354.0
+                ],
+                [
+                    1048.0,
+                    1433.0
+                ],
+                [
+                    166.0,
+                    1433.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "17",
+            "block_bbox": [
+                611,
+                1501,
+                643,
+                1524
+            ],
+            "block_id": 12,
+            "block_order": null,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    611.0,
+                    1501.0
+                ],
+                [
+                    642.0,
+                    1501.0
+                ],
+                [
+                    642.0,
+                    1523.0
+                ],
+                [
+                    611.0,
+                    1523.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9415585994720459,
+                "coordinate": [
+                    168,
+                    196,
+                    1074,
+                    324
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        168.0,
+                        196.0
+                    ],
+                    [
+                        1074.0,
+                        196.0
+                    ],
+                    [
+                        1074.0,
+                        324.0
+                    ],
+                    [
+                        168.0,
+                        324.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9360753297805786,
+                "coordinate": [
+                    168,
+                    343,
+                    1061,
+                    475
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        168.0,
+                        343.0
+                    ],
+                    [
+                        1061.0,
+                        343.0
+                    ],
+                    [
+                        1061.0,
+                        475.0
+                    ],
+                    [
+                        168.0,
+                        475.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5797945261001587,
+                "coordinate": [
+                    168,
+                    540,
+                    508,
+                    570
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        168.0,
+                        540.0
+                    ],
+                    [
+                        508.0,
+                        540.0
+                    ],
+                    [
+                        508.0,
+                        570.0
+                    ],
+                    [
+                        168.0,
+                        570.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9161592721939087,
+                "coordinate": [
+                    167,
+                    589,
+                    1023,
+                    671
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        167.0,
+                        589.0
+                    ],
+                    [
+                        1023.0,
+                        589.0
+                    ],
+                    [
+                        1023.0,
+                        671.0
+                    ],
+                    [
+                        167.0,
+                        671.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8007616996765137,
+                "coordinate": [
+                    434,
+                    687,
+                    618,
+                    718
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        434.0,
+                        687.0
+                    ],
+                    [
+                        618.0,
+                        687.0
+                    ],
+                    [
+                        618.0,
+                        718.0
+                    ],
+                    [
+                        434.0,
+                        718.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7884266972541809,
+                "coordinate": [
+                    435,
+                    737,
+                    642,
+                    768
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        435.0,
+                        737.0
+                    ],
+                    [
+                        642.0,
+                        737.0
+                    ],
+                    [
+                        642.0,
+                        768.0
+                    ],
+                    [
+                        435.0,
+                        768.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.729783296585083,
+                "coordinate": [
+                    400,
+                    787,
+                    558,
+                    819
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        400.0,
+                        787.0
+                    ],
+                    [
+                        558.0,
+                        787.0
+                    ],
+                    [
+                        558.0,
+                        819.0
+                    ],
+                    [
+                        400.0,
+                        819.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7459022402763367,
+                "coordinate": [
+                    434,
+                    835,
+                    677,
+                    871
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        434.0,
+                        835.0
+                    ],
+                    [
+                        677.0,
+                        835.0
+                    ],
+                    [
+                        677.0,
+                        871.0
+                    ],
+                    [
+                        434.0,
+                        871.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.773305356502533,
+                "coordinate": [
+                    435,
+                    885,
+                    606,
+                    916
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        435.0,
+                        885.0
+                    ],
+                    [
+                        606.0,
+                        885.0
+                    ],
+                    [
+                        606.0,
+                        916.0
+                    ],
+                    [
+                        435.0,
+                        916.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9509557485580444,
+                "coordinate": [
+                    164,
+                    935,
+                    1093,
+                    1216
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        164.0,
+                        935.0
+                    ],
+                    [
+                        1093.0,
+                        935.0
+                    ],
+                    [
+                        1093.0,
+                        1216.0
+                    ],
+                    [
+                        164.0,
+                        1216.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8400905132293701,
+                "coordinate": [
+                    249,
+                    1232,
+                    1134,
+                    1263
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        249.0,
+                        1232.0
+                    ],
+                    [
+                        1134.0,
+                        1232.0
+                    ],
+                    [
+                        1134.0,
+                        1263.0
+                    ],
+                    [
+                        249.0,
+                        1263.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 10,
+                "label": "footnote",
+                "score": 0.9442387819290161,
+                "coordinate": [
+                    166,
+                    1354,
+                    1048,
+                    1433
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        166.0,
+                        1354.0
+                    ],
+                    [
+                        1048.0,
+                        1354.0
+                    ],
+                    [
+                        1048.0,
+                        1433.0
+                    ],
+                    [
+                        166.0,
+                        1433.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7023888230323792,
+                "coordinate": [
+                    611,
+                    1501,
+                    643,
+                    1524
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        611.0,
+                        1501.0
+                    ],
+                    [
+                        642.0,
+                        1501.0
+                    ],
+                    [
+                        642.0,
+                        1523.0
+                    ],
+                    [
+                        611.0,
+                        1523.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,705 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 424,
+    "page_count": 439,
+    "width": 1233,
+    "height": 1585,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Manufacturing and National Units",
+            "block_bbox": [
+                322,
+                103,
+                554,
+                123
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    103.0
+                ],
+                [
+                    553.0,
+                    103.0
+                ],
+                [
+                    553.0,
+                    122.0
+                ],
+                [
+                    322.0,
+                    122.0
+                ]
+            ]
+        },
+        {
+            "block_label": "doc_title",
+            "block_content": "1989 National Agreement Item",
+            "block_bbox": [
+                666,
+                137,
+                878,
+                194
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    666.0,
+                    170.0
+                ],
+                [
+                    877.0,
+                    170.0
+                ],
+                [
+                    877.0,
+                    193.0
+                ],
+                [
+                    666.0,
+                    193.0
+                ]
+            ]
+        },
+        {
+            "block_label": "doc_title",
+            "block_content": "AGENCY TEMPORARIES",
+            "block_bbox": [
+                507,
+                215,
+                693,
+                238
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    507.0,
+                    215.0
+                ],
+                [
+                    693.0,
+                    215.0
+                ],
+                [
+                    693.0,
+                    238.0
+                ],
+                [
+                    507.0,
+                    238.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "May 30, 1989",
+            "block_bbox": [
+                691,
+                257,
+                792,
+                279
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    691.0,
+                    257.0
+                ],
+                [
+                    791.0,
+                    257.0
+                ],
+                [
+                    791.0,
+                    278.0
+                ],
+                [
+                    691.0,
+                    278.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Mr. J. E. Irvine\nVice President - CWA\nCommunications and Technologies\nCommunications Workers of America\nTwo Executive Square Drive\nSomerset, NJ 08873",
+            "block_bbox": [
+                321,
+                309,
+                583,
+                417
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    309.0
+                ],
+                [
+                    583.0,
+                    309.0
+                ],
+                [
+                    583.0,
+                    417.0
+                ],
+                [
+                    321.0,
+                    417.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Mr. A. Perry, Jr.\nDirector - Telecommunications Department\nInternational Brotherhood of Electrical Workers\n1125 15th Street, NW\nWashington, DC 20005",
+            "block_bbox": [
+                321,
+                448,
+                646,
+                538
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    448.0
+                ],
+                [
+                    646.0,
+                    448.0
+                ],
+                [
+                    646.0,
+                    538.0
+                ],
+                [
+                    321.0,
+                    538.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Jim, Art,",
+            "block_bbox": [
+                322,
+                567,
+                384,
+                588
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    321.9999694824219,
+                    566.9999389648438
+                ],
+                [
+                    382.9999694824219,
+                    566.9999389648438
+                ],
+                [
+                    382.9999694824219,
+                    586.9999389648438
+                ],
+                [
+                    321.9999694824219,
+                    586.9999389648438
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "This is to confirm our understanding, reached during 1989 collective bargaining, concerning Agency Temporaries. It is understood that Agency Temporaries who hold a position normally filled by a bargaining unit employee will be removed from the roll at the end of three months unless there is agreement otherwise between the Union and the Company.",
+            "block_bbox": [
+                321,
+                617,
+                877,
+                710
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    617.0
+                ],
+                [
+                    877.0,
+                    617.0
+                ],
+                [
+                    877.0,
+                    710.0
+                ],
+                [
+                    321.0,
+                    710.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Sincerely,",
+            "block_bbox": [
+                559,
+                721,
+                632,
+                744
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    559.0,
+                    721.0
+                ],
+                [
+                    631.0,
+                    721.0
+                ],
+                [
+                    631.0,
+                    743.0
+                ],
+                [
+                    559.0,
+                    743.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "By: /s/ Charles S. Brumfield",
+            "block_bbox": [
+                558,
+                790,
+                793,
+                813
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    558.0,
+                    790.0
+                ],
+                [
+                    793.0,
+                    790.0
+                ],
+                [
+                    793.0,
+                    813.0
+                ],
+                [
+                    558.0,
+                    813.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "416",
+            "block_bbox": [
+                322,
+                895,
+                353,
+                915
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    895.0
+                ],
+                [
+                    352.0,
+                    895.0
+                ],
+                [
+                    352.0,
+                    914.0
+                ],
+                [
+                    322.0,
+                    914.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7980012893676758,
+                "coordinate": [
+                    322,
+                    103,
+                    554,
+                    123
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        322.0,
+                        103.0
+                    ],
+                    [
+                        553.0,
+                        103.0
+                    ],
+                    [
+                        553.0,
+                        122.0
+                    ],
+                    [
+                        322.0,
+                        122.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.35634875297546387,
+                "coordinate": [
+                    666,
+                    137,
+                    878,
+                    194
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        666.0,
+                        170.0
+                    ],
+                    [
+                        877.0,
+                        170.0
+                    ],
+                    [
+                        877.0,
+                        193.0
+                    ],
+                    [
+                        666.0,
+                        193.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.5666307806968689,
+                "coordinate": [
+                    507,
+                    215,
+                    693,
+                    238
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        507.0,
+                        215.0
+                    ],
+                    [
+                        693.0,
+                        215.0
+                    ],
+                    [
+                        693.0,
+                        238.0
+                    ],
+                    [
+                        507.0,
+                        238.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.679887056350708,
+                "coordinate": [
+                    691,
+                    257,
+                    792,
+                    279
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        691.0,
+                        257.0
+                    ],
+                    [
+                        791.0,
+                        257.0
+                    ],
+                    [
+                        791.0,
+                        278.0
+                    ],
+                    [
+                        691.0,
+                        278.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.769647479057312,
+                "coordinate": [
+                    321,
+                    309,
+                    583,
+                    417
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        321.0,
+                        309.0
+                    ],
+                    [
+                        583.0,
+                        309.0
+                    ],
+                    [
+                        583.0,
+                        417.0
+                    ],
+                    [
+                        321.0,
+                        417.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8061573505401611,
+                "coordinate": [
+                    321,
+                    448,
+                    646,
+                    538
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        321.0,
+                        448.0
+                    ],
+                    [
+                        646.0,
+                        448.0
+                    ],
+                    [
+                        646.0,
+                        538.0
+                    ],
+                    [
+                        321.0,
+                        538.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5627160668373108,
+                "coordinate": [
+                    322,
+                    567,
+                    384,
+                    588
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        321.9999694824219,
+                        566.9999389648438
+                    ],
+                    [
+                        382.9999694824219,
+                        566.9999389648438
+                    ],
+                    [
+                        382.9999694824219,
+                        586.9999389648438
+                    ],
+                    [
+                        321.9999694824219,
+                        586.9999389648438
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7366467118263245,
+                "coordinate": [
+                    321,
+                    617,
+                    877,
+                    710
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        321.0,
+                        617.0
+                    ],
+                    [
+                        877.0,
+                        617.0
+                    ],
+                    [
+                        877.0,
+                        710.0
+                    ],
+                    [
+                        321.0,
+                        710.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6694115996360779,
+                "coordinate": [
+                    559,
+                    721,
+                    632,
+                    744
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        559.0,
+                        721.0
+                    ],
+                    [
+                        631.0,
+                        721.0
+                    ],
+                    [
+                        631.0,
+                        743.0
+                    ],
+                    [
+                        559.0,
+                        743.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.43176960945129395,
+                "coordinate": [
+                    558,
+                    790,
+                    793,
+                    813
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        558.0,
+                        790.0
+                    ],
+                    [
+                        793.0,
+                        790.0
+                    ],
+                    [
+                        793.0,
+                        813.0
+                    ],
+                    [
+                        558.0,
+                        813.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6968429088592529,
+                "coordinate": [
+                    322,
+                    895,
+                    353,
+                    915
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        322.0,
+                        895.0
+                    ],
+                    [
+                        352.0,
+                        895.0
+                    ],
+                    [
+                        352.0,
+                        914.0
+                    ],
+                    [
+                        322.0,
+                        914.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

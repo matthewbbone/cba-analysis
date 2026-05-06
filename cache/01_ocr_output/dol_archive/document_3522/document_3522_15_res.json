@@ -1,0 +1,339 @@
+{
+    "input_path": "cache/dol_archive/document_3522.pdf",
+    "page_index": 15,
+    "page_count": 62,
+    "width": 1223,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "5.7 - Administrative Searches by the Agency",
+            "block_bbox": [
+                135,
+                183,
+                652,
+                213
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    135.0,
+                    183.0
+                ],
+                [
+                    652.0,
+                    183.0
+                ],
+                [
+                    652.0,
+                    213.0
+                ],
+                [
+                    135.0,
+                    213.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. Any search and/or seizure of Employer-owned, private or personal property, issued, or controlled equipment and/or facilities that is used or occupied by bargaining unit Employees during the course of their duties (i.e., personal lockers, tool boxes, desks, etc.), and which is done in conjunction with an investigation, will normally be conducted in the presence of the Employee, and in accordance with applicable Federal, state, or local law and regulation, depending on which entity has jurisdictional control over the equipment or facility subject to the administrative searches and/or seizures, and keeping in mind that the Employee is a Federal civil servant and has all the protection guaranteed to US citizens under the Constitution in regards to criminal matters.",
+            "block_bbox": [
+                135,
+                239,
+                1076,
+                492
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    135.0,
+                    239.0
+                ],
+                [
+                    1076.0,
+                    239.0
+                ],
+                [
+                    1076.0,
+                    492.0
+                ],
+                [
+                    135.0,
+                    492.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. In the case that the Employee is unable to be present, a Union representative will be requested to be present provided that the supplying of such representative by the Union shall not unduly delay the search or impede the purpose for which the search is conducted.",
+            "block_bbox": [
+                134,
+                516,
+                1082,
+                628
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    134.0,
+                    516.0
+                ],
+                [
+                    1082.0,
+                    516.0
+                ],
+                [
+                    1082.0,
+                    628.0
+                ],
+                [
+                    134.0,
+                    628.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "Agreement Between the Adjutant General of Michigan and the Laborers International Union of North America (LIUNA) September 2015",
+            "block_bbox": [
+                142,
+                1457,
+                935,
+                1495
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    142.0,
+                    1457.0
+                ],
+                [
+                    935.0,
+                    1457.0
+                ],
+                [
+                    935.0,
+                    1495.0
+                ],
+                [
+                    142.0,
+                    1495.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "16",
+            "block_bbox": [
+                1049,
+                1460,
+                1074,
+                1481
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    1049.0,
+                    1460.0
+                ],
+                [
+                    1073.0,
+                    1460.0
+                ],
+                [
+                    1073.0,
+                    1480.0
+                ],
+                [
+                    1049.0,
+                    1480.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8811303973197937,
+                "coordinate": [
+                    135,
+                    183,
+                    652,
+                    213
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        135.0,
+                        183.0
+                    ],
+                    [
+                        652.0,
+                        183.0
+                    ],
+                    [
+                        652.0,
+                        213.0
+                    ],
+                    [
+                        135.0,
+                        213.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9611290097236633,
+                "coordinate": [
+                    135,
+                    239,
+                    1076,
+                    492
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        135.0,
+                        239.0
+                    ],
+                    [
+                        1076.0,
+                        239.0
+                    ],
+                    [
+                        1076.0,
+                        492.0
+                    ],
+                    [
+                        135.0,
+                        492.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9444683194160461,
+                "coordinate": [
+                    134,
+                    516,
+                    1082,
+                    628
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        134.0,
+                        516.0
+                    ],
+                    [
+                        1082.0,
+                        516.0
+                    ],
+                    [
+                        1082.0,
+                        628.0
+                    ],
+                    [
+                        134.0,
+                        628.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8676186203956604,
+                "coordinate": [
+                    142,
+                    1457,
+                    935,
+                    1495
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        142.0,
+                        1457.0
+                    ],
+                    [
+                        935.0,
+                        1457.0
+                    ],
+                    [
+                        935.0,
+                        1495.0
+                    ],
+                    [
+                        142.0,
+                        1495.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7529191374778748,
+                "coordinate": [
+                    1049,
+                    1460,
+                    1074,
+                    1481
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        1049.0,
+                        1460.0
+                    ],
+                    [
+                        1073.0,
+                        1460.0
+                    ],
+                    [
+                        1073.0,
+                        1480.0
+                    ],
+                    [
+                        1049.0,
+                        1480.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

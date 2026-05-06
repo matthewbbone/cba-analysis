@@ -1,0 +1,186 @@
+{
+    "input_path": "cache/cornell_dol/4208Abbyy.pdf",
+    "page_index": 88,
+    "page_count": 128,
+    "width": 765,
+    "height": 1204,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "content",
+            "block_content": "c. Immunizing agents, except that allergy serum (antigen) is covered under the prescription drug card program with a physician's written prescription.\n\nf. All medications to treat sexual dysfunction, unless the patient is being created for a diagnosed medical condition.\n\ng. Fertility agents, unless approved by the service representative.\n\nh. Obesity drugs.\n\ni. Drugs dispensed during an inpatient admission by a hospital, skilled nursing facility, sanatorium, or other facility.\n\nj. Experimental drugs or drugs used for investigational purposes.\n\nk. Drugs that are not medically necessary for the treatment of an illness, injury, or other covered condition, including vitamins, except as specifically provided by the Plan.\n\nl. Infusion therapy drugs except as described in the home health care benefit.\n\nm. Delivery or handling charges.\n\nn. Any service or supply otherwise excluded by the Plan.\n\nTraditional Medical Plan Exclusions\n\nThese charges are deducted from the eligible person's expenses before the benefits of this Plan are determined. The Plan does not pay for charges for or related to:\n\n1. Any accident or illness covered by a workers' compensation law.\n\n2. Services or supplies not recommended and approved by a physician or other covered health care professional or provided before the person becomes covered under this Plan.\n\n3. Services or supplies that the Plan's service representative determines are not medically necessary for treatment of an accidental injury, illness, or other condition covered under the Plan. This includes routine physical examinations, immunizations, or other preventive services and supplies, except as specifically provided by the Plan.\n\nInpatient hospital care (including physician visits while hospitalized) is not considered medically necessary when the care can be provided safely in an outpatient setting, such as a hospital outpatient department, physician office, or an ambulatory surgical facility, without adversely affecting the patient's physical condition.\n\nExamples of care that generally should be provided in an outpatient setting include observation and/or diagnostic studies, surgery that can be performed on a same-day basis, and psychiatric care primarily aimed at controlling or changing the patient's environment.\n\n4. Amounts exceeding usual and customary charges.\n\n5. Skilled nursing facility services when the services usually are not provided by such facilities or when the services are not expected to lessen the disability and enable the person to live outside the facility. However, skilled nursing facility services are covered for the terminal patient when the illness has reached a point of predictable end.\n\n6. Services or supplies related to cosmetic surgery, except as specifically provided.",
+            "block_bbox": [
+                83,
+                70,
+                731,
+                1148
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    83.0,
+                    70.0
+                ],
+                [
+                    731.0,
+                    70.0
+                ],
+                [
+                    731.0,
+                    1148.0
+                ],
+                [
+                    83.0,
+                    1148.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "A-35",
+            "block_bbox": [
+                365,
+                1162,
+                398,
+                1179
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    365.0,
+                    1162.0
+                ],
+                [
+                    397.0,
+                    1162.0
+                ],
+                [
+                    397.0,
+                    1178.0
+                ],
+                [
+                    365.0,
+                    1178.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.8569352030754089,
+                "coordinate": [
+                    83,
+                    70,
+                    731,
+                    1148
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        83.0,
+                        70.0
+                    ],
+                    [
+                        731.0,
+                        70.0
+                    ],
+                    [
+                        731.0,
+                        1148.0
+                    ],
+                    [
+                        83.0,
+                        1148.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7613521814346313,
+                "coordinate": [
+                    365,
+                    1162,
+                    398,
+                    1179
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        365.0,
+                        1162.0
+                    ],
+                    [
+                        397.0,
+                        1162.0
+                    ],
+                    [
+                        397.0,
+                        1178.0
+                    ],
+                    [
+                        365.0,
+                        1178.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 2,
+                "label": "aside_text",
+                "score": 0.7415474653244019,
+                "coordinate": [
+                    714,
+                    72,
+                    734,
+                    1144
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        714.0,
+                        72.0
+                    ],
+                    [
+                        733.0,
+                        72.0
+                    ],
+                    [
+                        733.0,
+                        1143.0
+                    ],
+                    [
+                        714.0,
+                        1143.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

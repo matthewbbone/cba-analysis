@@ -1,0 +1,1681 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b175f010_03.pdf",
+    "page_index": 1,
+    "page_count": 10,
+    "width": 577,
+    "height": 2520,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "doc_title",
+            "block_content": "ARTICLE IV",
+            "block_bbox": [
+                243,
+                56,
+                344,
+                73
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    243.0,
+                    56.0
+                ],
+                [
+                    343.0,
+                    56.0
+                ],
+                [
+                    343.0,
+                    72.0
+                ],
+                [
+                    243.0,
+                    72.0
+                ]
+            ]
+        },
+        {
+            "block_label": "doc_title",
+            "block_content": "MEAT DEPARTMENT EMPLOYEES",
+            "block_bbox": [
+                152,
+                77,
+                435,
+                94
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    151.99996948242188,
+                    76.99999237060547
+                ],
+                [
+                    433.9999084472656,
+                    76.99999237060547
+                ],
+                [
+                    433.9999084472656,
+                    92.99999237060547
+                ],
+                [
+                    151.99996948242188,
+                    92.99999237060547
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A. Each shop shall have a Head meat Cutter and he shall be a Journeyman Meat Cutter and he may perform all the duties of, and shall direct the work, movements and operations of the Meat Department employees.",
+            "block_bbox": [
+                24,
+                99,
+                560,
+                157
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    24.0,
+                    99.0
+                ],
+                [
+                    560.0,
+                    99.0
+                ],
+                [
+                    560.0,
+                    157.0
+                ],
+                [
+                    24.0,
+                    157.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "B. A Journeyman is one who has qualified as a skilled Meat Cutter. His duties shall include the receiving, cutting, grinding, slicing, preparing, processing, sealing, wrapping, bagging, pricing, fabricating and serving of all items in the Meat Department and the performance of all work incidental thereto.",
+            "block_bbox": [
+                24,
+                161,
+                560,
+                251
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    24.0,
+                    161.0
+                ],
+                [
+                    560.0,
+                    161.0
+                ],
+                [
+                    560.0,
+                    251.0
+                ],
+                [
+                    24.0,
+                    251.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "C. Any Apprentice must be eighteen (18) years of age or older, learning all details and developing skills for performing the duties of a Journeyman Meat Cutter. The Employer agrees to assign each Apprentice to various jobs in order to give him the opportunity to qualify as a Journeyman. The apprenticeship training period shall be for a two-year period.",
+            "block_bbox": [
+                23,
+                256,
+                560,
+                349
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    23.0,
+                    256.0
+                ],
+                [
+                    560.0,
+                    256.0
+                ],
+                [
+                    560.0,
+                    349.0
+                ],
+                [
+                    23.0,
+                    349.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "In cases where the Apprentice has not qualified as a Journeyman at the end of the apprenticeship training period in the judgement of the Employer, such apprenticeship period may be extended an additional six (6) months and the Apprentice shall be paid at the Top Apprentice rate during this period.",
+            "block_bbox": [
+                23,
+                353,
+                559,
+                427
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    23.0,
+                    353.0
+                ],
+                [
+                    559.0,
+                    353.0
+                ],
+                [
+                    559.0,
+                    427.0
+                ],
+                [
+                    23.0,
+                    427.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Nothing in this Section C will prevent the Employer from advancing an Apprentice to a Journeyman before the end of the apprenticeship training period if, in the judgement of the Employer, the Apprentice is qualified.",
+            "block_bbox": [
+                23,
+                432,
+                558,
+                488
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    23.0,
+                    432.0
+                ],
+                [
+                    558.0,
+                    432.0
+                ],
+                [
+                    558.0,
+                    488.0
+                ],
+                [
+                    23.0,
+                    488.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "D. Employees engaged in weighing, wrapping, pricing and displaying shall be eighteen (18) years of age or over. Wrappers may be employed to wrap, scale, price, label, display, board, tray, bag poultry and other items, stock meats and slice cheese, bacon and delicatessen items with slicing machines, and to clean work tables and any equipment that they work with, including removable racks and display cases, glass, and to disassemble and clean refrigerated conveyor troughs, but excluding cleaning electric saws, grinders, tenderizers and patty machines. Wrappers shall not be permitted to cut any red meat, pork, lamb, poultry, rabbits, or fish.",
+            "block_bbox": [
+                22,
+                488,
+                556,
+                657
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    22.0,
+                    488.0
+                ],
+                [
+                    556.0,
+                    488.0
+                ],
+                [
+                    556.0,
+                    657.0
+                ],
+                [
+                    22.0,
+                    657.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Employees in the Weighers and Wrappers classification will have the opportunity to transfer without loss of seniority or reduction in straight-time hourly wage rate to the Apprentice classification when a vacancy exists, provided they have the skills, abilities, and physical capacity to perform the work. Employees in the Weighers and Wrappers classifications wishing to make application for such openings shall do so in writing with copies to both the Employer's designated official and the Union.",
+            "block_bbox": [
+                22,
+                661,
+                557,
+                790
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    22.0,
+                    661.0
+                ],
+                [
+                    557.0,
+                    661.0
+                ],
+                [
+                    557.0,
+                    790.0
+                ],
+                [
+                    22.0,
+                    790.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "When a Wrapper is assigned to the Journeyman or Apprentice classification, the Wrapper will retain seniority in the Wrapper classification for a period of one (1) year. After one (1) year, if the former Wrapper continues to be assigned to the Apprentice or Journeyman classification, his or her seniority date will be the date assigned as an Apprentice or Journeyman. If the former Wrapper is to be laid off, the former Wrapper may elect to be reassigned to the Wrapper classification rather than accept a layoff. If the former Wrapper elects this option, his or her seniority date shall be the date originally assigned as a Wrapper.",
+            "block_bbox": [
+                20,
+                794,
+                556,
+                958
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    20.0,
+                    794.0
+                ],
+                [
+                    556.0,
+                    794.0
+                ],
+                [
+                    556.0,
+                    958.0
+                ],
+                [
+                    20.0,
+                    958.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "If the former Wrapper has returned to the Wrapper classification and is recalled to the Journeyman or Apprentice classification, the Wrapper may accept the recall or remain in the Wrapper classification without further recall rights to the Journeyman or Apprentice classifications.",
+            "block_bbox": [
+                19,
+                961,
+                554,
+                1036
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    19.0,
+                    961.0
+                ],
+                [
+                    554.0,
+                    961.0
+                ],
+                [
+                    554.0,
+                    1036.0
+                ],
+                [
+                    19.0,
+                    1036.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A Wrapper with one (1) year of full-time service with the Employer shall receive six (6) months credit upon entrance to apprentice training.",
+            "block_bbox": [
+                19,
+                1040,
+                554,
+                1076
+            ],
+            "block_id": 11,
+            "block_order": 12,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    19.0,
+                    1040.0
+                ],
+                [
+                    554.0,
+                    1040.0
+                ],
+                [
+                    554.0,
+                    1076.0
+                ],
+                [
+                    19.0,
+                    1076.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "E. Employees of the Seafood Department shall perform work in that department only. Seafood sales to be counted as a part of Meat Department sales. The senior Seafood Clerk by store shall have the right to the first forty (40) hour schedule available in their department.",
+            "block_bbox": [
+                18,
+                1081,
+                553,
+                1155
+            ],
+            "block_id": 12,
+            "block_order": 13,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    18.0,
+                    1081.0
+                ],
+                [
+                    553.0,
+                    1081.0
+                ],
+                [
+                    553.0,
+                    1155.0
+                ],
+                [
+                    18.0,
+                    1155.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "F. The Employer and the Union agree that any qualified employee eighteen (18) years or older, regardless of age, race, creed, color, sex or national origin, is eligible to work, and will be given an equal opportunity to work in any job classification covered by this Contract.",
+            "block_bbox": [
+                19,
+                1160,
+                553,
+                1234
+            ],
+            "block_id": 13,
+            "block_order": 14,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    19.0,
+                    1160.0
+                ],
+                [
+                    553.0,
+                    1160.0
+                ],
+                [
+                    553.0,
+                    1234.0
+                ],
+                [
+                    19.0,
+                    1234.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "G. Head Meat Cutters shall be allowed to voluntarily return to the Journeyman classification without loss of seniority upon the giving of thirty (30) days' written notice to the Company. The return of the Head Meat Cutter to the Journeyman classification shall be conditioned upon the Employer having a qualified Head Meat Cutter replacement readily available to assume the responsibilities of the Head Meat Cutter desiring to return to the Journeyman classification.",
+            "block_bbox": [
+                18,
+                1238,
+                553,
+                1367
+            ],
+            "block_id": 14,
+            "block_order": 15,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    18.0,
+                    1238.0
+                ],
+                [
+                    553.0,
+                    1238.0
+                ],
+                [
+                    553.0,
+                    1367.0
+                ],
+                [
+                    18.0,
+                    1367.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE V",
+            "block_bbox": [
+                242,
+                1427,
+                336,
+                1448
+            ],
+            "block_id": 15,
+            "block_order": 16,
+            "group_id": 15,
+            "block_polygon_points": [
+                [
+                    242.0,
+                    1427.0
+                ],
+                [
+                    335.0,
+                    1427.0
+                ],
+                [
+                    335.0,
+                    1447.0
+                ],
+                [
+                    242.0,
+                    1447.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "WAGES",
+            "block_bbox": [
+                256,
+                1449,
+                321,
+                1466
+            ],
+            "block_id": 16,
+            "block_order": 17,
+            "group_id": 16,
+            "block_polygon_points": [
+                [
+                    256.0,
+                    1449.0
+                ],
+                [
+                    320.0,
+                    1449.0
+                ],
+                [
+                    320.0,
+                    1465.0
+                ],
+                [
+                    256.0,
+                    1465.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A. The scale of wages and job classifications in Appendix A is attached hereto and made a part of this Contract.",
+            "block_bbox": [
+                20,
+                1471,
+                554,
+                1506
+            ],
+            "block_id": 17,
+            "block_order": 18,
+            "group_id": 17,
+            "block_polygon_points": [
+                [
+                    20.0,
+                    1471.0
+                ],
+                [
+                    554.0,
+                    1471.0
+                ],
+                [
+                    554.0,
+                    1506.0
+                ],
+                [
+                    20.0,
+                    1506.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "B. Employer agrees to continue the past practice of giving credit for previous proven comparable experience in the retail food industry to any full-time employee. Such experience in order to be considered must be within three (3) years and immediately prior to date of hire, excluding Military Service, and must be formally specified on application for employment. Proof of previous comparable experience must be furnished by the employee or determined by the Employer within thirty (30) days after hire, in order to have such experience considered. Any rate increase will be placed into effect when the experience has been verified and will become effective as of the date of verification.",
+            "block_bbox": [
+                18,
+                1511,
+                555,
+                1695
+            ],
+            "block_id": 18,
+            "block_order": 19,
+            "group_id": 18,
+            "block_polygon_points": [
+                [
+                    18.0,
+                    1511.0
+                ],
+                [
+                    555.0,
+                    1511.0
+                ],
+                [
+                    555.0,
+                    1695.0
+                ],
+                [
+                    18.0,
+                    1695.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "C. Newly employed employees shall be classified by the Union as to their qualification for Journeymen and Apprentices.",
+            "block_bbox": [
+                18,
+                1698,
+                554,
+                1736
+            ],
+            "block_id": 19,
+            "block_order": 20,
+            "group_id": 19,
+            "block_polygon_points": [
+                [
+                    18.0,
+                    1698.0
+                ],
+                [
+                    554.0,
+                    1698.0
+                ],
+                [
+                    554.0,
+                    1736.0
+                ],
+                [
+                    18.0,
+                    1736.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "D. When a Journeyman Meat Cutter is designated by the Employer to relieve the Head Meat Cutter for a period of more than two (2) consecutive scheduled working days, said Journeyman shall receive the rate specified in this Contract for the Head Meat Cutter for the period of time actually worked. The regular weekly scheduled days off of the Head Meat Cutter will not be utilized to compute the time worked in that classification by any Journeyman.",
+            "block_bbox": [
+                17,
+                1741,
+                554,
+                1868
+            ],
+            "block_id": 20,
+            "block_order": 21,
+            "group_id": 20,
+            "block_polygon_points": [
+                [
+                    17.0,
+                    1741.0
+                ],
+                [
+                    554.0,
+                    1741.0
+                ],
+                [
+                    554.0,
+                    1868.0
+                ],
+                [
+                    17.0,
+                    1868.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE VI",
+            "block_bbox": [
+                236,
+                1922,
+                338,
+                1937
+            ],
+            "block_id": 21,
+            "block_order": 22,
+            "group_id": 21,
+            "block_polygon_points": [
+                [
+                    236.0,
+                    1922.0
+                ],
+                [
+                    337.0,
+                    1922.0
+                ],
+                [
+                    337.0,
+                    1936.0
+                ],
+                [
+                    236.0,
+                    1936.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "HOURS OF WORK",
+            "block_bbox": [
+                213,
+                1942,
+                360,
+                1959
+            ],
+            "block_id": 22,
+            "block_order": 23,
+            "group_id": 22,
+            "block_polygon_points": [
+                [
+                    213.0,
+                    1942.0
+                ],
+                [
+                    359.0,
+                    1942.0
+                ],
+                [
+                    359.0,
+                    1958.0
+                ],
+                [
+                    213.0,
+                    1958.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A. Forty (40) hours of work, to be worked in five (5) days shall constitute a full workweek. Full-time employees who are scheduled for forty (40) hours in a given week shall be guaranteed forty (40) hours, or pay in lieu thereof, for that week, except that such guarantee shall not apply on any day in which the employee is tardy, absent, or has been disciplined for just cause. It is further understood that this guarantee will not apply when time off is granted by mutual agreement between the Employer and the employee or in cases of emergency as defined in Paragraph K-2. Employees shall be granted two (2) fifteen-minute rest periods each day; one rest period to be taken during the shift worked prior to lunch, and one rest period to be taken during the shift worked after the lunch period. These rest periods are to be considered as time worked. Lunch periods shall not exceed one (1) hour. When an employee is required to work more than ten (10) hours in any one workday, the employee shall be granted an additional fifteen minute rest period to be taken after the tenth (10th) hour worked.",
+            "block_bbox": [
+                15,
+                1964,
+                554,
+                2238
+            ],
+            "block_id": 23,
+            "block_order": 24,
+            "group_id": 23,
+            "block_polygon_points": [
+                [
+                    15.0,
+                    1964.0
+                ],
+                [
+                    554.0,
+                    1964.0
+                ],
+                [
+                    554.0,
+                    2238.0
+                ],
+                [
+                    15.0,
+                    2238.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "During the term of this Agreement, the Employer will not simultaneously reduce the scheduled working hours of its regular full-time employees across the board and without regard to seniority. Whenever a reduction in the working force is necessitated, the Employer will reduce the employee or employees affected, pursuant to Article 10 (Seniority). Schedules will be arranged to provide senior full-time employees with as many full forty (40) hour-per-week schedules as is consistent with the requirements of the business with the understanding that hours will not be added unnecessarily to accomplish this objective.",
+            "block_bbox": [
+                14,
+                2242,
+                553,
+                2406
+            ],
+            "block_id": 24,
+            "block_order": 25,
+            "group_id": 24,
+            "block_polygon_points": [
+                [
+                    14.0,
+                    2242.0
+                ],
+                [
+                    553.0,
+                    2242.0
+                ],
+                [
+                    553.0,
+                    2406.0
+                ],
+                [
+                    14.0,
+                    2406.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "B. All hours worked in excess of forty (40) hours in any workweek shall be overtime. Minimum rate of pay shall be time and one-half (1½) the employee's basic rate of pay.",
+            "block_bbox": [
+                13,
+                2410,
+                551,
+                2466
+            ],
+            "block_id": 25,
+            "block_order": 26,
+            "group_id": 25,
+            "block_polygon_points": [
+                [
+                    13.0,
+                    2410.0
+                ],
+                [
+                    551.0,
+                    2410.0
+                ],
+                [
+                    551.0,
+                    2466.0
+                ],
+                [
+                    13.0,
+                    2466.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "2",
+            "block_bbox": [
+                272,
+                2472,
+                286,
+                2486
+            ],
+            "block_id": 26,
+            "block_order": null,
+            "group_id": 26,
+            "block_polygon_points": [
+                [
+                    272.0,
+                    2472.0
+                ],
+                [
+                    285.0,
+                    2472.0
+                ],
+                [
+                    285.0,
+                    2485.0
+                ],
+                [
+                    272.0,
+                    2485.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.5219700336456299,
+                "coordinate": [
+                    243,
+                    56,
+                    344,
+                    73
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        243.0,
+                        56.0
+                    ],
+                    [
+                        343.0,
+                        56.0
+                    ],
+                    [
+                        343.0,
+                        72.0
+                    ],
+                    [
+                        243.0,
+                        72.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.5074604153633118,
+                "coordinate": [
+                    152,
+                    77,
+                    435,
+                    94
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        151.99996948242188,
+                        76.99999237060547
+                    ],
+                    [
+                        433.9999084472656,
+                        76.99999237060547
+                    ],
+                    [
+                        433.9999084472656,
+                        92.99999237060547
+                    ],
+                    [
+                        151.99996948242188,
+                        92.99999237060547
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8752962350845337,
+                "coordinate": [
+                    24,
+                    99,
+                    560,
+                    157
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        24.0,
+                        99.0
+                    ],
+                    [
+                        560.0,
+                        99.0
+                    ],
+                    [
+                        560.0,
+                        157.0
+                    ],
+                    [
+                        24.0,
+                        157.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.917897641658783,
+                "coordinate": [
+                    24,
+                    161,
+                    560,
+                    251
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        24.0,
+                        161.0
+                    ],
+                    [
+                        560.0,
+                        161.0
+                    ],
+                    [
+                        560.0,
+                        251.0
+                    ],
+                    [
+                        24.0,
+                        251.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9297125935554504,
+                "coordinate": [
+                    23,
+                    256,
+                    560,
+                    349
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        23.0,
+                        256.0
+                    ],
+                    [
+                        560.0,
+                        256.0
+                    ],
+                    [
+                        560.0,
+                        349.0
+                    ],
+                    [
+                        23.0,
+                        349.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9184271693229675,
+                "coordinate": [
+                    23,
+                    353,
+                    559,
+                    427
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        23.0,
+                        353.0
+                    ],
+                    [
+                        559.0,
+                        353.0
+                    ],
+                    [
+                        559.0,
+                        427.0
+                    ],
+                    [
+                        23.0,
+                        427.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8364232778549194,
+                "coordinate": [
+                    23,
+                    432,
+                    558,
+                    488
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        23.0,
+                        432.0
+                    ],
+                    [
+                        558.0,
+                        432.0
+                    ],
+                    [
+                        558.0,
+                        488.0
+                    ],
+                    [
+                        23.0,
+                        488.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8983750939369202,
+                "coordinate": [
+                    22,
+                    488,
+                    556,
+                    657
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        22.0,
+                        488.0
+                    ],
+                    [
+                        556.0,
+                        488.0
+                    ],
+                    [
+                        556.0,
+                        657.0
+                    ],
+                    [
+                        22.0,
+                        657.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9376280903816223,
+                "coordinate": [
+                    22,
+                    661,
+                    557,
+                    790
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        22.0,
+                        661.0
+                    ],
+                    [
+                        557.0,
+                        661.0
+                    ],
+                    [
+                        557.0,
+                        790.0
+                    ],
+                    [
+                        22.0,
+                        790.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9427751898765564,
+                "coordinate": [
+                    20,
+                    794,
+                    556,
+                    958
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        20.0,
+                        794.0
+                    ],
+                    [
+                        556.0,
+                        794.0
+                    ],
+                    [
+                        556.0,
+                        958.0
+                    ],
+                    [
+                        20.0,
+                        958.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8939536213874817,
+                "coordinate": [
+                    19,
+                    961,
+                    554,
+                    1036
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        19.0,
+                        961.0
+                    ],
+                    [
+                        554.0,
+                        961.0
+                    ],
+                    [
+                        554.0,
+                        1036.0
+                    ],
+                    [
+                        19.0,
+                        1036.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8161332011222839,
+                "coordinate": [
+                    19,
+                    1040,
+                    554,
+                    1076
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        19.0,
+                        1040.0
+                    ],
+                    [
+                        554.0,
+                        1040.0
+                    ],
+                    [
+                        554.0,
+                        1076.0
+                    ],
+                    [
+                        19.0,
+                        1076.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8697190284729004,
+                "coordinate": [
+                    18,
+                    1081,
+                    553,
+                    1155
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        18.0,
+                        1081.0
+                    ],
+                    [
+                        553.0,
+                        1081.0
+                    ],
+                    [
+                        553.0,
+                        1155.0
+                    ],
+                    [
+                        18.0,
+                        1155.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8983092904090881,
+                "coordinate": [
+                    19,
+                    1160,
+                    553,
+                    1234
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        19.0,
+                        1160.0
+                    ],
+                    [
+                        553.0,
+                        1160.0
+                    ],
+                    [
+                        553.0,
+                        1234.0
+                    ],
+                    [
+                        19.0,
+                        1234.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9268372058868408,
+                "coordinate": [
+                    18,
+                    1238,
+                    553,
+                    1367
+                ],
+                "order": 15,
+                "polygon_points": [
+                    [
+                        18.0,
+                        1238.0
+                    ],
+                    [
+                        553.0,
+                        1238.0
+                    ],
+                    [
+                        553.0,
+                        1367.0
+                    ],
+                    [
+                        18.0,
+                        1367.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.4825470745563507,
+                "coordinate": [
+                    242,
+                    1427,
+                    336,
+                    1448
+                ],
+                "order": 16,
+                "polygon_points": [
+                    [
+                        242.0,
+                        1427.0
+                    ],
+                    [
+                        335.0,
+                        1427.0
+                    ],
+                    [
+                        335.0,
+                        1447.0
+                    ],
+                    [
+                        242.0,
+                        1447.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.30027979612350464,
+                "coordinate": [
+                    256,
+                    1449,
+                    321,
+                    1466
+                ],
+                "order": 17,
+                "polygon_points": [
+                    [
+                        256.0,
+                        1449.0
+                    ],
+                    [
+                        320.0,
+                        1449.0
+                    ],
+                    [
+                        320.0,
+                        1465.0
+                    ],
+                    [
+                        256.0,
+                        1465.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8242376446723938,
+                "coordinate": [
+                    20,
+                    1471,
+                    554,
+                    1506
+                ],
+                "order": 18,
+                "polygon_points": [
+                    [
+                        20.0,
+                        1471.0
+                    ],
+                    [
+                        554.0,
+                        1471.0
+                    ],
+                    [
+                        554.0,
+                        1506.0
+                    ],
+                    [
+                        20.0,
+                        1506.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9291180372238159,
+                "coordinate": [
+                    18,
+                    1511,
+                    555,
+                    1695
+                ],
+                "order": 19,
+                "polygon_points": [
+                    [
+                        18.0,
+                        1511.0
+                    ],
+                    [
+                        555.0,
+                        1511.0
+                    ],
+                    [
+                        555.0,
+                        1695.0
+                    ],
+                    [
+                        18.0,
+                        1695.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8832033276557922,
+                "coordinate": [
+                    18,
+                    1698,
+                    554,
+                    1736
+                ],
+                "order": 20,
+                "polygon_points": [
+                    [
+                        18.0,
+                        1698.0
+                    ],
+                    [
+                        554.0,
+                        1698.0
+                    ],
+                    [
+                        554.0,
+                        1736.0
+                    ],
+                    [
+                        18.0,
+                        1736.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9273348450660706,
+                "coordinate": [
+                    17,
+                    1741,
+                    554,
+                    1868
+                ],
+                "order": 21,
+                "polygon_points": [
+                    [
+                        17.0,
+                        1741.0
+                    ],
+                    [
+                        554.0,
+                        1741.0
+                    ],
+                    [
+                        554.0,
+                        1868.0
+                    ],
+                    [
+                        17.0,
+                        1868.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5487392544746399,
+                "coordinate": [
+                    236,
+                    1922,
+                    338,
+                    1937
+                ],
+                "order": 22,
+                "polygon_points": [
+                    [
+                        236.0,
+                        1922.0
+                    ],
+                    [
+                        337.0,
+                        1922.0
+                    ],
+                    [
+                        337.0,
+                        1936.0
+                    ],
+                    [
+                        236.0,
+                        1936.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5971832275390625,
+                "coordinate": [
+                    213,
+                    1942,
+                    360,
+                    1959
+                ],
+                "order": 23,
+                "polygon_points": [
+                    [
+                        213.0,
+                        1942.0
+                    ],
+                    [
+                        359.0,
+                        1942.0
+                    ],
+                    [
+                        359.0,
+                        1958.0
+                    ],
+                    [
+                        213.0,
+                        1958.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9594271183013916,
+                "coordinate": [
+                    15,
+                    1964,
+                    554,
+                    2238
+                ],
+                "order": 24,
+                "polygon_points": [
+                    [
+                        15.0,
+                        1964.0
+                    ],
+                    [
+                        554.0,
+                        1964.0
+                    ],
+                    [
+                        554.0,
+                        2238.0
+                    ],
+                    [
+                        15.0,
+                        2238.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9511120915412903,
+                "coordinate": [
+                    14,
+                    2242,
+                    553,
+                    2406
+                ],
+                "order": 25,
+                "polygon_points": [
+                    [
+                        14.0,
+                        2242.0
+                    ],
+                    [
+                        553.0,
+                        2242.0
+                    ],
+                    [
+                        553.0,
+                        2406.0
+                    ],
+                    [
+                        14.0,
+                        2406.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8856924772262573,
+                "coordinate": [
+                    13,
+                    2410,
+                    551,
+                    2466
+                ],
+                "order": 26,
+                "polygon_points": [
+                    [
+                        13.0,
+                        2410.0
+                    ],
+                    [
+                        551.0,
+                        2410.0
+                    ],
+                    [
+                        551.0,
+                        2466.0
+                    ],
+                    [
+                        13.0,
+                        2466.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.5319862365722656,
+                "coordinate": [
+                    272,
+                    2472,
+                    286,
+                    2486
+                ],
+                "order": 27,
+                "polygon_points": [
+                    [
+                        272.0,
+                        2472.0
+                    ],
+                    [
+                        285.0,
+                        2472.0
+                    ],
+                    [
+                        285.0,
+                        2485.0
+                    ],
+                    [
+                        272.0,
+                        2485.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

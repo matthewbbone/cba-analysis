@@ -1,0 +1,644 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 180,
+    "page_count": 206,
+    "width": 1224,
+    "height": 2016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "doc_title",
+            "block_content": "APPENDIX C\nENUMERATION OF UNIVERSITY BENEFITS (cont.)",
+            "block_bbox": [
+                325,
+                152,
+                906,
+                211
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    325.0,
+                    152.0
+                ],
+                [
+                    906.0,
+                    152.0
+                ],
+                [
+                    906.0,
+                    211.0
+                ],
+                [
+                    325.0,
+                    211.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "9. Tax Effective Salary Reduction Programs",
+            "block_bbox": [
+                182,
+                235,
+                734,
+                265
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    182.0,
+                    235.0
+                ],
+                [
+                    734.0,
+                    235.0
+                ],
+                [
+                    734.0,
+                    265.0
+                ],
+                [
+                    182.0,
+                    265.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a. Retirement Tax Savings Plan – Required monthly participant contributions to the DC Plan Pretax Account are automatically deducted from gross pay before federal and state taxes are calculated.",
+            "block_bbox": [
+                254,
+                290,
+                1120,
+                377
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    254.0,
+                    290.0
+                ],
+                [
+                    1120.0,
+                    290.0
+                ],
+                [
+                    1120.0,
+                    377.0
+                ],
+                [
+                    254.0,
+                    377.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b. Tax Savings on Insurance Premiums (TIP) – Employees enrolled in certain benefit plans are automatically enrolled in TIP, unless the employee makes an election to withdraw. After the University contribution, if any, is applied the net insurance premiums are deducted from gross pay before federal and state taxes.",
+            "block_bbox": [
+                254,
+                401,
+                1120,
+                538
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    254.0,
+                    401.0
+                ],
+                [
+                    1120.0,
+                    401.0
+                ],
+                [
+                    1120.0,
+                    538.0
+                ],
+                [
+                    254.0,
+                    538.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "c. Dependent Care Assistance Program (DepCare) – DepCare is available to eligible employees and allows employees to pay for eligible dependent care expenses on a pre-tax, salary reduction basis.",
+            "block_bbox": [
+                253,
+                541,
+                1120,
+                625
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    253.0,
+                    541.0
+                ],
+                [
+                    1120.0,
+                    541.0
+                ],
+                [
+                    1120.0,
+                    625.0
+                ],
+                [
+                    253.0,
+                    625.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "10. Auto/Homeowner Insurance – Individual auto and home insurance policies are available which may be purchased by eligible employees through payroll deduction.",
+            "block_bbox": [
+                185,
+                650,
+                1120,
+                734
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    185.0,
+                    650.0
+                ],
+                [
+                    1120.0,
+                    650.0
+                ],
+                [
+                    1120.0,
+                    734.0
+                ],
+                [
+                    185.0,
+                    734.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "11. Death Payments – Upon the death of an employee who has been on pay status at least fifty percent (50%) time at least six (6) continuous months prior to death a sum equal to the deceased's regular salary for one (1) month shall be paid to the deceased's spouse, or if there is no spouse, to the employee's eligible dependent(s), or if there is neither a surviving spouse nor eligible dependent(s), to the beneficiary designated in the deceased's University-paid life insurance policy. All monies due and payable to the employee at the time of death shall be paid to the employee's surviving spouse and/or eligible dependent(s).",
+            "block_bbox": [
+                183,
+                760,
+                1121,
+                986
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    183.0,
+                    760.0
+                ],
+                [
+                    1121.0,
+                    760.0
+                ],
+                [
+                    1121.0,
+                    986.0
+                ],
+                [
+                    183.0,
+                    986.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "12. UCRP Tier Two Benefits – The Tier Two membership classification of UCRP was closed on July 1, 1990 and is only available on a continuing basis to active UCRP members who previously elected Tier Two.",
+            "block_bbox": [
+                185,
+                1008,
+                1120,
+                1094
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    185.0,
+                    1008.0
+                ],
+                [
+                    1120.0,
+                    1008.0
+                ],
+                [
+                    1120.0,
+                    1094.0
+                ],
+                [
+                    185.0,
+                    1094.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "13. Alternate Retirement Plans – Employees covered by alternate retirement plans are not subject to Section C.6.a and C.12 above.",
+            "block_bbox": [
+                185,
+                1119,
+                1120,
+                1176
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    185.0,
+                    1119.0
+                ],
+                [
+                    1120.0,
+                    1119.0
+                ],
+                [
+                    1120.0,
+                    1176.0
+                ],
+                [
+                    185.0,
+                    1176.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "178",
+            "block_bbox": [
+                594,
+                1917,
+                641,
+                1943
+            ],
+            "block_id": 9,
+            "block_order": null,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    594.0,
+                    1917.0
+                ],
+                [
+                    640.0,
+                    1917.0
+                ],
+                [
+                    640.0,
+                    1942.0
+                ],
+                [
+                    594.0,
+                    1942.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.8444539308547974,
+                "coordinate": [
+                    325,
+                    152,
+                    906,
+                    211
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        325.0,
+                        152.0
+                    ],
+                    [
+                        906.0,
+                        152.0
+                    ],
+                    [
+                        906.0,
+                        211.0
+                    ],
+                    [
+                        325.0,
+                        211.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8623697757720947,
+                "coordinate": [
+                    182,
+                    235,
+                    734,
+                    265
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        182.0,
+                        235.0
+                    ],
+                    [
+                        734.0,
+                        235.0
+                    ],
+                    [
+                        734.0,
+                        265.0
+                    ],
+                    [
+                        182.0,
+                        265.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9302185773849487,
+                "coordinate": [
+                    254,
+                    290,
+                    1120,
+                    377
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        254.0,
+                        290.0
+                    ],
+                    [
+                        1120.0,
+                        290.0
+                    ],
+                    [
+                        1120.0,
+                        377.0
+                    ],
+                    [
+                        254.0,
+                        377.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9455063343048096,
+                "coordinate": [
+                    254,
+                    401,
+                    1120,
+                    538
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        254.0,
+                        401.0
+                    ],
+                    [
+                        1120.0,
+                        401.0
+                    ],
+                    [
+                        1120.0,
+                        538.0
+                    ],
+                    [
+                        254.0,
+                        538.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9241572618484497,
+                "coordinate": [
+                    253,
+                    541,
+                    1120,
+                    625
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        253.0,
+                        541.0
+                    ],
+                    [
+                        1120.0,
+                        541.0
+                    ],
+                    [
+                        1120.0,
+                        625.0
+                    ],
+                    [
+                        253.0,
+                        625.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9336804151535034,
+                "coordinate": [
+                    185,
+                    650,
+                    1120,
+                    734
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        185.0,
+                        650.0
+                    ],
+                    [
+                        1120.0,
+                        650.0
+                    ],
+                    [
+                        1120.0,
+                        734.0
+                    ],
+                    [
+                        185.0,
+                        734.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9592419266700745,
+                "coordinate": [
+                    183,
+                    760,
+                    1121,
+                    986
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        183.0,
+                        760.0
+                    ],
+                    [
+                        1121.0,
+                        760.0
+                    ],
+                    [
+                        1121.0,
+                        986.0
+                    ],
+                    [
+                        183.0,
+                        986.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9379135966300964,
+                "coordinate": [
+                    185,
+                    1008,
+                    1120,
+                    1094
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        185.0,
+                        1008.0
+                    ],
+                    [
+                        1120.0,
+                        1008.0
+                    ],
+                    [
+                        1120.0,
+                        1094.0
+                    ],
+                    [
+                        185.0,
+                        1094.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9181656241416931,
+                "coordinate": [
+                    185,
+                    1119,
+                    1120,
+                    1176
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        185.0,
+                        1119.0
+                    ],
+                    [
+                        1120.0,
+                        1119.0
+                    ],
+                    [
+                        1120.0,
+                        1176.0
+                    ],
+                    [
+                        185.0,
+                        1176.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.776256263256073,
+                "coordinate": [
+                    594,
+                    1917,
+                    641,
+                    1943
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        594.0,
+                        1917.0
+                    ],
+                    [
+                        640.0,
+                        1917.0
+                    ],
+                    [
+                        640.0,
+                        1942.0
+                    ],
+                    [
+                        594.0,
+                        1942.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

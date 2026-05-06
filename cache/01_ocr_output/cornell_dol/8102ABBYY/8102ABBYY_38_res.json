@@ -1,0 +1,888 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 38,
+    "page_count": 439,
+    "width": 1234,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article 11",
+            "block_bbox": [
+                321,
+                81,
+                392,
+                99
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    81.0
+                ],
+                [
+                    391.0,
+                    81.0
+                ],
+                [
+                    391.0,
+                    98.0
+                ],
+                [
+                    321.0,
+                    98.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Day In Lieu of Sunday —",
+            "block_bbox": [
+                377,
+                121,
+                563,
+                140
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    377.0,
+                    121.0
+                ],
+                [
+                    562.0,
+                    121.0
+                ],
+                [
+                    562.0,
+                    139.0
+                ],
+                [
+                    377.0,
+                    139.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "For a 7-DAY COVERAGE EMPLOYEE, the first (1 $ ^{st} $) NONSCHEDULED DAY in the WORKWEEK when operations are on a 5-day schedule basis, or the one (1) NONSCHEDULED DAY in the WORKWEEK when operations are on a 6-day schedule basis.",
+            "block_bbox": [
+                377,
+                144,
+                877,
+                216
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    377.0,
+                    144.0
+                ],
+                [
+                    877.0,
+                    144.0
+                ],
+                [
+                    877.0,
+                    216.0
+                ],
+                [
+                    377.0,
+                    216.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Day In Lieu of Saturday —",
+            "block_bbox": [
+                377,
+                222,
+                573,
+                241
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    377.0,
+                    222.0
+                ],
+                [
+                    572.0,
+                    222.0
+                ],
+                [
+                    572.0,
+                    240.0
+                ],
+                [
+                    377.0,
+                    240.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "For a 7-DAY COVERAGE EMPLOYEE, the second  $ (2^{nd}) $ NONSCHEDULED DAY in the WORKWEEK when operations are on a 5-day schedule basis, or the sixth  $ (6^{th}) $ SCHEDULED DAY in the WORKWEEK when operations are on a 6-day schedule basis.",
+            "block_bbox": [
+                376,
+                245,
+                877,
+                318
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    376.0,
+                    245.0
+                ],
+                [
+                    877.0,
+                    245.0
+                ],
+                [
+                    877.0,
+                    318.0
+                ],
+                [
+                    376.0,
+                    318.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(e) It is understood that every effort will be made to avoid the necessity for working Employees on the day on which an authorized holiday is observed. When an authorized holiday is observed on Saturday, night tours for that week shall commence on the previous Sunday night. When it is considered necessary to schedule regular operations on the day on which an authorized holiday is observed, the Union shall be notified at least seven (7) days in advance unless unknown or unforeseen conditions prevent the Company from giving such notice. The matter shall, upon request of the Union, be subject to negotiation as provided in Subparagraphs 1(c)(1) and 1(c)(2) of this article.",
+            "block_bbox": [
+                344,
+                323,
+                879,
+                498
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    344.0,
+                    323.0
+                ],
+                [
+                    879.0,
+                    323.0
+                ],
+                [
+                    879.0,
+                    498.0
+                ],
+                [
+                    344.0,
+                    498.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(f) Whenever possible, overtime work shall be evenly distributed among Employees normally engaged on the work involved. It is agreed that an Employee scheduled for overtime shall work, except when the Employee has adequate reason for not doing so.",
+            "block_bbox": [
+                344,
+                502,
+                878,
+                573
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    344.0,
+                    502.0
+                ],
+                [
+                    878.0,
+                    502.0
+                ],
+                [
+                    878.0,
+                    573.0
+                ],
+                [
+                    344.0,
+                    573.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "2 Overtime Compensation - Other Than 7-Day Coverage Employees",
+            "block_bbox": [
+                320,
+                578,
+                800,
+                598
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    578.0
+                ],
+                [
+                    799.0,
+                    578.0
+                ],
+                [
+                    799.0,
+                    597.0
+                ],
+                [
+                    320.0,
+                    597.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) Pay at one and one-half (1 1/2) times the sum of the Employee's Adjusted Rate plus night work bonus when applicable shall apply to authorized time worked, except when the provisions of Paragraph 2(b) or 2(c) apply:",
+            "block_bbox": [
+                344,
+                603,
+                878,
+                674
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    344.0,
+                    603.0
+                ],
+                [
+                    878.0,
+                    603.0
+                ],
+                [
+                    878.0,
+                    674.0
+                ],
+                [
+                    344.0,
+                    674.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(1) For hours worked outside an Employee's Scheduled Daily Tour provided Scheduled Daily Tour is eight (8) hours or more.",
+            "block_bbox": [
+                376,
+                679,
+                876,
+                716
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    376.0,
+                    679.0
+                ],
+                [
+                    876.0,
+                    679.0
+                ],
+                [
+                    876.0,
+                    716.0
+                ],
+                [
+                    376.0,
+                    716.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(2) For hours worked in excess of forty (40) during the Workweek.",
+            "block_bbox": [
+                376,
+                720,
+                834,
+                740
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    376.0,
+                    720.0
+                ],
+                [
+                    833.0,
+                    720.0
+                ],
+                [
+                    833.0,
+                    739.0
+                ],
+                [
+                    376.0,
+                    739.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(3) On a Nonscheduled Day other than Sunday or a Holiday, for Employees who are not working a 7-Day Coverage Job.",
+            "block_bbox": [
+                377,
+                746,
+                877,
+                783
+            ],
+            "block_id": 11,
+            "block_order": 11,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    377.0,
+                    746.0
+                ],
+                [
+                    877.0,
+                    746.0
+                ],
+                [
+                    877.0,
+                    783.0
+                ],
+                [
+                    377.0,
+                    783.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) Pay at twice the sum of the Employee's Adjusted Rate plus night work bonus when applicable shall apply to authorized time worked except when the provisions of Paragraph 2(c) apply:",
+            "block_bbox": [
+                343,
+                788,
+                877,
+                842
+            ],
+            "block_id": 12,
+            "block_order": 12,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    343.0,
+                    788.0
+                ],
+                [
+                    877.0,
+                    788.0
+                ],
+                [
+                    877.0,
+                    842.0
+                ],
+                [
+                    343.0,
+                    842.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "30",
+            "block_bbox": [
+                322,
+                899,
+                345,
+                916
+            ],
+            "block_id": 13,
+            "block_order": null,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    899.0
+                ],
+                [
+                    344.0,
+                    899.0
+                ],
+                [
+                    344.0,
+                    915.0
+                ],
+                [
+                    322.0,
+                    915.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.6235519051551819,
+                "coordinate": [
+                    321,
+                    81,
+                    392,
+                    99
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        321.0,
+                        81.0
+                    ],
+                    [
+                        391.0,
+                        81.0
+                    ],
+                    [
+                        391.0,
+                        98.0
+                    ],
+                    [
+                        321.0,
+                        98.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7278113961219788,
+                "coordinate": [
+                    377,
+                    121,
+                    563,
+                    140
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        377.0,
+                        121.0
+                    ],
+                    [
+                        562.0,
+                        121.0
+                    ],
+                    [
+                        562.0,
+                        139.0
+                    ],
+                    [
+                        377.0,
+                        139.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9185199737548828,
+                "coordinate": [
+                    377,
+                    144,
+                    877,
+                    216
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        377.0,
+                        144.0
+                    ],
+                    [
+                        877.0,
+                        144.0
+                    ],
+                    [
+                        877.0,
+                        216.0
+                    ],
+                    [
+                        377.0,
+                        216.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6240400671958923,
+                "coordinate": [
+                    377,
+                    222,
+                    573,
+                    241
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        377.0,
+                        222.0
+                    ],
+                    [
+                        572.0,
+                        222.0
+                    ],
+                    [
+                        572.0,
+                        240.0
+                    ],
+                    [
+                        377.0,
+                        240.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9214461445808411,
+                "coordinate": [
+                    376,
+                    245,
+                    877,
+                    318
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        376.0,
+                        245.0
+                    ],
+                    [
+                        877.0,
+                        245.0
+                    ],
+                    [
+                        877.0,
+                        318.0
+                    ],
+                    [
+                        376.0,
+                        318.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9516555666923523,
+                "coordinate": [
+                    344,
+                    323,
+                    879,
+                    498
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        344.0,
+                        323.0
+                    ],
+                    [
+                        879.0,
+                        323.0
+                    ],
+                    [
+                        879.0,
+                        498.0
+                    ],
+                    [
+                        344.0,
+                        498.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9260973930358887,
+                "coordinate": [
+                    344,
+                    502,
+                    878,
+                    573
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        344.0,
+                        502.0
+                    ],
+                    [
+                        878.0,
+                        502.0
+                    ],
+                    [
+                        878.0,
+                        573.0
+                    ],
+                    [
+                        344.0,
+                        573.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6716563701629639,
+                "coordinate": [
+                    320,
+                    578,
+                    800,
+                    598
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        320.0,
+                        578.0
+                    ],
+                    [
+                        799.0,
+                        578.0
+                    ],
+                    [
+                        799.0,
+                        597.0
+                    ],
+                    [
+                        320.0,
+                        597.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9197903871536255,
+                "coordinate": [
+                    344,
+                    603,
+                    878,
+                    674
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        344.0,
+                        603.0
+                    ],
+                    [
+                        878.0,
+                        603.0
+                    ],
+                    [
+                        878.0,
+                        674.0
+                    ],
+                    [
+                        344.0,
+                        674.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8920394778251648,
+                "coordinate": [
+                    376,
+                    679,
+                    876,
+                    716
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        376.0,
+                        679.0
+                    ],
+                    [
+                        876.0,
+                        679.0
+                    ],
+                    [
+                        876.0,
+                        716.0
+                    ],
+                    [
+                        376.0,
+                        716.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8263874650001526,
+                "coordinate": [
+                    376,
+                    720,
+                    834,
+                    740
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        376.0,
+                        720.0
+                    ],
+                    [
+                        833.0,
+                        720.0
+                    ],
+                    [
+                        833.0,
+                        739.0
+                    ],
+                    [
+                        376.0,
+                        739.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8960859179496765,
+                "coordinate": [
+                    377,
+                    746,
+                    877,
+                    783
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        377.0,
+                        746.0
+                    ],
+                    [
+                        877.0,
+                        746.0
+                    ],
+                    [
+                        877.0,
+                        783.0
+                    ],
+                    [
+                        377.0,
+                        783.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9177415370941162,
+                "coordinate": [
+                    343,
+                    788,
+                    877,
+                    842
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        343.0,
+                        788.0
+                    ],
+                    [
+                        877.0,
+                        788.0
+                    ],
+                    [
+                        877.0,
+                        842.0
+                    ],
+                    [
+                        343.0,
+                        842.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6878448724746704,
+                "coordinate": [
+                    322,
+                    899,
+                    345,
+                    916
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        322.0,
+                        899.0
+                    ],
+                    [
+                        344.0,
+                        899.0
+                    ],
+                    [
+                        344.0,
+                        915.0
+                    ],
+                    [
+                        322.0,
+                        915.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

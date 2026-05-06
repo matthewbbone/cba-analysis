@@ -1,0 +1,278 @@
+{
+    "input_path": "cache/cornell_dol/4208Abbyy.pdf",
+    "page_index": 115,
+    "page_count": 128,
+    "width": 772,
+    "height": 1212,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ATTACHMENT B",
+            "block_bbox": [
+                304,
+                330,
+                474,
+                357
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    304.0,
+                    330.0
+                ],
+                [
+                    474.0,
+                    330.0
+                ],
+                [
+                    474.0,
+                    357.0
+                ],
+                [
+                    304.0,
+                    357.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "SOCIETY of PROFESSIONAL ENGINEERING\nEMPLOYEES in AEROSPACE\n(Wichita Technical and Professional Unit)",
+            "block_bbox": [
+                174,
+                420,
+                603,
+                510
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    174.0,
+                    420.0
+                ],
+                [
+                    603.0,
+                    420.0
+                ],
+                [
+                    603.0,
+                    510.0
+                ],
+                [
+                    174.0,
+                    510.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "RETIREE MEDICAL PLAN",
+            "block_bbox": [
+                262,
+                572,
+                518,
+                598
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    262.0,
+                    572.0
+                ],
+                [
+                    518.0,
+                    572.0
+                ],
+                [
+                    518.0,
+                    598.0
+                ],
+                [
+                    262.0,
+                    598.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "B-1",
+            "block_bbox": [
+                388,
+                1165,
+                412,
+                1181
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    388.0,
+                    1165.0
+                ],
+                [
+                    411.0,
+                    1165.0
+                ],
+                [
+                    411.0,
+                    1180.0
+                ],
+                [
+                    388.0,
+                    1180.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.4923163652420044,
+                "coordinate": [
+                    304,
+                    330,
+                    474,
+                    357
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        304.0,
+                        330.0
+                    ],
+                    [
+                        474.0,
+                        330.0
+                    ],
+                    [
+                        474.0,
+                        357.0
+                    ],
+                    [
+                        304.0,
+                        357.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5967909097671509,
+                "coordinate": [
+                    174,
+                    420,
+                    603,
+                    510
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        174.0,
+                        420.0
+                    ],
+                    [
+                        603.0,
+                        420.0
+                    ],
+                    [
+                        603.0,
+                        510.0
+                    ],
+                    [
+                        174.0,
+                        510.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7493725419044495,
+                "coordinate": [
+                    262,
+                    572,
+                    518,
+                    598
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        262.0,
+                        572.0
+                    ],
+                    [
+                        518.0,
+                        572.0
+                    ],
+                    [
+                        518.0,
+                        598.0
+                    ],
+                    [
+                        262.0,
+                        598.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7588502168655396,
+                "coordinate": [
+                    388,
+                    1165,
+                    412,
+                    1181
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        388.0,
+                        1165.0
+                    ],
+                    [
+                        411.0,
+                        1165.0
+                    ],
+                    [
+                        411.0,
+                        1180.0
+                    ],
+                    [
+                        388.0,
+                        1180.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

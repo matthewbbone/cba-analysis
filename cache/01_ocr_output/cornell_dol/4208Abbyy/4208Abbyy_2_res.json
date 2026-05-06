@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/4208Abbyy.pdf",
+    "page_index": 2,
+    "page_count": 128,
+    "width": 775,
+    "height": 1204,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "TABLE OF CONTENTS",
+            "block_bbox": [
+                300,
+                70,
+                463,
+                93
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    300.0,
+                    70.0
+                ],
+                [
+                    463.0,
+                    70.0
+                ],
+                [
+                    463.0,
+                    93.0
+                ],
+                [
+                    300.0,
+                    93.0
+                ]
+            ]
+        },
+        {
+            "block_label": "content",
+            "block_content": "Page\n\nPreamble ..... 1\nArticle 1 Recognition ..... 1\nArticle 2 Rights of Management ..... 2\nArticle 3 Grievance Procedure and Arbitration ..... 2\nArticle 4 Employee Performance ..... 5\nArticle 5 Vacation Plan ..... 7\nArticle 6 Sick Leave ..... 9\nArticle 7 Holidays ..... 10\nArticle 8 Workforce ..... 11\nArticle 9 Contract Personnel ..... 22\nArticle 10 Joint Meetings ..... 23\nArticle 11 Work Schedules – Pay Rates – Overtime – Temporary Military Leave – Jury Duty And Witness Service ..... 23\nArticle 12 Union Officials ..... 29\nArticle 13 Deduction of Union Dues ..... 32\nArticle 14 Strikes and Lockouts ..... 33\nArticle 15 Voluntary Investment Plan ..... 33\nArticle 16 Group Benefits ..... 34\nArticle 17 Retirement Plan ..... 37\nArticle 18 Non-discrimination ..... 38\nArticle 19 Severability ..... 38\nArticle 20 This agreement has no Article 20 ..... 38\nArticle 21 Layoff Benefits ..... 38\nArticle 22 Job Classifications ..... 39\nArticle 23 Duration ..... 41\n\nLetters Of Understanding Relating To:\nAttachment 1 Cash Payment ..... 43\nAttachment 2 Child/Elder Care Program ..... 44\nAttachment 3 Drug and Alcohol Free Work Place Program ..... 44\nAttachment 4 Work Environment and Health and Safety ..... 45\nAttachment 5 Relating to Data Reports ..... 45\nAttachment 6 Printing of Contracts ..... 46\nAttachment 7 Oversight of Labor-Management Cooperative Initiatives ..... 46\nAttachment 8 ShareValue Program ..... 47\nAttachment 9 Virtual Office ..... 48\nAttachment 10 The Travel Card Process ..... 49\nAttachment 11 Frequent Flier Mileage ..... 49\nAttachment 12 SPEEA Access to the Boeing Web ..... 50\nAttachment 13 Working Together Partnership ..... 50\nAttachment 14 Review of SJC Rates ..... 51\nAttachment 15 AOG Assignments ..... 51\nAttachment 16 Management Rights ..... 53\nAttachment 17 Sex Crimes ..... 53\n\nAppendix A Organizations/Functions With Confidential Employees And Current Jobs Identified As Confidential ..... 56\n\nAttachment A Group Benefits Package ..... A-1\n\nAttachment B Retiree Medical Plan ..... B-1\n\nIndex ..... 1-1",
+            "block_bbox": [
+                64,
+                90,
+                699,
+                1151
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    64.0,
+                    90.0
+                ],
+                [
+                    699.0,
+                    90.0
+                ],
+                [
+                    699.0,
+                    1151.0
+                ],
+                [
+                    64.0,
+                    1151.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "üü",
+            "block_bbox": [
+                374,
+                1162,
+                389,
+                1178
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    374.0,
+                    1162.0
+                ],
+                [
+                    388.0,
+                    1162.0
+                ],
+                [
+                    388.0,
+                    1177.0
+                ],
+                [
+                    374.0,
+                    1177.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7759738564491272,
+                "coordinate": [
+                    300,
+                    70,
+                    463,
+                    93
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        300.0,
+                        70.0
+                    ],
+                    [
+                        463.0,
+                        70.0
+                    ],
+                    [
+                        463.0,
+                        93.0
+                    ],
+                    [
+                        300.0,
+                        93.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.9770967364311218,
+                "coordinate": [
+                    64,
+                    90,
+                    699,
+                    1151
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        64.0,
+                        90.0
+                    ],
+                    [
+                        699.0,
+                        90.0
+                    ],
+                    [
+                        699.0,
+                        1151.0
+                    ],
+                    [
+                        64.0,
+                        1151.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.696098268032074,
+                "coordinate": [
+                    374,
+                    1162,
+                    389,
+                    1178
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        374.0,
+                        1162.0
+                    ],
+                    [
+                        388.0,
+                        1162.0
+                    ],
+                    [
+                        388.0,
+                        1177.0
+                    ],
+                    [
+                        374.0,
+                        1177.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

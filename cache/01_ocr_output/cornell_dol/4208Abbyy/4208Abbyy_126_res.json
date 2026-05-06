@@ -1,0 +1,186 @@
+{
+    "input_path": "cache/cornell_dol/4208Abbyy.pdf",
+    "page_index": 126,
+    "page_count": 128,
+    "width": 776,
+    "height": 1198,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "content",
+            "block_content": "Subject: Article Page\nTransfer Requests ..... 8.2(f) ..... 13\nTravel Card Process (Letter of Understanding – Attachment 10) ..... 49\nUnion Activity During Working Hours ..... 12.1(b) ..... 29\nUnion Dues ..... 13 ..... 32\nUnion Officials ..... 12 ..... 29\nAuthorized Leave of Absence – Union Business ..... 12.1(c) ..... 30\nDeparture from the Workplace ..... 12.1(c) ..... 30\nStaff Access to Plants ..... 12.2 ..... 31\nVacation Plant ..... 5 ..... 7\nPayment on Termination ..... 5.4 ..... 8\nVision Care Benefit (Attachment A, Section 11.F) ..... A-32\nVoluntary Investment Plan (VIP) ..... 15 ..... 33\nWitness Service ..... 11.7 ..... 28\nWork Environment (Letter of Understanding – Attachment 4) ..... 45\nWork Schedules & Shifts ..... 11.1, 11.3 ..... 23, 25\nWorking Together Partnership (Letter of Understanding – Attachment 13) ..... 50",
+            "block_bbox": [
+                66,
+                66,
+                695,
+                414
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    66.0,
+                    66.0
+                ],
+                [
+                    695.0,
+                    66.0
+                ],
+                [
+                    695.0,
+                    414.0
+                ],
+                [
+                    66.0,
+                    414.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "14",
+            "block_bbox": [
+                367,
+                1151,
+                389,
+                1167
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    367.0,
+                    1151.0
+                ],
+                [
+                    388.0,
+                    1151.0
+                ],
+                [
+                    388.0,
+                    1166.0
+                ],
+                [
+                    367.0,
+                    1166.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.4824140965938568,
+                "coordinate": [
+                    66,
+                    69,
+                    119,
+                    92
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        66.0,
+                        69.0
+                    ],
+                    [
+                        118.0,
+                        69.0
+                    ],
+                    [
+                        118.0,
+                        91.0
+                    ],
+                    [
+                        66.0,
+                        91.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.9731401205062866,
+                "coordinate": [
+                    66,
+                    66,
+                    695,
+                    414
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        66.0,
+                        66.0
+                    ],
+                    [
+                        695.0,
+                        66.0
+                    ],
+                    [
+                        695.0,
+                        414.0
+                    ],
+                    [
+                        66.0,
+                        414.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7372857928276062,
+                "coordinate": [
+                    367,
+                    1151,
+                    389,
+                    1167
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        367.0,
+                        1151.0
+                    ],
+                    [
+                        388.0,
+                        1151.0
+                    ],
+                    [
+                        388.0,
+                        1166.0
+                    ],
+                    [
+                        367.0,
+                        1166.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

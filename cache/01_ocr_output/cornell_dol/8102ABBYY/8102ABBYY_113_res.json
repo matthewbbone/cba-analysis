@@ -1,0 +1,949 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 113,
+    "page_count": 439,
+    "width": 1234,
+    "height": 1592,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article 13",
+            "block_bbox": [
+                838,
+                81,
+                908,
+                100
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    838.0,
+                    81.0
+                ],
+                [
+                    907.0,
+                    81.0
+                ],
+                [
+                    907.0,
+                    99.0
+                ],
+                [
+                    838.0,
+                    99.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(v) Meals en route (including tip): $5.00 for breakfast, $6.00 for luncheon, $10.00 for dinner.",
+            "block_bbox": [
+                438,
+                121,
+                908,
+                160
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    438.0,
+                    121.0
+                ],
+                [
+                    908.0,
+                    121.0
+                ],
+                [
+                    908.0,
+                    160.0
+                ],
+                [
+                    438.0,
+                    160.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(vi) Lodging en route when a stopover is required as incurred.",
+            "block_bbox": [
+                438,
+                164,
+                868,
+                186
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    438.0,
+                    164.0
+                ],
+                [
+                    868.0,
+                    164.0
+                ],
+                [
+                    868.0,
+                    186.0
+                ],
+                [
+                    438.0,
+                    186.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A like allowance shall be paid for each dependent accompanying the Employee with respect to items 5(b)(2)(v), 5(b)(2)(vi) and Paragraph 2(s).",
+            "block_bbox": [
+                436,
+                206,
+                908,
+                263
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    436.0,
+                    206.0
+                ],
+                [
+                    908.0,
+                    206.0
+                ],
+                [
+                    908.0,
+                    263.0
+                ],
+                [
+                    436.0,
+                    263.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "(c) Locating Expenses",
+            "block_bbox": [
+                374,
+                267,
+                544,
+                289
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    374.0,
+                    267.0
+                ],
+                [
+                    543.0,
+                    267.0
+                ],
+                [
+                    543.0,
+                    288.0
+                ],
+                [
+                    374.0,
+                    288.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(1) The Company shall authorize, arrange and pay the cost of packing, shipping, unpacking and storage (incidental to shipping) of the Employee's household goods, and shall arrange with the moving company and pay directly for the following incidental services, if necessary:",
+            "block_bbox": [
+                406,
+                291,
+                909,
+                381
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    406.0,
+                    291.0
+                ],
+                [
+                    909.0,
+                    291.0
+                ],
+                [
+                    909.0,
+                    381.0
+                ],
+                [
+                    406.0,
+                    381.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(i) Furnace and chimney cleaning.",
+            "block_bbox": [
+                437,
+                386,
+                689,
+                407
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    437.0,
+                    386.0
+                ],
+                [
+                    688.0,
+                    386.0
+                ],
+                [
+                    688.0,
+                    406.0
+                ],
+                [
+                    437.0,
+                    406.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(ii) Gas, electric, and water connections of a minor nature, including supplementary additions within the boundary of the dwelling to utilities already installed; such as, electric power, gas, or water supply to service home equipment or appliances.",
+            "block_bbox": [
+                437,
+                410,
+                907,
+                484
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    437.0,
+                    410.0
+                ],
+                [
+                    907.0,
+                    410.0
+                ],
+                [
+                    907.0,
+                    484.0
+                ],
+                [
+                    437.0,
+                    484.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(iii) Removal and reinstallation of home equipment (includes uncoupling at origin and reinstallation plus incidental servicing as required at destination, and applies to: gas or electric range, washing machine, dryer, freezer, refrigerator, television set, antenna, or other home equipment).",
+            "block_bbox": [
+                437,
+                487,
+                906,
+                578
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    437.0,
+                    487.0
+                ],
+                [
+                    906.0,
+                    487.0
+                ],
+                [
+                    906.0,
+                    578.0
+                ],
+                [
+                    437.0,
+                    578.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(iv) Transportation and care (boarding) of household pets prior to moving into new permanent residence.",
+            "block_bbox": [
+                437,
+                582,
+                905,
+                620
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    437.0,
+                    582.0
+                ],
+                [
+                    905.0,
+                    582.0
+                ],
+                [
+                    905.0,
+                    620.0
+                ],
+                [
+                    437.0,
+                    620.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(v) Realignment of television set and replacement of antenna. The cost of acquiring a comparable new antenna may be paid when removal of the old one is not feasible.",
+            "block_bbox": [
+                437,
+                624,
+                906,
+                680
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    437.0,
+                    624.0
+                ],
+                [
+                    906.0,
+                    624.0
+                ],
+                [
+                    906.0,
+                    680.0
+                ],
+                [
+                    437.0,
+                    680.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(vi) Storage of household goods limited to 90 days.",
+            "block_bbox": [
+                437,
+                684,
+                794,
+                705
+            ],
+            "block_id": 11,
+            "block_order": 11,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    437.0,
+                    684.0
+                ],
+                [
+                    793.0,
+                    684.0
+                ],
+                [
+                    793.0,
+                    704.0
+                ],
+                [
+                    437.0,
+                    704.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(2) The Employee shall be reimbursed for the incurred cost of unexpired board, rent and garage rent, paid for in advance and not recovered.",
+            "block_bbox": [
+                405,
+                708,
+                907,
+                763
+            ],
+            "block_id": 12,
+            "block_order": 12,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    405.0,
+                    708.0
+                ],
+                [
+                    907.0,
+                    708.0
+                ],
+                [
+                    907.0,
+                    763.0
+                ],
+                [
+                    405.0,
+                    763.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(3) An Employee who is Permanently Transferred shall be paid a per diem allowance of $20.00 for self and each dependent ten (10) or more years of age and $15.00 for each dependent under ten (10) years. Such allowance shall be paid for each day, starting with the scheduled day of arrival at the Base Location (but not before the day of actual arrival) and ending with the day of moving into permanent quarters or the fourteenth calendar day at that Base Location, whichever occurs first. To cover all other locating expenses, a single",
+            "block_bbox": [
+                405,
+                767,
+                907,
+                910
+            ],
+            "block_id": 13,
+            "block_order": 13,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    405.0,
+                    767.0
+                ],
+                [
+                    907.0,
+                    767.0
+                ],
+                [
+                    907.0,
+                    910.0
+                ],
+                [
+                    405.0,
+                    910.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "105",
+            "block_bbox": [
+                878,
+                926,
+                907,
+                943
+            ],
+            "block_id": 14,
+            "block_order": null,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    878.0,
+                    926.0
+                ],
+                [
+                    906.0,
+                    926.0
+                ],
+                [
+                    906.0,
+                    942.0
+                ],
+                [
+                    878.0,
+                    942.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8029799461364746,
+                "coordinate": [
+                    838,
+                    81,
+                    908,
+                    100
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        838.0,
+                        81.0
+                    ],
+                    [
+                        907.0,
+                        81.0
+                    ],
+                    [
+                        907.0,
+                        99.0
+                    ],
+                    [
+                        838.0,
+                        99.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8792572021484375,
+                "coordinate": [
+                    438,
+                    121,
+                    908,
+                    160
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        438.0,
+                        121.0
+                    ],
+                    [
+                        908.0,
+                        121.0
+                    ],
+                    [
+                        908.0,
+                        160.0
+                    ],
+                    [
+                        438.0,
+                        160.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8404356241226196,
+                "coordinate": [
+                    438,
+                    164,
+                    868,
+                    186
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        438.0,
+                        164.0
+                    ],
+                    [
+                        868.0,
+                        164.0
+                    ],
+                    [
+                        868.0,
+                        186.0
+                    ],
+                    [
+                        438.0,
+                        186.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9078710079193115,
+                "coordinate": [
+                    436,
+                    206,
+                    908,
+                    263
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        436.0,
+                        206.0
+                    ],
+                    [
+                        908.0,
+                        206.0
+                    ],
+                    [
+                        908.0,
+                        263.0
+                    ],
+                    [
+                        436.0,
+                        263.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.488734632730484,
+                "coordinate": [
+                    374,
+                    267,
+                    544,
+                    289
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        374.0,
+                        267.0
+                    ],
+                    [
+                        543.0,
+                        267.0
+                    ],
+                    [
+                        543.0,
+                        288.0
+                    ],
+                    [
+                        374.0,
+                        288.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9243294596672058,
+                "coordinate": [
+                    406,
+                    291,
+                    909,
+                    381
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        406.0,
+                        291.0
+                    ],
+                    [
+                        909.0,
+                        291.0
+                    ],
+                    [
+                        909.0,
+                        381.0
+                    ],
+                    [
+                        406.0,
+                        381.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8042728304862976,
+                "coordinate": [
+                    437,
+                    386,
+                    689,
+                    407
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        437.0,
+                        386.0
+                    ],
+                    [
+                        688.0,
+                        386.0
+                    ],
+                    [
+                        688.0,
+                        406.0
+                    ],
+                    [
+                        437.0,
+                        406.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9245918989181519,
+                "coordinate": [
+                    437,
+                    410,
+                    907,
+                    484
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        437.0,
+                        410.0
+                    ],
+                    [
+                        907.0,
+                        410.0
+                    ],
+                    [
+                        907.0,
+                        484.0
+                    ],
+                    [
+                        437.0,
+                        484.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9317448735237122,
+                "coordinate": [
+                    437,
+                    487,
+                    906,
+                    578
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        437.0,
+                        487.0
+                    ],
+                    [
+                        906.0,
+                        487.0
+                    ],
+                    [
+                        906.0,
+                        578.0
+                    ],
+                    [
+                        437.0,
+                        578.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8927128314971924,
+                "coordinate": [
+                    437,
+                    582,
+                    905,
+                    620
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        437.0,
+                        582.0
+                    ],
+                    [
+                        905.0,
+                        582.0
+                    ],
+                    [
+                        905.0,
+                        620.0
+                    ],
+                    [
+                        437.0,
+                        620.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.900668740272522,
+                "coordinate": [
+                    437,
+                    624,
+                    906,
+                    680
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        437.0,
+                        624.0
+                    ],
+                    [
+                        906.0,
+                        624.0
+                    ],
+                    [
+                        906.0,
+                        680.0
+                    ],
+                    [
+                        437.0,
+                        680.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8143535852432251,
+                "coordinate": [
+                    437,
+                    684,
+                    794,
+                    705
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        437.0,
+                        684.0
+                    ],
+                    [
+                        793.0,
+                        684.0
+                    ],
+                    [
+                        793.0,
+                        704.0
+                    ],
+                    [
+                        437.0,
+                        704.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9130743741989136,
+                "coordinate": [
+                    405,
+                    708,
+                    907,
+                    763
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        405.0,
+                        708.0
+                    ],
+                    [
+                        907.0,
+                        708.0
+                    ],
+                    [
+                        907.0,
+                        763.0
+                    ],
+                    [
+                        405.0,
+                        763.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9481686949729919,
+                "coordinate": [
+                    405,
+                    767,
+                    907,
+                    910
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        405.0,
+                        767.0
+                    ],
+                    [
+                        907.0,
+                        767.0
+                    ],
+                    [
+                        907.0,
+                        910.0
+                    ],
+                    [
+                        405.0,
+                        910.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6880512833595276,
+                "coordinate": [
+                    878,
+                    926,
+                    907,
+                    943
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        878.0,
+                        926.0
+                    ],
+                    [
+                        906.0,
+                        926.0
+                    ],
+                    [
+                        906.0,
+                        942.0
+                    ],
+                    [
+                        878.0,
+                        942.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

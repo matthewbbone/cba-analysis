@@ -1,0 +1,461 @@
+{
+    "input_path": "cache/dol_archive/document_3522.pdf",
+    "page_index": 12,
+    "page_count": 62,
+    "width": 1223,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "3. In addition to the above management rights, The Adjutant General is given special authority in Public Law 90-486 (32 USC 709) to take the following actions and the right of appeal shall not extend beyond the adjutant general.",
+            "block_bbox": [
+                133,
+                156,
+                1066,
+                242
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    133.0,
+                    156.0
+                ],
+                [
+                    1066.0,
+                    156.0
+                ],
+                [
+                    1066.0,
+                    242.0
+                ],
+                [
+                    133.0,
+                    242.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a. Separate a technician who is separated from the National Guard, or ceases to hold the military grade specified for his position by the secretary concerned.",
+            "block_bbox": [
+                132,
+                267,
+                1038,
+                324
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    132.0,
+                    267.0
+                ],
+                [
+                    1038.0,
+                    267.0
+                ],
+                [
+                    1038.0,
+                    324.0
+                ],
+                [
+                    132.0,
+                    324.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b. Separate a technician who fails to meet the military security standards.",
+            "block_bbox": [
+                168,
+                350,
+                958,
+                379
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    168.212890625,
+                    344.0016174316406
+                ],
+                [
+                    957.212890625,
+                    350.0016174316406
+                ],
+                [
+                    957.0,
+                    377.9999694824219
+                ],
+                [
+                    168.0,
+                    371.9999694824219
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "c. Separate a technician for cause.",
+            "block_bbox": [
+                169,
+                406,
+                548,
+                434
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    169.0,
+                    406.0
+                ],
+                [
+                    548.0,
+                    406.0
+                ],
+                [
+                    548.0,
+                    434.0
+                ],
+                [
+                    169.0,
+                    434.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "d. Separate a technician for reduction-in-force, removal, or take adverse action involving discharge from technician employment, suspension, furlough without pay, or reduction in technician rank or compensation.",
+            "block_bbox": [
+                133,
+                462,
+                1062,
+                546
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    133.0,
+                    462.0
+                ],
+                [
+                    1062.0,
+                    462.0
+                ],
+                [
+                    1062.0,
+                    546.0
+                ],
+                [
+                    133.0,
+                    546.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "Agreement Between the Adjutant General of Michigan and the Laborers International Union of North America (LIUNA) September 2015",
+            "block_bbox": [
+                139,
+                1457,
+                931,
+                1495
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    139.0,
+                    1457.0
+                ],
+                [
+                    931.0,
+                    1457.0
+                ],
+                [
+                    931.0,
+                    1495.0
+                ],
+                [
+                    139.0,
+                    1495.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "13",
+            "block_bbox": [
+                1046,
+                1460,
+                1072,
+                1481
+            ],
+            "block_id": 6,
+            "block_order": null,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    1046.0,
+                    1460.0
+                ],
+                [
+                    1071.0,
+                    1460.0
+                ],
+                [
+                    1071.0,
+                    1480.0
+                ],
+                [
+                    1046.0,
+                    1480.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9357924461364746,
+                "coordinate": [
+                    133,
+                    156,
+                    1066,
+                    242
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        133.0,
+                        156.0
+                    ],
+                    [
+                        1066.0,
+                        156.0
+                    ],
+                    [
+                        1066.0,
+                        242.0
+                    ],
+                    [
+                        133.0,
+                        242.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9206830859184265,
+                "coordinate": [
+                    132,
+                    267,
+                    1038,
+                    324
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        132.0,
+                        267.0
+                    ],
+                    [
+                        1038.0,
+                        267.0
+                    ],
+                    [
+                        1038.0,
+                        324.0
+                    ],
+                    [
+                        132.0,
+                        324.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8589450120925903,
+                "coordinate": [
+                    168,
+                    350,
+                    958,
+                    379
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        168.212890625,
+                        344.0016174316406
+                    ],
+                    [
+                        957.212890625,
+                        350.0016174316406
+                    ],
+                    [
+                        957.0,
+                        377.9999694824219
+                    ],
+                    [
+                        168.0,
+                        371.9999694824219
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8321903944015503,
+                "coordinate": [
+                    169,
+                    406,
+                    548,
+                    434
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        169.0,
+                        406.0
+                    ],
+                    [
+                        548.0,
+                        406.0
+                    ],
+                    [
+                        548.0,
+                        434.0
+                    ],
+                    [
+                        169.0,
+                        434.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9347314238548279,
+                "coordinate": [
+                    133,
+                    462,
+                    1062,
+                    546
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        133.0,
+                        462.0
+                    ],
+                    [
+                        1062.0,
+                        462.0
+                    ],
+                    [
+                        1062.0,
+                        546.0
+                    ],
+                    [
+                        133.0,
+                        546.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8755589723587036,
+                "coordinate": [
+                    139,
+                    1457,
+                    931,
+                    1495
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        139.0,
+                        1457.0
+                    ],
+                    [
+                        931.0,
+                        1457.0
+                    ],
+                    [
+                        931.0,
+                        1495.0
+                    ],
+                    [
+                        139.0,
+                        1495.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.755834698677063,
+                "coordinate": [
+                    1046,
+                    1460,
+                    1072,
+                    1481
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        1046.0,
+                        1460.0
+                    ],
+                    [
+                        1071.0,
+                        1460.0
+                    ],
+                    [
+                        1071.0,
+                        1480.0
+                    ],
+                    [
+                        1046.0,
+                        1480.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

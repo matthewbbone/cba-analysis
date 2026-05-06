@@ -1,0 +1,644 @@
+{
+    "input_path": "cache/cornell_dol/K800147ABBYY.pdf",
+    "page_index": 107,
+    "page_count": 125,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "h. Refusal to submit to testing. An employee who (a) refuses or fails to provide adequate urine for controlled substances testing without a valid medical explanation after the employee has received notice of the requirement for urine testing; or (b) refuses or fails to provide adequate breath for testing without a valid medical explanation after the employee has received notice of the requirement for breath testing; (c) engages in conduct that clearly obstructs the testing process.",
+            "block_bbox": [
+                208,
+                170,
+                1084,
+                340
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    208.0,
+                    170.0
+                ],
+                [
+                    1084.0,
+                    170.0
+                ],
+                [
+                    1084.0,
+                    340.0
+                ],
+                [
+                    208.0,
+                    340.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "i. Positive Test:",
+            "block_bbox": [
+                211,
+                364,
+                429,
+                393
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    211.0,
+                    364.0
+                ],
+                [
+                    429.0,
+                    364.0
+                ],
+                [
+                    429.0,
+                    393.0
+                ],
+                [
+                    211.0,
+                    393.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1) Screening test cut off levels:",
+            "block_bbox": [
+                284,
+                419,
+                632,
+                449
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    284.0,
+                    419.0
+                ],
+                [
+                    632.0,
+                    419.0
+                ],
+                [
+                    632.0,
+                    449.0
+                ],
+                [
+                    284.0,
+                    449.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>*a)</td><td>Marijuana</td><td>50 ng/ml</td></tr><tr><td>*b)</td><td>Cocaine</td><td>300 ng/ml</td></tr><tr><td>*c)</td><td>Opiates</td><td>300 ng/ml</td></tr><tr><td>*d)</td><td>Phencyclidine</td><td>25 ng/ml</td></tr><tr><td>*e)</td><td>Amphetamines</td><td>1,000 ng/ml</td></tr><tr><td>**f)</td><td>Barbiturates</td><td>300 ng/ml</td></tr><tr><td>**g)</td><td>Benzodiazepine</td><td>300 ng/ml</td></tr><tr><td>**h)</td><td>Quaaludes (Methaqualine)</td><td>300 ng/ml</td></tr></table>",
+            "block_bbox": [
+                355,
+                468,
+                910,
+                701
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    355.0,
+                    468.0
+                ],
+                [
+                    910.0,
+                    468.0
+                ],
+                [
+                    910.0,
+                    701.0
+                ],
+                [
+                    355.0,
+                    701.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "2) Confirmatory test cut off levels:",
+            "block_bbox": [
+                283,
+                721,
+                666,
+                753
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    283.0,
+                    721.0
+                ],
+                [
+                    666.0,
+                    721.0
+                ],
+                [
+                    666.0,
+                    753.0
+                ],
+                [
+                    283.0,
+                    753.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>$ ^{*} $a)</td><td>Marijuana</td><td>15 ng/ml</td></tr><tr><td>$ ^{*} $b)</td><td>Cocaine</td><td>150 ng/ml</td></tr><tr><td>$ ^{*} $c)</td><td>Opiates</td><td>300 ng/ml</td></tr><tr><td>$ ^{*} $d)</td><td>Phencyclidine</td><td>25 ng/ml</td></tr><tr><td>$ ^{*} $e)</td><td>Amphetamines</td><td>500 ng/ml</td></tr><tr><td>$ ^{**} $f)</td><td>Barbiturates</td><td>200 ng/ml</td></tr><tr><td>$ ^{**} $g)</td><td>Benzodiazepine</td><td>200 ng/ml</td></tr><tr><td>$ ^{**} $h)</td><td>Quaaludes (Methaqualine)</td><td>200 ng/ml</td></tr></table>",
+            "block_bbox": [
+                355,
+                771,
+                894,
+                1004
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    355.0,
+                    771.0
+                ],
+                [
+                    894.0,
+                    771.0
+                ],
+                [
+                    894.0,
+                    1004.0
+                ],
+                [
+                    355.0,
+                    1004.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "These cutoff levels are established consistent with the Mandatory Guidelines for Federal Drug Testing Programs and are subject to change by the Department of Health and Human Services (DHHS). When advances in technology or other considerations warrant identification of these substances in other concentrations and the Department of Health and Human Services (DHHS) changes the Mandatory Guidelines for Federal Drug Testing Programs, the Drug Testing thresholds enumerated above will be changed as of the same effective date.",
+            "block_bbox": [
+                137,
+                1027,
+                1085,
+                1198
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    137.0,
+                    1027.0
+                ],
+                [
+                    1085.0,
+                    1027.0
+                ],
+                [
+                    1085.0,
+                    1198.0
+                ],
+                [
+                    137.0,
+                    1198.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "These cutoff levels are established with acceptable certified laboratory testing standards and are subject to change when advances in technology or other considerations warrant identification of these substances in other concentrations and the certified laboratory standards are changed.",
+            "block_bbox": [
+                137,
+                1219,
+                1085,
+                1334
+            ],
+            "block_id": 7,
+            "block_order": 6,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    137.0,
+                    1219.0
+                ],
+                [
+                    1085.0,
+                    1219.0
+                ],
+                [
+                    1085.0,
+                    1334.0
+                ],
+                [
+                    137.0,
+                    1334.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "j. The selected contractor must use a Department of Health and Human Services certified laboratory.",
+            "block_bbox": [
+                208,
+                1359,
+                1083,
+                1415
+            ],
+            "block_id": 8,
+            "block_order": 7,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    208.0,
+                    1359.0
+                ],
+                [
+                    1083.0,
+                    1359.0
+                ],
+                [
+                    1083.0,
+                    1415.0
+                ],
+                [
+                    208.0,
+                    1415.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "108",
+            "block_bbox": [
+                592,
+                1486,
+                632,
+                1505
+            ],
+            "block_id": 9,
+            "block_order": null,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    592.0,
+                    1486.0
+                ],
+                [
+                    631.0,
+                    1486.0
+                ],
+                [
+                    631.0,
+                    1504.0
+                ],
+                [
+                    592.0,
+                    1504.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9496105313301086,
+                "coordinate": [
+                    208,
+                    170,
+                    1084,
+                    340
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        208.0,
+                        170.0
+                    ],
+                    [
+                        1084.0,
+                        170.0
+                    ],
+                    [
+                        1084.0,
+                        340.0
+                    ],
+                    [
+                        208.0,
+                        340.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7883970141410828,
+                "coordinate": [
+                    211,
+                    364,
+                    429,
+                    393
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        211.0,
+                        364.0
+                    ],
+                    [
+                        429.0,
+                        364.0
+                    ],
+                    [
+                        429.0,
+                        393.0
+                    ],
+                    [
+                        211.0,
+                        393.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.44026532769203186,
+                "coordinate": [
+                    284,
+                    419,
+                    632,
+                    449
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        284.0,
+                        419.0
+                    ],
+                    [
+                        632.0,
+                        419.0
+                    ],
+                    [
+                        632.0,
+                        449.0
+                    ],
+                    [
+                        284.0,
+                        449.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.6587356328964233,
+                "coordinate": [
+                    355,
+                    468,
+                    910,
+                    701
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        355.0,
+                        468.0
+                    ],
+                    [
+                        910.0,
+                        468.0
+                    ],
+                    [
+                        910.0,
+                        701.0
+                    ],
+                    [
+                        355.0,
+                        701.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.389545202255249,
+                "coordinate": [
+                    283,
+                    721,
+                    666,
+                    753
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        283.0,
+                        721.0
+                    ],
+                    [
+                        666.0,
+                        721.0
+                    ],
+                    [
+                        666.0,
+                        753.0
+                    ],
+                    [
+                        283.0,
+                        753.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.6014007329940796,
+                "coordinate": [
+                    355,
+                    771,
+                    894,
+                    1004
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        355.0,
+                        771.0
+                    ],
+                    [
+                        894.0,
+                        771.0
+                    ],
+                    [
+                        894.0,
+                        1004.0
+                    ],
+                    [
+                        355.0,
+                        1004.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9483059048652649,
+                "coordinate": [
+                    137,
+                    1027,
+                    1085,
+                    1198
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        137.0,
+                        1027.0
+                    ],
+                    [
+                        1085.0,
+                        1027.0
+                    ],
+                    [
+                        1085.0,
+                        1198.0
+                    ],
+                    [
+                        137.0,
+                        1198.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9460647702217102,
+                "coordinate": [
+                    137,
+                    1219,
+                    1085,
+                    1334
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        137.0,
+                        1219.0
+                    ],
+                    [
+                        1085.0,
+                        1219.0
+                    ],
+                    [
+                        1085.0,
+                        1334.0
+                    ],
+                    [
+                        137.0,
+                        1334.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5441864132881165,
+                "coordinate": [
+                    208,
+                    1359,
+                    1083,
+                    1415
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        208.0,
+                        1359.0
+                    ],
+                    [
+                        1083.0,
+                        1359.0
+                    ],
+                    [
+                        1083.0,
+                        1415.0
+                    ],
+                    [
+                        208.0,
+                        1415.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7670079469680786,
+                "coordinate": [
+                    592,
+                    1486,
+                    632,
+                    1505
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        592.0,
+                        1486.0
+                    ],
+                    [
+                        631.0,
+                        1486.0
+                    ],
+                    [
+                        631.0,
+                        1504.0
+                    ],
+                    [
+                        592.0,
+                        1504.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

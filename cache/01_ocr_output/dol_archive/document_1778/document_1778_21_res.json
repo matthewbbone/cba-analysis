@@ -1,0 +1,1162 @@
+{
+    "input_path": "cache/dol_archive/document_1778.pdf",
+    "page_index": 21,
+    "page_count": 32,
+    "width": 549,
+    "height": 1221,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "SCHEDULE A",
+            "block_bbox": [
+                224,
+                29,
+                335,
+                48
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    224.0,
+                    29.0
+                ],
+                [
+                    334.0,
+                    29.0
+                ],
+                [
+                    334.0,
+                    47.0
+                ],
+                [
+                    224.0,
+                    47.0
+                ]
+            ]
+        },
+        {
+            "block_label": "doc_title",
+            "block_content": "WAGES AND WAGE INCREASES",
+            "block_bbox": [
+                152,
+                66,
+                407,
+                85
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    152.0,
+                    66.0
+                ],
+                [
+                    406.0,
+                    66.0
+                ],
+                [
+                    406.0,
+                    84.0
+                ],
+                [
+                    152.0,
+                    84.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "(A) ASSISTANT MANAGERS PRESENTLY REGULARY ASSIGNED On PAYROLL AS OF December 28, 2013:",
+            "block_bbox": [
+                33,
+                101,
+                466,
+                137
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    33.0,
+                    101.0
+                ],
+                [
+                    466.0,
+                    101.0
+                ],
+                [
+                    466.0,
+                    137.0
+                ],
+                [
+                    33.0,
+                    137.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "Present Rate",
+            "block_bbox": [
+                33,
+                143,
+                125,
+                160
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    33.0,
+                    143.0
+                ],
+                [
+                    124.0,
+                    143.0
+                ],
+                [
+                    124.0,
+                    159.0
+                ],
+                [
+                    33.0,
+                    159.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td rowspan=\"2\"></td><td>12/29/13</td><td>9/28/2014</td><td>6/28/2015</td><td>2/28/2016</td></tr><tr><td>$ .25</td><td>$ .30</td><td>$ .30</td><td>(Catch-Up)</td></tr><tr><td>$1,185</td><td>$1,195</td><td>$1,207</td><td>$1,219</td><td></td></tr><tr><td>$1,165</td><td>$1,175</td><td>$1,187</td><td>$1,199</td><td>$1,219</td></tr></table>",
+            "block_bbox": [
+                33,
+                153,
+                521,
+                235
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    33.0,
+                    153.0
+                ],
+                [
+                    521.0,
+                    153.0
+                ],
+                [
+                    521.0,
+                    235.0
+                ],
+                [
+                    33.0,
+                    235.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "New Minimum Rates for Assistant Managers hired or appointed on or after 12/29/13 in stores with Volume of $275,000 or more per week.",
+            "block_bbox": [
+                32,
+                249,
+                515,
+                285
+            ],
+            "block_id": 5,
+            "block_order": 3,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    32.0,
+                    249.0
+                ],
+                [
+                    515.0,
+                    249.0
+                ],
+                [
+                    515.0,
+                    285.0
+                ],
+                [
+                    32.0,
+                    285.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>12/29/13</td><td>9/28/2014</td><td>6/28/2015</td><td>2/28/2016</td></tr><tr><td>$ .25</td><td>$ .30</td><td>$ .30</td><td>(Catch-Up)</td></tr><tr><td>$1,165</td><td>$1,177</td><td>$1,189</td><td>$1,219</td></tr></table>",
+            "block_bbox": [
+                116,
+                298,
+                522,
+                358
+            ],
+            "block_id": 6,
+            "block_order": null,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    116.0,
+                    298.0
+                ],
+                [
+                    522.0,
+                    298.0
+                ],
+                [
+                    522.0,
+                    358.0
+                ],
+                [
+                    116.0,
+                    358.0
+                ]
+            ]
+        },
+        {
+            "block_label": "vision_footnote",
+            "block_content": "There shall be one Assistant Manager per store.",
+            "block_bbox": [
+                116,
+                374,
+                441,
+                394
+            ],
+            "block_id": 7,
+            "block_order": null,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    116.0,
+                    374.0
+                ],
+                [
+                    440.0,
+                    374.0
+                ],
+                [
+                    440.0,
+                    393.0
+                ],
+                [
+                    116.0,
+                    393.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "(B) PRODUCE AND APPETIZING DEPARTMENT HEADS PRESENTLY REGULARLY ASSIGNED On payroll as of December 28, 2013:",
+            "block_bbox": [
+                31,
+                410,
+                523,
+                462
+            ],
+            "block_id": 8,
+            "block_order": null,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    31.042724609375,
+                    405.8184509277344
+                ],
+                [
+                    520.5130615234375,
+                    410.8232116699219
+                ],
+                [
+                    520.0,
+                    460.9999694824219
+                ],
+                [
+                    30.52968978881836,
+                    455.9952087402344
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td colspan=\"5\">Present Rate</td></tr><tr><td></td><td>12/29/13</td><td>9/28/2014</td><td>6/28/2015</td><td>2/28/2016</td></tr><tr><td></td><td>$ .25</td><td>$ .30</td><td>$ .30</td><td>(Catch-Up)</td></tr><tr><td>$1,170</td><td>$1,180</td><td>$1,192</td><td>$1,204</td><td></td></tr><tr><td>$1,135</td><td>$1,145</td><td>$1,157</td><td>$1,169</td><td>$1,204</td></tr></table>",
+            "block_bbox": [
+                31,
+                470,
+                521,
+                553
+            ],
+            "block_id": 9,
+            "block_order": null,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    31.0,
+                    470.0
+                ],
+                [
+                    521.0,
+                    470.0
+                ],
+                [
+                    521.0,
+                    553.0
+                ],
+                [
+                    31.0,
+                    553.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td colspan=\"4\">New Minimum Rates for Department Heads hired or appointed on or after 12/29/13:</td></tr><tr><td>12/29/13</td><td>9/28/2014</td><td>6/28/2015</td><td>2/28/2016</td></tr><tr><td>$1,135.</td><td>$1,147</td><td>$1,157</td><td>$1,169</td></tr></table>",
+            "block_bbox": [
+                31,
+                568,
+                520,
+                642
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    31.0,
+                    568.0
+                ],
+                [
+                    520.0,
+                    568.0
+                ],
+                [
+                    520.0,
+                    642.0
+                ],
+                [
+                    31.0,
+                    642.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Effective December 29, 2013, a store doing a volume of $275,000 per week or less the Company will not be required to appoint an Assistant Manager or a Department Head. However, any clerk assigned to be in charge of the department, will receive a twenty ($20.00) Dollar per week premium.",
+            "block_bbox": [
+                30,
+                657,
+                525,
+                740
+            ],
+            "block_id": 11,
+            "block_order": 4,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    30.0,
+                    657.0
+                ],
+                [
+                    525.0,
+                    657.0
+                ],
+                [
+                    525.0,
+                    740.0
+                ],
+                [
+                    30.0,
+                    740.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Any Assistant Manager or Department Head who is transferred to a store doing less than the above listed volume or is demoted and subsequently reassigned, said Assistant Manager or Department Head will receive the appropriate Assistant Manager's or Department Head's rate of pay, upon their being transferred and or reclassified. In a store where the total store sales is less than $275,000, the company will not be required to appoint an Assistant Manager or Department Head. The Assistant Manager or Department Head in that store will not receive a reduction in pay but will be transferred to a store which does a volume greater than $275,000 at the first available opportunity.",
+            "block_bbox": [
+                29,
+                740,
+                526,
+                902
+            ],
+            "block_id": 12,
+            "block_order": 5,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    29.0,
+                    740.0
+                ],
+                [
+                    526.0,
+                    740.0
+                ],
+                [
+                    526.0,
+                    902.0
+                ],
+                [
+                    29.0,
+                    902.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Effective June 21, 1998 Part Time employees who have never relieved a Department Manager prior to June 21, 1998 shall receive a minimum rate of $650.00 for five (5) days forty (40) hours for each week of relief.",
+            "block_bbox": [
+                29,
+                903,
+                525,
+                952
+            ],
+            "block_id": 13,
+            "block_order": 6,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    29.0,
+                    903.0
+                ],
+                [
+                    525.0,
+                    903.0
+                ],
+                [
+                    525.0,
+                    952.0
+                ],
+                [
+                    29.0,
+                    952.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Effective June 23, 2002 Full-Time employees who have relieved a Department Head prior to June 23, 2002 shall receive a minimum rate of $865.00 per week. Full-Time employees who have never relieved a Department Head, the minimum rate shall be $825.00 per week. Any Full-Time employee who relieves that makes at or above these rates shall receive a premium of $10.00 per week for such relief.",
+            "block_bbox": [
+                29,
+                953,
+                526,
+                1050
+            ],
+            "block_id": 14,
+            "block_order": 7,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    29.0,
+                    953.0
+                ],
+                [
+                    526.0,
+                    953.0
+                ],
+                [
+                    526.0,
+                    1050.0
+                ],
+                [
+                    29.0,
+                    1050.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Newly hired or appointed Assistant Managers and Department Heads after June 22, 1985, will be on a ninety (90) day trial period.",
+            "block_bbox": [
+                29,
+                1051,
+                525,
+                1084
+            ],
+            "block_id": 15,
+            "block_order": 8,
+            "group_id": 15,
+            "block_polygon_points": [
+                [
+                    29.0,
+                    1051.0
+                ],
+                [
+                    525.0,
+                    1051.0
+                ],
+                [
+                    525.0,
+                    1084.0
+                ],
+                [
+                    29.0,
+                    1084.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "An employee promoted to Assistant Manager and Department Head Classification shall receive twenty ($20.00) dollars above their applicable rate of pay for a ninety (90) day trial period. Such employees, after (90) day trial period shall continue to receive the twenty ($20.00) Dollars",
+            "block_bbox": [
+                28,
+                1085,
+                527,
+                1151
+            ],
+            "block_id": 16,
+            "block_order": 9,
+            "group_id": 16,
+            "block_polygon_points": [
+                [
+                    28.0,
+                    1085.0
+                ],
+                [
+                    527.0,
+                    1085.0
+                ],
+                [
+                    527.0,
+                    1151.0
+                ],
+                [
+                    28.0,
+                    1151.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "20",
+            "block_bbox": [
+                268,
+                1171,
+                289,
+                1187
+            ],
+            "block_id": 17,
+            "block_order": null,
+            "group_id": 17,
+            "block_polygon_points": [
+                [
+                    268.0,
+                    1171.0
+                ],
+                [
+                    288.0,
+                    1171.0
+                ],
+                [
+                    288.0,
+                    1186.0
+                ],
+                [
+                    268.0,
+                    1186.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.5815187096595764,
+                "coordinate": [
+                    224,
+                    29,
+                    335,
+                    48
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        224.0,
+                        29.0
+                    ],
+                    [
+                        334.0,
+                        29.0
+                    ],
+                    [
+                        334.0,
+                        47.0
+                    ],
+                    [
+                        224.0,
+                        47.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.5974052548408508,
+                "coordinate": [
+                    152,
+                    66,
+                    407,
+                    85
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        152.0,
+                        66.0
+                    ],
+                    [
+                        406.0,
+                        66.0
+                    ],
+                    [
+                        406.0,
+                        84.0
+                    ],
+                    [
+                        152.0,
+                        84.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5750517845153809,
+                "coordinate": [
+                    33,
+                    101,
+                    466,
+                    137
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        33.0,
+                        101.0
+                    ],
+                    [
+                        466.0,
+                        101.0
+                    ],
+                    [
+                        466.0,
+                        137.0
+                    ],
+                    [
+                        33.0,
+                        137.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.3568588197231293,
+                "coordinate": [
+                    33,
+                    143,
+                    125,
+                    160
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        33.0,
+                        143.0
+                    ],
+                    [
+                        124.0,
+                        143.0
+                    ],
+                    [
+                        124.0,
+                        159.0
+                    ],
+                    [
+                        33.0,
+                        159.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.8567556738853455,
+                "coordinate": [
+                    33,
+                    153,
+                    521,
+                    235
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        33.0,
+                        153.0
+                    ],
+                    [
+                        521.0,
+                        153.0
+                    ],
+                    [
+                        521.0,
+                        235.0
+                    ],
+                    [
+                        33.0,
+                        235.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5146023035049438,
+                "coordinate": [
+                    32,
+                    249,
+                    515,
+                    285
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        32.0,
+                        249.0
+                    ],
+                    [
+                        515.0,
+                        249.0
+                    ],
+                    [
+                        515.0,
+                        285.0
+                    ],
+                    [
+                        32.0,
+                        285.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.8274316787719727,
+                "coordinate": [
+                    116,
+                    298,
+                    522,
+                    358
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        116.0,
+                        298.0
+                    ],
+                    [
+                        522.0,
+                        298.0
+                    ],
+                    [
+                        522.0,
+                        358.0
+                    ],
+                    [
+                        116.0,
+                        358.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.6005879640579224,
+                "coordinate": [
+                    116,
+                    374,
+                    441,
+                    394
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        116.0,
+                        374.0
+                    ],
+                    [
+                        440.0,
+                        374.0
+                    ],
+                    [
+                        440.0,
+                        393.0
+                    ],
+                    [
+                        116.0,
+                        393.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.5102075338363647,
+                "coordinate": [
+                    31,
+                    410,
+                    523,
+                    462
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        31.042724609375,
+                        405.8184509277344
+                    ],
+                    [
+                        520.5130615234375,
+                        410.8232116699219
+                    ],
+                    [
+                        520.0,
+                        460.9999694824219
+                    ],
+                    [
+                        30.52968978881836,
+                        455.9952087402344
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.8386510610580444,
+                "coordinate": [
+                    31,
+                    470,
+                    521,
+                    553
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        31.0,
+                        470.0
+                    ],
+                    [
+                        521.0,
+                        470.0
+                    ],
+                    [
+                        521.0,
+                        553.0
+                    ],
+                    [
+                        31.0,
+                        553.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.5598240494728088,
+                "coordinate": [
+                    31,
+                    568,
+                    520,
+                    642
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        31.0,
+                        568.0
+                    ],
+                    [
+                        520.0,
+                        568.0
+                    ],
+                    [
+                        520.0,
+                        642.0
+                    ],
+                    [
+                        31.0,
+                        642.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.4714573323726654,
+                "coordinate": [
+                    85,
+                    601,
+                    512,
+                    642
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        85.0,
+                        601.0
+                    ],
+                    [
+                        512.0,
+                        601.0
+                    ],
+                    [
+                        512.0,
+                        642.0
+                    ],
+                    [
+                        85.0,
+                        642.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9276612401008606,
+                "coordinate": [
+                    30,
+                    657,
+                    525,
+                    740
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        30.0,
+                        657.0
+                    ],
+                    [
+                        525.0,
+                        657.0
+                    ],
+                    [
+                        525.0,
+                        740.0
+                    ],
+                    [
+                        30.0,
+                        740.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9638792276382446,
+                "coordinate": [
+                    29,
+                    740,
+                    526,
+                    902
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        29.0,
+                        740.0
+                    ],
+                    [
+                        526.0,
+                        740.0
+                    ],
+                    [
+                        526.0,
+                        902.0
+                    ],
+                    [
+                        29.0,
+                        902.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9328209757804871,
+                "coordinate": [
+                    29,
+                    903,
+                    525,
+                    952
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        29.0,
+                        903.0
+                    ],
+                    [
+                        525.0,
+                        903.0
+                    ],
+                    [
+                        525.0,
+                        952.0
+                    ],
+                    [
+                        29.0,
+                        952.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9562653303146362,
+                "coordinate": [
+                    29,
+                    953,
+                    526,
+                    1050
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        29.0,
+                        953.0
+                    ],
+                    [
+                        526.0,
+                        953.0
+                    ],
+                    [
+                        526.0,
+                        1050.0
+                    ],
+                    [
+                        29.0,
+                        1050.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9123659133911133,
+                "coordinate": [
+                    29,
+                    1051,
+                    525,
+                    1084
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        29.0,
+                        1051.0
+                    ],
+                    [
+                        525.0,
+                        1051.0
+                    ],
+                    [
+                        525.0,
+                        1084.0
+                    ],
+                    [
+                        29.0,
+                        1084.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9398737549781799,
+                "coordinate": [
+                    28,
+                    1085,
+                    527,
+                    1151
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        28.0,
+                        1085.0
+                    ],
+                    [
+                        527.0,
+                        1085.0
+                    ],
+                    [
+                        527.0,
+                        1151.0
+                    ],
+                    [
+                        28.0,
+                        1151.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7807948589324951,
+                "coordinate": [
+                    268,
+                    1171,
+                    289,
+                    1187
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        268.0,
+                        1171.0
+                    ],
+                    [
+                        288.0,
+                        1171.0
+                    ],
+                    [
+                        288.0,
+                        1186.0
+                    ],
+                    [
+                        268.0,
+                        1186.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

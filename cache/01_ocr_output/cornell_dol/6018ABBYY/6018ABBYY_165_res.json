@@ -1,0 +1,705 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 165,
+    "page_count": 287,
+    "width": 732,
+    "height": 1015,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "CUSTOMER SERVICE DEPARTMENT",
+            "block_bbox": [
+                54,
+                62,
+                270,
+                81
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    54.0,
+                    62.0
+                ],
+                [
+                    269.0,
+                    62.0
+                ],
+                [
+                    269.0,
+                    80.0
+                ],
+                [
+                    54.0,
+                    80.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "LETTER #2\nWorksharing Agreement",
+            "block_bbox": [
+                225,
+                91,
+                464,
+                152
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    225.0,
+                    91.0
+                ],
+                [
+                    464.0,
+                    91.0
+                ],
+                [
+                    464.0,
+                    152.0
+                ],
+                [
+                    225.0,
+                    152.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The purpose of this letter is to confirm the understanding reached between the parties during the Customer Service negotiations.",
+            "block_bbox": [
+                53,
+                172,
+                633,
+                218
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    53.0,
+                    172.0
+                ],
+                [
+                    633.0,
+                    172.0
+                ],
+                [
+                    633.0,
+                    218.0
+                ],
+                [
+                    53.0,
+                    218.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "It was agreed that the Company may utilize Customer Billing and Collection Department personnel to handle incoming calls/inquiries for a period not to exceed sixty (60) days from the implementation of the new CSB system.",
+            "block_bbox": [
+                53,
+                238,
+                633,
+                327
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    53.0,
+                    238.0
+                ],
+                [
+                    633.0,
+                    238.0
+                ],
+                [
+                    633.0,
+                    327.0
+                ],
+                [
+                    53.0,
+                    327.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "LETTER #3",
+            "block_bbox": [
+                282,
+                359,
+                404,
+                384
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    282.0,
+                    359.0
+                ],
+                [
+                    404.0,
+                    359.0
+                ],
+                [
+                    404.0,
+                    384.0
+                ],
+                [
+                    282.0,
+                    384.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Vacation Scheduling Criteria",
+            "block_bbox": [
+                202,
+                395,
+                483,
+                422
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    202.0,
+                    395.0
+                ],
+                [
+                    483.0,
+                    395.0
+                ],
+                [
+                    483.0,
+                    422.0
+                ],
+                [
+                    202.0,
+                    422.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "It is mutually agreed between the parties that for vacation scheduling purposes for the Customer Service Department, Company Service Date will be used for vacation selection.",
+            "block_bbox": [
+                53,
+                442,
+                633,
+                510
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    53.0,
+                    442.0
+                ],
+                [
+                    633.0,
+                    442.0
+                ],
+                [
+                    633.0,
+                    510.0
+                ],
+                [
+                    53.0,
+                    510.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "LETTER #4",
+            "block_bbox": [
+                282,
+                542,
+                404,
+                567
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    282.0,
+                    542.0
+                ],
+                [
+                    404.0,
+                    542.0
+                ],
+                [
+                    404.0,
+                    567.0
+                ],
+                [
+                    282.0,
+                    567.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Duties Within Classification",
+            "block_bbox": [
+                208,
+                577,
+                477,
+                604
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    208.0,
+                    577.0
+                ],
+                [
+                    477.0,
+                    577.0
+                ],
+                [
+                    477.0,
+                    604.0
+                ],
+                [
+                    208.0,
+                    604.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "If there are other duties which are currently being performed by Customer Service, Grat, and New Service or Station Assistant Representatives, but which are not reflected within the agreed upon list of duties, the Company and the Union agree that those duties will be considered part of the classification with the exception of issues which are currently in dispute or being handled through the grievance procedure.",
+            "block_bbox": [
+                52,
+                624,
+                633,
+                758
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    52.0,
+                    624.0
+                ],
+                [
+                    633.0,
+                    624.0
+                ],
+                [
+                    633.0,
+                    758.0
+                ],
+                [
+                    52.0,
+                    758.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "156",
+            "block_bbox": [
+                328,
+                948,
+                357,
+                965
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    328.0,
+                    948.0
+                ],
+                [
+                    356.0,
+                    948.0
+                ],
+                [
+                    356.0,
+                    964.0
+                ],
+                [
+                    328.0,
+                    964.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8381489515304565,
+                "coordinate": [
+                    54,
+                    62,
+                    270,
+                    81
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        54.0,
+                        62.0
+                    ],
+                    [
+                        269.0,
+                        62.0
+                    ],
+                    [
+                        269.0,
+                        80.0
+                    ],
+                    [
+                        54.0,
+                        80.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.44625818729400635,
+                "coordinate": [
+                    225,
+                    91,
+                    464,
+                    152
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        225.0,
+                        91.0
+                    ],
+                    [
+                        464.0,
+                        91.0
+                    ],
+                    [
+                        464.0,
+                        152.0
+                    ],
+                    [
+                        225.0,
+                        152.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9195973873138428,
+                "coordinate": [
+                    53,
+                    172,
+                    633,
+                    218
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        53.0,
+                        172.0
+                    ],
+                    [
+                        633.0,
+                        172.0
+                    ],
+                    [
+                        633.0,
+                        218.0
+                    ],
+                    [
+                        53.0,
+                        218.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9417561292648315,
+                "coordinate": [
+                    53,
+                    238,
+                    633,
+                    327
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        53.0,
+                        238.0
+                    ],
+                    [
+                        633.0,
+                        238.0
+                    ],
+                    [
+                        633.0,
+                        327.0
+                    ],
+                    [
+                        53.0,
+                        327.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8692750930786133,
+                "coordinate": [
+                    282,
+                    359,
+                    404,
+                    384
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        282.0,
+                        359.0
+                    ],
+                    [
+                        404.0,
+                        359.0
+                    ],
+                    [
+                        404.0,
+                        384.0
+                    ],
+                    [
+                        282.0,
+                        384.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8662654757499695,
+                "coordinate": [
+                    202,
+                    395,
+                    483,
+                    422
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        202.0,
+                        395.0
+                    ],
+                    [
+                        483.0,
+                        395.0
+                    ],
+                    [
+                        483.0,
+                        422.0
+                    ],
+                    [
+                        202.0,
+                        422.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9369785785675049,
+                "coordinate": [
+                    53,
+                    442,
+                    633,
+                    510
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        53.0,
+                        442.0
+                    ],
+                    [
+                        633.0,
+                        442.0
+                    ],
+                    [
+                        633.0,
+                        510.0
+                    ],
+                    [
+                        53.0,
+                        510.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8513005971908569,
+                "coordinate": [
+                    282,
+                    542,
+                    404,
+                    567
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        282.0,
+                        542.0
+                    ],
+                    [
+                        404.0,
+                        542.0
+                    ],
+                    [
+                        404.0,
+                        567.0
+                    ],
+                    [
+                        282.0,
+                        567.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8395376205444336,
+                "coordinate": [
+                    208,
+                    577,
+                    477,
+                    604
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        208.0,
+                        577.0
+                    ],
+                    [
+                        477.0,
+                        577.0
+                    ],
+                    [
+                        477.0,
+                        604.0
+                    ],
+                    [
+                        208.0,
+                        604.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9563931822776794,
+                "coordinate": [
+                    52,
+                    624,
+                    633,
+                    758
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        52.0,
+                        624.0
+                    ],
+                    [
+                        633.0,
+                        624.0
+                    ],
+                    [
+                        633.0,
+                        758.0
+                    ],
+                    [
+                        52.0,
+                        758.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.78737473487854,
+                "coordinate": [
+                    328,
+                    948,
+                    357,
+                    965
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        328.0,
+                        948.0
+                    ],
+                    [
+                        356.0,
+                        948.0
+                    ],
+                    [
+                        356.0,
+                        964.0
+                    ],
+                    [
+                        328.0,
+                        964.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

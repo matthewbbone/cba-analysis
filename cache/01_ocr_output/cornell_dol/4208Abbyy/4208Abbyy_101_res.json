@@ -1,0 +1,552 @@
+{
+    "input_path": "cache/cornell_dol/4208Abbyy.pdf",
+    "page_index": 101,
+    "page_count": 128,
+    "width": 772,
+    "height": 1204,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "aside_text",
+            "block_content": "1234567890123456789012345678901234567890123456",
+            "block_bbox": [
+                27,
+                73,
+                56,
+                1141
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    35.00022888183594,
+                    72.936279296875
+                ],
+                [
+                    51.99999237060547,
+                    73.0
+                ],
+                [
+                    47.99976348876953,
+                    1140.0638427734375
+                ],
+                [
+                    31.000001907348633,
+                    1140.0001220703125
+                ]
+            ]
+        },
+        {
+            "block_label": "aside_text",
+            "block_content": "ーーーーー",
+            "block_bbox": [
+                0,
+                134,
+                7,
+                263
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    0.0,
+                    134.0
+                ],
+                [
+                    6.0,
+                    134.0
+                ],
+                [
+                    6.0,
+                    262.0
+                ],
+                [
+                    -3.918869928272537e-15,
+                    262.0
+                ]
+            ]
+        },
+        {
+            "block_label": "content",
+            "block_content": "ADA Code\nMaximum\nCovered Expense\nPROSTHODONTICS\nDentures (includes six (6) months post-delivery care):\nD5110/D5120 Complete upper or lower ..... $481\nD5130/D5140 Immediate upper or lower ..... $28\nD5211/D5212 Partial upper or lower acrylic base (including any conventional clasps and rests) ..... $17\nD5213/D5214 Partial upper or lower, predominantly cast base with acrylic saddles (including any conventional clasps and rests) ..... $81\nRelated Denture Services:\nD5410-D5422 Denture adjustment (complete or partial) ..... $34\nD5510 Repair denture (no teeth damage) ..... $48\nD5520 Replace missing or broken tooth (per tooth) ..... $48\nD5710-D5721 Denture conversion ..... $148\nD5730-D5741 Reline denture - office ..... $79\nD5750-D5761 Reline denture - lab ..... $148\nBridgework:\nD6240-D6242 Pontic - porcelain - high noble, noble, and predominantly base ..... $370\nD6250-D6252 Poncic - resin - high noble, noble, and predominantly base ..... $370\nD6930 Recement bridge ..... $63\nORAL SURGERY\nExtractions (includes local anesthesia and routine postoperative care):\nD7140 Extraction, erupted tooth or exposed tooth ..... $63\nD7210 Erupted tooth ..... $127\nD7220 Impacted tooth - soft tissue ..... $143\nD7230 Impacted tooth - partially bony ..... $185\nD7240 Impacted tooth - completely bony ..... $227\nD7250 Root recovery (per tooth) ..... $132\nRelated Oral Surgical Procedures:\nD7310 Alveoloplasty - per quadrant ..... $106\nD7510 Incision and drainage of abscess - intraroral ..... $85\nD7960 Freenectomy (separate procedure) ..... $190\nGeneral anesthesia (when not provided at a hospital):\nD9220 First 30 minutes ..... $185\nD9221 Each additional 15 minutes (or major fraction thereof) ..... $63\nORTHODONTICS (coverage for employees and dependents)\n50 percent of maximum allowable fees to a lifetime maximum benefit of $2,000",
+            "block_bbox": [
+                79,
+                64,
+                700,
+                941
+            ],
+            "block_id": 2,
+            "block_order": 1,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    79.0,
+                    64.0
+                ],
+                [
+                    700.0,
+                    64.0
+                ],
+                [
+                    700.0,
+                    941.0
+                ],
+                [
+                    79.0,
+                    941.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "If two (2) or more dental services are rendered, payment will be made, subject to the provisions of the Scheduled Dental Plan, for each dental service unless the Schedule of Covered Dental Services specifies a maximum amount for a particular combination of the services rendered.",
+            "block_bbox": [
+                67,
+                949,
+                700,
+                1010
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    67.0,
+                    949.0
+                ],
+                [
+                    700.0,
+                    949.0
+                ],
+                [
+                    700.0,
+                    1010.0
+                ],
+                [
+                    67.0,
+                    1010.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "G. Limitations on Benefits",
+            "block_bbox": [
+                67,
+                1026,
+                249,
+                1046
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    67.0,
+                    1026.0
+                ],
+                [
+                    248.0,
+                    1026.0
+                ],
+                [
+                    248.0,
+                    1045.0
+                ],
+                [
+                    67.0,
+                    1045.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Covered dental services do not include and no benefits are payable for:",
+            "block_bbox": [
+                93,
+                1064,
+                523,
+                1085
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    93.0,
+                    1064.0
+                ],
+                [
+                    523.0,
+                    1064.0
+                ],
+                [
+                    523.0,
+                    1085.0
+                ],
+                [
+                    93.0,
+                    1085.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. Charges for treatment by other than a dentist. However, this Plan will cover certain treatment by a licensed dental hygienist if the treatment is supervised by a dentist. The term dentist means a",
+            "block_bbox": [
+                94,
+                1102,
+                701,
+                1143
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    94.0,
+                    1102.0
+                ],
+                [
+                    701.0,
+                    1102.0
+                ],
+                [
+                    701.0,
+                    1143.0
+                ],
+                [
+                    94.0,
+                    1143.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "A-48",
+            "block_bbox": [
+                366,
+                1161,
+                399,
+                1177
+            ],
+            "block_id": 7,
+            "block_order": null,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    366.0,
+                    1161.0
+                ],
+                [
+                    398.0,
+                    1161.0
+                ],
+                [
+                    398.0,
+                    1176.0
+                ],
+                [
+                    366.0,
+                    1176.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 2,
+                "label": "aside_text",
+                "score": 0.7756480574607849,
+                "coordinate": [
+                    27,
+                    73,
+                    56,
+                    1141
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        35.00022888183594,
+                        72.936279296875
+                    ],
+                    [
+                        51.99999237060547,
+                        73.0
+                    ],
+                    [
+                        47.99976348876953,
+                        1140.0638427734375
+                    ],
+                    [
+                        31.000001907348633,
+                        1140.0001220703125
+                    ]
+                ]
+            },
+            {
+                "cls_id": 2,
+                "label": "aside_text",
+                "score": 0.3584391176700592,
+                "coordinate": [
+                    0,
+                    134,
+                    7,
+                    263
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        0.0,
+                        134.0
+                    ],
+                    [
+                        6.0,
+                        134.0
+                    ],
+                    [
+                        6.0,
+                        262.0
+                    ],
+                    [
+                        -3.918869928272537e-15,
+                        262.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.35660427808761597,
+                "coordinate": [
+                    573,
+                    73,
+                    686,
+                    113
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        573.0,
+                        73.0
+                    ],
+                    [
+                        686.0,
+                        73.0
+                    ],
+                    [
+                        686.0,
+                        113.0
+                    ],
+                    [
+                        573.0,
+                        113.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.904060959815979,
+                "coordinate": [
+                    79,
+                    64,
+                    700,
+                    941
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        79.0,
+                        64.0
+                    ],
+                    [
+                        700.0,
+                        64.0
+                    ],
+                    [
+                        700.0,
+                        941.0
+                    ],
+                    [
+                        79.0,
+                        941.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7157702445983887,
+                "coordinate": [
+                    67,
+                    949,
+                    700,
+                    1010
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        67.0,
+                        949.0
+                    ],
+                    [
+                        700.0,
+                        949.0
+                    ],
+                    [
+                        700.0,
+                        1010.0
+                    ],
+                    [
+                        67.0,
+                        1010.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8505374193191528,
+                "coordinate": [
+                    67,
+                    1026,
+                    249,
+                    1046
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        67.0,
+                        1026.0
+                    ],
+                    [
+                        248.0,
+                        1026.0
+                    ],
+                    [
+                        248.0,
+                        1045.0
+                    ],
+                    [
+                        67.0,
+                        1045.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8443242311477661,
+                "coordinate": [
+                    93,
+                    1064,
+                    523,
+                    1085
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        93.0,
+                        1064.0
+                    ],
+                    [
+                        523.0,
+                        1064.0
+                    ],
+                    [
+                        523.0,
+                        1085.0
+                    ],
+                    [
+                        93.0,
+                        1085.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8952562212944031,
+                "coordinate": [
+                    94,
+                    1102,
+                    701,
+                    1143
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        94.0,
+                        1102.0
+                    ],
+                    [
+                        701.0,
+                        1102.0
+                    ],
+                    [
+                        701.0,
+                        1143.0
+                    ],
+                    [
+                        94.0,
+                        1143.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7996108531951904,
+                "coordinate": [
+                    366,
+                    1161,
+                    399,
+                    1177
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        366.0,
+                        1161.0
+                    ],
+                    [
+                        398.0,
+                        1161.0
+                    ],
+                    [
+                        398.0,
+                        1176.0
+                    ],
+                    [
+                        366.0,
+                        1176.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,796 @@
+{
+    "input_path": "cache/dol_archive/document_1778.pdf",
+    "page_index": 31,
+    "page_count": 32,
+    "width": 559,
+    "height": 1224,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "UFCW",
+            "block_bbox": [
+                40,
+                34,
+                455,
+                123
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    40.0,
+                    34.0
+                ],
+                [
+                    455.0,
+                    34.0
+                ],
+                [
+                    455.0,
+                    123.0
+                ],
+                [
+                    40.0,
+                    123.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a VOICE for working America",
+            "block_bbox": [
+                53,
+                126,
+                512,
+                160
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    53.0,
+                    126.0
+                ],
+                [
+                    512.0,
+                    126.0
+                ],
+                [
+                    512.0,
+                    160.0
+                ],
+                [
+                    53.0,
+                    160.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "LOCAL 1500",
+            "block_bbox": [
+                50,
+                170,
+                517,
+                233
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    50.0,
+                    170.0
+                ],
+                [
+                    517.0,
+                    170.0
+                ],
+                [
+                    517.0,
+                    233.0
+                ],
+                [
+                    50.0,
+                    233.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "THE WEINGARTEN DECISION:\n- KNOW YOUR RIGHTS!",
+            "block_bbox": [
+                45,
+                251,
+                513,
+                319
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    45.0,
+                    251.0
+                ],
+                [
+                    513.0,
+                    251.0
+                ],
+                [
+                    513.0,
+                    319.0
+                ],
+                [
+                    45.0,
+                    319.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "In a court case known as N.L.R.B. Vs. Weingarten, the U.S. Supreme Court ruled you have the right to have your Union Representative present when you are interviewed by your employer, if you reasonably believe the interview may lead to disciplinary action.",
+            "block_bbox": [
+                31,
+                342,
+                528,
+                464
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    31.0,
+                    342.0
+                ],
+                [
+                    528.0,
+                    342.0
+                ],
+                [
+                    528.0,
+                    464.0
+                ],
+                [
+                    31.0,
+                    464.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "YOUR RIGHTS UNDER WEINGARTEN ARE:",
+            "block_bbox": [
+                31,
+                485,
+                528,
+                511
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    31.0,
+                    485.0
+                ],
+                [
+                    528.0,
+                    485.0
+                ],
+                [
+                    528.0,
+                    511.0
+                ],
+                [
+                    31.0,
+                    511.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. You have the right to request the presence of a Union Representative during any investigatory interview you reasonably believe might result in disciplinary action.",
+            "block_bbox": [
+                32,
+                523,
+                528,
+                620
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    32.0,
+                    523.0
+                ],
+                [
+                    528.0,
+                    523.0
+                ],
+                [
+                    528.0,
+                    620.0
+                ],
+                [
+                    32.0,
+                    620.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. You have the right not to be interviewed until your Union Representative is present.",
+            "block_bbox": [
+                32,
+                630,
+                527,
+                680
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    32.0,
+                    630.0
+                ],
+                [
+                    527.0,
+                    630.0
+                ],
+                [
+                    527.0,
+                    680.0
+                ],
+                [
+                    32.0,
+                    680.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3. Your Union Representative may assist you during the interview to organize and explain your facts.",
+            "block_bbox": [
+                32,
+                690,
+                527,
+                740
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    32.0,
+                    690.0
+                ],
+                [
+                    527.0,
+                    690.0
+                ],
+                [
+                    527.0,
+                    740.0
+                ],
+                [
+                    32.0,
+                    740.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "REMEMBER WEINGARTEN\nBEFORE YOU GIVE UP YOUR RIGHTS!",
+            "block_bbox": [
+                101,
+                763,
+                486,
+                813
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    101.0,
+                    763.0
+                ],
+                [
+                    486.0,
+                    763.0
+                ],
+                [
+                    486.0,
+                    813.0
+                ],
+                [
+                    101.0,
+                    813.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Fraternally,\nBruce W. Both,\nPresident",
+            "block_bbox": [
+                207,
+                836,
+                352,
+                906
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    207.0,
+                    836.0
+                ],
+                [
+                    352.0,
+                    836.0
+                ],
+                [
+                    352.0,
+                    906.0
+                ],
+                [
+                    207.0,
+                    906.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "MEMBERS CAN CALL\nLOCAL 1500\nREGARDING ANY MATTER\n24 HOURS A DAY\n800-522-0456",
+            "block_bbox": [
+                145,
+                949,
+                414,
+                1088
+            ],
+            "block_id": 11,
+            "block_order": 11,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    145.0,
+                    949.0
+                ],
+                [
+                    414.0,
+                    949.0
+                ],
+                [
+                    414.0,
+                    1088.0
+                ],
+                [
+                    145.0,
+                    1088.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.3930635154247284,
+                "coordinate": [
+                    40,
+                    34,
+                    455,
+                    123
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        40.0,
+                        34.0
+                    ],
+                    [
+                        455.0,
+                        34.0
+                    ],
+                    [
+                        455.0,
+                        123.0
+                    ],
+                    [
+                        40.0,
+                        123.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6404895186424255,
+                "coordinate": [
+                    53,
+                    126,
+                    512,
+                    160
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        53.0,
+                        126.0
+                    ],
+                    [
+                        512.0,
+                        126.0
+                    ],
+                    [
+                        512.0,
+                        160.0
+                    ],
+                    [
+                        53.0,
+                        160.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4508615732192993,
+                "coordinate": [
+                    50,
+                    170,
+                    517,
+                    233
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        50.0,
+                        170.0
+                    ],
+                    [
+                        517.0,
+                        170.0
+                    ],
+                    [
+                        517.0,
+                        233.0
+                    ],
+                    [
+                        50.0,
+                        233.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5642077326774597,
+                "coordinate": [
+                    45,
+                    251,
+                    513,
+                    319
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        45.0,
+                        251.0
+                    ],
+                    [
+                        513.0,
+                        251.0
+                    ],
+                    [
+                        513.0,
+                        319.0
+                    ],
+                    [
+                        45.0,
+                        319.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9395920038223267,
+                "coordinate": [
+                    31,
+                    342,
+                    528,
+                    464
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        31.0,
+                        342.0
+                    ],
+                    [
+                        528.0,
+                        342.0
+                    ],
+                    [
+                        528.0,
+                        464.0
+                    ],
+                    [
+                        31.0,
+                        464.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8410447239875793,
+                "coordinate": [
+                    31,
+                    485,
+                    528,
+                    511
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        31.0,
+                        485.0
+                    ],
+                    [
+                        528.0,
+                        485.0
+                    ],
+                    [
+                        528.0,
+                        511.0
+                    ],
+                    [
+                        31.0,
+                        511.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9400426745414734,
+                "coordinate": [
+                    32,
+                    523,
+                    528,
+                    620
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        32.0,
+                        523.0
+                    ],
+                    [
+                        528.0,
+                        523.0
+                    ],
+                    [
+                        528.0,
+                        620.0
+                    ],
+                    [
+                        32.0,
+                        620.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8974320888519287,
+                "coordinate": [
+                    32,
+                    630,
+                    527,
+                    680
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        32.0,
+                        630.0
+                    ],
+                    [
+                        527.0,
+                        630.0
+                    ],
+                    [
+                        527.0,
+                        680.0
+                    ],
+                    [
+                        32.0,
+                        680.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.897213876247406,
+                "coordinate": [
+                    32,
+                    690,
+                    527,
+                    740
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        32.0,
+                        690.0
+                    ],
+                    [
+                        527.0,
+                        690.0
+                    ],
+                    [
+                        527.0,
+                        740.0
+                    ],
+                    [
+                        32.0,
+                        740.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7899580001831055,
+                "coordinate": [
+                    101,
+                    763,
+                    486,
+                    813
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        101.0,
+                        763.0
+                    ],
+                    [
+                        486.0,
+                        763.0
+                    ],
+                    [
+                        486.0,
+                        813.0
+                    ],
+                    [
+                        101.0,
+                        813.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8692178726196289,
+                "coordinate": [
+                    207,
+                    836,
+                    352,
+                    906
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        207.0,
+                        836.0
+                    ],
+                    [
+                        352.0,
+                        836.0
+                    ],
+                    [
+                        352.0,
+                        906.0
+                    ],
+                    [
+                        207.0,
+                        906.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6897386312484741,
+                "coordinate": [
+                    145,
+                    949,
+                    414,
+                    1088
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        145.0,
+                        949.0
+                    ],
+                    [
+                        414.0,
+                        949.0
+                    ],
+                    [
+                        414.0,
+                        1088.0
+                    ],
+                    [
+                        145.0,
+                        1088.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3224528431892395,
+                "coordinate": [
+                    184,
+                    1058,
+                    375,
+                    1088
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        184.0,
+                        1058.0
+                    ],
+                    [
+                        375.0,
+                        1058.0
+                    ],
+                    [
+                        375.0,
+                        1088.0
+                    ],
+                    [
+                        184.0,
+                        1088.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

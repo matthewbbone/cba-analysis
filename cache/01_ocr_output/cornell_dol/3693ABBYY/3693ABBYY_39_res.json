@@ -1,0 +1,461 @@
+{
+    "input_path": "cache/cornell_dol/3693ABBYY.pdf",
+    "page_index": 39,
+    "page_count": 135,
+    "width": 803,
+    "height": 1235,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "3. The Employer agrees, during the term of this Agreement, to offer to the employees covered by the Agreement, when and to the extent required by Public Law 93-222, the Health Maintenance Act of 1973, such optional provisions for health services as may be required by that law as an alternative to the Medical Plan which is provided for in this Agreement.",
+            "block_bbox": [
+                122,
+                85,
+                748,
+                215
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    122.0,
+                    85.0
+                ],
+                [
+                    748.0,
+                    85.0
+                ],
+                [
+                    748.0,
+                    215.0
+                ],
+                [
+                    122.0,
+                    215.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "4. The Employer agrees, during the term of this Agreement, to offer the employees covered by this Agreement, a Medical Plan or a Health Maintenance Organization (HMO). Each employee shall have the option of electing the Medical Plan or an HMO for the employee and the employee's eligible dependents. No employee may be covered by more than one plan.",
+            "block_bbox": [
+                122,
+                230,
+                748,
+                361
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    122.0,
+                    230.0
+                ],
+                [
+                    748.0,
+                    230.0
+                ],
+                [
+                    748.0,
+                    361.0
+                ],
+                [
+                    122.0,
+                    361.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "5. Plan Design: Effective January 1, 2006, the POS, HMO, and PPO plans offered will be the same plan designs as offered to the salaried population for 2005, as presented in negotiations. These plan designs will remain \"frozen\" for the duration of the contract.",
+            "block_bbox": [
+                123,
+                375,
+                747,
+                469
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    123.0,
+                    375.0
+                ],
+                [
+                    747.0,
+                    375.0
+                ],
+                [
+                    747.0,
+                    469.0
+                ],
+                [
+                    123.0,
+                    469.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "6. Contribution Rates: Effective January 1, 2006, and for each subsequent year of the contract employee contribution rates towards the premiums for the medical plans outlined in paragraph 5 above, will be the lesser of the negotiated maximums shown below or the contribution rate being paid by the salaried employees for the same plan, as follows:",
+            "block_bbox": [
+                122,
+                485,
+                748,
+                616
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    122.0,
+                    485.0
+                ],
+                [
+                    748.0,
+                    485.0
+                ],
+                [
+                    748.0,
+                    616.0
+                ],
+                [
+                    122.0,
+                    616.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Effective January 1, 2006\nEmployee Bi-Weekly Contribution*",
+            "block_bbox": [
+                233,
+                648,
+                565,
+                689
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    233.0,
+                    648.0
+                ],
+                [
+                    565.0,
+                    648.0
+                ],
+                [
+                    565.0,
+                    689.0
+                ],
+                [
+                    233.0,
+                    689.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Coverage Level</td><td>POS Plan Health Net</td><td>HMO Plan Health Net</td><td>HMO Plan Kaiser</td><td>Optional PPO United Health Care</td></tr><tr><td>Employee Only</td><td>$31.25</td><td>$20.45</td><td>$20.14</td><td>$74.92</td></tr><tr><td>Employee &amp; Spouse</td><td>$65.64</td><td>$44.03</td><td>$42.77</td><td>$171.06</td></tr><tr><td>Employee, Child(ren)</td><td>$61.33</td><td>$39.84</td><td>$38.94</td><td>$141.47</td></tr><tr><td>Employee &amp; Family</td><td>$97.99</td><td>$63.41</td><td>$54.66</td><td>$230.22</td></tr></table>",
+            "block_bbox": [
+                81,
+                721,
+                733,
+                979
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    81.0,
+                    721.0
+                ],
+                [
+                    733.0,
+                    721.0
+                ],
+                [
+                    733.0,
+                    979.0
+                ],
+                [
+                    81.0,
+                    979.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "-31.",
+            "block_bbox": [
+                385,
+                1156,
+                413,
+                1177
+            ],
+            "block_id": 6,
+            "block_order": null,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    385.0,
+                    1156.0
+                ],
+                [
+                    412.0,
+                    1156.0
+                ],
+                [
+                    412.0,
+                    1176.0
+                ],
+                [
+                    385.0,
+                    1176.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9521781802177429,
+                "coordinate": [
+                    122,
+                    85,
+                    748,
+                    215
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        122.0,
+                        85.0
+                    ],
+                    [
+                        748.0,
+                        85.0
+                    ],
+                    [
+                        748.0,
+                        215.0
+                    ],
+                    [
+                        122.0,
+                        215.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9460952877998352,
+                "coordinate": [
+                    122,
+                    230,
+                    748,
+                    361
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        122.0,
+                        230.0
+                    ],
+                    [
+                        748.0,
+                        230.0
+                    ],
+                    [
+                        748.0,
+                        361.0
+                    ],
+                    [
+                        122.0,
+                        361.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9421643018722534,
+                "coordinate": [
+                    123,
+                    375,
+                    747,
+                    469
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        123.0,
+                        375.0
+                    ],
+                    [
+                        747.0,
+                        375.0
+                    ],
+                    [
+                        747.0,
+                        469.0
+                    ],
+                    [
+                        123.0,
+                        469.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9488598704338074,
+                "coordinate": [
+                    122,
+                    485,
+                    748,
+                    616
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        122.0,
+                        485.0
+                    ],
+                    [
+                        748.0,
+                        485.0
+                    ],
+                    [
+                        748.0,
+                        616.0
+                    ],
+                    [
+                        122.0,
+                        616.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7813631296157837,
+                "coordinate": [
+                    233,
+                    648,
+                    565,
+                    689
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        233.0,
+                        648.0
+                    ],
+                    [
+                        565.0,
+                        648.0
+                    ],
+                    [
+                        565.0,
+                        689.0
+                    ],
+                    [
+                        233.0,
+                        689.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.712110161781311,
+                "coordinate": [
+                    81,
+                    721,
+                    733,
+                    979
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        81.0,
+                        721.0
+                    ],
+                    [
+                        733.0,
+                        721.0
+                    ],
+                    [
+                        733.0,
+                        979.0
+                    ],
+                    [
+                        81.0,
+                        979.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7321875095367432,
+                "coordinate": [
+                    385,
+                    1156,
+                    413,
+                    1177
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        385.0,
+                        1156.0
+                    ],
+                    [
+                        412.0,
+                        1156.0
+                    ],
+                    [
+                        412.0,
+                        1176.0
+                    ],
+                    [
+                        385.0,
+                        1176.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

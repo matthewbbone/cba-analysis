@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 148,
+    "page_count": 439,
+    "width": 1232,
+    "height": 1580,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article 25",
+            "block_bbox": [
+                321,
+                73,
+                392,
+                91
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    73.0
+                ],
+                [
+                    391.0,
+                    73.0
+                ],
+                [
+                    391.0,
+                    90.0
+                ],
+                [
+                    321.0,
+                    90.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 25 - EXCUSED WORK DAYS",
+            "block_bbox": [
+                460,
+                134,
+                738,
+                153
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    460.0,
+                    134.0
+                ],
+                [
+                    737.0,
+                    134.0
+                ],
+                [
+                    737.0,
+                    152.0
+                ],
+                [
+                    460.0,
+                    152.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1 Each full-time Employee who has a TERM OF EMPLOYMENT of six months on January 1 of the current year shall be eligible for four (4) Excused Work Days with pay. In addition, an employee will be eligible to one (1) non paid Excused Work Day each calendar year without regard to Term of Employment.",
+            "block_bbox": [
+                321,
+                166,
+                875,
+                255
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    166.0
+                ],
+                [
+                    875.0,
+                    166.0
+                ],
+                [
+                    875.0,
+                    255.0
+                ],
+                [
+                    321.0,
+                    255.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2 Employees who are not required to work on their paid Excused Work Day shall be paid for the day as if for a normal or standard day worked, including Night Work Bonus when applicable, provided they are on the active payroll of the Company on that Excused Work Day.",
+            "block_bbox": [
+                321,
+                260,
+                876,
+                331
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    260.0
+                ],
+                [
+                    876.0,
+                    260.0
+                ],
+                [
+                    876.0,
+                    331.0
+                ],
+                [
+                    321.0,
+                    331.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3 One (1) paid Excused Work Day in each calendar year may be designated by the Company for Employees in an administrative work group (as designated by the Company) or in any larger group, including the entire Company. Employees in any such group for which an Excused Work Day is designated by the Company and who are not otherwise eligible for a paid Excused Work Day shall be excused and paid for such designated day as set forth in Paragraph 1, provided they are on the active payroll of the Company on the designated Excused Work Day.",
+            "block_bbox": [
+                321,
+                336,
+                876,
+                476
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    336.0
+                ],
+                [
+                    876.0,
+                    336.0
+                ],
+                [
+                    876.0,
+                    476.0
+                ],
+                [
+                    321.0,
+                    476.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "4 Employees who are on vacation or absent with pay on their paid Excused Work Day for reasons other than having observed it as an Excused Work Day shall have their paid Excused Work Day rescheduled if a vacation day would have been rescheduled under the same circumstances.",
+            "block_bbox": [
+                322,
+                481,
+                875,
+                552
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    481.0
+                ],
+                [
+                    875.0,
+                    481.0
+                ],
+                [
+                    875.0,
+                    552.0
+                ],
+                [
+                    322.0,
+                    552.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "5 If Employees agree to work on their paid Excused Work Day and the Company determines that the day cannot be rescheduled, they shall be paid as applicable in accordance with the following paragraphs:",
+            "block_bbox": [
+                322,
+                557,
+                875,
+                612
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    557.0
+                ],
+                [
+                    875.0,
+                    557.0
+                ],
+                [
+                    875.0,
+                    612.0
+                ],
+                [
+                    322.0,
+                    612.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) Employees who agree to work before the work schedule becomes fixed shall receive one (1) day's pay as set forth in Paragraph 2 in lieu of their Excused Work Day and shall in addition be paid in accordance with the provisions of this Agreement covering work on a scheduled day of work.",
+            "block_bbox": [
+                344,
+                617,
+                875,
+                689
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    344.0,
+                    617.0
+                ],
+                [
+                    875.0,
+                    617.0
+                ],
+                [
+                    875.0,
+                    689.0
+                ],
+                [
+                    344.0,
+                    689.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) Time worked by an Employee on his or her Excused Work Day shall be considered time worked on a regularly scheduled day of work for all purposes, except as is otherwise expressly provided in this Article.",
+            "block_bbox": [
+                343,
+                694,
+                875,
+                748
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    343.0,
+                    694.0
+                ],
+                [
+                    875.0,
+                    694.0
+                ],
+                [
+                    875.0,
+                    748.0
+                ],
+                [
+                    343.0,
+                    748.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "6 The Company and the Union recognize that it may be in the best interest of Employees to have the ability to take time off for brief intervals because of personal, immediate needs. Accordingly, for the term of this agreement, up to four (4) Excused Work Days (EWD)(s) may be used as follows:",
+            "block_bbox": [
+                321,
+                751,
+                876,
+                823
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    751.0
+                ],
+                [
+                    876.0,
+                    751.0
+                ],
+                [
+                    876.0,
+                    823.0
+                ],
+                [
+                    321.0,
+                    823.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) An Employee may designate and schedule, as applicable, four (4) EWD (s) to be used flexibly. This provision shall apply to an Employee's unpaid EWD and/or his/her paid EWD(s) which are not designated by the Company.",
+            "block_bbox": [
+                344,
+                827,
+                875,
+                898
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    344.0,
+                    827.0
+                ],
+                [
+                    875.0,
+                    827.0
+                ],
+                [
+                    875.0,
+                    898.0
+                ],
+                [
+                    344.0,
+                    898.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "140",
+            "block_bbox": [
+                324,
+                909,
+                353,
+                925
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    324.0,
+                    909.0
+                ],
+                [
+                    352.0,
+                    909.0
+                ],
+                [
+                    352.0,
+                    924.0
+                ],
+                [
+                    324.0,
+                    924.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7951619029045105,
+                "coordinate": [
+                    321,
+                    73,
+                    392,
+                    91
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        321.0,
+                        73.0
+                    ],
+                    [
+                        391.0,
+                        73.0
+                    ],
+                    [
+                        391.0,
+                        90.0
+                    ],
+                    [
+                        321.0,
+                        90.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5070078372955322,
+                "coordinate": [
+                    460,
+                    134,
+                    738,
+                    153
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        460.0,
+                        134.0
+                    ],
+                    [
+                        737.0,
+                        134.0
+                    ],
+                    [
+                        737.0,
+                        152.0
+                    ],
+                    [
+                        460.0,
+                        152.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9418371319770813,
+                "coordinate": [
+                    321,
+                    166,
+                    875,
+                    255
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        321.0,
+                        166.0
+                    ],
+                    [
+                        875.0,
+                        166.0
+                    ],
+                    [
+                        875.0,
+                        255.0
+                    ],
+                    [
+                        321.0,
+                        255.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9323667287826538,
+                "coordinate": [
+                    321,
+                    260,
+                    876,
+                    331
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        321.0,
+                        260.0
+                    ],
+                    [
+                        876.0,
+                        260.0
+                    ],
+                    [
+                        876.0,
+                        331.0
+                    ],
+                    [
+                        321.0,
+                        331.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.951012372970581,
+                "coordinate": [
+                    321,
+                    336,
+                    876,
+                    476
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        321.0,
+                        336.0
+                    ],
+                    [
+                        876.0,
+                        336.0
+                    ],
+                    [
+                        876.0,
+                        476.0
+                    ],
+                    [
+                        321.0,
+                        476.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9322842359542847,
+                "coordinate": [
+                    322,
+                    481,
+                    875,
+                    552
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        322.0,
+                        481.0
+                    ],
+                    [
+                        875.0,
+                        481.0
+                    ],
+                    [
+                        875.0,
+                        552.0
+                    ],
+                    [
+                        322.0,
+                        552.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9143514633178711,
+                "coordinate": [
+                    322,
+                    557,
+                    875,
+                    612
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        322.0,
+                        557.0
+                    ],
+                    [
+                        875.0,
+                        557.0
+                    ],
+                    [
+                        875.0,
+                        612.0
+                    ],
+                    [
+                        322.0,
+                        612.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9239855408668518,
+                "coordinate": [
+                    344,
+                    617,
+                    875,
+                    689
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        344.0,
+                        617.0
+                    ],
+                    [
+                        875.0,
+                        617.0
+                    ],
+                    [
+                        875.0,
+                        689.0
+                    ],
+                    [
+                        344.0,
+                        689.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.916913628578186,
+                "coordinate": [
+                    343,
+                    694,
+                    875,
+                    748
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        343.0,
+                        694.0
+                    ],
+                    [
+                        875.0,
+                        694.0
+                    ],
+                    [
+                        875.0,
+                        748.0
+                    ],
+                    [
+                        343.0,
+                        748.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9339491724967957,
+                "coordinate": [
+                    321,
+                    751,
+                    876,
+                    823
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        321.0,
+                        751.0
+                    ],
+                    [
+                        876.0,
+                        751.0
+                    ],
+                    [
+                        876.0,
+                        823.0
+                    ],
+                    [
+                        321.0,
+                        823.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9249486327171326,
+                "coordinate": [
+                    344,
+                    827,
+                    875,
+                    898
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        344.0,
+                        827.0
+                    ],
+                    [
+                        875.0,
+                        827.0
+                    ],
+                    [
+                        875.0,
+                        898.0
+                    ],
+                    [
+                        344.0,
+                        898.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6725143790245056,
+                "coordinate": [
+                    324,
+                    909,
+                    353,
+                    925
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        324.0,
+                        909.0
+                    ],
+                    [
+                        352.0,
+                        909.0
+                    ],
+                    [
+                        352.0,
+                        924.0
+                    ],
+                    [
+                        324.0,
+                        924.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

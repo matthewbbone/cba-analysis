@@ -1,0 +1,278 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 177,
+    "page_count": 206,
+    "width": 1224,
+    "height": 2016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "APPENDIX B\nVACATION CREDIT TABLES\nVacation Credit for Employees Having 20 or More Years of Qualifying Service",
+            "block_bbox": [
+                195,
+                123,
+                1035,
+                211
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    195.0,
+                    123.0
+                ],
+                [
+                    1035.0,
+                    123.0
+                ],
+                [
+                    1035.0,
+                    211.0
+                ],
+                [
+                    195.0,
+                    211.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td colspan=\"5\">NUMBER OF HOURS ON PAY STATUS</td><td rowspan=\"2\">Percent of Time on Pay Status</td><td>Hours of Vacation Earned</td></tr><tr><td>160-Hr.* Month</td><td>168-Hr.* Month</td><td>176-Hr.* Month</td><td>184-Hr.* Month</td><td></td><td></td></tr><tr><td>0 - 79</td><td>0 - 83</td><td>0 - 87</td><td>0 - 91</td><td>0 - 49</td><td>0</td><td></td></tr><tr><td>80 - 84</td><td>84 - 89</td><td>88 - 93</td><td>92 - 97</td><td>50 - 53</td><td>8</td><td></td></tr><tr><td>85 - 94</td><td>90 - 99</td><td>94 - 104</td><td>98 - 109</td><td>54 - 59</td><td>9</td><td></td></tr><tr><td>95 - 104</td><td>100 - 110</td><td>105 - 115</td><td>110 - 120</td><td>60 - 65</td><td>10</td><td></td></tr><tr><td>105 - 114</td><td>111 - 120</td><td>116 - 126</td><td>121 - 132</td><td>66 - 71</td><td>11</td><td></td></tr><tr><td>115 - 124</td><td>121 - 131</td><td>127 - 137</td><td>133 - 143</td><td>72 - 78</td><td>12</td><td></td></tr><tr><td>125 - 134</td><td>132 - 141</td><td>138 - 148</td><td>144 - 155</td><td>79 - 84</td><td>13</td><td></td></tr><tr><td>135 - 144</td><td>142 - 152</td><td>149 - 159</td><td>156 - 166</td><td>85 - 90</td><td>14</td><td></td></tr><tr><td>145 - 154</td><td>153 - 162</td><td>160 - 170</td><td>167 - 178</td><td>91 - 96</td><td>15</td><td></td></tr><tr><td>155 - 160</td><td>163 - 168</td><td>171 - 176</td><td>179 - 184</td><td>97 - 100</td><td>16</td><td></td></tr></table>",
+            "block_bbox": [
+                115,
+                236,
+                1081,
+                662
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    115.0,
+                    236.0
+                ],
+                [
+                    1081.0,
+                    236.0
+                ],
+                [
+                    1081.0,
+                    662.0
+                ],
+                [
+                    115.0,
+                    662.0
+                ]
+            ]
+        },
+        {
+            "block_label": "vision_footnote",
+            "block_content": "* Hours on pay status, including paid holiday hours, but excluding all paid overtime hours.",
+            "block_bbox": [
+                111,
+                689,
+                1071,
+                722
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    111.0,
+                    689.0
+                ],
+                [
+                    1071.0,
+                    689.0
+                ],
+                [
+                    1071.0,
+                    722.0
+                ],
+                [
+                    111.0,
+                    722.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "175",
+            "block_bbox": [
+                594,
+                1917,
+                642,
+                1944
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    593.9999389648438,
+                    1917.0
+                ],
+                [
+                    640.9999389648438,
+                    1917.0
+                ],
+                [
+                    640.9999389648438,
+                    1943.0
+                ],
+                [
+                    593.9999389648438,
+                    1943.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.32690075039863586,
+                "coordinate": [
+                    195,
+                    123,
+                    1035,
+                    211
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        195.0,
+                        123.0
+                    ],
+                    [
+                        1035.0,
+                        123.0
+                    ],
+                    [
+                        1035.0,
+                        211.0
+                    ],
+                    [
+                        195.0,
+                        211.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9527130722999573,
+                "coordinate": [
+                    115,
+                    236,
+                    1081,
+                    662
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        115.0,
+                        236.0
+                    ],
+                    [
+                        1081.0,
+                        236.0
+                    ],
+                    [
+                        1081.0,
+                        662.0
+                    ],
+                    [
+                        115.0,
+                        662.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.8242775201797485,
+                "coordinate": [
+                    111,
+                    689,
+                    1071,
+                    722
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        111.0,
+                        689.0
+                    ],
+                    [
+                        1071.0,
+                        689.0
+                    ],
+                    [
+                        1071.0,
+                        722.0
+                    ],
+                    [
+                        111.0,
+                        722.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7625498175621033,
+                "coordinate": [
+                    594,
+                    1917,
+                    642,
+                    1944
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        593.9999389648438,
+                        1917.0
+                    ],
+                    [
+                        640.9999389648438,
+                        1917.0
+                    ],
+                    [
+                        640.9999389648438,
+                        1943.0
+                    ],
+                    [
+                        593.9999389648438,
+                        1943.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

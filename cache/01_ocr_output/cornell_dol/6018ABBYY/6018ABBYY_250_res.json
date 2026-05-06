@@ -1,0 +1,156 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 250,
+    "page_count": 287,
+    "width": 299,
+    "height": 362,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "LETTERS",
+            "block_bbox": [
+                93,
+                0,
+                267,
+                34
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    93.05914306640625,
+                    -0.9996528625488281
+                ],
+                [
+                    266.14776611328125,
+                    0.024549484252929688
+                ],
+                [
+                    265.95263671875,
+                    33.005638122558594
+                ],
+                [
+                    92.86400604248047,
+                    31.981435775756836
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "AGREEMENT",
+            "block_bbox": [
+                56,
+                105,
+                297,
+                143
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    58.2869873046875,
+                    104.99398803710938
+                ],
+                [
+                    295.2869873046875,
+                    106.99398803710938
+                ],
+                [
+                    295.0,
+                    141.0
+                ],
+                [
+                    58.000003814697266,
+                    139.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3323287069797516,
+                "coordinate": [
+                    93,
+                    0,
+                    267,
+                    34
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        93.05914306640625,
+                        -0.9996528625488281
+                    ],
+                    [
+                        266.14776611328125,
+                        0.024549484252929688
+                    ],
+                    [
+                        265.95263671875,
+                        33.005638122558594
+                    ],
+                    [
+                        92.86400604248047,
+                        31.981435775756836
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.3202782869338989,
+                "coordinate": [
+                    56,
+                    105,
+                    297,
+                    143
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        58.2869873046875,
+                        104.99398803710938
+                    ],
+                    [
+                        295.2869873046875,
+                        106.99398803710938
+                    ],
+                    [
+                        295.0,
+                        141.0
+                    ],
+                    [
+                        58.000003814697266,
+                        139.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

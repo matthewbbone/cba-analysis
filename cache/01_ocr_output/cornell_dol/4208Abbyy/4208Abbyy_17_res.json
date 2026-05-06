@@ -1,0 +1,456 @@
+{
+    "input_path": "cache/cornell_dol/4208Abbyy.pdf",
+    "page_index": 17,
+    "page_count": 128,
+    "width": 775,
+    "height": 1204,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "content",
+            "block_content": "8.4(b)(1)a Nothing in 8.4 will preclude the Company from hiring from sources outside the Company when projected requirements exceed the number of employees in applicable Skills Management Codes on file pursuant to 8.4(b)(4) who are eligible for an offer of recall.\n\n8.4(b)(1)b In making recall and hiring decisions, the Company will review the specific qualifications of individuals on the basis of product familiarity, specialized experience or education, customer requirements, and the need to achieve the most efficient and accurate match of individual capabilities to job requirements. Consequently, not all Company decisions relating to recall and hiring can promote the mutual objective and desire stated above. Such decisions will not be subject to Article 3.\n\n8.4(b)(2) If a Major Organization has an opening for a position or positions and the Major Organization has no people who are eligible to return to active employment under 8.4(b), but there are persons who are eligible for return to active employment under 8.4(b) in a different Major Organization or in a different Retention Group, in the same Job Classification and the same Skills Management Code, then those eligible people should be considered for the position or positions before the job is posted externally. If no one is selected for the opening from the list of eligible persons from another Major Organization or different Retention Group, then approval must be obtained from the appropriate site-wide skill team before the position is advertised externally.\n\n8.4(b)(3) The Company periodically will review with the Union the operation of 8.4(b)(1) in order to facilitate achievement of the mutual objective and desire stated above.\n\n8.4(b)(4) Prior to layoff, the Company will review those employees holding an R3 retention index to determine eligibility for re-employment consideration under 8.4(b)(1). The review will be limited to those employees for whom there is supporting documentation of performance deficiencies. The review will be performed by the cognizant management for the employee's Skills Management Code. Based on the review, the employee will be advised no later than the time the layoff notice is issued as to his or her eligibility for re-employment consideration under 8.4(b)(1). An employee determined ineligible may appeal such determination to the cognizant captain. If the appeal does not resolve the matter, the employee may then file a grievance in accordance with Article 3. Such grievance shall be limited to the first three (3) steps of the grievance procedure and shall not be subject to arbitration.\n\n8.4(b)(5) At the time of layoff, the Company automatically will place in the file for priority consideration return to active employment the names of all laid-off employees. The Company will maintain a list of the names of all laid-off employees except those determined ineligible under 8.4(b)(4), those who have received layoff benefits as a lump sum under 21.3(a), and those identified in 8.5. In order to maintain such recall status, the employee must keep the Company informed of his or her interest in returning to active employment by submitting a letter so stating. The employee must register by letter once each consecutive calendar half-year period (January through June); July through December) during the three (3)-year period from the date of layoff. Registration letters must be received within forty-five (45) days prior to the expiration of the current half-year period and must contain the individual's name, social security number, address, and telephone number. Individuals who do not properly register in each calendar period will be removed from the priority consideration eligibility list. Failure to register properly will result in priority consideration eligibility being revoked for the remainder of the three (3)-year period. Eligible employees on file for return to active employment are subject to the provisions of 8.4(a).\n\n8.4(b)(6) If any employee on layoff status disputes his or her recall status as reflected in Company records, Company records shall prevail unless rebutted by either:\n\n(1) a Company receipt, or\n\n(2) a properly addressed U.S. Postal Service return receipt evidencing filing of the registration letter during the calendar period in question.",
+            "block_bbox": [
+                126,
+                67,
+                733,
+                1139
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    126.0,
+                    67.0
+                ],
+                [
+                    733.0,
+                    67.0
+                ],
+                [
+                    733.0,
+                    1139.0
+                ],
+                [
+                    126.0,
+                    1139.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "19",
+            "block_bbox": [
+                379,
+                1163,
+                395,
+                1178
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    379.0,
+                    1163.0
+                ],
+                [
+                    394.0,
+                    1163.0
+                ],
+                [
+                    394.0,
+                    1177.0
+                ],
+                [
+                    379.0,
+                    1177.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6375470757484436,
+                "coordinate": [
+                    154,
+                    72,
+                    703,
+                    133
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        154.0,
+                        72.0
+                    ],
+                    [
+                        703.0,
+                        72.0
+                    ],
+                    [
+                        703.0,
+                        133.0
+                    ],
+                    [
+                        154.0,
+                        133.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.43966442346572876,
+                "coordinate": [
+                    126,
+                    67,
+                    733,
+                    1139
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        126.0,
+                        67.0
+                    ],
+                    [
+                        733.0,
+                        67.0
+                    ],
+                    [
+                        733.0,
+                        1139.0
+                    ],
+                    [
+                        126.0,
+                        1139.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6008278131484985,
+                "coordinate": [
+                    154,
+                    148,
+                    702,
+                    266
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        154.0,
+                        148.0
+                    ],
+                    [
+                        702.0,
+                        148.0
+                    ],
+                    [
+                        702.0,
+                        266.0
+                    ],
+                    [
+                        154.0,
+                        266.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5255508422851562,
+                "coordinate": [
+                    126,
+                    282,
+                    702,
+                    439
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        126.0,
+                        282.0
+                    ],
+                    [
+                        702.0,
+                        282.0
+                    ],
+                    [
+                        702.0,
+                        439.0
+                    ],
+                    [
+                        126.0,
+                        439.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4625837206840515,
+                "coordinate": [
+                    125,
+                    453,
+                    701,
+                    494
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        125.0,
+                        453.0
+                    ],
+                    [
+                        701.0,
+                        453.0
+                    ],
+                    [
+                        701.0,
+                        494.0
+                    ],
+                    [
+                        125.0,
+                        494.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.42916229367256165,
+                "coordinate": [
+                    124,
+                    511,
+                    720,
+                    705
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        124.0,
+                        511.0
+                    ],
+                    [
+                        720.0,
+                        511.0
+                    ],
+                    [
+                        720.0,
+                        705.0
+                    ],
+                    [
+                        124.0,
+                        705.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4024971127510071,
+                "coordinate": [
+                    125,
+                    723,
+                    703,
+                    992
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        125.0,
+                        723.0
+                    ],
+                    [
+                        703.0,
+                        723.0
+                    ],
+                    [
+                        703.0,
+                        992.0
+                    ],
+                    [
+                        125.0,
+                        992.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4107940196990967,
+                "coordinate": [
+                    125,
+                    1007,
+                    700,
+                    1050
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        125.0,
+                        1007.0
+                    ],
+                    [
+                        700.0,
+                        1007.0
+                    ],
+                    [
+                        700.0,
+                        1050.0
+                    ],
+                    [
+                        125.0,
+                        1050.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3805225193500519,
+                "coordinate": [
+                    153,
+                    1065,
+                    319,
+                    1087
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        153.0,
+                        1065.0
+                    ],
+                    [
+                        318.0,
+                        1065.0
+                    ],
+                    [
+                        318.0,
+                        1086.0
+                    ],
+                    [
+                        153.0,
+                        1086.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3913860321044922,
+                "coordinate": [
+                    153,
+                    1103,
+                    700,
+                    1143
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        153.0,
+                        1103.0
+                    ],
+                    [
+                        700.0,
+                        1103.0
+                    ],
+                    [
+                        700.0,
+                        1143.0
+                    ],
+                    [
+                        153.0,
+                        1143.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.731438159942627,
+                "coordinate": [
+                    379,
+                    1163,
+                    395,
+                    1178
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        379.0,
+                        1163.0
+                    ],
+                    [
+                        394.0,
+                        1163.0
+                    ],
+                    [
+                        394.0,
+                        1177.0
+                    ],
+                    [
+                        379.0,
+                        1177.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 2,
+                "label": "aside_text",
+                "score": 0.751103401184082,
+                "coordinate": [
+                    716,
+                    72,
+                    739,
+                    1144
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        716.0,
+                        72.0
+                    ],
+                    [
+                        739.0,
+                        72.0
+                    ],
+                    [
+                        739.0,
+                        1144.0
+                    ],
+                    [
+                        716.0,
+                        1144.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

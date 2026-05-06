@@ -1,0 +1,583 @@
+{
+    "input_path": "cache/cornell_dol/7423ABBYY.pdf",
+    "page_index": 140,
+    "page_count": 185,
+    "width": 1171,
+    "height": 1573,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "MetPay Program",
+            "block_bbox": [
+                533,
+                174,
+                723,
+                206
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    533.0,
+                    174.0
+                ],
+                [
+                    723.0,
+                    174.0
+                ],
+                [
+                    723.0,
+                    206.0
+                ],
+                [
+                    533.0,
+                    206.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The MetPay program is provided by Metropolitan Property and Casualty Insurance Company and affiliates, Warwick, Rhode Island, a subsidiary of Metropolitan Life Insurance Company.",
+            "block_bbox": [
+                184,
+                257,
+                989,
+                345
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    184.0,
+                    257.0
+                ],
+                [
+                    989.0,
+                    257.0
+                ],
+                [
+                    989.0,
+                    345.0
+                ],
+                [
+                    184.0,
+                    345.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The MetPay program is a voluntary program which allows employees to purchase Automobile Insurance, Homeowner Insurance, Renter's Insurance, Excess Personal Liability, and other personal property insurance through payroll deduction.",
+            "block_bbox": [
+                183,
+                367,
+                1056,
+                483
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    183.0,
+                    367.0
+                ],
+                [
+                    1056.0,
+                    367.0
+                ],
+                [
+                    1056.0,
+                    483.0
+                ],
+                [
+                    183.0,
+                    483.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The MetPay program offers group discounts to Verizon employees. The amount of the discount is governed by the state insurance regulations. Therefore, the discount varies by state.",
+            "block_bbox": [
+                181,
+                505,
+                1064,
+                593
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    181.0,
+                    505.0
+                ],
+                [
+                    1064.0,
+                    505.0
+                ],
+                [
+                    1064.0,
+                    593.0
+                ],
+                [
+                    181.0,
+                    593.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The program is administered by Metropolitan Property and Casualty. Verizon will deduct the premiums from the employee's paycheck as directed by Metropolitan.",
+            "block_bbox": [
+                180,
+                617,
+                1028,
+                704
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    180.0,
+                    617.0
+                ],
+                [
+                    1028.0,
+                    617.0
+                ],
+                [
+                    1028.0,
+                    704.0
+                ],
+                [
+                    180.0,
+                    704.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "All administrative questions, claims, and questions should be directed to Metropolitan at 1-800-GET MET1 (438-6381) or  $ \\underline{\\text{www.met.pay.com.}} $",
+            "block_bbox": [
+                180,
+                728,
+                964,
+                788
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    180.0,
+                    728.0
+                ],
+                [
+                    964.0,
+                    728.0
+                ],
+                [
+                    964.0,
+                    788.0
+                ],
+                [
+                    180.0,
+                    788.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The employees can also contact Metropolitan by calling the Verizon Benefits Center at 1-800-GTE-BENS (483-2367). The call will be transferred to a Metropolitan Representative. The Verizon Benefits Center can not answer any questions regarding the MetPay program.",
+            "block_bbox": [
+                179,
+                811,
+                1042,
+                928
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    179.0,
+                    811.0
+                ],
+                [
+                    1042.0,
+                    811.0
+                ],
+                [
+                    1042.0,
+                    928.0
+                ],
+                [
+                    179.0,
+                    928.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The program is portable. Employees retiring from Verizon under the terms of the Verizon pension plans will retain the group discounts they had as an employee. Employees who terminate will retain the group discounts they had as an employee until the renewal date for the policy. On the renewal date, the premiums will be recalculated using Metropolitan's retail customer rates.",
+            "block_bbox": [
+                178,
+                948,
+                1061,
+                1093
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    178.0,
+                    948.0
+                ],
+                [
+                    1061.0,
+                    948.0
+                ],
+                [
+                    1061.0,
+                    1093.0
+                ],
+                [
+                    178.0,
+                    1093.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "132",
+            "block_bbox": [
+                653,
+                1463,
+                699,
+                1490
+            ],
+            "block_id": 8,
+            "block_order": null,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    653.0,
+                    1463.0
+                ],
+                [
+                    698.0,
+                    1463.0
+                ],
+                [
+                    698.0,
+                    1489.0
+                ],
+                [
+                    653.0,
+                    1489.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5824742317199707,
+                "coordinate": [
+                    533,
+                    174,
+                    723,
+                    206
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        533.0,
+                        174.0
+                    ],
+                    [
+                        723.0,
+                        174.0
+                    ],
+                    [
+                        723.0,
+                        206.0
+                    ],
+                    [
+                        533.0,
+                        206.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9271377325057983,
+                "coordinate": [
+                    184,
+                    257,
+                    989,
+                    345
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        184.0,
+                        257.0
+                    ],
+                    [
+                        989.0,
+                        257.0
+                    ],
+                    [
+                        989.0,
+                        345.0
+                    ],
+                    [
+                        184.0,
+                        345.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9346439242362976,
+                "coordinate": [
+                    183,
+                    367,
+                    1056,
+                    483
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        183.0,
+                        367.0
+                    ],
+                    [
+                        1056.0,
+                        367.0
+                    ],
+                    [
+                        1056.0,
+                        483.0
+                    ],
+                    [
+                        183.0,
+                        483.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9311409592628479,
+                "coordinate": [
+                    181,
+                    505,
+                    1064,
+                    593
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        181.0,
+                        505.0
+                    ],
+                    [
+                        1064.0,
+                        505.0
+                    ],
+                    [
+                        1064.0,
+                        593.0
+                    ],
+                    [
+                        181.0,
+                        593.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9328019618988037,
+                "coordinate": [
+                    180,
+                    617,
+                    1028,
+                    704
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        180.0,
+                        617.0
+                    ],
+                    [
+                        1028.0,
+                        617.0
+                    ],
+                    [
+                        1028.0,
+                        704.0
+                    ],
+                    [
+                        180.0,
+                        704.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9118068814277649,
+                "coordinate": [
+                    180,
+                    728,
+                    964,
+                    788
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        180.0,
+                        728.0
+                    ],
+                    [
+                        964.0,
+                        728.0
+                    ],
+                    [
+                        964.0,
+                        788.0
+                    ],
+                    [
+                        180.0,
+                        788.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9403650164604187,
+                "coordinate": [
+                    179,
+                    811,
+                    1042,
+                    928
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        179.0,
+                        811.0
+                    ],
+                    [
+                        1042.0,
+                        811.0
+                    ],
+                    [
+                        1042.0,
+                        928.0
+                    ],
+                    [
+                        179.0,
+                        928.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9521704912185669,
+                "coordinate": [
+                    178,
+                    948,
+                    1061,
+                    1093
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        178.0,
+                        948.0
+                    ],
+                    [
+                        1061.0,
+                        948.0
+                    ],
+                    [
+                        1061.0,
+                        1093.0
+                    ],
+                    [
+                        178.0,
+                        1093.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7874183058738708,
+                "coordinate": [
+                    653,
+                    1463,
+                    699,
+                    1490
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        653.0,
+                        1463.0
+                    ],
+                    [
+                        698.0,
+                        1463.0
+                    ],
+                    [
+                        698.0,
+                        1489.0
+                    ],
+                    [
+                        653.0,
+                        1489.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

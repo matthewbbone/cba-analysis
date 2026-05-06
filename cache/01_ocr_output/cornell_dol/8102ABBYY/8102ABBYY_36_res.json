@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 36,
+    "page_count": 439,
+    "width": 1232,
+    "height": 1580,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article 10",
+            "block_bbox": [
+                320,
+                79,
+                390,
+                96
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    79.0
+                ],
+                [
+                    389.0,
+                    79.0
+                ],
+                [
+                    389.0,
+                    95.0
+                ],
+                [
+                    320.0,
+                    95.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "5 Change in Starting Time",
+            "block_bbox": [
+                320,
+                118,
+                514,
+                138
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    118.0
+                ],
+                [
+                    513.0,
+                    118.0
+                ],
+                [
+                    513.0,
+                    137.0
+                ],
+                [
+                    320.0,
+                    137.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "When a job condition requires that one or several Employees on a day tour be scheduled to report one hour or more before the majority of Employees on that tour on one or several days in the week, such Employees shall be paid an expense allowance of $3.00 for each day on which Employee so reports, except that on a day tour with four (4) Employees or less, such an allowance will be paid to all Employees so scheduled. Such allowance shall not be paid (a) where the earlier starting time is for the convenience or at the request of the Employee, (b) when the Employee is scheduled in advance to report at the earlier hour for all days (Monday to Friday) in the week, or (c) when the earlier starting time is due to a Call-In.",
+            "block_bbox": [
+                341,
+                144,
+                877,
+                317
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    341.0,
+                    144.0
+                ],
+                [
+                    877.0,
+                    144.0
+                ],
+                [
+                    877.0,
+                    317.0
+                ],
+                [
+                    341.0,
+                    317.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "B Sunday Start Allowance",
+            "block_bbox": [
+                321,
+                322,
+                511,
+                341
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    320.99993896484375,
+                    321.9999694824219
+                ],
+                [
+                    509.99993896484375,
+                    321.9999694824219
+                ],
+                [
+                    509.99993896484375,
+                    339.9999694824219
+                ],
+                [
+                    320.99993896484375,
+                    339.9999694824219
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "When an Employee working other than a 7-Day Coverage Job is required to begin his or her first Scheduled Daily Tour between 8 P.M. Sunday and Sunday Midnight, such Employee shall receive a Sunday Start Allowance.",
+            "block_bbox": [
+                342,
+                347,
+                875,
+                401
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    342.0,
+                    347.0
+                ],
+                [
+                    875.0,
+                    347.0
+                ],
+                [
+                    875.0,
+                    401.0
+                ],
+                [
+                    342.0,
+                    401.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) For each full or partial one half hour prior to Midnight, the Employee shall receive an amount equal to fifty percent (50%) of the Employee's Adjusted Rate.",
+            "block_bbox": [
+                343,
+                406,
+                875,
+                460
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    343.0,
+                    406.0
+                ],
+                [
+                    875.0,
+                    406.0
+                ],
+                [
+                    875.0,
+                    460.0
+                ],
+                [
+                    343.0,
+                    460.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "7 Job Training",
+            "block_bbox": [
+                321,
+                465,
+                433,
+                484
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    465.0
+                ],
+                [
+                    432.0,
+                    465.0
+                ],
+                [
+                    432.0,
+                    483.0
+                ],
+                [
+                    321.0,
+                    483.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Training of any Employee required by the Company shall be performed during the hours scheduled by the Company for such training and such time considered as authorized time worked.",
+            "block_bbox": [
+                342,
+                489,
+                874,
+                543
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    342.0,
+                    489.0
+                ],
+                [
+                    874.0,
+                    489.0
+                ],
+                [
+                    874.0,
+                    543.0
+                ],
+                [
+                    342.0,
+                    543.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "8 Relief Periods",
+            "block_bbox": [
+                321,
+                549,
+                445,
+                567
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    320.9999694824219,
+                    548.9999389648438
+                ],
+                [
+                    443.9999694824219,
+                    548.9999389648438
+                ],
+                [
+                    443.9999694824219,
+                    565.9999389648438
+                ],
+                [
+                    320.9999694824219,
+                    565.9999389648438
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Relief periods (suspension of work or absence from the Employee's assigned duties) not to exceed fifteen (15) minutes in each half of the Scheduled Daily Tour and in each four-hour period of work in excess of the Scheduled Daily Tour shall be granted by job supervision at all Job Locations. Relief periods may be staggered by job supervision for Employees or groups of Employees where job conditions make such action desirable.",
+            "block_bbox": [
+                342,
+                573,
+                876,
+                680
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    342.0,
+                    573.0
+                ],
+                [
+                    876.0,
+                    573.0
+                ],
+                [
+                    876.0,
+                    680.0
+                ],
+                [
+                    342.0,
+                    680.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "28",
+            "block_bbox": [
+                322,
+                896,
+                343,
+                914
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    896.0
+                ],
+                [
+                    342.0,
+                    896.0
+                ],
+                [
+                    342.0,
+                    913.0
+                ],
+                [
+                    322.0,
+                    913.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "☆",
+            "block_bbox": [
+                1129,
+                1345,
+                1157,
+                1381
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    1129.0,
+                    1345.0
+                ],
+                [
+                    1156.0,
+                    1345.0
+                ],
+                [
+                    1156.0,
+                    1380.0
+                ],
+                [
+                    1129.0,
+                    1380.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.6704844832420349,
+                "coordinate": [
+                    320,
+                    79,
+                    390,
+                    96
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        320.0,
+                        79.0
+                    ],
+                    [
+                        389.0,
+                        79.0
+                    ],
+                    [
+                        389.0,
+                        95.0
+                    ],
+                    [
+                        320.0,
+                        95.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8530682921409607,
+                "coordinate": [
+                    320,
+                    118,
+                    514,
+                    138
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        320.0,
+                        118.0
+                    ],
+                    [
+                        513.0,
+                        118.0
+                    ],
+                    [
+                        513.0,
+                        137.0
+                    ],
+                    [
+                        320.0,
+                        137.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9458565711975098,
+                "coordinate": [
+                    341,
+                    144,
+                    877,
+                    317
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        341.0,
+                        144.0
+                    ],
+                    [
+                        877.0,
+                        144.0
+                    ],
+                    [
+                        877.0,
+                        317.0
+                    ],
+                    [
+                        341.0,
+                        317.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8396966457366943,
+                "coordinate": [
+                    321,
+                    322,
+                    511,
+                    341
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        320.99993896484375,
+                        321.9999694824219
+                    ],
+                    [
+                        509.99993896484375,
+                        321.9999694824219
+                    ],
+                    [
+                        509.99993896484375,
+                        339.9999694824219
+                    ],
+                    [
+                        320.99993896484375,
+                        339.9999694824219
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9049195647239685,
+                "coordinate": [
+                    342,
+                    347,
+                    875,
+                    401
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        342.0,
+                        347.0
+                    ],
+                    [
+                        875.0,
+                        347.0
+                    ],
+                    [
+                        875.0,
+                        401.0
+                    ],
+                    [
+                        342.0,
+                        401.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9063982367515564,
+                "coordinate": [
+                    343,
+                    406,
+                    875,
+                    460
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        343.0,
+                        406.0
+                    ],
+                    [
+                        875.0,
+                        406.0
+                    ],
+                    [
+                        875.0,
+                        460.0
+                    ],
+                    [
+                        343.0,
+                        460.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8428579568862915,
+                "coordinate": [
+                    321,
+                    465,
+                    433,
+                    484
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        321.0,
+                        465.0
+                    ],
+                    [
+                        432.0,
+                        465.0
+                    ],
+                    [
+                        432.0,
+                        483.0
+                    ],
+                    [
+                        321.0,
+                        483.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9003025889396667,
+                "coordinate": [
+                    342,
+                    489,
+                    874,
+                    543
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        342.0,
+                        489.0
+                    ],
+                    [
+                        874.0,
+                        489.0
+                    ],
+                    [
+                        874.0,
+                        543.0
+                    ],
+                    [
+                        342.0,
+                        543.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8120257258415222,
+                "coordinate": [
+                    321,
+                    549,
+                    445,
+                    567
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        320.9999694824219,
+                        548.9999389648438
+                    ],
+                    [
+                        443.9999694824219,
+                        548.9999389648438
+                    ],
+                    [
+                        443.9999694824219,
+                        565.9999389648438
+                    ],
+                    [
+                        320.9999694824219,
+                        565.9999389648438
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9433354735374451,
+                "coordinate": [
+                    342,
+                    573,
+                    876,
+                    680
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        342.0,
+                        573.0
+                    ],
+                    [
+                        876.0,
+                        573.0
+                    ],
+                    [
+                        876.0,
+                        680.0
+                    ],
+                    [
+                        342.0,
+                        680.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6882286071777344,
+                "coordinate": [
+                    322,
+                    896,
+                    343,
+                    914
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        322.0,
+                        896.0
+                    ],
+                    [
+                        342.0,
+                        896.0
+                    ],
+                    [
+                        342.0,
+                        913.0
+                    ],
+                    [
+                        322.0,
+                        913.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.45299282670021057,
+                "coordinate": [
+                    1129,
+                    1345,
+                    1157,
+                    1381
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        1129.0,
+                        1345.0
+                    ],
+                    [
+                        1156.0,
+                        1345.0
+                    ],
+                    [
+                        1156.0,
+                        1380.0
+                    ],
+                    [
+                        1129.0,
+                        1380.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

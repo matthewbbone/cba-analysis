@@ -1,0 +1,705 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 32,
+    "page_count": 439,
+    "width": 1234,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article 9",
+            "block_bbox": [
+                323,
+                80,
+                384,
+                98
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    323.0,
+                    80.0
+                ],
+                [
+                    383.0,
+                    80.0
+                ],
+                [
+                    383.0,
+                    97.0
+                ],
+                [
+                    323.0,
+                    97.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "6 Hiring and Rehiing",
+            "block_bbox": [
+                322,
+                120,
+                482,
+                139
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    321.99993896484375,
+                    120.0
+                ],
+                [
+                    480.99993896484375,
+                    120.0
+                ],
+                [
+                    480.99993896484375,
+                    138.0
+                ],
+                [
+                    321.99993896484375,
+                    138.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) When the Company contemplates a hiring or rehiring program, the Manager will advise the Local of the estimated number of Employees to be added in the Area, and the Base Locations or Hiring Locations involved.",
+            "block_bbox": [
+                346,
+                145,
+                877,
+                215
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    346.0,
+                    145.0
+                ],
+                [
+                    877.0,
+                    145.0
+                ],
+                [
+                    877.0,
+                    215.0
+                ],
+                [
+                    346.0,
+                    215.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) Laid-Off Employees will be offered reemployment in accordance with Article 20, Paragraph 7 before others are hired.",
+            "block_bbox": [
+                346,
+                221,
+                876,
+                257
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    346.0,
+                    221.0
+                ],
+                [
+                    876.0,
+                    221.0
+                ],
+                [
+                    876.0,
+                    257.0
+                ],
+                [
+                    346.0,
+                    257.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "7 Information to be Furnished Prospective Employees",
+            "block_bbox": [
+                323,
+                262,
+                702,
+                281
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    323.0,
+                    261.9999694824219
+                ],
+                [
+                    700.9998779296875,
+                    261.9999694824219
+                ],
+                [
+                    700.9998779296875,
+                    279.9999694824219
+                ],
+                [
+                    322.9999694824219,
+                    279.9999694824219
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The Company agrees to inform all accepted applicants for employment as communication equipment workers that (a) the Communications Workers of America represents the Employees doing the work to which they are to be assigned, (b) wages and working conditions are a matter of agreement between the Union and the Company, and (c) a copy of the contract is available on the job or can be obtained from the Job Steward or Representative.",
+            "block_bbox": [
+                332,
+                288,
+                879,
+                409
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    332.0,
+                    288.0
+                ],
+                [
+                    879.0,
+                    288.0
+                ],
+                [
+                    879.0,
+                    409.0
+                ],
+                [
+                    332.0,
+                    409.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "8 Payment For Joint Union - Management Activities",
+            "block_bbox": [
+                323,
+                414,
+                686,
+                434
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    323.0,
+                    414.0
+                ],
+                [
+                    685.0,
+                    414.0
+                ],
+                [
+                    685.0,
+                    433.0
+                ],
+                [
+                    323.0,
+                    433.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Employees who are involved in joint Union-Management business may request that their reasonable time and expenses while participating in such activities be paid by the Company. If approved in advance, these Employees will be paid for time lost while participating in such activities during their Scheduled Weekly Tour. This includes any associated travel time during the Employee's Scheduled Weekly Tour. Hours paid while engaged in such joint activities will be considered as time worked. In addition, such Employees will be reimbursed for reasonable travel and board and lodging expenses which are directly related to their participation in these activities.",
+            "block_bbox": [
+                328,
+                439,
+                879,
+                597
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    328.0,
+                    439.0
+                ],
+                [
+                    879.0,
+                    439.0
+                ],
+                [
+                    879.0,
+                    597.0
+                ],
+                [
+                    328.0,
+                    597.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "9 Union Orientation For New Employees",
+            "block_bbox": [
+                323,
+                602,
+                611,
+                621
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    323.0,
+                    602.0
+                ],
+                [
+                    610.0,
+                    602.0
+                ],
+                [
+                    610.0,
+                    620.0
+                ],
+                [
+                    323.0,
+                    620.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The Company and the Union agree that the Union will have the opportunity to meet with newly hired and transferred Employees as part of the overall orientation for the purpose of furnishing them with information about the Union. The Union's segment of this process will be limited to a maximum of sixty (60) minutes. Time spent during the Union Representative's Scheduled Daily Tour will be paid as time worked. In addition, the Company also agrees to introduce Employees permanently transferring into a different work group to the local Union representative assigned to that area.",
+            "block_bbox": [
+                341,
+                626,
+                878,
+                768
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    341.0,
+                    626.0
+                ],
+                [
+                    878.0,
+                    626.0
+                ],
+                [
+                    878.0,
+                    768.0
+                ],
+                [
+                    341.0,
+                    768.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "24",
+            "block_bbox": [
+                325,
+                899,
+                346,
+                915
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    325.0,
+                    899.0
+                ],
+                [
+                    345.0,
+                    899.0
+                ],
+                [
+                    345.0,
+                    914.0
+                ],
+                [
+                    325.0,
+                    914.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.6416535973548889,
+                "coordinate": [
+                    323,
+                    80,
+                    384,
+                    98
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        323.0,
+                        80.0
+                    ],
+                    [
+                        383.0,
+                        80.0
+                    ],
+                    [
+                        383.0,
+                        97.0
+                    ],
+                    [
+                        323.0,
+                        97.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6852977275848389,
+                "coordinate": [
+                    322,
+                    120,
+                    482,
+                    139
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        321.99993896484375,
+                        120.0
+                    ],
+                    [
+                        480.99993896484375,
+                        120.0
+                    ],
+                    [
+                        480.99993896484375,
+                        138.0
+                    ],
+                    [
+                        321.99993896484375,
+                        138.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9255086779594421,
+                "coordinate": [
+                    346,
+                    145,
+                    877,
+                    215
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        346.0,
+                        145.0
+                    ],
+                    [
+                        877.0,
+                        145.0
+                    ],
+                    [
+                        877.0,
+                        215.0
+                    ],
+                    [
+                        346.0,
+                        215.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.870951235294342,
+                "coordinate": [
+                    346,
+                    221,
+                    876,
+                    257
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        346.0,
+                        221.0
+                    ],
+                    [
+                        876.0,
+                        221.0
+                    ],
+                    [
+                        876.0,
+                        257.0
+                    ],
+                    [
+                        346.0,
+                        257.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8430305123329163,
+                "coordinate": [
+                    323,
+                    262,
+                    702,
+                    281
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        323.0,
+                        261.9999694824219
+                    ],
+                    [
+                        700.9998779296875,
+                        261.9999694824219
+                    ],
+                    [
+                        700.9998779296875,
+                        279.9999694824219
+                    ],
+                    [
+                        322.9999694824219,
+                        279.9999694824219
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9196727275848389,
+                "coordinate": [
+                    332,
+                    288,
+                    879,
+                    409
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        332.0,
+                        288.0
+                    ],
+                    [
+                        879.0,
+                        288.0
+                    ],
+                    [
+                        879.0,
+                        409.0
+                    ],
+                    [
+                        332.0,
+                        409.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8162201642990112,
+                "coordinate": [
+                    323,
+                    414,
+                    686,
+                    434
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        323.0,
+                        414.0
+                    ],
+                    [
+                        685.0,
+                        414.0
+                    ],
+                    [
+                        685.0,
+                        433.0
+                    ],
+                    [
+                        323.0,
+                        433.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9305768013000488,
+                "coordinate": [
+                    328,
+                    439,
+                    879,
+                    597
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        328.0,
+                        439.0
+                    ],
+                    [
+                        879.0,
+                        439.0
+                    ],
+                    [
+                        879.0,
+                        597.0
+                    ],
+                    [
+                        328.0,
+                        597.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8065477013587952,
+                "coordinate": [
+                    323,
+                    602,
+                    611,
+                    621
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        323.0,
+                        602.0
+                    ],
+                    [
+                        610.0,
+                        602.0
+                    ],
+                    [
+                        610.0,
+                        620.0
+                    ],
+                    [
+                        323.0,
+                        620.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9342362284660339,
+                "coordinate": [
+                    341,
+                    626,
+                    878,
+                    768
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        341.0,
+                        626.0
+                    ],
+                    [
+                        878.0,
+                        626.0
+                    ],
+                    [
+                        878.0,
+                        768.0
+                    ],
+                    [
+                        341.0,
+                        768.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6461735367774963,
+                "coordinate": [
+                    325,
+                    899,
+                    346,
+                    915
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        325.0,
+                        899.0
+                    ],
+                    [
+                        345.0,
+                        899.0
+                    ],
+                    [
+                        345.0,
+                        914.0
+                    ],
+                    [
+                        325.0,
+                        914.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

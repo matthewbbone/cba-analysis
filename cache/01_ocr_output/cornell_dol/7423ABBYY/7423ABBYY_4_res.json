@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/7423ABBYY.pdf",
+    "page_index": 4,
+    "page_count": 185,
+    "width": 1190,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "SUBJECT\nMEMORANDUM OF AGREEMENTS:",
+            "block_bbox": [
+                329,
+                64,
+                745,
+                122
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    329.0,
+                    64.0
+                ],
+                [
+                    745.0,
+                    64.0
+                ],
+                [
+                    745.0,
+                    122.0
+                ],
+                [
+                    329.0,
+                    122.0
+                ]
+            ]
+        },
+        {
+            "block_label": "content",
+            "block_content": "Ten-Hour, Four-Day Week 156\nVacation Donation 158\nVision Plan 160\nVoluntary Employee Beneficiary Association (VEBA) 164\nVoluntary Layoff Leave of Absence (VLLOA) 168\nVoluntary Part-Time Assignment (VPTA) 170",
+            "block_bbox": [
+                149,
+                145,
+                1032,
+                318
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    149.0,
+                    145.0
+                ],
+                [
+                    1032.0,
+                    145.0
+                ],
+                [
+                    1032.0,
+                    318.0
+                ],
+                [
+                    149.0,
+                    318.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "iii",
+            "block_bbox": [
+                623,
+                1473,
+                643,
+                1498
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    623.0,
+                    1473.0
+                ],
+                [
+                    642.0,
+                    1473.0
+                ],
+                [
+                    642.0,
+                    1497.0
+                ],
+                [
+                    623.0,
+                    1497.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5143770575523376,
+                "coordinate": [
+                    329,
+                    64,
+                    745,
+                    122
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        329.0,
+                        64.0
+                    ],
+                    [
+                        745.0,
+                        64.0
+                    ],
+                    [
+                        745.0,
+                        122.0
+                    ],
+                    [
+                        329.0,
+                        122.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.96458899974823,
+                "coordinate": [
+                    149,
+                    145,
+                    1032,
+                    318
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        149.0,
+                        145.0
+                    ],
+                    [
+                        1032.0,
+                        145.0
+                    ],
+                    [
+                        1032.0,
+                        318.0
+                    ],
+                    [
+                        149.0,
+                        318.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7281309962272644,
+                "coordinate": [
+                    623,
+                    1473,
+                    643,
+                    1498
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        623.0,
+                        1473.0
+                    ],
+                    [
+                        642.0,
+                        1473.0
+                    ],
+                    [
+                        642.0,
+                        1497.0
+                    ],
+                    [
+                        623.0,
+                        1497.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

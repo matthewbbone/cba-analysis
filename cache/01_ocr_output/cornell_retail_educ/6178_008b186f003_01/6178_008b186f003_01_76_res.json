@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b186f003_01.pdf",
+    "page_index": 76,
+    "page_count": 106,
+    "width": 565,
+    "height": 1037,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td colspan=\"4\">1. Senior High Supplements Years of Coaching Experience</td></tr><tr><td></td><td>0-6</td><td>7-14</td><td>15+</td></tr><tr><td>a. Athletic director</td><td>1947</td><td>2328</td><td>2518</td></tr><tr><td>Assist. athletic director</td><td>974</td><td>1164</td><td>1259</td></tr><tr><td>(9th grade center only)</td><td></td><td></td><td></td></tr><tr><td>b. Athletic business manager</td><td>1009</td><td>1410</td><td>1610</td></tr><tr><td>c. Athletic trainer</td><td></td><td></td><td></td></tr><tr><td>appointed</td><td></td><td></td><td>813</td></tr><tr><td>associate</td><td></td><td></td><td>1628</td></tr><tr><td>certified</td><td></td><td></td><td>2440</td></tr><tr><td>d. ATHLETIC POSITIONS</td><td>0-6</td><td>7-14</td><td>15+</td></tr><tr><td>Baseball-Head</td><td>1381</td><td>1781</td><td>1980</td></tr><tr><td>Baseball-Assistant</td><td>921</td><td>1187</td><td>1320</td></tr><tr><td>Basketball-Head</td><td>1498</td><td>1898</td><td>2098</td></tr><tr><td>Basketball-Assistant</td><td>999</td><td>1265</td><td>1399</td></tr><tr><td>Cheerleading-Head</td><td>917</td><td>1317</td><td>1517</td></tr><tr><td>Cheerleading-Assist.</td><td>611</td><td>878</td><td>1011</td></tr><tr><td>Crew</td><td>559</td><td>958</td><td>1170</td></tr><tr><td>Cross Country</td><td>559</td><td>958</td><td>1170</td></tr><tr><td>Football-Head</td><td>2031</td><td>2432</td><td>2631</td></tr><tr><td>Football-Assistant</td><td>1354</td><td>1621</td><td>1754</td></tr><tr><td>Golf</td><td>559</td><td>958</td><td>1170</td></tr><tr><td>Gymnastics</td><td>559</td><td>958</td><td>1170</td></tr><tr><td>Soccer-Head</td><td>1381</td><td>1781</td><td>1980</td></tr><tr><td>Soccer-Assistant</td><td>921</td><td>1187</td><td>1320</td></tr><tr><td>Softball-Head</td><td>1381</td><td>1781</td><td>1980</td></tr><tr><td>Softball-Assistant</td><td>921</td><td>1187</td><td>1320</td></tr><tr><td>Swimming-Head</td><td>616</td><td>1017</td><td>1218</td></tr><tr><td>Swimming-Assistant</td><td>411</td><td>678</td><td>812</td></tr><tr><td>Tennis</td><td>559</td><td>958</td><td>1170</td></tr><tr><td>Track-Head</td><td>1381</td><td>1781</td><td>1980</td></tr><tr><td>Track-Assistant</td><td>921</td><td>1187</td><td>1320</td></tr><tr><td>Volleyball-Head</td><td>855</td><td>1254</td><td>1455</td></tr><tr><td>Volleyball-Assist.</td><td>570</td><td>836</td><td>970</td></tr><tr><td>Weightlifting-Head</td><td>559</td><td>958</td><td>1170</td></tr><tr><td>Weightlifting-Assist.</td><td>373</td><td>639</td><td>780</td></tr><tr><td></td><td>0-6</td><td>7-14</td><td>15+</td></tr><tr><td>Wrestling-Head</td><td>1381</td><td>1781</td><td>1980</td></tr><tr><td>Wrestling-Assist.</td><td>921</td><td>1187</td><td>1320</td></tr></table>",
+            "block_bbox": [
+                65,
+                89,
+                512,
+                811
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    65.0,
+                    89.0
+                ],
+                [
+                    512.0,
+                    89.0
+                ],
+                [
+                    512.0,
+                    811.0
+                ],
+                [
+                    65.0,
+                    811.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td colspan=\"4\">e. EXTRACURRICULAR INSTRUCTIONAL, AND OTHER SUPPLEMENTS</td></tr><tr><td>Band Director</td><td>1634</td><td>2024</td><td>2219</td></tr><tr><td>Asst. Band Director</td><td>1089</td><td>1349</td><td>1479</td></tr><tr><td>Class Sponsor-Senior</td><td></td><td></td><td>1053</td></tr><tr><td>Class Sponsor-Junior</td><td></td><td></td><td>281</td></tr></table>",
+            "block_bbox": [
+                82,
+                846,
+                514,
+                968
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    80.62979125976562,
+                    851.0872192382812
+                ],
+                [
+                    510.9999694824219,
+                    846.0000610351562
+                ],
+                [
+                    512.3701171875,
+                    961.9129028320312
+                ],
+                [
+                    81.99990844726562,
+                    967.0000610351562
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "74",
+            "block_bbox": [
+                263,
+                985,
+                283,
+                1001
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    263.0,
+                    985.0
+                ],
+                [
+                    282.0,
+                    985.0
+                ],
+                [
+                    282.0,
+                    1000.0
+                ],
+                [
+                    263.0,
+                    1000.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9442224502563477,
+                "coordinate": [
+                    65,
+                    89,
+                    512,
+                    811
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        65.0,
+                        89.0
+                    ],
+                    [
+                        512.0,
+                        89.0
+                    ],
+                    [
+                        512.0,
+                        811.0
+                    ],
+                    [
+                        65.0,
+                        811.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.46570417284965515,
+                "coordinate": [
+                    82,
+                    846,
+                    514,
+                    968
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        80.62979125976562,
+                        851.0872192382812
+                    ],
+                    [
+                        510.9999694824219,
+                        846.0000610351562
+                    ],
+                    [
+                        512.3701171875,
+                        961.9129028320312
+                    ],
+                    [
+                        81.99990844726562,
+                        967.0000610351562
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.78352290391922,
+                "coordinate": [
+                    263,
+                    985,
+                    283,
+                    1001
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        263.0,
+                        985.0
+                    ],
+                    [
+                        282.0,
+                        985.0
+                    ],
+                    [
+                        282.0,
+                        1000.0
+                    ],
+                    [
+                        263.0,
+                        1000.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

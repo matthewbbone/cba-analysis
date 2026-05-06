@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 251,
+    "page_count": 439,
+    "width": 1233,
+    "height": 1591,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                744,
+                115,
+                904,
+                133
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    743.9999389648438,
+                    115.0
+                ],
+                [
+                    902.9999389648438,
+                    115.0
+                ],
+                [
+                    902.9999389648438,
+                    132.0
+                ],
+                [
+                    743.9999389648438,
+                    132.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "2004 CWALBEW/LUCENT NATIONAL MEMORANDUM OF UNDERSTANDING",
+            "block_bbox": [
+                486,
+                171,
+                767,
+                208
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    486.0,
+                    171.0
+                ],
+                [
+                    767.0,
+                    171.0
+                ],
+                [
+                    767.0,
+                    208.0
+                ],
+                [
+                    486.0,
+                    208.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "This Memorandum is executed by the Communications Workers of America (hereinafter \"CWA\"), the International Brotherhood of Electrical Workers Lucent Coordinated Bargaining Committee on behalf of Local Unions 21, 1141 and 2020 (hereinafter \"IBEW\") and Lucent Technologies Inc. (hereinafter \"Lucent Technologies\" or \"the Company\") in the bargaining units listed on Attachment A, to set forth the understandings reached as to wages, hours, terms and conditions of employment that have application to all such bargaining units.",
+            "block_bbox": [
+                348,
+                218,
+                906,
+                344
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    348.0,
+                    218.0
+                ],
+                [
+                    906.0,
+                    218.0
+                ],
+                [
+                    906.0,
+                    344.0
+                ],
+                [
+                    348.0,
+                    344.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Upon ratification and execution of this Memorandum, this Memorandum binds the CWA and its local labor unions, the IBEW and its affiliated local unions, and Lucent Technologies to amend and extend the collective bargaining agreements covering the bargaining units listed on Attachment A so as to incorporate the items hereinafter set forth, where applicable.",
+            "block_bbox": [
+                349,
+                357,
+                905,
+                447
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    349.0,
+                    357.0
+                ],
+                [
+                    905.0,
+                    357.0
+                ],
+                [
+                    905.0,
+                    447.0
+                ],
+                [
+                    349.0,
+                    447.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "This Memorandum shall become effective at 12:01 a.m. on November 1, 2004, but only if it is ratified by the Unions' membership and the Company is so notified on or before December 17, 2004. When so effective, it shall continue in effect in accordance with its own terms until 11:59 p.m. on May 26, 2012, even if certain provisions terminate prior to the expiration of this Memorandum. Upon the termination of this Memorandum, the Company shall have no obligations under any of the terms of this Memorandum beyond the expiration date, except as required by law.",
+            "block_bbox": [
+                348,
+                460,
+                906,
+                604
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    348.0,
+                    460.0
+                ],
+                [
+                    906.0,
+                    460.0
+                ],
+                [
+                    906.0,
+                    604.0
+                ],
+                [
+                    348.0,
+                    604.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "243",
+            "block_bbox": [
+                871,
+                912,
+                902,
+                930
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    871.0,
+                    912.0
+                ],
+                [
+                    901.0,
+                    912.0
+                ],
+                [
+                    901.0,
+                    929.0
+                ],
+                [
+                    871.0,
+                    929.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8326952457427979,
+                "coordinate": [
+                    744,
+                    115,
+                    904,
+                    133
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        743.9999389648438,
+                        115.0
+                    ],
+                    [
+                        902.9999389648438,
+                        115.0
+                    ],
+                    [
+                        902.9999389648438,
+                        132.0
+                    ],
+                    [
+                        743.9999389648438,
+                        132.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8719737529754639,
+                "coordinate": [
+                    486,
+                    171,
+                    767,
+                    208
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        486.0,
+                        171.0
+                    ],
+                    [
+                        767.0,
+                        171.0
+                    ],
+                    [
+                        767.0,
+                        208.0
+                    ],
+                    [
+                        486.0,
+                        208.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9435153603553772,
+                "coordinate": [
+                    348,
+                    218,
+                    906,
+                    344
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        348.0,
+                        218.0
+                    ],
+                    [
+                        906.0,
+                        218.0
+                    ],
+                    [
+                        906.0,
+                        344.0
+                    ],
+                    [
+                        348.0,
+                        344.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9354842305183411,
+                "coordinate": [
+                    349,
+                    357,
+                    905,
+                    447
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        349.0,
+                        357.0
+                    ],
+                    [
+                        905.0,
+                        357.0
+                    ],
+                    [
+                        905.0,
+                        447.0
+                    ],
+                    [
+                        349.0,
+                        447.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9502467513084412,
+                "coordinate": [
+                    348,
+                    460,
+                    906,
+                    604
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        348.0,
+                        460.0
+                    ],
+                    [
+                        906.0,
+                        460.0
+                    ],
+                    [
+                        906.0,
+                        604.0
+                    ],
+                    [
+                        348.0,
+                        604.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6571133136749268,
+                "coordinate": [
+                    871,
+                    912,
+                    902,
+                    930
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        871.0,
+                        912.0
+                    ],
+                    [
+                        901.0,
+                        912.0
+                    ],
+                    [
+                        901.0,
+                        929.0
+                    ],
+                    [
+                        871.0,
+                        929.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

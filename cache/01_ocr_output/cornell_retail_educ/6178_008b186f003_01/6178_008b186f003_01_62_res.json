@@ -1,0 +1,944 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b186f003_01.pdf",
+    "page_index": 62,
+    "page_count": 106,
+    "width": 568,
+    "height": 1037,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "Long-term sick leave without pay may be renewed each year upon written request by the teacher. All requests for long-term sick leave shall be accompanied by a doctor's certificate that the teacher is unable to perform his duties.",
+            "block_bbox": [
+                115,
+                99,
+                499,
+                171
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    115.0,
+                    99.0
+                ],
+                [
+                    499.0,
+                    99.0
+                ],
+                [
+                    499.0,
+                    171.0
+                ],
+                [
+                    115.0,
+                    171.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "c. A teacher on long term sick leave may not be employed in any capacity unless this provision is waived by the Superintendent after a request for waiver is made by the teacher. If the teacher desires to return from leave prior to the date of intent to return and no position for which the teacher is certified and/or qualified is vacant, this provision shall be waived.",
+            "block_bbox": [
+                91,
+                171,
+                499,
+                294
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    91.0,
+                    171.0
+                ],
+                [
+                    499.0,
+                    171.0
+                ],
+                [
+                    499.0,
+                    294.0
+                ],
+                [
+                    91.0,
+                    294.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "d. When the teacher finds it necessary to be absent, he shall notify his immediate supervisor or the designee the night before, or at least one (1) hour prior to the time the teacher is scheduled to report for duty, except in case of emergency.",
+            "block_bbox": [
+                91,
+                295,
+                500,
+                367
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    91.0,
+                    295.0
+                ],
+                [
+                    500.0,
+                    295.0
+                ],
+                [
+                    500.0,
+                    367.0
+                ],
+                [
+                    91.0,
+                    367.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "C. Illness/Injury In-Line-of-Duty Leave",
+            "block_bbox": [
+                45,
+                365,
+                324,
+                385
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    45.0,
+                    365.0
+                ],
+                [
+                    45.0,
+                    384.0
+                ],
+                [
+                    323.0,
+                    384.0
+                ],
+                [
+                    323.0,
+                    370.0
+                ],
+                [
+                    122.0,
+                    370.0
+                ],
+                [
+                    121.0,
+                    365.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. A teacher shall be entitled to illness/injury in-line-of-duty leave with pay when he has to be absent from duty because of:",
+            "block_bbox": [
+                71,
+                385,
+                499,
+                422
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    71.0,
+                    385.0
+                ],
+                [
+                    499.0,
+                    385.0
+                ],
+                [
+                    499.0,
+                    422.0
+                ],
+                [
+                    71.0,
+                    422.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a. a personal injury in the discharge of duty",
+            "block_bbox": [
+                93,
+                421,
+                387,
+                438
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    93.0,
+                    421.0
+                ],
+                [
+                    93.0,
+                    437.0
+                ],
+                [
+                    386.0,
+                    437.0
+                ],
+                [
+                    386.0,
+                    421.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b. an illness contracted as a direct result of his employment, if it can be proven that the illness was not contracted from another source.",
+            "block_bbox": [
+                92,
+                438,
+                500,
+                490
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    92.0,
+                    438.0
+                ],
+                [
+                    500.0,
+                    438.0
+                ],
+                [
+                    500.0,
+                    490.0
+                ],
+                [
+                    92.0,
+                    490.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. Said leave for each illness or injury shall be for a period of time not to exceed ten (10) duty days during the school year. A teacher may request additional leave as provided in Florida Statutes. If an employee is injured in the line of duty, as a result of a physical assault and/or battery, and qualifies for illness-in-the-line-of-duty leave, the employee shall be eligible to receive an extension of said leave. Claims shall be subject to the criteria established for the sick leave bank for serious illness, accident or injury and/or the Employee Assistance Program, where applicable.",
+            "block_bbox": [
+                70,
+                490,
+                501,
+                651
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    70.0,
+                    490.0
+                ],
+                [
+                    501.0,
+                    490.0
+                ],
+                [
+                    501.0,
+                    651.0
+                ],
+                [
+                    70.0,
+                    651.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3. If additional leave is needed and not granted under the provisions of Florida Statutes, the teacher may elect to take accrued sick leave or to be paid under Worker's Compensation. If he chooses the latter he shall be paid the balance of his daily rate of pay not provided by Worker's Compensation by using his accumulated sick leave. In that case, his remaining sick leave balance shall be prorated downward according to the percentage of his daily rate not paid through Worker's Compensation.",
+            "block_bbox": [
+                68,
+                650,
+                501,
+                793
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    68.0,
+                    650.0
+                ],
+                [
+                    501.0,
+                    650.0
+                ],
+                [
+                    501.0,
+                    793.0
+                ],
+                [
+                    68.0,
+                    793.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "D. Personal Leaves",
+            "block_bbox": [
+                48,
+                790,
+                188,
+                809
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    48.0,
+                    790.0
+                ],
+                [
+                    48.0,
+                    808.0
+                ],
+                [
+                    187.0,
+                    808.0
+                ],
+                [
+                    187.0,
+                    795.0
+                ],
+                [
+                    119.0,
+                    790.0
+                ],
+                [
+                    117.0,
+                    790.0
+                ],
+                [
+                    113.0,
+                    790.0
+                ],
+                [
+                    111.0,
+                    790.0
+                ],
+                [
+                    96.0,
+                    790.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "1. Short-Term",
+            "block_bbox": [
+                73,
+                809,
+                180,
+                826
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    73.0,
+                    809.0
+                ],
+                [
+                    179.0,
+                    809.0
+                ],
+                [
+                    179.0,
+                    825.0
+                ],
+                [
+                    73.0,
+                    825.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a. A teacher shall be allowed up to a maximum of four (4) school days per year for personal reasons without a deduction in pay. Such absences should be used for matters which cannot be scheduled outside of regular working hours.",
+            "block_bbox": [
+                94,
+                827,
+                500,
+                897
+            ],
+            "block_id": 11,
+            "block_order": 12,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    94.0,
+                    827.0
+                ],
+                [
+                    500.0,
+                    827.0
+                ],
+                [
+                    500.0,
+                    897.0
+                ],
+                [
+                    94.0,
+                    897.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b. Personal leave cannot be taken during the following periods of time except in cases of emergency, to attend the graduation a spouse, child, parent or self, or the observance of a religious holiday:",
+            "block_bbox": [
+                94,
+                897,
+                501,
+                968
+            ],
+            "block_id": 12,
+            "block_order": 13,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    94.0,
+                    897.0
+                ],
+                [
+                    501.0,
+                    897.0
+                ],
+                [
+                    501.0,
+                    968.0
+                ],
+                [
+                    94.0,
+                    968.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "60",
+            "block_bbox": [
+                260,
+                988,
+                280,
+                1003
+            ],
+            "block_id": 13,
+            "block_order": null,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    260.0,
+                    988.0
+                ],
+                [
+                    279.0,
+                    988.0
+                ],
+                [
+                    279.0,
+                    1002.0
+                ],
+                [
+                    260.0,
+                    1002.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.944258451461792,
+                "coordinate": [
+                    115,
+                    99,
+                    499,
+                    171
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        115.0,
+                        99.0
+                    ],
+                    [
+                        499.0,
+                        99.0
+                    ],
+                    [
+                        499.0,
+                        171.0
+                    ],
+                    [
+                        115.0,
+                        171.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9570586085319519,
+                "coordinate": [
+                    91,
+                    171,
+                    499,
+                    294
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        91.0,
+                        171.0
+                    ],
+                    [
+                        499.0,
+                        171.0
+                    ],
+                    [
+                        499.0,
+                        294.0
+                    ],
+                    [
+                        91.0,
+                        294.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9354846477508545,
+                "coordinate": [
+                    91,
+                    295,
+                    500,
+                    367
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        91.0,
+                        295.0
+                    ],
+                    [
+                        500.0,
+                        295.0
+                    ],
+                    [
+                        500.0,
+                        367.0
+                    ],
+                    [
+                        91.0,
+                        367.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8725495934486389,
+                "coordinate": [
+                    45,
+                    365,
+                    324,
+                    385
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        45.0,
+                        365.0
+                    ],
+                    [
+                        45.0,
+                        384.0
+                    ],
+                    [
+                        323.0,
+                        384.0
+                    ],
+                    [
+                        323.0,
+                        370.0
+                    ],
+                    [
+                        122.0,
+                        370.0
+                    ],
+                    [
+                        121.0,
+                        365.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8618614673614502,
+                "coordinate": [
+                    71,
+                    385,
+                    499,
+                    422
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        71.0,
+                        385.0
+                    ],
+                    [
+                        499.0,
+                        385.0
+                    ],
+                    [
+                        499.0,
+                        422.0
+                    ],
+                    [
+                        71.0,
+                        422.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7856084704399109,
+                "coordinate": [
+                    93,
+                    421,
+                    387,
+                    438
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        93.0,
+                        421.0
+                    ],
+                    [
+                        93.0,
+                        437.0
+                    ],
+                    [
+                        386.0,
+                        437.0
+                    ],
+                    [
+                        386.0,
+                        421.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9389927387237549,
+                "coordinate": [
+                    92,
+                    438,
+                    500,
+                    490
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        92.0,
+                        438.0
+                    ],
+                    [
+                        500.0,
+                        438.0
+                    ],
+                    [
+                        500.0,
+                        490.0
+                    ],
+                    [
+                        92.0,
+                        490.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9632272124290466,
+                "coordinate": [
+                    70,
+                    490,
+                    501,
+                    651
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        70.0,
+                        490.0
+                    ],
+                    [
+                        501.0,
+                        490.0
+                    ],
+                    [
+                        501.0,
+                        651.0
+                    ],
+                    [
+                        70.0,
+                        651.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9580038189888,
+                "coordinate": [
+                    68,
+                    650,
+                    501,
+                    793
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        68.0,
+                        650.0
+                    ],
+                    [
+                        501.0,
+                        650.0
+                    ],
+                    [
+                        501.0,
+                        793.0
+                    ],
+                    [
+                        68.0,
+                        793.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8478744626045227,
+                "coordinate": [
+                    48,
+                    790,
+                    188,
+                    809
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        48.0,
+                        790.0
+                    ],
+                    [
+                        48.0,
+                        808.0
+                    ],
+                    [
+                        187.0,
+                        808.0
+                    ],
+                    [
+                        187.0,
+                        795.0
+                    ],
+                    [
+                        119.0,
+                        790.0
+                    ],
+                    [
+                        117.0,
+                        790.0
+                    ],
+                    [
+                        113.0,
+                        790.0
+                    ],
+                    [
+                        111.0,
+                        790.0
+                    ],
+                    [
+                        96.0,
+                        790.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6840465068817139,
+                "coordinate": [
+                    73,
+                    809,
+                    180,
+                    826
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        73.0,
+                        809.0
+                    ],
+                    [
+                        179.0,
+                        809.0
+                    ],
+                    [
+                        179.0,
+                        825.0
+                    ],
+                    [
+                        73.0,
+                        825.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9489105343818665,
+                "coordinate": [
+                    94,
+                    827,
+                    500,
+                    897
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        94.0,
+                        827.0
+                    ],
+                    [
+                        500.0,
+                        827.0
+                    ],
+                    [
+                        500.0,
+                        897.0
+                    ],
+                    [
+                        94.0,
+                        897.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9441735148429871,
+                "coordinate": [
+                    94,
+                    897,
+                    501,
+                    968
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        94.0,
+                        897.0
+                    ],
+                    [
+                        501.0,
+                        897.0
+                    ],
+                    [
+                        501.0,
+                        968.0
+                    ],
+                    [
+                        94.0,
+                        968.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8007088899612427,
+                "coordinate": [
+                    260,
+                    988,
+                    280,
+                    1003
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        260.0,
+                        988.0
+                    ],
+                    [
+                        279.0,
+                        988.0
+                    ],
+                    [
+                        279.0,
+                        1002.0
+                    ],
+                    [
+                        260.0,
+                        1002.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

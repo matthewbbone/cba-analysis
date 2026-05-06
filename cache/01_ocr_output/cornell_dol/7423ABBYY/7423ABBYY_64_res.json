@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/7423ABBYY.pdf",
+    "page_index": 64,
+    "page_count": 185,
+    "width": 1188,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "Approved for Identification by Both Parties Hereto",
+            "block_bbox": [
+                191,
+                41,
+                734,
+                74
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    191.0,
+                    41.0
+                ],
+                [
+                    734.0,
+                    41.0
+                ],
+                [
+                    734.0,
+                    74.0
+                ],
+                [
+                    191.0,
+                    74.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "VERIZON NORTH INC.",
+            "block_bbox": [
+                190,
+                95,
+                458,
+                128
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    190.0,
+                    95.0
+                ],
+                [
+                    458.0,
+                    95.0
+                ],
+                [
+                    458.0,
+                    128.0
+                ],
+                [
+                    190.0,
+                    128.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "By: Mary J. Darling\nDirector – Labor Relations",
+            "block_bbox": [
+                190,
+                151,
+                577,
+                211
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    190.0,
+                    151.0
+                ],
+                [
+                    577.0,
+                    151.0
+                ],
+                [
+                    577.0,
+                    211.0
+                ],
+                [
+                    190.0,
+                    211.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Local Union No. 986 - I.B.E.W.",
+            "block_bbox": [
+                189,
+                318,
+                534,
+                350
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    189.0,
+                    318.0
+                ],
+                [
+                    534.0,
+                    318.0
+                ],
+                [
+                    534.0,
+                    350.0
+                ],
+                [
+                    189.0,
+                    350.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "By: Chris S. Mohr\nPresident",
+            "block_bbox": [
+                187,
+                374,
+                441,
+                433
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    187.0,
+                    374.0
+                ],
+                [
+                    441.0,
+                    374.0
+                ],
+                [
+                    441.0,
+                    433.0
+                ],
+                [
+                    187.0,
+                    433.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "56",
+            "block_bbox": [
+                656,
+                1473,
+                690,
+                1499
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    656.0,
+                    1473.0
+                ],
+                [
+                    689.0,
+                    1473.0
+                ],
+                [
+                    689.0,
+                    1498.0
+                ],
+                [
+                    656.0,
+                    1498.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7148846983909607,
+                "coordinate": [
+                    191,
+                    41,
+                    734,
+                    74
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        191.0,
+                        41.0
+                    ],
+                    [
+                        734.0,
+                        41.0
+                    ],
+                    [
+                        734.0,
+                        74.0
+                    ],
+                    [
+                        191.0,
+                        74.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6996516585350037,
+                "coordinate": [
+                    190,
+                    95,
+                    458,
+                    128
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        190.0,
+                        95.0
+                    ],
+                    [
+                        458.0,
+                        95.0
+                    ],
+                    [
+                        458.0,
+                        128.0
+                    ],
+                    [
+                        190.0,
+                        128.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7210699915885925,
+                "coordinate": [
+                    190,
+                    151,
+                    577,
+                    211
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        190.0,
+                        151.0
+                    ],
+                    [
+                        577.0,
+                        151.0
+                    ],
+                    [
+                        577.0,
+                        211.0
+                    ],
+                    [
+                        190.0,
+                        211.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7694994807243347,
+                "coordinate": [
+                    189,
+                    318,
+                    534,
+                    350
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        189.0,
+                        318.0
+                    ],
+                    [
+                        534.0,
+                        318.0
+                    ],
+                    [
+                        534.0,
+                        350.0
+                    ],
+                    [
+                        189.0,
+                        350.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.783292293548584,
+                "coordinate": [
+                    187,
+                    374,
+                    441,
+                    433
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        187.0,
+                        374.0
+                    ],
+                    [
+                        441.0,
+                        374.0
+                    ],
+                    [
+                        441.0,
+                        433.0
+                    ],
+                    [
+                        187.0,
+                        433.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7546850442886353,
+                "coordinate": [
+                    656,
+                    1473,
+                    690,
+                    1499
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        656.0,
+                        1473.0
+                    ],
+                    [
+                        689.0,
+                        1473.0
+                    ],
+                    [
+                        689.0,
+                        1498.0
+                    ],
+                    [
+                        656.0,
+                        1498.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

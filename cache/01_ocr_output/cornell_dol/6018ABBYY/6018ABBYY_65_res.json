@@ -1,0 +1,522 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 65,
+    "page_count": 287,
+    "width": 723,
+    "height": 1009,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article VII",
+            "block_bbox": [
+                585,
+                51,
+                671,
+                70
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    585.0,
+                    51.0
+                ],
+                [
+                    670.0,
+                    51.0
+                ],
+                [
+                    670.0,
+                    69.0
+                ],
+                [
+                    585.0,
+                    69.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "They will also continue to be responsible for any Service Related fees or Age Related fees and plan co-pays and deductibles. The Surviving Spouse will be responsible for 50% of the cost as long as the retiree opts for coverage. The Service Related fees and Age Related fees apply until the retiree would have attained Medicare eligibility.",
+            "block_bbox": [
+                185,
+                79,
+                671,
+                214
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    185.0,
+                    79.0
+                ],
+                [
+                    671.0,
+                    79.0
+                ],
+                [
+                    671.0,
+                    214.0
+                ],
+                [
+                    185.0,
+                    214.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(1)(q) CLAIMS ADMINISTRATOR – The Company has the right to amend, alter or substitute the Traditional Medical Plan or to substitute an insurance carrier or the Claims Administrator or the URO without the consent of the Union, provided the such a change shall not operate to reduce the benefit level. The management reports submitted to the Company by the Claims Administrator will contain only gross data. The Company will not request specific diagnosis or utilization data.",
+            "block_bbox": [
+                119,
+                233,
+                671,
+                412
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    119.0,
+                    233.0
+                ],
+                [
+                    671.0,
+                    233.0
+                ],
+                [
+                    671.0,
+                    412.0
+                ],
+                [
+                    119.0,
+                    412.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(1)(r) EMERGENCY ROOM COVERAGE – If a covered person utilizes emergency room services for non-emergency situations, as determined by the Claims Administrator, benefits will be reduced as outlined in the Traditional Plan document. Effective January 1, 2002, if services rendered in an emergency room are determined to be non-emergency by the Claims Administrator, benefits will be reduced by $75 with the remainder paid as outlined in the Traditional Plan document.",
+            "block_bbox": [
+                118,
+                430,
+                668,
+                611
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    118.0,
+                    430.0
+                ],
+                [
+                    668.0,
+                    430.0
+                ],
+                [
+                    668.0,
+                    611.0
+                ],
+                [
+                    118.0,
+                    611.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(1)(s) HOSPICE CARE - Effective January 1, 1998, the Traditional Medical Plan will be amended to extend the Hospice Care Benefit to two hundred (200) days of inpatient or outpatient care.",
+            "block_bbox": [
+                116,
+                628,
+                668,
+                697
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    116.0,
+                    628.0
+                ],
+                [
+                    668.0,
+                    628.0
+                ],
+                [
+                    668.0,
+                    697.0
+                ],
+                [
+                    116.0,
+                    697.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(1)(t) NON-EMERGENCY TREATMENT OUTSIDE THE U.S. — All non-emergency treatment rendered to any plan participant outside of the United States will limit plan payment to the reasonable and customary fee for the AMA-approved protocol of treatment. Reasonable and customary fees will be defined by the geographic region within which the participant lives.",
+            "block_bbox": [
+                116,
+                716,
+                668,
+                851
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    116.0,
+                    716.0
+                ],
+                [
+                    668.0,
+                    716.0
+                ],
+                [
+                    668.0,
+                    851.0
+                ],
+                [
+                    116.0,
+                    851.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(1)(u) PREFERRED PROVIDER ORGANIZATION (PPO) - If a PPO is offered, it will be a supplement to the Traditional Medical Plan and all non-Medicare Plan participants are automatically",
+            "block_bbox": [
+                116,
+                869,
+                667,
+                938
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    116.0,
+                    869.0
+                ],
+                [
+                    667.0,
+                    869.0
+                ],
+                [
+                    667.0,
+                    938.0
+                ],
+                [
+                    116.0,
+                    938.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "57",
+            "block_bbox": [
+                365,
+                944,
+                389,
+                960
+            ],
+            "block_id": 7,
+            "block_order": null,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    365.0,
+                    944.0
+                ],
+                [
+                    388.0,
+                    944.0
+                ],
+                [
+                    388.0,
+                    959.0
+                ],
+                [
+                    365.0,
+                    959.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.832103967666626,
+                "coordinate": [
+                    585,
+                    51,
+                    671,
+                    70
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        585.0,
+                        51.0
+                    ],
+                    [
+                        670.0,
+                        51.0
+                    ],
+                    [
+                        670.0,
+                        69.0
+                    ],
+                    [
+                        585.0,
+                        69.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9507791996002197,
+                "coordinate": [
+                    185,
+                    79,
+                    671,
+                    214
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        185.0,
+                        79.0
+                    ],
+                    [
+                        671.0,
+                        79.0
+                    ],
+                    [
+                        671.0,
+                        214.0
+                    ],
+                    [
+                        185.0,
+                        214.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9603585600852966,
+                "coordinate": [
+                    119,
+                    233,
+                    671,
+                    412
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        119.0,
+                        233.0
+                    ],
+                    [
+                        671.0,
+                        233.0
+                    ],
+                    [
+                        671.0,
+                        412.0
+                    ],
+                    [
+                        119.0,
+                        412.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9550166130065918,
+                "coordinate": [
+                    118,
+                    430,
+                    668,
+                    611
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        118.0,
+                        430.0
+                    ],
+                    [
+                        668.0,
+                        430.0
+                    ],
+                    [
+                        668.0,
+                        611.0
+                    ],
+                    [
+                        118.0,
+                        611.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.932064950466156,
+                "coordinate": [
+                    116,
+                    628,
+                    668,
+                    697
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        116.0,
+                        628.0
+                    ],
+                    [
+                        668.0,
+                        628.0
+                    ],
+                    [
+                        668.0,
+                        697.0
+                    ],
+                    [
+                        116.0,
+                        697.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.955638587474823,
+                "coordinate": [
+                    116,
+                    716,
+                    668,
+                    851
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        116.0,
+                        716.0
+                    ],
+                    [
+                        668.0,
+                        716.0
+                    ],
+                    [
+                        668.0,
+                        851.0
+                    ],
+                    [
+                        116.0,
+                        851.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9209954738616943,
+                "coordinate": [
+                    116,
+                    869,
+                    667,
+                    938
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        116.0,
+                        869.0
+                    ],
+                    [
+                        667.0,
+                        869.0
+                    ],
+                    [
+                        667.0,
+                        938.0
+                    ],
+                    [
+                        116.0,
+                        938.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7739406228065491,
+                "coordinate": [
+                    365,
+                    944,
+                    389,
+                    960
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        365.0,
+                        944.0
+                    ],
+                    [
+                        388.0,
+                        944.0
+                    ],
+                    [
+                        388.0,
+                        959.0
+                    ],
+                    [
+                        365.0,
+                        959.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

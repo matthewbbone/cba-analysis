@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_dol/6513ABBYY.pdf",
+    "page_index": 8,
+    "page_count": 91,
+    "width": 1585,
+    "height": 1233,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Contract",
+            "block_bbox": [
+                29,
+                25,
+                118,
+                51
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    29.0,
+                    25.0
+                ],
+                [
+                    118.0,
+                    25.0
+                ],
+                [
+                    118.0,
+                    51.0
+                ],
+                [
+                    29.0,
+                    51.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 8 of 94",
+            "block_bbox": [
+                1417,
+                24,
+                1544,
+                52
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    1417.0,
+                    24.0
+                ],
+                [
+                    1544.0,
+                    24.0
+                ],
+                [
+                    1544.0,
+                    52.0
+                ],
+                [
+                    1417.0,
+                    52.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "SECTION 6 - EMPLOYMENT DATE",
+            "block_bbox": [
+                730,
+                63,
+                1097,
+                93
+            ],
+            "block_id": 2,
+            "block_order": 1,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    730.0,
+                    63.0
+                ],
+                [
+                    1097.0,
+                    63.0
+                ],
+                [
+                    1097.0,
+                    93.0
+                ],
+                [
+                    730.0,
+                    93.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "It is understood that, in the application of this Agreement, an employee's employment date shall date from the beginning of his employment with the Employer and not from the signing of this agreement. Said employment date shall remain unchanged unless continuity of employment is broken pursuant to the provisions of Section 16 (Seniority).",
+            "block_bbox": [
+                340,
+                121,
+                1451,
+                237
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    340.0,
+                    121.0
+                ],
+                [
+                    1451.0,
+                    121.0
+                ],
+                [
+                    1451.0,
+                    237.0
+                ],
+                [
+                    340.0,
+                    237.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "SECTION 7 - ORIENTATION PERIOD",
+            "block_bbox": [
+                719,
+                261,
+                1107,
+                291
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    719.0,
+                    261.0
+                ],
+                [
+                    1107.0,
+                    261.0
+                ],
+                [
+                    1107.0,
+                    291.0
+                ],
+                [
+                    719.0,
+                    291.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Any person entering the employment of the Employer shall be required to complete a six (6) calendar month orientation period prior to achieving regular status. Such employees, after 3 months of employment, will be afforded the same rights as other employees under Section 31 of this Collective Bargaining Agreement. The termination of Employees with less than three (3) months of employment shall not be subject to Section 31, except for terminations for Union membership or activity.",
+            "block_bbox": [
+                340,
+                319,
+                1448,
+                465
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    340.0,
+                    319.0
+                ],
+                [
+                    1448.0,
+                    319.0
+                ],
+                [
+                    1448.0,
+                    465.0
+                ],
+                [
+                    340.0,
+                    465.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "SECTION 8 - WORK SCHEDULES",
+            "block_bbox": [
+                738,
+                488,
+                1090,
+                518
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    738.0,
+                    488.0
+                ],
+                [
+                    1090.0,
+                    488.0
+                ],
+                [
+                    1090.0,
+                    518.0
+                ],
+                [
+                    738.0,
+                    518.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A. The maximum straight-time work week shall consist of forty (40) hours, to be performed within five (5) days, between Sunday through Saturday, both inclusive, except as otherwise modified by the terms of this Agreement. The maximum straight-time workday shall consist of eight (8) hours each workday. Sunday work shall be voluntary. Those presently working Sundays shall have preference for said Sunday work. When it is necessary to fill vacancies for Sunday work, the principle of seniority shall apply as provided for in Section 16 of this Agreement. If the Employer does not receive a sufficient number of volunteers for the Sunday work, the Employer shall schedule and assign employees by inverse seniority. In no event shall Sunday work assignments go unfilled. The same process shall apply as noted above when Sunday work as part of set hour allotment becomes available. Once assigned, by seniority, as part of the set hour allotment, it shall become a part of the employees' regular schedule.",
+            "block_bbox": [
+                340,
+                545,
+                1477,
+                834
+            ],
+            "block_id": 7,
+            "block_order": 6,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    340.0,
+                    545.0
+                ],
+                [
+                    1477.0,
+                    545.0
+                ],
+                [
+                    1477.0,
+                    834.0
+                ],
+                [
+                    340.0,
+                    834.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "B. As new job opening(s) becomes available in a department it/they will be posted for no less than six (6) days. One of the days shall be a Saturday. Interviewing for the posted open position(s) may begin on the 2nd day of the posting, however the final selection may not be made until after the sixth (6th) day of posting. All employees who apply for a new job opening(s) will be interviewed.",
+            "block_bbox": [
+                341,
+                858,
+                1473,
+                976
+            ],
+            "block_id": 8,
+            "block_order": 7,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    341.0,
+                    858.0
+                ],
+                [
+                    1473.0,
+                    858.0
+                ],
+                [
+                    1473.0,
+                    976.0
+                ],
+                [
+                    341.0,
+                    976.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Job posting notices shall include job title, classification, wage rate, estimated starting date, brief job description, minimum qualifications for the position, the designation as described in Section 5, and the minimum hour allotment including base days of work, initial shift and set day(s) off. Positions in the San Francisco Stores will be posted along with this portion of the CBA in the Employee lunchrooms and the Human Resource Office in the San Francisco Store. Job postings for the Stonestown store will be located in the employee entrance area. Location of the postings may be changed by mutual agreement.",
+            "block_bbox": [
+                341,
+                999,
+                1480,
+                1172
+            ],
+            "block_id": 9,
+            "block_order": 8,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    341.0,
+                    999.0
+                ],
+                [
+                    1480.0,
+                    999.0
+                ],
+                [
+                    1480.0,
+                    1172.0
+                ],
+                [
+                    341.0,
+                    1172.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "http://macys.local101.com/contract.htm",
+            "block_bbox": [
+                31,
+                1187,
+                419,
+                1215
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    31.0,
+                    1187.0
+                ],
+                [
+                    419.0,
+                    1187.0
+                ],
+                [
+                    419.0,
+                    1215.0
+                ],
+                [
+                    31.0,
+                    1215.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "1/31/2005",
+            "block_bbox": [
+                1444,
+                1186,
+                1544,
+                1215
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    1444.0,
+                    1186.0
+                ],
+                [
+                    1544.0,
+                    1186.0
+                ],
+                [
+                    1544.0,
+                    1215.0
+                ],
+                [
+                    1444.0,
+                    1215.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7645066380500793,
+                "coordinate": [
+                    29,
+                    25,
+                    118,
+                    51
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        29.0,
+                        25.0
+                    ],
+                    [
+                        118.0,
+                        25.0
+                    ],
+                    [
+                        118.0,
+                        51.0
+                    ],
+                    [
+                        29.0,
+                        51.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8075869083404541,
+                "coordinate": [
+                    1417,
+                    24,
+                    1544,
+                    52
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        1417.0,
+                        24.0
+                    ],
+                    [
+                        1544.0,
+                        24.0
+                    ],
+                    [
+                        1544.0,
+                        52.0
+                    ],
+                    [
+                        1417.0,
+                        52.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.725947916507721,
+                "coordinate": [
+                    730,
+                    63,
+                    1097,
+                    93
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        730.0,
+                        63.0
+                    ],
+                    [
+                        1097.0,
+                        63.0
+                    ],
+                    [
+                        1097.0,
+                        93.0
+                    ],
+                    [
+                        730.0,
+                        93.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9551637172698975,
+                "coordinate": [
+                    340,
+                    121,
+                    1451,
+                    237
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        340.0,
+                        121.0
+                    ],
+                    [
+                        1451.0,
+                        121.0
+                    ],
+                    [
+                        1451.0,
+                        237.0
+                    ],
+                    [
+                        340.0,
+                        237.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.874906063079834,
+                "coordinate": [
+                    719,
+                    261,
+                    1107,
+                    291
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        719.0,
+                        261.0
+                    ],
+                    [
+                        1107.0,
+                        261.0
+                    ],
+                    [
+                        1107.0,
+                        291.0
+                    ],
+                    [
+                        719.0,
+                        291.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9561532735824585,
+                "coordinate": [
+                    340,
+                    319,
+                    1448,
+                    465
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        340.0,
+                        319.0
+                    ],
+                    [
+                        1448.0,
+                        319.0
+                    ],
+                    [
+                        1448.0,
+                        465.0
+                    ],
+                    [
+                        340.0,
+                        465.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.885076105594635,
+                "coordinate": [
+                    738,
+                    488,
+                    1090,
+                    518
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        738.0,
+                        488.0
+                    ],
+                    [
+                        1090.0,
+                        488.0
+                    ],
+                    [
+                        1090.0,
+                        518.0
+                    ],
+                    [
+                        738.0,
+                        518.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9631689190864563,
+                "coordinate": [
+                    340,
+                    545,
+                    1477,
+                    834
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        340.0,
+                        545.0
+                    ],
+                    [
+                        1477.0,
+                        545.0
+                    ],
+                    [
+                        1477.0,
+                        834.0
+                    ],
+                    [
+                        340.0,
+                        834.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.953313946723938,
+                "coordinate": [
+                    341,
+                    858,
+                    1473,
+                    976
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        341.0,
+                        858.0
+                    ],
+                    [
+                        1473.0,
+                        858.0
+                    ],
+                    [
+                        1473.0,
+                        976.0
+                    ],
+                    [
+                        341.0,
+                        976.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9619559645652771,
+                "coordinate": [
+                    341,
+                    999,
+                    1480,
+                    1172
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        341.0,
+                        999.0
+                    ],
+                    [
+                        1480.0,
+                        999.0
+                    ],
+                    [
+                        1480.0,
+                        1172.0
+                    ],
+                    [
+                        341.0,
+                        1172.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8716176748275757,
+                "coordinate": [
+                    31,
+                    1187,
+                    419,
+                    1215
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        31.0,
+                        1187.0
+                    ],
+                    [
+                        419.0,
+                        1187.0
+                    ],
+                    [
+                        419.0,
+                        1215.0
+                    ],
+                    [
+                        31.0,
+                        1215.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8358296751976013,
+                "coordinate": [
+                    1444,
+                    1186,
+                    1544,
+                    1215
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1444.0,
+                        1186.0
+                    ],
+                    [
+                        1544.0,
+                        1186.0
+                    ],
+                    [
+                        1544.0,
+                        1215.0
+                    ],
+                    [
+                        1444.0,
+                        1215.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

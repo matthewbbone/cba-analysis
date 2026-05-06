@@ -1,0 +1,918 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 253,
+    "page_count": 439,
+    "width": 1234,
+    "height": 1592,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                747,
+                116,
+                906,
+                136
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    747.0,
+                    116.0
+                ],
+                [
+                    905.0,
+                    116.0
+                ],
+                [
+                    905.0,
+                    135.0
+                ],
+                [
+                    747.0,
+                    135.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "This 2004 National Memorandum of Understanding is agreed to this 31st day of October, 2004.",
+            "block_bbox": [
+                349,
+                167,
+                909,
+                206
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    349.0,
+                    167.0
+                ],
+                [
+                    909.0,
+                    167.0
+                ],
+                [
+                    909.0,
+                    206.0
+                ],
+                [
+                    349.0,
+                    206.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "COMMUNICATIONS WORKERS OF AMERICA",
+            "block_bbox": [
+                462,
+                219,
+                796,
+                240
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    462.0,
+                    219.0
+                ],
+                [
+                    795.0,
+                    219.0
+                ],
+                [
+                    795.0,
+                    239.0
+                ],
+                [
+                    462.0,
+                    239.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "/s/ Ralph V. Maly, Jr. Vice President, CWA",
+            "block_bbox": [
+                349,
+                289,
+                501,
+                329
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    349.0,
+                    289.0
+                ],
+                [
+                    501.0,
+                    289.0
+                ],
+                [
+                    501.0,
+                    329.0
+                ],
+                [
+                    349.0,
+                    329.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "/s/ Mary Jo Sherman\nCWA Staff Representative",
+            "block_bbox": [
+                632,
+                289,
+                822,
+                329
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    632.0,
+                    289.0
+                ],
+                [
+                    822.0,
+                    289.0
+                ],
+                [
+                    822.0,
+                    329.0
+                ],
+                [
+                    632.0,
+                    329.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "/ Gerald Soulder\nCWA Staff Representative",
+            "block_bbox": [
+                349,
+                359,
+                536,
+                398
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    349.0,
+                    359.0
+                ],
+                [
+                    536.0,
+                    359.0
+                ],
+                [
+                    536.0,
+                    398.0
+                ],
+                [
+                    349.0,
+                    398.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "/s/ Brian P. Reilly\nPresident, CWA Local 1062",
+            "block_bbox": [
+                634,
+                359,
+                830,
+                398
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    634.0,
+                    359.0
+                ],
+                [
+                    830.0,
+                    359.0
+                ],
+                [
+                    830.0,
+                    398.0
+                ],
+                [
+                    634.0,
+                    398.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "/s/ Chuck Mitchell\nPresident, CWA Local 7790",
+            "block_bbox": [
+                348,
+                446,
+                546,
+                485
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    348.0,
+                    446.0
+                ],
+                [
+                    546.0,
+                    446.0
+                ],
+                [
+                    546.0,
+                    485.0
+                ],
+                [
+                    348.0,
+                    485.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "/s/ Tom Bruhn\nPresident, CWA Local 3790",
+            "block_bbox": [
+                633,
+                445,
+                831,
+                485
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    633.0,
+                    445.0
+                ],
+                [
+                    831.0,
+                    445.0
+                ],
+                [
+                    831.0,
+                    485.0
+                ],
+                [
+                    633.0,
+                    485.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "/s/ Mike Klein\nPresident, CWA Local 4090",
+            "block_bbox": [
+                348,
+                532,
+                545,
+                572
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    348.0,
+                    532.0
+                ],
+                [
+                    545.0,
+                    532.0
+                ],
+                [
+                    545.0,
+                    572.0
+                ],
+                [
+                    348.0,
+                    572.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "/s/ Marcie Vincent\nPresident, CWA Local 1366",
+            "block_bbox": [
+                633,
+                532,
+                829,
+                571
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    633.0,
+                    532.0
+                ],
+                [
+                    829.0,
+                    532.0
+                ],
+                [
+                    829.0,
+                    571.0
+                ],
+                [
+                    633.0,
+                    571.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "APPROVED:",
+            "block_bbox": [
+                349,
+                601,
+                447,
+                622
+            ],
+            "block_id": 11,
+            "block_order": 11,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    348.9999694824219,
+                    600.9999389648438
+                ],
+                [
+                    445.9999694824219,
+                    600.9999389648438
+                ],
+                [
+                    445.9999694824219,
+                    620.9999389648438
+                ],
+                [
+                    348.9999694824219,
+                    620.9999389648438
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "/s/ Morton Bahr President, CWA",
+            "block_bbox": [
+                348,
+                671,
+                467,
+                710
+            ],
+            "block_id": 12,
+            "block_order": 12,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    348.0,
+                    671.0
+                ],
+                [
+                    467.0,
+                    671.0
+                ],
+                [
+                    467.0,
+                    710.0
+                ],
+                [
+                    348.0,
+                    710.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "245",
+            "block_bbox": [
+                872,
+                914,
+                904,
+                931
+            ],
+            "block_id": 13,
+            "block_order": null,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    872.0,
+                    914.0
+                ],
+                [
+                    903.0,
+                    914.0
+                ],
+                [
+                    903.0,
+                    930.0
+                ],
+                [
+                    872.0,
+                    930.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8196557760238647,
+                "coordinate": [
+                    747,
+                    116,
+                    906,
+                    136
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        747.0,
+                        116.0
+                    ],
+                    [
+                        905.0,
+                        116.0
+                    ],
+                    [
+                        905.0,
+                        135.0
+                    ],
+                    [
+                        747.0,
+                        135.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8178171515464783,
+                "coordinate": [
+                    349,
+                    167,
+                    909,
+                    206
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        349.0,
+                        167.0
+                    ],
+                    [
+                        909.0,
+                        167.0
+                    ],
+                    [
+                        909.0,
+                        206.0
+                    ],
+                    [
+                        349.0,
+                        206.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7479249238967896,
+                "coordinate": [
+                    462,
+                    219,
+                    796,
+                    240
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        462.0,
+                        219.0
+                    ],
+                    [
+                        795.0,
+                        219.0
+                    ],
+                    [
+                        795.0,
+                        239.0
+                    ],
+                    [
+                        462.0,
+                        239.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8176801800727844,
+                "coordinate": [
+                    349,
+                    289,
+                    501,
+                    329
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        349.0,
+                        289.0
+                    ],
+                    [
+                        501.0,
+                        289.0
+                    ],
+                    [
+                        501.0,
+                        329.0
+                    ],
+                    [
+                        349.0,
+                        329.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8170134425163269,
+                "coordinate": [
+                    632,
+                    289,
+                    822,
+                    329
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        632.0,
+                        289.0
+                    ],
+                    [
+                        822.0,
+                        289.0
+                    ],
+                    [
+                        822.0,
+                        329.0
+                    ],
+                    [
+                        632.0,
+                        329.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8207884430885315,
+                "coordinate": [
+                    349,
+                    359,
+                    536,
+                    398
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        349.0,
+                        359.0
+                    ],
+                    [
+                        536.0,
+                        359.0
+                    ],
+                    [
+                        536.0,
+                        398.0
+                    ],
+                    [
+                        349.0,
+                        398.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6002340316772461,
+                "coordinate": [
+                    634,
+                    359,
+                    830,
+                    398
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        634.0,
+                        359.0
+                    ],
+                    [
+                        830.0,
+                        359.0
+                    ],
+                    [
+                        830.0,
+                        398.0
+                    ],
+                    [
+                        634.0,
+                        398.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.81178879737854,
+                "coordinate": [
+                    348,
+                    446,
+                    546,
+                    485
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        348.0,
+                        446.0
+                    ],
+                    [
+                        546.0,
+                        446.0
+                    ],
+                    [
+                        546.0,
+                        485.0
+                    ],
+                    [
+                        348.0,
+                        485.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.753290057182312,
+                "coordinate": [
+                    633,
+                    445,
+                    831,
+                    485
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        633.0,
+                        445.0
+                    ],
+                    [
+                        831.0,
+                        445.0
+                    ],
+                    [
+                        831.0,
+                        485.0
+                    ],
+                    [
+                        633.0,
+                        485.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.48106613755226135,
+                "coordinate": [
+                    348,
+                    532,
+                    545,
+                    572
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        348.0,
+                        532.0
+                    ],
+                    [
+                        545.0,
+                        532.0
+                    ],
+                    [
+                        545.0,
+                        572.0
+                    ],
+                    [
+                        348.0,
+                        572.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3034050464630127,
+                "coordinate": [
+                    349,
+                    550,
+                    545,
+                    571
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        349.0,
+                        550.0
+                    ],
+                    [
+                        349.0,
+                        570.0
+                    ],
+                    [
+                        544.0,
+                        570.0
+                    ],
+                    [
+                        544.0,
+                        550.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8269734978675842,
+                "coordinate": [
+                    633,
+                    532,
+                    829,
+                    571
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        633.0,
+                        532.0
+                    ],
+                    [
+                        829.0,
+                        532.0
+                    ],
+                    [
+                        829.0,
+                        571.0
+                    ],
+                    [
+                        633.0,
+                        571.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.636709988117218,
+                "coordinate": [
+                    349,
+                    601,
+                    447,
+                    622
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        348.9999694824219,
+                        600.9999389648438
+                    ],
+                    [
+                        445.9999694824219,
+                        600.9999389648438
+                    ],
+                    [
+                        445.9999694824219,
+                        620.9999389648438
+                    ],
+                    [
+                        348.9999694824219,
+                        620.9999389648438
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8535991311073303,
+                "coordinate": [
+                    348,
+                    671,
+                    467,
+                    710
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        348.0,
+                        671.0
+                    ],
+                    [
+                        467.0,
+                        671.0
+                    ],
+                    [
+                        467.0,
+                        710.0
+                    ],
+                    [
+                        348.0,
+                        710.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7249280214309692,
+                "coordinate": [
+                    872,
+                    914,
+                    904,
+                    931
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        872.0,
+                        914.0
+                    ],
+                    [
+                        903.0,
+                        914.0
+                    ],
+                    [
+                        903.0,
+                        930.0
+                    ],
+                    [
+                        872.0,
+                        930.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

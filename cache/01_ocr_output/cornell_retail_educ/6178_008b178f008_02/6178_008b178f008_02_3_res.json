@@ -1,0 +1,278 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b178f008_02.pdf",
+    "page_index": 3,
+    "page_count": 42,
+    "width": 1233,
+    "height": 1600,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "ARTICLE II - CHECKOFF",
+            "block_bbox": [
+                170,
+                177,
+                460,
+                205
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    170.0,
+                    177.0
+                ],
+                [
+                    460.0,
+                    177.0
+                ],
+                [
+                    460.0,
+                    205.0
+                ],
+                [
+                    170.0,
+                    205.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Upon receipt of an employee's written authorization, which shall not be irrevocable for more than one (1) year, or beyond the termination of this Agreement, whichever occurs sooner, the Employer shall deduct from such employee's salary in accordance with this Agreement, such employee's Association dues and remit same to the duly authorized representative of the Association each month, together with a list of the names of the employees from whose salary deductions were made. Such a written authorization may be revoked by the employee by written notice to the Employer and the Association during the ten-day period prior to the end of any such applicable yearly period or during the ten-day period prior to the termination date of any applicable Collective Bargaining Agreement, whichever occurs sooner. In the absence of such notice of revocation, the authorization shall be automatically renewed for an additional yearly period or until the end of the Collective Bargaining Agreement, whichever occurs sooner. The deduction shall be made in the first paycheck of the month. The Employer agrees to transmit the dues deducted to the Association by the tenth (10th) day of the following month. The Association shall have the exclusive right of dues checkoff for all employees covered by the recognition clause of this Agreement.",
+            "block_bbox": [
+                166,
+                226,
+                1060,
+                1198
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    166.0,
+                    226.0
+                ],
+                [
+                    1060.0,
+                    226.0
+                ],
+                [
+                    1060.0,
+                    1198.0
+                ],
+                [
+                    166.0,
+                    1198.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "In order for the deductions to be made, the authorization cards must be received by the Employer's designated representative by the fifteenth (15th) day of the month preceding the month when the checkoff is to begin. The Employer is not obligated to make retroactive deductions",
+            "block_bbox": [
+                167,
+                1212,
+                1086,
+                1391
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    167.0,
+                    1212.0
+                ],
+                [
+                    1086.0,
+                    1212.0
+                ],
+                [
+                    1086.0,
+                    1391.0
+                ],
+                [
+                    167.0,
+                    1391.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "2",
+            "block_bbox": [
+                606,
+                1484,
+                627,
+                1505
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    606.0,
+                    1484.0
+                ],
+                [
+                    626.0,
+                    1484.0
+                ],
+                [
+                    626.0,
+                    1504.0
+                ],
+                [
+                    606.0,
+                    1504.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.6149746775627136,
+                "coordinate": [
+                    170,
+                    177,
+                    460,
+                    205
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        170.0,
+                        177.0
+                    ],
+                    [
+                        460.0,
+                        177.0
+                    ],
+                    [
+                        460.0,
+                        205.0
+                    ],
+                    [
+                        170.0,
+                        205.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7582029700279236,
+                "coordinate": [
+                    166,
+                    226,
+                    1060,
+                    1198
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        166.0,
+                        226.0
+                    ],
+                    [
+                        1060.0,
+                        226.0
+                    ],
+                    [
+                        1060.0,
+                        1198.0
+                    ],
+                    [
+                        166.0,
+                        1198.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5906957387924194,
+                "coordinate": [
+                    167,
+                    1212,
+                    1086,
+                    1391
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        167.0,
+                        1212.0
+                    ],
+                    [
+                        1086.0,
+                        1212.0
+                    ],
+                    [
+                        1086.0,
+                        1391.0
+                    ],
+                    [
+                        167.0,
+                        1391.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6125003695487976,
+                "coordinate": [
+                    606,
+                    1484,
+                    627,
+                    1505
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        606.0,
+                        1484.0
+                    ],
+                    [
+                        626.0,
+                        1484.0
+                    ],
+                    [
+                        626.0,
+                        1504.0
+                    ],
+                    [
+                        606.0,
+                        1504.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

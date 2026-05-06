@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 108,
+    "page_count": 189,
+    "width": 1233,
+    "height": 1581,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "WAGE RATES EFFECTIVE OCTOBER 8, 2000\nSTRUCTURE A/B1",
+            "block_bbox": [
+                399,
+                157,
+                837,
+                209
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    399.0,
+                    157.0
+                ],
+                [
+                    837.0,
+                    157.0
+                ],
+                [
+                    837.0,
+                    209.0
+                ],
+                [
+                    399.0,
+                    209.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Job Title</td><td>START</td><td>1 YEAR</td><td>2 YEARS</td><td>3 YEARS</td><td>4 YEARS</td><td>5 YEARS</td><td>6 YEARS</td></tr><tr><td>RESPIRATORY CARE PERMITTEE</td><td>20.0608</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>RESPIRATORY SUPPLY AIDE</td><td>14.3883</td><td>14.7570</td><td>15.1355</td><td>15.4829</td><td>15.8432</td><td>16.1647</td><td></td></tr><tr><td>RESPIRATORY SUPPLY AIDE SR</td><td>14.6356</td><td>15.0109</td><td>15.3960</td><td>15.6792</td><td>16.0906</td><td>16.5023</td><td></td></tr><tr><td>SERVICE PARTNER</td><td>14.0019</td><td>14.3609</td><td>14.7289</td><td>15.1149</td><td>15.5008</td><td></td><td></td></tr><tr><td>STERILE PROC TECH II - CERT</td><td>15.5625</td><td>15.9612</td><td>16.3704</td><td>16.7465</td><td>17.1360</td><td>17.4839</td><td></td></tr><tr><td>STERILE PROC TECH SR - CERT</td><td>16.1848</td><td>16.5998</td><td>17.0251</td><td>17.4164</td><td>17.8214</td><td>18.1834</td><td></td></tr><tr><td>STERILE PROCESSING TECH I</td><td>14.9639</td><td>15.3474</td><td>15.7408</td><td>16.1024</td><td>16.4769</td><td>16.8113</td><td></td></tr><tr><td>STOCK ROOM ASST REG LAB SR</td><td>15.8463</td><td>16.2631</td><td>16.6801</td><td>16.9038</td><td>17.1276</td><td>17.5346</td><td></td></tr><tr><td>STOCK RM ASST REG LAB ONLY</td><td>14.3968</td><td>14.7757</td><td>15.1545</td><td>15.3578</td><td>15.5614</td><td>15.9475</td><td></td></tr><tr><td>STOREKEEPER</td><td>14.1608</td><td>14.5238</td><td>14.8963</td><td>15.2815</td><td>15.6679</td><td></td><td></td></tr><tr><td>STOREKEEPER - CHIEF</td><td>15.8671</td><td>16.2740</td><td>16.6912</td><td>17.1431</td><td>17.5366</td><td></td><td></td></tr><tr><td>STOREKEEPER I</td><td>14.4280</td><td>14.7979</td><td>15.1775</td><td>15.5701</td><td>15.9634</td><td></td><td></td></tr><tr><td>STOREKEEPER II</td><td>14.6597</td><td>15.0357</td><td>15.4211</td><td>15.8117</td><td>16.3503</td><td></td><td></td></tr><tr><td>SURGICAL ASSISTANT - CERT</td><td>19.5007</td><td>20.0008</td><td>20.5137</td><td>21.0449</td><td>21.6766</td><td>22.4076</td><td></td></tr><tr><td>SURGICAL ASST - TRAINEE</td><td>18.4477</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>SURGICAL ASST SR</td><td>19.4182</td><td>19.9293</td><td>20.4402</td><td>20.9586</td><td>21.5750</td><td>22.2878</td><td></td></tr><tr><td>SURGICAL ASST.</td><td>19.0252</td><td>19.5129</td><td>20.0132</td><td>20.5317</td><td>21.1480</td><td>21.8612</td><td></td></tr><tr><td>SURGICAL TECHNICIAN</td><td>17.7361</td><td>18.1907</td><td>18.6572</td><td>19.1194</td><td>19.6264</td><td>20.0885</td><td></td></tr><tr><td>SURGICAL TECHNICIAN SR</td><td>18.1612</td><td>18.6269</td><td>19.1045</td><td>19.5673</td><td>20.0737</td><td>20.5359</td><td></td></tr><tr><td>SURPLUS MATERLS ASST/OPER</td><td>18.1543</td><td>18.6197</td><td>19.0972</td><td>19.5430</td><td>19.9892</td><td>20.4767</td><td></td></tr><tr><td>TRUCK DRIVER</td><td>20.9805</td><td>21.5181</td><td>22.0699</td><td>22.5158</td><td>22.9621</td><td>23.4495</td><td></td></tr><tr><td>UNIT ASSISTANT</td><td>14.9377</td><td>15.3207</td><td>15.7137</td><td>16.0413</td><td>16.3883</td><td>16.7934</td><td></td></tr><tr><td>UNIT ASSISTANT SR</td><td>15.2471</td><td>15.6481</td><td>16.0496</td><td>16.3482</td><td>16.7810</td><td>17.2145</td><td></td></tr><tr><td>VISION SERVICES ASST I</td><td>14.6441</td><td>15.0198</td><td>15.4048</td><td>15.7574</td><td>16.1099</td><td>16.3967</td><td></td></tr><tr><td>VISION SERVICES ASST II</td><td>15.1588</td><td>15.5476</td><td>15.9462</td><td>16.3112</td><td>16.6760</td><td>16.9730</td><td></td></tr><tr><td>WAREHOUSE LEADPERSON</td><td>18.5780</td><td>19.0546</td><td>19.5433</td><td>20.2865</td><td>20.7318</td><td>21.2198</td><td></td></tr><tr><td>WAREHOUSE PERSON</td><td>18.1544</td><td>18.6197</td><td>19.0972</td><td>19.5430</td><td>19.9891</td><td>20.4767</td><td></td></tr><tr><td>YARDKEEPER</td><td>14.0142</td><td>14.3731</td><td>14.7416</td><td>15.1277</td><td>15.5134</td><td></td><td></td></tr></table>",
+            "block_bbox": [
+                102,
+                227,
+                1052,
+                1227
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    102.0,
+                    227.0
+                ],
+                [
+                    1052.0,
+                    227.0
+                ],
+                [
+                    1052.0,
+                    1227.0
+                ],
+                [
+                    102.0,
+                    1227.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "108",
+            "block_bbox": [
+                570,
+                1472,
+                611,
+                1498
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    570.0,
+                    1472.0
+                ],
+                [
+                    610.0,
+                    1472.0
+                ],
+                [
+                    610.0,
+                    1497.0
+                ],
+                [
+                    570.0,
+                    1497.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.840355396270752,
+                "coordinate": [
+                    399,
+                    157,
+                    837,
+                    209
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        399.0,
+                        157.0
+                    ],
+                    [
+                        837.0,
+                        157.0
+                    ],
+                    [
+                        837.0,
+                        209.0
+                    ],
+                    [
+                        399.0,
+                        209.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9520206451416016,
+                "coordinate": [
+                    102,
+                    227,
+                    1052,
+                    1227
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        102.0,
+                        227.0
+                    ],
+                    [
+                        1052.0,
+                        227.0
+                    ],
+                    [
+                        1052.0,
+                        1227.0
+                    ],
+                    [
+                        102.0,
+                        1227.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7695396542549133,
+                "coordinate": [
+                    570,
+                    1472,
+                    611,
+                    1498
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        570.0,
+                        1472.0
+                    ],
+                    [
+                        610.0,
+                        1472.0
+                    ],
+                    [
+                        610.0,
+                        1497.0
+                    ],
+                    [
+                        570.0,
+                        1497.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

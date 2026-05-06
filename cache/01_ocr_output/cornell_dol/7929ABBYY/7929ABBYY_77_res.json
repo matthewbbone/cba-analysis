@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 77,
+    "page_count": 189,
+    "width": 1225,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "C. NURSING CLASSIFICATIONS",
+            "block_bbox": [
+                147,
+                139,
+                561,
+                171
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    147.0,
+                    139.0
+                ],
+                [
+                    561.0,
+                    139.0
+                ],
+                [
+                    561.0,
+                    171.0
+                ],
+                [
+                    147.0,
+                    171.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Care Partner\nCertified Surgical Assistant\nSurgical Assistant\nSurgical Assistant Trainee\nSr. Orthopedic Technician\nOrthopedic Technician\nSr. Surgical Technician\nSurgical Technician\nSr. OB Technician\nOB Technician\nSr. Psychiatric Technician\nPsychiatric Technician\nPsychiatric Attendant\nSr. Pathology Technical Assistant\nPathology Technical Assistant\nSr. Nurse Assistant\nNurse Assistant\nSr. Surgical/Supply Technician\nCentral Supply Technician\nSterile Processing Technician I\nCertified Sterile Processing Technician II\nSr. Certified Sterile Processing Technician\nAnesthesia Technical Assistant\nSr. Anesthesia Technical Assistant\nSr. Anesthesia Supply Aide\nAnesthesia Supply Aide\nSr. Respiratory Supply Aide\nRespiratory Supply Aide\nHome Health Aide\nSr. Medical Assistant\nMedical Assistant\nMonitor Technician\nSr. Unit Assistant\nUnit Assistant\nPatient Transportation Aide\nSr. Physical Therapy Aide\nPhysical Therapy Aide\nService Partner\nVision Services Asst. I\nVision Services Asst. II",
+            "block_bbox": [
+                194,
+                184,
+                688,
+                1306
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    194.0,
+                    184.0
+                ],
+                [
+                    688.0,
+                    184.0
+                ],
+                [
+                    688.0,
+                    1306.0
+                ],
+                [
+                    194.0,
+                    1306.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "77",
+            "block_bbox": [
+                604,
+                1456,
+                632,
+                1480
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    604.0,
+                    1456.0
+                ],
+                [
+                    631.0,
+                    1456.0
+                ],
+                [
+                    631.0,
+                    1479.0
+                ],
+                [
+                    604.0,
+                    1479.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8014209866523743,
+                "coordinate": [
+                    147,
+                    139,
+                    561,
+                    171
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        147.0,
+                        139.0
+                    ],
+                    [
+                        561.0,
+                        139.0
+                    ],
+                    [
+                        561.0,
+                        171.0
+                    ],
+                    [
+                        147.0,
+                        171.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8871537446975708,
+                "coordinate": [
+                    194,
+                    184,
+                    688,
+                    1306
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        194.0,
+                        184.0
+                    ],
+                    [
+                        688.0,
+                        184.0
+                    ],
+                    [
+                        688.0,
+                        1306.0
+                    ],
+                    [
+                        194.0,
+                        1306.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7418954968452454,
+                "coordinate": [
+                    604,
+                    1456,
+                    632,
+                    1480
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        604.0,
+                        1456.0
+                    ],
+                    [
+                        631.0,
+                        1456.0
+                    ],
+                    [
+                        631.0,
+                        1479.0
+                    ],
+                    [
+                        604.0,
+                        1479.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

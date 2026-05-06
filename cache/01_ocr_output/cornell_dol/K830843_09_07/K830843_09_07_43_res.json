@@ -1,0 +1,888 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 43,
+    "page_count": 206,
+    "width": 1224,
+    "height": 2016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "J. LAWRENCE BERKELEY LABORATORY",
+            "block_bbox": [
+                110,
+                97,
+                644,
+                126
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    110.0,
+                    97.0
+                ],
+                [
+                    644.0,
+                    97.0
+                ],
+                [
+                    644.0,
+                    126.0
+                ],
+                [
+                    110.0,
+                    126.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Policies, procedures, definitions, qualifications and calculations relative to severance pay at the Laboratory shall remain in effect for employees at the Laboratory.",
+            "block_bbox": [
+                180,
+                154,
+                1120,
+                211
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    180.0,
+                    154.0
+                ],
+                [
+                    1120.0,
+                    154.0
+                ],
+                [
+                    1120.0,
+                    211.0
+                ],
+                [
+                    180.0,
+                    211.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "K. In the event an alleged violation of this Article with regard to notice is grieved/arbitrated, any remedy, settlement or arbitrator's award or decision acknowledging improper notice shall be limited to an amount of back pay and/or reinstatement of benefits which would make the employee whole for the number of days the notice was deficient. In no case shall such amount be calculated for a period of greater than thirty (30) calendar days.",
+            "block_bbox": [
+                111,
+                235,
+                1123,
+                405
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    111.0,
+                    235.0
+                ],
+                [
+                    1123.0,
+                    235.0
+                ],
+                [
+                    1123.0,
+                    405.0
+                ],
+                [
+                    111.0,
+                    405.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 14\nLEAVES OF ABSENCE",
+            "block_bbox": [
+                480,
+                456,
+                750,
+                513
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    480.0,
+                    456.0
+                ],
+                [
+                    750.0,
+                    456.0
+                ],
+                [
+                    750.0,
+                    513.0
+                ],
+                [
+                    480.0,
+                    513.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "A. GENERAL PROVISIONS",
+            "block_bbox": [
+                111,
+                538,
+                466,
+                568
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    111.0,
+                    538.0
+                ],
+                [
+                    466.0,
+                    538.0
+                ],
+                [
+                    466.0,
+                    568.0
+                ],
+                [
+                    111.0,
+                    568.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "In accordance with the provisions of this Article, leaves of absence, with or without pay, may be approved by the University.",
+            "block_bbox": [
+                181,
+                595,
+                1118,
+                652
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    181.0,
+                    595.0
+                ],
+                [
+                    1118.0,
+                    595.0
+                ],
+                [
+                    1118.0,
+                    652.0
+                ],
+                [
+                    181.0,
+                    652.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "1. Benefit Eligibility",
+            "block_bbox": [
+                189,
+                676,
+                458,
+                707
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    189.0,
+                    676.0
+                ],
+                [
+                    458.0,
+                    676.0
+                ],
+                [
+                    458.0,
+                    707.0
+                ],
+                [
+                    189.0,
+                    707.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a. For purposes of benefit eligibility an, approved leave without pay shall not be considered a break in service. Except as provided in Section D Family Care and Medical Leave, an eligible employee on approved leave without pay may elect to continue University-sponsored benefit plans (as determined by plan documents and regulations) for the period of the leave by remitting, in accordance with the provisions of the applicable plan(s), the entire premium amount due for the period of approved leave. Regulations of the retirement systems determine the effects of leave without pay on retirement benefits.",
+            "block_bbox": [
+                253,
+                731,
+                1122,
+                984
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    253.0,
+                    731.0
+                ],
+                [
+                    1122.0,
+                    731.0
+                ],
+                [
+                    1122.0,
+                    984.0
+                ],
+                [
+                    253.0,
+                    984.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b. Employee benefit plan coverage during an approved leave of absence for reasons of family care and/or medical leave will be continued in accordance with the provisions of Section C.6 Pregnancy Disability and Section D Family Care and Medical Leave.",
+            "block_bbox": [
+                253,
+                1009,
+                1121,
+                1121
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    253.0,
+                    1009.0
+                ],
+                [
+                    1121.0,
+                    1009.0
+                ],
+                [
+                    1121.0,
+                    1121.0
+                ],
+                [
+                    253.0,
+                    1121.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. Except as provided in Section D.1.1, Family Care and Medical Leave, periods on leave in a without-loss-of-straight-time pay status shall be considered time worked.",
+            "block_bbox": [
+                181,
+                1147,
+                1121,
+                1230
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    181.0,
+                    1147.0
+                ],
+                [
+                    1121.0,
+                    1147.0
+                ],
+                [
+                    1121.0,
+                    1230.0
+                ],
+                [
+                    181.0,
+                    1230.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "3. Requests for Leave",
+            "block_bbox": [
+                189,
+                1257,
+                485,
+                1286
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    189.0,
+                    1257.0
+                ],
+                [
+                    485.0,
+                    1257.0
+                ],
+                [
+                    485.0,
+                    1286.0
+                ],
+                [
+                    189.0,
+                    1286.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a. Except as provided in Section D Family Care and Medical Leave, requests for leaves of absence and extensions thereof, both with and without pay, shall be submitted in writing to the University. Such requests shall be submitted sufficiently in advance of the requested leave date to provide the University time to assess the operational impact of granting the request. If the employee learns of the event giving rise to the need",
+            "block_bbox": [
+                253,
+                1312,
+                1121,
+                1481
+            ],
+            "block_id": 11,
+            "block_order": 12,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    253.0,
+                    1312.0
+                ],
+                [
+                    1121.0,
+                    1312.0
+                ],
+                [
+                    1121.0,
+                    1481.0
+                ],
+                [
+                    253.0,
+                    1481.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "for leave more than thirty (30) days in advance, the employee shall provide the University with notice as soon as the employee learns of the need for leave, and, at a minimum, with thirty (30) days advance, written notice. If the employee learns of the event giving rise to the need for leave less than thirty (30) days in advance, the employee shall provide the University with as much advance, written notice as possible, and, at a minimum, with such notice no more than five working days after learning of the event. All requests for leave shall contain the requested beginning date, end date, and estimated duration of the leave, and any additional information as required.",
+            "block_bbox": [
+                329,
+                1505,
+                1121,
+                1785
+            ],
+            "block_id": 12,
+            "block_order": 13,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    329.0,
+                    1505.0
+                ],
+                [
+                    1121.0,
+                    1505.0
+                ],
+                [
+                    1121.0,
+                    1785.0
+                ],
+                [
+                    329.0,
+                    1785.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "41",
+            "block_bbox": [
+                637,
+                1946,
+                672,
+                1969
+            ],
+            "block_id": 13,
+            "block_order": null,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    637.0,
+                    1946.0
+                ],
+                [
+                    671.0,
+                    1946.0
+                ],
+                [
+                    671.0,
+                    1968.0
+                ],
+                [
+                    637.0,
+                    1968.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8366365432739258,
+                "coordinate": [
+                    110,
+                    97,
+                    644,
+                    126
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        110.0,
+                        97.0
+                    ],
+                    [
+                        644.0,
+                        97.0
+                    ],
+                    [
+                        644.0,
+                        126.0
+                    ],
+                    [
+                        110.0,
+                        126.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9141904711723328,
+                "coordinate": [
+                    180,
+                    154,
+                    1120,
+                    211
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        180.0,
+                        154.0
+                    ],
+                    [
+                        1120.0,
+                        154.0
+                    ],
+                    [
+                        1120.0,
+                        211.0
+                    ],
+                    [
+                        180.0,
+                        211.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9500084519386292,
+                "coordinate": [
+                    111,
+                    235,
+                    1123,
+                    405
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        111.0,
+                        235.0
+                    ],
+                    [
+                        1123.0,
+                        235.0
+                    ],
+                    [
+                        1123.0,
+                        405.0
+                    ],
+                    [
+                        111.0,
+                        405.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6437141299247742,
+                "coordinate": [
+                    480,
+                    456,
+                    750,
+                    513
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        480.0,
+                        456.0
+                    ],
+                    [
+                        750.0,
+                        456.0
+                    ],
+                    [
+                        750.0,
+                        513.0
+                    ],
+                    [
+                        480.0,
+                        513.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.842383623123169,
+                "coordinate": [
+                    111,
+                    538,
+                    466,
+                    568
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        111.0,
+                        538.0
+                    ],
+                    [
+                        466.0,
+                        538.0
+                    ],
+                    [
+                        466.0,
+                        568.0
+                    ],
+                    [
+                        111.0,
+                        568.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9031750559806824,
+                "coordinate": [
+                    181,
+                    595,
+                    1118,
+                    652
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        181.0,
+                        595.0
+                    ],
+                    [
+                        1118.0,
+                        595.0
+                    ],
+                    [
+                        1118.0,
+                        652.0
+                    ],
+                    [
+                        181.0,
+                        652.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8377622365951538,
+                "coordinate": [
+                    189,
+                    676,
+                    458,
+                    707
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        189.0,
+                        676.0
+                    ],
+                    [
+                        458.0,
+                        676.0
+                    ],
+                    [
+                        458.0,
+                        707.0
+                    ],
+                    [
+                        189.0,
+                        707.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9480480551719666,
+                "coordinate": [
+                    253,
+                    731,
+                    1122,
+                    984
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        253.0,
+                        731.0
+                    ],
+                    [
+                        1122.0,
+                        731.0
+                    ],
+                    [
+                        1122.0,
+                        984.0
+                    ],
+                    [
+                        253.0,
+                        984.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9344196915626526,
+                "coordinate": [
+                    253,
+                    1009,
+                    1121,
+                    1121
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        253.0,
+                        1009.0
+                    ],
+                    [
+                        1121.0,
+                        1009.0
+                    ],
+                    [
+                        1121.0,
+                        1121.0
+                    ],
+                    [
+                        253.0,
+                        1121.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.920644998550415,
+                "coordinate": [
+                    181,
+                    1147,
+                    1121,
+                    1230
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        181.0,
+                        1147.0
+                    ],
+                    [
+                        1121.0,
+                        1147.0
+                    ],
+                    [
+                        1121.0,
+                        1230.0
+                    ],
+                    [
+                        181.0,
+                        1230.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.841839075088501,
+                "coordinate": [
+                    189,
+                    1257,
+                    485,
+                    1286
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        189.0,
+                        1257.0
+                    ],
+                    [
+                        485.0,
+                        1257.0
+                    ],
+                    [
+                        485.0,
+                        1286.0
+                    ],
+                    [
+                        189.0,
+                        1286.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9516928195953369,
+                "coordinate": [
+                    253,
+                    1312,
+                    1121,
+                    1481
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        253.0,
+                        1312.0
+                    ],
+                    [
+                        1121.0,
+                        1312.0
+                    ],
+                    [
+                        1121.0,
+                        1481.0
+                    ],
+                    [
+                        253.0,
+                        1481.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9649105668067932,
+                "coordinate": [
+                    329,
+                    1505,
+                    1121,
+                    1785
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        329.0,
+                        1505.0
+                    ],
+                    [
+                        1121.0,
+                        1505.0
+                    ],
+                    [
+                        1121.0,
+                        1785.0
+                    ],
+                    [
+                        329.0,
+                        1785.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7358137965202332,
+                "coordinate": [
+                    637,
+                    1946,
+                    672,
+                    1969
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        637.0,
+                        1946.0
+                    ],
+                    [
+                        671.0,
+                        1946.0
+                    ],
+                    [
+                        671.0,
+                        1968.0
+                    ],
+                    [
+                        637.0,
+                        1968.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

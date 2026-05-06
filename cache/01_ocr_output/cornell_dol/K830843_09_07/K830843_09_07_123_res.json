@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 123,
+    "page_count": 206,
+    "width": 2016,
+    "height": 1224,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "APPENDIX A",
+            "block_bbox": [
+                934,
+                116,
+                1093,
+                145
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    934.0,
+                    116.0
+                ],
+                [
+                    1093.0,
+                    116.0
+                ],
+                [
+                    1093.0,
+                    145.0
+                ],
+                [
+                    934.0,
+                    145.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td rowspan=\"2\">LINK</td><td rowspan=\"2\">TITLE</td><td rowspan=\"2\">TITLE NAME</td><td>MONTHLY</td><td>HOURLY</td><td>MONTHLY</td><td>HOURLY</td><td>MONTHLY</td><td>HOURLY</td><td colspan=\"4\">SHIFT DIFFERENTIAL</td></tr><tr><td>MINIMUM</td><td>MINIMUM</td><td>MIDPOINT</td><td>MIDPOINT</td><td>MAXIMUM</td><td>MAXIMUM</td><td>EVE</td><td>NIGHT</td><td>WKEND</td><td>1</td></tr><tr><td>CODE</td><td>CODE</td><td>TITLE NAME</td><td>RATE</td><td>RATE</td><td>RATE</td><td>RATE</td><td>RATE</td><td>RATE</td><td>EVE</td><td>NIGHT</td><td>WKEND</td><td>1</td></tr><tr><td colspan=\"13\">CAMPUS - San Diego - cont.</td></tr><tr><td colspan=\"13\">January and July 2004</td></tr><tr><td>019</td><td>8682</td><td>TECHNICIAN, ELEC, SR-MED FAC</td><td>$2,967</td><td>$17.05</td><td>$3,541</td><td>$20.35</td><td>$4,117</td><td>$23.66</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>019</td><td>8683</td><td>TECHNICIAN, ELEC-MED FAC</td><td>$2,711</td><td>$15.58</td><td>$3,142</td><td>$18.06</td><td>$3,576</td><td>$20.55</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>019</td><td>8684</td><td>TECHNICIAN, ELEC, TRAINEE-MF</td><td>$2,375</td><td>$13.65</td><td>$2,746</td><td>$15.78</td><td>$3,116</td><td>$17.91</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>019</td><td>9027</td><td>PERFUSIONIST, SR</td><td>$4,651</td><td>$26.73</td><td>$5,549</td><td>$31.89</td><td>$6,448</td><td>$37.06</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>019</td><td>9028</td><td>PERFUSIONIST</td><td>$4,042</td><td>$23.23</td><td>$4,825</td><td>$27.73</td><td>$5,608</td><td>$32.23</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>019</td><td>9029</td><td>PERFUSIONIST, ASST</td><td>$2,927</td><td>$16.82</td><td>$3,492</td><td>$20.07</td><td>$4,058</td><td>$23.32</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>019</td><td>9036</td><td>PERFUSIONIST, PRIN</td><td>$5,114</td><td>$29.39</td><td>$6,102</td><td>$35.07</td><td>$7,092</td><td>$40.76</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>019</td><td>9038</td><td>PERFUSIONIST, PER DIEM</td><td>$7,226</td><td>$41.53</td><td></td><td></td><td></td><td></td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>019</td><td>9039</td><td>PERFUSIONIST, SR, PER DIEM</td><td>$8,310</td><td>$47.76</td><td></td><td></td><td></td><td></td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>019</td><td>9041</td><td>PROSTHETIST/ORTHOTIST, SR</td><td>$3,548</td><td>$20.39</td><td>$4,233</td><td>$24.33</td><td>$4,919</td><td>$28.27</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>019</td><td>9042</td><td>PROSTHETIST/ORTHOTIST</td><td>$3,226</td><td>$18.54</td><td>$3,852</td><td>$22.14</td><td>$4,477</td><td>$25.73</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>019</td><td>9044</td><td>PROSTHETICS/ORTHOTICS, ASST</td><td>$1,770</td><td>$10.17</td><td>$2,071</td><td>$11.90</td><td>$2,372</td><td>$13.63</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>019</td><td>9072</td><td>RADIATION EQUIP SPECIALIST, SR</td><td>$3,835</td><td>$22.04</td><td>$4,580</td><td>$26.32</td><td>$5,324</td><td>$30.60</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>019</td><td>9073</td><td>RADIATION EQUIP SPECIALIST</td><td>$3,336</td><td>$19.17</td><td>$3,981</td><td>$22.88</td><td>$4,627</td><td>$26.59</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>020</td><td>5419</td><td>DIETETIC TECH, REGISTERED</td><td>$2,636</td><td>$15.15</td><td>$3,031</td><td>$17.42</td><td>$3,426</td><td>$19.69</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>020</td><td>5430</td><td>DIETETIC ASSISTANT</td><td>$1,958</td><td>$11.25</td><td>$2,222</td><td>$12.77</td><td>$2,486</td><td>$14.29</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>$2,841</td><td>$16.33</td><td>$3,242</td><td>$18.63</td><td>$3,644</td><td>$20.94</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>$2,495</td><td>$14.34</td><td>$2,834</td><td>$16.29</td><td>$3,174</td><td>$18.24</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>033</td><td>8946</td><td>PHYSICAL THERAPY ASSISTANT I</td><td>$2,194</td><td>$12.61</td><td>$2,481</td><td>$14.26</td><td>$2,767</td><td>$15.90</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>033</td><td>8947</td><td>CERT OCCUP THERAPY ASST III</td><td>$2,841</td><td>$16.33</td><td>$3,242</td><td>$18.63</td><td>$3,644</td><td>$20.94</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>033</td><td>8948</td><td>CERT OCCUP THERAPY ASST II</td><td>$2,495</td><td>$14.34</td><td>$2,834</td><td>$16.29</td><td>$3,174</td><td>$18.24</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>033</td><td>8949</td><td>CERT OCCUP THERAPY ASST I</td><td>$2,194</td><td>$12.61</td><td>$2,481</td><td>$14.26</td><td>$2,767</td><td>$15.90</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>033</td><td>8951</td><td>PHYSICAL THERAPY ASST PD</td><td>$4,068</td><td>$23.38</td><td></td><td></td><td></td><td></td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>033</td><td>8952</td><td>CERT OCCUP THERAPY ASST PD</td><td>$4,068</td><td>$23.38</td><td></td><td></td><td></td><td></td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>034</td><td>8987</td><td>TECHNOLOGIST CYTOGENETIC II</td><td>$3,684</td><td>$21.17</td><td>$4,792</td><td>$27.54</td><td>$5,902</td><td>$33.92</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>034</td><td>8988</td><td>TECHNOLOGIST, CYTOGENETIC I</td><td>$3,336</td><td>$19.17</td><td>$4,343</td><td>$24.96</td><td>$5,349</td><td>$30.74</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>034</td><td>8989</td><td>TECHNOLOGIST, CYTO, TRAINEE</td><td>$3,022</td><td>$17.37</td><td>$3,934</td><td>$22.61</td><td>$4,848</td><td>$27.86</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>034</td><td>9065</td><td>HISTOTECHNOLOGIST I</td><td>$2,500</td><td>$14.37</td><td>$3,125</td><td>$17.96</td><td>$3,751</td><td>$21.56</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr><tr><td>034</td><td>9066</td><td>HISTOTECHNOLOGIST II</td><td>$2,779</td><td>$15.97</td><td>$3,473</td><td>$19.96</td><td>$4,167</td><td>$23.95</td><td>$2.00</td><td>$3.00</td><td>$5.50</td><td></td></tr></table>",
+            "block_bbox": [
+                65,
+                183,
+                1566,
+                1092
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    65.0,
+                    183.0
+                ],
+                [
+                    1566.0,
+                    183.0
+                ],
+                [
+                    1566.0,
+                    1092.0
+                ],
+                [
+                    65.0,
+                    1092.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "121",
+            "block_bbox": [
+                631,
+                1155,
+                678,
+                1178
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    631.0,
+                    1155.0
+                ],
+                [
+                    677.0,
+                    1155.0
+                ],
+                [
+                    677.0,
+                    1177.0
+                ],
+                [
+                    631.0,
+                    1177.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.4771656394004822,
+                "coordinate": [
+                    934,
+                    116,
+                    1093,
+                    145
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        934.0,
+                        116.0
+                    ],
+                    [
+                        1093.0,
+                        116.0
+                    ],
+                    [
+                        1093.0,
+                        145.0
+                    ],
+                    [
+                        934.0,
+                        145.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9188387989997864,
+                "coordinate": [
+                    65,
+                    183,
+                    1566,
+                    1092
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        65.0,
+                        183.0
+                    ],
+                    [
+                        1566.0,
+                        183.0
+                    ],
+                    [
+                        1566.0,
+                        1092.0
+                    ],
+                    [
+                        65.0,
+                        1092.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7456962466239929,
+                "coordinate": [
+                    631,
+                    1155,
+                    678,
+                    1178
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        631.0,
+                        1155.0
+                    ],
+                    [
+                        677.0,
+                        1155.0
+                    ],
+                    [
+                        677.0,
+                        1177.0
+                    ],
+                    [
+                        631.0,
+                        1177.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

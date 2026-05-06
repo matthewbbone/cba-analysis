@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/8433ABBYY.pdf",
+    "page_index": 27,
+    "page_count": 81,
+    "width": 523,
+    "height": 876,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "not be limited to, the preparations of steel frames or precast concrete back up panels, the drilling of holes, cutting, fitting, and fastening of artificial and natural masonry product units to steel frames or back up precast by bolts, clip anchors, pins, including any welding, as well as the complete application or installation of insulating, caulking, and/or waterproofing materials. Installation work assignments shall include, but not be limited to, unloading, selecting, or shaking out of artificial and natural masonry products for erection, hooking on, signaling, laying out, cutting, fitting, bedding, landing, setting, leveling, plumbing, aligning, anchoring, installation of any steel clips, relief or support angles, as well as the installation of metal grid or strut stone supports (including bolting and/or welding), grouting, patching, cleaning, and installation of gaskets or packing and caulking. For those Employers which have historically performed work as described in this paragraph and have done so with composite crews of bricklayers and other employees, such composite crews may continue to be used in the same manner as previously but all such work shall be under the supervision of a bricklayer.",
+            "block_bbox": [
+                32,
+                36,
+                473,
+                421
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    32.0,
+                    36.0
+                ],
+                [
+                    473.0,
+                    36.0
+                ],
+                [
+                    473.0,
+                    421.0
+                ],
+                [
+                    32.0,
+                    421.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "1. Foundations and Walls:",
+            "block_bbox": [
+                104,
+                438,
+                313,
+                458
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    104.0,
+                    438.0
+                ],
+                [
+                    312.0,
+                    438.0
+                ],
+                [
+                    312.0,
+                    457.0
+                ],
+                [
+                    104.0,
+                    457.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "All foundations and walls, whether of brick, block, stone, or any other masonry unit or product, shall be performed by and under the supervision of a bricklayer or mason.",
+            "block_bbox": [
+                32,
+                476,
+                471,
+                535
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    32.0,
+                    476.0
+                ],
+                [
+                    471.0,
+                    476.0
+                ],
+                [
+                    471.0,
+                    535.0
+                ],
+                [
+                    32.0,
+                    535.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "J. In addition, all assignments mutually agreed upon between the Employer and the Union as well as all other work assignments on any other building products or systems related to the scope and type of work covered by this Agreement which may be developed in the future that are determined by these parties to fall within the work jurisdiction of this Agreement.",
+            "block_bbox": [
+                32,
+                553,
+                472,
+                689
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    32.0,
+                    553.0
+                ],
+                [
+                    472.0,
+                    553.0
+                ],
+                [
+                    472.0,
+                    689.0
+                ],
+                [
+                    32.0,
+                    689.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "K. The use by bricklayers of temporary frames, templates, falsework, corner poles, and plumb lines may be used on all types of construction at the sole discretion of the Employer, said production aids to be installed by bricklayers.",
+            "block_bbox": [
+                31,
+                706,
+                471,
+                787
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    31.0,
+                    706.0
+                ],
+                [
+                    471.0,
+                    706.0
+                ],
+                [
+                    471.0,
+                    787.0
+                ],
+                [
+                    31.0,
+                    787.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "24",
+            "block_bbox": [
+                268,
+                828,
+                288,
+                844
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    268.0,
+                    828.0
+                ],
+                [
+                    287.0,
+                    828.0
+                ],
+                [
+                    287.0,
+                    843.0
+                ],
+                [
+                    268.0,
+                    843.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7534480690956116,
+                "coordinate": [
+                    32,
+                    36,
+                    473,
+                    421
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        32.0,
+                        36.0
+                    ],
+                    [
+                        473.0,
+                        36.0
+                    ],
+                    [
+                        473.0,
+                        421.0
+                    ],
+                    [
+                        32.0,
+                        421.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8267984986305237,
+                "coordinate": [
+                    104,
+                    438,
+                    313,
+                    458
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        104.0,
+                        438.0
+                    ],
+                    [
+                        312.0,
+                        438.0
+                    ],
+                    [
+                        312.0,
+                        457.0
+                    ],
+                    [
+                        104.0,
+                        457.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9289789199829102,
+                "coordinate": [
+                    32,
+                    476,
+                    471,
+                    535
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        32.0,
+                        476.0
+                    ],
+                    [
+                        471.0,
+                        476.0
+                    ],
+                    [
+                        471.0,
+                        535.0
+                    ],
+                    [
+                        32.0,
+                        535.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9480252265930176,
+                "coordinate": [
+                    32,
+                    553,
+                    472,
+                    689
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        32.0,
+                        553.0
+                    ],
+                    [
+                        472.0,
+                        553.0
+                    ],
+                    [
+                        472.0,
+                        689.0
+                    ],
+                    [
+                        32.0,
+                        689.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9173012375831604,
+                "coordinate": [
+                    31,
+                    706,
+                    471,
+                    787
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        31.0,
+                        706.0
+                    ],
+                    [
+                        471.0,
+                        706.0
+                    ],
+                    [
+                        471.0,
+                        787.0
+                    ],
+                    [
+                        31.0,
+                        787.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7995172142982483,
+                "coordinate": [
+                    268,
+                    828,
+                    288,
+                    844
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        268.0,
+                        828.0
+                    ],
+                    [
+                        287.0,
+                        828.0
+                    ],
+                    [
+                        287.0,
+                        843.0
+                    ],
+                    [
+                        268.0,
+                        843.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

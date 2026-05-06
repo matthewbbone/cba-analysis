@@ -1,0 +1,27 @@
+referenced said reference should be a past action (in effect) at the time the most recent conduct occurred. Otherwise, consideration is improper and cannot be relied upon.
+
+3. Letters of reprimand that have expired may be used as a consideration when determining the penalty to be imposed in an adverse action when a range of penalties may be imposed. However, the expired LOR may not be used to constitute a prior offense.
+
+### Section 13.3 - Investigation, Examination and Representation
+
+1. When a bargaining unit Employee is questioned by an Employer representative in conjunction with an investigation, the individual overseeing the questioning will be required to inform the Employee of his/her right to Union representation (Weingarten Rights) IAW 5 USC § 7114(a)(2)(B). The following statement included in Appendix C will be provided to and completed by the Employee prior to questioning:
+
+I need to advise you that you are being questioned in conjunction with an investigation being conducted by the Michigan National Guard.
+
+In accordance with Federal law you have a legal right to Union representation during the course of this interview.
+
+If you exercise your right to have a Union representative present during questioning, you have the right to not answer any questions until a Union representative is present.
+
+You also have the right to be advised of the subject and purpose of this interview and to consult in private with your Union representative prior to answering any questions.
+
+Do you understand these rights as I've explained them to you: Yes or No?
+
+Do you want to exercise your right to have a Union representative present during questioning: Yes or No?
+
+2. Management officials inform Employees of their Weingarten Right to representation prior to any examination held for the purpose of discipline if:
+
+a. There is, or could be, a reasonable expectation by either the Employee or the Supervisor that the examination may result in disciplinary action against the Employee.
+
+b. The Employee requests representation.
+
+c. When questioned, Employees are compelled to provide truthful responses to questions raised during an investigation. Employees cannot refuse to answer questions, but if an Employee desires representation, it shall be granted before the examination can be continued.

@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 22,
+    "page_count": 287,
+    "width": 728,
+    "height": 1008,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Article II",
+            "block_bbox": [
+                53,
+                50,
+                132,
+                70
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    53.0,
+                    50.0
+                ],
+                [
+                    131.0,
+                    50.0
+                ],
+                [
+                    131.0,
+                    69.0
+                ],
+                [
+                    53.0,
+                    69.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Company. Transportation shall be provided by the Company to and from the location of the reassigned work. Whenever it is imperative to continue work while it is raining, protective clothing shall be provided by the Company.",
+            "block_bbox": [
+                80,
+                79,
+                631,
+                148
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    80.0,
+                    79.0
+                ],
+                [
+                    631.0,
+                    79.0
+                ],
+                [
+                    631.0,
+                    148.0
+                ],
+                [
+                    80.0,
+                    148.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(6) Work Shifts – It is mutually agreed that, although work shifts should be held to a minimum number, it is the Company's responsibility to determine the need for shift work based on the function of a department or departmental activity and the requirements of the Company's customers. However, prior to any change in shift time or the creating of a new shift by the Company, the need therefore shall be discussed in detail with the Union. If the Union does not agree as to the need for any change in shift time or the creation of a new shift, the matter may be made subject to the grievance procedure hereinafter set forth, provided that the Company may effect such change in shift time or create a new shift pending and subject to the outcome of the grievance procedure.",
+            "block_bbox": [
+                52,
+                167,
+                632,
+                408
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    52.0,
+                    167.0
+                ],
+                [
+                    632.0,
+                    167.0
+                ],
+                [
+                    632.0,
+                    408.0
+                ],
+                [
+                    52.0,
+                    408.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(7) 'Work Shift Assignment – Assignment for work on shifts within a department shall be rotated by the Company within a department, by location, among all qualified employees performing work of a similar nature, unless agreed upon between the Company and the Union. At any time during a scheduled workweek, the Company may assign any employee to work non-scheduled hours in lieu of his or her scheduled hours (refer to Article IV, paragraph 1a)) or such portion of the balance of the scheduled workweek as the Company shall designate, provided that the Company shall notify the employee of the change in his or her work hours at least ten (10) hours prior to the time he or she shall be required to commence working such non-scheduled hours and provided that an employee shall not be required to work two (2) consecutive shifts. Qualified employees shall have the privilege of exchanging shift assignments if permission to do so is obtained from their immediate supervisors. The Union officers and departmental representatives referred to in Article II, paragraph (8), shall be excused from working any odd shift unless they request otherwise.",
+            "block_bbox": [
+                50,
+                426,
+                632,
+                778
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    50.0,
+                    426.0
+                ],
+                [
+                    632.0,
+                    426.0
+                ],
+                [
+                    632.0,
+                    778.0
+                ],
+                [
+                    50.0,
+                    778.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(8) Shift Changes for Executive Board Members and Union Representatives – Executive Board members and representatives can continue to change their own shifts so that they can attend Executive Board and general membership meetings.",
+            "block_bbox": [
+                51,
+                797,
+                630,
+                886
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    51.0,
+                    797.0
+                ],
+                [
+                    630.0,
+                    797.0
+                ],
+                [
+                    630.0,
+                    886.0
+                ],
+                [
+                    51.0,
+                    886.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "14",
+            "block_bbox": [
+                330,
+                934,
+                352,
+                950
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    330.0,
+                    934.0
+                ],
+                [
+                    351.0,
+                    934.0
+                ],
+                [
+                    351.0,
+                    949.0
+                ],
+                [
+                    330.0,
+                    949.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7400619387626648,
+                "coordinate": [
+                    53,
+                    50,
+                    132,
+                    70
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        53.0,
+                        50.0
+                    ],
+                    [
+                        131.0,
+                        50.0
+                    ],
+                    [
+                        131.0,
+                        69.0
+                    ],
+                    [
+                        53.0,
+                        69.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9211216568946838,
+                "coordinate": [
+                    80,
+                    79,
+                    631,
+                    148
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        80.0,
+                        79.0
+                    ],
+                    [
+                        631.0,
+                        79.0
+                    ],
+                    [
+                        631.0,
+                        148.0
+                    ],
+                    [
+                        80.0,
+                        148.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9507912993431091,
+                "coordinate": [
+                    52,
+                    167,
+                    632,
+                    408
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        52.0,
+                        167.0
+                    ],
+                    [
+                        632.0,
+                        167.0
+                    ],
+                    [
+                        632.0,
+                        408.0
+                    ],
+                    [
+                        52.0,
+                        408.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.957612931728363,
+                "coordinate": [
+                    50,
+                    426,
+                    632,
+                    778
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        50.0,
+                        426.0
+                    ],
+                    [
+                        632.0,
+                        426.0
+                    ],
+                    [
+                        632.0,
+                        778.0
+                    ],
+                    [
+                        50.0,
+                        778.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9343109130859375,
+                "coordinate": [
+                    51,
+                    797,
+                    630,
+                    886
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        51.0,
+                        797.0
+                    ],
+                    [
+                        630.0,
+                        797.0
+                    ],
+                    [
+                        630.0,
+                        886.0
+                    ],
+                    [
+                        51.0,
+                        886.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7359199523925781,
+                "coordinate": [
+                    330,
+                    934,
+                    352,
+                    950
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        330.0,
+                        934.0
+                    ],
+                    [
+                        351.0,
+                        934.0
+                    ],
+                    [
+                        351.0,
+                        949.0
+                    ],
+                    [
+                        330.0,
+                        949.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

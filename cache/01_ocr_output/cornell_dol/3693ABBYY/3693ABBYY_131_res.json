@@ -1,0 +1,156 @@
+{
+    "input_path": "cache/cornell_dol/3693ABBYY.pdf",
+    "page_index": 131,
+    "page_count": 135,
+    "width": 803,
+    "height": 1235,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "content",
+            "block_content": "60904 PROCESS HELPER B 03\n61043 PROCESS OPERATOR SEMICONDUCTOR 07\n60983 PROCESSOR MATERIAL DECONTAMINATION A 11\n60913 PROCESSOR MICROCIRCUIT A 08\n60914 PROCESSOR MICROCIRCUIT B 03\n60993 PROCESSOR PARYLENE COATING A 11\n60994 PROCESSOR PARYLENE COATING B 06\n61033 PRODUCTION JOURNEYMAN MACHINIST 22\n61023 PRODUCTION MACHINE MACHINIST 18\n61013 PRODUCTION MACHINE OPERATOR 09\n61016 PRODUCTION MACHINE OPERATOR SR 14\n61303 PUNCH PRESS OPERATOR A 14\n61304 PUNCH PRESS OPERATOR B 09\n60703 PWB FAB ASSEMB A - RSG 12\n60704 PWB FAB ASSEMB B - RSG 09\n60705 PWB FAB ASSEMB C - RSG 04\n59105 RECEIVING INSPECTOR TEST C 14\n59104 RECEIVING INSPECTOR TEST B 16\n59103 RECEIVING INSPECTOR TEST A 20\n59106 RECEIVING INSPECTOR TEST SR 24\n62453 SAW OPERATOR A 10\n62454 SAW OPERATOR B 06\n62553 SAW OPERATOR PRECISION 12\n62653 SEMI-RIGID COAX MAKER 06\n62693 SEMI-RIGID COAX MAKER - DEVELOPMENTAL 09\n62853 SHEAR OPERATOR SQUARE A 10\n62903 SHEET METAL MECHANIC DEVELOPMENTAL 18\n62923 SHEET METAL MECHANIC LABORATORY 23\n92313 SHIPPING/RECEIVING CLERK 09\n92333 SHOP CLERK 05\n92343 SHOP CLERK GENERAL 07\n92356 SHOP CLERK SR 09\n61133 SILK SCREEN FABRICATOR A 16\n61134 SILK SCREEN FABRICATOR B 11\n63163 SILK SCREEN PRINTER A 13\n93503 STOCK CLERK A 09\n93523 STOCK CLERK SR 14\n64453 SYMBOLIZER MICROELECTRONIC 05\n67343 TEST EQUIPMENT FABRICATION TECHNICIAN A 22\n67344 TEST EQUIPMENT FABRICATION TECHNICIAN B 14\n67345 TEST EQUIPMENT FABRICATION TECHNICIAN C 09\n67346 TEST EQUIPMENT FABRICATION TECHNICIAN SR 24\n67293 TEST TECHNICIAN COMPONENTS A 13\n67294 TEST TECHNICIAN COMPONENTS B 09\n67295 TEST TECHNICIAN COMPONENTS C 06",
+            "block_bbox": [
+                98,
+                91,
+                672,
+                1128
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    98.0,
+                    91.0
+                ],
+                [
+                    672.0,
+                    91.0
+                ],
+                [
+                    672.0,
+                    1128.0
+                ],
+                [
+                    98.0,
+                    1128.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "123",
+            "block_bbox": [
+                381,
+                1162,
+                408,
+                1182
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    381.0,
+                    1162.0
+                ],
+                [
+                    407.0,
+                    1162.0
+                ],
+                [
+                    407.0,
+                    1181.0
+                ],
+                [
+                    381.0,
+                    1181.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.9839404821395874,
+                "coordinate": [
+                    98,
+                    91,
+                    672,
+                    1128
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        98.0,
+                        91.0
+                    ],
+                    [
+                        672.0,
+                        91.0
+                    ],
+                    [
+                        672.0,
+                        1128.0
+                    ],
+                    [
+                        98.0,
+                        1128.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7461419105529785,
+                "coordinate": [
+                    381,
+                    1162,
+                    408,
+                    1182
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        381.0,
+                        1162.0
+                    ],
+                    [
+                        407.0,
+                        1162.0
+                    ],
+                    [
+                        407.0,
+                        1181.0
+                    ],
+                    [
+                        381.0,
+                        1181.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,278 @@
+{
+    "input_path": "cache/cornell_dol/4208Abbyy.pdf",
+    "page_index": 56,
+    "page_count": 128,
+    "width": 772,
+    "height": 1212,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "content",
+            "block_content": "12 DENTAL PLANS\n(PREFERRED DENTAL PLAN AND PREPAID DENTAL PLAN) ..... A-38\nA. Covered Services and Supplies ..... A-38\nB. Dental Plan Exclusions ..... A-41\n\n13 PREFERRED DENTAL PLAN ..... A-42\nA. Description of Preferred Dental Plan ..... A-42\nB. Plan Payment Levels ..... A-42\nC. Maximum Benefits ..... A-43\n\n14 PREPAID DENTAL PLAN ..... A-43\nA. Description of Prepaid Dental Plan ..... A-43\nB. Provider Selection ..... A-43\nC. Plan Payment Levels and Maximum Benefits ..... A-43\nD. Our-of-Area Emergencies ..... A-44\n\n15 SCHEDULED DENTAL PLAN ..... A-44\nA. Description of Scheduled Dental Plan ..... A-44\nB. Provider Selection ..... A-44\nC. Deductibles ..... A-44\nD. Plan Payment Levels ..... A-44\nE. Maximum Benefits ..... A-45\nF. Schedule of Covered Dental Services ..... A-46\nG. Limitations on Benefits ..... A-48\nH. Scheduled Dental Plan Exclusions ..... A-49\n\n16 COORDINATION OF BENEFITS ..... A-50\nA. Order of Payment ..... A-50\nB. Traditional Medical Plan ..... A-51\nC. Coordinated Care Plans ..... A-52\nD. Dental Plans ..... A-52\n\n17 WHEN AN INJURY OR ILLNESS IS CAUSED BY THE NEGLIGENCE OF ANOTHER ..... A-52\n\n18 DEFINITIONS ..... A-52\n\n19 TERMINATION OF COVERAGE ..... A-58\nA. Life Insurance Coverage ..... A-58\nB. Accidental Death and Dismemberment Coverage ..... A-58\nC. Medical Coverage ..... A-58\nD. Dental Coverage ..... A-59\nE. Change in Eligible Class of Employment ..... A-59\nF. Continuation of Medical and Dental Coverage (COBRA) ..... A-59\n\n20 LEAVES OF ABSENCE ..... A-59\nA. Approved Medical Leaves of Absence ..... A-60\nB. Other Approved Leaves of Absence ..... A-60\nC. Family and Medical Leave Act of 1993 ..... A-60\nD. Uniformed Services Leave of Absence ..... A-60\nE. Changes in Leave Types ..... A-61\nF. Successive Periods of Leaves of Absence ..... A-61\n\nTHE PACKAGE INCLUDES:",
+            "block_bbox": [
+                63,
+                76,
+                697,
+                1104
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    63.0,
+                    76.0
+                ],
+                [
+                    697.0,
+                    76.0
+                ],
+                [
+                    697.0,
+                    1104.0
+                ],
+                [
+                    63.0,
+                    1104.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "THE PACKAGE INCLUDES:",
+            "block_bbox": [
+                284,
+                1090,
+                477,
+                1110
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    284.0,
+                    1090.0
+                ],
+                [
+                    284.0,
+                    1109.0
+                ],
+                [
+                    476.0,
+                    1109.0
+                ],
+                [
+                    476.0,
+                    1090.0
+                ]
+            ]
+        },
+        {
+            "block_label": "content",
+            "block_content": "THE PACKAGE INCLUDES:\n• Life Plan\n• Accidental Death and Dismemberment Plan\n• Medical Plans\n• Dental Plans",
+            "block_bbox": [
+                93,
+                1096,
+                663,
+                1151
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    93.0,
+                    1096.0
+                ],
+                [
+                    663.0,
+                    1096.0
+                ],
+                [
+                    663.0,
+                    1151.0
+                ],
+                [
+                    93.0,
+                    1151.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "A-3",
+            "block_bbox": [
+                367,
+                1169,
+                394,
+                1185
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    367.0,
+                    1169.0
+                ],
+                [
+                    393.0,
+                    1169.0
+                ],
+                [
+                    393.0,
+                    1184.0
+                ],
+                [
+                    367.0,
+                    1184.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.9164579510688782,
+                "coordinate": [
+                    63,
+                    76,
+                    697,
+                    1104
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        63.0,
+                        76.0
+                    ],
+                    [
+                        697.0,
+                        76.0
+                    ],
+                    [
+                        697.0,
+                        1104.0
+                    ],
+                    [
+                        63.0,
+                        1104.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.4729720652103424,
+                "coordinate": [
+                    284,
+                    1090,
+                    477,
+                    1110
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        284.0,
+                        1090.0
+                    ],
+                    [
+                        284.0,
+                        1109.0
+                    ],
+                    [
+                        476.0,
+                        1109.0
+                    ],
+                    [
+                        476.0,
+                        1090.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.47081518173217773,
+                "coordinate": [
+                    93,
+                    1096,
+                    663,
+                    1151
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        93.0,
+                        1096.0
+                    ],
+                    [
+                        663.0,
+                        1096.0
+                    ],
+                    [
+                        663.0,
+                        1151.0
+                    ],
+                    [
+                        93.0,
+                        1151.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7121003270149231,
+                "coordinate": [
+                    367,
+                    1169,
+                    394,
+                    1185
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        367.0,
+                        1169.0
+                    ],
+                    [
+                        393.0,
+                        1169.0
+                    ],
+                    [
+                        393.0,
+                        1184.0
+                    ],
+                    [
+                        367.0,
+                        1184.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

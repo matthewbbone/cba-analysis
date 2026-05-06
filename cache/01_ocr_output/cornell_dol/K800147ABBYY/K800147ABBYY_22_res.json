@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_dol/K800147ABBYY.pdf",
+    "page_index": 22,
+    "page_count": 125,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "Section 7. a. Employees who retire shall be paid for their accumulated unused sick leave in accordance with the schedule below if they retire under the conditions set forth in subsection b.",
+            "block_bbox": [
+                139,
+                120,
+                1083,
+                177
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    139.0,
+                    120.0
+                ],
+                [
+                    1083.0,
+                    120.0
+                ],
+                [
+                    1083.0,
+                    177.0
+                ],
+                [
+                    139.0,
+                    177.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Days Available</td><td>Percentage</td><td>Maximum</td></tr><tr><td>at Retirement</td><td>Buy-Out</td><td>Days</td></tr><tr><td>0 - 100</td><td>30%</td><td>30</td></tr><tr><td>101 - 200</td><td>40%</td><td>80</td></tr><tr><td>201 - 300</td><td>50%</td><td>150</td></tr><tr><td>over 300 (in last year of employment)</td><td>100% of days over 300</td><td>13</td></tr></table>",
+            "block_bbox": [
+                139,
+                199,
+                924,
+                419
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    139.0,
+                    199.0
+                ],
+                [
+                    924.0,
+                    199.0
+                ],
+                [
+                    924.0,
+                    419.0
+                ],
+                [
+                    139.0,
+                    419.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b. Eligibility for payment of benefits under subsection a. is as follows:",
+            "block_bbox": [
+                209,
+                443,
+                885,
+                474
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    209.0,
+                    443.0
+                ],
+                [
+                    885.0,
+                    443.0
+                ],
+                [
+                    885.0,
+                    474.0
+                ],
+                [
+                    209.0,
+                    474.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(1) Superannuation retirement with at least five years of credited service in the State and/or Public School Retirement Systems;",
+            "block_bbox": [
+                282,
+                497,
+                1084,
+                555
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    282.0,
+                    497.0
+                ],
+                [
+                    1084.0,
+                    497.0
+                ],
+                [
+                    1084.0,
+                    555.0
+                ],
+                [
+                    282.0,
+                    555.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(2) Disability retirement, which requires at least five years of credited service in the State and/or Public School Retirement Systems, or",
+            "block_bbox": [
+                283,
+                578,
+                1083,
+                636
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    283.0,
+                    578.0
+                ],
+                [
+                    1083.0,
+                    578.0
+                ],
+                [
+                    1083.0,
+                    636.0
+                ],
+                [
+                    283.0,
+                    636.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(3) Other retirement with at least 25 years of credited service in the State and/or Public School Retirement Systems;",
+            "block_bbox": [
+                282,
+                659,
+                1083,
+                717
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    282.0,
+                    659.0
+                ],
+                [
+                    1083.0,
+                    659.0
+                ],
+                [
+                    1083.0,
+                    717.0
+                ],
+                [
+                    282.0,
+                    717.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(4) After 7 years of service, death prior to retirement or separation of service except as provided in Section 8.",
+            "block_bbox": [
+                281,
+                739,
+                1081,
+                797
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    281.0,
+                    739.0
+                ],
+                [
+                    1081.0,
+                    739.0
+                ],
+                [
+                    1081.0,
+                    797.0
+                ],
+                [
+                    281.0,
+                    797.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "c. Such payments shall not be made for part days of accumulated sick leave.",
+            "block_bbox": [
+                209,
+                822,
+                956,
+                852
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    209.0,
+                    822.0
+                ],
+                [
+                    956.0,
+                    822.0
+                ],
+                [
+                    956.0,
+                    852.0
+                ],
+                [
+                    209.0,
+                    852.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "d. No payments under this section shall be construed to add to the credited service of the retiring members or to the retirement covered compensation of the member.",
+            "block_bbox": [
+                138,
+                876,
+                1084,
+                933
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    138.0,
+                    876.0
+                ],
+                [
+                    1084.0,
+                    876.0
+                ],
+                [
+                    1084.0,
+                    933.0
+                ],
+                [
+                    138.0,
+                    933.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "e. Effective January 1, 2004, or as soon as practically possible thereafter, the Commonwealth will adopt a tax-qualified Leave Payout Plan. All employees who attain age 55 before or during the calendar year they separate from service after adoption of the Leave Payout Plan shall have the leave payouts otherwise payable for accumulated and unused Annual Leave, Personal Leave, Compensatory Leave, Holiday Leave and Sick Leave, up to the maximum allowable by law, deposited in an account in the employee's name, provided however that if the total amount of leave payout is $5000 or less, this amount shall be paid to the employee in cash. Amounts in excess of the maximum allowable amount will be paid to the employee in cash.",
+            "block_bbox": [
+                137,
+                957,
+                1085,
+                1177
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    137.0,
+                    957.0
+                ],
+                [
+                    1085.0,
+                    957.0
+                ],
+                [
+                    1085.0,
+                    1177.0
+                ],
+                [
+                    137.0,
+                    1177.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 8. When an employee dies as the result of a work-related accident, the Commonwealth will pay 100% of the employee's unused sick leave unless the surviving spouse or minor children are entitled to benefits under Act 101 of 1976 in which case the Commonwealth will pay 30% of the employee's unused sick leave to 90 days. Such payments shall not be made for part days of accumulated sick leave.",
+            "block_bbox": [
+                139,
+                1200,
+                1087,
+                1338
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    139.0,
+                    1200.0
+                ],
+                [
+                    1087.0,
+                    1200.0
+                ],
+                [
+                    1087.0,
+                    1338.0
+                ],
+                [
+                    139.0,
+                    1338.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "21",
+            "block_bbox": [
+                597,
+                1418,
+                625,
+                1437
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    597.0,
+                    1418.0
+                ],
+                [
+                    624.0,
+                    1418.0
+                ],
+                [
+                    624.0,
+                    1436.0
+                ],
+                [
+                    597.0,
+                    1436.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8557683825492859,
+                "coordinate": [
+                    139,
+                    120,
+                    1083,
+                    177
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        139.0,
+                        120.0
+                    ],
+                    [
+                        1083.0,
+                        120.0
+                    ],
+                    [
+                        1083.0,
+                        177.0
+                    ],
+                    [
+                        139.0,
+                        177.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9510965943336487,
+                "coordinate": [
+                    139,
+                    199,
+                    924,
+                    419
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        139.0,
+                        199.0
+                    ],
+                    [
+                        924.0,
+                        199.0
+                    ],
+                    [
+                        924.0,
+                        419.0
+                    ],
+                    [
+                        139.0,
+                        419.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7137369513511658,
+                "coordinate": [
+                    209,
+                    443,
+                    885,
+                    474
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        209.0,
+                        443.0
+                    ],
+                    [
+                        885.0,
+                        443.0
+                    ],
+                    [
+                        885.0,
+                        474.0
+                    ],
+                    [
+                        209.0,
+                        474.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.907673716545105,
+                "coordinate": [
+                    282,
+                    497,
+                    1084,
+                    555
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        282.0,
+                        497.0
+                    ],
+                    [
+                        1084.0,
+                        497.0
+                    ],
+                    [
+                        1084.0,
+                        555.0
+                    ],
+                    [
+                        282.0,
+                        555.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9169753789901733,
+                "coordinate": [
+                    283,
+                    578,
+                    1083,
+                    636
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        283.0,
+                        578.0
+                    ],
+                    [
+                        1083.0,
+                        578.0
+                    ],
+                    [
+                        1083.0,
+                        636.0
+                    ],
+                    [
+                        283.0,
+                        636.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.897560715675354,
+                "coordinate": [
+                    282,
+                    659,
+                    1083,
+                    717
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        282.0,
+                        659.0
+                    ],
+                    [
+                        1083.0,
+                        659.0
+                    ],
+                    [
+                        1083.0,
+                        717.0
+                    ],
+                    [
+                        282.0,
+                        717.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9061117768287659,
+                "coordinate": [
+                    281,
+                    739,
+                    1081,
+                    797
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        281.0,
+                        739.0
+                    ],
+                    [
+                        1081.0,
+                        739.0
+                    ],
+                    [
+                        1081.0,
+                        797.0
+                    ],
+                    [
+                        281.0,
+                        797.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8660340309143066,
+                "coordinate": [
+                    209,
+                    822,
+                    956,
+                    852
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        209.0,
+                        822.0
+                    ],
+                    [
+                        956.0,
+                        822.0
+                    ],
+                    [
+                        956.0,
+                        852.0
+                    ],
+                    [
+                        209.0,
+                        852.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9154101610183716,
+                "coordinate": [
+                    138,
+                    876,
+                    1084,
+                    933
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        138.0,
+                        876.0
+                    ],
+                    [
+                        1084.0,
+                        876.0
+                    ],
+                    [
+                        1084.0,
+                        933.0
+                    ],
+                    [
+                        138.0,
+                        933.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9663566946983337,
+                "coordinate": [
+                    137,
+                    957,
+                    1085,
+                    1177
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        137.0,
+                        957.0
+                    ],
+                    [
+                        1085.0,
+                        957.0
+                    ],
+                    [
+                        1085.0,
+                        1177.0
+                    ],
+                    [
+                        137.0,
+                        1177.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9540109634399414,
+                "coordinate": [
+                    139,
+                    1200,
+                    1087,
+                    1338
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        139.0,
+                        1200.0
+                    ],
+                    [
+                        1087.0,
+                        1200.0
+                    ],
+                    [
+                        1087.0,
+                        1338.0
+                    ],
+                    [
+                        139.0,
+                        1338.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7433937191963196,
+                "coordinate": [
+                    597,
+                    1418,
+                    625,
+                    1437
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        597.0,
+                        1418.0
+                    ],
+                    [
+                        624.0,
+                        1418.0
+                    ],
+                    [
+                        624.0,
+                        1436.0
+                    ],
+                    [
+                        597.0,
+                        1436.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

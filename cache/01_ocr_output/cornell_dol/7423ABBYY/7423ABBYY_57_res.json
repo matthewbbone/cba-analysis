@@ -1,0 +1,276 @@
+{
+    "input_path": "cache/cornell_dol/7423ABBYY.pdf",
+    "page_index": 57,
+    "page_count": 185,
+    "width": 1180,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Wages for Wage Schedule:</td><td>NK</td><td></td><td></td></tr><tr><td>Job Classification:</td><td>Retail Sales Consultant</td><td></td><td></td></tr><tr><td>Schedule Interval</td><td>Effective 10/27/2002</td><td>Effective 10/26/2003</td><td>Effective 10/24/2004</td></tr><tr><td>Start</td><td>$ 7.64</td><td>$ 7.95</td><td>$ 8.27</td></tr><tr><td>6</td><td>$ 8.11</td><td>$ 8.44</td><td>$ 8.77</td></tr><tr><td>12</td><td>$ 8.60</td><td>$ 8.94</td><td>$ 9.30</td></tr><tr><td>18</td><td>$ 9.13</td><td>$ 9.50</td><td>$ 9.88</td></tr><tr><td>24</td><td>$ 9.69</td><td>$ 10.08</td><td>$ 10.48</td></tr><tr><td>30</td><td>$ 10.29</td><td>$ 10.70</td><td>$ 11.12</td></tr><tr><td>36</td><td>$ 10.93</td><td>$ 11.37</td><td>$ 11.82</td></tr><tr><td>Wages for Wage Schedule:</td><td>N1</td><td></td><td></td></tr><tr><td>Job Classification:</td><td>Custodian</td><td></td><td></td></tr><tr><td>Schedule Interval</td><td>Effective 10/27/2002</td><td>Effective 10/26/2003</td><td>Effective 10/24/2004</td></tr><tr><td>Start</td><td>$ 6.34</td><td>$ 6.60</td><td>$ 6.86</td></tr><tr><td>6</td><td>$ 6.44</td><td>$ 6.70</td><td>$ 6.96</td></tr><tr><td>12</td><td>$ 6.62</td><td>$ 6.89</td><td>$ 7.17</td></tr><tr><td>18</td><td>$ 6.76</td><td>$ 7.03</td><td>$ 7.31</td></tr><tr><td>24</td><td>$ 6.97</td><td>$ 7.25</td><td>$ 7.54</td></tr></table>",
+            "block_bbox": [
+                134,
+                54,
+                1012,
+                1081
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    134.0,
+                    54.0
+                ],
+                [
+                    1012.0,
+                    54.0
+                ],
+                [
+                    1012.0,
+                    1081.0
+                ],
+                [
+                    134.0,
+                    1081.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "49",
+            "block_bbox": [
+                612,
+                1473,
+                645,
+                1501
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    612.0,
+                    1473.0
+                ],
+                [
+                    644.0,
+                    1473.0
+                ],
+                [
+                    644.0,
+                    1500.0
+                ],
+                [
+                    612.0,
+                    1500.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.33901873230934143,
+                "coordinate": [
+                    134,
+                    54,
+                    1012,
+                    1081
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        134.0,
+                        54.0
+                    ],
+                    [
+                        1012.0,
+                        54.0
+                    ],
+                    [
+                        1012.0,
+                        1081.0
+                    ],
+                    [
+                        134.0,
+                        1081.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.35260719060897827,
+                "coordinate": [
+                    143,
+                    61,
+                    1006,
+                    493
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        143.0,
+                        61.0
+                    ],
+                    [
+                        1006.0,
+                        61.0
+                    ],
+                    [
+                        1006.0,
+                        493.0
+                    ],
+                    [
+                        143.0,
+                        493.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.37662267684936523,
+                "coordinate": [
+                    237,
+                    196,
+                    1000,
+                    488
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        237.0,
+                        196.0
+                    ],
+                    [
+                        1000.0,
+                        196.0
+                    ],
+                    [
+                        1000.0,
+                        488.0
+                    ],
+                    [
+                        237.0,
+                        488.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.46610933542251587,
+                "coordinate": [
+                    183,
+                    699,
+                    1012,
+                    1077
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        183.0,
+                        699.0
+                    ],
+                    [
+                        1012.0,
+                        699.0
+                    ],
+                    [
+                        1012.0,
+                        1077.0
+                    ],
+                    [
+                        183.0,
+                        1077.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.3786347806453705,
+                "coordinate": [
+                    239,
+                    839,
+                    999,
+                    1073
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        239.0,
+                        839.0
+                    ],
+                    [
+                        999.0,
+                        839.0
+                    ],
+                    [
+                        999.0,
+                        1073.0
+                    ],
+                    [
+                        239.0,
+                        1073.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7330678105354309,
+                "coordinate": [
+                    612,
+                    1473,
+                    645,
+                    1501
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        612.0,
+                        1473.0
+                    ],
+                    [
+                        644.0,
+                        1473.0
+                    ],
+                    [
+                        644.0,
+                        1500.0
+                    ],
+                    [
+                        612.0,
+                        1500.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

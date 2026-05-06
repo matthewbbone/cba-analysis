@@ -1,0 +1,456 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 166,
+    "page_count": 189,
+    "width": 1223,
+    "height": 1572,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td rowspan=\"5\">SERVICE PARTNER</td><td colspan=\"7\">WAGE RATES EFFECTIVE OCTOBER 8, 2000</td></tr><tr><td colspan=\"7\">FRESNO STRUCTURE</td></tr><tr><td>START</td><td>1 YEAR</td><td>2 YEARS</td><td>3 YEARS</td><td>4 YEARS</td><td></td><td></td></tr><tr><td>10.1885</td><td>10.4584</td><td>10.7185</td><td>10.9864</td><td>11.2611</td><td></td><td></td></tr><tr><td>START</td><td>1 YEAR</td><td>2 YEARS</td><td>3 YEARS</td><td>4 YEARS</td><td>5 YEARS</td><td></td></tr><tr><td>ADMINISTRATIVE PARTNER</td><td>11.4193</td><td>11.6242</td><td>11.9370</td><td>12.2963</td><td>12.6038</td><td>12.9188</td><td></td></tr><tr><td rowspan=\"2\">SR ADMINISTRATIVE PARTNER</td><td>11.6475</td><td>11.8567</td><td>12.1758</td><td>12.5422</td><td>12.8558</td><td>13.1771</td><td></td></tr><tr><td>START</td><td>2 MOS</td><td>14 MOS</td><td>26 MOS</td><td>38 MOS</td><td>50 MOS</td><td></td></tr><tr><td>SR VISION SERVICES ASST</td><td>12.0645</td><td>12.3407</td><td>12.6171</td><td>12.8418</td><td>13.1629</td><td>13.4919</td><td></td></tr><tr><td>VISION SERVICES ASST I</td><td>11.3705</td><td>11.631</td><td>11.8916</td><td>12.1033</td><td>12.4058</td><td>12.7160</td><td></td></tr><tr><td rowspan=\"2\">VISION SERVICES ASST II</td><td>11.7703</td><td>12.0398</td><td>12.3094</td><td>12.5286</td><td>12.8418</td><td>13.1629</td><td></td></tr><tr><td>START</td><td>3 MOS</td><td>12 MOS</td><td>24 MOS</td><td>36 MOS</td><td>48 MOS</td><td></td></tr><tr><td>CLERICAL GRADE 1</td><td>10.3622</td><td>10.5258</td><td>10.7472</td><td>10.9689</td><td>11.2431</td><td>11.5243</td><td></td></tr><tr><td>CLERICAL GRADE 2</td><td>10.7954</td><td>10.9781</td><td>11.2382</td><td>11.4888</td><td>11.776</td><td>12.0704</td><td></td></tr><tr><td>CLERICAL GRADE 3</td><td>11.0265</td><td>11.2577</td><td>11.5079</td><td>11.7872</td><td>12.0819</td><td>12.3841</td><td></td></tr><tr><td>CLERICAL GRADE 4</td><td>11.2577</td><td>11.4597</td><td>11.7681</td><td>12.0665</td><td>12.3681</td><td>12.6773</td><td></td></tr><tr><td>CLERICAL GRADE 5</td><td>11.7103</td><td>11.9608</td><td>12.2978</td><td>12.6347</td><td>12.9506</td><td>13.2746</td><td></td></tr><tr><td>CLERICAL GRADE 6</td><td>12.2402</td><td>12.519</td><td>12.9139</td><td>13.2991</td><td>13.6317</td><td>13.9721</td><td></td></tr><tr><td rowspan=\"2\">CLERICAL GRADE 7</td><td>12.7602</td><td>13.0778</td><td>13.5303</td><td>13.9831</td><td>14.3325</td><td>14.6907</td><td></td></tr><tr><td>START</td><td>3 MOS</td><td>12 MOS</td><td>24 MOS</td><td>36 MOS</td><td>48 MOS</td><td></td></tr><tr><td>MEDICAL SECRETARY TRAINEE</td><td>11.5809</td><td>11.7887</td><td>12.1059</td><td>12.4129</td><td>12.7232</td><td>13.0413</td><td></td></tr><tr><td>MEDICAL SECRETARY</td><td>12.9018</td><td>13.2823</td><td>13.6936</td><td>14.1050</td><td>14.4574</td><td>14.8190</td><td></td></tr><tr><td rowspan=\"2\">SR MEDICAL SECRETARY</td><td>13.5468</td><td>13.9464</td><td>14.3782</td><td>14.8100</td><td>15.1803</td><td>15.5599</td><td></td></tr><tr><td>START</td><td>3 MOS</td><td>12 MOS</td><td>21 MOS</td><td>30 MOS</td><td>42 MOS</td><td>54 MOS</td></tr><tr><td>COMMUNICATION OPERATOR</td><td>10.9338</td><td>11.1883</td><td>11.4533</td><td>11.6103</td><td>12.0128</td><td>12.3131</td><td>12.6211</td></tr><tr><td rowspan=\"2\">SR COMMUNICATION OPERATOR</td><td>11.2376</td><td>11.4731</td><td>11.7281</td><td>11.8952</td><td>12.2974</td><td>12.6048</td><td>12.9199</td></tr><tr><td>START</td><td>3 MOS</td><td>12 MOS</td><td>24 MOS</td><td>36 MOS</td><td>48 MOS</td><td>60 MOS</td></tr><tr><td>MEDICAL RECORD CODER I</td><td>13.2346</td><td>13.6258</td><td>14.0375</td><td>14.4687</td><td>14.6977</td><td>15.0349</td><td>15.7615</td></tr><tr><td rowspan=\"2\">MEDICAL RECORD CODER II</td><td>14.1960</td><td>14.6146</td><td>15.0670</td><td>15.5051</td><td>15.7454</td><td>16.154</td><td>16.5902</td></tr><tr><td>START</td><td>3 MOS</td><td>12 MOS</td><td>24 MOS</td><td>36 MOS</td><td>48 MOS</td><td></td></tr><tr><td>CYTOTECHNOLOGIST I</td><td>21.1306</td><td>21.4048</td><td>22.3620</td><td>23.0965</td><td>23.8909</td><td>24.4865</td><td></td></tr><tr><td>CYTOTECHNOLOGIST II</td><td>21.8347</td><td>22.2524</td><td>23.1926</td><td>24.0114</td><td>24.8375</td><td>25.4586</td><td></td></tr><tr><td>CYTOTECHNOLOGIST III</td><td>22.5623</td><td>23.0633</td><td>24.1202</td><td>24.9509</td><td>25.8092</td><td>26.4544</td><td></td></tr><tr><td>CHIEF CYTOLOGY TECHNOLOGIST</td><td>23.7912</td><td>24.2928</td><td>25.2519</td><td>26.0105</td><td>26.9053</td><td>27.5781</td><td></td></tr><tr><td>SUPV CYTO-HISTO TECHNOLOGIST</td><td>24.5908</td><td>25.6167</td><td>26.6970</td><td>27.2028</td><td>28.1388</td><td>28.8420</td><td></td></tr></table>",
+            "block_bbox": [
+                102,
+                146,
+                1176,
+                1456
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    102.0,
+                    146.0
+                ],
+                [
+                    1176.0,
+                    146.0
+                ],
+                [
+                    1176.0,
+                    1456.0
+                ],
+                [
+                    102.0,
+                    1456.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "166",
+            "block_bbox": [
+                573,
+                1467,
+                616,
+                1492
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    573.0,
+                    1467.0
+                ],
+                [
+                    615.0,
+                    1467.0
+                ],
+                [
+                    615.0,
+                    1491.0
+                ],
+                [
+                    573.0,
+                    1491.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.6042863130569458,
+                "coordinate": [
+                    102,
+                    146,
+                    1176,
+                    1456
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        102.0,
+                        146.0
+                    ],
+                    [
+                        1176.0,
+                        146.0
+                    ],
+                    [
+                        1176.0,
+                        1456.0
+                    ],
+                    [
+                        102.0,
+                        1456.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.37670308351516724,
+                "coordinate": [
+                    500,
+                    205,
+                    990,
+                    290
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        500.0,
+                        205.0
+                    ],
+                    [
+                        990.0,
+                        205.0
+                    ],
+                    [
+                        990.0,
+                        290.0
+                    ],
+                    [
+                        500.0,
+                        290.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.44227439165115356,
+                "coordinate": [
+                    496,
+                    305,
+                    1084,
+                    420
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        496.0,
+                        305.0
+                    ],
+                    [
+                        1084.0,
+                        305.0
+                    ],
+                    [
+                        1084.0,
+                        420.0
+                    ],
+                    [
+                        496.0,
+                        420.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.36926886439323425,
+                "coordinate": [
+                    498,
+                    437,
+                    1086,
+                    576
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        498.0,
+                        437.0
+                    ],
+                    [
+                        1086.0,
+                        437.0
+                    ],
+                    [
+                        1086.0,
+                        576.0
+                    ],
+                    [
+                        498.0,
+                        576.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.42657211422920227,
+                "coordinate": [
+                    497,
+                    595,
+                    1082,
+                    835
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        497.0,
+                        595.0
+                    ],
+                    [
+                        1082.0,
+                        595.0
+                    ],
+                    [
+                        1082.0,
+                        835.0
+                    ],
+                    [
+                        497.0,
+                        835.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.37449419498443604,
+                "coordinate": [
+                    494,
+                    854,
+                    1085,
+                    992
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        494.0,
+                        854.0
+                    ],
+                    [
+                        1085.0,
+                        854.0
+                    ],
+                    [
+                        1085.0,
+                        992.0
+                    ],
+                    [
+                        494.0,
+                        992.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.3025829792022705,
+                "coordinate": [
+                    494,
+                    1008,
+                    1179,
+                    1121
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        494.0,
+                        1008.0
+                    ],
+                    [
+                        1179.0,
+                        1008.0
+                    ],
+                    [
+                        1179.0,
+                        1121.0
+                    ],
+                    [
+                        494.0,
+                        1121.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.30638986825942993,
+                "coordinate": [
+                    105,
+                    1191,
+                    392,
+                    1248
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        105.0,
+                        1191.0
+                    ],
+                    [
+                        392.0,
+                        1191.0
+                    ],
+                    [
+                        392.0,
+                        1248.0
+                    ],
+                    [
+                        105.0,
+                        1248.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.33714285492897034,
+                "coordinate": [
+                    494,
+                    1138,
+                    1175,
+                    1252
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        494.0,
+                        1138.0
+                    ],
+                    [
+                        1175.0,
+                        1138.0
+                    ],
+                    [
+                        1175.0,
+                        1252.0
+                    ],
+                    [
+                        494.0,
+                        1252.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.35747113823890686,
+                "coordinate": [
+                    104,
+                    1273,
+                    1086,
+                    1455
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        104.0,
+                        1273.0
+                    ],
+                    [
+                        1086.0,
+                        1273.0
+                    ],
+                    [
+                        1086.0,
+                        1455.0
+                    ],
+                    [
+                        104.0,
+                        1455.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.5953783988952637,
+                "coordinate": [
+                    494,
+                    1269,
+                    1081,
+                    1454
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        494.0,
+                        1269.0
+                    ],
+                    [
+                        1081.0,
+                        1269.0
+                    ],
+                    [
+                        1081.0,
+                        1454.0
+                    ],
+                    [
+                        494.0,
+                        1454.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7730041742324829,
+                "coordinate": [
+                    573,
+                    1467,
+                    616,
+                    1492
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        573.0,
+                        1467.0
+                    ],
+                    [
+                        615.0,
+                        1467.0
+                    ],
+                    [
+                        615.0,
+                        1491.0
+                    ],
+                    [
+                        573.0,
+                        1491.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

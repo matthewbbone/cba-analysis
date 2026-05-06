@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 141,
+    "page_count": 439,
+    "width": 1235,
+    "height": 1592,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article 21",
+            "block_bbox": [
+                838,
+                82,
+                909,
+                103
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    838.0,
+                    82.0
+                ],
+                [
+                    908.0,
+                    82.0
+                ],
+                [
+                    908.0,
+                    102.0
+                ],
+                [
+                    838.0,
+                    102.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "subsequently recalled or rehired as a regular Employee at Lucent Technologies Inc. or any affiliate, subsidiary or entity and the number of weeks since date of Layoff is less than the number of weeks of Layoff Allowance granted, the amount of Layoff Allowance paid the Employee for the excess number of weeks shall be repaid to the Company as a condition precedent to such recall or rehiring.",
+            "block_bbox": [
+                375,
+                121,
+                912,
+                232
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    375.0,
+                    121.0
+                ],
+                [
+                    912.0,
+                    121.0
+                ],
+                [
+                    912.0,
+                    232.0
+                ],
+                [
+                    375.0,
+                    232.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "133",
+            "block_bbox": [
+                876,
+                912,
+                906,
+                932
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    876.0,
+                    912.0
+                ],
+                [
+                    905.0,
+                    912.0
+                ],
+                [
+                    905.0,
+                    931.0
+                ],
+                [
+                    876.0,
+                    931.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7686042189598083,
+                "coordinate": [
+                    838,
+                    82,
+                    909,
+                    103
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        838.0,
+                        82.0
+                    ],
+                    [
+                        908.0,
+                        82.0
+                    ],
+                    [
+                        908.0,
+                        102.0
+                    ],
+                    [
+                        838.0,
+                        102.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9082135558128357,
+                "coordinate": [
+                    375,
+                    121,
+                    912,
+                    232
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        375.0,
+                        121.0
+                    ],
+                    [
+                        912.0,
+                        121.0
+                    ],
+                    [
+                        912.0,
+                        232.0
+                    ],
+                    [
+                        375.0,
+                        232.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6312345266342163,
+                "coordinate": [
+                    876,
+                    912,
+                    906,
+                    932
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        876.0,
+                        912.0
+                    ],
+                    [
+                        905.0,
+                        912.0
+                    ],
+                    [
+                        905.0,
+                        931.0
+                    ],
+                    [
+                        876.0,
+                        931.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

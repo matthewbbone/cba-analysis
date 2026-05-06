@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b186f003_01.pdf",
+    "page_index": 96,
+    "page_count": 106,
+    "width": 556,
+    "height": 1033,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "doc_title",
+            "block_content": "APPENDIX F\n1987-88 SCHOOL YEAR CALENDAR",
+            "block_bbox": [
+                137,
+                100,
+                420,
+                145
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    137.0,
+                    100.0
+                ],
+                [
+                    420.0,
+                    100.0
+                ],
+                [
+                    420.0,
+                    145.0
+                ],
+                [
+                    137.0,
+                    145.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>August 18-21 (T-F)</td><td>Teacher Pre-Planning</td></tr><tr><td>August 24 (M)</td><td>First Day of Class</td></tr><tr><td>September 7 (M)</td><td>Labor Day Holiday/Teacher Paid Holiday</td></tr><tr><td>October 16 (F)</td><td>Teacher Paid Holiday/Student Holiday</td></tr><tr><td>October 29 (Th)</td><td>End of First Marking Period (47 days)</td></tr><tr><td>October 30 (F)</td><td>Teacher Workday/Student Holiday</td></tr><tr><td>November 2 (M)</td><td>Beginning of Second Marking Period</td></tr><tr><td>November 26 (Th)</td><td>Thanksgiving/Teacher Paid Holiday</td></tr><tr><td>November 26-27 (Th-F)</td><td>Thanksgiving Holidays</td></tr><tr><td>December 21-January 1 (M-F)</td><td>Winter Holidays</td></tr><tr><td>January 15 (F)</td><td>End of Second Marking Period (43 days)/End of First Semester</td></tr><tr><td>January 18 (M)</td><td>Teacher Workday/Student Holiday</td></tr><tr><td>January 19 (T)</td><td>Teacher Staff Development Day/Student Holiday</td></tr><tr><td>January 20 (W)</td><td>Beginning of Third Marking Period</td></tr><tr><td>February 15 (M)</td><td>Teacher Paid Holiday/Student Holiday</td></tr><tr><td>March 24 (Th)</td><td>End of Third Marking Period (46 days)</td></tr><tr><td>March 25 (F)</td><td>Teacher Workday/Student Holiday</td></tr><tr><td>March 28-April 1 (M-F)</td><td>Spring Holidays</td></tr><tr><td>April 1 (F)</td><td>Teacher Paid Holiday/Student Holiday</td></tr><tr><td>April 4 (M)</td><td>Begin Fourth Marking Period</td></tr><tr><td>May 30 (M)</td><td>Teacher Paid Holiday/Student Holiday</td></tr><tr><td>June 3 (F)</td><td>End of Fourth Marking Period (44 days)/End of Second Semester</td></tr></table>",
+            "block_bbox": [
+                50,
+                148,
+                507,
+                636
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    50.0,
+                    148.0
+                ],
+                [
+                    507.0,
+                    148.0
+                ],
+                [
+                    507.0,
+                    636.0
+                ],
+                [
+                    50.0,
+                    636.0
+                ]
+            ]
+        },
+        {
+            "block_label": "vision_footnote",
+            "block_content": " $ ^{*} $After consultation with the Association, the Board reserves the right to establish the length and beginning and ending dates of summer sessions.",
+            "block_bbox": [
+                53,
+                652,
+                508,
+                692
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    52.6239128112793,
+                    657.004150390625
+                ],
+                [
+                    506.62371826171875,
+                    651.9820556640625
+                ],
+                [
+                    507.0550537109375,
+                    690.977294921875
+                ],
+                [
+                    53.05524826049805,
+                    695.9993896484375
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "1987-88 PAID HOLIDAYS\nFOR TWELVE-MONTH EMPLOYEES",
+            "block_bbox": [
+                147,
+                776,
+                427,
+                820
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    147.0,
+                    776.0
+                ],
+                [
+                    427.0,
+                    776.0
+                ],
+                [
+                    427.0,
+                    820.0
+                ],
+                [
+                    147.0,
+                    820.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>July 3 (F)</td><td>Independence Day</td></tr><tr><td colspan=\"2\">[to be taken August 3 (M)]</td></tr><tr><td>September 7 (M)</td><td>Labor Day</td></tr><tr><td>November 26-27 (Th-F)</td><td>Thanksgiving</td></tr><tr><td>December 24-25 (Th-F)</td><td>Winter Holidays</td></tr><tr><td>January 1 (Th)</td><td>Winter Holidays</td></tr><tr><td>April 1 (F)</td><td>Spring Holiday</td></tr><tr><td>May 30 (M)</td><td>Memorial Day</td></tr></table>",
+            "block_bbox": [
+                59,
+                824,
+                358,
+                970
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    59.0,
+                    824.0
+                ],
+                [
+                    358.0,
+                    824.0
+                ],
+                [
+                    358.0,
+                    970.0
+                ],
+                [
+                    59.0,
+                    970.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "94",
+            "block_bbox": [
+                280,
+                985,
+                301,
+                1001
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    280.0,
+                    985.0
+                ],
+                [
+                    300.0,
+                    985.0
+                ],
+                [
+                    300.0,
+                    1000.0
+                ],
+                [
+                    280.0,
+                    1000.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.3015122413635254,
+                "coordinate": [
+                    137,
+                    100,
+                    420,
+                    145
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        137.0,
+                        100.0
+                    ],
+                    [
+                        420.0,
+                        100.0
+                    ],
+                    [
+                        420.0,
+                        145.0
+                    ],
+                    [
+                        137.0,
+                        145.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.5925942063331604,
+                "coordinate": [
+                    50,
+                    148,
+                    507,
+                    636
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        50.0,
+                        148.0
+                    ],
+                    [
+                        507.0,
+                        148.0
+                    ],
+                    [
+                        507.0,
+                        636.0
+                    ],
+                    [
+                        50.0,
+                        636.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.7668505907058716,
+                "coordinate": [
+                    53,
+                    652,
+                    508,
+                    692
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        52.6239128112793,
+                        657.004150390625
+                    ],
+                    [
+                        506.62371826171875,
+                        651.9820556640625
+                    ],
+                    [
+                        507.0550537109375,
+                        690.977294921875
+                    ],
+                    [
+                        53.05524826049805,
+                        695.9993896484375
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.3648836016654968,
+                "coordinate": [
+                    147,
+                    776,
+                    427,
+                    820
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        147.0,
+                        776.0
+                    ],
+                    [
+                        427.0,
+                        776.0
+                    ],
+                    [
+                        427.0,
+                        820.0
+                    ],
+                    [
+                        147.0,
+                        820.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.5810285806655884,
+                "coordinate": [
+                    59,
+                    824,
+                    358,
+                    970
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        59.0,
+                        824.0
+                    ],
+                    [
+                        358.0,
+                        824.0
+                    ],
+                    [
+                        358.0,
+                        970.0
+                    ],
+                    [
+                        59.0,
+                        970.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7614068984985352,
+                "coordinate": [
+                    280,
+                    985,
+                    301,
+                    1001
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        280.0,
+                        985.0
+                    ],
+                    [
+                        300.0,
+                        985.0
+                    ],
+                    [
+                        300.0,
+                        1000.0
+                    ],
+                    [
+                        280.0,
+                        1000.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

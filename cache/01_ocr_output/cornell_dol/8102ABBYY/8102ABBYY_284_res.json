@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 284,
+    "page_count": 439,
+    "width": 1234,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                321,
+                106,
+                483,
+                126
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    106.0
+                ],
+                [
+                    482.0,
+                    106.0
+                ],
+                [
+                    482.0,
+                    125.0
+                ],
+                [
+                    321.0,
+                    125.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Committee shall represent the Trustees in carrying out the duties described in Subsections D(2) and E(2).",
+            "block_bbox": [
+                320,
+                139,
+                878,
+                178
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    139.0
+                ],
+                [
+                    878.0,
+                    139.0
+                ],
+                [
+                    878.0,
+                    178.0
+                ],
+                [
+                    320.0,
+                    178.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "In conjunction with the establishment of the plan design and premiums as described in Subsections D(2) and E(2), the Trustees will determine what amount of benefits are appropriate to be paid from the Trust during the forthcoming year for Eligible Participants taking into consideration the amount of funds available and the need for those funds to provide benefits in accordance with the Trust Agreement.",
+            "block_bbox": [
+                321,
+                196,
+                878,
+                303
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    196.0
+                ],
+                [
+                    878.0,
+                    196.0
+                ],
+                [
+                    878.0,
+                    303.0
+                ],
+                [
+                    321.0,
+                    303.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "No representations are made as to the taxability of any benefit provided under the Trust to any Eligible Participant.",
+            "block_bbox": [
+                321,
+                322,
+                877,
+                360
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    322.0
+                ],
+                [
+                    877.0,
+                    322.0
+                ],
+                [
+                    877.0,
+                    360.0
+                ],
+                [
+                    321.0,
+                    360.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(5) Administration. The parties will cooperate in developing guidelines governing the operations of the Trust, including but not limited to the function of the Trustees and the Benefits Committee and benefits to be funded by the Trust. The parties agree that the Trust shall be subject to periodic audit by a qualified independent accounting firm. The expenses of such audits and other reasonable expenses of administering the Trust shall be charged to the Trust.",
+            "block_bbox": [
+                320,
+                379,
+                878,
+                487
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    379.0
+                ],
+                [
+                    878.0,
+                    379.0
+                ],
+                [
+                    878.0,
+                    487.0
+                ],
+                [
+                    320.0,
+                    487.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "276",
+            "block_bbox": [
+                322,
+                897,
+                354,
+                915
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    897.0
+                ],
+                [
+                    353.0,
+                    897.0
+                ],
+                [
+                    353.0,
+                    914.0
+                ],
+                [
+                    322.0,
+                    914.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8102672696113586,
+                "coordinate": [
+                    321,
+                    106,
+                    483,
+                    126
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        321.0,
+                        106.0
+                    ],
+                    [
+                        482.0,
+                        106.0
+                    ],
+                    [
+                        482.0,
+                        125.0
+                    ],
+                    [
+                        321.0,
+                        125.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8715829253196716,
+                "coordinate": [
+                    320,
+                    139,
+                    878,
+                    178
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        320.0,
+                        139.0
+                    ],
+                    [
+                        878.0,
+                        139.0
+                    ],
+                    [
+                        878.0,
+                        178.0
+                    ],
+                    [
+                        320.0,
+                        178.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9318008422851562,
+                "coordinate": [
+                    321,
+                    196,
+                    878,
+                    303
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        321.0,
+                        196.0
+                    ],
+                    [
+                        878.0,
+                        196.0
+                    ],
+                    [
+                        878.0,
+                        303.0
+                    ],
+                    [
+                        321.0,
+                        303.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8601304292678833,
+                "coordinate": [
+                    321,
+                    322,
+                    877,
+                    360
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        321.0,
+                        322.0
+                    ],
+                    [
+                        877.0,
+                        322.0
+                    ],
+                    [
+                        877.0,
+                        360.0
+                    ],
+                    [
+                        321.0,
+                        360.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9376646876335144,
+                "coordinate": [
+                    320,
+                    379,
+                    878,
+                    487
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        320.0,
+                        379.0
+                    ],
+                    [
+                        878.0,
+                        379.0
+                    ],
+                    [
+                        878.0,
+                        487.0
+                    ],
+                    [
+                        320.0,
+                        487.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6864119172096252,
+                "coordinate": [
+                    322,
+                    897,
+                    354,
+                    915
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        322.0,
+                        897.0
+                    ],
+                    [
+                        353.0,
+                        897.0
+                    ],
+                    [
+                        353.0,
+                        914.0
+                    ],
+                    [
+                        322.0,
+                        914.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

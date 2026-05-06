@@ -1,0 +1,949 @@
+{
+    "input_path": "cache/cornell_dol/6513ABBYY.pdf",
+    "page_index": 39,
+    "page_count": 91,
+    "width": 1582,
+    "height": 1226,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Contract",
+            "block_bbox": [
+                34,
+                21,
+                123,
+                47
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    34.0,
+                    21.0
+                ],
+                [
+                    123.0,
+                    21.0
+                ],
+                [
+                    123.0,
+                    47.0
+                ],
+                [
+                    34.0,
+                    47.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 39 of 94",
+            "block_bbox": [
+                1409,
+                20,
+                1548,
+                50
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    1409.0,
+                    20.0
+                ],
+                [
+                    1548.0,
+                    20.0
+                ],
+                [
+                    1548.0,
+                    50.0
+                ],
+                [
+                    1409.0,
+                    50.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "will mail the check to the employee's home address.",
+            "block_bbox": [
+                346,
+                60,
+                921,
+                93
+            ],
+            "block_id": 2,
+            "block_order": 1,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    346.0,
+                    60.0
+                ],
+                [
+                    921.0,
+                    60.0
+                ],
+                [
+                    921.0,
+                    93.0
+                ],
+                [
+                    346.0,
+                    93.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "5. Only deductions as prescribed by law or authorized by the employee shall be made from sickness pay benefit payments.",
+            "block_bbox": [
+                346,
+                117,
+                1475,
+                177
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    346.0,
+                    117.0
+                ],
+                [
+                    1475.0,
+                    117.0
+                ],
+                [
+                    1475.0,
+                    177.0
+                ],
+                [
+                    346.0,
+                    177.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "G. Exclusions",
+            "block_bbox": [
+                349,
+                202,
+                501,
+                231
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    349.0,
+                    202.0
+                ],
+                [
+                    501.0,
+                    202.0
+                ],
+                [
+                    501.0,
+                    231.0
+                ],
+                [
+                    349.0,
+                    231.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. Sickness pay benefits shall not be paid when the employee is ineligible to receive disability insurance payments under the California Unemployment Insurance Code or Worker's Compensation Benefits under the Worker's Compensation Act.",
+            "block_bbox": [
+                347,
+                258,
+                1479,
+                347
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    347.0,
+                    258.0
+                ],
+                [
+                    1479.0,
+                    258.0
+                ],
+                [
+                    1479.0,
+                    347.0
+                ],
+                [
+                    347.0,
+                    347.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a. Exception shall be made in the case of an employee who does not have sufficient earnings in his/her base period to qualify, but who qualifies under all other provisions of the code.",
+            "block_bbox": [
+                348,
+                371,
+                1472,
+                434
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    348.0,
+                    371.0
+                ],
+                [
+                    1472.0,
+                    371.0
+                ],
+                [
+                    1472.0,
+                    434.0
+                ],
+                [
+                    348.0,
+                    434.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. Sickness pay benefits shall not be paid during any period where the employee would not otherwise be eligible for payment of wages, i.e., leave of absence, layoff, or absence because of trade disputes. Before the employee on layoff becomes eligible for sickness pay benefits, s/he must have worked required number of hours outlined in (B) of this Section in the month preceding the illness or injury in accordance with B (1) and (2) hereof. Before an employee on Leave of Absence or absence because of trade dispute becomes eligible for sickness pay benefits, s/he must have returned to work for at least one work day (except as provided in B hereof).",
+            "block_bbox": [
+                348,
+                457,
+                1477,
+                660
+            ],
+            "block_id": 7,
+            "block_order": 6,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    348.0,
+                    457.0
+                ],
+                [
+                    1477.0,
+                    457.0
+                ],
+                [
+                    1477.0,
+                    660.0
+                ],
+                [
+                    348.0,
+                    660.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3. The Employer reserves the right to request medical certification of inability to work due to sickness or injury, provided, however, such certification will not be requested prior to the second day of paid sickness leave, except for chronic and/or pattern cases.",
+            "block_bbox": [
+                348,
+                682,
+                1467,
+                773
+            ],
+            "block_id": 8,
+            "block_order": 7,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    348.0,
+                    682.0
+                ],
+                [
+                    1467.0,
+                    682.0
+                ],
+                [
+                    1467.0,
+                    773.0
+                ],
+                [
+                    348.0,
+                    773.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "H. The Employer reserves the right to become self-insured for State Disability Insurance at a later date.",
+            "block_bbox": [
+                349,
+                796,
+                1479,
+                829
+            ],
+            "block_id": 9,
+            "block_order": 8,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    349.0,
+                    796.0
+                ],
+                [
+                    1479.0,
+                    796.0
+                ],
+                [
+                    1479.0,
+                    829.0
+                ],
+                [
+                    349.0,
+                    829.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "SECTION 30 - PENSION",
+            "block_bbox": [
+                793,
+                853,
+                1052,
+                884
+            ],
+            "block_id": 10,
+            "block_order": 9,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    793.0,
+                    853.0
+                ],
+                [
+                    1052.0,
+                    853.0
+                ],
+                [
+                    1052.0,
+                    884.0
+                ],
+                [
+                    793.0,
+                    884.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Macy's West will provide a pension plan and pension benefits for eligible employees covered under the terms of this Collective Bargaining Agreement consistent with the pension plan and benefits provided to the majority of the Macy's West employees. The pension plan and the benefits shall change when changes are made in the plan affecting the majority of the Macy's West employees.",
+            "block_bbox": [
+                349,
+                911,
+                1484,
+                1029
+            ],
+            "block_id": 11,
+            "block_order": 10,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    349.0,
+                    911.0
+                ],
+                [
+                    1484.0,
+                    911.0
+                ],
+                [
+                    1484.0,
+                    1029.0
+                ],
+                [
+                    349.0,
+                    1029.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "At the time of retirement of an employee covered by this Agreement, the Employer will notify the Union of the name and address of the employee, the date of the employee's most recent employment and the date of the employee's retirement.",
+            "block_bbox": [
+                350,
+                1052,
+                1493,
+                1141
+            ],
+            "block_id": 12,
+            "block_order": 11,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    350.0,
+                    1052.0
+                ],
+                [
+                    1493.0,
+                    1052.0
+                ],
+                [
+                    1493.0,
+                    1141.0
+                ],
+                [
+                    350.0,
+                    1141.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "http://macys.local101.com/contract.htm",
+            "block_bbox": [
+                39,
+                1182,
+                427,
+                1212
+            ],
+            "block_id": 13,
+            "block_order": null,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    39.0,
+                    1182.0
+                ],
+                [
+                    427.0,
+                    1182.0
+                ],
+                [
+                    427.0,
+                    1212.0
+                ],
+                [
+                    39.0,
+                    1212.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "1/31/2005",
+            "block_bbox": [
+                1452,
+                1181,
+                1552,
+                1209
+            ],
+            "block_id": 14,
+            "block_order": null,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    1452.0,
+                    1181.0
+                ],
+                [
+                    1552.0,
+                    1181.0
+                ],
+                [
+                    1552.0,
+                    1209.0
+                ],
+                [
+                    1452.0,
+                    1209.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.742923378944397,
+                "coordinate": [
+                    34,
+                    21,
+                    123,
+                    47
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        34.0,
+                        21.0
+                    ],
+                    [
+                        123.0,
+                        21.0
+                    ],
+                    [
+                        123.0,
+                        47.0
+                    ],
+                    [
+                        34.0,
+                        47.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8229286670684814,
+                "coordinate": [
+                    1409,
+                    20,
+                    1548,
+                    50
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        1409.0,
+                        20.0
+                    ],
+                    [
+                        1548.0,
+                        20.0
+                    ],
+                    [
+                        1548.0,
+                        50.0
+                    ],
+                    [
+                        1409.0,
+                        50.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8654481172561646,
+                "coordinate": [
+                    346,
+                    60,
+                    921,
+                    93
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        346.0,
+                        60.0
+                    ],
+                    [
+                        921.0,
+                        60.0
+                    ],
+                    [
+                        921.0,
+                        93.0
+                    ],
+                    [
+                        346.0,
+                        93.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9303995370864868,
+                "coordinate": [
+                    346,
+                    117,
+                    1475,
+                    177
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        346.0,
+                        117.0
+                    ],
+                    [
+                        1475.0,
+                        117.0
+                    ],
+                    [
+                        1475.0,
+                        177.0
+                    ],
+                    [
+                        346.0,
+                        177.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8195877075195312,
+                "coordinate": [
+                    349,
+                    202,
+                    501,
+                    231
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        349.0,
+                        202.0
+                    ],
+                    [
+                        501.0,
+                        202.0
+                    ],
+                    [
+                        501.0,
+                        231.0
+                    ],
+                    [
+                        349.0,
+                        231.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9375463724136353,
+                "coordinate": [
+                    347,
+                    258,
+                    1479,
+                    347
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        347.0,
+                        258.0
+                    ],
+                    [
+                        1479.0,
+                        258.0
+                    ],
+                    [
+                        1479.0,
+                        347.0
+                    ],
+                    [
+                        347.0,
+                        347.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9280757904052734,
+                "coordinate": [
+                    348,
+                    371,
+                    1472,
+                    434
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        348.0,
+                        371.0
+                    ],
+                    [
+                        1472.0,
+                        371.0
+                    ],
+                    [
+                        1472.0,
+                        434.0
+                    ],
+                    [
+                        348.0,
+                        434.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9549214839935303,
+                "coordinate": [
+                    348,
+                    457,
+                    1477,
+                    660
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        348.0,
+                        457.0
+                    ],
+                    [
+                        1477.0,
+                        457.0
+                    ],
+                    [
+                        1477.0,
+                        660.0
+                    ],
+                    [
+                        348.0,
+                        660.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9393245577812195,
+                "coordinate": [
+                    348,
+                    682,
+                    1467,
+                    773
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        348.0,
+                        682.0
+                    ],
+                    [
+                        1467.0,
+                        682.0
+                    ],
+                    [
+                        1467.0,
+                        773.0
+                    ],
+                    [
+                        348.0,
+                        773.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8753549456596375,
+                "coordinate": [
+                    349,
+                    796,
+                    1479,
+                    829
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        349.0,
+                        796.0
+                    ],
+                    [
+                        1479.0,
+                        796.0
+                    ],
+                    [
+                        1479.0,
+                        829.0
+                    ],
+                    [
+                        349.0,
+                        829.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8618216514587402,
+                "coordinate": [
+                    793,
+                    853,
+                    1052,
+                    884
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        793.0,
+                        853.0
+                    ],
+                    [
+                        1052.0,
+                        853.0
+                    ],
+                    [
+                        1052.0,
+                        884.0
+                    ],
+                    [
+                        793.0,
+                        884.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9552870988845825,
+                "coordinate": [
+                    349,
+                    911,
+                    1484,
+                    1029
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        349.0,
+                        911.0
+                    ],
+                    [
+                        1484.0,
+                        911.0
+                    ],
+                    [
+                        1484.0,
+                        1029.0
+                    ],
+                    [
+                        349.0,
+                        1029.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9409140348434448,
+                "coordinate": [
+                    350,
+                    1052,
+                    1493,
+                    1141
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        350.0,
+                        1052.0
+                    ],
+                    [
+                        1493.0,
+                        1052.0
+                    ],
+                    [
+                        1493.0,
+                        1141.0
+                    ],
+                    [
+                        350.0,
+                        1141.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8636497855186462,
+                "coordinate": [
+                    39,
+                    1182,
+                    427,
+                    1212
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        39.0,
+                        1182.0
+                    ],
+                    [
+                        427.0,
+                        1182.0
+                    ],
+                    [
+                        427.0,
+                        1212.0
+                    ],
+                    [
+                        39.0,
+                        1212.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8302053809165955,
+                "coordinate": [
+                    1452,
+                    1181,
+                    1552,
+                    1209
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1452.0,
+                        1181.0
+                    ],
+                    [
+                        1552.0,
+                        1181.0
+                    ],
+                    [
+                        1552.0,
+                        1209.0
+                    ],
+                    [
+                        1452.0,
+                        1209.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

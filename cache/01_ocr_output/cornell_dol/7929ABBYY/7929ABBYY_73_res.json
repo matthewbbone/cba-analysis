@@ -1,0 +1,888 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 73,
+    "page_count": 189,
+    "width": 1226,
+    "height": 1585,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "doc_title",
+            "block_content": "APPENDIX A\nWAGE ADMINISTRATIVE PRACTICES",
+            "block_bbox": [
+                397,
+                134,
+                838,
+                223
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    397.0,
+                    134.0
+                ],
+                [
+                    838.0,
+                    134.0
+                ],
+                [
+                    838.0,
+                    223.0
+                ],
+                [
+                    397.0,
+                    223.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Section 1. WAGE STRUCTURE DEFINITIONS",
+            "block_bbox": [
+                149,
+                275,
+                692,
+                305
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    149.0,
+                    275.0
+                ],
+                [
+                    692.0,
+                    275.0
+                ],
+                [
+                    692.0,
+                    305.0
+                ],
+                [
+                    149.0,
+                    305.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "A. Structure A",
+            "block_bbox": [
+                234,
+                331,
+                425,
+                361
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    234.0,
+                    331.0
+                ],
+                [
+                    425.0,
+                    331.0
+                ],
+                [
+                    425.0,
+                    361.0
+                ],
+                [
+                    234.0,
+                    361.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Structure \"A\" is the pay structure for all employees hired on or before October 25, 1986. All such employees will remain on this structure and move accordingly. This structure shall apply to employees in Areas I and II.",
+            "block_bbox": [
+                293,
+                386,
+                1086,
+                499
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    293.0,
+                    386.0
+                ],
+                [
+                    1086.0,
+                    386.0
+                ],
+                [
+                    1086.0,
+                    499.0
+                ],
+                [
+                    293.0,
+                    499.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "B. Structure B-I",
+            "block_bbox": [
+                236,
+                524,
+                438,
+                555
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    236.0,
+                    524.0
+                ],
+                [
+                    438.0,
+                    524.0
+                ],
+                [
+                    438.0,
+                    555.0
+                ],
+                [
+                    236.0,
+                    555.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Structure \"B-I\" is the pay structure for all employees hired on or after October 26, 1986 in Area I.",
+            "block_bbox": [
+                291,
+                579,
+                1086,
+                637
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    291.0,
+                    579.0
+                ],
+                [
+                    1086.0,
+                    579.0
+                ],
+                [
+                    1086.0,
+                    637.0
+                ],
+                [
+                    291.0,
+                    637.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "C. Structure B-2",
+            "block_bbox": [
+                234,
+                662,
+                447,
+                692
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    234.0,
+                    662.0
+                ],
+                [
+                    447.0,
+                    662.0
+                ],
+                [
+                    447.0,
+                    692.0
+                ],
+                [
+                    234.0,
+                    692.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Structure \"B-2\" is the pay structure for employees hired on or after October 26, 1986 in Area II.",
+            "block_bbox": [
+                293,
+                717,
+                1085,
+                776
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    293.0,
+                    717.0
+                ],
+                [
+                    1085.0,
+                    717.0
+                ],
+                [
+                    1085.0,
+                    776.0
+                ],
+                [
+                    293.0,
+                    776.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Section 2. GEOGRAPHIC AREA DEFINITIONS",
+            "block_bbox": [
+                149,
+                799,
+                698,
+                830
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    149.0,
+                    799.0
+                ],
+                [
+                    698.0,
+                    799.0
+                ],
+                [
+                    698.0,
+                    830.0
+                ],
+                [
+                    149.0,
+                    830.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Area I and Area II shall be defined as follows:",
+            "block_bbox": [
+                293,
+                854,
+                787,
+                885
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    293.0,
+                    854.0
+                ],
+                [
+                    787.0,
+                    854.0
+                ],
+                [
+                    787.0,
+                    885.0
+                ],
+                [
+                    293.0,
+                    885.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "AREA",
+            "block_bbox": [
+                614,
+                908,
+                704,
+                940
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    614.0,
+                    908.0
+                ],
+                [
+                    704.0,
+                    908.0
+                ],
+                [
+                    704.0,
+                    940.0
+                ],
+                [
+                    614.0,
+                    940.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>1950 Franklin and Environs</td><td>Pleasanton</td></tr><tr><td>Antioch</td><td>Redwood City</td></tr><tr><td>Campbell</td><td>Richmond</td></tr><tr><td>Fairfield</td><td>San Francisco (including French)</td></tr><tr><td>Fremont</td><td>San Jose</td></tr><tr><td>Gilroy</td><td>San Rafael</td></tr><tr><td>Hayward</td><td>Santa Clara</td></tr><tr><td>Martinez</td><td>Santa Rosa</td></tr><tr><td>Milpitas</td><td>Santa Teresa</td></tr><tr><td>Mountain View</td><td>South San Francisco</td></tr><tr><td>Napa</td><td>Vacaville</td></tr><tr><td>Novato</td><td>Vallejo</td></tr><tr><td>Oakland</td><td>Walnut Creek</td></tr><tr><td>Petaluma</td><td></td></tr></table>",
+            "block_bbox": [
+                328,
+                961,
+                1071,
+                1349
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    328.0,
+                    961.0
+                ],
+                [
+                    1071.0,
+                    961.0
+                ],
+                [
+                    1071.0,
+                    1349.0
+                ],
+                [
+                    328.0,
+                    1349.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "AREA",
+            "block_bbox": [
+                612,
+                1379,
+                706,
+                1409
+            ],
+            "block_id": 12,
+            "block_order": null,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    612.0,
+                    1379.0
+                ],
+                [
+                    706.0,
+                    1379.0
+                ],
+                [
+                    706.0,
+                    1409.0
+                ],
+                [
+                    612.0,
+                    1409.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "73",
+            "block_bbox": [
+                605,
+                1454,
+                633,
+                1478
+            ],
+            "block_id": 13,
+            "block_order": null,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    605.0,
+                    1454.0
+                ],
+                [
+                    632.0,
+                    1454.0
+                ],
+                [
+                    632.0,
+                    1477.0
+                ],
+                [
+                    605.0,
+                    1477.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.3599981665611267,
+                "coordinate": [
+                    397,
+                    134,
+                    838,
+                    223
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        397.0,
+                        134.0
+                    ],
+                    [
+                        838.0,
+                        134.0
+                    ],
+                    [
+                        838.0,
+                        223.0
+                    ],
+                    [
+                        397.0,
+                        223.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8772076964378357,
+                "coordinate": [
+                    149,
+                    275,
+                    692,
+                    305
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        149.0,
+                        275.0
+                    ],
+                    [
+                        692.0,
+                        275.0
+                    ],
+                    [
+                        692.0,
+                        305.0
+                    ],
+                    [
+                        149.0,
+                        305.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8103914856910706,
+                "coordinate": [
+                    234,
+                    331,
+                    425,
+                    361
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        234.0,
+                        331.0
+                    ],
+                    [
+                        425.0,
+                        331.0
+                    ],
+                    [
+                        425.0,
+                        361.0
+                    ],
+                    [
+                        234.0,
+                        361.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9338895678520203,
+                "coordinate": [
+                    293,
+                    386,
+                    1086,
+                    499
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        293.0,
+                        386.0
+                    ],
+                    [
+                        1086.0,
+                        386.0
+                    ],
+                    [
+                        1086.0,
+                        499.0
+                    ],
+                    [
+                        293.0,
+                        499.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8212795257568359,
+                "coordinate": [
+                    236,
+                    524,
+                    438,
+                    555
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        236.0,
+                        524.0
+                    ],
+                    [
+                        438.0,
+                        524.0
+                    ],
+                    [
+                        438.0,
+                        555.0
+                    ],
+                    [
+                        236.0,
+                        555.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9036391973495483,
+                "coordinate": [
+                    291,
+                    579,
+                    1086,
+                    637
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        291.0,
+                        579.0
+                    ],
+                    [
+                        1086.0,
+                        579.0
+                    ],
+                    [
+                        1086.0,
+                        637.0
+                    ],
+                    [
+                        291.0,
+                        637.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.822721540927887,
+                "coordinate": [
+                    234,
+                    662,
+                    447,
+                    692
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        234.0,
+                        662.0
+                    ],
+                    [
+                        447.0,
+                        662.0
+                    ],
+                    [
+                        447.0,
+                        692.0
+                    ],
+                    [
+                        234.0,
+                        692.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9088097810745239,
+                "coordinate": [
+                    293,
+                    717,
+                    1085,
+                    776
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        293.0,
+                        717.0
+                    ],
+                    [
+                        1085.0,
+                        717.0
+                    ],
+                    [
+                        1085.0,
+                        776.0
+                    ],
+                    [
+                        293.0,
+                        776.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8492224216461182,
+                "coordinate": [
+                    149,
+                    799,
+                    698,
+                    830
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        149.0,
+                        799.0
+                    ],
+                    [
+                        698.0,
+                        799.0
+                    ],
+                    [
+                        698.0,
+                        830.0
+                    ],
+                    [
+                        149.0,
+                        830.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8004001379013062,
+                "coordinate": [
+                    293,
+                    854,
+                    787,
+                    885
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        293.0,
+                        854.0
+                    ],
+                    [
+                        787.0,
+                        854.0
+                    ],
+                    [
+                        787.0,
+                        885.0
+                    ],
+                    [
+                        293.0,
+                        885.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.7423176169395447,
+                "coordinate": [
+                    614,
+                    908,
+                    704,
+                    940
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        614.0,
+                        908.0
+                    ],
+                    [
+                        704.0,
+                        908.0
+                    ],
+                    [
+                        704.0,
+                        940.0
+                    ],
+                    [
+                        614.0,
+                        940.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9110976457595825,
+                "coordinate": [
+                    328,
+                    961,
+                    1071,
+                    1349
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        328.0,
+                        961.0
+                    ],
+                    [
+                        1071.0,
+                        961.0
+                    ],
+                    [
+                        1071.0,
+                        1349.0
+                    ],
+                    [
+                        328.0,
+                        1349.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.779434323310852,
+                "coordinate": [
+                    612,
+                    1379,
+                    706,
+                    1409
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        612.0,
+                        1379.0
+                    ],
+                    [
+                        706.0,
+                        1379.0
+                    ],
+                    [
+                        706.0,
+                        1409.0
+                    ],
+                    [
+                        612.0,
+                        1409.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7457456588745117,
+                "coordinate": [
+                    605,
+                    1454,
+                    633,
+                    1478
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        605.0,
+                        1454.0
+                    ],
+                    [
+                        632.0,
+                        1454.0
+                    ],
+                    [
+                        632.0,
+                        1477.0
+                    ],
+                    [
+                        605.0,
+                        1477.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

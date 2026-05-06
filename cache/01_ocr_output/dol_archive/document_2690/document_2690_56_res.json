@@ -1,0 +1,583 @@
+{
+    "input_path": "cache/dol_archive/document_2690.pdf",
+    "page_index": 56,
+    "page_count": 77,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "doc_title",
+            "block_content": "ARTICLE 16\nPersonnel Benefits",
+            "block_bbox": [
+                484,
+                146,
+                742,
+                245
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    484.0,
+                    146.0
+                ],
+                [
+                    742.0,
+                    146.0
+                ],
+                [
+                    742.0,
+                    245.0
+                ],
+                [
+                    484.0,
+                    245.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "16.1 Health Insurance",
+            "block_bbox": [
+                175,
+                324,
+                463,
+                355
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    175.0,
+                    324.0
+                ],
+                [
+                    463.0,
+                    324.0
+                ],
+                [
+                    463.0,
+                    355.0
+                ],
+                [
+                    175.0,
+                    355.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The University shall contribute up to four hundred ninety four dollars and seventy-six cents ($494.76) per unit member per month toward the cost of health benefits. The University contribution shall increase effective July 1, 2004, by up to twenty-eight (28) per cent to $634.06, effective July 1, 2005, by up to ten (10) per cent to $697.47, and effective July 1, 2006 by up to ten (10) per cent to $767.33. There shall be no further increases to the University's defined contribution during the term of this agreement, or any extensions thereto. Coverage shall not be altered without the agreement of the parties in a labor/management meeting. In the event the cost of the benefits as prorated among participants in a particular plan exceeds the University's defined contribution, such cost in excess of the University's defined contribution shall be borne by unit members.",
+            "block_bbox": [
+                317,
+                378,
+                1042,
+                714
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    317.0,
+                    378.0
+                ],
+                [
+                    1042.0,
+                    378.0
+                ],
+                [
+                    1042.0,
+                    714.0
+                ],
+                [
+                    317.0,
+                    714.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "a. “Traditional” Plan",
+            "block_bbox": [
+                246,
+                735,
+                505,
+                763
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    246.0,
+                    735.0
+                ],
+                [
+                    505.0,
+                    735.0
+                ],
+                [
+                    505.0,
+                    763.0
+                ],
+                [
+                    246.0,
+                    763.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The “Traditional” Plan is the health plan in place for unit members and other participating employees on the date of this Agreement. Effective January 1, 2004, the Plan Year will be transitioned from calendar year to fiscal year. January - June 2004 will be a six-month “benefit year,” with deductible and out-of-pocket maximums set at half of current levels. All other coverage levels shall remain the same. Health care and dependent care flexible spending accounts (FSAs) will remain on a calendar year basis until December 31, 2004. Effective January 1, 2005, the Plan Year for FSAs will be transitioned from calendar year to fiscal year. January – June 2005 will be a six-month “benefit year,” for flexible spending accounts with these accounts adjusted to half of their applicable annual limits.",
+            "block_bbox": [
+                317,
+                791,
+                1034,
+                1123
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    317.0,
+                    791.0
+                ],
+                [
+                    1034.0,
+                    791.0
+                ],
+                [
+                    1034.0,
+                    1123.0
+                ],
+                [
+                    317.0,
+                    1123.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "b. Flex Plan Option",
+            "block_bbox": [
+                246,
+                1149,
+                492,
+                1178
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    246.0,
+                    1149.0
+                ],
+                [
+                    492.0,
+                    1149.0
+                ],
+                [
+                    492.0,
+                    1178.0
+                ],
+                [
+                    246.0,
+                    1178.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. The University is offering to other employees a defined contribution plan with multiple coverage options, prospective employee charges, and a plan year based on a fiscal year (hereafter UA Choice Plan). The transition to a fiscal year will be as described in Section A. The union on behalf of all unit members may elect to participate in the UA Choice Plan effective July 1, 2004, continuing for the duration of the Agreement. Written notice of election must",
+            "block_bbox": [
+                318,
+                1205,
+                972,
+                1428
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    318.0,
+                    1205.0
+                ],
+                [
+                    972.0,
+                    1205.0
+                ],
+                [
+                    972.0,
+                    1428.0
+                ],
+                [
+                    318.0,
+                    1428.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "Tentative Agreement",
+            "block_bbox": [
+                177,
+                1487,
+                369,
+                1513
+            ],
+            "block_id": 7,
+            "block_order": null,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    177.0,
+                    1487.0
+                ],
+                [
+                    369.0,
+                    1487.0
+                ],
+                [
+                    369.0,
+                    1513.0
+                ],
+                [
+                    177.0,
+                    1513.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 57 of 77",
+            "block_bbox": [
+                919,
+                1487,
+                1047,
+                1515
+            ],
+            "block_id": 8,
+            "block_order": null,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    919.0,
+                    1487.0
+                ],
+                [
+                    1047.0,
+                    1487.0
+                ],
+                [
+                    1047.0,
+                    1515.0
+                ],
+                [
+                    919.0,
+                    1515.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.35645562410354614,
+                "coordinate": [
+                    484,
+                    146,
+                    742,
+                    245
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        484.0,
+                        146.0
+                    ],
+                    [
+                        742.0,
+                        146.0
+                    ],
+                    [
+                        742.0,
+                        245.0
+                    ],
+                    [
+                        484.0,
+                        245.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8517861366271973,
+                "coordinate": [
+                    175,
+                    324,
+                    463,
+                    355
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        175.0,
+                        324.0
+                    ],
+                    [
+                        463.0,
+                        324.0
+                    ],
+                    [
+                        463.0,
+                        355.0
+                    ],
+                    [
+                        175.0,
+                        355.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9620821475982666,
+                "coordinate": [
+                    317,
+                    378,
+                    1042,
+                    714
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        317.0,
+                        378.0
+                    ],
+                    [
+                        1042.0,
+                        378.0
+                    ],
+                    [
+                        1042.0,
+                        714.0
+                    ],
+                    [
+                        317.0,
+                        714.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8560791015625,
+                "coordinate": [
+                    246,
+                    735,
+                    505,
+                    763
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        246.0,
+                        735.0
+                    ],
+                    [
+                        505.0,
+                        735.0
+                    ],
+                    [
+                        505.0,
+                        763.0
+                    ],
+                    [
+                        246.0,
+                        763.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.960654616355896,
+                "coordinate": [
+                    317,
+                    791,
+                    1034,
+                    1123
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        317.0,
+                        791.0
+                    ],
+                    [
+                        1034.0,
+                        791.0
+                    ],
+                    [
+                        1034.0,
+                        1123.0
+                    ],
+                    [
+                        317.0,
+                        1123.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8497702479362488,
+                "coordinate": [
+                    246,
+                    1149,
+                    492,
+                    1178
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        246.0,
+                        1149.0
+                    ],
+                    [
+                        492.0,
+                        1149.0
+                    ],
+                    [
+                        492.0,
+                        1178.0
+                    ],
+                    [
+                        246.0,
+                        1178.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9562270641326904,
+                "coordinate": [
+                    318,
+                    1205,
+                    972,
+                    1428
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        318.0,
+                        1205.0
+                    ],
+                    [
+                        972.0,
+                        1205.0
+                    ],
+                    [
+                        972.0,
+                        1428.0
+                    ],
+                    [
+                        318.0,
+                        1428.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8647953271865845,
+                "coordinate": [
+                    177,
+                    1487,
+                    369,
+                    1513
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        177.0,
+                        1487.0
+                    ],
+                    [
+                        369.0,
+                        1487.0
+                    ],
+                    [
+                        369.0,
+                        1513.0
+                    ],
+                    [
+                        177.0,
+                        1513.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8551347255706787,
+                "coordinate": [
+                    919,
+                    1487,
+                    1047,
+                    1515
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        919.0,
+                        1487.0
+                    ],
+                    [
+                        1047.0,
+                        1487.0
+                    ],
+                    [
+                        1047.0,
+                        1515.0
+                    ],
+                    [
+                        919.0,
+                        1515.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

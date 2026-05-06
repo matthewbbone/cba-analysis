@@ -1,0 +1,339 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 93,
+    "page_count": 287,
+    "width": 731,
+    "height": 1015,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article XI",
+            "block_bbox": [
+                602,
+                55,
+                681,
+                74
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    602.0,
+                    55.0
+                ],
+                [
+                    680.0,
+                    55.0
+                ],
+                [
+                    680.0,
+                    73.0
+                ],
+                [
+                    602.0,
+                    73.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(7) Written Details of Movements and Transfers – The Company will furnish the Union written details of all movements and transfers made in accordance with the provisions of this Article.",
+            "block_bbox": [
+                100,
+                84,
+                683,
+                152
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    100.0,
+                    84.0
+                ],
+                [
+                    683.0,
+                    84.0
+                ],
+                [
+                    683.0,
+                    152.0
+                ],
+                [
+                    100.0,
+                    152.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(8) Filling a Job Vacancy Prior to Hiring a Probationer – Before filling a job vacancy, the Company shall notify the Union of such vacancy, in writing, and shall post notices of such vacancy on all departmental bulletin boards for a period of four (4) working days. Employees desiring to be considered for such vacancy shall notify their department head, in writing, during such four (4) day period. The selection of an employee to fill such vacancy shall be made by Company seniority, provided the employee qualifies under the requirements contained in the Classification of Work and Wages, forming a part hereof. An employee transferred pursuant to this paragraph shall be paid the applicable wage rate indicated in Article XVII. (2). Requests for transfers under this paragraph may be made only by an employee having at least three hundred sixty-five (365) days Company seniority. In the event the employee who is transferred pursuant to this Article and paragraph fails to meet the requirements for the classification during the one hundred and eighty (180) days qualifying period immediately following the effective date of transfer, the Company shall have the right to terminate his or her assignment and return the employee to the classification and department from which employee was transferred. An employee who is transferred in accordance with this provision shall have the right to terminate such assignment during the ninety (90) day qualifying period and will be returned to his or her former classification, department and location. When an employee is transferred in accordance with this paragraph, he or she will not be allowed to request another transfer for a period of six (6) months from the date such transfer became effective.",
+            "block_bbox": [
+                98,
+                173,
+                682,
+                700
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    98.0,
+                    173.0
+                ],
+                [
+                    682.0,
+                    173.0
+                ],
+                [
+                    682.0,
+                    700.0
+                ],
+                [
+                    98.0,
+                    700.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(9) Qualifying Period For Non-Distribution/Field Service Transferees Into Distribution/Field Service – A Local #80 member who transfers into Distribution/Field Service pursuant to the Collective Bargaining Agreement shall have a one hundred and eighty (180) calendar day qualifying period (ninety (90) calendar days in Field Service and ninety (90) calendar days in Distribution). In the event the employee fails to meet the requirements for the classification during the one hundred and eighty (180) day qualifying period, the Company shall have the right to terminate his/her assignment and return the employee to the classification and department from which the employee was transferred. A Local #80 member who is transferred into",
+            "block_bbox": [
+                99,
+                718,
+                681,
+                938
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    99.0,
+                    718.0
+                ],
+                [
+                    681.0,
+                    718.0
+                ],
+                [
+                    681.0,
+                    938.0
+                ],
+                [
+                    99.0,
+                    938.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "85",
+            "block_bbox": [
+                378,
+                944,
+                400,
+                960
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    378.0,
+                    944.0
+                ],
+                [
+                    399.0,
+                    944.0
+                ],
+                [
+                    399.0,
+                    959.0
+                ],
+                [
+                    378.0,
+                    959.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.824016809463501,
+                "coordinate": [
+                    602,
+                    55,
+                    681,
+                    74
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        602.0,
+                        55.0
+                    ],
+                    [
+                        680.0,
+                        55.0
+                    ],
+                    [
+                        680.0,
+                        73.0
+                    ],
+                    [
+                        602.0,
+                        73.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9114239811897278,
+                "coordinate": [
+                    100,
+                    84,
+                    683,
+                    152
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        100.0,
+                        84.0
+                    ],
+                    [
+                        683.0,
+                        84.0
+                    ],
+                    [
+                        683.0,
+                        152.0
+                    ],
+                    [
+                        100.0,
+                        152.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9587550163269043,
+                "coordinate": [
+                    98,
+                    173,
+                    682,
+                    700
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        98.0,
+                        173.0
+                    ],
+                    [
+                        682.0,
+                        173.0
+                    ],
+                    [
+                        682.0,
+                        700.0
+                    ],
+                    [
+                        98.0,
+                        700.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9574311971664429,
+                "coordinate": [
+                    99,
+                    718,
+                    681,
+                    938
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        99.0,
+                        718.0
+                    ],
+                    [
+                        681.0,
+                        718.0
+                    ],
+                    [
+                        681.0,
+                        938.0
+                    ],
+                    [
+                        99.0,
+                        938.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7565674185752869,
+                "coordinate": [
+                    378,
+                    944,
+                    400,
+                    960
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        378.0,
+                        944.0
+                    ],
+                    [
+                        399.0,
+                        944.0
+                    ],
+                    [
+                        399.0,
+                        959.0
+                    ],
+                    [
+                        378.0,
+                        959.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

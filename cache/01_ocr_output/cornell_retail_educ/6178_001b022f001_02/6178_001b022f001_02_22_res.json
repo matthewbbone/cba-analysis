@@ -1,0 +1,339 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_001b022f001_02.pdf",
+    "page_index": 22,
+    "page_count": 28,
+    "width": 577,
+    "height": 838,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header_image",
+            "block_content": "",
+            "block_bbox": [
+                93,
+                5,
+                222,
+                61
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    93.0,
+                    5.0
+                ],
+                [
+                    222.0,
+                    5.0
+                ],
+                [
+                    222.0,
+                    61.0
+                ],
+                [
+                    93.0,
+                    61.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "EXHIBIT \"A\" – WAGE SCALES",
+            "block_bbox": [
+                135,
+                65,
+                423,
+                86
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    135.0,
+                    65.0
+                ],
+                [
+                    422.0,
+                    65.0
+                ],
+                [
+                    422.0,
+                    85.0
+                ],
+                [
+                    135.0,
+                    85.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Minimum Wage Scales effective November 10, 1962 to May 8, 1965, applicable to Store Employees, members of Local No. 72, Amalgamated Food Employees Union chartered by Amalgamated Meat Cutters and Butcher Workmen of North America, AFL-CIO working in Acme Markets, Inc. Division No. 5 (with headquarters in Forty Fort, Pennsylvania) stores and markets.",
+            "block_bbox": [
+                33,
+                89,
+                522,
+                197
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    33.0,
+                    89.0
+                ],
+                [
+                    522.0,
+                    89.0
+                ],
+                [
+                    522.0,
+                    197.0
+                ],
+                [
+                    33.0,
+                    197.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td rowspan=\"2\">Classification</td><td colspan=\"2\">Eff. November 10, 1962</td><td colspan=\"2\">Eff. February 8, 1964</td></tr><tr><td>per Hour (Male)</td><td>Per Hour</td><td>Per Hour</td><td>Per Hour</td></tr><tr><td>Full Time Clerks</td><td>$1.60</td><td>$64.00</td><td>$1.65</td><td>$66.00</td></tr><tr><td>First 6 months</td><td>$1.60</td><td>$68.00</td><td>$1.75</td><td>$70.00</td></tr><tr><td>Second 6 months</td><td>$1.70</td><td>$72.00</td><td>$1.875</td><td>$75.00</td></tr><tr><td>Third 6 months</td><td>$1.80</td><td>$77.00</td><td>$2.00</td><td>$80.00</td></tr><tr><td>Fourth 6 months</td><td>$1.925</td><td>$83.00</td><td>$2.20</td><td>$88.00</td></tr><tr><td>Fifth 6 months</td><td>$2.075</td><td>$92.00</td><td>$2.40</td><td>$96.00</td></tr><tr><td>Thereafter</td><td>$2.30</td><td></td><td></td><td></td></tr><tr><td colspan=\"5\">Full Time Clerks (Female)</td></tr><tr><td>First 6 months</td><td>$1.55</td><td>$62.00</td><td>$1.575</td><td>$63.00</td></tr><tr><td>Second 6 months</td><td>$1.625</td><td>$65.00</td><td>$1.65</td><td>$66.00</td></tr><tr><td>Third 6 months</td><td>$1.725</td><td>$69.00</td><td>$1.75</td><td>$70.00</td></tr><tr><td>Fourth 6 months</td><td>$1.80</td><td>$72.00</td><td>$1.875</td><td>$75.00</td></tr><tr><td>Fifth 6 months</td><td>$1.90</td><td>$76.00</td><td>$2.00</td><td>$80.00</td></tr><tr><td>Thereafter</td><td>$2.075</td><td>$83.00</td><td>$2.175</td><td>$87.00</td></tr><tr><td colspan=\"5\">Part Time Clerks (Male)</td></tr><tr><td>First 6 months</td><td>$1.50</td><td>–</td><td>$1.55</td><td>–</td></tr><tr><td>Second 6 months</td><td>$1.55</td><td>–</td><td>$1.60</td><td>–</td></tr><tr><td>Third 6 months</td><td>$1.60</td><td>–</td><td>$1.70</td><td>–</td></tr><tr><td>Fourth 6 months</td><td>$1.70</td><td>–</td><td>$1.80</td><td>–</td></tr><tr><td>Fifth 6 months</td><td>$1.80</td><td>–</td><td>$1.90</td><td>–</td></tr><tr><td>Thereafter</td><td>$1.90</td><td>–</td><td>$2.00</td><td>–</td></tr><tr><td colspan=\"5\">Part Time Clerks (Female)</td></tr><tr><td>First 6 months</td><td>$1.40</td><td>–</td><td>$1.45</td><td>–</td></tr><tr><td>Second 6 months</td><td>$1.45</td><td>–</td><td>$1.50</td><td>–</td></tr><tr><td>Third 6 months</td><td>$1.50</td><td>–</td><td>$1.60</td><td>–</td></tr><tr><td>Fourth 6 months</td><td>$1.60</td><td>–</td><td>$1.70</td><td>–</td></tr><tr><td>Fifth 6 months</td><td>$1.70</td><td>–</td><td>$1.80</td><td>–</td></tr><tr><td>Thereafter</td><td>$1.80</td><td>–</td><td>$1.90</td><td>–</td></tr></table>",
+            "block_bbox": [
+                8,
+                213,
+                520,
+                769
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    8.0,
+                    213.0
+                ],
+                [
+                    520.0,
+                    213.0
+                ],
+                [
+                    520.0,
+                    769.0
+                ],
+                [
+                    8.0,
+                    769.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "22",
+            "block_bbox": [
+                264,
+                776,
+                286,
+                795
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    264.0,
+                    776.0
+                ],
+                [
+                    285.0,
+                    776.0
+                ],
+                [
+                    285.0,
+                    794.0
+                ],
+                [
+                    264.0,
+                    794.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.3932439386844635,
+                "coordinate": [
+                    93,
+                    5,
+                    222,
+                    61
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        93.0,
+                        5.0
+                    ],
+                    [
+                        222.0,
+                        5.0
+                    ],
+                    [
+                        222.0,
+                        61.0
+                    ],
+                    [
+                        93.0,
+                        61.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6889655590057373,
+                "coordinate": [
+                    135,
+                    65,
+                    423,
+                    86
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        135.0,
+                        65.0
+                    ],
+                    [
+                        422.0,
+                        65.0
+                    ],
+                    [
+                        422.0,
+                        85.0
+                    ],
+                    [
+                        135.0,
+                        85.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9146122932434082,
+                "coordinate": [
+                    33,
+                    89,
+                    522,
+                    197
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        33.0,
+                        89.0
+                    ],
+                    [
+                        522.0,
+                        89.0
+                    ],
+                    [
+                        522.0,
+                        197.0
+                    ],
+                    [
+                        33.0,
+                        197.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9349161386489868,
+                "coordinate": [
+                    8,
+                    213,
+                    520,
+                    769
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        8.0,
+                        213.0
+                    ],
+                    [
+                        520.0,
+                        213.0
+                    ],
+                    [
+                        520.0,
+                        769.0
+                    ],
+                    [
+                        8.0,
+                        769.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7260492444038391,
+                "coordinate": [
+                    264,
+                    776,
+                    286,
+                    795
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        264.0,
+                        776.0
+                    ],
+                    [
+                        285.0,
+                        776.0
+                    ],
+                    [
+                        285.0,
+                        794.0
+                    ],
+                    [
+                        264.0,
+                        794.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

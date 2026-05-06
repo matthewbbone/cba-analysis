@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_dol/K830313_08_07combined.pdf",
+    "page_index": 53,
+    "page_count": 139,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Jeffco Schools: JCEA Negotiated Agreement",
+            "block_bbox": [
+                37,
+                28,
+                479,
+                55
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    37.0,
+                    28.0
+                ],
+                [
+                    479.0,
+                    28.0
+                ],
+                [
+                    479.0,
+                    55.0
+                ],
+                [
+                    37.0,
+                    55.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 1 of 1",
+            "block_bbox": [
+                1079,
+                27,
+                1194,
+                56
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    1079.0,
+                    27.0
+                ],
+                [
+                    1194.0,
+                    27.0
+                ],
+                [
+                    1194.0,
+                    56.0
+                ],
+                [
+                    1079.0,
+                    56.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 22",
+            "block_bbox": [
+                37,
+                67,
+                215,
+                96
+            ],
+            "block_id": 2,
+            "block_order": 1,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    37.0,
+                    67.0
+                ],
+                [
+                    215.0,
+                    67.0
+                ],
+                [
+                    215.0,
+                    96.0
+                ],
+                [
+                    37.0,
+                    96.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Supervision of Student Teachers",
+            "block_bbox": [
+                37,
+                125,
+                326,
+                149
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    37.0,
+                    125.0
+                ],
+                [
+                    326.0,
+                    125.0
+                ],
+                [
+                    326.0,
+                    149.0
+                ],
+                [
+                    37.0,
+                    149.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "22-1 No teacher shall be required to supervise any student teacher.",
+            "block_bbox": [
+                36,
+                173,
+                581,
+                198
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    173.0
+                ],
+                [
+                    581.0,
+                    173.0
+                ],
+                [
+                    581.0,
+                    198.0
+                ],
+                [
+                    36.0,
+                    198.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "22-2 A teacher who supervises a student teacher shall have had a minimum of three (3) years' teaching experience, at least two (2) of them in Jefferson County, if possible.",
+            "block_bbox": [
+                36,
+                222,
+                1173,
+                268
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    222.0
+                ],
+                [
+                    1173.0,
+                    222.0
+                ],
+                [
+                    1173.0,
+                    268.0
+                ],
+                [
+                    36.0,
+                    268.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "22-3 The supervising teacher shall be paid, in addition to his/her contracted salary, the total amount of money received from the sponsoring college or university.",
+            "block_bbox": [
+                36,
+                291,
+                1153,
+                337
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    291.0
+                ],
+                [
+                    1153.0,
+                    291.0
+                ],
+                [
+                    1153.0,
+                    337.0
+                ],
+                [
+                    36.0,
+                    337.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "22-4 Supervising teachers shall work with the university pro-gram coordinator and principal in developing extensive opportunities for the student teachers to observe and practice the arts and skills of the profession.",
+            "block_bbox": [
+                37,
+                360,
+                1188,
+                406
+            ],
+            "block_id": 7,
+            "block_order": 6,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    37.0,
+                    360.0
+                ],
+                [
+                    1188.0,
+                    360.0
+                ],
+                [
+                    1188.0,
+                    406.0
+                ],
+                [
+                    37.0,
+                    406.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Jefferson County Public Schools\nJefferson County, Colorado",
+            "block_bbox": [
+                471,
+                451,
+                761,
+                496
+            ],
+            "block_id": 8,
+            "block_order": 7,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    471.0,
+                    451.0
+                ],
+                [
+                    761.0,
+                    451.0
+                ],
+                [
+                    761.0,
+                    496.0
+                ],
+                [
+                    471.0,
+                    496.0
+                ]
+            ]
+        },
+        {
+            "block_label": "image",
+            "block_content": "",
+            "block_bbox": [
+                549,
+                516,
+                684,
+                586
+            ],
+            "block_id": 9,
+            "block_order": null,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    549.0,
+                    516.0
+                ],
+                [
+                    684.0,
+                    516.0
+                ],
+                [
+                    684.0,
+                    586.0
+                ],
+                [
+                    549.0,
+                    586.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "http://jeffcoweb.jeffco.k12.co.us/emprelations/jcea/article_22.html",
+            "block_bbox": [
+                40,
+                1541,
+                687,
+                1569
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    40.0,
+                    1541.0
+                ],
+                [
+                    687.0,
+                    1541.0
+                ],
+                [
+                    687.0,
+                    1569.0
+                ],
+                [
+                    40.0,
+                    1569.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "2/5/04",
+            "block_bbox": [
+                1129,
+                1542,
+                1195,
+                1567
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    1129.0,
+                    1542.0
+                ],
+                [
+                    1194.0,
+                    1542.0
+                ],
+                [
+                    1194.0,
+                    1566.0
+                ],
+                [
+                    1129.0,
+                    1566.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7825937271118164,
+                "coordinate": [
+                    37,
+                    28,
+                    479,
+                    55
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        37.0,
+                        28.0
+                    ],
+                    [
+                        479.0,
+                        28.0
+                    ],
+                    [
+                        479.0,
+                        55.0
+                    ],
+                    [
+                        37.0,
+                        55.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8027313947677612,
+                "coordinate": [
+                    1079,
+                    27,
+                    1194,
+                    56
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        1079.0,
+                        27.0
+                    ],
+                    [
+                        1194.0,
+                        27.0
+                    ],
+                    [
+                        1194.0,
+                        56.0
+                    ],
+                    [
+                        1079.0,
+                        56.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6154080033302307,
+                "coordinate": [
+                    37,
+                    67,
+                    215,
+                    96
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        37.0,
+                        67.0
+                    ],
+                    [
+                        215.0,
+                        67.0
+                    ],
+                    [
+                        215.0,
+                        96.0
+                    ],
+                    [
+                        37.0,
+                        96.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8499250411987305,
+                "coordinate": [
+                    37,
+                    125,
+                    326,
+                    149
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        37.0,
+                        125.0
+                    ],
+                    [
+                        326.0,
+                        125.0
+                    ],
+                    [
+                        326.0,
+                        149.0
+                    ],
+                    [
+                        37.0,
+                        149.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8362993597984314,
+                "coordinate": [
+                    36,
+                    173,
+                    581,
+                    198
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        36.0,
+                        173.0
+                    ],
+                    [
+                        581.0,
+                        173.0
+                    ],
+                    [
+                        581.0,
+                        198.0
+                    ],
+                    [
+                        36.0,
+                        198.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8849821090698242,
+                "coordinate": [
+                    36,
+                    222,
+                    1173,
+                    268
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        36.0,
+                        222.0
+                    ],
+                    [
+                        1173.0,
+                        222.0
+                    ],
+                    [
+                        1173.0,
+                        268.0
+                    ],
+                    [
+                        36.0,
+                        268.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8868691325187683,
+                "coordinate": [
+                    36,
+                    291,
+                    1153,
+                    337
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        36.0,
+                        291.0
+                    ],
+                    [
+                        1153.0,
+                        291.0
+                    ],
+                    [
+                        1153.0,
+                        337.0
+                    ],
+                    [
+                        36.0,
+                        337.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8853165507316589,
+                "coordinate": [
+                    37,
+                    360,
+                    1188,
+                    406
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        37.0,
+                        360.0
+                    ],
+                    [
+                        1188.0,
+                        360.0
+                    ],
+                    [
+                        1188.0,
+                        406.0
+                    ],
+                    [
+                        37.0,
+                        406.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8683143854141235,
+                "coordinate": [
+                    471,
+                    451,
+                    761,
+                    496
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        471.0,
+                        451.0
+                    ],
+                    [
+                        761.0,
+                        451.0
+                    ],
+                    [
+                        761.0,
+                        496.0
+                    ],
+                    [
+                        471.0,
+                        496.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.7500457167625427,
+                "coordinate": [
+                    549,
+                    516,
+                    684,
+                    586
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        549.0,
+                        516.0
+                    ],
+                    [
+                        684.0,
+                        516.0
+                    ],
+                    [
+                        684.0,
+                        586.0
+                    ],
+                    [
+                        549.0,
+                        586.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8575050234794617,
+                "coordinate": [
+                    40,
+                    1541,
+                    687,
+                    1569
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        40.0,
+                        1541.0
+                    ],
+                    [
+                        687.0,
+                        1541.0
+                    ],
+                    [
+                        687.0,
+                        1569.0
+                    ],
+                    [
+                        40.0,
+                        1569.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.5595963001251221,
+                "coordinate": [
+                    1129,
+                    1542,
+                    1195,
+                    1567
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1129.0,
+                        1542.0
+                    ],
+                    [
+                        1194.0,
+                        1542.0
+                    ],
+                    [
+                        1194.0,
+                        1566.0
+                    ],
+                    [
+                        1129.0,
+                        1566.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

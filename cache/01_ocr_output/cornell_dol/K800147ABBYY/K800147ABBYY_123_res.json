@@ -1,0 +1,827 @@
+{
+    "input_path": "cache/cornell_dol/K800147ABBYY.pdf",
+    "page_index": 123,
+    "page_count": 125,
+    "width": 1229,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header_image",
+            "block_content": "",
+            "block_bbox": [
+                531,
+                38,
+                684,
+                138
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    531.0,
+                    38.0
+                ],
+                [
+                    684.0,
+                    38.0
+                ],
+                [
+                    684.0,
+                    138.0
+                ],
+                [
+                    531.0,
+                    138.0
+                ]
+            ]
+        },
+        {
+            "block_label": "doc_title",
+            "block_content": "COMMONWEALTH OF PENNSYLVAN A\nEXECUTIVE OFFICES\nHARRISBURG",
+            "block_bbox": [
+                418,
+                146,
+                801,
+                221
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    418.0,
+                    146.0
+                ],
+                [
+                    801.0,
+                    146.0
+                ],
+                [
+                    801.0,
+                    221.0
+                ],
+                [
+                    418.0,
+                    221.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "NANCY DERING MARTIN\nDEPUTY SECRETARY FOR\nHUMAN RESOURCES AND MANAGEMENT",
+            "block_bbox": [
+                96,
+                246,
+                403,
+                303
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    96.0,
+                    246.0
+                ],
+                [
+                    403.0,
+                    246.0
+                ],
+                [
+                    403.0,
+                    303.0
+                ],
+                [
+                    96.0,
+                    303.0
+                ]
+            ]
+        },
+        {
+            "block_label": "doc_title",
+            "block_content": "May 26, 2004",
+            "block_bbox": [
+                574,
+                236,
+                716,
+                266
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    574.0,
+                    236.0
+                ],
+                [
+                    716.0,
+                    236.0
+                ],
+                [
+                    716.0,
+                    266.0
+                ],
+                [
+                    574.0,
+                    266.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Mr. Thomas DeBruin, President\nDistrict 1199p, SEIU\n1500 N. 2nd Street\n2nd Floor\nHarrisburg, PA 17102",
+            "block_bbox": [
+                145,
+                320,
+                459,
+                463
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    145.0,
+                    320.0
+                ],
+                [
+                    459.0,
+                    320.0
+                ],
+                [
+                    459.0,
+                    463.0
+                ],
+                [
+                    145.0,
+                    463.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "RE: Procedures to be followed if removing an employee from a FRN trial period",
+            "block_bbox": [
+                576,
+                481,
+                1052,
+                543
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    576.0,
+                    481.0
+                ],
+                [
+                    1052.0,
+                    481.0
+                ],
+                [
+                    1052.0,
+                    543.0
+                ],
+                [
+                    576.0,
+                    543.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Dear Mr. DeBruin:",
+            "block_bbox": [
+                147,
+                569,
+                335,
+                596
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    147.0,
+                    569.0
+                ],
+                [
+                    335.0,
+                    569.0
+                ],
+                [
+                    335.0,
+                    596.0
+                ],
+                [
+                    147.0,
+                    596.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The parties have met and discussed over a procedure to be followed when a determination is made to terminate the reassignment of a Registered Nurse to a Forensic Registered Nurse during the trial period described in Article 25, Section 8 of the collective bargaining agreement. The parties have agreed as follows:",
+            "block_bbox": [
+                144,
+                620,
+                1087,
+                739
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    144.0,
+                    620.0
+                ],
+                [
+                    1087.0,
+                    620.0
+                ],
+                [
+                    1087.0,
+                    739.0
+                ],
+                [
+                    144.0,
+                    739.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. The assessment that a return is indicated and the actual return may be made at any point during the six month period when a determination is made that it is warranted based on the employee's performance. The decision to return an employee will not be made for arbitrary or capricious reasons.",
+            "block_bbox": [
+                145,
+                759,
+                1088,
+                878
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    145.0,
+                    759.0
+                ],
+                [
+                    1088.0,
+                    759.0
+                ],
+                [
+                    1088.0,
+                    878.0
+                ],
+                [
+                    145.0,
+                    878.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. The employee will be given notice of the assessment and when signing to denote the receipt, will indicate on the assessment document in writing a request for Bureau of Hospital Operations review.",
+            "block_bbox": [
+                145,
+                898,
+                1088,
+                990
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    144.37582397460938,
+                    905.004638671875
+                ],
+                [
+                    1087.0,
+                    898.0
+                ],
+                [
+                    1087.6241455078125,
+                    981.995361328125
+                ],
+                [
+                    144.99996948242188,
+                    989.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3. The employee and /or the union will then, upon request, be afforded access to information upon which the assessment is based.",
+            "block_bbox": [
+                148,
+                1010,
+                1088,
+                1073
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    148.0,
+                    1010.0
+                ],
+                [
+                    1088.0,
+                    1010.0
+                ],
+                [
+                    1088.0,
+                    1073.0
+                ],
+                [
+                    148.0,
+                    1073.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "4. Within 10 days of the receipt of the information, the employee and/or the union can request in writing to the Director of the Bureau of Hospital Operations or designee a review of the information on which the assessment to reassign the employee was made. The union and/or the employee shall state the reason they believe the reassignment was improper and can attach any documentation they have to support their claim.",
+            "block_bbox": [
+                147,
+                1092,
+                1091,
+                1241
+            ],
+            "block_id": 11,
+            "block_order": 11,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    147.0,
+                    1092.0
+                ],
+                [
+                    1091.0,
+                    1092.0
+                ],
+                [
+                    1091.0,
+                    1241.0
+                ],
+                [
+                    147.0,
+                    1241.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "5. The employee and/or the union may request a meeting to discuss the issue with the Director of the Bureau of Hospital Operations or designee.",
+            "block_bbox": [
+                149,
+                1260,
+                1091,
+                1324
+            ],
+            "block_id": 12,
+            "block_order": 12,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    148.53250122070312,
+                    1268.00390625
+                ],
+                [
+                    1090.0,
+                    1260.0
+                ],
+                [
+                    1090.467529296875,
+                    1314.99609375
+                ],
+                [
+                    149.00003051757812,
+                    1323.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.8306570649147034,
+                "coordinate": [
+                    531,
+                    38,
+                    684,
+                    138
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        531.0,
+                        38.0
+                    ],
+                    [
+                        684.0,
+                        38.0
+                    ],
+                    [
+                        684.0,
+                        138.0
+                    ],
+                    [
+                        531.0,
+                        138.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.7775030732154846,
+                "coordinate": [
+                    418,
+                    146,
+                    801,
+                    221
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        418.0,
+                        146.0
+                    ],
+                    [
+                        801.0,
+                        146.0
+                    ],
+                    [
+                        801.0,
+                        221.0
+                    ],
+                    [
+                        418.0,
+                        221.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8659183979034424,
+                "coordinate": [
+                    96,
+                    246,
+                    403,
+                    303
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        96.0,
+                        246.0
+                    ],
+                    [
+                        403.0,
+                        246.0
+                    ],
+                    [
+                        403.0,
+                        303.0
+                    ],
+                    [
+                        96.0,
+                        303.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.5384209156036377,
+                "coordinate": [
+                    574,
+                    236,
+                    716,
+                    266
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        574.0,
+                        236.0
+                    ],
+                    [
+                        716.0,
+                        236.0
+                    ],
+                    [
+                        716.0,
+                        266.0
+                    ],
+                    [
+                        574.0,
+                        266.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9222774505615234,
+                "coordinate": [
+                    145,
+                    320,
+                    459,
+                    463
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        145.0,
+                        320.0
+                    ],
+                    [
+                        459.0,
+                        320.0
+                    ],
+                    [
+                        459.0,
+                        463.0
+                    ],
+                    [
+                        145.0,
+                        463.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8831272721290588,
+                "coordinate": [
+                    576,
+                    481,
+                    1052,
+                    543
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        576.0,
+                        481.0
+                    ],
+                    [
+                        1052.0,
+                        481.0
+                    ],
+                    [
+                        1052.0,
+                        543.0
+                    ],
+                    [
+                        576.0,
+                        543.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8273594975471497,
+                "coordinate": [
+                    147,
+                    569,
+                    335,
+                    596
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        147.0,
+                        569.0
+                    ],
+                    [
+                        335.0,
+                        569.0
+                    ],
+                    [
+                        335.0,
+                        596.0
+                    ],
+                    [
+                        147.0,
+                        596.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.940883219242096,
+                "coordinate": [
+                    144,
+                    620,
+                    1087,
+                    739
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        144.0,
+                        620.0
+                    ],
+                    [
+                        1087.0,
+                        620.0
+                    ],
+                    [
+                        1087.0,
+                        739.0
+                    ],
+                    [
+                        144.0,
+                        739.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9380161166191101,
+                "coordinate": [
+                    145,
+                    759,
+                    1088,
+                    878
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        145.0,
+                        759.0
+                    ],
+                    [
+                        1088.0,
+                        759.0
+                    ],
+                    [
+                        1088.0,
+                        878.0
+                    ],
+                    [
+                        145.0,
+                        878.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.932813823223114,
+                "coordinate": [
+                    145,
+                    898,
+                    1088,
+                    990
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        144.37582397460938,
+                        905.004638671875
+                    ],
+                    [
+                        1087.0,
+                        898.0
+                    ],
+                    [
+                        1087.6241455078125,
+                        981.995361328125
+                    ],
+                    [
+                        144.99996948242188,
+                        989.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.913929283618927,
+                "coordinate": [
+                    148,
+                    1010,
+                    1088,
+                    1073
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        148.0,
+                        1010.0
+                    ],
+                    [
+                        1088.0,
+                        1010.0
+                    ],
+                    [
+                        1088.0,
+                        1073.0
+                    ],
+                    [
+                        148.0,
+                        1073.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9584329724311829,
+                "coordinate": [
+                    147,
+                    1092,
+                    1091,
+                    1241
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        147.0,
+                        1092.0
+                    ],
+                    [
+                        1091.0,
+                        1092.0
+                    ],
+                    [
+                        1091.0,
+                        1241.0
+                    ],
+                    [
+                        147.0,
+                        1241.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9135411381721497,
+                "coordinate": [
+                    149,
+                    1260,
+                    1091,
+                    1324
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        148.53250122070312,
+                        1268.00390625
+                    ],
+                    [
+                        1090.0,
+                        1260.0
+                    ],
+                    [
+                        1090.467529296875,
+                        1314.99609375
+                    ],
+                    [
+                        149.00003051757812,
+                        1323.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

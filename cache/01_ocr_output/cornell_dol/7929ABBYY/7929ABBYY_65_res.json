@@ -1,0 +1,522 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 65,
+    "page_count": 189,
+    "width": 1228,
+    "height": 1586,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "ARTICLE XXXI - CONFIDENTIALITY OF MEDICAL RECORDS",
+            "block_bbox": [
+                153,
+                138,
+                853,
+                167
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    153.0,
+                    138.0
+                ],
+                [
+                    853.0,
+                    138.0
+                ],
+                [
+                    853.0,
+                    167.0
+                ],
+                [
+                    153.0,
+                    167.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "310. Indiscriminate or unauthorized review, use or disclosure of personal information, medical or otherwise, regarding any patient or employee is expressly prohibited. Except when required in the regular course of business, the discussion, use, transmission or narration, in any form, of any patient or employee information which is obtained in the regular course of business is prohibited.",
+            "block_bbox": [
+                151,
+                194,
+                1091,
+                365
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    151.0,
+                    194.0
+                ],
+                [
+                    1091.0,
+                    194.0
+                ],
+                [
+                    1091.0,
+                    365.0
+                ],
+                [
+                    151.0,
+                    365.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE XXXII - JOINT CONFERENCE ON SERVICE RELATED ISSUES",
+            "block_bbox": [
+                152,
+                415,
+                978,
+                445
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    152.0,
+                    415.0
+                ],
+                [
+                    978.0,
+                    415.0
+                ],
+                [
+                    978.0,
+                    445.0
+                ],
+                [
+                    152.0,
+                    445.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "311. On a mutually agreed upon date in each year of this Agreement, the Employer and the Union will sponsor a region-wide joint conference on service related issues. The purpose of this conference will be to provide the Employer and employees with the opportunity to exchange views on enhancing the professionalism of employees in classifications covered by this Agreement and the contribution of all employees to the provision of service to Health Plan members. Execution of this conference shall be subject to the following:",
+            "block_bbox": [
+                150,
+                471,
+                1088,
+                669
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    150.0,
+                    471.0
+                ],
+                [
+                    1088.0,
+                    471.0
+                ],
+                [
+                    1088.0,
+                    669.0
+                ],
+                [
+                    150.0,
+                    669.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A. Attendees at the conference shall consist of one (1) employee selected by the Union and one (1) employee selected by the Employer for each medical center. Each party shall designate a chairperson from among the selected attendees. The Committee representatives will report to and involve the medical offices (clinics) in their area. Chairpersons shall have the authority to work out coordination of representatives and if mutually agreed expand the number as necessary. Two (2) Labor Relations representatives of the Employer and two (2) representatives of the Union may observe the activities of the conference but shall be excluded from participation. Attendees shall be paid for time spent at the conference at their regular hourly rate of pay.",
+            "block_bbox": [
+                237,
+                691,
+                1092,
+                999
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    237.0,
+                    691.0
+                ],
+                [
+                    1092.0,
+                    691.0
+                ],
+                [
+                    1092.0,
+                    999.0
+                ],
+                [
+                    237.0,
+                    999.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "B. The conference may cover a period of up to eight (8) hours on a mutually agreed date each year. Each party shall have one-half (1/2) of the scheduled conference time to present issues and to discuss them, unless otherwise mutually agreed.",
+            "block_bbox": [
+                240,
+                1021,
+                1087,
+                1136
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    240.0,
+                    1021.0
+                ],
+                [
+                    1087.0,
+                    1021.0
+                ],
+                [
+                    1087.0,
+                    1136.0
+                ],
+                [
+                    240.0,
+                    1136.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "C. No later than thirty (30) days prior to the conference the two (2) chairpersons and two (2) committee members from each side referenced in A. above shall meet to determine the conference format and the most efficient ways of maximizing available conference time. They will also exchange agendas of items each party wishes to discuss at the conference. The chairpersons shall moderate the conference. Attendees shall be paid at their regular rate for time spent at the joint agenda planning session.",
+            "block_bbox": [
+                241,
+                1159,
+                1089,
+                1386
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    241.0,
+                    1159.0
+                ],
+                [
+                    1089.0,
+                    1159.0
+                ],
+                [
+                    1089.0,
+                    1386.0
+                ],
+                [
+                    241.0,
+                    1386.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "65",
+            "block_bbox": [
+                605,
+                1456,
+                635,
+                1479
+            ],
+            "block_id": 7,
+            "block_order": null,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    605.0,
+                    1456.0
+                ],
+                [
+                    634.0,
+                    1456.0
+                ],
+                [
+                    634.0,
+                    1478.0
+                ],
+                [
+                    605.0,
+                    1478.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7003257870674133,
+                "coordinate": [
+                    153,
+                    138,
+                    853,
+                    167
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        153.0,
+                        138.0
+                    ],
+                    [
+                        853.0,
+                        138.0
+                    ],
+                    [
+                        853.0,
+                        167.0
+                    ],
+                    [
+                        153.0,
+                        167.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9519914388656616,
+                "coordinate": [
+                    151,
+                    194,
+                    1091,
+                    365
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        151.0,
+                        194.0
+                    ],
+                    [
+                        1091.0,
+                        194.0
+                    ],
+                    [
+                        1091.0,
+                        365.0
+                    ],
+                    [
+                        151.0,
+                        365.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.850449800491333,
+                "coordinate": [
+                    152,
+                    415,
+                    978,
+                    445
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        152.0,
+                        415.0
+                    ],
+                    [
+                        978.0,
+                        415.0
+                    ],
+                    [
+                        978.0,
+                        445.0
+                    ],
+                    [
+                        152.0,
+                        445.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9551502466201782,
+                "coordinate": [
+                    150,
+                    471,
+                    1088,
+                    669
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        150.0,
+                        471.0
+                    ],
+                    [
+                        1088.0,
+                        471.0
+                    ],
+                    [
+                        1088.0,
+                        669.0
+                    ],
+                    [
+                        150.0,
+                        669.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9559218287467957,
+                "coordinate": [
+                    237,
+                    691,
+                    1092,
+                    999
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        237.0,
+                        691.0
+                    ],
+                    [
+                        1092.0,
+                        691.0
+                    ],
+                    [
+                        1092.0,
+                        999.0
+                    ],
+                    [
+                        237.0,
+                        999.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9378858804702759,
+                "coordinate": [
+                    240,
+                    1021,
+                    1087,
+                    1136
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        240.0,
+                        1021.0
+                    ],
+                    [
+                        1087.0,
+                        1021.0
+                    ],
+                    [
+                        1087.0,
+                        1136.0
+                    ],
+                    [
+                        240.0,
+                        1136.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9621914029121399,
+                "coordinate": [
+                    241,
+                    1159,
+                    1089,
+                    1386
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        241.0,
+                        1159.0
+                    ],
+                    [
+                        1089.0,
+                        1159.0
+                    ],
+                    [
+                        1089.0,
+                        1386.0
+                    ],
+                    [
+                        241.0,
+                        1386.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7524219751358032,
+                "coordinate": [
+                    605,
+                    1456,
+                    635,
+                    1479
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        605.0,
+                        1456.0
+                    ],
+                    [
+                        634.0,
+                        1456.0
+                    ],
+                    [
+                        634.0,
+                        1478.0
+                    ],
+                    [
+                        605.0,
+                        1478.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

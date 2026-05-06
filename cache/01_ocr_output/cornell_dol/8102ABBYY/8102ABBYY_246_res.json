@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 246,
+    "page_count": 439,
+    "width": 1233,
+    "height": 1581,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Local Memorandum",
+            "block_bbox": [
+                323,
+                71,
+                464,
+                90
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    323.0,
+                    71.0
+                ],
+                [
+                    463.0,
+                    71.0
+                ],
+                [
+                    463.0,
+                    89.0
+                ],
+                [
+                    323.0,
+                    89.0
+                ]
+            ]
+        },
+        {
+            "block_label": "doc_title",
+            "block_content": "INSTALLATION JOB SECURITY\nMEMORANDUM OF UNDERSTANDING",
+            "block_bbox": [
+                460,
+                132,
+                741,
+                183
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    460.0,
+                    132.0
+                ],
+                [
+                    741.0,
+                    132.0
+                ],
+                [
+                    741.0,
+                    183.0
+                ],
+                [
+                    460.0,
+                    183.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "In recognition of the competitive environment that the Company's Installation business faces and the Union's need to provide improved job security for its members, the Company and the Union agree to implement a new Article 26 - Communication Services Installer and this Installation Job Security MOU in Installation Contract CWA-24",
+            "block_bbox": [
+                321,
+                208,
+                878,
+                296
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    208.0
+                ],
+                [
+                    878.0,
+                    208.0
+                ],
+                [
+                    878.0,
+                    296.0
+                ],
+                [
+                    321.0,
+                    296.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "1. Protection Against Layoff:",
+            "block_bbox": [
+                357,
+                311,
+                571,
+                331
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    357.0,
+                    311.0
+                ],
+                [
+                    570.0,
+                    311.0
+                ],
+                [
+                    570.0,
+                    330.0
+                ],
+                [
+                    357.0,
+                    330.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "ACST, CST and SCST Installers who are on the active roll as of the date of signing of Installation contract CWA-24 and ACST, CST and SCST Installers recalled or hired as a result of the one-time adjustment described in paragraph 4, shall not be involuntarily laid off for the duration of Installation contract CWA-24.",
+            "block_bbox": [
+                389,
+                347,
+                877,
+                437
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    389.0,
+                    347.0
+                ],
+                [
+                    877.0,
+                    347.0
+                ],
+                [
+                    877.0,
+                    437.0
+                ],
+                [
+                    389.0,
+                    437.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "2.  $ \\underline{\\text{Protection against Permanent Transfer:}} $",
+            "block_bbox": [
+                355,
+                452,
+                668,
+                472
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    355.0,
+                    452.0
+                ],
+                [
+                    667.0,
+                    452.0
+                ],
+                [
+                    667.0,
+                    471.0
+                ],
+                [
+                    355.0,
+                    471.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a) Permanent Transfers for Surplus: The Permanent Transfer Necessitated by Surplus Conditions memorandum of understanding shall be removed from Installation Contract CWA-24.",
+            "block_bbox": [
+                389,
+                488,
+                877,
+                559
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    389.0,
+                    488.0
+                ],
+                [
+                    877.0,
+                    488.0
+                ],
+                [
+                    877.0,
+                    559.0
+                ],
+                [
+                    389.0,
+                    559.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b) Permanent Transfer for Skill: The Company may only utilize Permanent Transfers for Skills when there is a requirement at a destination location in a specific skill category created by a long-range increase in the workload at such location which, because of skill requirements, cannot be met by hiring new employees. It is intended that the number of Permanent Transfers for Skill will be kept to a minimum.",
+            "block_bbox": [
+                388,
+                576,
+                877,
+                699
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    388.0,
+                    576.0
+                ],
+                [
+                    877.0,
+                    576.0
+                ],
+                [
+                    877.0,
+                    699.0
+                ],
+                [
+                    388.0,
+                    699.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "3. Voluntary Severance Offer:",
+            "block_bbox": [
+                350,
+                715,
+                566,
+                734
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    350.0,
+                    715.0
+                ],
+                [
+                    565.0,
+                    715.0
+                ],
+                [
+                    565.0,
+                    733.0
+                ],
+                [
+                    350.0,
+                    733.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Within ninety (90) days of ratification of Installation Contract CWA-24 the Company will make a voluntary severance offer to all Installers on roll as of the effective date of this Agreement. There will be no force adjustments, including permanent transfers, made during this period.",
+            "block_bbox": [
+                380,
+                751,
+                875,
+                824
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    380.0,
+                    751.0
+                ],
+                [
+                    875.0,
+                    751.0
+                ],
+                [
+                    875.0,
+                    824.0
+                ],
+                [
+                    380.0,
+                    824.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a) The amount of the voluntary severance offer shall equal the layoff allowance to which the employee would be entitled if laid off or seventy-five thousand dollars ($75,000), whichever is less.",
+            "block_bbox": [
+                409,
+                838,
+                874,
+                908
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    409.0,
+                    838.0
+                ],
+                [
+                    874.0,
+                    838.0
+                ],
+                [
+                    874.0,
+                    908.0
+                ],
+                [
+                    409.0,
+                    908.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "23B",
+            "block_bbox": [
+                322,
+                936,
+                353,
+                953
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    936.0
+                ],
+                [
+                    352.0,
+                    936.0
+                ],
+                [
+                    352.0,
+                    952.0
+                ],
+                [
+                    322.0,
+                    952.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8262391090393066,
+                "coordinate": [
+                    323,
+                    71,
+                    464,
+                    90
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        323.0,
+                        71.0
+                    ],
+                    [
+                        463.0,
+                        71.0
+                    ],
+                    [
+                        463.0,
+                        89.0
+                    ],
+                    [
+                        323.0,
+                        89.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.6827225089073181,
+                "coordinate": [
+                    460,
+                    132,
+                    741,
+                    183
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        460.0,
+                        132.0
+                    ],
+                    [
+                        741.0,
+                        132.0
+                    ],
+                    [
+                        741.0,
+                        183.0
+                    ],
+                    [
+                        460.0,
+                        183.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9360085725784302,
+                "coordinate": [
+                    321,
+                    208,
+                    878,
+                    296
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        321.0,
+                        208.0
+                    ],
+                    [
+                        878.0,
+                        208.0
+                    ],
+                    [
+                        878.0,
+                        296.0
+                    ],
+                    [
+                        321.0,
+                        296.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7364947199821472,
+                "coordinate": [
+                    357,
+                    311,
+                    571,
+                    331
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        357.0,
+                        311.0
+                    ],
+                    [
+                        570.0,
+                        311.0
+                    ],
+                    [
+                        570.0,
+                        330.0
+                    ],
+                    [
+                        357.0,
+                        330.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9285796284675598,
+                "coordinate": [
+                    389,
+                    347,
+                    877,
+                    437
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        389.0,
+                        347.0
+                    ],
+                    [
+                        877.0,
+                        347.0
+                    ],
+                    [
+                        877.0,
+                        437.0
+                    ],
+                    [
+                        389.0,
+                        437.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7725831270217896,
+                "coordinate": [
+                    355,
+                    452,
+                    668,
+                    472
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        355.0,
+                        452.0
+                    ],
+                    [
+                        667.0,
+                        452.0
+                    ],
+                    [
+                        667.0,
+                        471.0
+                    ],
+                    [
+                        355.0,
+                        471.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9247292280197144,
+                "coordinate": [
+                    389,
+                    488,
+                    877,
+                    559
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        389.0,
+                        488.0
+                    ],
+                    [
+                        877.0,
+                        488.0
+                    ],
+                    [
+                        877.0,
+                        559.0
+                    ],
+                    [
+                        389.0,
+                        559.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9392971992492676,
+                "coordinate": [
+                    388,
+                    576,
+                    877,
+                    699
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        388.0,
+                        576.0
+                    ],
+                    [
+                        877.0,
+                        576.0
+                    ],
+                    [
+                        877.0,
+                        699.0
+                    ],
+                    [
+                        388.0,
+                        699.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8331791758537292,
+                "coordinate": [
+                    350,
+                    715,
+                    566,
+                    734
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        350.0,
+                        715.0
+                    ],
+                    [
+                        565.0,
+                        715.0
+                    ],
+                    [
+                        565.0,
+                        733.0
+                    ],
+                    [
+                        350.0,
+                        733.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9322981238365173,
+                "coordinate": [
+                    380,
+                    751,
+                    875,
+                    824
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        380.0,
+                        751.0
+                    ],
+                    [
+                        875.0,
+                        751.0
+                    ],
+                    [
+                        875.0,
+                        824.0
+                    ],
+                    [
+                        380.0,
+                        824.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9282801747322083,
+                "coordinate": [
+                    409,
+                    838,
+                    874,
+                    908
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        409.0,
+                        838.0
+                    ],
+                    [
+                        874.0,
+                        838.0
+                    ],
+                    [
+                        874.0,
+                        908.0
+                    ],
+                    [
+                        409.0,
+                        908.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7342065572738647,
+                "coordinate": [
+                    322,
+                    936,
+                    353,
+                    953
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        322.0,
+                        936.0
+                    ],
+                    [
+                        352.0,
+                        936.0
+                    ],
+                    [
+                        352.0,
+                        952.0
+                    ],
+                    [
+                        322.0,
+                        952.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

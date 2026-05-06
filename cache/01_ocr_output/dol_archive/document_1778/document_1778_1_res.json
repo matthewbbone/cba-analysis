@@ -1,0 +1,156 @@
+{
+    "input_path": "cache/dol_archive/document_1778.pdf",
+    "page_index": 1,
+    "page_count": 32,
+    "width": 559,
+    "height": 1224,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "INDEX",
+            "block_bbox": [
+                258,
+                35,
+                314,
+                58
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    257.9999694824219,
+                    34.99999237060547
+                ],
+                [
+                    312.9999694824219,
+                    34.99999237060547
+                ],
+                [
+                    312.9999694824219,
+                    56.99999237060547
+                ],
+                [
+                    257.9999694824219,
+                    56.99999237060547
+                ]
+            ]
+        },
+        {
+            "block_label": "content",
+            "block_content": "INDEX\nARTICLE PAGE\nAccess to Stores 73\nAgreement 1\nBulletin Board 38\nCheck Off 3\nConscription 9\nContinuance of Employment 4\nDeath in Family 35\nDischarge 14\nEmployer's Prerogatives 5\nEmployment of Minors 10\nGrievance Procedures and Arbitration 18\nHolidays 23\nHours and Length of Work Week 19\nIncreases in Federal or State Minimum Wage 42\nIndividual Agreement 11\nIndustry Experience 20\nInjury on the Job 33\nJury Duty 34\nLaundry and Equipment 12\nLeave of Absence 32\nLegal Service Plan 29\nMinimum Call-In 24\nNo Strikes/No Lockouts 16\nOvertime 22\nPension Plan 28\nPrevious Benefits 40\nProvisions Applicable to All Funds 30\nReclassification 21\nRetroactivity 17\nSavings Clause 39\nSchedule A Wages and Wage Increases 20\nScholarship Fund 43\nSeniority Rights 15\nShop Stewards 36\nSick Leave 31\nSuccessors and Assigns 41\nSunday Work 25\nTerm of Agreement 44\nTrial Period 13\nUnion Recognition 1\nUnion Shop 2\nUnion Store Card 8\nVacations 26\nWages 37\nWelfare Plan 27\nWork Schedules 6",
+            "block_bbox": [
+                30,
+                43,
+                524,
+                1190
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    30.0,
+                    43.0
+                ],
+                [
+                    524.0,
+                    43.0
+                ],
+                [
+                    524.0,
+                    1190.0
+                ],
+                [
+                    30.0,
+                    1190.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6367312669754028,
+                "coordinate": [
+                    258,
+                    35,
+                    314,
+                    58
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        257.9999694824219,
+                        34.99999237060547
+                    ],
+                    [
+                        312.9999694824219,
+                        34.99999237060547
+                    ],
+                    [
+                        312.9999694824219,
+                        56.99999237060547
+                    ],
+                    [
+                        257.9999694824219,
+                        56.99999237060547
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.9445276856422424,
+                "coordinate": [
+                    30,
+                    43,
+                    524,
+                    1190
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        30.0,
+                        43.0
+                    ],
+                    [
+                        524.0,
+                        43.0
+                    ],
+                    [
+                        524.0,
+                        1190.0
+                    ],
+                    [
+                        30.0,
+                        1190.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

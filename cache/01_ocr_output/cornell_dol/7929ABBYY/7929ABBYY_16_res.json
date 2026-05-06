@@ -1,0 +1,888 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 16,
+    "page_count": 189,
+    "width": 1223,
+    "height": 1572,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "A. Employees assigned to a permanent work area who commence a shift and are then reassigned to another \"service\" or \"multiple service\" area as traditionally identified at the location involved and its environs;",
+            "block_bbox": [
+                241,
+                162,
+                1087,
+                251
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    241.0,
+                    162.0
+                ],
+                [
+                    1087.0,
+                    162.0
+                ],
+                [
+                    1087.0,
+                    251.0
+                ],
+                [
+                    241.0,
+                    251.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "B. Employees whose primary jobs are as unassigned relief employees;",
+            "block_bbox": [
+                244,
+                273,
+                1047,
+                305
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    244.0,
+                    273.0
+                ],
+                [
+                    1047.0,
+                    273.0
+                ],
+                [
+                    1047.0,
+                    305.0
+                ],
+                [
+                    244.0,
+                    305.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "C. Clinic employees whose primary jobs are to relieve other personnel within a shift on a pre-arranged basis;",
+            "block_bbox": [
+                243,
+                327,
+                1037,
+                388
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    243.0,
+                    327.0
+                ],
+                [
+                    1037.0,
+                    327.0
+                ],
+                [
+                    1037.0,
+                    388.0
+                ],
+                [
+                    243.0,
+                    388.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "D. Employees temporarily reassigned from one facility and its environs to another.",
+            "block_bbox": [
+                242,
+                411,
+                1084,
+                468
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    242.0,
+                    411.0
+                ],
+                [
+                    1084.0,
+                    411.0
+                ],
+                [
+                    1084.0,
+                    468.0
+                ],
+                [
+                    242.0,
+                    468.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "67. Casual and Temporary employees shall qualify for the premium only if they \"satisfy \" the \"conditions specified in (A) above. Professional and Technical employees shall qualify for the premium only if they satisfy the condition specified in (D) above.",
+            "block_bbox": [
+                143,
+                493,
+                1086,
+                608
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    143.0,
+                    493.0
+                ],
+                [
+                    1086.0,
+                    493.0
+                ],
+                [
+                    1086.0,
+                    608.0
+                ],
+                [
+                    143.0,
+                    608.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "68. The premium shall not apply to:",
+            "block_bbox": [
+                144,
+                630,
+                580,
+                662
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    144.0,
+                    630.0
+                ],
+                [
+                    580.0,
+                    630.0
+                ],
+                [
+                    580.0,
+                    662.0
+                ],
+                [
+                    144.0,
+                    662.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "'A. 'Employees who normally move through the 'facility or \"function\" in multiple services or departments during the usual performance of their duties (e.g., those in the Housekeeping, Dietary, Storeroom and Chartroom Departments, Medical Secretaries and Transcriptionists, etc.);",
+            "block_bbox": [
+                225,
+                685,
+                1083,
+                826
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    225.0,
+                    685.0
+                ],
+                [
+                    1083.0,
+                    685.0
+                ],
+                [
+                    1083.0,
+                    826.0
+                ],
+                [
+                    225.0,
+                    826.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "B. Employees who receive additional pay based on relief work in a higher classification;",
+            "block_bbox": [
+                231,
+                844,
+                1081,
+                903
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    231.0,
+                    844.0
+                ],
+                [
+                    1081.0,
+                    844.0
+                ],
+                [
+                    1081.0,
+                    903.0
+                ],
+                [
+                    231.0,
+                    903.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "C. Employees whose reassignment becomes permanent;",
+            "block_bbox": [
+                231,
+                922,
+                895,
+                953
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    231.0,
+                    922.0
+                ],
+                [
+                    895.0,
+                    922.0
+                ],
+                [
+                    895.0,
+                    953.0
+                ],
+                [
+                    231.0,
+                    953.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "D. Employees who are transferred from any area to another for training purposes;",
+            "block_bbox": [
+                231,
+                970,
+                1081,
+                1032
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    231.0,
+                    970.0
+                ],
+                [
+                    1081.0,
+                    970.0
+                ],
+                [
+                    1081.0,
+                    1032.0
+                ],
+                [
+                    231.0,
+                    1032.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "E. Employees who relieve other employees in a lower classification and whose rate is not reduced during the time worked on a relief basis.",
+            "block_bbox": [
+                231,
+                1048,
+                1082,
+                1107
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    231.0,
+                    1048.0
+                ],
+                [
+                    1082.0,
+                    1048.0
+                ],
+                [
+                    1082.0,
+                    1107.0
+                ],
+                [
+                    231.0,
+                    1107.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "69. Solely for this paragraph the parties agree that if other situations arise pertaining to float assignments it is the obligation of the Union to cite such situations to the Employer and the parties shall resolve the matter consistent with the above principles without resorting to the grievance procedure. Any additional float differentials agreed to by the parties to be paid per this paragraph shall become effective at the beginning of the first payroll period following receipt of notification by the Union that a new situation exists which is consistent with the principles herein stated which should entitle an employee to float differential pay.",
+            "block_bbox": [
+                140,
+                1126,
+                1081,
+                1380
+            ],
+            "block_id": 11,
+            "block_order": 12,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    140.0,
+                    1126.0
+                ],
+                [
+                    1081.0,
+                    1126.0
+                ],
+                [
+                    1081.0,
+                    1380.0
+                ],
+                [
+                    140.0,
+                    1380.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "70. In the application of this Section, Maternity Service shall include delivery, labor, nurseries and postpartum areas; Surgery Suite shall include operating,",
+            "block_bbox": [
+                140,
+                1396,
+                1080,
+                1456
+            ],
+            "block_id": 12,
+            "block_order": 13,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    140.0,
+                    1396.0
+                ],
+                [
+                    1080.0,
+                    1396.0
+                ],
+                [
+                    1080.0,
+                    1456.0
+                ],
+                [
+                    140.0,
+                    1456.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "16",
+            "block_bbox": [
+                595,
+                1472,
+                624,
+                1495
+            ],
+            "block_id": 13,
+            "block_order": null,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    595.0,
+                    1472.0
+                ],
+                [
+                    623.0,
+                    1472.0
+                ],
+                [
+                    623.0,
+                    1494.0
+                ],
+                [
+                    595.0,
+                    1494.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9305798411369324,
+                "coordinate": [
+                    241,
+                    162,
+                    1087,
+                    251
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        241.0,
+                        162.0
+                    ],
+                    [
+                        1087.0,
+                        162.0
+                    ],
+                    [
+                        1087.0,
+                        251.0
+                    ],
+                    [
+                        241.0,
+                        251.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8568891286849976,
+                "coordinate": [
+                    244,
+                    273,
+                    1047,
+                    305
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        244.0,
+                        273.0
+                    ],
+                    [
+                        1047.0,
+                        273.0
+                    ],
+                    [
+                        1047.0,
+                        305.0
+                    ],
+                    [
+                        244.0,
+                        305.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9026733040809631,
+                "coordinate": [
+                    243,
+                    327,
+                    1037,
+                    388
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        243.0,
+                        327.0
+                    ],
+                    [
+                        1037.0,
+                        327.0
+                    ],
+                    [
+                        1037.0,
+                        388.0
+                    ],
+                    [
+                        243.0,
+                        388.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8946048021316528,
+                "coordinate": [
+                    242,
+                    411,
+                    1084,
+                    468
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        242.0,
+                        411.0
+                    ],
+                    [
+                        1084.0,
+                        411.0
+                    ],
+                    [
+                        1084.0,
+                        468.0
+                    ],
+                    [
+                        242.0,
+                        468.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9453305602073669,
+                "coordinate": [
+                    143,
+                    493,
+                    1086,
+                    608
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        143.0,
+                        493.0
+                    ],
+                    [
+                        1086.0,
+                        493.0
+                    ],
+                    [
+                        1086.0,
+                        608.0
+                    ],
+                    [
+                        143.0,
+                        608.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8498526811599731,
+                "coordinate": [
+                    144,
+                    630,
+                    580,
+                    662
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        144.0,
+                        630.0
+                    ],
+                    [
+                        580.0,
+                        630.0
+                    ],
+                    [
+                        580.0,
+                        662.0
+                    ],
+                    [
+                        144.0,
+                        662.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.950310468673706,
+                "coordinate": [
+                    225,
+                    685,
+                    1083,
+                    826
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        225.0,
+                        685.0
+                    ],
+                    [
+                        1083.0,
+                        685.0
+                    ],
+                    [
+                        1083.0,
+                        826.0
+                    ],
+                    [
+                        225.0,
+                        826.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.911923348903656,
+                "coordinate": [
+                    231,
+                    844,
+                    1081,
+                    903
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        231.0,
+                        844.0
+                    ],
+                    [
+                        1081.0,
+                        844.0
+                    ],
+                    [
+                        1081.0,
+                        903.0
+                    ],
+                    [
+                        231.0,
+                        903.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8549367785453796,
+                "coordinate": [
+                    231,
+                    922,
+                    895,
+                    953
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        231.0,
+                        922.0
+                    ],
+                    [
+                        895.0,
+                        922.0
+                    ],
+                    [
+                        895.0,
+                        953.0
+                    ],
+                    [
+                        231.0,
+                        953.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9068523049354553,
+                "coordinate": [
+                    231,
+                    970,
+                    1081,
+                    1032
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        231.0,
+                        970.0
+                    ],
+                    [
+                        1081.0,
+                        970.0
+                    ],
+                    [
+                        1081.0,
+                        1032.0
+                    ],
+                    [
+                        231.0,
+                        1032.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.915536642074585,
+                "coordinate": [
+                    231,
+                    1048,
+                    1082,
+                    1107
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        231.0,
+                        1048.0
+                    ],
+                    [
+                        1082.0,
+                        1048.0
+                    ],
+                    [
+                        1082.0,
+                        1107.0
+                    ],
+                    [
+                        231.0,
+                        1107.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9640234112739563,
+                "coordinate": [
+                    140,
+                    1126,
+                    1081,
+                    1380
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        140.0,
+                        1126.0
+                    ],
+                    [
+                        1081.0,
+                        1126.0
+                    ],
+                    [
+                        1081.0,
+                        1380.0
+                    ],
+                    [
+                        140.0,
+                        1380.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9139997959136963,
+                "coordinate": [
+                    140,
+                    1396,
+                    1080,
+                    1456
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        140.0,
+                        1396.0
+                    ],
+                    [
+                        1080.0,
+                        1396.0
+                    ],
+                    [
+                        1080.0,
+                        1456.0
+                    ],
+                    [
+                        140.0,
+                        1456.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7815418839454651,
+                "coordinate": [
+                    595,
+                    1472,
+                    624,
+                    1495
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        595.0,
+                        1472.0
+                    ],
+                    [
+                        623.0,
+                        1472.0
+                    ],
+                    [
+                        623.0,
+                        1494.0
+                    ],
+                    [
+                        595.0,
+                        1494.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

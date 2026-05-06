@@ -1,0 +1,1040 @@
+{
+    "input_path": "cache/dol_archive/document_549.pdf",
+    "page_index": 23,
+    "page_count": 26,
+    "width": 1588,
+    "height": 1226,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td rowspan=\"2\">Packer/Bagger</td><td colspan=\"3\">FT &amp; PT</td></tr><tr><td>Step</td><td>Months</td><td></td></tr><tr><td>Start</td><td>1</td><td></td><td>Minimum Wage</td></tr><tr><td>3 months</td><td>2</td><td>3</td><td>$6.75</td></tr><tr><td>6 months</td><td>3</td><td>3</td><td>$7.00</td></tr></table>",
+            "block_bbox": [
+                31,
+                31,
+                481,
+                162
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    31.0,
+                    31.0
+                ],
+                [
+                    481.0,
+                    31.0
+                ],
+                [
+                    481.0,
+                    162.0
+                ],
+                [
+                    31.0,
+                    162.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A. Wage Progressions for full-time employees and for part-time employees hired before March 7, 2004:",
+            "block_bbox": [
+                28,
+                174,
+                501,
+                223
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    28.0,
+                    174.0
+                ],
+                [
+                    501.0,
+                    174.0
+                ],
+                [
+                    501.0,
+                    223.0
+                ],
+                [
+                    28.0,
+                    223.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Attached as \"EXHIBIT B\".",
+            "block_bbox": [
+                102,
+                234,
+                313,
+                258
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    102.0,
+                    234.0
+                ],
+                [
+                    313.0,
+                    234.0
+                ],
+                [
+                    313.0,
+                    258.0
+                ],
+                [
+                    102.0,
+                    258.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "B. General Wage Increases (G.W.I.):",
+            "block_bbox": [
+                29,
+                273,
+                380,
+                298
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    29.0,
+                    273.0
+                ],
+                [
+                    380.0,
+                    273.0
+                ],
+                [
+                    380.0,
+                    298.0
+                ],
+                [
+                    29.0,
+                    298.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. All full-time employees shall receive the March 7, 2004 wage increase added to their rate on the effective date of the increase. The increase for employees who are not at the highest rate in their pay scale shall be treated as an advance on their progression step until the employee's rate equals or exceeds the highest rate in the scale. Subsequent GWIs apply to only those who are at the top of the scale.",
+            "block_bbox": [
+                27,
+                313,
+                500,
+                489
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    27.0,
+                    313.0
+                ],
+                [
+                    500.0,
+                    313.0
+                ],
+                [
+                    500.0,
+                    489.0
+                ],
+                [
+                    27.0,
+                    489.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Effective Date</td><td>3/7/04</td><td>3/6/05</td><td>3/5/06</td><td>3/4/07</td></tr><tr><td>All full-time (per week).</td><td>$25.00</td><td>$25.00</td><td>$25.00</td><td>$25.00</td></tr></table>",
+            "block_bbox": [
+                28,
+                506,
+                500,
+                580
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    28.0,
+                    506.0
+                ],
+                [
+                    500.0,
+                    506.0
+                ],
+                [
+                    500.0,
+                    580.0
+                ],
+                [
+                    28.0,
+                    580.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Effective March 7, 2004, the following classifications shall receive an additional GWI of $1.00 per week: Meat Mgr, Asst. Meat Mgr, Deli Mgr, Bakery Mgr, Grocery Mgr, Customer Service Mgr, Produce Mgr.",
+            "block_bbox": [
+                28,
+                644,
+                500,
+                743
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    28.0,
+                    644.0
+                ],
+                [
+                    500.0,
+                    644.0
+                ],
+                [
+                    500.0,
+                    743.0
+                ],
+                [
+                    28.0,
+                    743.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "-42-",
+            "block_bbox": [
+                251,
+                779,
+                282,
+                798
+            ],
+            "block_id": 7,
+            "block_order": null,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    251.0,
+                    779.0
+                ],
+                [
+                    281.0,
+                    779.0
+                ],
+                [
+                    281.0,
+                    797.0
+                ],
+                [
+                    251.0,
+                    797.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Eligible part-time meat cutters will receive full-time GWIs on an hourly basis.",
+            "block_bbox": [
+                568,
+                35,
+                1036,
+                83
+            ],
+            "block_id": 8,
+            "block_order": 6,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    568.0,
+                    35.0
+                ],
+                [
+                    1036.0,
+                    35.0
+                ],
+                [
+                    1036.0,
+                    83.0
+                ],
+                [
+                    568.0,
+                    83.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. All part-time employees shall receive the March 7, 2004 wage increase added to their rate on the effective date of the increase. The increase for employees who are not at the highest rate in their pay scale shall be treated as an advance on their progression step until the employee's rate equals or exceeds the highest rate in the scale. Subsequent GWIs apply to only those who are at the top of the scale.",
+            "block_bbox": [
+                567,
+                96,
+                1036,
+                269
+            ],
+            "block_id": 9,
+            "block_order": 7,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    567.0,
+                    96.0
+                ],
+                [
+                    1036.0,
+                    96.0
+                ],
+                [
+                    1036.0,
+                    269.0
+                ],
+                [
+                    567.0,
+                    269.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Effective Date 3/7/04 3/6/05 3/5/06 3/4/07 All Part-time (per hour): $0.30 $0.25 $0.25",
+            "block_bbox": [
+                569,
+                269,
+                1033,
+                317
+            ],
+            "block_id": 10,
+            "block_order": 8,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    569.0,
+                    269.0
+                ],
+                [
+                    1033.0,
+                    269.0
+                ],
+                [
+                    1033.0,
+                    317.0
+                ],
+                [
+                    569.0,
+                    317.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "C.  $ \\underline{\\text{Part-time Wages}} $: All part-time employees hired on and after March 7, 2004 will receive a start rate established by the Company, a probationary increase after1 month, and every 12 months after that, as shown in the following chart:",
+            "block_bbox": [
+                566,
+                332,
+                1035,
+                454
+            ],
+            "block_id": 11,
+            "block_order": 9,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    566.0,
+                    332.0
+                ],
+                [
+                    1035.0,
+                    332.0
+                ],
+                [
+                    1035.0,
+                    454.0
+                ],
+                [
+                    566.0,
+                    454.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "After 1 month 30¢\n12 months later (after 13 months) 25¢\n12 months later (after 25 months) 25¢\n12 months later (after 37 months) 25¢",
+            "block_bbox": [
+                566,
+                463,
+                889,
+                556
+            ],
+            "block_id": 12,
+            "block_order": 10,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    566.0,
+                    463.0
+                ],
+                [
+                    889.0,
+                    463.0
+                ],
+                [
+                    889.0,
+                    556.0
+                ],
+                [
+                    566.0,
+                    556.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Where there is no Department Manager or Assistant Department Manager running a department, and a Full time Clerk is designated by the Company to run the",
+            "block_bbox": [
+                563,
+                589,
+                1034,
+                660
+            ],
+            "block_id": 13,
+            "block_order": 11,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    563.0,
+                    589.0
+                ],
+                [
+                    1034.0,
+                    589.0
+                ],
+                [
+                    1034.0,
+                    660.0
+                ],
+                [
+                    563.0,
+                    660.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "department, that individual shall receive a $7.00 per day ($35.00 per week) premium for all full shifts running the department.",
+            "block_bbox": [
+                562,
+                675,
+                1024,
+                744
+            ],
+            "block_id": 14,
+            "block_order": 12,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    562.0,
+                    675.0
+                ],
+                [
+                    1024.0,
+                    675.0
+                ],
+                [
+                    1024.0,
+                    744.0
+                ],
+                [
+                    562.0,
+                    744.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "43",
+            "block_bbox": [
+                787,
+                782,
+                814,
+                799
+            ],
+            "block_id": 15,
+            "block_order": null,
+            "group_id": 15,
+            "block_polygon_points": [
+                [
+                    787.0,
+                    782.0
+                ],
+                [
+                    813.0,
+                    782.0
+                ],
+                [
+                    813.0,
+                    798.0
+                ],
+                [
+                    787.0,
+                    798.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.3266628682613373,
+                "coordinate": [
+                    246,
+                    28,
+                    323,
+                    50
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        246.0,
+                        28.0
+                    ],
+                    [
+                        322.0,
+                        28.0
+                    ],
+                    [
+                        322.0,
+                        49.0
+                    ],
+                    [
+                        246.0,
+                        49.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.7834692001342773,
+                "coordinate": [
+                    31,
+                    31,
+                    481,
+                    162
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        31.0,
+                        31.0
+                    ],
+                    [
+                        481.0,
+                        31.0
+                    ],
+                    [
+                        481.0,
+                        162.0
+                    ],
+                    [
+                        31.0,
+                        162.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.580726146697998,
+                "coordinate": [
+                    28,
+                    174,
+                    501,
+                    223
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        28.0,
+                        174.0
+                    ],
+                    [
+                        501.0,
+                        174.0
+                    ],
+                    [
+                        501.0,
+                        223.0
+                    ],
+                    [
+                        28.0,
+                        223.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.41470351815223694,
+                "coordinate": [
+                    102,
+                    234,
+                    313,
+                    258
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        102.0,
+                        234.0
+                    ],
+                    [
+                        313.0,
+                        234.0
+                    ],
+                    [
+                        313.0,
+                        258.0
+                    ],
+                    [
+                        102.0,
+                        258.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7723782062530518,
+                "coordinate": [
+                    29,
+                    273,
+                    380,
+                    298
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        29.0,
+                        273.0
+                    ],
+                    [
+                        380.0,
+                        273.0
+                    ],
+                    [
+                        380.0,
+                        298.0
+                    ],
+                    [
+                        29.0,
+                        298.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.74685138463974,
+                "coordinate": [
+                    27,
+                    313,
+                    500,
+                    489
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        27.0,
+                        313.0
+                    ],
+                    [
+                        500.0,
+                        313.0
+                    ],
+                    [
+                        500.0,
+                        489.0
+                    ],
+                    [
+                        27.0,
+                        489.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.36265137791633606,
+                "coordinate": [
+                    28,
+                    506,
+                    500,
+                    580
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        28.0,
+                        506.0
+                    ],
+                    [
+                        500.0,
+                        506.0
+                    ],
+                    [
+                        500.0,
+                        580.0
+                    ],
+                    [
+                        28.0,
+                        580.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7017139792442322,
+                "coordinate": [
+                    28,
+                    644,
+                    500,
+                    743
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        28.0,
+                        644.0
+                    ],
+                    [
+                        500.0,
+                        644.0
+                    ],
+                    [
+                        500.0,
+                        743.0
+                    ],
+                    [
+                        28.0,
+                        743.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6841353178024292,
+                "coordinate": [
+                    251,
+                    779,
+                    282,
+                    798
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        251.0,
+                        779.0
+                    ],
+                    [
+                        281.0,
+                        779.0
+                    ],
+                    [
+                        281.0,
+                        797.0
+                    ],
+                    [
+                        251.0,
+                        797.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8097499012947083,
+                "coordinate": [
+                    568,
+                    35,
+                    1036,
+                    83
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        568.0,
+                        35.0
+                    ],
+                    [
+                        1036.0,
+                        35.0
+                    ],
+                    [
+                        1036.0,
+                        83.0
+                    ],
+                    [
+                        568.0,
+                        83.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7355159521102905,
+                "coordinate": [
+                    567,
+                    96,
+                    1036,
+                    269
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        567.0,
+                        96.0
+                    ],
+                    [
+                        1036.0,
+                        96.0
+                    ],
+                    [
+                        1036.0,
+                        269.0
+                    ],
+                    [
+                        567.0,
+                        269.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3698282837867737,
+                "coordinate": [
+                    569,
+                    269,
+                    1033,
+                    317
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        569.0,
+                        269.0
+                    ],
+                    [
+                        1033.0,
+                        269.0
+                    ],
+                    [
+                        1033.0,
+                        317.0
+                    ],
+                    [
+                        569.0,
+                        317.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7991736531257629,
+                "coordinate": [
+                    566,
+                    332,
+                    1035,
+                    454
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        566.0,
+                        332.0
+                    ],
+                    [
+                        1035.0,
+                        332.0
+                    ],
+                    [
+                        1035.0,
+                        454.0
+                    ],
+                    [
+                        566.0,
+                        454.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3588188588619232,
+                "coordinate": [
+                    566,
+                    463,
+                    889,
+                    556
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        566.0,
+                        463.0
+                    ],
+                    [
+                        889.0,
+                        463.0
+                    ],
+                    [
+                        889.0,
+                        556.0
+                    ],
+                    [
+                        566.0,
+                        556.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6389597058296204,
+                "coordinate": [
+                    563,
+                    589,
+                    1034,
+                    660
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        563.0,
+                        589.0
+                    ],
+                    [
+                        1034.0,
+                        589.0
+                    ],
+                    [
+                        1034.0,
+                        660.0
+                    ],
+                    [
+                        563.0,
+                        660.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7642728090286255,
+                "coordinate": [
+                    562,
+                    675,
+                    1024,
+                    744
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        562.0,
+                        675.0
+                    ],
+                    [
+                        1024.0,
+                        675.0
+                    ],
+                    [
+                        1024.0,
+                        744.0
+                    ],
+                    [
+                        562.0,
+                        744.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.5817458033561707,
+                "coordinate": [
+                    787,
+                    782,
+                    814,
+                    799
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        787.0,
+                        782.0
+                    ],
+                    [
+                        813.0,
+                        782.0
+                    ],
+                    [
+                        813.0,
+                        798.0
+                    ],
+                    [
+                        787.0,
+                        798.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

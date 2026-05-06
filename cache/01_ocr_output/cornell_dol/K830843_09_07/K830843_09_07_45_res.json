@@ -1,0 +1,949 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 45,
+    "page_count": 206,
+    "width": 1224,
+    "height": 2016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "1.) Is medically incapable of performing essential assigned functions of his/her job due to a non-work related illness or injury; and",
+            "block_bbox": [
+                329,
+                96,
+                1119,
+                156
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    329.0,
+                    96.0
+                ],
+                [
+                    1119.0,
+                    96.0
+                ],
+                [
+                    1119.0,
+                    156.0
+                ],
+                [
+                    329.0,
+                    156.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2.) Has furnished evidence of disability satisfactory to the University; or",
+            "block_bbox": [
+                326,
+                179,
+                1118,
+                237
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    326.0,
+                    179.0
+                ],
+                [
+                    1118.0,
+                    179.0
+                ],
+                [
+                    1118.0,
+                    237.0
+                ],
+                [
+                    326.0,
+                    237.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3.) Has exhausted her four (4) month entitlement under Pregnancy Disability leave; or",
+            "block_bbox": [
+                326,
+                262,
+                1119,
+                320
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    326.0,
+                    262.0
+                ],
+                [
+                    1119.0,
+                    262.0
+                ],
+                [
+                    1119.0,
+                    320.0
+                ],
+                [
+                    326.0,
+                    320.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "4.) Has either exhausted his/her twelve (12) workweek entitlement under Section D Family Care and Medical Leave, or is not otherwise eligible for medical leave under Section D Family Care and Medical Leave or Pregnancy Disability Leave under Section C.6.",
+            "block_bbox": [
+                324,
+                345,
+                1121,
+                484
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    324.0,
+                    345.0
+                ],
+                [
+                    1121.0,
+                    345.0
+                ],
+                [
+                    1121.0,
+                    484.0
+                ],
+                [
+                    324.0,
+                    484.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "3. Notification",
+            "block_bbox": [
+                188,
+                511,
+                396,
+                541
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    188.0,
+                    511.0
+                ],
+                [
+                    396.0,
+                    511.0
+                ],
+                [
+                    396.0,
+                    541.0
+                ],
+                [
+                    188.0,
+                    541.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Requests for medical leave without pay shall be in writing as provided in Section A.3, and the employee shall furnish evidence of disability satisfactory to the University as provided in Section C.4, Documentation and Verification, below. Additionally, an employee must notify the University of a need to extend his/her medical absence from work prior to the anticipated date of return.",
+            "block_bbox": [
+                253,
+                566,
+                1120,
+                708
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    253.0,
+                    566.0
+                ],
+                [
+                    1120.0,
+                    566.0
+                ],
+                [
+                    1120.0,
+                    708.0
+                ],
+                [
+                    253.0,
+                    708.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "4. Documentation and Verification",
+            "block_bbox": [
+                188,
+                731,
+                624,
+                761
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    188.0,
+                    731.0
+                ],
+                [
+                    624.0,
+                    731.0
+                ],
+                [
+                    624.0,
+                    761.0
+                ],
+                [
+                    188.0,
+                    761.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a. Documentation of the employee's disability and/or ability to return to work is required and is subject to verification by the University. Such documentation shall include, but is not limited to, a health practitioner's (as defined in Article 36 - Sick Leave, Section D.4.) statement of the anticipated duration of disability, and a statement that the employee is incapable of performing the essential assigned functions of his/her job, or is able to return and perform the essential assigned functions of his/her job.",
+            "block_bbox": [
+                252,
+                787,
+                1121,
+                1012
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    252.0,
+                    787.0
+                ],
+                [
+                    1121.0,
+                    787.0
+                ],
+                [
+                    1121.0,
+                    1012.0
+                ],
+                [
+                    252.0,
+                    1012.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b. The University may have an employee claiming disability examined by a physician or physicians of its choosing. The University shall pay the reasonable costs of any such medical examination required by the University.",
+            "block_bbox": [
+                253,
+                1035,
+                1121,
+                1149
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    253.0,
+                    1035.0
+                ],
+                [
+                    1121.0,
+                    1035.0
+                ],
+                [
+                    1121.0,
+                    1149.0
+                ],
+                [
+                    253.0,
+                    1149.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "c. Verification of medical disability for pregnancy-related purposes additionally includes a physician's statement regarding the estimated date of delivery and the anticipated date of the employee's ability to perform the essential assigned functions of her job.",
+            "block_bbox": [
+                253,
+                1174,
+                1120,
+                1288
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    253.0,
+                    1174.0
+                ],
+                [
+                    1120.0,
+                    1174.0
+                ],
+                [
+                    1120.0,
+                    1288.0
+                ],
+                [
+                    253.0,
+                    1288.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "5. Duration",
+            "block_bbox": [
+                189,
+                1310,
+                362,
+                1341
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    189.0,
+                    1310.0
+                ],
+                [
+                    362.0,
+                    1310.0
+                ],
+                [
+                    362.0,
+                    1341.0
+                ],
+                [
+                    189.0,
+                    1341.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Medical leaves of absence are granted for the period of verified disability and are not granted for non-disability purposes. When the use of accrued sick leave and a medical leave of absence without pay are combined, a medical leave of absence from work for non-work related disability purposes may be granted by the University for a total period of verified disability not to exceed six (6) months.",
+            "block_bbox": [
+                253,
+                1367,
+                1122,
+                1508
+            ],
+            "block_id": 11,
+            "block_order": 12,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    253.0,
+                    1367.0
+                ],
+                [
+                    1122.0,
+                    1367.0
+                ],
+                [
+                    1122.0,
+                    1508.0
+                ],
+                [
+                    253.0,
+                    1508.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "6. Pregnancy Disability Leave",
+            "block_bbox": [
+                188,
+                1532,
+                575,
+                1563
+            ],
+            "block_id": 12,
+            "block_order": 13,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    188.0,
+                    1532.0
+                ],
+                [
+                    575.0,
+                    1532.0
+                ],
+                [
+                    575.0,
+                    1563.0
+                ],
+                [
+                    188.0,
+                    1563.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a. During the period of verified pregnancy-related/childbearing disability, a female employee is entitled to and the University shall grant a medical leave of absence of up to four months. If the pregnancy-related/childbearing medical disability continues beyond four (4) months, a medical leave of absence may be granted in accordance with Section C.4.a, above, for a total medical absence not to exceed six months. Additionally, the employee may be eligible for a parental leave to care for a newly born child in accordance with Section D, Family Care and Medical Leave. When parental leave is granted under Section D, Family Care and Medical Leave, the total of parental leave and pregnancy-related/childbearing disability leave, when taken in conjunction, shall not exceed seven (7) months in the leave year.",
+            "block_bbox": [
+                252,
+                1588,
+                1122,
+                1922
+            ],
+            "block_id": 13,
+            "block_order": 14,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    252.0,
+                    1588.0
+                ],
+                [
+                    1122.0,
+                    1588.0
+                ],
+                [
+                    1122.0,
+                    1922.0
+                ],
+                [
+                    252.0,
+                    1922.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "43",
+            "block_bbox": [
+                639,
+                1946,
+                674,
+                1969
+            ],
+            "block_id": 14,
+            "block_order": null,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    639.0,
+                    1946.0
+                ],
+                [
+                    673.0,
+                    1946.0
+                ],
+                [
+                    673.0,
+                    1968.0
+                ],
+                [
+                    639.0,
+                    1968.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9014329314231873,
+                "coordinate": [
+                    329,
+                    96,
+                    1119,
+                    156
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        329.0,
+                        96.0
+                    ],
+                    [
+                        1119.0,
+                        96.0
+                    ],
+                    [
+                        1119.0,
+                        156.0
+                    ],
+                    [
+                        329.0,
+                        156.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8869155049324036,
+                "coordinate": [
+                    326,
+                    179,
+                    1118,
+                    237
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        326.0,
+                        179.0
+                    ],
+                    [
+                        1118.0,
+                        179.0
+                    ],
+                    [
+                        1118.0,
+                        237.0
+                    ],
+                    [
+                        326.0,
+                        237.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8962846994400024,
+                "coordinate": [
+                    326,
+                    262,
+                    1119,
+                    320
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        326.0,
+                        262.0
+                    ],
+                    [
+                        1119.0,
+                        262.0
+                    ],
+                    [
+                        1119.0,
+                        320.0
+                    ],
+                    [
+                        326.0,
+                        320.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9402349591255188,
+                "coordinate": [
+                    324,
+                    345,
+                    1121,
+                    484
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        324.0,
+                        345.0
+                    ],
+                    [
+                        1121.0,
+                        345.0
+                    ],
+                    [
+                        1121.0,
+                        484.0
+                    ],
+                    [
+                        324.0,
+                        484.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8542054891586304,
+                "coordinate": [
+                    188,
+                    511,
+                    396,
+                    541
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        188.0,
+                        511.0
+                    ],
+                    [
+                        396.0,
+                        511.0
+                    ],
+                    [
+                        396.0,
+                        541.0
+                    ],
+                    [
+                        188.0,
+                        541.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9444031119346619,
+                "coordinate": [
+                    253,
+                    566,
+                    1120,
+                    708
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        253.0,
+                        566.0
+                    ],
+                    [
+                        1120.0,
+                        566.0
+                    ],
+                    [
+                        1120.0,
+                        708.0
+                    ],
+                    [
+                        253.0,
+                        708.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.861986517906189,
+                "coordinate": [
+                    188,
+                    731,
+                    624,
+                    761
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        188.0,
+                        731.0
+                    ],
+                    [
+                        624.0,
+                        731.0
+                    ],
+                    [
+                        624.0,
+                        761.0
+                    ],
+                    [
+                        188.0,
+                        761.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9553331136703491,
+                "coordinate": [
+                    252,
+                    787,
+                    1121,
+                    1012
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        252.0,
+                        787.0
+                    ],
+                    [
+                        1121.0,
+                        787.0
+                    ],
+                    [
+                        1121.0,
+                        1012.0
+                    ],
+                    [
+                        252.0,
+                        1012.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9380553960800171,
+                "coordinate": [
+                    253,
+                    1035,
+                    1121,
+                    1149
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        253.0,
+                        1035.0
+                    ],
+                    [
+                        1121.0,
+                        1035.0
+                    ],
+                    [
+                        1121.0,
+                        1149.0
+                    ],
+                    [
+                        253.0,
+                        1149.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.93830806016922,
+                "coordinate": [
+                    253,
+                    1174,
+                    1120,
+                    1288
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        253.0,
+                        1174.0
+                    ],
+                    [
+                        1120.0,
+                        1174.0
+                    ],
+                    [
+                        1120.0,
+                        1288.0
+                    ],
+                    [
+                        253.0,
+                        1288.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8382580876350403,
+                "coordinate": [
+                    189,
+                    1310,
+                    362,
+                    1341
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        189.0,
+                        1310.0
+                    ],
+                    [
+                        362.0,
+                        1310.0
+                    ],
+                    [
+                        362.0,
+                        1341.0
+                    ],
+                    [
+                        189.0,
+                        1341.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9522424936294556,
+                "coordinate": [
+                    253,
+                    1367,
+                    1122,
+                    1508
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        253.0,
+                        1367.0
+                    ],
+                    [
+                        1122.0,
+                        1367.0
+                    ],
+                    [
+                        1122.0,
+                        1508.0
+                    ],
+                    [
+                        253.0,
+                        1508.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8660090565681458,
+                "coordinate": [
+                    188,
+                    1532,
+                    575,
+                    1563
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        188.0,
+                        1532.0
+                    ],
+                    [
+                        575.0,
+                        1532.0
+                    ],
+                    [
+                        575.0,
+                        1563.0
+                    ],
+                    [
+                        188.0,
+                        1563.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9636155962944031,
+                "coordinate": [
+                    252,
+                    1588,
+                    1122,
+                    1922
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        252.0,
+                        1588.0
+                    ],
+                    [
+                        1122.0,
+                        1588.0
+                    ],
+                    [
+                        1122.0,
+                        1922.0
+                    ],
+                    [
+                        252.0,
+                        1922.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7556019425392151,
+                "coordinate": [
+                    639,
+                    1946,
+                    674,
+                    1969
+                ],
+                "order": 15,
+                "polygon_points": [
+                    [
+                        639.0,
+                        1946.0
+                    ],
+                    [
+                        673.0,
+                        1946.0
+                    ],
+                    [
+                        673.0,
+                        1968.0
+                    ],
+                    [
+                        639.0,
+                        1968.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

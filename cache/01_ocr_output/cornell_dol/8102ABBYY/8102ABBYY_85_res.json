@@ -1,0 +1,949 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 85,
+    "page_count": 439,
+    "width": 1235,
+    "height": 1592,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article 13",
+            "block_bbox": [
+                839,
+                95,
+                909,
+                112
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    839.0,
+                    95.0
+                ],
+                [
+                    908.0,
+                    95.0
+                ],
+                [
+                    908.0,
+                    111.0
+                ],
+                [
+                    839.0,
+                    111.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 13 - LOCAL ASSIGNMENTS AND TRANSFERS",
+            "block_bbox": [
+                428,
+                124,
+                835,
+                142
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    428.0,
+                    124.0
+                ],
+                [
+                    834.0,
+                    124.0
+                ],
+                [
+                    834.0,
+                    141.0
+                ],
+                [
+                    428.0,
+                    141.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1 Definitions",
+            "block_bbox": [
+                353,
+                146,
+                464,
+                166
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    352.9999694824219,
+                    145.99998474121094
+                ],
+                [
+                    462.9999694824219,
+                    145.99998474121094
+                ],
+                [
+                    462.9999694824219,
+                    164.99998474121094
+                ],
+                [
+                    352.9999694824219,
+                    164.99998474121094
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) \"Base Location\" means a city listed in Appendix 2 attached hereto and made a part hereof. Such cities are so designated because they are focal points for the performance of installation work.",
+            "block_bbox": [
+                374,
+                170,
+                908,
+                225
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    374.0,
+                    170.0
+                ],
+                [
+                    908.0,
+                    170.0
+                ],
+                [
+                    908.0,
+                    225.0
+                ],
+                [
+                    374.0,
+                    225.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) \"Hiring Location\" means the place of hiring of an Employee who was hired at other than a Base Location and who has not yet been transferred to his or her designated Base Location on a Permanent Transfer.",
+            "block_bbox": [
+                374,
+                229,
+                909,
+                284
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    374.0,
+                    229.0
+                ],
+                [
+                    909.0,
+                    229.0
+                ],
+                [
+                    909.0,
+                    284.0
+                ],
+                [
+                    374.0,
+                    284.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(c) \"Work Location\" means a Base Location (or Hiring Location, if applicable) or any other place to which an Employee was transferred on his or her latest Transfer.",
+            "block_bbox": [
+                375,
+                289,
+                909,
+                343
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    375.0,
+                    289.0
+                ],
+                [
+                    909.0,
+                    289.0
+                ],
+                [
+                    909.0,
+                    343.0
+                ],
+                [
+                    375.0,
+                    343.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(d) \"Job Location\" means a specific site at which installation work is performed.",
+            "block_bbox": [
+                375,
+                348,
+                908,
+                386
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    375.0,
+                    348.0
+                ],
+                [
+                    908.0,
+                    348.0
+                ],
+                [
+                    908.0,
+                    386.0
+                ],
+                [
+                    375.0,
+                    386.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(e) \"Computation Point\" means the fixed point in the Work Location designated by the Company for the purpose of computing travel time and transportation expense allowances on Local Assignments and Temporary Transfers.",
+            "block_bbox": [
+                376,
+                391,
+                908,
+                463
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    376.0,
+                    391.0
+                ],
+                [
+                    908.0,
+                    391.0
+                ],
+                [
+                    908.0,
+                    463.0
+                ],
+                [
+                    376.0,
+                    463.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(f) \"Compensated Travel Time\" means travel time for which payment is made under the provisions of Paragraphs 3(b)(2), 4(a)(5)(ii), 4(b) (with reference to Paragraphs 4(a)(5)(ii) and 4(b)(1)), 4(b)(1), 5(a)(1) and 5(a)(2).",
+            "block_bbox": [
+                375,
+                467,
+                908,
+                539
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    375.0,
+                    467.0
+                ],
+                [
+                    908.0,
+                    467.0
+                ],
+                [
+                    908.0,
+                    539.0
+                ],
+                [
+                    375.0,
+                    539.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(g) \"Local Assignment\" means the assignment of an Employee to a Job Location which the Company determines is within range of travel on a daily basis from the applicable Computation Point of an Employee's Work Location.",
+            "block_bbox": [
+                375,
+                544,
+                908,
+                615
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    375.0,
+                    544.0
+                ],
+                [
+                    908.0,
+                    544.0
+                ],
+                [
+                    908.0,
+                    615.0
+                ],
+                [
+                    375.0,
+                    615.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(h) \"Transfer\" means the movement of an Employee from one Work Location to another Work Location on other than a Local Assignment.",
+            "block_bbox": [
+                374,
+                621,
+                907,
+                659
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    374.0,
+                    621.0
+                ],
+                [
+                    907.0,
+                    621.0
+                ],
+                [
+                    907.0,
+                    659.0
+                ],
+                [
+                    374.0,
+                    659.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(i) \"Temporary Transfer\" means the transfer of an Employee from one Work Location to another Work Location without a change in the Employee's designated Base Location. An Employee's return to his or her designated Base Location (or Hiring Location, if applicable) shall not be considered a transfer.",
+            "block_bbox": [
+                374,
+                664,
+                907,
+                751
+            ],
+            "block_id": 11,
+            "block_order": 11,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    374.0,
+                    664.0
+                ],
+                [
+                    907.0,
+                    664.0
+                ],
+                [
+                    907.0,
+                    751.0
+                ],
+                [
+                    374.0,
+                    751.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(f) \"Permanent Transfer\" means the transfer of an Employee from one Base Location to another Base Location on other than a Temporary Transfer. It also means the initial transfer of an Employee to his or her designated Base Location if the Employee was hired at other than a Base Location, except when such transfer is for the purpose of attending a training class.",
+            "block_bbox": [
+                374,
+                757,
+                907,
+                846
+            ],
+            "block_id": 12,
+            "block_order": 12,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    374.0,
+                    757.0
+                ],
+                [
+                    907.0,
+                    757.0
+                ],
+                [
+                    907.0,
+                    846.0
+                ],
+                [
+                    374.0,
+                    846.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(k) \"Maintenance Point of Presence\" (MPOP): A location designated by the Company which is more than fifty (50) miles from an existing Base",
+            "block_bbox": [
+                373,
+                850,
+                907,
+                889
+            ],
+            "block_id": 13,
+            "block_order": 13,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    373.0,
+                    850.0
+                ],
+                [
+                    907.0,
+                    850.0
+                ],
+                [
+                    907.0,
+                    889.0
+                ],
+                [
+                    373.0,
+                    889.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "77",
+            "block_bbox": [
+                877,
+                927,
+                899,
+                944
+            ],
+            "block_id": 14,
+            "block_order": null,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    877.0,
+                    927.0
+                ],
+                [
+                    898.0,
+                    927.0
+                ],
+                [
+                    898.0,
+                    943.0
+                ],
+                [
+                    877.0,
+                    943.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7992936968803406,
+                "coordinate": [
+                    839,
+                    95,
+                    909,
+                    112
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        839.0,
+                        95.0
+                    ],
+                    [
+                        908.0,
+                        95.0
+                    ],
+                    [
+                        908.0,
+                        111.0
+                    ],
+                    [
+                        839.0,
+                        111.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.4482327699661255,
+                "coordinate": [
+                    428,
+                    124,
+                    835,
+                    142
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        428.0,
+                        124.0
+                    ],
+                    [
+                        834.0,
+                        124.0
+                    ],
+                    [
+                        834.0,
+                        141.0
+                    ],
+                    [
+                        428.0,
+                        141.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3981180191040039,
+                "coordinate": [
+                    353,
+                    146,
+                    464,
+                    166
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        352.9999694824219,
+                        145.99998474121094
+                    ],
+                    [
+                        462.9999694824219,
+                        145.99998474121094
+                    ],
+                    [
+                        462.9999694824219,
+                        164.99998474121094
+                    ],
+                    [
+                        352.9999694824219,
+                        164.99998474121094
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8882037997245789,
+                "coordinate": [
+                    374,
+                    170,
+                    908,
+                    225
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        374.0,
+                        170.0
+                    ],
+                    [
+                        908.0,
+                        170.0
+                    ],
+                    [
+                        908.0,
+                        225.0
+                    ],
+                    [
+                        374.0,
+                        225.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9050419926643372,
+                "coordinate": [
+                    374,
+                    229,
+                    909,
+                    284
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        374.0,
+                        229.0
+                    ],
+                    [
+                        909.0,
+                        229.0
+                    ],
+                    [
+                        909.0,
+                        284.0
+                    ],
+                    [
+                        374.0,
+                        284.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8861855268478394,
+                "coordinate": [
+                    375,
+                    289,
+                    909,
+                    343
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        375.0,
+                        289.0
+                    ],
+                    [
+                        909.0,
+                        289.0
+                    ],
+                    [
+                        909.0,
+                        343.0
+                    ],
+                    [
+                        375.0,
+                        343.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8518199920654297,
+                "coordinate": [
+                    375,
+                    348,
+                    908,
+                    386
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        375.0,
+                        348.0
+                    ],
+                    [
+                        908.0,
+                        348.0
+                    ],
+                    [
+                        908.0,
+                        386.0
+                    ],
+                    [
+                        375.0,
+                        386.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.90069580078125,
+                "coordinate": [
+                    376,
+                    391,
+                    908,
+                    463
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        376.0,
+                        391.0
+                    ],
+                    [
+                        908.0,
+                        391.0
+                    ],
+                    [
+                        908.0,
+                        463.0
+                    ],
+                    [
+                        376.0,
+                        463.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.908511757850647,
+                "coordinate": [
+                    375,
+                    467,
+                    908,
+                    539
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        375.0,
+                        467.0
+                    ],
+                    [
+                        908.0,
+                        467.0
+                    ],
+                    [
+                        908.0,
+                        539.0
+                    ],
+                    [
+                        375.0,
+                        539.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9000892043113708,
+                "coordinate": [
+                    375,
+                    544,
+                    908,
+                    615
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        375.0,
+                        544.0
+                    ],
+                    [
+                        908.0,
+                        544.0
+                    ],
+                    [
+                        908.0,
+                        615.0
+                    ],
+                    [
+                        375.0,
+                        615.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8614963293075562,
+                "coordinate": [
+                    374,
+                    621,
+                    907,
+                    659
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        374.0,
+                        621.0
+                    ],
+                    [
+                        907.0,
+                        621.0
+                    ],
+                    [
+                        907.0,
+                        659.0
+                    ],
+                    [
+                        374.0,
+                        659.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9189118146896362,
+                "coordinate": [
+                    374,
+                    664,
+                    907,
+                    751
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        374.0,
+                        664.0
+                    ],
+                    [
+                        907.0,
+                        664.0
+                    ],
+                    [
+                        907.0,
+                        751.0
+                    ],
+                    [
+                        374.0,
+                        751.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9221722483634949,
+                "coordinate": [
+                    374,
+                    757,
+                    907,
+                    846
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        374.0,
+                        757.0
+                    ],
+                    [
+                        907.0,
+                        757.0
+                    ],
+                    [
+                        907.0,
+                        846.0
+                    ],
+                    [
+                        374.0,
+                        846.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8305766582489014,
+                "coordinate": [
+                    373,
+                    850,
+                    907,
+                    889
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        373.0,
+                        850.0
+                    ],
+                    [
+                        907.0,
+                        850.0
+                    ],
+                    [
+                        907.0,
+                        889.0
+                    ],
+                    [
+                        373.0,
+                        889.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6896905899047852,
+                "coordinate": [
+                    877,
+                    927,
+                    899,
+                    944
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        877.0,
+                        927.0
+                    ],
+                    [
+                        898.0,
+                        927.0
+                    ],
+                    [
+                        898.0,
+                        943.0
+                    ],
+                    [
+                        877.0,
+                        943.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

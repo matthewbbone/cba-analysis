@@ -1,0 +1,433 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 48,
+    "page_count": 439,
+    "width": 1233,
+    "height": 1581,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article 12",
+            "block_bbox": [
+                321,
+                78,
+                394,
+                97
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    78.0
+                ],
+                [
+                    393.0,
+                    78.0
+                ],
+                [
+                    393.0,
+                    96.0
+                ],
+                [
+                    321.0,
+                    96.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "Wage Schedule 1A applies to all Employees having a designated Base Location listed below or, for Employees not yet transferred to a Base Location on a Permanent Transfer, a hiring location in Alabama, Arizona, Arkansas, Colorado, Florida, Georgia, Idaho, Iowa, Kansas, Kentucky, Louisiana, Minnesota, Mississippi, Missouri, Montana, Nebraska, New Mexico, North Carolina, North Dakota, Oklahoma, South Carolina, South Dakota, Tennessee, Texas, Utah, and Wyoming.",
+            "block_bbox": [
+                320,
+                117,
+                880,
+                243
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    117.0
+                ],
+                [
+                    880.0,
+                    117.0
+                ],
+                [
+                    880.0,
+                    243.0
+                ],
+                [
+                    320.0,
+                    243.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Aberdeen, SD</td><td>Dodge City, KS</td><td>Jasper, AL</td><td>Pueblo, CO</td></tr><tr><td>Abilene, TX</td><td>Flagstaff, AZ</td><td>Jonesboro, AR</td><td>Rapid City, SD</td></tr><tr><td>Albany, GA</td><td>Florence, SC</td><td>Joplin, MO</td><td>Red Oak, IA</td></tr><tr><td>Alexandria, LA</td><td>Forrest City, AR</td><td>Knoxville, TN</td><td>Rome, GA</td></tr><tr><td>Anderson, SC</td><td>Fort Myers, FL</td><td>Lafayette, LA</td><td>Ruston, LA</td></tr><tr><td>Anniston, AL</td><td>Fort Smith, AR</td><td>Lake Charles, LA</td><td>Salina, KS</td></tr><tr><td>Ashville, NC</td><td>Frankfort, KY</td><td>Laurinburg, NC</td><td>Santa Fe, NM</td></tr><tr><td>Athens, GA</td><td>Gadsden, AL</td><td>Lenoir, NC</td><td>Savannah, GA</td></tr><tr><td>Athens, TN</td><td>Gainesville, FL</td><td>Longview, TX</td><td>Selma, AL</td></tr><tr><td>Baton Rouge, LA</td><td>Gainesville, GA</td><td>Marshall, MN</td><td>Sheffield, AL</td></tr><tr><td>Bemidji, MN</td><td>Gastonia, NC</td><td>Mason City, IA</td><td>Shelby, NC</td></tr><tr><td>Bismarck, ND</td><td>Goldsboro, NC</td><td>McComb, MS</td><td>Shreveport, LA</td></tr><tr><td>Boise, ID</td><td>Grand Forks, ND</td><td>Meridian, MS</td><td>Sidney, NB</td></tr><tr><td>Bowling Green, KY</td><td>Grand Island, NB</td><td>Minden, LA</td><td>Sikeston, MO</td></tr><tr><td>Brainerd, MN</td><td>Grand Junction, CO</td><td>Mobile, AL</td><td>Spartanburg, SC</td></tr><tr><td>Brewton, AL</td><td>Greeting, CO</td><td>Monroe, LA</td><td>Spencer, IA</td></tr><tr><td>Burlington, NC</td><td>Greensboro, NC</td><td>Montgomery, AL</td><td>Tallahassee, FL</td></tr><tr><td>Carrollton, GA</td><td>Greenville, SC</td><td>Natchitocas, LA</td><td>Tampa, FL</td></tr><tr><td>Casper, WY</td><td>Greenwood, MS</td><td>Norfolk, NB</td><td>Thomasville, GA</td></tr><tr><td>Charleston, SC</td><td>Gulfport, MS</td><td>North Platte, NB</td><td>Tupelo, MS</td></tr><tr><td>Chattanooga, TN</td><td>Hammond, LA</td><td>Ogden, UT</td><td>Tuscaloosa, AL</td></tr><tr><td>Cheyenne, WY</td><td>Harlingen, TX</td><td>Opelika, AL</td><td>Twin Falls, ID</td></tr><tr><td>Chipley, FL</td><td>Hattiesburg, MS</td><td>Orlando, FL</td><td>Tyler, TX</td></tr><tr><td>Cocoa, FL</td><td>Hazelhurst, GA</td><td>Owensboro, KY</td><td>Watertown, SD</td></tr><tr><td>Columbia, SC</td><td>Hot Springs, AR</td><td>Peducah, KY</td><td>Waycross, GA</td></tr><tr><td>Columbia, TN</td><td>Houma, LA</td><td>Paintsville, KY</td><td>Wilmington, NC</td></tr><tr><td>Columbus, GA</td><td>Huntsville, AL</td><td>Panama City, FL</td><td>Winchester, KY</td></tr><tr><td>Columbus, MS</td><td>Idaho Falls, ID</td><td>Pensacola, FL</td><td>Winston-Salem, NC</td></tr><tr><td>Covington, GA</td><td>Jackson MS</td><td>Pierre, SD</td><td>Wichita Falls, TX</td></tr><tr><td>Danville, KY</td><td>Jackson, TN</td><td>Pocatello, ID</td><td></td></tr><tr><td>Decatur, AL</td><td>Jacksonville, FL</td><td>Provo, UT</td><td></td></tr></table>",
+            "block_bbox": [
+                317,
+                261,
+                852,
+                826
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    317.0,
+                    261.0
+                ],
+                [
+                    852.0,
+                    261.0
+                ],
+                [
+                    852.0,
+                    826.0
+                ],
+                [
+                    317.0,
+                    826.0
+                ]
+            ]
+        },
+        {
+            "block_label": "reference_content",
+            "block_content": "Decatur, Al Jacksonville, FL Provo, UT",
+            "block_bbox": [
+                322,
+                814,
+                669,
+                834
+            ],
+            "block_id": 3,
+            "block_order": 1,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    814.0
+                ],
+                [
+                    668.0,
+                    814.0
+                ],
+                [
+                    668.0,
+                    833.0
+                ],
+                [
+                    322.0,
+                    833.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "40",
+            "block_bbox": [
+                322,
+                904,
+                345,
+                921
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    904.0
+                ],
+                [
+                    344.0,
+                    904.0
+                ],
+                [
+                    344.0,
+                    920.0
+                ],
+                [
+                    322.0,
+                    920.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.3843868374824524,
+                "coordinate": [
+                    321,
+                    78,
+                    394,
+                    97
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        321.0,
+                        78.0
+                    ],
+                    [
+                        393.0,
+                        78.0
+                    ],
+                    [
+                        393.0,
+                        96.0
+                    ],
+                    [
+                        321.0,
+                        96.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.723163366317749,
+                "coordinate": [
+                    320,
+                    117,
+                    880,
+                    243
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        320.0,
+                        117.0
+                    ],
+                    [
+                        880.0,
+                        117.0
+                    ],
+                    [
+                        880.0,
+                        243.0
+                    ],
+                    [
+                        320.0,
+                        243.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.5820601582527161,
+                "coordinate": [
+                    317,
+                    261,
+                    852,
+                    826
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        317.0,
+                        261.0
+                    ],
+                    [
+                        852.0,
+                        261.0
+                    ],
+                    [
+                        852.0,
+                        826.0
+                    ],
+                    [
+                        317.0,
+                        826.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 19,
+                "label": "reference_content",
+                "score": 0.38426661491394043,
+                "coordinate": [
+                    322,
+                    263,
+                    815,
+                    283
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        322.0,
+                        263.0
+                    ],
+                    [
+                        322.0,
+                        282.0
+                    ],
+                    [
+                        679.0,
+                        282.0
+                    ],
+                    [
+                        814.0,
+                        282.0
+                    ],
+                    [
+                        814.0,
+                        263.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 19,
+                "label": "reference_content",
+                "score": 0.38487163186073303,
+                "coordinate": [
+                    322,
+                    348,
+                    809,
+                    366
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        322.0,
+                        347.9999694824219
+                    ],
+                    [
+                        807.9998779296875,
+                        347.9999694824219
+                    ],
+                    [
+                        807.9998779296875,
+                        364.9999694824219
+                    ],
+                    [
+                        321.9999694824219,
+                        364.9999694824219
+                    ]
+                ]
+            },
+            {
+                "cls_id": 19,
+                "label": "reference_content",
+                "score": 0.35707804560661316,
+                "coordinate": [
+                    322,
+                    364,
+                    831,
+                    387
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        322.0,
+                        364.0
+                    ],
+                    [
+                        831.0,
+                        364.0
+                    ],
+                    [
+                        831.0,
+                        387.0
+                    ],
+                    [
+                        322.0,
+                        387.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 19,
+                "label": "reference_content",
+                "score": 0.3281915485858917,
+                "coordinate": [
+                    322,
+                    814,
+                    669,
+                    834
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        322.0,
+                        814.0
+                    ],
+                    [
+                        668.0,
+                        814.0
+                    ],
+                    [
+                        668.0,
+                        833.0
+                    ],
+                    [
+                        322.0,
+                        833.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6536684036254883,
+                "coordinate": [
+                    322,
+                    904,
+                    345,
+                    921
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        322.0,
+                        904.0
+                    ],
+                    [
+                        344.0,
+                        904.0
+                    ],
+                    [
+                        344.0,
+                        920.0
+                    ],
+                    [
+                        322.0,
+                        920.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

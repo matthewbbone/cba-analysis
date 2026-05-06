@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 143,
+    "page_count": 189,
+    "width": 1226,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "WAGE RATES EFFECTIVE OCTOBER 7, 2001\nSTRUCTURE B2",
+            "block_bbox": [
+                401,
+                139,
+                837,
+                190
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    401.0,
+                    139.0
+                ],
+                [
+                    837.0,
+                    139.0
+                ],
+                [
+                    837.0,
+                    190.0
+                ],
+                [
+                    401.0,
+                    190.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Job Title</td><td>START</td><td>1 YEAR</td><td>2 YEARS</td><td>3 YEARS</td><td>4 YEARS</td><td>5 YEARS</td><td>6 YEARS</td></tr><tr><td>SURGICAL TECHNICIAN</td><td>15.8357</td><td>16.2415</td><td>16.6580</td><td>17.0706</td><td>17.5233</td><td>17.9356</td><td></td></tr><tr><td>SURGICAL TECHNICIAN SR</td><td>16.2150</td><td>16.6306</td><td>17.0570</td><td>17.4701</td><td>17.9225</td><td>18.3354</td><td></td></tr><tr><td>TRAINEE SURGICAL ASST</td><td>16.4710</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>UNIT ASSISTANT</td><td>13.3371</td><td>13.6790</td><td>14.0297</td><td>14.3226</td><td>14.6324</td><td>14.9937</td><td></td></tr><tr><td>UNIT ASSISTANT SR</td><td>13.6134</td><td>13.9715</td><td>14.3300</td><td>14.5964</td><td>14.9829</td><td>15.3700</td><td></td></tr><tr><td>VISION SERVICES ASST I</td><td>13.0750</td><td>13.4104</td><td>13.7538</td><td>14.0689</td><td>14.3836</td><td>14.6401</td><td></td></tr><tr><td>VISION SERVICES ASST II</td><td>13.5345</td><td>13.8814</td><td>14.2372</td><td>14.5633</td><td>14.8890</td><td>15.1543</td><td></td></tr><tr><td>YARDKEEPER</td><td>12.5120</td><td>12.8331</td><td>13.1621</td><td>13.5068</td><td>13.8510</td><td></td><td></td></tr></table>",
+            "block_bbox": [
+                110,
+                208,
+                1117,
+                545
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    110.0,
+                    208.0
+                ],
+                [
+                    1117.0,
+                    208.0
+                ],
+                [
+                    1117.0,
+                    545.0
+                ],
+                [
+                    110.0,
+                    545.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "143",
+            "block_bbox": [
+                579,
+                1454,
+                621,
+                1480
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    578.9999389648438,
+                    1453.9998779296875
+                ],
+                [
+                    619.9999389648438,
+                    1453.9998779296875
+                ],
+                [
+                    619.9999389648438,
+                    1478.9998779296875
+                ],
+                [
+                    578.9999389648438,
+                    1478.9998779296875
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.8156672716140747,
+                "coordinate": [
+                    401,
+                    139,
+                    837,
+                    190
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        401.0,
+                        139.0
+                    ],
+                    [
+                        837.0,
+                        139.0
+                    ],
+                    [
+                        837.0,
+                        190.0
+                    ],
+                    [
+                        401.0,
+                        190.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9393205642700195,
+                "coordinate": [
+                    110,
+                    208,
+                    1117,
+                    545
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        110.0,
+                        208.0
+                    ],
+                    [
+                        1117.0,
+                        208.0
+                    ],
+                    [
+                        1117.0,
+                        545.0
+                    ],
+                    [
+                        110.0,
+                        545.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7608888745307922,
+                "coordinate": [
+                    579,
+                    1454,
+                    621,
+                    1480
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        578.9999389648438,
+                        1453.9998779296875
+                    ],
+                    [
+                        619.9999389648438,
+                        1453.9998779296875
+                    ],
+                    [
+                        619.9999389648438,
+                        1478.9998779296875
+                    ],
+                    [
+                        578.9999389648438,
+                        1478.9998779296875
+                    ]
+                ]
+            }
+        ]
+    }
+}

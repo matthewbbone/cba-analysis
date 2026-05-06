@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 303,
+    "page_count": 439,
+    "width": 1235,
+    "height": 1592,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                751,
+                115,
+                911,
+                132
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    750.9999389648438,
+                    115.0
+                ],
+                [
+                    909.9999389648438,
+                    115.0
+                ],
+                [
+                    909.9999389648438,
+                    131.0
+                ],
+                [
+                    750.9999389648438,
+                    131.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "VACATIONS",
+            "block_bbox": [
+                586,
+                147,
+                681,
+                167
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    585.9999389648438,
+                    146.99998474121094
+                ],
+                [
+                    679.9999389648438,
+                    146.99998474121094
+                ],
+                [
+                    679.9999389648438,
+                    165.99998474121094
+                ],
+                [
+                    585.9999389648438,
+                    165.99998474121094
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The schedule below shall replace the existing schedule in the Article - Vacations in all collective bargaining agreements. The revised schedule reflects administrative modifications to clarify Term of Employment periods and does not change the current provisions of the Article - Vacations nor the current practices regarding vacation eligibility for employees who terminate employment by resignation or who are terminated for cause.",
+            "block_bbox": [
+                353,
+                199,
+                913,
+                309
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    353.0,
+                    199.0
+                ],
+                [
+                    913.0,
+                    199.0
+                ],
+                [
+                    913.0,
+                    309.0
+                ],
+                [
+                    353.0,
+                    309.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "Eligible Vacation Days For Employee Leaving Company\nDuring Calendar Year\nDue To Resignation Or Termination for Cause",
+            "block_bbox": [
+                440,
+                325,
+                826,
+                382
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    440.0,
+                    325.0
+                ],
+                [
+                    826.0,
+                    325.0
+                ],
+                [
+                    826.0,
+                    382.0
+                ],
+                [
+                    440.0,
+                    382.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Month of Termination</td><td colspan=\"4\">Term of Employment Completed (or would have been completed) in the Calendar Year of the Termination</td></tr><tr><td></td><td>1 - 8 Years</td><td>7 - 14 Years</td><td>15 - 24 Years</td><td>25 and Over Years</td></tr><tr><td>January</td><td>1</td><td>2</td><td>2</td><td>2</td></tr><tr><td>February</td><td>2</td><td>3</td><td>4</td><td>4</td></tr><tr><td>March</td><td>3</td><td>4</td><td>5</td><td>7</td></tr><tr><td>April</td><td>3</td><td>5</td><td>7</td><td>9</td></tr><tr><td>May</td><td>4</td><td>6</td><td>9</td><td>11</td></tr><tr><td>June</td><td>5</td><td>8</td><td>10</td><td>13</td></tr><tr><td>July</td><td>6</td><td>9</td><td>12</td><td>15</td></tr><tr><td>August</td><td>7</td><td>10</td><td>14</td><td>17</td></tr><tr><td>September</td><td>7</td><td>11</td><td>16</td><td>19</td></tr><tr><td>October</td><td>8</td><td>13</td><td>17</td><td>21</td></tr><tr><td>November</td><td>9</td><td>14</td><td>19</td><td>23</td></tr><tr><td>December</td><td>10</td><td>15</td><td>20</td><td>25</td></tr></table>",
+            "block_bbox": [
+                390,
+                394,
+                870,
+                762
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    390.0,
+                    394.0
+                ],
+                [
+                    870.0,
+                    394.0
+                ],
+                [
+                    870.0,
+                    762.0
+                ],
+                [
+                    390.0,
+                    762.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "295",
+            "block_bbox": [
+                875,
+                910,
+                907,
+                928
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    875.0,
+                    910.0
+                ],
+                [
+                    906.0,
+                    910.0
+                ],
+                [
+                    906.0,
+                    927.0
+                ],
+                [
+                    875.0,
+                    927.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7979185581207275,
+                "coordinate": [
+                    751,
+                    115,
+                    911,
+                    132
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        750.9999389648438,
+                        115.0
+                    ],
+                    [
+                        909.9999389648438,
+                        115.0
+                    ],
+                    [
+                        909.9999389648438,
+                        131.0
+                    ],
+                    [
+                        750.9999389648438,
+                        131.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7303520441055298,
+                "coordinate": [
+                    586,
+                    147,
+                    681,
+                    167
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        585.9999389648438,
+                        146.99998474121094
+                    ],
+                    [
+                        679.9999389648438,
+                        146.99998474121094
+                    ],
+                    [
+                        679.9999389648438,
+                        165.99998474121094
+                    ],
+                    [
+                        585.9999389648438,
+                        165.99998474121094
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9200127124786377,
+                "coordinate": [
+                    353,
+                    199,
+                    913,
+                    309
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        353.0,
+                        199.0
+                    ],
+                    [
+                        913.0,
+                        199.0
+                    ],
+                    [
+                        913.0,
+                        309.0
+                    ],
+                    [
+                        353.0,
+                        309.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.7497801780700684,
+                "coordinate": [
+                    440,
+                    325,
+                    826,
+                    382
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        440.0,
+                        325.0
+                    ],
+                    [
+                        826.0,
+                        325.0
+                    ],
+                    [
+                        826.0,
+                        382.0
+                    ],
+                    [
+                        440.0,
+                        382.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9568413496017456,
+                "coordinate": [
+                    390,
+                    394,
+                    870,
+                    762
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        390.0,
+                        394.0
+                    ],
+                    [
+                        870.0,
+                        394.0
+                    ],
+                    [
+                        870.0,
+                        762.0
+                    ],
+                    [
+                        390.0,
+                        762.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6701357364654541,
+                "coordinate": [
+                    875,
+                    910,
+                    907,
+                    928
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        875.0,
+                        910.0
+                    ],
+                    [
+                        906.0,
+                        910.0
+                    ],
+                    [
+                        906.0,
+                        927.0
+                    ],
+                    [
+                        875.0,
+                        927.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

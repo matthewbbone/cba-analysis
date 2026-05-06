@@ -1,0 +1,1010 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 41,
+    "page_count": 206,
+    "width": 1224,
+    "height": 2016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "d. Accepts a career position at the same or higher salary level within the University; or",
+            "block_bbox": [
+                255,
+                97,
+                1119,
+                156
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    255.0,
+                    97.0
+                ],
+                [
+                    1119.0,
+                    97.0
+                ],
+                [
+                    1119.0,
+                    156.0
+                ],
+                [
+                    255.0,
+                    156.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "e. Accepts recall in any previously-held career position at a lower salary level.",
+            "block_bbox": [
+                253,
+                180,
+                1119,
+                235
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    253.0,
+                    180.0
+                ],
+                [
+                    1119.0,
+                    180.0
+                ],
+                [
+                    1119.0,
+                    235.0
+                ],
+                [
+                    253.0,
+                    235.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "F. PREFERENTIAL REHIRE",
+            "block_bbox": [
+                110,
+                262,
+                474,
+                292
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    110.0,
+                    262.0
+                ],
+                [
+                    474.0,
+                    262.0
+                ],
+                [
+                    474.0,
+                    292.0
+                ],
+                [
+                    110.0,
+                    292.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. A non-probationary career employee who is indefinitely laid off shall have preferential rehire status for an active, vacant career position, provided:",
+            "block_bbox": [
+                184,
+                318,
+                1119,
+                377
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    184.0,
+                    318.0
+                ],
+                [
+                    1119.0,
+                    318.0
+                ],
+                [
+                    1119.0,
+                    377.0
+                ],
+                [
+                    184.0,
+                    377.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a. The active, vacant career position is in the same bargaining unit and at the same campus/Laboratory as the position from which the employee was laid off; and",
+            "block_bbox": [
+                254,
+                401,
+                1120,
+                486
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    254.0,
+                    401.0
+                ],
+                [
+                    1120.0,
+                    401.0
+                ],
+                [
+                    1120.0,
+                    486.0
+                ],
+                [
+                    254.0,
+                    486.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b. The active, vacant career position is in a class with the same or lower salary range maximum as the class from which the employee was laid off; and",
+            "block_bbox": [
+                253,
+                512,
+                1119,
+                597
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    253.0,
+                    512.0
+                ],
+                [
+                    1119.0,
+                    512.0
+                ],
+                [
+                    1119.0,
+                    597.0
+                ],
+                [
+                    253.0,
+                    597.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "c. The active, vacant career position is at the same or lesser percentage of time as the position from which the employee was laid off.",
+            "block_bbox": [
+                254,
+                622,
+                1120,
+                679
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    254.0,
+                    622.0
+                ],
+                [
+                    1120.0,
+                    622.0
+                ],
+                [
+                    1120.0,
+                    679.0
+                ],
+                [
+                    254.0,
+                    679.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. The laid off non-probationary career employee will, along with any other laid off University employees, be given preferential consideration for an active, vacant career position which is being filled by the campus/Laboratory, provided the conditions in Section F.1.a-c above are met. First consideration for preferential rehire shall be given to employees who are on layoff status (not currently employed by the University) and who were laid off from the same department where the vacant position exists. In order to be placed in such a position, the employee must, as determined at the sole, non-grievable discretion of the University, be fully qualified to perform the duties of the position.",
+            "block_bbox": [
+                179,
+                704,
+                1121,
+                957
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    179.0,
+                    704.0
+                ],
+                [
+                    1121.0,
+                    704.0
+                ],
+                [
+                    1121.0,
+                    957.0
+                ],
+                [
+                    179.0,
+                    957.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3. The operation of preferential rehire consideration shall be consistent with the procedures established at the individual campus/Laboratory and shall be consistent with the University's management right to fill a position with the best available candidate for a vacant position.",
+            "block_bbox": [
+                183,
+                981,
+                1121,
+                1094
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    183.0,
+                    981.0
+                ],
+                [
+                    1121.0,
+                    981.0
+                ],
+                [
+                    1121.0,
+                    1094.0
+                ],
+                [
+                    183.0,
+                    1094.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "4. Employees who are eligible for preferential rehire status with less than five (5) years of seniority at the time the layoff occurs shall retain preferential rehire status eligibility for one year from effective the date of layoff. Employees who are eligible for preferential rehire status with five (5) years, but less than ten (10) years, seniority at the time the layoff occurs shall retain preferential rehire status eligibility for two (2) years from the effective date of layoff. Employees who are eligible for preferential rehire status with ten (10) years or more of seniority shall retain preferential rehire status eligibility for three (3) years. An employee may exercise his/her rights to preferential rehire immediately after the employee receives written notification of layoff and meets with the campus or Laboratory representative designated in the layoff notice.",
+            "block_bbox": [
+                179,
+                1118,
+                1121,
+                1426
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    179.0,
+                    1118.0
+                ],
+                [
+                    1121.0,
+                    1118.0
+                ],
+                [
+                    1121.0,
+                    1426.0
+                ],
+                [
+                    179.0,
+                    1426.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "5. Employees preferentially rehire from layoff status who fail to perform satisfactorily may, at any time during the six months following such return, be returned to layoff status. In addition, an employee, at his/her option, may request to be returned to layoff status within sixty (60) calendar days of rehire. Previous time on layoff status prior to rehire shall be deducted from an employee's period of eligibility.",
+            "block_bbox": [
+                182,
+                1449,
+                1121,
+                1619
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    182.0,
+                    1449.0
+                ],
+                [
+                    1121.0,
+                    1449.0
+                ],
+                [
+                    1121.0,
+                    1619.0
+                ],
+                [
+                    182.0,
+                    1619.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "6. Preferential Rehire Termination",
+            "block_bbox": [
+                183,
+                1643,
+                599,
+                1674
+            ],
+            "block_id": 11,
+            "block_order": 12,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    183.0,
+                    1643.0
+                ],
+                [
+                    599.0,
+                    1643.0
+                ],
+                [
+                    599.0,
+                    1674.0
+                ],
+                [
+                    183.0,
+                    1674.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The preferential rehire consideration described above shall terminate at the end of the period of eligibility described in Section F.4. above, or if an employee:",
+            "block_bbox": [
+                253,
+                1698,
+                1120,
+                1758
+            ],
+            "block_id": 12,
+            "block_order": 13,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    253.0,
+                    1698.0
+                ],
+                [
+                    1120.0,
+                    1698.0
+                ],
+                [
+                    1120.0,
+                    1758.0
+                ],
+                [
+                    253.0,
+                    1758.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a. Refuses an offer to return, at the same or greater percentage of time, to that department/division and class from which laid off; or",
+            "block_bbox": [
+                254,
+                1781,
+                1121,
+                1839
+            ],
+            "block_id": 13,
+            "block_order": 14,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    254.0,
+                    1781.0
+                ],
+                [
+                    1121.0,
+                    1781.0
+                ],
+                [
+                    1121.0,
+                    1839.0
+                ],
+                [
+                    254.0,
+                    1839.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b. Accepts any career position; or",
+            "block_bbox": [
+                255,
+                1864,
+                668,
+                1894
+            ],
+            "block_id": 14,
+            "block_order": 15,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    255.0,
+                    1864.0
+                ],
+                [
+                    668.0,
+                    1864.0
+                ],
+                [
+                    668.0,
+                    1894.0
+                ],
+                [
+                    255.0,
+                    1894.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "39",
+            "block_bbox": [
+                639,
+                1945,
+                673,
+                1969
+            ],
+            "block_id": 15,
+            "block_order": null,
+            "group_id": 15,
+            "block_polygon_points": [
+                [
+                    639.0,
+                    1945.0
+                ],
+                [
+                    672.0,
+                    1945.0
+                ],
+                [
+                    672.0,
+                    1968.0
+                ],
+                [
+                    639.0,
+                    1968.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8918390870094299,
+                "coordinate": [
+                    255,
+                    97,
+                    1119,
+                    156
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        255.0,
+                        97.0
+                    ],
+                    [
+                        1119.0,
+                        97.0
+                    ],
+                    [
+                        1119.0,
+                        156.0
+                    ],
+                    [
+                        255.0,
+                        156.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.895319938659668,
+                "coordinate": [
+                    253,
+                    180,
+                    1119,
+                    235
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        253.0,
+                        180.0
+                    ],
+                    [
+                        1119.0,
+                        180.0
+                    ],
+                    [
+                        1119.0,
+                        235.0
+                    ],
+                    [
+                        253.0,
+                        235.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8639459609985352,
+                "coordinate": [
+                    110,
+                    262,
+                    474,
+                    292
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        110.0,
+                        262.0
+                    ],
+                    [
+                        474.0,
+                        262.0
+                    ],
+                    [
+                        474.0,
+                        292.0
+                    ],
+                    [
+                        110.0,
+                        292.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9133619070053101,
+                "coordinate": [
+                    184,
+                    318,
+                    1119,
+                    377
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        184.0,
+                        318.0
+                    ],
+                    [
+                        1119.0,
+                        318.0
+                    ],
+                    [
+                        1119.0,
+                        377.0
+                    ],
+                    [
+                        184.0,
+                        377.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.922400176525116,
+                "coordinate": [
+                    254,
+                    401,
+                    1120,
+                    486
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        254.0,
+                        401.0
+                    ],
+                    [
+                        1120.0,
+                        401.0
+                    ],
+                    [
+                        1120.0,
+                        486.0
+                    ],
+                    [
+                        254.0,
+                        486.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9172552227973938,
+                "coordinate": [
+                    253,
+                    512,
+                    1119,
+                    597
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        253.0,
+                        512.0
+                    ],
+                    [
+                        1119.0,
+                        512.0
+                    ],
+                    [
+                        1119.0,
+                        597.0
+                    ],
+                    [
+                        253.0,
+                        597.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9138526320457458,
+                "coordinate": [
+                    254,
+                    622,
+                    1120,
+                    679
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        254.0,
+                        622.0
+                    ],
+                    [
+                        1120.0,
+                        622.0
+                    ],
+                    [
+                        1120.0,
+                        679.0
+                    ],
+                    [
+                        254.0,
+                        679.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9634671807289124,
+                "coordinate": [
+                    179,
+                    704,
+                    1121,
+                    957
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        179.0,
+                        704.0
+                    ],
+                    [
+                        1121.0,
+                        704.0
+                    ],
+                    [
+                        1121.0,
+                        957.0
+                    ],
+                    [
+                        179.0,
+                        957.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9408074617385864,
+                "coordinate": [
+                    183,
+                    981,
+                    1121,
+                    1094
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        183.0,
+                        981.0
+                    ],
+                    [
+                        1121.0,
+                        981.0
+                    ],
+                    [
+                        1121.0,
+                        1094.0
+                    ],
+                    [
+                        183.0,
+                        1094.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9660938382148743,
+                "coordinate": [
+                    179,
+                    1118,
+                    1121,
+                    1426
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        179.0,
+                        1118.0
+                    ],
+                    [
+                        1121.0,
+                        1118.0
+                    ],
+                    [
+                        1121.0,
+                        1426.0
+                    ],
+                    [
+                        179.0,
+                        1426.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9586312174797058,
+                "coordinate": [
+                    182,
+                    1449,
+                    1121,
+                    1619
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        182.0,
+                        1449.0
+                    ],
+                    [
+                        1121.0,
+                        1449.0
+                    ],
+                    [
+                        1121.0,
+                        1619.0
+                    ],
+                    [
+                        182.0,
+                        1619.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8743861317634583,
+                "coordinate": [
+                    183,
+                    1643,
+                    599,
+                    1674
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        183.0,
+                        1643.0
+                    ],
+                    [
+                        599.0,
+                        1643.0
+                    ],
+                    [
+                        599.0,
+                        1674.0
+                    ],
+                    [
+                        183.0,
+                        1674.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9195167422294617,
+                "coordinate": [
+                    253,
+                    1698,
+                    1120,
+                    1758
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        253.0,
+                        1698.0
+                    ],
+                    [
+                        1120.0,
+                        1698.0
+                    ],
+                    [
+                        1120.0,
+                        1758.0
+                    ],
+                    [
+                        253.0,
+                        1758.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9095225930213928,
+                "coordinate": [
+                    254,
+                    1781,
+                    1121,
+                    1839
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        254.0,
+                        1781.0
+                    ],
+                    [
+                        1121.0,
+                        1781.0
+                    ],
+                    [
+                        1121.0,
+                        1839.0
+                    ],
+                    [
+                        254.0,
+                        1839.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8437564373016357,
+                "coordinate": [
+                    255,
+                    1864,
+                    668,
+                    1894
+                ],
+                "order": 15,
+                "polygon_points": [
+                    [
+                        255.0,
+                        1864.0
+                    ],
+                    [
+                        668.0,
+                        1864.0
+                    ],
+                    [
+                        668.0,
+                        1894.0
+                    ],
+                    [
+                        255.0,
+                        1894.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7662248611450195,
+                "coordinate": [
+                    639,
+                    1945,
+                    673,
+                    1969
+                ],
+                "order": 16,
+                "polygon_points": [
+                    [
+                        639.0,
+                        1945.0
+                    ],
+                    [
+                        672.0,
+                        1945.0
+                    ],
+                    [
+                        672.0,
+                        1968.0
+                    ],
+                    [
+                        639.0,
+                        1968.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 20,
+    "page_count": 287,
+    "width": 723,
+    "height": 1009,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Article II",
+            "block_bbox": [
+                48,
+                41,
+                123,
+                63
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    48.0,
+                    41.0
+                ],
+                [
+                    122.0,
+                    41.0
+                ],
+                [
+                    122.0,
+                    62.0
+                ],
+                [
+                    48.0,
+                    62.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "work by additional Station Clerks who may be assigned to any new station.",
+            "block_bbox": [
+                75,
+                72,
+                627,
+                97
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    75.0,
+                    72.0
+                ],
+                [
+                    627.0,
+                    72.0
+                ],
+                [
+                    627.0,
+                    97.0
+                ],
+                [
+                    75.0,
+                    97.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(8) Number of Representatives – It is agreed that departmental representatives of the Union will be limited to one hundred and ten (110) and, along with the President, two (2) Vice-Presidents and Secretary-Treasurer, shall have top seniority rights as provided in Article III, paragraph (7); Article XII, paragraph (7); Article XI, paragraph (4)(b); Article XI, paragraph (5); and Article XI, paragraph (6)(c). The Union shall provide the Company with a list of such Union officers and departmental representatives.",
+            "block_bbox": [
+                49,
+                116,
+                629,
+                271
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    49.0,
+                    116.0
+                ],
+                [
+                    629.0,
+                    116.0
+                ],
+                [
+                    629.0,
+                    271.0
+                ],
+                [
+                    49.0,
+                    271.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The Union acknowledges the importance of exercising its discretion to select and assign department representatives so as not to interfere with the successful operations of the business, and to otherwise work with operation leaders to minimize the number of departmental representatives involved in meetings or special projects.",
+            "block_bbox": [
+                76,
+                289,
+                629,
+                403
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    76.0,
+                    289.0
+                ],
+                [
+                    629.0,
+                    289.0
+                ],
+                [
+                    629.0,
+                    403.0
+                ],
+                [
+                    76.0,
+                    403.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(9) Union Officer Pay/Coverage – The parties have agreed that effective with 1994 elections for Local #80, the Company will henceforth only pay for four (4) Union officers. Thereafter, the Company will provide coverage at the Company's expense, when one of the four (4) remaining officers is absent due to scheduled vacation.",
+            "block_bbox": [
+                47,
+                421,
+                629,
+                532
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    47.0,
+                    421.0
+                ],
+                [
+                    629.0,
+                    421.0
+                ],
+                [
+                    629.0,
+                    532.0
+                ],
+                [
+                    47.0,
+                    532.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "12",
+            "block_bbox": [
+                324,
+                928,
+                347,
+                947
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    324.0,
+                    928.0
+                ],
+                [
+                    346.0,
+                    928.0
+                ],
+                [
+                    346.0,
+                    946.0
+                ],
+                [
+                    324.0,
+                    946.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7368422746658325,
+                "coordinate": [
+                    48,
+                    41,
+                    123,
+                    63
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        48.0,
+                        41.0
+                    ],
+                    [
+                        122.0,
+                        41.0
+                    ],
+                    [
+                        122.0,
+                        62.0
+                    ],
+                    [
+                        48.0,
+                        62.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7656291127204895,
+                "coordinate": [
+                    75,
+                    72,
+                    627,
+                    97
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        75.0,
+                        72.0
+                    ],
+                    [
+                        627.0,
+                        72.0
+                    ],
+                    [
+                        627.0,
+                        97.0
+                    ],
+                    [
+                        75.0,
+                        97.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9359084963798523,
+                "coordinate": [
+                    49,
+                    116,
+                    629,
+                    271
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        49.0,
+                        116.0
+                    ],
+                    [
+                        629.0,
+                        116.0
+                    ],
+                    [
+                        629.0,
+                        271.0
+                    ],
+                    [
+                        49.0,
+                        271.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9254085421562195,
+                "coordinate": [
+                    76,
+                    289,
+                    629,
+                    403
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        76.0,
+                        289.0
+                    ],
+                    [
+                        629.0,
+                        289.0
+                    ],
+                    [
+                        629.0,
+                        403.0
+                    ],
+                    [
+                        76.0,
+                        403.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9318816065788269,
+                "coordinate": [
+                    47,
+                    421,
+                    629,
+                    532
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        47.0,
+                        421.0
+                    ],
+                    [
+                        629.0,
+                        421.0
+                    ],
+                    [
+                        629.0,
+                        532.0
+                    ],
+                    [
+                        47.0,
+                        532.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7317615151405334,
+                "coordinate": [
+                    324,
+                    928,
+                    347,
+                    947
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        324.0,
+                        928.0
+                    ],
+                    [
+                        346.0,
+                        928.0
+                    ],
+                    [
+                        346.0,
+                        946.0
+                    ],
+                    [
+                        324.0,
+                        946.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

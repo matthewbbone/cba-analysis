@@ -1,0 +1,888 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 260,
+    "page_count": 439,
+    "width": 1234,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                323,
+                106,
+                483,
+                124
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    322.99993896484375,
+                    106.0
+                ],
+                [
+                    481.99993896484375,
+                    106.0
+                ],
+                [
+                    481.99993896484375,
+                    123.0
+                ],
+                [
+                    322.99993896484375,
+                    123.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "SIGNING BONUS",
+            "block_bbox": [
+                536,
+                139,
+                666,
+                159
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    536.0,
+                    139.0
+                ],
+                [
+                    665.0,
+                    139.0
+                ],
+                [
+                    665.0,
+                    158.0
+                ],
+                [
+                    536.0,
+                    158.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Effective November 1, 2004, all eligible regular occupational employees will be granted a Signing Bonus of one thousand dollars ($1,000) in the form of a cash payment in accordance with the provisions specified herein.",
+            "block_bbox": [
+                323,
+                190,
+                871,
+                245
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    323.0,
+                    190.0
+                ],
+                [
+                    871.0,
+                    190.0
+                ],
+                [
+                    871.0,
+                    245.0
+                ],
+                [
+                    323.0,
+                    245.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Payment of the Signing Bonus is subject to the ratification of the 2004 collective bargaining agreement by December 17, 2004. Payment of the Signing Bonus shall be made no later than four (4) weeks following such date of ratification.",
+            "block_bbox": [
+                351,
+                249,
+                877,
+                321
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    351.0,
+                    249.0
+                ],
+                [
+                    877.0,
+                    249.0
+                ],
+                [
+                    877.0,
+                    321.0
+                ],
+                [
+                    351.0,
+                    321.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "2 Eligibility Criteria for Signing Bonus",
+            "block_bbox": [
+                323,
+                340,
+                601,
+                361
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    323.0,
+                    340.0
+                ],
+                [
+                    600.0,
+                    340.0
+                ],
+                [
+                    600.0,
+                    360.0
+                ],
+                [
+                    323.0,
+                    360.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) Employees on the active roll on the date of notice to the Company that ratification of the collective bargaining agreement in accordance with the preamble to the National Memorandum of Understanding has taken place, shall be eligible to receive a Signing Bonus.",
+            "block_bbox": [
+                355,
+                373,
+                876,
+                445
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    355.0,
+                    373.0
+                ],
+                [
+                    876.0,
+                    373.0
+                ],
+                [
+                    876.0,
+                    445.0
+                ],
+                [
+                    355.0,
+                    445.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) An eligible part-time employee shall receive a proportionate amount of the applicable full-time Signing Bonus based on the part-time employee's Equivalent Work Week as of November 1, 2004.",
+            "block_bbox": [
+                355,
+                449,
+                877,
+                504
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    355.0,
+                    449.0
+                ],
+                [
+                    877.0,
+                    449.0
+                ],
+                [
+                    877.0,
+                    504.0
+                ],
+                [
+                    355.0,
+                    504.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(c) Employees receiving the Extended Compensation Option of the Lucent Option Program (LCTOP) as of November 1, 2004 shall receive a Signing Bonus of five hundred dollars ($500).",
+            "block_bbox": [
+                354,
+                508,
+                877,
+                563
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    354.0,
+                    508.0
+                ],
+                [
+                    877.0,
+                    508.0
+                ],
+                [
+                    877.0,
+                    563.0
+                ],
+                [
+                    354.0,
+                    563.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3 Application of the Signing Bonus to Payments, Benefits, Allowances or Allotments.",
+            "block_bbox": [
+                323,
+                582,
+                838,
+                619
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    323.0,
+                    582.0
+                ],
+                [
+                    838.0,
+                    582.0
+                ],
+                [
+                    838.0,
+                    619.0
+                ],
+                [
+                    323.0,
+                    619.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) The Signing Bonus shall be considered as eligible compensation subject to pre-tax deferrals and employer match under the LTSSP.",
+            "block_bbox": [
+                355,
+                632,
+                876,
+                670
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    355.0,
+                    632.0
+                ],
+                [
+                    876.0,
+                    632.0
+                ],
+                [
+                    876.0,
+                    670.0
+                ],
+                [
+                    355.0,
+                    670.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) The Signing Bonus shall be subject to Federal, State and Local tax and FICA withholding.",
+            "block_bbox": [
+                355,
+                674,
+                876,
+                711
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    355.0,
+                    674.0
+                ],
+                [
+                    876.0,
+                    674.0
+                ],
+                [
+                    876.0,
+                    711.0
+                ],
+                [
+                    355.0,
+                    711.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(c) Where appropriate, the Signing Bonus will be used in determining deductions for Union Dues.",
+            "block_bbox": [
+                356,
+                716,
+                876,
+                753
+            ],
+            "block_id": 11,
+            "block_order": 11,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    356.0,
+                    716.0
+                ],
+                [
+                    876.0,
+                    716.0
+                ],
+                [
+                    876.0,
+                    753.0
+                ],
+                [
+                    356.0,
+                    753.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(d) The Signing Bonus will not be part of the employee's Standard Rate of Pay or Basic wages for any other purpose nor shall it enter into the Standard Overtime Adjustment formula nor into the computation of any payments made under any pension or benefit plan, fringe benefit, allowance or differential.",
+            "block_bbox": [
+                356,
+                757,
+                877,
+                846
+            ],
+            "block_id": 12,
+            "block_order": 12,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    356.0,
+                    757.0
+                ],
+                [
+                    877.0,
+                    757.0
+                ],
+                [
+                    877.0,
+                    846.0
+                ],
+                [
+                    356.0,
+                    846.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "252",
+            "block_bbox": [
+                324,
+                897,
+                354,
+                914
+            ],
+            "block_id": 13,
+            "block_order": null,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    324.0,
+                    897.0
+                ],
+                [
+                    353.0,
+                    897.0
+                ],
+                [
+                    353.0,
+                    913.0
+                ],
+                [
+                    324.0,
+                    913.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7612648606300354,
+                "coordinate": [
+                    323,
+                    106,
+                    483,
+                    124
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        322.99993896484375,
+                        106.0
+                    ],
+                    [
+                        481.99993896484375,
+                        106.0
+                    ],
+                    [
+                        481.99993896484375,
+                        123.0
+                    ],
+                    [
+                        322.99993896484375,
+                        123.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7620903849601746,
+                "coordinate": [
+                    536,
+                    139,
+                    666,
+                    159
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        536.0,
+                        139.0
+                    ],
+                    [
+                        665.0,
+                        139.0
+                    ],
+                    [
+                        665.0,
+                        158.0
+                    ],
+                    [
+                        536.0,
+                        158.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9177744388580322,
+                "coordinate": [
+                    323,
+                    190,
+                    871,
+                    245
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        323.0,
+                        190.0
+                    ],
+                    [
+                        871.0,
+                        190.0
+                    ],
+                    [
+                        871.0,
+                        245.0
+                    ],
+                    [
+                        323.0,
+                        245.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9122900366783142,
+                "coordinate": [
+                    351,
+                    249,
+                    877,
+                    321
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        351.0,
+                        249.0
+                    ],
+                    [
+                        877.0,
+                        249.0
+                    ],
+                    [
+                        877.0,
+                        321.0
+                    ],
+                    [
+                        351.0,
+                        321.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7378971576690674,
+                "coordinate": [
+                    323,
+                    340,
+                    601,
+                    361
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        323.0,
+                        340.0
+                    ],
+                    [
+                        600.0,
+                        340.0
+                    ],
+                    [
+                        600.0,
+                        360.0
+                    ],
+                    [
+                        323.0,
+                        360.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9258525967597961,
+                "coordinate": [
+                    355,
+                    373,
+                    876,
+                    445
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        355.0,
+                        373.0
+                    ],
+                    [
+                        876.0,
+                        373.0
+                    ],
+                    [
+                        876.0,
+                        445.0
+                    ],
+                    [
+                        355.0,
+                        445.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9191684722900391,
+                "coordinate": [
+                    355,
+                    449,
+                    877,
+                    504
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        355.0,
+                        449.0
+                    ],
+                    [
+                        877.0,
+                        449.0
+                    ],
+                    [
+                        877.0,
+                        504.0
+                    ],
+                    [
+                        355.0,
+                        504.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9082233905792236,
+                "coordinate": [
+                    354,
+                    508,
+                    877,
+                    563
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        354.0,
+                        508.0
+                    ],
+                    [
+                        877.0,
+                        508.0
+                    ],
+                    [
+                        877.0,
+                        563.0
+                    ],
+                    [
+                        354.0,
+                        563.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8210933208465576,
+                "coordinate": [
+                    323,
+                    582,
+                    838,
+                    619
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        323.0,
+                        582.0
+                    ],
+                    [
+                        838.0,
+                        582.0
+                    ],
+                    [
+                        838.0,
+                        619.0
+                    ],
+                    [
+                        323.0,
+                        619.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8874689936637878,
+                "coordinate": [
+                    355,
+                    632,
+                    876,
+                    670
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        355.0,
+                        632.0
+                    ],
+                    [
+                        876.0,
+                        632.0
+                    ],
+                    [
+                        876.0,
+                        670.0
+                    ],
+                    [
+                        355.0,
+                        670.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.891376256942749,
+                "coordinate": [
+                    355,
+                    674,
+                    876,
+                    711
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        355.0,
+                        674.0
+                    ],
+                    [
+                        876.0,
+                        674.0
+                    ],
+                    [
+                        876.0,
+                        711.0
+                    ],
+                    [
+                        355.0,
+                        711.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8950411677360535,
+                "coordinate": [
+                    356,
+                    716,
+                    876,
+                    753
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        356.0,
+                        716.0
+                    ],
+                    [
+                        876.0,
+                        716.0
+                    ],
+                    [
+                        876.0,
+                        753.0
+                    ],
+                    [
+                        356.0,
+                        753.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9363645315170288,
+                "coordinate": [
+                    356,
+                    757,
+                    877,
+                    846
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        356.0,
+                        757.0
+                    ],
+                    [
+                        877.0,
+                        757.0
+                    ],
+                    [
+                        877.0,
+                        846.0
+                    ],
+                    [
+                        356.0,
+                        846.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7005419135093689,
+                "coordinate": [
+                    324,
+                    897,
+                    354,
+                    914
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        324.0,
+                        897.0
+                    ],
+                    [
+                        353.0,
+                        897.0
+                    ],
+                    [
+                        353.0,
+                        913.0
+                    ],
+                    [
+                        324.0,
+                        913.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

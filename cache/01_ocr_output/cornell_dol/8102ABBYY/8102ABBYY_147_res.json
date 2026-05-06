@@ -1,0 +1,522 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 147,
+    "page_count": 439,
+    "width": 1234,
+    "height": 1592,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article 24",
+            "block_bbox": [
+                838,
+                79,
+                908,
+                97
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    838.0,
+                    79.0
+                ],
+                [
+                    907.0,
+                    79.0
+                ],
+                [
+                    907.0,
+                    96.0
+                ],
+                [
+                    838.0,
+                    96.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 24 • AGENCY SHOP*",
+            "block_bbox": [
+                518,
+                142,
+                742,
+                161
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    518.0,
+                    142.0
+                ],
+                [
+                    741.0,
+                    142.0
+                ],
+                [
+                    741.0,
+                    160.0
+                ],
+                [
+                    518.0,
+                    160.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Each Employee who is a member of the Union or who is obligated to tender to the Union amounts equal to periodic dues on the effective date of this Agreement, or who later becomes a member, and all Employees entering into the bargaining unit on or after the effective date of this Agreement, shall as a condition of employment, pay or tender to the Union amounts equal to the periodic dues applicable to members, for the period from such effective date or, in the case of Employees entering into the bargaining unit after the effective date, on or after the Thirtieth (30th) day after such entrance, whichever of these dates is later, until the termination of this Agreement.",
+            "block_bbox": [
+                352,
+                175,
+                910,
+                334
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    352.0,
+                    175.0
+                ],
+                [
+                    910.0,
+                    175.0
+                ],
+                [
+                    910.0,
+                    334.0
+                ],
+                [
+                    352.0,
+                    334.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Each Employee who is a member of the bargaining unit on or before the effective date of this Agreement and who on the effective date of this Agreement was not required as a condition of employment to pay or tender to the Union amounts equal to the periodic dues applicable to members, shall, as a condition of employment, pay or tender to the Union amounts equal to the periodic dues applicable to members for the period beginning thirty (30) days after the effective date of this Agreement, until the termination of this Agreement.",
+            "block_bbox": [
+                373,
+                339,
+                909,
+                480
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    373.0,
+                    339.0
+                ],
+                [
+                    909.0,
+                    339.0
+                ],
+                [
+                    909.0,
+                    480.0
+                ],
+                [
+                    373.0,
+                    480.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2 The condition of employment specified above shall not apply during periods of formal separation** from the bargaining unit by any such Employee but shall reapply to such Employee on the thirtieth (30th) day following his or her return to the bargaining unit.",
+            "block_bbox": [
+                350,
+                485,
+                908,
+                557
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    350.0,
+                    485.0
+                ],
+                [
+                    908.0,
+                    485.0
+                ],
+                [
+                    908.0,
+                    557.0
+                ],
+                [
+                    350.0,
+                    557.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": " $ ^{*} $ Where permitted by law.",
+            "block_bbox": [
+                373,
+                562,
+                554,
+                582
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    373.0,
+                    562.0
+                ],
+                [
+                    553.0,
+                    562.0
+                ],
+                [
+                    553.0,
+                    581.0
+                ],
+                [
+                    373.0,
+                    581.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "** The term \"formal separation\" includes transfers out of the bargaining unit, removal from the payroll of the Company, and Leaves of Absence of more than one (1) month duration.",
+            "block_bbox": [
+                372,
+                586,
+                906,
+                642
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    372.0,
+                    586.0
+                ],
+                [
+                    906.0,
+                    586.0
+                ],
+                [
+                    906.0,
+                    642.0
+                ],
+                [
+                    372.0,
+                    642.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "139",
+            "block_bbox": [
+                876,
+                911,
+                905,
+                929
+            ],
+            "block_id": 7,
+            "block_order": null,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    876.0,
+                    911.0
+                ],
+                [
+                    904.0,
+                    911.0
+                ],
+                [
+                    904.0,
+                    928.0
+                ],
+                [
+                    876.0,
+                    928.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8013024926185608,
+                "coordinate": [
+                    838,
+                    79,
+                    908,
+                    97
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        838.0,
+                        79.0
+                    ],
+                    [
+                        907.0,
+                        79.0
+                    ],
+                    [
+                        907.0,
+                        96.0
+                    ],
+                    [
+                        838.0,
+                        96.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8230156302452087,
+                "coordinate": [
+                    518,
+                    142,
+                    742,
+                    161
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        518.0,
+                        142.0
+                    ],
+                    [
+                        741.0,
+                        142.0
+                    ],
+                    [
+                        741.0,
+                        160.0
+                    ],
+                    [
+                        518.0,
+                        160.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.947807252407074,
+                "coordinate": [
+                    352,
+                    175,
+                    910,
+                    334
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        352.0,
+                        175.0
+                    ],
+                    [
+                        910.0,
+                        175.0
+                    ],
+                    [
+                        910.0,
+                        334.0
+                    ],
+                    [
+                        352.0,
+                        334.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9460859298706055,
+                "coordinate": [
+                    373,
+                    339,
+                    909,
+                    480
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        373.0,
+                        339.0
+                    ],
+                    [
+                        909.0,
+                        339.0
+                    ],
+                    [
+                        909.0,
+                        480.0
+                    ],
+                    [
+                        373.0,
+                        480.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9263335466384888,
+                "coordinate": [
+                    350,
+                    485,
+                    908,
+                    557
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        350.0,
+                        485.0
+                    ],
+                    [
+                        908.0,
+                        485.0
+                    ],
+                    [
+                        908.0,
+                        557.0
+                    ],
+                    [
+                        350.0,
+                        557.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7917838096618652,
+                "coordinate": [
+                    373,
+                    562,
+                    554,
+                    582
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        373.0,
+                        562.0
+                    ],
+                    [
+                        553.0,
+                        562.0
+                    ],
+                    [
+                        553.0,
+                        581.0
+                    ],
+                    [
+                        373.0,
+                        581.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9039820432662964,
+                "coordinate": [
+                    372,
+                    586,
+                    906,
+                    642
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        372.0,
+                        586.0
+                    ],
+                    [
+                        906.0,
+                        586.0
+                    ],
+                    [
+                        906.0,
+                        642.0
+                    ],
+                    [
+                        372.0,
+                        642.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6703174114227295,
+                "coordinate": [
+                    876,
+                    911,
+                    905,
+                    929
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        876.0,
+                        911.0
+                    ],
+                    [
+                        904.0,
+                        911.0
+                    ],
+                    [
+                        904.0,
+                        928.0
+                    ],
+                    [
+                        876.0,
+                        928.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

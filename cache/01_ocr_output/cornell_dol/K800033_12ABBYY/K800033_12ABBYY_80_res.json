@@ -1,0 +1,186 @@
+{
+    "input_path": "cache/cornell_dol/K800033_12ABBYY.pdf",
+    "page_index": 80,
+    "page_count": 123,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td colspan=\"8\">Appendix B-1 Weekly Schedule of Weekly Salary Rates Unit 9</td></tr><tr><td colspan=\"8\"></td></tr></table>",
+            "block_bbox": [
+                175,
+                249,
+                1064,
+                1243
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    175.0,
+                    249.0
+                ],
+                [
+                    1064.0,
+                    249.0
+                ],
+                [
+                    1064.0,
+                    1243.0
+                ],
+                [
+                    175.0,
+                    1243.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "76",
+            "block_bbox": [
+                598,
+                1460,
+                627,
+                1482
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    598.0,
+                    1460.0
+                ],
+                [
+                    626.0,
+                    1460.0
+                ],
+                [
+                    626.0,
+                    1481.0
+                ],
+                [
+                    598.0,
+                    1481.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.3229033648967743,
+                "coordinate": [
+                    181,
+                    668,
+                    197,
+                    820
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        181.0,
+                        668.0
+                    ],
+                    [
+                        196.0,
+                        668.0
+                    ],
+                    [
+                        196.0,
+                        819.0
+                    ],
+                    [
+                        181.0,
+                        819.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9767910242080688,
+                "coordinate": [
+                    175,
+                    249,
+                    1064,
+                    1243
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        175.0,
+                        249.0
+                    ],
+                    [
+                        1064.0,
+                        249.0
+                    ],
+                    [
+                        1064.0,
+                        1243.0
+                    ],
+                    [
+                        175.0,
+                        1243.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7266256213188171,
+                "coordinate": [
+                    598,
+                    1460,
+                    627,
+                    1482
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        598.0,
+                        1460.0
+                    ],
+                    [
+                        626.0,
+                        1460.0
+                    ],
+                    [
+                        626.0,
+                        1481.0
+                    ],
+                    [
+                        598.0,
+                        1481.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

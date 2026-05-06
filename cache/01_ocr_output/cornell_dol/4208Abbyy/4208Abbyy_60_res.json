@@ -1,0 +1,186 @@
+{
+    "input_path": "cache/cornell_dol/4208Abbyy.pdf",
+    "page_index": 60,
+    "page_count": 128,
+    "width": 778,
+    "height": 1216,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "content",
+            "block_content": "Changes in Status. An employee will not be able to make enrollment changes until the next annual enrollment period unless the employee experiences one of the qualified changes in status described in this section. Any change in enrollment must be consistent with the change in status. To be consistent, the event must cause the employee or family member to gain or lose eligibility for Company-sponsored employer health care coverage or health care coverage sponsored by a spouse's or dependent child's employer, and the election change must be on account of and correspond with the employee's or employee's family member's gain or loss of eligibility.\n\nQualified changes in status include the following:\n\n1. The employee marries, divorces, or becomes legally separated, or the marriage is annulled.\n2. The employee enters into or dissolves a same-gender domestic partner relationship.\n3. The employee acquires a new, eligible dependent child, such as by birth, adoption, or placement for adoption.\n4. The employee's spouse or dependent child dies.\n5. The employee's spouse or dependent child starts or stops working.\n6. The employee, spouse, or dependent child has any other change in employment status that affects eligibility for coverage such as changing from full time to part time (or part time to full time), salaried to hourly (or hourly to salaried), strike or lockout, or beginning or returning from a leave of absence.\n7. The employee, spouse, or dependent child experiences a significant increase in the cost of employer-sponsored health care coverage or the employer-sponsored health care coverage ends, including expiration of COBRA coverage.\n8. The employee, spouse, or dependent child experiences a significant curtailment or cessation of employer-sponsored health care coverage.\n9. The employee, spouse, or dependent child becomes eligible or ineligible for Medicare or Medicaid.\n10. The employee's dependent child becomes eligible for, or no longer is eligible for, health care coverage due to age limits, student status, or a similar eligibility requirement.\n11. The employee's spouse or dependent child makes an enrollment change in his or her employer-sponsored health care coverage, either because of a qualified change in status or an annual enrollment.\n12. The employee, spouse, or dependent child changes place of residence or work, affecting access to care within the current plan.\n13. The employee is transferred to a different division, affecting eligibility for benefits under Company-sponsored health care plans.\n14. The employee also may change an election to comply with a qualified medical child support order (QMCSO) to provide or cancel coverage for a child resulting from a divorce, annulment, or change in legal custody.\n15. In most situations, the employee must request enrollment within sixty (60) days after the qualified event. An employee can enroll a new dependent within one hundred twenty (120) days following the employee's marriage or entering into a same-gender domestic partner relationship or a dependent child's birth, adoption, or placement for adoption. To request enrollment for a new dependent more",
+            "block_bbox": [
+                80,
+                74,
+                740,
+                1151
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    80.0,
+                    74.0
+                ],
+                [
+                    740.0,
+                    74.0
+                ],
+                [
+                    740.0,
+                    1151.0
+                ],
+                [
+                    80.0,
+                    1151.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "A.7",
+            "block_bbox": [
+                374,
+                1168,
+                400,
+                1185
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    374.0,
+                    1168.0
+                ],
+                [
+                    399.0,
+                    1168.0
+                ],
+                [
+                    399.0,
+                    1184.0
+                ],
+                [
+                    374.0,
+                    1184.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.9327065348625183,
+                "coordinate": [
+                    80,
+                    74,
+                    740,
+                    1151
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        80.0,
+                        74.0
+                    ],
+                    [
+                        740.0,
+                        74.0
+                    ],
+                    [
+                        740.0,
+                        1151.0
+                    ],
+                    [
+                        80.0,
+                        1151.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7647914886474609,
+                "coordinate": [
+                    374,
+                    1168,
+                    400,
+                    1185
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        374.0,
+                        1168.0
+                    ],
+                    [
+                        399.0,
+                        1168.0
+                    ],
+                    [
+                        399.0,
+                        1184.0
+                    ],
+                    [
+                        374.0,
+                        1184.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 2,
+                "label": "aside_text",
+                "score": 0.7009488940238953,
+                "coordinate": [
+                    717,
+                    66,
+                    739,
+                    1150
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        721.0,
+                        66.0
+                    ],
+                    [
+                        738.7095947265625,
+                        66.0665283203125
+                    ],
+                    [
+                        734.6422119140625,
+                        1149.0137939453125
+                    ],
+                    [
+                        716.9326171875,
+                        1148.947265625
+                    ]
+                ]
+            }
+        ]
+    }
+}

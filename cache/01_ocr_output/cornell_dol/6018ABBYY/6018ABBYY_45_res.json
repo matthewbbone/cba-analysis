@@ -1,0 +1,339 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 45,
+    "page_count": 287,
+    "width": 726,
+    "height": 1011,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "ARTICLE V",
+            "block_bbox": [
+                608,
+                50,
+                682,
+                68
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    608.0,
+                    50.0
+                ],
+                [
+                    681.0,
+                    50.0
+                ],
+                [
+                    681.0,
+                    67.0
+                ],
+                [
+                    608.0,
+                    67.0
+                ]
+            ]
+        },
+        {
+            "block_label": "abstract",
+            "block_content": "An employee who still has an occupational disability after expiration of his or her benefits under Part IV, Section (3), shall be examined by the Company doctor. If in the opinion of the Company doctor, the employee may recover within one (1) year, the employee shall be placed on medical leave of absence of up to fifty-two (52) weeks. An employee shall not receive any compensation or any other Company benefits while on a medical leave of absence and shall be paid in full for all unused earned and accrued vacation credits due him or her before being placed on such leave. While an employee is on such leave and upon termination thereof, his or her rights under the Retirement Plan, Group Life Insurance Plan, Traditional Medical Plan or Complementary Medical Plan or Dental Plan, Prescription Drug Co-Pay, and Surviving Spouse Annuity Plan shall be governed by the provisions of such plans. If, in the opinion of the Company doctor, the employee will not recover within one (1) year, or, if the employee has been placed on a medical leave of absence, and, in the opinion of the Company doctor, he or she has not recovered at the expiration of such leave, then the employee shall be retired under the Permanent and Total Disability provisions of the Retirement Plan, if he or she is eligible in accordance with the provisions of the Retirement Plan. If the employee is not eligible for retirement under the Permanent and Total Disability provisions of the Retirement Plan, he or she shall be terminated. Should a doctor of the employee's choice dispute the Company doctor's opinion of the recovery or expected recovery time, the employee shall be examined by the medical staff of a hospital which has been mutually agreed upon and such staff shall make the final determination of his or her recovery or expected recovery time. The cost of the examinations by such medical staff and transportation costs to and from such hospital for these examinations shall be borne by the Company.",
+            "block_bbox": [
+                126,
+                80,
+                685,
+                671
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    126.0,
+                    80.0
+                ],
+                [
+                    685.0,
+                    80.0
+                ],
+                [
+                    685.0,
+                    671.0
+                ],
+                [
+                    126.0,
+                    671.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "(7) Group Benefit Plans",
+            "block_bbox": [
+                99,
+                692,
+                312,
+                715
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    99.0,
+                    692.0
+                ],
+                [
+                    312.0,
+                    692.0
+                ],
+                [
+                    312.0,
+                    715.0
+                ],
+                [
+                    99.0,
+                    715.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "While an employee is on disability and receiving benefits under Part IV, Section (3), his or her coverage and payroll deductions, if any, for hospital-medical-surgical coverage, or Health Maintenance Insurance Plan Dental coverage, Prescription Drug Co-Pay Plan, Surviving Spouse Annuity coverage and Group Life Insurance Plans shall remain in full force and effect. If, during the period of his or her absence due to disability, he or she should become eligible for an increase in such coverage or benefits, such an increase will be made available to him or her subject to the underwriting practices of the carrier involved.",
+            "block_bbox": [
+                125,
+                725,
+                681,
+                925
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    125.0,
+                    725.0
+                ],
+                [
+                    681.0,
+                    725.0
+                ],
+                [
+                    681.0,
+                    925.0
+                ],
+                [
+                    125.0,
+                    925.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "37",
+            "block_bbox": [
+                379,
+                939,
+                401,
+                955
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    379.0,
+                    939.0
+                ],
+                [
+                    400.0,
+                    939.0
+                ],
+                [
+                    400.0,
+                    954.0
+                ],
+                [
+                    379.0,
+                    954.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.806377649307251,
+                "coordinate": [
+                    608,
+                    50,
+                    682,
+                    68
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        608.0,
+                        50.0
+                    ],
+                    [
+                        681.0,
+                        50.0
+                    ],
+                    [
+                        681.0,
+                        67.0
+                    ],
+                    [
+                        608.0,
+                        67.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 0,
+                "label": "abstract",
+                "score": 0.8574549555778503,
+                "coordinate": [
+                    126,
+                    80,
+                    685,
+                    671
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        126.0,
+                        80.0
+                    ],
+                    [
+                        685.0,
+                        80.0
+                    ],
+                    [
+                        685.0,
+                        671.0
+                    ],
+                    [
+                        126.0,
+                        671.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.813029944896698,
+                "coordinate": [
+                    99,
+                    692,
+                    312,
+                    715
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        99.0,
+                        692.0
+                    ],
+                    [
+                        312.0,
+                        692.0
+                    ],
+                    [
+                        312.0,
+                        715.0
+                    ],
+                    [
+                        99.0,
+                        715.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.953018307685852,
+                "coordinate": [
+                    125,
+                    725,
+                    681,
+                    925
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        125.0,
+                        725.0
+                    ],
+                    [
+                        681.0,
+                        725.0
+                    ],
+                    [
+                        681.0,
+                        925.0
+                    ],
+                    [
+                        125.0,
+                        925.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7315223217010498,
+                "coordinate": [
+                    379,
+                    939,
+                    401,
+                    955
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        379.0,
+                        939.0
+                    ],
+                    [
+                        400.0,
+                        939.0
+                    ],
+                    [
+                        400.0,
+                        954.0
+                    ],
+                    [
+                        379.0,
+                        954.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

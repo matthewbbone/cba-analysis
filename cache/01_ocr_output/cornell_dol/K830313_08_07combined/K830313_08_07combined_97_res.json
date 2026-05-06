@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_dol/K830313_08_07combined.pdf",
+    "page_index": 97,
+    "page_count": 139,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Jeffco Schools: JCEA Negotiated Agreement",
+            "block_bbox": [
+                36,
+                28,
+                478,
+                54
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    28.0
+                ],
+                [
+                    478.0,
+                    28.0
+                ],
+                [
+                    478.0,
+                    54.0
+                ],
+                [
+                    36.0,
+                    54.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 1 of 1",
+            "block_bbox": [
+                1079,
+                27,
+                1194,
+                55
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    1079.0,
+                    27.0
+                ],
+                [
+                    1194.0,
+                    27.0
+                ],
+                [
+                    1194.0,
+                    55.0
+                ],
+                [
+                    1079.0,
+                    55.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 38",
+            "block_bbox": [
+                36,
+                67,
+                216,
+                97
+            ],
+            "block_id": 2,
+            "block_order": 1,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    67.0
+                ],
+                [
+                    216.0,
+                    67.0
+                ],
+                [
+                    216.0,
+                    97.0
+                ],
+                [
+                    36.0,
+                    97.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Association Representatives",
+            "block_bbox": [
+                36,
+                125,
+                290,
+                148
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    125.0
+                ],
+                [
+                    290.0,
+                    125.0
+                ],
+                [
+                    290.0,
+                    148.0
+                ],
+                [
+                    36.0,
+                    148.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "38-1 The Association shall have the right to have a faculty representative(s) at each school.",
+            "block_bbox": [
+                35,
+                172,
+                770,
+                197
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    35.0,
+                    172.0
+                ],
+                [
+                    770.0,
+                    172.0
+                ],
+                [
+                    770.0,
+                    197.0
+                ],
+                [
+                    35.0,
+                    197.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "38-2 The principal of each school and the Association faculty representative(s) will meet at the request of either party to discuss the administration of this Agreement.",
+            "block_bbox": [
+                36,
+                221,
+                1087,
+                266
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    221.0
+                ],
+                [
+                    1087.0,
+                    221.0
+                ],
+                [
+                    1087.0,
+                    266.0
+                ],
+                [
+                    36.0,
+                    266.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "38-3 The faculty representative(s) shall have the right to schedule Association meetings before or after school, where such meetings do not interfere with the normal teaching duties of teachers. The faculty representative shall have the right to carry on Association business when it does not interfere with the normal teaching responsibilities and duties of teachers.",
+            "block_bbox": [
+                36,
+                290,
+                1163,
+                356
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    290.0
+                ],
+                [
+                    1163.0,
+                    290.0
+                ],
+                [
+                    1163.0,
+                    356.0
+                ],
+                [
+                    36.0,
+                    356.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "38-4 The faculty representative shall not be assigned any duties in excess of other teachers in the building.",
+            "block_bbox": [
+                36,
+                380,
+                893,
+                405
+            ],
+            "block_id": 7,
+            "block_order": 6,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    380.0
+                ],
+                [
+                    893.0,
+                    380.0
+                ],
+                [
+                    893.0,
+                    405.0
+                ],
+                [
+                    36.0,
+                    405.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Jefferson County Public Schools\nJefferson County, Colorado",
+            "block_bbox": [
+                471,
+                450,
+                760,
+                496
+            ],
+            "block_id": 8,
+            "block_order": 7,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    471.0,
+                    450.0
+                ],
+                [
+                    760.0,
+                    450.0
+                ],
+                [
+                    760.0,
+                    496.0
+                ],
+                [
+                    471.0,
+                    496.0
+                ]
+            ]
+        },
+        {
+            "block_label": "image",
+            "block_content": "",
+            "block_bbox": [
+                547,
+                515,
+                683,
+                586
+            ],
+            "block_id": 9,
+            "block_order": null,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    547.0,
+                    515.0
+                ],
+                [
+                    683.0,
+                    515.0
+                ],
+                [
+                    683.0,
+                    586.0
+                ],
+                [
+                    547.0,
+                    586.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "http://jeffcoweb.jeffco.k12.co.us/emprelations/jcea/article_38.html",
+            "block_bbox": [
+                38,
+                1540,
+                687,
+                1569
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    38.0,
+                    1540.0
+                ],
+                [
+                    687.0,
+                    1540.0
+                ],
+                [
+                    687.0,
+                    1569.0
+                ],
+                [
+                    38.0,
+                    1569.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "2/5/04",
+            "block_bbox": [
+                1127,
+                1540,
+                1193,
+                1566
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    1127.0,
+                    1540.0
+                ],
+                [
+                    1192.0,
+                    1540.0
+                ],
+                [
+                    1192.0,
+                    1565.0
+                ],
+                [
+                    1127.0,
+                    1565.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7706703543663025,
+                "coordinate": [
+                    36,
+                    28,
+                    478,
+                    54
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        36.0,
+                        28.0
+                    ],
+                    [
+                        478.0,
+                        28.0
+                    ],
+                    [
+                        478.0,
+                        54.0
+                    ],
+                    [
+                        36.0,
+                        54.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8096307516098022,
+                "coordinate": [
+                    1079,
+                    27,
+                    1194,
+                    55
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        1079.0,
+                        27.0
+                    ],
+                    [
+                        1194.0,
+                        27.0
+                    ],
+                    [
+                        1194.0,
+                        55.0
+                    ],
+                    [
+                        1079.0,
+                        55.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5136147737503052,
+                "coordinate": [
+                    36,
+                    67,
+                    216,
+                    97
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        36.0,
+                        67.0
+                    ],
+                    [
+                        216.0,
+                        67.0
+                    ],
+                    [
+                        216.0,
+                        97.0
+                    ],
+                    [
+                        36.0,
+                        97.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8468379378318787,
+                "coordinate": [
+                    36,
+                    125,
+                    290,
+                    148
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        36.0,
+                        125.0
+                    ],
+                    [
+                        290.0,
+                        125.0
+                    ],
+                    [
+                        290.0,
+                        148.0
+                    ],
+                    [
+                        36.0,
+                        148.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8470175862312317,
+                "coordinate": [
+                    35,
+                    172,
+                    770,
+                    197
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        35.0,
+                        172.0
+                    ],
+                    [
+                        770.0,
+                        172.0
+                    ],
+                    [
+                        770.0,
+                        197.0
+                    ],
+                    [
+                        35.0,
+                        197.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8941178917884827,
+                "coordinate": [
+                    36,
+                    221,
+                    1087,
+                    266
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        36.0,
+                        221.0
+                    ],
+                    [
+                        1087.0,
+                        221.0
+                    ],
+                    [
+                        1087.0,
+                        266.0
+                    ],
+                    [
+                        36.0,
+                        266.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9222620725631714,
+                "coordinate": [
+                    36,
+                    290,
+                    1163,
+                    356
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        36.0,
+                        290.0
+                    ],
+                    [
+                        1163.0,
+                        290.0
+                    ],
+                    [
+                        1163.0,
+                        356.0
+                    ],
+                    [
+                        36.0,
+                        356.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8430425524711609,
+                "coordinate": [
+                    36,
+                    380,
+                    893,
+                    405
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        36.0,
+                        380.0
+                    ],
+                    [
+                        893.0,
+                        380.0
+                    ],
+                    [
+                        893.0,
+                        405.0
+                    ],
+                    [
+                        36.0,
+                        405.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8802225589752197,
+                "coordinate": [
+                    471,
+                    450,
+                    760,
+                    496
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        471.0,
+                        450.0
+                    ],
+                    [
+                        760.0,
+                        450.0
+                    ],
+                    [
+                        760.0,
+                        496.0
+                    ],
+                    [
+                        471.0,
+                        496.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.7432787418365479,
+                "coordinate": [
+                    547,
+                    515,
+                    683,
+                    586
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        547.0,
+                        515.0
+                    ],
+                    [
+                        683.0,
+                        515.0
+                    ],
+                    [
+                        683.0,
+                        586.0
+                    ],
+                    [
+                        547.0,
+                        586.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8535274863243103,
+                "coordinate": [
+                    38,
+                    1540,
+                    687,
+                    1569
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        38.0,
+                        1540.0
+                    ],
+                    [
+                        687.0,
+                        1540.0
+                    ],
+                    [
+                        687.0,
+                        1569.0
+                    ],
+                    [
+                        38.0,
+                        1569.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.6996763944625854,
+                "coordinate": [
+                    1127,
+                    1540,
+                    1193,
+                    1566
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1127.0,
+                        1540.0
+                    ],
+                    [
+                        1192.0,
+                        1540.0
+                    ],
+                    [
+                        1192.0,
+                        1565.0
+                    ],
+                    [
+                        1127.0,
+                        1565.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

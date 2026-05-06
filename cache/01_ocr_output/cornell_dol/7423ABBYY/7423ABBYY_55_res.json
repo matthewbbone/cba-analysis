@@ -1,0 +1,278 @@
+{
+    "input_path": "cache/cornell_dol/7423ABBYY.pdf",
+    "page_index": 55,
+    "page_count": 185,
+    "width": 1179,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "employee's current rate. Subsequent progression increases will proceed from the date of the previous progression increase.",
+            "block_bbox": [
+                232,
+                37,
+                927,
+                100
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    232.0,
+                    37.0
+                ],
+                [
+                    927.0,
+                    37.0
+                ],
+                [
+                    927.0,
+                    100.0
+                ],
+                [
+                    232.0,
+                    100.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "SECTION B.3. If an employee is changed to another job on the same wage schedule, there will be no change in rate. Progression increases will proceed from the date of the previous progression increase.",
+            "block_bbox": [
+                231,
+                121,
+                999,
+                210
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    231.0,
+                    121.0
+                ],
+                [
+                    999.0,
+                    121.0
+                ],
+                [
+                    999.0,
+                    210.0
+                ],
+                [
+                    231.0,
+                    210.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "SECTION C. Employees placed in-charge shall be paid $0.75 an hour as a differential for each hour served in that capacity.",
+            "block_bbox": [
+                138,
+                232,
+                944,
+                292
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    138.0,
+                    232.0
+                ],
+                [
+                    944.0,
+                    232.0
+                ],
+                [
+                    944.0,
+                    292.0
+                ],
+                [
+                    138.0,
+                    292.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "47",
+            "block_bbox": [
+                610,
+                1473,
+                643,
+                1499
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    610.0,
+                    1473.0
+                ],
+                [
+                    642.0,
+                    1473.0
+                ],
+                [
+                    642.0,
+                    1498.0
+                ],
+                [
+                    610.0,
+                    1498.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8912299275398254,
+                "coordinate": [
+                    232,
+                    37,
+                    927,
+                    100
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        232.0,
+                        37.0
+                    ],
+                    [
+                        927.0,
+                        37.0
+                    ],
+                    [
+                        927.0,
+                        100.0
+                    ],
+                    [
+                        232.0,
+                        100.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9181685447692871,
+                "coordinate": [
+                    231,
+                    121,
+                    999,
+                    210
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        231.0,
+                        121.0
+                    ],
+                    [
+                        999.0,
+                        121.0
+                    ],
+                    [
+                        999.0,
+                        210.0
+                    ],
+                    [
+                        231.0,
+                        210.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8805183172225952,
+                "coordinate": [
+                    138,
+                    232,
+                    944,
+                    292
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        138.0,
+                        232.0
+                    ],
+                    [
+                        944.0,
+                        232.0
+                    ],
+                    [
+                        944.0,
+                        292.0
+                    ],
+                    [
+                        138.0,
+                        292.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7379158139228821,
+                "coordinate": [
+                    610,
+                    1473,
+                    643,
+                    1499
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        610.0,
+                        1473.0
+                    ],
+                    [
+                        642.0,
+                        1473.0
+                    ],
+                    [
+                        642.0,
+                        1498.0
+                    ],
+                    [
+                        610.0,
+                        1498.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 155,
+    "page_count": 206,
+    "width": 1224,
+    "height": 2016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "APPENDIX A",
+            "block_bbox": [
+                544,
+                98,
+                700,
+                125
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    544.0,
+                    98.0
+                ],
+                [
+                    700.0,
+                    98.0
+                ],
+                [
+                    700.0,
+                    125.0
+                ],
+                [
+                    544.0,
+                    125.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td rowspan=\"2\">LINK CODE</td><td rowspan=\"2\">TITLE CODE</td><td rowspan=\"2\">TITLE NAME</td><td rowspan=\"2\">STEP</td><td rowspan=\"2\">MONTHLY RATE</td><td rowspan=\"2\">HOURLY RATE</td><td rowspan=\"2\">EVE</td><td rowspan=\"2\">NIGHT</td><td rowspan=\"2\">WKEND</td><td colspan=\"3\">ON CALL RATES</td></tr><tr><td>1</td><td>2</td><td>3</td></tr><tr><td colspan=\"12\">SAN FRANCISCO - cont. January 1, 2004</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>017</td><td>9271</td><td>TECHNICIAN,PATIENT DIALYSI, II</td><td>14.</td><td>$3,746</td><td>$21.53</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9271</td><td>TECHNICIAN,PATIENT DIALYSI, II</td><td>15.</td><td>$3,792</td><td>$21.79</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9271</td><td>TECHNICIAN,PATIENT DIALYSI, II</td><td>16.</td><td>$3,841</td><td>$22.07</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9271</td><td>TECHNICIAN,PATIENT DIALYSI, II</td><td>17.</td><td>$3,888</td><td>$22.34</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9271</td><td>TECHNICIAN,PATIENT DIALYSI, II</td><td>18.</td><td>$3,938</td><td>$22.63</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9271</td><td>TECHNICIAN,PATIENT DIALYSI, II</td><td>19.</td><td>$3,988</td><td>$22.92</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9271</td><td>TECHNICIAN,PATIENT DIALYSI, II</td><td>20.</td><td>$4,034</td><td>$23.18</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9271</td><td>TECHNICIAN,PATIENT DIALYSI, II</td><td>21.</td><td>$4,086</td><td>$23.48</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9271</td><td>TECHNICIAN,PATIENT DIALYSI, II</td><td>22.</td><td>$4,136</td><td>$23.77</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9271</td><td>TECHNICIAN,PATIENT DIALYSI, II</td><td>23.</td><td>$4,189</td><td>$24.07</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9271</td><td>TECHNICIAN,PATIENT DIALYSI, II</td><td>24.</td><td>$4,242</td><td>$24.38</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9271</td><td>TECHNICIAN,PATIENT DIALYSI, II</td><td>25.</td><td>$4,295</td><td>$24.68</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9271</td><td>TECHNICIAN,PATIENT DIALYSI, II</td><td>26.</td><td>$4,347</td><td>$24.98</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9271</td><td>TECHNICIAN,PATIENT DIALYSI, II</td><td>27.</td><td>$4,402</td><td>$25.30</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9271</td><td>TECHNICIAN,PATIENT DIALYSI, II</td><td>28.</td><td>$4,457</td><td>$25.61</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>1.</td><td>$2,781</td><td>$15.98</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>2.</td><td>$2,815</td><td>$16.18</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>3.</td><td>$2,850</td><td>$16.38</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>4.</td><td>$2,886</td><td>$16.59</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>5.</td><td>$2,919</td><td>$16.78</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>6.</td><td>$2,957</td><td>$16.99</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>7.</td><td>$2,995</td><td>$17.21</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>8.</td><td>$3,031</td><td>$17.42</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>9.</td><td>$3,070</td><td>$17.64</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>10.</td><td>$3,107</td><td>$17.86</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>11.</td><td>$3,147</td><td>$18.09</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>12.</td><td>$3,185</td><td>$18.30</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>13.</td><td>$3,226</td><td>$18.54</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>14.</td><td>$3,265</td><td>$18.76</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>15.</td><td>$3,308</td><td>$19.01</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>16.</td><td>$3,347</td><td>$19.24</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>17.</td><td>$3,389</td><td>$19.48</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>18.</td><td>$3,434</td><td>$19.74</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>19.</td><td>$3,476</td><td>$19.98</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>20.</td><td>$3,521</td><td>$20.24</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>21.</td><td>$3,563</td><td>$20.48</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>22.</td><td>$3,607</td><td>$20.73</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>23.</td><td>$3,653</td><td>$20.99</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>24.</td><td>$3,700</td><td>$21.26</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>25.</td><td>$3,744</td><td>$21.52</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>26.</td><td>$3,791</td><td>$21.79</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>27.</td><td>$3,841</td><td>$22.07</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9272</td><td>TECHNICIAN,PATIENT DIALYSI, I</td><td>28.</td><td>$3,886</td><td>$22.33</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9273</td><td>TECHNICIAN,PAT DIALYSIS,II,PD</td><td>1.</td><td>$3,750</td><td>$21.55</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9274</td><td>TECHNICIAN, DIALYSIS M&amp;E II PD</td><td>1.</td><td>$3,737</td><td>$21.48</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9275</td><td>TECHNICIAN, DIALYSIS M&amp;E, II</td><td>1.</td><td>$2,781</td><td>$15.98</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9275</td><td>TECHNICIAN, DIALYSIS M&amp;E, II</td><td>2.</td><td>$2,815</td><td>$16.18</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9275</td><td>TECHNICIAN, DIALYSIS M&amp;E, II</td><td>3.</td><td>$2,850</td><td>$16.38</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9275</td><td>TECHNICIAN, DIALYSIS M&amp;E, II</td><td>4.</td><td>$2,886</td><td>$16.59</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9275</td><td>TECHNICIAN, DIALYSIS M&amp;E, II</td><td>5.</td><td>$2,919</td><td>$16.78</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9275</td><td>TECHNICIAN, DIALYSIS M&amp;E, II</td><td>6.</td><td>$2,957</td><td>$16.99</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9275</td><td>TECHNICIAN, DIALYSIS M&amp;E, II</td><td>7.</td><td>$2,995</td><td>$17.21</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9275</td><td>TECHNICIAN, DIALYSIS M&amp;E, II</td><td>8.</td><td>$3,031</td><td>$17.42</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9275</td><td>TECHNICIAN, DIALYSIS M&amp;E, II</td><td>9.</td><td>$3,070</td><td>$17.64</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9275</td><td>TECHNICIAN, DIALYSIS M&amp;E, II</td><td>10.</td><td>$3,107</td><td>$17.86</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9275</td><td>TECHNICIAN, DIALYSIS M&amp;E, II</td><td>11.</td><td>$3,147</td><td>$18.09</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9275</td><td>TECHNICIAN, DIALYSIS M&amp;E, II</td><td>12.</td><td>$3,185</td><td>$18.30</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9275</td><td>TECHNICIAN, DIALYSIS M&amp;E, II</td><td>13.</td><td>$3,226</td><td>$18.54</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9275</td><td>TECHNICIAN, DIALYSIS M&amp;E, II</td><td>14.</td><td>$3,265</td><td>$18.76</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9275</td><td>TECHNICIAN, DIALYSIS M&amp;E, II</td><td>15.</td><td>$3,308</td><td>$19.01</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9275</td><td>TECHNICIAN, DIALYSIS M&amp;E, II</td><td>16.</td><td>$3,347</td><td>$19.24</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>017</td><td>9275</td><td>TECHNICIAN, DIALYSIS M&amp;E, II</td><td>17.</td><td>$3,389</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>",
+            "block_bbox": [
+                68,
+                151,
+                1174,
+                1838
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    68.0,
+                    151.0
+                ],
+                [
+                    1174.0,
+                    151.0
+                ],
+                [
+                    1174.0,
+                    1838.0
+                ],
+                [
+                    68.0,
+                    1838.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "153",
+            "block_bbox": [
+                575,
+                1918,
+                622,
+                1942
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    575.0,
+                    1918.0
+                ],
+                [
+                    621.0,
+                    1918.0
+                ],
+                [
+                    621.0,
+                    1941.0
+                ],
+                [
+                    575.0,
+                    1941.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.6061676740646362,
+                "coordinate": [
+                    544,
+                    98,
+                    700,
+                    125
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        544.0,
+                        98.0
+                    ],
+                    [
+                        700.0,
+                        98.0
+                    ],
+                    [
+                        700.0,
+                        125.0
+                    ],
+                    [
+                        544.0,
+                        125.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9689232707023621,
+                "coordinate": [
+                    68,
+                    151,
+                    1174,
+                    1838
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        68.0,
+                        151.0
+                    ],
+                    [
+                        1174.0,
+                        151.0
+                    ],
+                    [
+                        1174.0,
+                        1838.0
+                    ],
+                    [
+                        68.0,
+                        1838.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7656596899032593,
+                "coordinate": [
+                    575,
+                    1918,
+                    622,
+                    1942
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        575.0,
+                        1918.0
+                    ],
+                    [
+                        621.0,
+                        1918.0
+                    ],
+                    [
+                        621.0,
+                        1941.0
+                    ],
+                    [
+                        575.0,
+                        1941.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

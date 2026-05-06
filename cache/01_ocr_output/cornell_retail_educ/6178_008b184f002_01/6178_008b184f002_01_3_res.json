@@ -1,0 +1,278 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b184f002_01.pdf",
+    "page_index": 3,
+    "page_count": 73,
+    "width": 593,
+    "height": 977,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "doc_title",
+            "block_content": "PREAMBLE",
+            "block_bbox": [
+                241,
+                289,
+                351,
+                310
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    241.0,
+                    288.9999694824219
+                ],
+                [
+                    350.0,
+                    288.9999694824219
+                ],
+                [
+                    350.0,
+                    308.9999694824219
+                ],
+                [
+                    241.0,
+                    308.9999694824219
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The Board of Education of Jersey City and the Jersey City Education Association recognize their common goal to be the provision of the finest educational opportunities for the boys and girls of the Jersey City Public Schools.",
+            "block_bbox": [
+                76,
+                330,
+                516,
+                420
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    76.0,
+                    330.0
+                ],
+                [
+                    516.0,
+                    330.0
+                ],
+                [
+                    516.0,
+                    420.0
+                ],
+                [
+                    76.0,
+                    420.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "To work toward the attainment of this goal, it is also recognized that the joint efforts of the Board of Education and the Jersey City Education Association are required and that it is essential to fulfillment that they, through their respective representatives, engage in good faith negotiations on matters pertaining to salaries and terms and conditions of employment.",
+            "block_bbox": [
+                77,
+                426,
+                517,
+                565
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    77.0,
+                    426.0
+                ],
+                [
+                    517.0,
+                    426.0
+                ],
+                [
+                    517.0,
+                    565.0
+                ],
+                [
+                    77.0,
+                    565.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "This Agreement is made and entered into this 30th day of November, 1978, by and between the Jersey City Board of Education, (hereinafter referred to as the \"Board\") — and the Jersey City Education Association, (hereinafter referred to as the \"Association\" or the \"JCEA\").",
+            "block_bbox": [
+                78,
+                572,
+                518,
+                677
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    78.0,
+                    572.0
+                ],
+                [
+                    518.0,
+                    572.0
+                ],
+                [
+                    518.0,
+                    677.0
+                ],
+                [
+                    78.0,
+                    677.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.6450309157371521,
+                "coordinate": [
+                    241,
+                    289,
+                    351,
+                    310
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        241.0,
+                        288.9999694824219
+                    ],
+                    [
+                        350.0,
+                        288.9999694824219
+                    ],
+                    [
+                        350.0,
+                        308.9999694824219
+                    ],
+                    [
+                        241.0,
+                        308.9999694824219
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9290577173233032,
+                "coordinate": [
+                    76,
+                    330,
+                    516,
+                    420
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        76.0,
+                        330.0
+                    ],
+                    [
+                        516.0,
+                        330.0
+                    ],
+                    [
+                        516.0,
+                        420.0
+                    ],
+                    [
+                        76.0,
+                        420.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9469359517097473,
+                "coordinate": [
+                    77,
+                    426,
+                    517,
+                    565
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        77.0,
+                        426.0
+                    ],
+                    [
+                        517.0,
+                        426.0
+                    ],
+                    [
+                        517.0,
+                        565.0
+                    ],
+                    [
+                        77.0,
+                        565.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9391869902610779,
+                "coordinate": [
+                    78,
+                    572,
+                    518,
+                    677
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        78.0,
+                        572.0
+                    ],
+                    [
+                        518.0,
+                        572.0
+                    ],
+                    [
+                        518.0,
+                        677.0
+                    ],
+                    [
+                        78.0,
+                        677.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

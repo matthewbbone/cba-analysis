@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/dol_archive/document_2690.pdf",
+    "page_index": 1,
+    "page_count": 77,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 2\nPurpose",
+            "block_bbox": [
+                522,
+                170,
+                700,
+                251
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    522.0,
+                    170.0
+                ],
+                [
+                    700.0,
+                    170.0
+                ],
+                [
+                    700.0,
+                    251.0
+                ],
+                [
+                    522.0,
+                    251.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "This agreement establishes the terms and conditions of employment for all members of the bargaining unit.",
+            "block_bbox": [
+                174,
+                296,
+                1022,
+                354
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    174.0,
+                    296.0
+                ],
+                [
+                    1022.0,
+                    296.0
+                ],
+                [
+                    1022.0,
+                    354.0
+                ],
+                [
+                    174.0,
+                    354.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The parties to this Agreement desire to establish and maintain an atmosphere of mutual understanding and cooperation that will promote the basic purposes of the University of Alaska. The parties share in the commitment of the University community to the achievement of optimal conditions for discovering and disseminating knowledge within an atmosphere of academic freedom, fairness, and individual and institutional accountability. The parties commit themselves to administer this Agreement in such a way as to ensure that the above stated principles shall be best served.",
+            "block_bbox": [
+                173,
+                378,
+                1028,
+                576
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    173.0,
+                    378.0
+                ],
+                [
+                    1028.0,
+                    378.0
+                ],
+                [
+                    1028.0,
+                    576.0
+                ],
+                [
+                    173.0,
+                    576.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "It is recognized that unit members are uniquely qualify d to participate in the academic governance of the University. It is also recognized that unit members acting in concert with other constituencies can provide valuable contributions at all levels of the University. Accordingly, United Academics and the University agree that the opportunity for unit members to participate in the governance of the University is important to its effective operation. It is further agreed that unit members' voluntary participation in University governance is an integral part of the University community's culture.",
+            "block_bbox": [
+                173,
+                600,
+                1026,
+                823
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    173.0,
+                    600.0
+                ],
+                [
+                    1026.0,
+                    600.0
+                ],
+                [
+                    1026.0,
+                    823.0
+                ],
+                [
+                    173.0,
+                    823.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "Tentative Agreement",
+            "block_bbox": [
+                177,
+                1487,
+                370,
+                1513
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    177.0,
+                    1487.0
+                ],
+                [
+                    370.0,
+                    1487.0
+                ],
+                [
+                    370.0,
+                    1513.0
+                ],
+                [
+                    177.0,
+                    1513.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 2 of 77",
+            "block_bbox": [
+                930,
+                1487,
+                1047,
+                1515
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    930.0,
+                    1487.0
+                ],
+                [
+                    1047.0,
+                    1487.0
+                ],
+                [
+                    1047.0,
+                    1515.0
+                ],
+                [
+                    930.0,
+                    1515.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6463782787322998,
+                "coordinate": [
+                    522,
+                    170,
+                    700,
+                    251
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        522.0,
+                        170.0
+                    ],
+                    [
+                        700.0,
+                        170.0
+                    ],
+                    [
+                        700.0,
+                        251.0
+                    ],
+                    [
+                        522.0,
+                        251.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9101033210754395,
+                "coordinate": [
+                    174,
+                    296,
+                    1022,
+                    354
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        174.0,
+                        296.0
+                    ],
+                    [
+                        1022.0,
+                        296.0
+                    ],
+                    [
+                        1022.0,
+                        354.0
+                    ],
+                    [
+                        174.0,
+                        354.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9524447917938232,
+                "coordinate": [
+                    173,
+                    378,
+                    1028,
+                    576
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        173.0,
+                        378.0
+                    ],
+                    [
+                        1028.0,
+                        378.0
+                    ],
+                    [
+                        1028.0,
+                        576.0
+                    ],
+                    [
+                        173.0,
+                        576.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9525529742240906,
+                "coordinate": [
+                    173,
+                    600,
+                    1026,
+                    823
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        173.0,
+                        600.0
+                    ],
+                    [
+                        1026.0,
+                        600.0
+                    ],
+                    [
+                        1026.0,
+                        823.0
+                    ],
+                    [
+                        173.0,
+                        823.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8590643405914307,
+                "coordinate": [
+                    177,
+                    1487,
+                    370,
+                    1513
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        177.0,
+                        1487.0
+                    ],
+                    [
+                        370.0,
+                        1487.0
+                    ],
+                    [
+                        370.0,
+                        1513.0
+                    ],
+                    [
+                        177.0,
+                        1513.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8535881638526917,
+                "coordinate": [
+                    930,
+                    1487,
+                    1047,
+                    1515
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        930.0,
+                        1487.0
+                    ],
+                    [
+                        1047.0,
+                        1487.0
+                    ],
+                    [
+                        1047.0,
+                        1515.0
+                    ],
+                    [
+                        930.0,
+                        1515.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

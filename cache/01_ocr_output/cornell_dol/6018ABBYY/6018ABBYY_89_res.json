@@ -1,0 +1,278 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 89,
+    "page_count": 287,
+    "width": 728,
+    "height": 1013,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "ARTICLE X",
+            "block_bbox": [
+                602,
+                49,
+                676,
+                68
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    602.0,
+                    49.0
+                ],
+                [
+                    675.0,
+                    49.0
+                ],
+                [
+                    675.0,
+                    67.0
+                ],
+                [
+                    602.0,
+                    67.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(8) Credits Accumulated on Temporary Assignment – In the event the Company shall request an employee to perform the duties of a higher classification without placing him or her on advanced assignment in accordance with the provisions hereof, for a period sufficient to qualify the employee for promotion to the higher classification, it shall be conclusively presumed that a job vacancy in such higher classification exists. In such event, the provisions hereto relating to the filling of job vacancies by movement of employees and by advanced assignments shall govern the filling of such vacancy. If, under such provisions, the employee who has performed the duties of the higher classification is entitled to such promotion, the employee entitled thereto will be placed on advanced assignment for the higher classification and will be paid the rate for the higher classification; provided, however, that he or she must serve the normal qualifying period specified for the higher classification and meet all other requirements for such classification prior to being promoted thereto. The employee who has performed the duties of the higher classification and has not been promoted shall receive no credit toward qualifying for the higher classification despite any other provision herein contained to the contrary.",
+            "block_bbox": [
+                98,
+                77,
+                677,
+                477
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    98.0,
+                    77.0
+                ],
+                [
+                    677.0,
+                    77.0
+                ],
+                [
+                    677.0,
+                    477.0
+                ],
+                [
+                    98.0,
+                    477.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(9) Failure to Meet Requirements of Higher Classification – In the event any employee who is placed on advanced assignment for promotion to a higher classification fails to meet the requirements for that classification during the qualifying period specified therein, the Company shall have the right to terminate his or her assignment. Any employee who is placed on advanced assignment for promotion to a higher classification also shall have the right to terminate such assignment during the qualifying period, provided the employee shall not be entitled to credits for time spent on advanced assignment and the higher rate of pay received during the advanced assignment period, when a employee returns to his or her former classification.",
+            "block_bbox": [
+                96,
+                495,
+                676,
+                738
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    96.0,
+                    495.0
+                ],
+                [
+                    676.0,
+                    495.0
+                ],
+                [
+                    676.0,
+                    738.0
+                ],
+                [
+                    96.0,
+                    738.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "81",
+            "block_bbox": [
+                373,
+                941,
+                395,
+                957
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    373.0,
+                    941.0
+                ],
+                [
+                    391.0,
+                    941.0
+                ],
+                [
+                    391.0,
+                    956.0
+                ],
+                [
+                    373.0,
+                    956.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8115943074226379,
+                "coordinate": [
+                    602,
+                    49,
+                    676,
+                    68
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        602.0,
+                        49.0
+                    ],
+                    [
+                        675.0,
+                        49.0
+                    ],
+                    [
+                        675.0,
+                        67.0
+                    ],
+                    [
+                        602.0,
+                        67.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9458279013633728,
+                "coordinate": [
+                    98,
+                    77,
+                    677,
+                    477
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        98.0,
+                        77.0
+                    ],
+                    [
+                        677.0,
+                        77.0
+                    ],
+                    [
+                        677.0,
+                        477.0
+                    ],
+                    [
+                        98.0,
+                        477.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9474325776100159,
+                "coordinate": [
+                    96,
+                    495,
+                    676,
+                    738
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        96.0,
+                        495.0
+                    ],
+                    [
+                        676.0,
+                        495.0
+                    ],
+                    [
+                        676.0,
+                        738.0
+                    ],
+                    [
+                        96.0,
+                        738.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7498132586479187,
+                "coordinate": [
+                    373,
+                    941,
+                    395,
+                    957
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        373.0,
+                        941.0
+                    ],
+                    [
+                        391.0,
+                        941.0
+                    ],
+                    [
+                        391.0,
+                        956.0
+                    ],
+                    [
+                        373.0,
+                        956.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

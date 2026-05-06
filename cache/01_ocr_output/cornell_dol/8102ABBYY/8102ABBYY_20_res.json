@@ -1,0 +1,888 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 20,
+    "page_count": 439,
+    "width": 1233,
+    "height": 1581,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article 5",
+            "block_bbox": [
+                321,
+                79,
+                383,
+                98
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    320.9999694824219,
+                    78.99999237060547
+                ],
+                [
+                    381.9999694824219,
+                    78.99999237060547
+                ],
+                [
+                    381.9999694824219,
+                    96.99999237060547
+                ],
+                [
+                    320.9999694824219,
+                    96.99999237060547
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "3 Reclassification of Union Representatives",
+            "block_bbox": [
+                321,
+                120,
+                632,
+                139
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    120.0
+                ],
+                [
+                    631.0,
+                    120.0
+                ],
+                [
+                    631.0,
+                    138.0
+                ],
+                [
+                    321.0,
+                    138.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) A proposal on the part of the Company to change the classification of a Union Representative, excluding Job Stewards, to a classification not represented by the Union shall be made, in writing, to the Union with a copy to the Employee involved, not less than thirty (30) days prior to the effective date of such change.",
+            "block_bbox": [
+                344,
+                145,
+                875,
+                232
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    344.0,
+                    145.0
+                ],
+                [
+                    875.0,
+                    145.0
+                ],
+                [
+                    875.0,
+                    232.0
+                ],
+                [
+                    344.0,
+                    232.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) In the event an Employee serving as a Union Representative, excluding Job Stewards, shall give the Company a signed statement indicating that the Employee does not wish to be considered for any change in classification which would remove the Employee from the bargaining unit while serving the Union in such capacity, the Company shall not offer to make such change while the Employee is serving in such capacity.",
+            "block_bbox": [
+                342,
+                238,
+                876,
+                342
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    342.0,
+                    238.0
+                ],
+                [
+                    876.0,
+                    238.0
+                ],
+                [
+                    876.0,
+                    342.0
+                ],
+                [
+                    342.0,
+                    342.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "4 Transfer of Union Representatives and Job Stewards",
+            "block_bbox": [
+                321,
+                348,
+                707,
+                367
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    348.0
+                ],
+                [
+                    706.0,
+                    348.0
+                ],
+                [
+                    706.0,
+                    366.0
+                ],
+                [
+                    321.0,
+                    366.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) In transferring Union Representatives to meet the needs of the business, consideration will be given to the business needs of the Union.",
+            "block_bbox": [
+                343,
+                373,
+                874,
+                409
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    343.0,
+                    373.0
+                ],
+                [
+                    874.0,
+                    373.0
+                ],
+                [
+                    874.0,
+                    409.0
+                ],
+                [
+                    343.0,
+                    409.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) A Job Steward shall not be transferred when there is, assigned at the same work site or building, another Employee of comparable experience and ability who can be as readily released and transferred at no greater cost to the Company.",
+            "block_bbox": [
+                343,
+                415,
+                875,
+                485
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    343.0,
+                    415.0
+                ],
+                [
+                    875.0,
+                    415.0
+                ],
+                [
+                    875.0,
+                    485.0
+                ],
+                [
+                    343.0,
+                    485.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(1) A \"work site\" encompasses a group of Employees normally engaged in a common effort. The work site may be involved in multiple points of work, such as, but not limited to those encountered in outside plant operations.",
+            "block_bbox": [
+                376,
+                491,
+                875,
+                561
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    376.0,
+                    491.0
+                ],
+                [
+                    875.0,
+                    491.0
+                ],
+                [
+                    875.0,
+                    561.0
+                ],
+                [
+                    376.0,
+                    561.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "5 Excused Absences for Union Duties at Union Request",
+            "block_bbox": [
+                320,
+                567,
+                715,
+                586
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    567.0
+                ],
+                [
+                    714.0,
+                    567.0
+                ],
+                [
+                    714.0,
+                    585.0
+                ],
+                [
+                    320.0,
+                    585.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) Upon request, the Company will excuse a Union Representative who wishes to take time from his or her assigned Company duty to perform Union duties provided the work situation permits, and provided such request has been approved by the President of the National or the President's authorized delegate.",
+            "block_bbox": [
+                343,
+                592,
+                875,
+                679
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    343.0,
+                    592.0
+                ],
+                [
+                    875.0,
+                    592.0
+                ],
+                [
+                    875.0,
+                    679.0
+                ],
+                [
+                    343.0,
+                    679.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(1) Such time off shall not be paid for by the Company and shall be limited to a maximum of two hundred and fifty (250) hours per fiscal quarter for Union Representatives other than the Local President. The Local President shall be limited to three hundred and fifty (350) of such hours per fiscal quarter.",
+            "block_bbox": [
+                376,
+                685,
+                875,
+                773
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    376.0,
+                    685.0
+                ],
+                [
+                    875.0,
+                    685.0
+                ],
+                [
+                    875.0,
+                    773.0
+                ],
+                [
+                    376.0,
+                    773.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(2) Excused time off in excess of the limitations contained in Paragraphs 5(a)(1) shall result in a requirement for a Union Representative to take a Leave of Absence for Union Business in accordance with the provisions of Paragraph 7.",
+            "block_bbox": [
+                374,
+                778,
+                875,
+                849
+            ],
+            "block_id": 11,
+            "block_order": 11,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    374.0,
+                    778.0
+                ],
+                [
+                    875.0,
+                    778.0
+                ],
+                [
+                    875.0,
+                    849.0
+                ],
+                [
+                    374.0,
+                    849.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) Upon request, a reasonable number of Employees who have been selected by the Union to perform Union duties will be excused from their",
+            "block_bbox": [
+                343,
+                855,
+                875,
+                892
+            ],
+            "block_id": 12,
+            "block_order": 12,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    343.0,
+                    855.0
+                ],
+                [
+                    875.0,
+                    855.0
+                ],
+                [
+                    875.0,
+                    892.0
+                ],
+                [
+                    343.0,
+                    892.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "12",
+            "block_bbox": [
+                322,
+                906,
+                343,
+                922
+            ],
+            "block_id": 13,
+            "block_order": null,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    906.0
+                ],
+                [
+                    342.0,
+                    906.0
+                ],
+                [
+                    342.0,
+                    921.0
+                ],
+                [
+                    322.0,
+                    921.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7365434169769287,
+                "coordinate": [
+                    321,
+                    79,
+                    383,
+                    98
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        320.9999694824219,
+                        78.99999237060547
+                    ],
+                    [
+                        381.9999694824219,
+                        78.99999237060547
+                    ],
+                    [
+                        381.9999694824219,
+                        96.99999237060547
+                    ],
+                    [
+                        320.9999694824219,
+                        96.99999237060547
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7387617230415344,
+                "coordinate": [
+                    321,
+                    120,
+                    632,
+                    139
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        321.0,
+                        120.0
+                    ],
+                    [
+                        631.0,
+                        120.0
+                    ],
+                    [
+                        631.0,
+                        138.0
+                    ],
+                    [
+                        321.0,
+                        138.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9386602640151978,
+                "coordinate": [
+                    344,
+                    145,
+                    875,
+                    232
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        344.0,
+                        145.0
+                    ],
+                    [
+                        875.0,
+                        145.0
+                    ],
+                    [
+                        875.0,
+                        232.0
+                    ],
+                    [
+                        344.0,
+                        232.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9401601552963257,
+                "coordinate": [
+                    342,
+                    238,
+                    876,
+                    342
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        342.0,
+                        238.0
+                    ],
+                    [
+                        876.0,
+                        238.0
+                    ],
+                    [
+                        876.0,
+                        342.0
+                    ],
+                    [
+                        342.0,
+                        342.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6169663071632385,
+                "coordinate": [
+                    321,
+                    348,
+                    707,
+                    367
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        321.0,
+                        348.0
+                    ],
+                    [
+                        706.0,
+                        348.0
+                    ],
+                    [
+                        706.0,
+                        366.0
+                    ],
+                    [
+                        321.0,
+                        366.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8857419490814209,
+                "coordinate": [
+                    343,
+                    373,
+                    874,
+                    409
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        343.0,
+                        373.0
+                    ],
+                    [
+                        874.0,
+                        373.0
+                    ],
+                    [
+                        874.0,
+                        409.0
+                    ],
+                    [
+                        343.0,
+                        409.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9291039109230042,
+                "coordinate": [
+                    343,
+                    415,
+                    875,
+                    485
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        343.0,
+                        415.0
+                    ],
+                    [
+                        875.0,
+                        415.0
+                    ],
+                    [
+                        875.0,
+                        485.0
+                    ],
+                    [
+                        343.0,
+                        485.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9260596036911011,
+                "coordinate": [
+                    376,
+                    491,
+                    875,
+                    561
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        376.0,
+                        491.0
+                    ],
+                    [
+                        875.0,
+                        491.0
+                    ],
+                    [
+                        875.0,
+                        561.0
+                    ],
+                    [
+                        376.0,
+                        561.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5425564050674438,
+                "coordinate": [
+                    320,
+                    567,
+                    715,
+                    586
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        320.0,
+                        567.0
+                    ],
+                    [
+                        714.0,
+                        567.0
+                    ],
+                    [
+                        714.0,
+                        585.0
+                    ],
+                    [
+                        320.0,
+                        585.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.929939866065979,
+                "coordinate": [
+                    343,
+                    592,
+                    875,
+                    679
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        343.0,
+                        592.0
+                    ],
+                    [
+                        875.0,
+                        592.0
+                    ],
+                    [
+                        875.0,
+                        679.0
+                    ],
+                    [
+                        343.0,
+                        679.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9340991973876953,
+                "coordinate": [
+                    376,
+                    685,
+                    875,
+                    773
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        376.0,
+                        685.0
+                    ],
+                    [
+                        875.0,
+                        685.0
+                    ],
+                    [
+                        875.0,
+                        773.0
+                    ],
+                    [
+                        376.0,
+                        773.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9324225187301636,
+                "coordinate": [
+                    374,
+                    778,
+                    875,
+                    849
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        374.0,
+                        778.0
+                    ],
+                    [
+                        875.0,
+                        778.0
+                    ],
+                    [
+                        875.0,
+                        849.0
+                    ],
+                    [
+                        374.0,
+                        849.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8940041661262512,
+                "coordinate": [
+                    343,
+                    855,
+                    875,
+                    892
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        343.0,
+                        855.0
+                    ],
+                    [
+                        875.0,
+                        855.0
+                    ],
+                    [
+                        875.0,
+                        892.0
+                    ],
+                    [
+                        343.0,
+                        892.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6144800186157227,
+                "coordinate": [
+                    322,
+                    906,
+                    343,
+                    922
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        322.0,
+                        906.0
+                    ],
+                    [
+                        342.0,
+                        906.0
+                    ],
+                    [
+                        342.0,
+                        921.0
+                    ],
+                    [
+                        322.0,
+                        921.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

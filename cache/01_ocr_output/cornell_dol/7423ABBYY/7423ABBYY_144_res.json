@@ -1,0 +1,247 @@
+{
+    "input_path": "cache/cornell_dol/7423ABBYY.pdf",
+    "page_index": 144,
+    "page_count": 185,
+    "width": 1585,
+    "height": 1188,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "PREVENTIVE CARE SERVICES",
+            "block_bbox": [
+                97,
+                72,
+                400,
+                99
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    97.0,
+                    72.0
+                ],
+                [
+                    400.0,
+                    72.0
+                ],
+                [
+                    400.0,
+                    99.0
+                ],
+                [
+                    97.0,
+                    99.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td colspan=\"4\">Point-of-Service HMO</td></tr><tr><td colspan=\"2\">In-Network</td><td>Out-of-Network</td><td>Out-of-Area PPO</td></tr><tr><td>Routine Immunizations</td><td>$15 co-pay</td><td>Not covered</td><td>80% R&amp;C after ded.; 70% Non PPO</td></tr><tr><td>Well-Baby Care Examination</td><td>$15 co-pay</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.; 70% Non PPO (No ded)</td></tr><tr><td>Annual Well-Woman Examination</td><td>$15 co-pay</td><td>Not covered</td><td>80% R&amp;C after ded.; 70% Non PPO</td></tr><tr><td>Annual Physical Exam</td><td>$15 co-pay</td><td>Not covered</td><td>Not covered</td></tr><tr><td colspan=\"4\">MATERNITY CARE</td></tr><tr><td colspan=\"4\">- Physicians Office</td></tr><tr><td>Prenatal and Postnatal Visits</td><td>Covered in full after 1st $15 co-pay</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.; 70% Non PPO</td></tr><tr><td>Physician&#x27;s Care to the Mother</td><td>$15 per visit</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.; 70% Non PPO</td></tr><tr><td colspan=\"4\">- Inpatient Hospital</td></tr><tr><td>Mother&#x27;s Delivery Services</td><td>No charge</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.; 70% Non PPO</td></tr><tr><td>Newborn Nursery Services</td><td>No charge</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.; 70% Non PPO</td></tr><tr><td>Physician&#x27;s Care to Newborn</td><td>No charge</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.; 70% Non PPO</td></tr><tr><td colspan=\"4\">EMERGENCY &amp; URGENT CARE (Accident or Sudden Serious Illness or Injury)</td></tr><tr><td>Required Advanced Authorization</td><td>Contact PCP within 24 hours</td><td>Contact PCP within 24 hours</td><td>Contact PCP within 24 hours</td></tr><tr><td>Hospital Emergency Room Services</td><td>$50 co-pay (waived if admitted to hospital)</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.; 70% Non PPO</td></tr><tr><td>Urgent Care Centers</td><td>$25 co-pay</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.; 70% Non PPO</td></tr><tr><td>Physician&#x27;s Office (normal hours)</td><td>$15 co-pay</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.; 70% Non PPO</td></tr><tr><td>Physician&#x27;s Office (after hours)</td><td>$15 co-pay</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.; 70% Non PPO</td></tr><tr><td>SKILLED NURSING CARE</td><td>Covered in full; no limit</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.; 70% Non PPO</td></tr><tr><td colspan=\"4\">HOME HEALTH CARE</td></tr><tr><td>Home Health Care Services</td><td>$15 co-pay</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.; 70% Non PPO</td></tr><tr><td>Home Physician Visits</td><td>$15 co-pay</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.; 70% Non PPO</td></tr><tr><td>HOSPICE CARE</td><td>No charge</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.; 70% Non PPO</td></tr><tr><td>AMBULANCE SERVICE</td><td>No charge</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.; 70% Non PPO</td></tr><tr><td>TRANSPLANT COVERAGE (When med necessary &amp; plan approved)</td><td>No charge</td><td>Not covered</td><td>Not covered</td></tr><tr><td>NON-FAMILIAL ORGAN DONOR COSTS (Review for medical appropriateness)</td><td>No charge</td><td>Not covered</td><td>Not covered</td></tr></table>",
+            "block_bbox": [
+                81,
+                119,
+                1549,
+                1122
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    81.0,
+                    119.0
+                ],
+                [
+                    1549.0,
+                    119.0
+                ],
+                [
+                    1549.0,
+                    1122.0
+                ],
+                [
+                    81.0,
+                    1122.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "136",
+            "block_bbox": [
+                799,
+                1141,
+                845,
+                1168
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    799.0,
+                    1141.0
+                ],
+                [
+                    844.0,
+                    1141.0
+                ],
+                [
+                    844.0,
+                    1167.0
+                ],
+                [
+                    799.0,
+                    1167.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.7613252997398376,
+                "coordinate": [
+                    97,
+                    72,
+                    400,
+                    99
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        97.0,
+                        72.0
+                    ],
+                    [
+                        400.0,
+                        72.0
+                    ],
+                    [
+                        400.0,
+                        99.0
+                    ],
+                    [
+                        97.0,
+                        99.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.5445343852043152,
+                "coordinate": [
+                    749,
+                    119,
+                    965,
+                    144
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        749.0,
+                        119.0
+                    ],
+                    [
+                        965.0,
+                        119.0
+                    ],
+                    [
+                        965.0,
+                        144.0
+                    ],
+                    [
+                        749.0,
+                        144.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9304777979850769,
+                "coordinate": [
+                    81,
+                    119,
+                    1549,
+                    1122
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        81.0,
+                        119.0
+                    ],
+                    [
+                        1549.0,
+                        119.0
+                    ],
+                    [
+                        1549.0,
+                        1122.0
+                    ],
+                    [
+                        81.0,
+                        1122.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7839857935905457,
+                "coordinate": [
+                    799,
+                    1141,
+                    845,
+                    1168
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        799.0,
+                        1141.0
+                    ],
+                    [
+                        844.0,
+                        1141.0
+                    ],
+                    [
+                        844.0,
+                        1167.0
+                    ],
+                    [
+                        799.0,
+                        1167.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

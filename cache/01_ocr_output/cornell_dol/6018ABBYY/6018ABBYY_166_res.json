@@ -1,0 +1,95 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 166,
+    "page_count": 287,
+    "width": 496,
+    "height": 211,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "CLASSIFICATION\nOF\nWORK AND WAGES",
+            "block_bbox": [
+                149,
+                0,
+                493,
+                146
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    149.0,
+                    0.0
+                ],
+                [
+                    493.0,
+                    0.0
+                ],
+                [
+                    493.0,
+                    146.0
+                ],
+                [
+                    149.0,
+                    146.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.38449981808662415,
+                "coordinate": [
+                    149,
+                    0,
+                    493,
+                    146
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        149.0,
+                        0.0
+                    ],
+                    [
+                        493.0,
+                        0.0
+                    ],
+                    [
+                        493.0,
+                        146.0
+                    ],
+                    [
+                        149.0,
+                        146.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

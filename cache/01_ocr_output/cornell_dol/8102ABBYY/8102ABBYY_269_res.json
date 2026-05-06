@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 269,
+    "page_count": 439,
+    "width": 1234,
+    "height": 1592,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                748,
+                115,
+                908,
+                134
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    747.9999389648438,
+                    115.0
+                ],
+                [
+                    906.9999389648438,
+                    115.0
+                ],
+                [
+                    906.9999389648438,
+                    133.0
+                ],
+                [
+                    747.9999389648438,
+                    133.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "PENSION BAND INCREASE",
+            "block_bbox": [
+                529,
+                148,
+                733,
+                168
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    529.0,
+                    148.0
+                ],
+                [
+                    732.0,
+                    148.0
+                ],
+                [
+                    732.0,
+                    167.0
+                ],
+                [
+                    529.0,
+                    167.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The Lucent Technologies Inc. Pension Plan shall be amended effective July 1, 2005, to revise the Monthly Benefit Table as follows:",
+            "block_bbox": [
+                351,
+                199,
+                909,
+                239
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    351.0,
+                    199.0
+                ],
+                [
+                    909.0,
+                    199.0
+                ],
+                [
+                    909.0,
+                    239.0
+                ],
+                [
+                    351.0,
+                    239.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "For employees who retire or who leave the Company on or after July 1, 2005, the applicable Monthly Benefit Table shall be increased by 12% as set forth in Attachment A.",
+            "block_bbox": [
+                351,
+                265,
+                908,
+                320
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    351.0,
+                    265.0
+                ],
+                [
+                    908.0,
+                    265.0
+                ],
+                [
+                    908.0,
+                    320.0
+                ],
+                [
+                    351.0,
+                    320.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Employees who retire or who leave the Company between November 1, 2004 and June 30, 2005 will be eligible for such pension band increase effective July 1, 2005.",
+            "block_bbox": [
+                351,
+                347,
+                908,
+                403
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    351.0,
+                    347.0
+                ],
+                [
+                    908.0,
+                    347.0
+                ],
+                [
+                    908.0,
+                    403.0
+                ],
+                [
+                    351.0,
+                    403.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "261",
+            "block_bbox": [
+                875,
+                912,
+                904,
+                931
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    875.0,
+                    912.0
+                ],
+                [
+                    903.0,
+                    912.0
+                ],
+                [
+                    903.0,
+                    930.0
+                ],
+                [
+                    875.0,
+                    930.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7363294959068298,
+                "coordinate": [
+                    748,
+                    115,
+                    908,
+                    134
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        747.9999389648438,
+                        115.0
+                    ],
+                    [
+                        906.9999389648438,
+                        115.0
+                    ],
+                    [
+                        906.9999389648438,
+                        133.0
+                    ],
+                    [
+                        747.9999389648438,
+                        133.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8227958679199219,
+                "coordinate": [
+                    529,
+                    148,
+                    733,
+                    168
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        529.0,
+                        148.0
+                    ],
+                    [
+                        732.0,
+                        148.0
+                    ],
+                    [
+                        732.0,
+                        167.0
+                    ],
+                    [
+                        529.0,
+                        167.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8647415041923523,
+                "coordinate": [
+                    351,
+                    199,
+                    909,
+                    239
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        351.0,
+                        199.0
+                    ],
+                    [
+                        909.0,
+                        199.0
+                    ],
+                    [
+                        909.0,
+                        239.0
+                    ],
+                    [
+                        351.0,
+                        239.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8839392066001892,
+                "coordinate": [
+                    351,
+                    265,
+                    908,
+                    320
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        351.0,
+                        265.0
+                    ],
+                    [
+                        908.0,
+                        265.0
+                    ],
+                    [
+                        908.0,
+                        320.0
+                    ],
+                    [
+                        351.0,
+                        320.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8699655532836914,
+                "coordinate": [
+                    351,
+                    347,
+                    908,
+                    403
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        351.0,
+                        347.0
+                    ],
+                    [
+                        908.0,
+                        347.0
+                    ],
+                    [
+                        908.0,
+                        403.0
+                    ],
+                    [
+                        351.0,
+                        403.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6464648842811584,
+                "coordinate": [
+                    875,
+                    912,
+                    904,
+                    931
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        875.0,
+                        912.0
+                    ],
+                    [
+                        903.0,
+                        912.0
+                    ],
+                    [
+                        903.0,
+                        930.0
+                    ],
+                    [
+                        875.0,
+                        930.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

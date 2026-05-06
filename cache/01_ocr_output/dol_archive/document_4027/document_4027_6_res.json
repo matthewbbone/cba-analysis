@@ -1,0 +1,705 @@
+{
+    "input_path": "cache/dol_archive/document_4027.pdf",
+    "page_index": 6,
+    "page_count": 35,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "doc_title",
+            "block_content": "EMPLOYER COOPERATION",
+            "block_bbox": [
+                464,
+                63,
+                760,
+                88
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    464.0,
+                    63.0
+                ],
+                [
+                    760.0,
+                    63.0
+                ],
+                [
+                    760.0,
+                    88.0
+                ],
+                [
+                    464.0,
+                    88.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 2.17 The Employer agrees to cooperate with the Union to advance its legitimate interests.",
+            "block_bbox": [
+                125,
+                117,
+                1057,
+                172
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    125.0,
+                    117.0
+                ],
+                [
+                    1057.0,
+                    117.0
+                ],
+                [
+                    1057.0,
+                    172.0
+                ],
+                [
+                    125.0,
+                    172.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "UNION COOPERATION",
+            "block_bbox": [
+                483,
+                198,
+                737,
+                223
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    483.0,
+                    198.0
+                ],
+                [
+                    737.0,
+                    198.0
+                ],
+                [
+                    737.0,
+                    223.0
+                ],
+                [
+                    483.0,
+                    223.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 2.18 The Union agrees to cooperate with the Employer to advance its legitimate interests by aiding the Employer to secure business which will provide employment for persons in the bargaining unit. The Union, of course, will not discriminate between any Employers with which it has agreements.",
+            "block_bbox": [
+                122,
+                252,
+                1069,
+                390
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    122.0,
+                    252.0
+                ],
+                [
+                    1069.0,
+                    252.0
+                ],
+                [
+                    1069.0,
+                    390.0
+                ],
+                [
+                    122.0,
+                    390.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "FOREMAN",
+            "block_bbox": [
+                554,
+                416,
+                664,
+                440
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    553.9999389648438,
+                    416.0
+                ],
+                [
+                    662.9999389648438,
+                    416.0
+                ],
+                [
+                    662.9999389648438,
+                    439.0
+                ],
+                [
+                    553.9999389648438,
+                    439.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 2.19 The Union agrees that its members in the employ of the Employer will perform efficient work and service. Inasmuch as foremen are covered by the Agreement, the Union agrees that its foremen members will perform efficiently as foremen, in the best interest of the Employer. Only qualified journeyman lineman may be foremen, if available. Also, the Union agrees that its members in the employ of the Employers will use their best endeavors to protect the property of the Employer.",
+            "block_bbox": [
+                122,
+                469,
+                1088,
+                691
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    122.0,
+                    469.0
+                ],
+                [
+                    1088.0,
+                    469.0
+                ],
+                [
+                    1088.0,
+                    691.0
+                ],
+                [
+                    122.0,
+                    691.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "OTHER LOCAL UNION SUPPORT",
+            "block_bbox": [
+                454,
+                715,
+                825,
+                740
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    454.0,
+                    715.0
+                ],
+                [
+                    825.0,
+                    715.0
+                ],
+                [
+                    825.0,
+                    740.0
+                ],
+                [
+                    454.0,
+                    740.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 2.20 The Union shall have the right to support any other Local Union having justifiable trouble with the Employer subject to the terms of this Agreement.",
+            "block_bbox": [
+                121,
+                768,
+                1069,
+                852
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    121.0,
+                    768.0
+                ],
+                [
+                    1069.0,
+                    768.0
+                ],
+                [
+                    1069.0,
+                    852.0
+                ],
+                [
+                    121.0,
+                    852.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "SUBSTANCE ABUSE",
+            "block_bbox": [
+                495,
+                878,
+                720,
+                903
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    495.0,
+                    878.0
+                ],
+                [
+                    720.0,
+                    878.0
+                ],
+                [
+                    720.0,
+                    903.0
+                ],
+                [
+                    495.0,
+                    903.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 2.21 The dangers and costs that alcohol and other chemical abuses can create in the electrical contracting industry in terms of safety and productivity are significant. The parties to this Agreement resolve to combat chemical abuse in any form and agree that, to be effective, programs to eliminate substance abuse and impairment should contain a strong rehabilitation component. The local parties recognize that the implementation of a drug and alcohol policy and program must be subject to all applicable federal, state, and local laws and regulations. Such policies and programs must also be administered in accordance with accepted scientific principles, and must incorporate procedural safeguards to ensure fairness in application and protection of legitimate interests of privacy and confidentiality. To provide a drug-free workforce for the Electrical Construction Industry, each IBEW local union and NECA chapter shall implement an area-wide Substance Abuse Testing Policy. The policy shall include minimum standards as required by the IBEW and NECA. Should any of the required minimum standards fail to comply with federal, state, and/or local laws and regulations, they shall be modified by the",
+            "block_bbox": [
+                119,
+                931,
+                1083,
+                1453
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    119.0,
+                    931.0
+                ],
+                [
+                    1083.0,
+                    931.0
+                ],
+                [
+                    1083.0,
+                    1453.0
+                ],
+                [
+                    119.0,
+                    1453.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "7",
+            "block_bbox": [
+                597,
+                1479,
+                614,
+                1500
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    597.0,
+                    1479.0
+                ],
+                [
+                    613.0,
+                    1479.0
+                ],
+                [
+                    613.0,
+                    1499.0
+                ],
+                [
+                    597.0,
+                    1499.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.5418071150779724,
+                "coordinate": [
+                    464,
+                    63,
+                    760,
+                    88
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        464.0,
+                        63.0
+                    ],
+                    [
+                        760.0,
+                        63.0
+                    ],
+                    [
+                        760.0,
+                        88.0
+                    ],
+                    [
+                        464.0,
+                        88.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9146530628204346,
+                "coordinate": [
+                    125,
+                    117,
+                    1057,
+                    172
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        125.0,
+                        117.0
+                    ],
+                    [
+                        1057.0,
+                        117.0
+                    ],
+                    [
+                        1057.0,
+                        172.0
+                    ],
+                    [
+                        125.0,
+                        172.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8435465097427368,
+                "coordinate": [
+                    483,
+                    198,
+                    737,
+                    223
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        483.0,
+                        198.0
+                    ],
+                    [
+                        737.0,
+                        198.0
+                    ],
+                    [
+                        737.0,
+                        223.0
+                    ],
+                    [
+                        483.0,
+                        223.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9458179473876953,
+                "coordinate": [
+                    122,
+                    252,
+                    1069,
+                    390
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        122.0,
+                        252.0
+                    ],
+                    [
+                        1069.0,
+                        252.0
+                    ],
+                    [
+                        1069.0,
+                        390.0
+                    ],
+                    [
+                        122.0,
+                        390.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.822666585445404,
+                "coordinate": [
+                    554,
+                    416,
+                    664,
+                    440
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        553.9999389648438,
+                        416.0
+                    ],
+                    [
+                        662.9999389648438,
+                        416.0
+                    ],
+                    [
+                        662.9999389648438,
+                        439.0
+                    ],
+                    [
+                        553.9999389648438,
+                        439.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9594618082046509,
+                "coordinate": [
+                    122,
+                    469,
+                    1088,
+                    691
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        122.0,
+                        469.0
+                    ],
+                    [
+                        1088.0,
+                        469.0
+                    ],
+                    [
+                        1088.0,
+                        691.0
+                    ],
+                    [
+                        122.0,
+                        691.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8549256920814514,
+                "coordinate": [
+                    454,
+                    715,
+                    825,
+                    740
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        454.0,
+                        715.0
+                    ],
+                    [
+                        825.0,
+                        715.0
+                    ],
+                    [
+                        825.0,
+                        740.0
+                    ],
+                    [
+                        454.0,
+                        740.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9336363673210144,
+                "coordinate": [
+                    121,
+                    768,
+                    1069,
+                    852
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        121.0,
+                        768.0
+                    ],
+                    [
+                        1069.0,
+                        768.0
+                    ],
+                    [
+                        1069.0,
+                        852.0
+                    ],
+                    [
+                        121.0,
+                        852.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8252707123756409,
+                "coordinate": [
+                    495,
+                    878,
+                    720,
+                    903
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        495.0,
+                        878.0
+                    ],
+                    [
+                        720.0,
+                        878.0
+                    ],
+                    [
+                        720.0,
+                        903.0
+                    ],
+                    [
+                        495.0,
+                        903.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9662955403327942,
+                "coordinate": [
+                    119,
+                    931,
+                    1083,
+                    1453
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        119.0,
+                        931.0
+                    ],
+                    [
+                        1083.0,
+                        931.0
+                    ],
+                    [
+                        1083.0,
+                        1453.0
+                    ],
+                    [
+                        119.0,
+                        1453.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6991415023803711,
+                "coordinate": [
+                    597,
+                    1479,
+                    614,
+                    1500
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        597.0,
+                        1479.0
+                    ],
+                    [
+                        613.0,
+                        1479.0
+                    ],
+                    [
+                        613.0,
+                        1499.0
+                    ],
+                    [
+                        597.0,
+                        1499.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

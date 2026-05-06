@@ -1,0 +1,521 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b184f002_01.pdf",
+    "page_index": 0,
+    "page_count": 73,
+    "width": 590,
+    "height": 981,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "#830262\nMAY 16 1979 - 92.\nCONTRACT AGREEMENT",
+            "block_bbox": [
+                29,
+                7,
+                524,
+                176
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    29.0,
+                    7.0
+                ],
+                [
+                    524.0,
+                    7.0
+                ],
+                [
+                    524.0,
+                    176.0
+                ],
+                [
+                    29.0,
+                    176.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2,000. between",
+            "block_bbox": [
+                44,
+                191,
+                323,
+                262
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    44.0,
+                    191.0
+                ],
+                [
+                    323.0,
+                    191.0
+                ],
+                [
+                    323.0,
+                    262.0
+                ],
+                [
+                    44.0,
+                    262.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "THE JERSEY CITY\nBOARD OF EDUCATION",
+            "block_bbox": [
+                146,
+                283,
+                429,
+                360
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    146.0,
+                    283.0
+                ],
+                [
+                    429.0,
+                    283.0
+                ],
+                [
+                    429.0,
+                    360.0
+                ],
+                [
+                    146.0,
+                    360.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "THE JERSEY CITY\nEDUCATION ASSOCIATION",
+            "block_bbox": [
+                121,
+                454,
+                439,
+                533
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    124.05075073242188,
+                    450.0390625
+                ],
+                [
+                    438.1274108886719,
+                    454.065673828125
+                ],
+                [
+                    437.1280822753906,
+                    532.0144653320312
+                ],
+                [
+                    123.05142974853516,
+                    527.9878540039062
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "covering the period\nSEPTEMBER 1, 1978\nso\nAUGUST 31, 1980",
+            "block_bbox": [
+                187,
+                592,
+                393,
+                762
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    187.0,
+                    592.0
+                ],
+                [
+                    393.0,
+                    592.0
+                ],
+                [
+                    393.0,
+                    762.0
+                ],
+                [
+                    187.0,
+                    762.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "JCEA -- HCEA -- NJEA -- NEA",
+            "block_bbox": [
+                105,
+                816,
+                468,
+                865
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    105.0,
+                    816.0
+                ],
+                [
+                    468.0,
+                    816.0
+                ],
+                [
+                    468.0,
+                    865.0
+                ],
+                [
+                    105.0,
+                    865.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "X-8/80",
+            "block_bbox": [
+                191,
+                891,
+                408,
+                975
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    191.0,
+                    891.0
+                ],
+                [
+                    408.0,
+                    891.0
+                ],
+                [
+                    408.0,
+                    975.0
+                ],
+                [
+                    191.0,
+                    975.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3628491461277008,
+                "coordinate": [
+                    29,
+                    7,
+                    524,
+                    176
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        29.0,
+                        7.0
+                    ],
+                    [
+                        524.0,
+                        7.0
+                    ],
+                    [
+                        524.0,
+                        176.0
+                    ],
+                    [
+                        29.0,
+                        176.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3919062316417694,
+                "coordinate": [
+                    44,
+                    191,
+                    323,
+                    262
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        44.0,
+                        191.0
+                    ],
+                    [
+                        323.0,
+                        191.0
+                    ],
+                    [
+                        323.0,
+                        262.0
+                    ],
+                    [
+                        44.0,
+                        262.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.44438135623931885,
+                "coordinate": [
+                    146,
+                    283,
+                    429,
+                    360
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        146.0,
+                        283.0
+                    ],
+                    [
+                        429.0,
+                        283.0
+                    ],
+                    [
+                        429.0,
+                        360.0
+                    ],
+                    [
+                        146.0,
+                        360.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4475614130496979,
+                "coordinate": [
+                    121,
+                    454,
+                    439,
+                    533
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        124.05075073242188,
+                        450.0390625
+                    ],
+                    [
+                        438.1274108886719,
+                        454.065673828125
+                    ],
+                    [
+                        437.1280822753906,
+                        532.0144653320312
+                    ],
+                    [
+                        123.05142974853516,
+                        527.9878540039062
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.30899396538734436,
+                "coordinate": [
+                    208,
+                    592,
+                    364,
+                    619
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        208.0,
+                        592.0
+                    ],
+                    [
+                        364.0,
+                        592.0
+                    ],
+                    [
+                        364.0,
+                        619.0
+                    ],
+                    [
+                        208.0,
+                        619.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.31134334206581116,
+                "coordinate": [
+                    187,
+                    592,
+                    393,
+                    762
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        187.0,
+                        592.0
+                    ],
+                    [
+                        393.0,
+                        592.0
+                    ],
+                    [
+                        393.0,
+                        762.0
+                    ],
+                    [
+                        187.0,
+                        762.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3033241629600525,
+                "coordinate": [
+                    189,
+                    637,
+                    391,
+                    671
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        189.0,
+                        637.0
+                    ],
+                    [
+                        391.0,
+                        637.0
+                    ],
+                    [
+                        391.0,
+                        671.0
+                    ],
+                    [
+                        189.0,
+                        671.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.45622628927230835,
+                "coordinate": [
+                    105,
+                    816,
+                    468,
+                    865
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        105.0,
+                        816.0
+                    ],
+                    [
+                        468.0,
+                        816.0
+                    ],
+                    [
+                        468.0,
+                        865.0
+                    ],
+                    [
+                        105.0,
+                        865.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4815329909324646,
+                "coordinate": [
+                    191,
+                    891,
+                    408,
+                    975
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        191.0,
+                        891.0
+                    ],
+                    [
+                        408.0,
+                        891.0
+                    ],
+                    [
+                        408.0,
+                        975.0
+                    ],
+                    [
+                        191.0,
+                        975.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

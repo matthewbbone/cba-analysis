@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 198,
+    "page_count": 206,
+    "width": 1224,
+    "height": 2016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "INDEX",
+            "block_bbox": [
+                575,
+                94,
+                658,
+                127
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    575.0,
+                    94.0
+                ],
+                [
+                    658.0,
+                    94.0
+                ],
+                [
+                    658.0,
+                    127.0
+                ],
+                [
+                    575.0,
+                    127.0
+                ]
+            ]
+        },
+        {
+            "block_label": "content",
+            "block_content": "ACCESS ..... 1-5\nGeneral Provisions ..... 1\nBulletin Boards ..... 1-2\nPatient Care Areas ..... 2-3\nMail Service ..... 3\nInformational Material ..... 3-4\nTelephone Use ..... 4\nUse of University Facilities ..... 4\nPreparation, Printing and Distribution of the Agreement ..... 4\nAccess to Employee Home Address and Telephone Numbers ..... 4-5\nNew Employee Orientations ..... 5\nAGREEMENT ..... 5-9\nPurpose of Agreement ..... 6\nRecognition ..... 6\nMeetings With Other Groups ..... 6\nWaiver of Unit Modification and Reclassification of Excluded Positions ..... 6-7\nReclassification From Unit to Non-Unit Positions ..... 7\nExpedited Arbitration ..... 7-8\nExclusive Process ..... 7\nSelection of Arbitrator and Scheduling of Hearing ..... 7\nPre-hearing Submission and Conduct of the Hearing ..... 7\nDecision and Precedence ..... 7-8\nStandards ..... 8\nCosts ..... 8\nNew Classes ..... 8-9\nAbolition of Classes ..... 9\nARBITRATION PROCEDURE ..... 9-13\nSelection of the Arbitrator ..... 10\nScheduling the Arbitration Hearing ..... 10\nArbitration Procedure ..... 10-13\nPanel of Arbitrators ..... 13\nBENEFITS ..... 13-15\nGeneral Conditions ..... 13-14\nEffect of Absences from Work on Benefits ..... 14\nTemporary Layoff/Temporary Reduction in Time/Furlough ..... 14\nMilitary Leave ..... 14\nLeaves of Absence Without Pay ..... 14\nEnumeration of University Benefits ..... 14-15\nCONTRACTING OUT ..... 15-16\nGeneral Provisions ..... 15\nDisplacement of Employees ..... 15\nEffect of Contract on Employees ..... 16\nNew Funding to Bring Contracted Work Back to UC ..... 16\nDEVELOPMENT ..... 16-18\nGeneral Conditions ..... 16\nRelease Time and Scheduling ..... 17\nEquipment Training ..... 17\nReduced-Fee Registration ..... 18\nCareer Path and Development ..... 18\nDISCIPLINE AND DISMISSAL ..... 18-19\nType of Discipline ..... 18\nInvestigatory Leave ..... 18\nNotice ..... 18-19\nEmployee Response ..... 19",
+            "block_bbox": [
+                104,
+                144,
+                1044,
+                1809
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    104.0,
+                    144.0
+                ],
+                [
+                    1044.0,
+                    144.0
+                ],
+                [
+                    1044.0,
+                    1809.0
+                ],
+                [
+                    104.0,
+                    1809.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "196",
+            "block_bbox": [
+                595,
+                1918,
+                640,
+                1943
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    595.0,
+                    1918.0
+                ],
+                [
+                    639.0,
+                    1918.0
+                ],
+                [
+                    639.0,
+                    1942.0
+                ],
+                [
+                    595.0,
+                    1942.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7740993499755859,
+                "coordinate": [
+                    575,
+                    94,
+                    658,
+                    127
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        575.0,
+                        94.0
+                    ],
+                    [
+                        658.0,
+                        94.0
+                    ],
+                    [
+                        658.0,
+                        127.0
+                    ],
+                    [
+                        575.0,
+                        127.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.9773702025413513,
+                "coordinate": [
+                    104,
+                    144,
+                    1044,
+                    1809
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        104.0,
+                        144.0
+                    ],
+                    [
+                        1044.0,
+                        144.0
+                    ],
+                    [
+                        1044.0,
+                        1809.0
+                    ],
+                    [
+                        104.0,
+                        1809.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7767634987831116,
+                "coordinate": [
+                    595,
+                    1918,
+                    640,
+                    1943
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        595.0,
+                        1918.0
+                    ],
+                    [
+                        639.0,
+                        1918.0
+                    ],
+                    [
+                        639.0,
+                        1942.0
+                    ],
+                    [
+                        595.0,
+                        1942.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

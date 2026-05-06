@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 113,
+    "page_count": 189,
+    "width": 1233,
+    "height": 1591,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "WAGE RATES EFFECTIVE OCTOBER 7, 2001\nSTRUCTURE A/B1",
+            "block_bbox": [
+                401,
+                138,
+                840,
+                190
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    401.0,
+                    138.0
+                ],
+                [
+                    840.0,
+                    138.0
+                ],
+                [
+                    840.0,
+                    190.0
+                ],
+                [
+                    401.0,
+                    190.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Job Title</td><td>START</td><td>1 YEAR</td><td>2 YEARS</td><td>3 YEARS</td><td>4 YEARS</td><td>5 YEARS</td><td>6 YEARS</td></tr><tr><td>RESP CARE PRACTR - SUPV</td><td>26.9225</td><td>27.6307</td><td>28.3396</td><td>28.9920</td><td>30.0372</td><td>31.3433</td><td>32.6489</td></tr><tr><td>RESP CARE PRACTITIONER I</td><td>23.1814</td><td>23.7916</td><td>24.4015</td><td>24.8753</td><td>25.4679</td><td>26.0601</td><td></td></tr><tr><td>RESP CARE PRACTITIONER II</td><td>24.4196</td><td>25.0621</td><td>25.7047</td><td>26.2965</td><td>27.2447</td><td>28.4290</td><td>29.6137</td></tr><tr><td>RESPIRATORY CARE PERMITTEE</td><td>20.8632</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>RESPIRATORY SUPPLY AIDE</td><td>14.9638</td><td>15.3473</td><td>15.7409</td><td>16.1022</td><td>16.4769</td><td>16.8113</td><td></td></tr><tr><td>RESPIRATORY SUPPLY AIDE SR</td><td>15.2210</td><td>15.6113</td><td>16.0118</td><td>16.3064</td><td>16.7342</td><td>17.1624</td><td></td></tr><tr><td>SERVICE PARTNER</td><td>14.5620</td><td>14.9353</td><td>15.3181</td><td>15.7195</td><td>16.1208</td><td></td><td></td></tr><tr><td>STERILE PROC TECH - SR - CERT</td><td>16.8322</td><td>17.2638</td><td>17.7061</td><td>18.1131</td><td>18.5343</td><td>18.9107</td><td></td></tr><tr><td>STERILE PROC TECH II - CERT</td><td>16.1850</td><td>16.5996</td><td>17.0252</td><td>17.4164</td><td>17.8214</td><td>18.1833</td><td></td></tr><tr><td>STERILE PROCESSING TECH I</td><td>15.5625</td><td>15.9613</td><td>16.3704</td><td>16.7465</td><td>17.1360</td><td>17.4838</td><td></td></tr><tr><td>STOCK ROOM ASST REG LAB SR</td><td>16.4802</td><td>16.9136</td><td>17.3473</td><td>17.5800</td><td>17.8127</td><td>18.2360</td><td></td></tr><tr><td>STOCK RM ASST REG LAB ONLY</td><td>14.9727</td><td>15.3667</td><td>15.7607</td><td>15.9721</td><td>16.1839</td><td>16.5854</td><td></td></tr><tr><td>STOREKEEPER</td><td>14.7272</td><td>15.1048</td><td>15.4922</td><td>15.8928</td><td>16.2946</td><td></td><td></td></tr><tr><td>STOREKEEPER - CHIEF</td><td>16.5018</td><td>16.9250</td><td>17.3588</td><td>17.8288</td><td>18.2381</td><td></td><td></td></tr><tr><td>STOREKEEPER I</td><td>15.0051</td><td>15.3898</td><td>15.7846</td><td>16.1929</td><td>16.6019</td><td></td><td></td></tr><tr><td>STOREKEEPER II</td><td>15.2461</td><td>15.6371</td><td>16.0379</td><td>16.4442</td><td>17.0043</td><td></td><td></td></tr><tr><td>SURGICAL ASSIST - CERTIFIED</td><td>20.2807</td><td>20.8008</td><td>21.3342</td><td>21.8867</td><td>22.5437</td><td>23.3039</td><td></td></tr><tr><td>SURGICAL ASST - TRAINEE</td><td>19.1856</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>SURGICAL ASST SR</td><td>20.1949</td><td>20.7265</td><td>21.2578</td><td>21.7969</td><td>22.4380</td><td>23.1793</td><td></td></tr><tr><td>SURGICAL ASST.</td><td>19.7862</td><td>20.2934</td><td>20.8137</td><td>21.3530</td><td>21.9939</td><td>22.7356</td><td></td></tr><tr><td>SURGICAL TECHNICIAN</td><td>18.4455</td><td>18.9183</td><td>19.4035</td><td>19.8842</td><td>20.4115</td><td>20.8920</td><td></td></tr><tr><td>SURGICAL TECHNICIAN SR</td><td>18.8876</td><td>19.3720</td><td>19.8687</td><td>20.3500</td><td>20.8766</td><td>21.3573</td><td></td></tr><tr><td>SURPLUS MATRLS ASST/OPER</td><td>18.8805</td><td>19.3645</td><td>19.8611</td><td>20.3247</td><td>20.7888</td><td>21.2958</td><td></td></tr><tr><td>TRUCK DRIVER</td><td>21.8197</td><td>22.3788</td><td>22.9527</td><td>23.4164</td><td>23.8806</td><td>24.3875</td><td></td></tr><tr><td>UNIT ASSISTANT</td><td>15.5352</td><td>15.9335</td><td>16.3422</td><td>16.6830</td><td>17.0438</td><td>17.4651</td><td></td></tr><tr><td>UNIT ASSISTANT SR</td><td>15.8570</td><td>16.2740</td><td>16.6916</td><td>17.0021</td><td>17.4522</td><td>17.9031</td><td></td></tr><tr><td>VISION SERVICES ASST I</td><td>15.2299</td><td>15.6206</td><td>16.0210</td><td>16.3877</td><td>16.7543</td><td>17.0526</td><td></td></tr><tr><td>VISION SERVICES ASST II</td><td>15.7652</td><td>16.1695</td><td>16.5840</td><td>16.9636</td><td>17.3430</td><td>17.6519</td><td></td></tr><tr><td>WAREHOUSE LEADPERSON</td><td>19.3211</td><td>19.8168</td><td>20.3250</td><td>21.0980</td><td>21.5611</td><td>22.0686</td><td></td></tr><tr><td>WAREHOUSE PERSON</td><td>18.8806</td><td>19.3645</td><td>19.8611</td><td>20.3247</td><td>20.7887</td><td>21.2958</td><td></td></tr><tr><td>YARDKEEPER</td><td>14.5748</td><td>14.9480</td><td>15.3313</td><td>15.7328</td><td>16.1339</td><td></td><td></td></tr></table>",
+            "block_bbox": [
+                111,
+                205,
+                1123,
+                1306
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    111.0,
+                    205.0
+                ],
+                [
+                    1123.0,
+                    205.0
+                ],
+                [
+                    1123.0,
+                    1306.0
+                ],
+                [
+                    111.0,
+                    1306.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "113",
+            "block_bbox": [
+                584,
+                1461,
+                626,
+                1488
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    583.9999389648438,
+                    1460.9998779296875
+                ],
+                [
+                    624.9999389648438,
+                    1460.9998779296875
+                ],
+                [
+                    624.9999389648438,
+                    1486.9998779296875
+                ],
+                [
+                    583.9999389648438,
+                    1486.9998779296875
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.8503859043121338,
+                "coordinate": [
+                    401,
+                    138,
+                    840,
+                    190
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        401.0,
+                        138.0
+                    ],
+                    [
+                        840.0,
+                        138.0
+                    ],
+                    [
+                        840.0,
+                        190.0
+                    ],
+                    [
+                        401.0,
+                        190.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9637303948402405,
+                "coordinate": [
+                    111,
+                    205,
+                    1123,
+                    1306
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        111.0,
+                        205.0
+                    ],
+                    [
+                        1123.0,
+                        205.0
+                    ],
+                    [
+                        1123.0,
+                        1306.0
+                    ],
+                    [
+                        111.0,
+                        1306.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7575649619102478,
+                "coordinate": [
+                    584,
+                    1461,
+                    626,
+                    1488
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        583.9999389648438,
+                        1460.9998779296875
+                    ],
+                    [
+                        624.9999389648438,
+                        1460.9998779296875
+                    ],
+                    [
+                        624.9999389648438,
+                        1486.9998779296875
+                    ],
+                    [
+                        583.9999389648438,
+                        1486.9998779296875
+                    ]
+                ]
+            }
+        ]
+    }
+}

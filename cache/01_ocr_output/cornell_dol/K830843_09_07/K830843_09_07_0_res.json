@@ -1,0 +1,827 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 0,
+    "page_count": 206,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header_image",
+            "block_content": "",
+            "block_bbox": [
+                140,
+                78,
+                281,
+                216
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    140.0,
+                    78.0
+                ],
+                [
+                    281.0,
+                    78.0
+                ],
+                [
+                    281.0,
+                    216.0
+                ],
+                [
+                    140.0,
+                    216.0
+                ]
+            ]
+        },
+        {
+            "block_label": "header",
+            "block_content": "Cornell University\nILR School",
+            "block_bbox": [
+                308,
+                109,
+                587,
+                183
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    308.0,
+                    109.0
+                ],
+                [
+                    587.0,
+                    109.0
+                ],
+                [
+                    587.0,
+                    183.0
+                ],
+                [
+                    308.0,
+                    183.0
+                ]
+            ]
+        },
+        {
+            "block_label": "header",
+            "block_content": "BLS Contract Collection",
+            "block_bbox": [
+                470,
+                216,
+                753,
+                244
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    470.0,
+                    216.0
+                ],
+                [
+                    753.0,
+                    216.0
+                ],
+                [
+                    753.0,
+                    244.0
+                ],
+                [
+                    470.0,
+                    244.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Title: California, University of and Patient Care Technical Unit, American Federation of State, County and Municipal Employees (AFSCME), AFL-CIO (2004) (MOA)",
+            "block_bbox": [
+                139,
+                297,
+                1072,
+                384
+            ],
+            "block_id": 3,
+            "block_order": 1,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    139.0,
+                    297.0
+                ],
+                [
+                    1072.0,
+                    297.0
+                ],
+                [
+                    1072.0,
+                    384.0
+                ],
+                [
+                    139.0,
+                    384.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "K#: 830843",
+            "block_bbox": [
+                140,
+                409,
+                277,
+                437
+            ],
+            "block_id": 4,
+            "block_order": 2,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    140.0,
+                    409.0
+                ],
+                [
+                    277.0,
+                    409.0
+                ],
+                [
+                    277.0,
+                    437.0
+                ],
+                [
+                    140.0,
+                    437.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "This contract is provided by the Martin P. Catherwood Library, ILR School, Cornell University. The information provided is for noncommercial educational use only.",
+            "block_bbox": [
+                140,
+                493,
+                1082,
+                551
+            ],
+            "block_id": 5,
+            "block_order": 3,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    140.0,
+                    493.0
+                ],
+                [
+                    1082.0,
+                    493.0
+                ],
+                [
+                    1082.0,
+                    551.0
+                ],
+                [
+                    140.0,
+                    551.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Some variations from the original paper document may have occurred during the digitization process, and some appendices or tables may be absent. Subsequent changes, revisions, and corrections may apply to this document.",
+            "block_bbox": [
+                175,
+                575,
+                1050,
+                661
+            ],
+            "block_id": 6,
+            "block_order": 4,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    175.0,
+                    575.0
+                ],
+                [
+                    1050.0,
+                    575.0
+                ],
+                [
+                    1050.0,
+                    661.0
+                ],
+                [
+                    175.0,
+                    661.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The complete metadata for each collective bargaining agreement can be found at - http://digitalcommons.ilr.cornell.edu/blscontracts/1/",
+            "block_bbox": [
+                168,
+                685,
+                1056,
+                743
+            ],
+            "block_id": 7,
+            "block_order": 5,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    167.82528686523438,
+                    685.0570678710938
+                ],
+                [
+                    1054.5465087890625,
+                    678.0036010742188
+                ],
+                [
+                    1054.9998779296875,
+                    735.0000610351562
+                ],
+                [
+                    168.27865600585938,
+                    742.0535278320312
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "For a glossary of the elements see - http://digitalcommons.ilr.cornell.edu/blscontracts/2/",
+            "block_bbox": [
+                143,
+                767,
+                1081,
+                798
+            ],
+            "block_id": 8,
+            "block_order": 6,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    143.0,
+                    767.0
+                ],
+                [
+                    1081.0,
+                    767.0
+                ],
+                [
+                    1081.0,
+                    798.0
+                ],
+                [
+                    143.0,
+                    798.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "For additional research information and assistance, please visit the Research page of the Catherwood website - http://www.ilr.cornell.edu/library/research/",
+            "block_bbox": [
+                153,
+                822,
+                1072,
+                880
+            ],
+            "block_id": 9,
+            "block_order": 7,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    153.0,
+                    822.0
+                ],
+                [
+                    1072.0,
+                    822.0
+                ],
+                [
+                    1072.0,
+                    880.0
+                ],
+                [
+                    153.0,
+                    880.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "For additional information on the ILR School -  $ \\underline{\\text{http://www.ilr.cornell.edu/}} $",
+            "block_bbox": [
+                227,
+                905,
+                996,
+                936
+            ],
+            "block_id": 10,
+            "block_order": 8,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    227.0,
+                    905.0
+                ],
+                [
+                    996.0,
+                    905.0
+                ],
+                [
+                    996.0,
+                    936.0
+                ],
+                [
+                    227.0,
+                    936.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "For more information about the BLS Contract Collection, see http://digitalcommons.ilr.cornell.edu/blscontracts/",
+            "block_bbox": [
+                285,
+                960,
+                938,
+                1019
+            ],
+            "block_id": 11,
+            "block_order": 9,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    285.0,
+                    960.0
+                ],
+                [
+                    938.0,
+                    960.0
+                ],
+                [
+                    938.0,
+                    1019.0
+                ],
+                [
+                    285.0,
+                    1019.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Or contact us:\nCatherwood Library, Ives Hall, Cornell University, Ithaca, NY 14853\n607-254-5370 ilrref@cornell.edu",
+            "block_bbox": [
+                249,
+                1047,
+                973,
+                1131
+            ],
+            "block_id": 12,
+            "block_order": 10,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    249.0,
+                    1047.0
+                ],
+                [
+                    973.0,
+                    1047.0
+                ],
+                [
+                    973.0,
+                    1131.0
+                ],
+                [
+                    249.0,
+                    1131.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.9224655032157898,
+                "coordinate": [
+                    140,
+                    78,
+                    281,
+                    216
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        140.0,
+                        78.0
+                    ],
+                    [
+                        281.0,
+                        78.0
+                    ],
+                    [
+                        281.0,
+                        216.0
+                    ],
+                    [
+                        140.0,
+                        216.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.9021909832954407,
+                "coordinate": [
+                    308,
+                    109,
+                    587,
+                    183
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        308.0,
+                        109.0
+                    ],
+                    [
+                        587.0,
+                        109.0
+                    ],
+                    [
+                        587.0,
+                        183.0
+                    ],
+                    [
+                        308.0,
+                        183.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7200415134429932,
+                "coordinate": [
+                    470,
+                    216,
+                    753,
+                    244
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        470.0,
+                        216.0
+                    ],
+                    [
+                        753.0,
+                        216.0
+                    ],
+                    [
+                        753.0,
+                        244.0
+                    ],
+                    [
+                        470.0,
+                        244.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7609562873840332,
+                "coordinate": [
+                    139,
+                    297,
+                    1072,
+                    384
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        139.0,
+                        297.0
+                    ],
+                    [
+                        1072.0,
+                        297.0
+                    ],
+                    [
+                        1072.0,
+                        384.0
+                    ],
+                    [
+                        139.0,
+                        384.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6812782883644104,
+                "coordinate": [
+                    140,
+                    409,
+                    277,
+                    437
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        140.0,
+                        409.0
+                    ],
+                    [
+                        277.0,
+                        409.0
+                    ],
+                    [
+                        277.0,
+                        437.0
+                    ],
+                    [
+                        140.0,
+                        437.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8969994783401489,
+                "coordinate": [
+                    140,
+                    493,
+                    1082,
+                    551
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        140.0,
+                        493.0
+                    ],
+                    [
+                        1082.0,
+                        493.0
+                    ],
+                    [
+                        1082.0,
+                        551.0
+                    ],
+                    [
+                        140.0,
+                        551.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9240223169326782,
+                "coordinate": [
+                    175,
+                    575,
+                    1050,
+                    661
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        175.0,
+                        575.0
+                    ],
+                    [
+                        1050.0,
+                        575.0
+                    ],
+                    [
+                        1050.0,
+                        661.0
+                    ],
+                    [
+                        175.0,
+                        661.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8923015594482422,
+                "coordinate": [
+                    168,
+                    685,
+                    1056,
+                    743
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        167.82528686523438,
+                        685.0570678710938
+                    ],
+                    [
+                        1054.5465087890625,
+                        678.0036010742188
+                    ],
+                    [
+                        1054.9998779296875,
+                        735.0000610351562
+                    ],
+                    [
+                        168.27865600585938,
+                        742.0535278320312
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8500210642814636,
+                "coordinate": [
+                    143,
+                    767,
+                    1081,
+                    798
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        143.0,
+                        767.0
+                    ],
+                    [
+                        1081.0,
+                        767.0
+                    ],
+                    [
+                        1081.0,
+                        798.0
+                    ],
+                    [
+                        143.0,
+                        798.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9039604067802429,
+                "coordinate": [
+                    153,
+                    822,
+                    1072,
+                    880
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        153.0,
+                        822.0
+                    ],
+                    [
+                        1072.0,
+                        822.0
+                    ],
+                    [
+                        1072.0,
+                        880.0
+                    ],
+                    [
+                        153.0,
+                        880.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8462014198303223,
+                "coordinate": [
+                    227,
+                    905,
+                    996,
+                    936
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        227.0,
+                        905.0
+                    ],
+                    [
+                        996.0,
+                        905.0
+                    ],
+                    [
+                        996.0,
+                        936.0
+                    ],
+                    [
+                        227.0,
+                        936.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9012171626091003,
+                "coordinate": [
+                    285,
+                    960,
+                    938,
+                    1019
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        285.0,
+                        960.0
+                    ],
+                    [
+                        938.0,
+                        960.0
+                    ],
+                    [
+                        938.0,
+                        1019.0
+                    ],
+                    [
+                        285.0,
+                        1019.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7676795721054077,
+                "coordinate": [
+                    249,
+                    1047,
+                    973,
+                    1131
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        249.0,
+                        1047.0
+                    ],
+                    [
+                        973.0,
+                        1047.0
+                    ],
+                    [
+                        973.0,
+                        1131.0
+                    ],
+                    [
+                        249.0,
+                        1131.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 376,
+    "page_count": 439,
+    "width": 1232,
+    "height": 1580,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                320,
+                105,
+                481,
+                126
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    105.0
+                ],
+                [
+                    480.0,
+                    105.0
+                ],
+                [
+                    480.0,
+                    125.0
+                ],
+                [
+                    320.0,
+                    125.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Level / Grade / Title</td><td>Level Equalization Group</td><td>Time In-Title/ Grade</td><td>Time In Location</td></tr><tr><td>PL1</td><td>2</td><td>12</td><td>12</td></tr><tr><td>PL2</td><td>3</td><td>24</td><td>12</td></tr><tr><td>PL2A</td><td>4</td><td>24</td><td>12</td></tr><tr><td>PL3</td><td>4</td><td>38</td><td>12</td></tr><tr><td>PL4</td><td>5</td><td>36</td><td>12</td></tr><tr><td>PL5</td><td>6</td><td>36</td><td>12</td></tr><tr><td>R10</td><td>1</td><td>9</td><td>9</td></tr><tr><td>R20</td><td>2</td><td>9</td><td>9</td></tr><tr><td>R30</td><td>3</td><td>15</td><td>12</td></tr><tr><td>R40</td><td>4</td><td>18</td><td>12</td></tr><tr><td>R50</td><td>5</td><td>38</td><td>12</td></tr><tr><td>RF97</td><td>5</td><td>38</td><td>12</td></tr><tr><td>S-1</td><td>3</td><td>18</td><td>12</td></tr><tr><td>S-2</td><td>4</td><td>18</td><td>12</td></tr><tr><td>S000</td><td>2</td><td>24</td><td>12</td></tr><tr><td>S10</td><td>2</td><td>24</td><td>12</td></tr><tr><td>S20</td><td>2</td><td>24</td><td>12</td></tr><tr><td>S30</td><td>3</td><td>24</td><td>12</td></tr><tr><td>SCA</td><td>2</td><td>9</td><td>9</td></tr><tr><td>SCAH</td><td>2</td><td>9</td><td>9</td></tr><tr><td>SCB</td><td>5</td><td>18</td><td>12</td></tr><tr><td>SCBH</td><td>5</td><td>18</td><td>12</td></tr><tr><td>SCC</td><td>6</td><td>36</td><td>12</td></tr><tr><td>SCCH</td><td>6</td><td>36</td><td>12</td></tr><tr><td>SCST</td><td>6</td><td>36</td><td>12</td></tr><tr><td>SR</td><td>5</td><td>24</td><td>12</td></tr><tr><td>SR-C</td><td>5</td><td>24</td><td>12</td></tr><tr><td>SRTECH</td><td>6</td><td>38</td><td>12</td></tr><tr><td>SS-1</td><td>2</td><td>15</td><td>12</td></tr><tr><td>SS-2</td><td>3</td><td>15</td><td>12</td></tr><tr><td>ST-1</td><td>6</td><td>38</td><td>12</td></tr><tr><td>ST-2</td><td>6</td><td>38</td><td>12</td></tr><tr><td>SUPPAT</td><td>3</td><td>18</td><td>12</td></tr><tr><td>SUPPC</td><td>4</td><td>18</td><td>12</td></tr><tr><td>SUPPE</td><td>5</td><td>38</td><td>12</td></tr><tr><td>SVCCC</td><td>4</td><td>18</td><td>12</td></tr><tr><td>SVCD4</td><td>3</td><td>15</td><td>12</td></tr><tr><td>SVCTG2</td><td>1</td><td>9</td><td>9</td></tr><tr><td>SVCTG3</td><td>4</td><td>18</td><td>12</td></tr><tr><td>SVCTG4</td><td>2</td><td>12</td><td>12</td></tr></table>",
+            "block_bbox": [
+                318,
+                141,
+                873,
+                891
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    318.0,
+                    141.0
+                ],
+                [
+                    873.0,
+                    141.0
+                ],
+                [
+                    873.0,
+                    891.0
+                ],
+                [
+                    318.0,
+                    891.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "388",
+            "block_bbox": [
+                321,
+                898,
+                353,
+                916
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    898.0
+                ],
+                [
+                    352.0,
+                    898.0
+                ],
+                [
+                    352.0,
+                    915.0
+                ],
+                [
+                    321.0,
+                    915.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.48207753896713257,
+                "coordinate": [
+                    320,
+                    105,
+                    481,
+                    126
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        320.0,
+                        105.0
+                    ],
+                    [
+                        480.0,
+                        105.0
+                    ],
+                    [
+                        480.0,
+                        125.0
+                    ],
+                    [
+                        320.0,
+                        125.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9162960648536682,
+                "coordinate": [
+                    318,
+                    141,
+                    873,
+                    891
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        318.0,
+                        141.0
+                    ],
+                    [
+                        873.0,
+                        141.0
+                    ],
+                    [
+                        873.0,
+                        891.0
+                    ],
+                    [
+                        318.0,
+                        891.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.584082841873169,
+                "coordinate": [
+                    321,
+                    898,
+                    353,
+                    916
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        321.0,
+                        898.0
+                    ],
+                    [
+                        352.0,
+                        898.0
+                    ],
+                    [
+                        352.0,
+                        915.0
+                    ],
+                    [
+                        321.0,
+                        915.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

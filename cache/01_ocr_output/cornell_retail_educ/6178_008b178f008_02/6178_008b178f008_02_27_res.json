@@ -1,0 +1,644 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b178f008_02.pdf",
+    "page_index": 27,
+    "page_count": 42,
+    "width": 1236,
+    "height": 1598,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "3.  $ \\underline{Military} $ - Leaves of absence for the performance of military\nencampment duty with the United States Armed Forces or with a Reserve\ncomponent thereof shall be granted up to a maximum of two weeks. The\nemployee must present a copy of his/her orders to the supervisor.",
+            "block_bbox": [
+                170,
+                165,
+                1078,
+                348
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    170.0,
+                    165.0
+                ],
+                [
+                    1078.0,
+                    165.0
+                ],
+                [
+                    1078.0,
+                    348.0
+                ],
+                [
+                    170.0,
+                    348.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "4.  $ \\underline{\\text{Contractual Benefits During Leave}} $",
+            "block_bbox": [
+                256,
+                364,
+                724,
+                395
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    256.0,
+                    364.0
+                ],
+                [
+                    724.0,
+                    364.0
+                ],
+                [
+                    724.0,
+                    395.0
+                ],
+                [
+                    256.0,
+                    395.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a) University continues its contributions for health and life insurance coverage during the period of leave. The employee must continue to pay his/her share of such premiums, if applicable.",
+            "block_bbox": [
+                172,
+                413,
+                1066,
+                545
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    172.0,
+                    413.0
+                ],
+                [
+                    1066.0,
+                    413.0
+                ],
+                [
+                    1066.0,
+                    545.0
+                ],
+                [
+                    172.0,
+                    545.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b) Credit for vacation or sick leave is not accumulated during an unpaid leave of absence of more than fifteen days.",
+            "block_bbox": [
+                172,
+                561,
+                1054,
+                642
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    172.0,
+                    561.0
+                ],
+                [
+                    1054.0,
+                    561.0
+                ],
+                [
+                    1054.0,
+                    642.0
+                ],
+                [
+                    172.0,
+                    642.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "c) No pay is given for holidays which occur during the leave of absence period. If a holiday falls on the first working day after the scheduled expiration date of the employee's leave, the employee is not paid for that holiday.",
+            "block_bbox": [
+                171,
+                659,
+                1079,
+                841
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    171.0,
+                    659.0
+                ],
+                [
+                    1079.0,
+                    659.0
+                ],
+                [
+                    1079.0,
+                    841.0
+                ],
+                [
+                    171.0,
+                    841.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "5. General Provisions",
+            "block_bbox": [
+                255,
+                856,
+                538,
+                887
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    255.0,
+                    856.0
+                ],
+                [
+                    538.0,
+                    856.0
+                ],
+                [
+                    538.0,
+                    887.0
+                ],
+                [
+                    255.0,
+                    887.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a) An employee may be required to take a medical examination prior to return to work from any Illness Leave of Absence.",
+            "block_bbox": [
+                170,
+                906,
+                1112,
+                988
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    169.4495086669922,
+                    913.004150390625
+                ],
+                [
+                    1111.0001220703125,
+                    906.0
+                ],
+                [
+                    1111.550537109375,
+                    979.995849609375
+                ],
+                [
+                    169.9999237060547,
+                    987.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b) Failure to return to work upon scheduled expiration of approved leave constitutes grounds for termination. Any employee desiring to return to the University after a leave of absence has expired will be treated as a new applicant. All prior seniority will be lost.",
+            "block_bbox": [
+                171,
+                1005,
+                1091,
+                1185
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    171.0,
+                    1005.0
+                ],
+                [
+                    1091.0,
+                    1005.0
+                ],
+                [
+                    1091.0,
+                    1185.0
+                ],
+                [
+                    171.0,
+                    1185.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "c) Acceptance of other employment while on leave constitutes grounds for termination.",
+            "block_bbox": [
+                172,
+                1202,
+                1111,
+                1283
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    171.45523071289062,
+                    1209.004150390625
+                ],
+                [
+                    1110.0,
+                    1202.0
+                ],
+                [
+                    1110.5447998046875,
+                    1274.995849609375
+                ],
+                [
+                    172.00003051757812,
+                    1282.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "26",
+            "block_bbox": [
+                605,
+                1436,
+                636,
+                1459
+            ],
+            "block_id": 9,
+            "block_order": null,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    605.0,
+                    1436.0
+                ],
+                [
+                    635.0,
+                    1436.0
+                ],
+                [
+                    635.0,
+                    1458.0
+                ],
+                [
+                    605.0,
+                    1458.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9368867874145508,
+                "coordinate": [
+                    170,
+                    165,
+                    1078,
+                    348
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        170.0,
+                        165.0
+                    ],
+                    [
+                        1078.0,
+                        165.0
+                    ],
+                    [
+                        1078.0,
+                        348.0
+                    ],
+                    [
+                        170.0,
+                        348.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7960613369941711,
+                "coordinate": [
+                    256,
+                    364,
+                    724,
+                    395
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        256.0,
+                        364.0
+                    ],
+                    [
+                        724.0,
+                        364.0
+                    ],
+                    [
+                        724.0,
+                        395.0
+                    ],
+                    [
+                        256.0,
+                        395.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9299947023391724,
+                "coordinate": [
+                    172,
+                    413,
+                    1066,
+                    545
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        172.0,
+                        413.0
+                    ],
+                    [
+                        1066.0,
+                        413.0
+                    ],
+                    [
+                        1066.0,
+                        545.0
+                    ],
+                    [
+                        172.0,
+                        545.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9120070338249207,
+                "coordinate": [
+                    172,
+                    561,
+                    1054,
+                    642
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        172.0,
+                        561.0
+                    ],
+                    [
+                        1054.0,
+                        561.0
+                    ],
+                    [
+                        1054.0,
+                        642.0
+                    ],
+                    [
+                        172.0,
+                        642.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9279285073280334,
+                "coordinate": [
+                    171,
+                    659,
+                    1079,
+                    841
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        171.0,
+                        659.0
+                    ],
+                    [
+                        1079.0,
+                        659.0
+                    ],
+                    [
+                        1079.0,
+                        841.0
+                    ],
+                    [
+                        171.0,
+                        841.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7812933325767517,
+                "coordinate": [
+                    255,
+                    856,
+                    538,
+                    887
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        255.0,
+                        856.0
+                    ],
+                    [
+                        538.0,
+                        856.0
+                    ],
+                    [
+                        538.0,
+                        887.0
+                    ],
+                    [
+                        255.0,
+                        887.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8781156539916992,
+                "coordinate": [
+                    170,
+                    906,
+                    1112,
+                    988
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        169.4495086669922,
+                        913.004150390625
+                    ],
+                    [
+                        1111.0001220703125,
+                        906.0
+                    ],
+                    [
+                        1111.550537109375,
+                        979.995849609375
+                    ],
+                    [
+                        169.9999237060547,
+                        987.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9346603155136108,
+                "coordinate": [
+                    171,
+                    1005,
+                    1091,
+                    1185
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        171.0,
+                        1005.0
+                    ],
+                    [
+                        1091.0,
+                        1005.0
+                    ],
+                    [
+                        1091.0,
+                        1185.0
+                    ],
+                    [
+                        171.0,
+                        1185.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8555901646614075,
+                "coordinate": [
+                    172,
+                    1202,
+                    1111,
+                    1283
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        171.45523071289062,
+                        1209.004150390625
+                    ],
+                    [
+                        1110.0,
+                        1202.0
+                    ],
+                    [
+                        1110.5447998046875,
+                        1274.995849609375
+                    ],
+                    [
+                        172.00003051757812,
+                        1282.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6633192300796509,
+                "coordinate": [
+                    605,
+                    1436,
+                    636,
+                    1459
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        605.0,
+                        1436.0
+                    ],
+                    [
+                        635.0,
+                        1436.0
+                    ],
+                    [
+                        635.0,
+                        1458.0
+                    ],
+                    [
+                        605.0,
+                        1458.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

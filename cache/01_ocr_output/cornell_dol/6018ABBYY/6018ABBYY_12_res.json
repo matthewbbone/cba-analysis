@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 12,
+    "page_count": 287,
+    "width": 723,
+    "height": 1005,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE I",
+            "block_bbox": [
+                49,
+                47,
+                121,
+                68
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    49.0,
+                    47.0
+                ],
+                [
+                    120.0,
+                    47.0
+                ],
+                [
+                    120.0,
+                    67.0
+                ],
+                [
+                    49.0,
+                    67.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) The Company and Union will establish a Joint Safety Committee for the purpose of cooperating in the elimination of unsafe conditions and unsafe work practices. The Committee will be comprised of four (4) representatives from the Union and four (4) representatives from the Company; provided, however, the Union shall have the right to bring an additional Safety representative where it is necessary to fully explore particular Safety concerns. The Committee Chairperson will be the Company's representative from the Safety Division who shall preside over all meetings. The meetings can be culled by either party, but the Committee shall not meet more than once per month, nor for longer than four (4) hours. The meetings will be held at a mutually agreeable time and place. The Union representatives shall be paid for scheduled hours lost on account of attending such meetings.",
+            "block_bbox": [
+                75,
+                77,
+                632,
+                363
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    75.0,
+                    77.0
+                ],
+                [
+                    632.0,
+                    77.0
+                ],
+                [
+                    632.0,
+                    363.0
+                ],
+                [
+                    75.0,
+                    363.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) The Committee shall have the authority to determine whether any recommendations will be made to the Company with respect to appropriate matters discussed by the Committee. If it is decided to make a recommendation, such recommendation shall be made to the appropriate Operations Manager. Should an abnormally dangerous working condition arise, the appropriate Union Safety Committee representative may, after consultation with supervision, contact the Chairperson of the Safety Committee to review the condition.",
+            "block_bbox": [
+                80,
+                382,
+                630,
+                560
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    80.0,
+                    382.0
+                ],
+                [
+                    630.0,
+                    382.0
+                ],
+                [
+                    630.0,
+                    560.0
+                ],
+                [
+                    80.0,
+                    560.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(c) Should an employee working alone in the field become apprehensive of his or her safety in the course of his or her work, the employee will immediately notify the Dispatch Board of his or her concern and of the reasons therefore. Supervisory personnel will determine whether the employee should attempt to execute the work order or leave the area and defer the work order. In the event supervisory personnel determine that the work order should not be deferred, the employee will be instructed to stand outside of the area and await assistance which will be made available to the employee through his or her immediate supervisor. The supervisor will stand by on the job site until the job is completed if the job cannot be deferred.",
+            "block_bbox": [
+                76,
+                578,
+                631,
+                821
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    76.0,
+                    578.0
+                ],
+                [
+                    631.0,
+                    578.0
+                ],
+                [
+                    631.0,
+                    821.0
+                ],
+                [
+                    76.0,
+                    821.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(7) Training – To assure employees are trained on the duties within their classification, the Company will conduct an ongoing training program. The training will be offered to employees within their classification and section on a basis of highest departmental seniority. The training will be on an",
+            "block_bbox": [
+                48,
+                839,
+                629,
+                929
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    48.0,
+                    839.0
+                ],
+                [
+                    629.0,
+                    839.0
+                ],
+                [
+                    629.0,
+                    929.0
+                ],
+                [
+                    48.0,
+                    929.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "4",
+            "block_bbox": [
+                332,
+                935,
+                345,
+                950
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    332.0,
+                    935.0
+                ],
+                [
+                    344.0,
+                    935.0
+                ],
+                [
+                    344.0,
+                    949.0
+                ],
+                [
+                    332.0,
+                    949.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7049431800842285,
+                "coordinate": [
+                    49,
+                    47,
+                    121,
+                    68
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        49.0,
+                        47.0
+                    ],
+                    [
+                        120.0,
+                        47.0
+                    ],
+                    [
+                        120.0,
+                        67.0
+                    ],
+                    [
+                        49.0,
+                        67.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8879251480102539,
+                "coordinate": [
+                    75,
+                    77,
+                    632,
+                    363
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        75.0,
+                        77.0
+                    ],
+                    [
+                        632.0,
+                        77.0
+                    ],
+                    [
+                        632.0,
+                        363.0
+                    ],
+                    [
+                        75.0,
+                        363.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.927020251750946,
+                "coordinate": [
+                    80,
+                    382,
+                    630,
+                    560
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        80.0,
+                        382.0
+                    ],
+                    [
+                        630.0,
+                        382.0
+                    ],
+                    [
+                        630.0,
+                        560.0
+                    ],
+                    [
+                        80.0,
+                        560.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9212055206298828,
+                "coordinate": [
+                    76,
+                    578,
+                    631,
+                    821
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        76.0,
+                        578.0
+                    ],
+                    [
+                        631.0,
+                        578.0
+                    ],
+                    [
+                        631.0,
+                        821.0
+                    ],
+                    [
+                        76.0,
+                        821.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9014723896980286,
+                "coordinate": [
+                    48,
+                    839,
+                    629,
+                    929
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        48.0,
+                        839.0
+                    ],
+                    [
+                        629.0,
+                        839.0
+                    ],
+                    [
+                        629.0,
+                        929.0
+                    ],
+                    [
+                        48.0,
+                        929.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.5926213264465332,
+                "coordinate": [
+                    332,
+                    935,
+                    345,
+                    950
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        332.0,
+                        935.0
+                    ],
+                    [
+                        344.0,
+                        935.0
+                    ],
+                    [
+                        344.0,
+                        949.0
+                    ],
+                    [
+                        332.0,
+                        949.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

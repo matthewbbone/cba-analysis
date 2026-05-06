@@ -1,0 +1,461 @@
+{
+    "input_path": "cache/dol_archive/document_3522.pdf",
+    "page_index": 54,
+    "page_count": 62,
+    "width": 1223,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 21 – EMPLOYEE ASSISTANCE PROGRAMS",
+            "block_bbox": [
+                134,
+                182,
+                750,
+                210
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    134.0,
+                    182.0
+                ],
+                [
+                    750.0,
+                    182.0
+                ],
+                [
+                    750.0,
+                    210.0
+                ],
+                [
+                    134.0,
+                    210.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. Dual Status Employees may request the services available through Military One Source. Non Dual Status Employees may request the services through the Employee Assistance Program (EAP).",
+            "block_bbox": [
+                132,
+                239,
+                1052,
+                323
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    132.0,
+                    239.0
+                ],
+                [
+                    1052.0,
+                    239.0
+                ],
+                [
+                    1052.0,
+                    323.0
+                ],
+                [
+                    132.0,
+                    323.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. Supervisors may refer Employees to EAP or Military One Source at any time; however participation in either program is strictly voluntary.",
+            "block_bbox": [
+                131,
+                349,
+                997,
+                407
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    131.0,
+                    349.0
+                ],
+                [
+                    997.0,
+                    349.0
+                ],
+                [
+                    997.0,
+                    407.0
+                ],
+                [
+                    131.0,
+                    407.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3. No disciplinary or adverse action will be taken as a result of using EAP or Military One Source. This extends to an Employee who self-discloses a personal medical/behavioral condition to his Supervisor.",
+            "block_bbox": [
+                131,
+                432,
+                1038,
+                517
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    131.0,
+                    432.0
+                ],
+                [
+                    1038.0,
+                    432.0
+                ],
+                [
+                    1038.0,
+                    517.0
+                ],
+                [
+                    131.0,
+                    517.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "4. This article does not limit management's right to take administrative or disciplinary action, especially in cases of illegal drug use or violations of the law.",
+            "block_bbox": [
+                130,
+                543,
+                1047,
+                601
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    130.0,
+                    543.0
+                ],
+                [
+                    1047.0,
+                    543.0
+                ],
+                [
+                    1047.0,
+                    601.0
+                ],
+                [
+                    130.0,
+                    601.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "Agreement Between the Adjutant General of Michigan and the Laborers International Union of North America (LIUNA) September 2015",
+            "block_bbox": [
+                136,
+                1463,
+                928,
+                1501
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    136.0,
+                    1463.0
+                ],
+                [
+                    928.0,
+                    1463.0
+                ],
+                [
+                    928.0,
+                    1501.0
+                ],
+                [
+                    136.0,
+                    1501.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "55",
+            "block_bbox": [
+                1043,
+                1468,
+                1068,
+                1488
+            ],
+            "block_id": 6,
+            "block_order": null,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    1043.0,
+                    1468.0
+                ],
+                [
+                    1067.0,
+                    1468.0
+                ],
+                [
+                    1067.0,
+                    1487.0
+                ],
+                [
+                    1043.0,
+                    1487.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8745137453079224,
+                "coordinate": [
+                    134,
+                    182,
+                    750,
+                    210
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        134.0,
+                        182.0
+                    ],
+                    [
+                        750.0,
+                        182.0
+                    ],
+                    [
+                        750.0,
+                        210.0
+                    ],
+                    [
+                        134.0,
+                        210.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9316661357879639,
+                "coordinate": [
+                    132,
+                    239,
+                    1052,
+                    323
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        132.0,
+                        239.0
+                    ],
+                    [
+                        1052.0,
+                        239.0
+                    ],
+                    [
+                        1052.0,
+                        323.0
+                    ],
+                    [
+                        132.0,
+                        323.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9141656756401062,
+                "coordinate": [
+                    131,
+                    349,
+                    997,
+                    407
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        131.0,
+                        349.0
+                    ],
+                    [
+                        997.0,
+                        349.0
+                    ],
+                    [
+                        997.0,
+                        407.0
+                    ],
+                    [
+                        131.0,
+                        407.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9392855763435364,
+                "coordinate": [
+                    131,
+                    432,
+                    1038,
+                    517
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        131.0,
+                        432.0
+                    ],
+                    [
+                        1038.0,
+                        432.0
+                    ],
+                    [
+                        1038.0,
+                        517.0
+                    ],
+                    [
+                        131.0,
+                        517.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.920741081237793,
+                "coordinate": [
+                    130,
+                    543,
+                    1047,
+                    601
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        130.0,
+                        543.0
+                    ],
+                    [
+                        1047.0,
+                        543.0
+                    ],
+                    [
+                        1047.0,
+                        601.0
+                    ],
+                    [
+                        130.0,
+                        601.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8760245442390442,
+                "coordinate": [
+                    136,
+                    1463,
+                    928,
+                    1501
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        136.0,
+                        1463.0
+                    ],
+                    [
+                        928.0,
+                        1463.0
+                    ],
+                    [
+                        928.0,
+                        1501.0
+                    ],
+                    [
+                        136.0,
+                        1501.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7446820139884949,
+                "coordinate": [
+                    1043,
+                    1468,
+                    1068,
+                    1488
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        1043.0,
+                        1468.0
+                    ],
+                    [
+                        1067.0,
+                        1468.0
+                    ],
+                    [
+                        1067.0,
+                        1487.0
+                    ],
+                    [
+                        1043.0,
+                        1487.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

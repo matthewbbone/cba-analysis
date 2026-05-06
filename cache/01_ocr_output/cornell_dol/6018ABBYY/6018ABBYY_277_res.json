@@ -1,0 +1,186 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 277,
+    "page_count": 287,
+    "width": 683,
+    "height": 1013,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "NOTES",
+            "block_bbox": [
+                6,
+                51,
+                683,
+                925
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    6.0,
+                    51.0
+                ],
+                [
+                    689.0,
+                    51.0
+                ],
+                [
+                    689.0,
+                    925.0
+                ],
+                [
+                    6.0,
+                    925.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "268",
+            "block_bbox": [
+                323,
+                941,
+                353,
+                957
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    323.0,
+                    941.0
+                ],
+                [
+                    352.0,
+                    941.0
+                ],
+                [
+                    352.0,
+                    956.0
+                ],
+                [
+                    323.0,
+                    956.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5383959412574768,
+                "coordinate": [
+                    299,
+                    52,
+                    391,
+                    87
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        299.0,
+                        52.0
+                    ],
+                    [
+                        391.0,
+                        52.0
+                    ],
+                    [
+                        391.0,
+                        87.0
+                    ],
+                    [
+                        299.0,
+                        87.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4350370168685913,
+                "coordinate": [
+                    6,
+                    51,
+                    683,
+                    925
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        6.0,
+                        51.0
+                    ],
+                    [
+                        689.0,
+                        51.0
+                    ],
+                    [
+                        689.0,
+                        925.0
+                    ],
+                    [
+                        6.0,
+                        925.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7599449157714844,
+                "coordinate": [
+                    323,
+                    941,
+                    353,
+                    957
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        323.0,
+                        941.0
+                    ],
+                    [
+                        352.0,
+                        941.0
+                    ],
+                    [
+                        352.0,
+                        956.0
+                    ],
+                    [
+                        323.0,
+                        956.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

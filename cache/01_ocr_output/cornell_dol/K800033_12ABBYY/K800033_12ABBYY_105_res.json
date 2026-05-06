@@ -1,0 +1,796 @@
+{
+    "input_path": "cache/cornell_dol/K800033_12ABBYY.pdf",
+    "page_index": 105,
+    "page_count": 123,
+    "width": 1225,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "doc_title",
+            "block_content": "Memorandum of Understanding\nBetween the\nCommonwealth of Massachusetts\nand the\nMassachusetts Organization of State Engineers and Scientists",
+            "block_bbox": [
+                262,
+                226,
+                951,
+                374
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    262.0,
+                    226.0
+                ],
+                [
+                    951.0,
+                    226.0
+                ],
+                [
+                    951.0,
+                    374.0
+                ],
+                [
+                    262.0,
+                    374.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "PERSONAL & VACATION LEAVE",
+            "block_bbox": [
+                421,
+                401,
+                804,
+                430
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    421.0,
+                    401.0
+                ],
+                [
+                    804.0,
+                    401.0
+                ],
+                [
+                    804.0,
+                    430.0
+                ],
+                [
+                    421.0,
+                    430.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "This Memorandum of Understanding is entered into b between the Commonwealth of Massachusetts, through the Human Resources Division, and MOSES, Unit 9. The intent of this Memorandum of Understanding is to clarify the understanding reached by the parties concerning Article 8, Section 8.2., \"Paid Personal Lea ve\".",
+            "block_bbox": [
+                137,
+                460,
+                1081,
+                575
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    137.0,
+                    460.0
+                ],
+                [
+                    1081.0,
+                    460.0
+                ],
+                [
+                    1081.0,
+                    575.0
+                ],
+                [
+                    137.0,
+                    575.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "MOSES employees are encouraged to utilize any current unused personal leave balances before December 31, 1999. It is understood that the employees will receive three new personal days upon implementation of the HR/CMS payroll system, and that those three personal days will be available for use between the advent of HR/CMS and December 31, 2000. However, no employee will be allowed to carry more than three personal days at any given time. If an employee has exhausted his/her personal leave by January 1, 2000, and said employee requires the use of personal leave before said implementation of HR/CMS, the Employer agrees to allow an employee to “draw” against their personal leave balance in advance of said implementation.",
+            "block_bbox": [
+                137,
+                601,
+                1069,
+                859
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    137.0,
+                    601.0
+                ],
+                [
+                    1069.0,
+                    601.0
+                ],
+                [
+                    1069.0,
+                    859.0
+                ],
+                [
+                    137.0,
+                    859.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "An employee’s unused but forfeable vacation time as of June 30, 2000 will not be forfeited as required by Article 9; rather said forfeiture shall not occur until December 31, 2000.",
+            "block_bbox": [
+                137,
+                884,
+                1060,
+                969
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    137.0,
+                    884.0
+                ],
+                [
+                    1060.0,
+                    884.0
+                ],
+                [
+                    1060.0,
+                    969.0
+                ],
+                [
+                    137.0,
+                    969.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The provisions contained herein shall expire on December 31, 2000.",
+            "block_bbox": [
+                210,
+                998,
+                941,
+                1027
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    210.0,
+                    998.0
+                ],
+                [
+                    941.0,
+                    998.0
+                ],
+                [
+                    941.0,
+                    1027.0
+                ],
+                [
+                    210.0,
+                    1027.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The terms of this Agreement shall not establish precedent with regard to any other matter.",
+            "block_bbox": [
+                138,
+                1054,
+                1030,
+                1111
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    138.0,
+                    1054.0
+                ],
+                [
+                    1030.0,
+                    1054.0
+                ],
+                [
+                    1030.0,
+                    1111.0
+                ],
+                [
+                    138.0,
+                    1111.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Signed this 16 $ ^{th} $ day of November, 1999.",
+            "block_bbox": [
+                140,
+                1168,
+                573,
+                1199
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    140.0,
+                    1168.0
+                ],
+                [
+                    573.0,
+                    1168.0
+                ],
+                [
+                    573.0,
+                    1199.0
+                ],
+                [
+                    140.0,
+                    1199.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "For the Massachusetts Organization of State Engineers and Scientists:\nMary Richards,\nPresident\nFor the Commonwealth of Massachusetts:",
+            "block_bbox": [
+                210,
+                1263,
+                549,
+                1360
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    210.0,
+                    1263.0
+                ],
+                [
+                    549.0,
+                    1263.0
+                ],
+                [
+                    549.0,
+                    1360.0
+                ],
+                [
+                    210.0,
+                    1360.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "",
+            "block_bbox": [
+                642,
+                1260,
+                881,
+                1292
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    642.0,
+                    1260.0
+                ],
+                [
+                    881.0,
+                    1260.0
+                ],
+                [
+                    881.0,
+                    1292.0
+                ],
+                [
+                    642.0,
+                    1292.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "James J Hartnett, Jr.\nPersonnel-Administrator",
+            "block_bbox": [
+                635,
+                1303,
+                1039,
+                1357
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    635.0,
+                    1303.0
+                ],
+                [
+                    1039.0,
+                    1303.0
+                ],
+                [
+                    1039.0,
+                    1357.0
+                ],
+                [
+                    635.0,
+                    1357.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "101",
+            "block_bbox": [
+                592,
+                1462,
+                630,
+                1482
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    592.0,
+                    1462.0
+                ],
+                [
+                    629.0,
+                    1462.0
+                ],
+                [
+                    629.0,
+                    1481.0
+                ],
+                [
+                    592.0,
+                    1481.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.8123423457145691,
+                "coordinate": [
+                    262,
+                    226,
+                    951,
+                    374
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        262.0,
+                        226.0
+                    ],
+                    [
+                        951.0,
+                        226.0
+                    ],
+                    [
+                        951.0,
+                        374.0
+                    ],
+                    [
+                        262.0,
+                        374.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.4439273774623871,
+                "coordinate": [
+                    421,
+                    401,
+                    804,
+                    430
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        421.0,
+                        401.0
+                    ],
+                    [
+                        804.0,
+                        401.0
+                    ],
+                    [
+                        804.0,
+                        430.0
+                    ],
+                    [
+                        421.0,
+                        430.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9438451528549194,
+                "coordinate": [
+                    137,
+                    460,
+                    1081,
+                    575
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        137.0,
+                        460.0
+                    ],
+                    [
+                        1081.0,
+                        460.0
+                    ],
+                    [
+                        1081.0,
+                        575.0
+                    ],
+                    [
+                        137.0,
+                        575.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.960762083530426,
+                "coordinate": [
+                    137,
+                    601,
+                    1069,
+                    859
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        137.0,
+                        601.0
+                    ],
+                    [
+                        1069.0,
+                        601.0
+                    ],
+                    [
+                        1069.0,
+                        859.0
+                    ],
+                    [
+                        137.0,
+                        859.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9320531487464905,
+                "coordinate": [
+                    137,
+                    884,
+                    1060,
+                    969
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        137.0,
+                        884.0
+                    ],
+                    [
+                        1060.0,
+                        884.0
+                    ],
+                    [
+                        1060.0,
+                        969.0
+                    ],
+                    [
+                        137.0,
+                        969.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8630492091178894,
+                "coordinate": [
+                    210,
+                    998,
+                    941,
+                    1027
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        210.0,
+                        998.0
+                    ],
+                    [
+                        941.0,
+                        998.0
+                    ],
+                    [
+                        941.0,
+                        1027.0
+                    ],
+                    [
+                        210.0,
+                        1027.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9166947603225708,
+                "coordinate": [
+                    138,
+                    1054,
+                    1030,
+                    1111
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        138.0,
+                        1054.0
+                    ],
+                    [
+                        1030.0,
+                        1054.0
+                    ],
+                    [
+                        1030.0,
+                        1111.0
+                    ],
+                    [
+                        138.0,
+                        1111.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8490698337554932,
+                "coordinate": [
+                    140,
+                    1168,
+                    573,
+                    1199
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        140.0,
+                        1168.0
+                    ],
+                    [
+                        573.0,
+                        1168.0
+                    ],
+                    [
+                        573.0,
+                        1199.0
+                    ],
+                    [
+                        140.0,
+                        1199.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5444757342338562,
+                "coordinate": [
+                    217,
+                    1262,
+                    557,
+                    1292
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        224.0,
+                        1261.9998779296875
+                    ],
+                    [
+                        555.9999389648438,
+                        1261.9998779296875
+                    ],
+                    [
+                        555.9999389648438,
+                        1290.9998779296875
+                    ],
+                    [
+                        224.0,
+                        1290.9998779296875
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.36776280403137207,
+                "coordinate": [
+                    210,
+                    1263,
+                    549,
+                    1360
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        210.0,
+                        1263.0
+                    ],
+                    [
+                        549.0,
+                        1263.0
+                    ],
+                    [
+                        549.0,
+                        1360.0
+                    ],
+                    [
+                        210.0,
+                        1360.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.779460072517395,
+                "coordinate": [
+                    642,
+                    1260,
+                    881,
+                    1292
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        642.0,
+                        1260.0
+                    ],
+                    [
+                        881.0,
+                        1260.0
+                    ],
+                    [
+                        881.0,
+                        1292.0
+                    ],
+                    [
+                        642.0,
+                        1292.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5799894332885742,
+                "coordinate": [
+                    635,
+                    1303,
+                    1039,
+                    1357
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        635.0,
+                        1303.0
+                    ],
+                    [
+                        1039.0,
+                        1303.0
+                    ],
+                    [
+                        1039.0,
+                        1357.0
+                    ],
+                    [
+                        635.0,
+                        1357.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7605791091918945,
+                "coordinate": [
+                    592,
+                    1462,
+                    630,
+                    1482
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        592.0,
+                        1462.0
+                    ],
+                    [
+                        629.0,
+                        1462.0
+                    ],
+                    [
+                        629.0,
+                        1481.0
+                    ],
+                    [
+                        592.0,
+                        1481.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

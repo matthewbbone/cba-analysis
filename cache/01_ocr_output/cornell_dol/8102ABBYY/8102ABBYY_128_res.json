@@ -1,0 +1,461 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 128,
+    "page_count": 439,
+    "width": 1232,
+    "height": 1580,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article 15",
+            "block_bbox": [
+                318,
+                71,
+                390,
+                91
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    318.0,
+                    71.0
+                ],
+                [
+                    389.0,
+                    71.0
+                ],
+                [
+                    389.0,
+                    90.0
+                ],
+                [
+                    318.0,
+                    90.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "Eligible Vacation Days For Employee Leaving Company\nDuring Calendar Year\nDue To Resignation Or Termination for Cause",
+            "block_bbox": [
+                405,
+                132,
+                789,
+                189
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    405.0,
+                    132.0
+                ],
+                [
+                    789.0,
+                    132.0
+                ],
+                [
+                    789.0,
+                    189.0
+                ],
+                [
+                    405.0,
+                    189.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Month of Termination</td><td>Term of Employment Completed (or would have been completed) in the Calendar Year of the Termination</td></tr></table>",
+            "block_bbox": [
+                355,
+                205,
+                836,
+                282
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    355.0,
+                    205.0
+                ],
+                [
+                    836.0,
+                    205.0
+                ],
+                [
+                    836.0,
+                    282.0
+                ],
+                [
+                    355.0,
+                    282.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td></td><td>1 - 6 Years</td><td>7 - 14 Years</td><td>15 - 24 Years</td><td>25 and Over Years</td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td>January</td><td>1</td><td>2</td><td>2</td><td>2</td></tr><tr><td>February</td><td>2</td><td>3</td><td>4</td><td>4</td></tr><tr><td>March</td><td>3</td><td>4</td><td>5</td><td>7</td></tr><tr><td>April</td><td>3</td><td>5</td><td>7</td><td>9</td></tr><tr><td>May</td><td>4</td><td>6</td><td>9</td><td>11</td></tr><tr><td>June</td><td>5</td><td>8</td><td>10</td><td>13</td></tr><tr><td>July</td><td>6</td><td>9</td><td>12</td><td>15</td></tr><tr><td>August</td><td>7</td><td>10</td><td>14</td><td>17</td></tr><tr><td>September</td><td>7</td><td>11</td><td>18</td><td>19</td></tr><tr><td>October</td><td>8</td><td>13</td><td>17</td><td>21</td></tr><tr><td>November</td><td>9</td><td>14</td><td>19</td><td>23</td></tr><tr><td>December</td><td>10</td><td>15</td><td>20</td><td>25</td></tr></table>",
+            "block_bbox": [
+                346,
+                296,
+                847,
+                586
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    346.0,
+                    296.0
+                ],
+                [
+                    847.0,
+                    296.0
+                ],
+                [
+                    847.0,
+                    586.0
+                ],
+                [
+                    346.0,
+                    586.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(c) An Employee granted vacation or allowance in lieu thereof as provided in Paragraph 4(a) shall also be granted vacation or allowance in lieu thereof, as applicable, for any vacation rescheduled or carried over from the previous calendar year in accordance with Paragraph 2(e), 2(f) or 2(g), respectively.",
+            "block_bbox": [
+                343,
+                608,
+                874,
+                699
+            ],
+            "block_id": 4,
+            "block_order": 1,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    343.0,
+                    608.0
+                ],
+                [
+                    874.0,
+                    608.0
+                ],
+                [
+                    874.0,
+                    699.0
+                ],
+                [
+                    343.0,
+                    699.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(d) In the event an Employee dies before taking all the vacation to which eligible as provided in this Article, an allowance in lieu of the vacation not taken will be paid to the Employee's beneficiary, or to the Employee's estate if no beneficiary is designated.",
+            "block_bbox": [
+                342,
+                701,
+                875,
+                775
+            ],
+            "block_id": 5,
+            "block_order": 2,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    342.0,
+                    701.0
+                ],
+                [
+                    875.0,
+                    701.0
+                ],
+                [
+                    875.0,
+                    775.0
+                ],
+                [
+                    342.0,
+                    775.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "120",
+            "block_bbox": [
+                323,
+                907,
+                352,
+                926
+            ],
+            "block_id": 6,
+            "block_order": null,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    323.0,
+                    907.0
+                ],
+                [
+                    351.0,
+                    907.0
+                ],
+                [
+                    351.0,
+                    925.0
+                ],
+                [
+                    323.0,
+                    925.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7717258334159851,
+                "coordinate": [
+                    318,
+                    71,
+                    390,
+                    91
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        318.0,
+                        71.0
+                    ],
+                    [
+                        389.0,
+                        71.0
+                    ],
+                    [
+                        389.0,
+                        90.0
+                    ],
+                    [
+                        318.0,
+                        90.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.7662820219993591,
+                "coordinate": [
+                    405,
+                    132,
+                    789,
+                    189
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        405.0,
+                        132.0
+                    ],
+                    [
+                        789.0,
+                        132.0
+                    ],
+                    [
+                        789.0,
+                        189.0
+                    ],
+                    [
+                        405.0,
+                        189.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.6707924604415894,
+                "coordinate": [
+                    355,
+                    205,
+                    836,
+                    282
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        355.0,
+                        205.0
+                    ],
+                    [
+                        836.0,
+                        205.0
+                    ],
+                    [
+                        836.0,
+                        282.0
+                    ],
+                    [
+                        355.0,
+                        282.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.8671845197677612,
+                "coordinate": [
+                    346,
+                    296,
+                    847,
+                    586
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        346.0,
+                        296.0
+                    ],
+                    [
+                        847.0,
+                        296.0
+                    ],
+                    [
+                        847.0,
+                        586.0
+                    ],
+                    [
+                        346.0,
+                        586.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9007181525230408,
+                "coordinate": [
+                    343,
+                    608,
+                    874,
+                    699
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        343.0,
+                        608.0
+                    ],
+                    [
+                        874.0,
+                        608.0
+                    ],
+                    [
+                        874.0,
+                        699.0
+                    ],
+                    [
+                        343.0,
+                        699.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9065185189247131,
+                "coordinate": [
+                    342,
+                    701,
+                    875,
+                    775
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        342.0,
+                        701.0
+                    ],
+                    [
+                        875.0,
+                        701.0
+                    ],
+                    [
+                        875.0,
+                        775.0
+                    ],
+                    [
+                        342.0,
+                        775.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7123346924781799,
+                "coordinate": [
+                    323,
+                    907,
+                    352,
+                    926
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        323.0,
+                        907.0
+                    ],
+                    [
+                        351.0,
+                        907.0
+                    ],
+                    [
+                        351.0,
+                        925.0
+                    ],
+                    [
+                        323.0,
+                        925.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

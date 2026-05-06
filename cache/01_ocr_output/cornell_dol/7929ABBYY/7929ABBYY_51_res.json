@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 51,
+    "page_count": 189,
+    "width": 1226,
+    "height": 1585,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Section 3 - Dental Insurance",
+            "block_bbox": [
+                242,
+                140,
+                552,
+                168
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    242.0,
+                    140.0
+                ],
+                [
+                    552.0,
+                    140.0
+                ],
+                [
+                    552.0,
+                    168.0
+                ],
+                [
+                    242.0,
+                    168.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "242. Basic Coverage",
+            "block_bbox": [
+                150,
+                195,
+                419,
+                225
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    150.0,
+                    195.0
+                ],
+                [
+                    419.0,
+                    195.0
+                ],
+                [
+                    419.0,
+                    225.0
+                ],
+                [
+                    150.0,
+                    225.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "An Employer-paid Dental Program will be provided to all Regular employees, their spouses/domestic partners, and their eligible dependent children up to age 25 provided such employees have been continuously employed as Regular employees for six (6) or more continuous months. The basic dental plan shall be for covered services at the rate of 90% of usual, reasonable customary fees, except for 50% reimbursement for bridges and dentures.",
+            "block_bbox": [
+                239,
+                251,
+                1089,
+                422
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    239.0,
+                    251.0
+                ],
+                [
+                    1089.0,
+                    251.0
+                ],
+                [
+                    1089.0,
+                    422.0
+                ],
+                [
+                    239.0,
+                    422.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "243. Claims Disputes",
+            "block_bbox": [
+                150,
+                445,
+                423,
+                476
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    150.0,
+                    445.0
+                ],
+                [
+                    423.0,
+                    445.0
+                ],
+                [
+                    423.0,
+                    476.0
+                ],
+                [
+                    150.0,
+                    476.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The Employer will provide a central area for resolving difficulties in processing claims and the Union may designate a representative to assist in the expediting of these problems with the dental insurance carrier.",
+            "block_bbox": [
+                239,
+                500,
+                1088,
+                588
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    239.0,
+                    500.0
+                ],
+                [
+                    1088.0,
+                    500.0
+                ],
+                [
+                    1088.0,
+                    588.0
+                ],
+                [
+                    239.0,
+                    588.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "244. Orthodontia Coverage",
+            "block_bbox": [
+                149,
+                610,
+                486,
+                641
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    149.0,
+                    610.0
+                ],
+                [
+                    486.0,
+                    610.0
+                ],
+                [
+                    486.0,
+                    641.0
+                ],
+                [
+                    149.0,
+                    641.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Orthodontia coverage for dependent children to age eighteen (18) at 50% of usual, reasonable and customary charges for corrective procedures only to $1,000 lifetime maximum, will be provided at the Employer's expense.",
+            "block_bbox": [
+                239,
+                665,
+                1087,
+                752
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    239.0,
+                    665.0
+                ],
+                [
+                    1087.0,
+                    665.0
+                ],
+                [
+                    1087.0,
+                    752.0
+                ],
+                [
+                    239.0,
+                    752.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "245. Coordination of Benefits",
+            "block_bbox": [
+                149,
+                775,
+                507,
+                806
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    149.0,
+                    775.0
+                ],
+                [
+                    507.0,
+                    775.0
+                ],
+                [
+                    507.0,
+                    806.0
+                ],
+                [
+                    149.0,
+                    806.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "If employees and eligible dependents entitled to dental benefits under this Agreement are also entitled to dental benefits under another group plan, benefits from this plan will be coordinated with the benefits from any other group plans so that up to 100% of the allowable expenses incurred during a benefit year will be paid jointly by the plans. An allowable expense is any necessary, reasonable and customary item of dental expense covered in full or in part under any one of the group plans involved. This plan will always pay either its regular benefits in full or a reduced amount which when added to the benefits payable by other group plans, will equal 100% of allowable expenses during each benefit year. Also in cases where an employee is entitled to Dental Benefits under this Agreement in his/her own right and also as a dependent of another employee in this same plan such coordination of benefits shall be applicable.",
+            "block_bbox": [
+                237,
+                829,
+                1089,
+                1194
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    237.0,
+                    829.0
+                ],
+                [
+                    1089.0,
+                    829.0
+                ],
+                [
+                    1089.0,
+                    1194.0
+                ],
+                [
+                    237.0,
+                    1194.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Section 4 - Short Hour Employee's Coverage",
+            "block_bbox": [
+                240,
+                1216,
+                729,
+                1247
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    240.0,
+                    1216.0
+                ],
+                [
+                    729.0,
+                    1216.0
+                ],
+                [
+                    729.0,
+                    1247.0
+                ],
+                [
+                    240.0,
+                    1247.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "246. Short-Hour employees as defined in Paragraph 98 whose regular predetermined work schedule is at least eight (8) hours per week may purchase at their own expense through a payroll deduction plan the same Kaiser Foundation Health Plan coverage available to regular employees under this Agreement provided that a minimum of 75% of all eligible Short-Hour",
+            "block_bbox": [
+                148,
+                1271,
+                1089,
+                1416
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    148.0000457763672,
+                    1271.0
+                ],
+                [
+                    1086.9119873046875,
+                    1263.91015625
+                ],
+                [
+                    1088.0,
+                    1408.0
+                ],
+                [
+                    149.0880584716797,
+                    1415.08984375
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "51",
+            "block_bbox": [
+                603,
+                1457,
+                630,
+                1481
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    603.0,
+                    1457.0
+                ],
+                [
+                    629.0,
+                    1457.0
+                ],
+                [
+                    629.0,
+                    1480.0
+                ],
+                [
+                    603.0,
+                    1480.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.6952170133590698,
+                "coordinate": [
+                    242,
+                    140,
+                    552,
+                    168
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        242.0,
+                        140.0
+                    ],
+                    [
+                        552.0,
+                        140.0
+                    ],
+                    [
+                        552.0,
+                        168.0
+                    ],
+                    [
+                        242.0,
+                        168.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8630242943763733,
+                "coordinate": [
+                    150,
+                    195,
+                    419,
+                    225
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        150.0,
+                        195.0
+                    ],
+                    [
+                        419.0,
+                        195.0
+                    ],
+                    [
+                        419.0,
+                        225.0
+                    ],
+                    [
+                        150.0,
+                        225.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9488353729248047,
+                "coordinate": [
+                    239,
+                    251,
+                    1089,
+                    422
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        239.0,
+                        251.0
+                    ],
+                    [
+                        1089.0,
+                        251.0
+                    ],
+                    [
+                        1089.0,
+                        422.0
+                    ],
+                    [
+                        239.0,
+                        422.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8594620823860168,
+                "coordinate": [
+                    150,
+                    445,
+                    423,
+                    476
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        150.0,
+                        445.0
+                    ],
+                    [
+                        423.0,
+                        445.0
+                    ],
+                    [
+                        423.0,
+                        476.0
+                    ],
+                    [
+                        150.0,
+                        476.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9286074638366699,
+                "coordinate": [
+                    239,
+                    500,
+                    1088,
+                    588
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        239.0,
+                        500.0
+                    ],
+                    [
+                        1088.0,
+                        500.0
+                    ],
+                    [
+                        1088.0,
+                        588.0
+                    ],
+                    [
+                        239.0,
+                        588.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.843539297580719,
+                "coordinate": [
+                    149,
+                    610,
+                    486,
+                    641
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        149.0,
+                        610.0
+                    ],
+                    [
+                        486.0,
+                        610.0
+                    ],
+                    [
+                        486.0,
+                        641.0
+                    ],
+                    [
+                        149.0,
+                        641.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9303264021873474,
+                "coordinate": [
+                    239,
+                    665,
+                    1087,
+                    752
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        239.0,
+                        665.0
+                    ],
+                    [
+                        1087.0,
+                        665.0
+                    ],
+                    [
+                        1087.0,
+                        752.0
+                    ],
+                    [
+                        239.0,
+                        752.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8533967137336731,
+                "coordinate": [
+                    149,
+                    775,
+                    507,
+                    806
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        149.0,
+                        775.0
+                    ],
+                    [
+                        507.0,
+                        775.0
+                    ],
+                    [
+                        507.0,
+                        806.0
+                    ],
+                    [
+                        149.0,
+                        806.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9635704159736633,
+                "coordinate": [
+                    237,
+                    829,
+                    1089,
+                    1194
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        237.0,
+                        829.0
+                    ],
+                    [
+                        1089.0,
+                        829.0
+                    ],
+                    [
+                        1089.0,
+                        1194.0
+                    ],
+                    [
+                        237.0,
+                        1194.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8569716215133667,
+                "coordinate": [
+                    240,
+                    1216,
+                    729,
+                    1247
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        240.0,
+                        1216.0
+                    ],
+                    [
+                        729.0,
+                        1216.0
+                    ],
+                    [
+                        729.0,
+                        1247.0
+                    ],
+                    [
+                        240.0,
+                        1247.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9503374695777893,
+                "coordinate": [
+                    148,
+                    1271,
+                    1089,
+                    1416
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        148.0000457763672,
+                        1271.0
+                    ],
+                    [
+                        1086.9119873046875,
+                        1263.91015625
+                    ],
+                    [
+                        1088.0,
+                        1408.0
+                    ],
+                    [
+                        149.0880584716797,
+                        1415.08984375
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7507325410842896,
+                "coordinate": [
+                    603,
+                    1457,
+                    630,
+                    1481
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        603.0,
+                        1457.0
+                    ],
+                    [
+                        629.0,
+                        1457.0
+                    ],
+                    [
+                        629.0,
+                        1480.0
+                    ],
+                    [
+                        603.0,
+                        1480.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

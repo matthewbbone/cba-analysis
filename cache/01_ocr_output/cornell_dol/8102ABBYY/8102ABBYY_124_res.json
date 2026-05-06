@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 124,
+    "page_count": 439,
+    "width": 1234,
+    "height": 1586,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article 15",
+            "block_bbox": [
+                323,
+                72,
+                393,
+                90
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    323.0,
+                    72.0
+                ],
+                [
+                    392.0,
+                    72.0
+                ],
+                [
+                    392.0,
+                    89.0
+                ],
+                [
+                    323.0,
+                    89.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(d) Solely for the purpose of granting vacation eligibility for a Term of Employment of six (8) months, twelve (12) months, and two (2) years, as provided in Paragraphs 1(a) and 1(c), an Employee hired or rehired on the first (1st) working day of a calendar month will have Term of Employment computed from the first (1st) calendar day of that month.",
+            "block_bbox": [
+                347,
+                133,
+                880,
+                223
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    347.0,
+                    133.0
+                ],
+                [
+                    880.0,
+                    133.0
+                ],
+                [
+                    880.0,
+                    223.0
+                ],
+                [
+                    347.0,
+                    223.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(e) An Employee reinstated from Leave of Absence or rehired who has previously taken vacation or received allowance in lieu thereof in the current calendar year will be eligible to the number of days of vacation for his or her Term of Employment as determined in accordance with Paragraphs 1(a), 1(b) and 1(c), less the number of days of vacation previously taken or paid for.",
+            "block_bbox": [
+                347,
+                227,
+                880,
+                334
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    347.0,
+                    227.0
+                ],
+                [
+                    880.0,
+                    227.0
+                ],
+                [
+                    880.0,
+                    334.0
+                ],
+                [
+                    347.0,
+                    334.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(f) An Employee reinstated from Leave of Absence or rehired from Layoff who has a Term of Employment of two (2) years or more and who was not previously on the roll in the current calendar year will be eligible to vacation with pay in the following amounts, applied to the number of days of vacation for his or her Term of Employment as determined in accordance with Paragraph 1(a) or 1(b):",
+            "block_bbox": [
+                346,
+                337,
+                880,
+                444
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    346.0,
+                    337.0
+                ],
+                [
+                    880.0,
+                    337.0
+                ],
+                [
+                    880.0,
+                    444.0
+                ],
+                [
+                    346.0,
+                    444.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Reinstated or Rehired Amount of Eligibility",
+            "block_bbox": [
+                379,
+                462,
+                789,
+                483
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    379.0,
+                    462.0
+                ],
+                [
+                    789.0,
+                    462.0
+                ],
+                [
+                    789.0,
+                    483.0
+                ],
+                [
+                    379.0,
+                    483.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "On or before March 31\nApril 1 through June 30\nJuly 1 through September 30\nAfter September 30",
+            "block_bbox": [
+                379,
+                496,
+                581,
+                567
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    379.0,
+                    496.0
+                ],
+                [
+                    581.0,
+                    496.0
+                ],
+                [
+                    581.0,
+                    567.0
+                ],
+                [
+                    379.0,
+                    567.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "In computing the vacation to which eligible as provided herein, fractions of less than one-half (1/2) day will be disregarded and fractions of one-half (1/2) day or more will be considered as one (1) day. In no event, however, will the Employee's vacation eligibility as determined herein be less than would be applicable if the Employee were hired as of the date reinstated or rehired.",
+            "block_bbox": [
+                376,
+                588,
+                878,
+                693
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    376.0,
+                    588.0
+                ],
+                [
+                    878.0,
+                    588.0
+                ],
+                [
+                    878.0,
+                    693.0
+                ],
+                [
+                    376.0,
+                    693.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "2 Scheduling Vacations",
+            "block_bbox": [
+                324,
+                699,
+                499,
+                718
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    324.0,
+                    699.0
+                ],
+                [
+                    498.0,
+                    699.0
+                ],
+                [
+                    498.0,
+                    717.0
+                ],
+                [
+                    324.0,
+                    717.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) Vacations are not cumulative. Except as provided in Paragraphs 2(e), 2(f), and 2(g), the vacation to which an Employee is eligible in each calendar year shall be taken before midnight December 31 of that year.",
+            "block_bbox": [
+                347,
+                723,
+                877,
+                778
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    347.0,
+                    723.0
+                ],
+                [
+                    877.0,
+                    723.0
+                ],
+                [
+                    877.0,
+                    778.0
+                ],
+                [
+                    347.0,
+                    778.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) Vacations will be scheduled in accordance with the Employee's wishes to the extent consistent with the needs of the business, giving due consideration to Term of Employment.",
+            "block_bbox": [
+                347,
+                782,
+                877,
+                837
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    347.0,
+                    782.0
+                ],
+                [
+                    877.0,
+                    782.0
+                ],
+                [
+                    877.0,
+                    837.0
+                ],
+                [
+                    347.0,
+                    837.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(c) Vacations shall normally start on the first (1st) day of the Employee's normal Scheduled Weekly Tour; and vacations, other than fractional",
+            "block_bbox": [
+                346,
+                841,
+                878,
+                879
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    346.0,
+                    841.0
+                ],
+                [
+                    878.0,
+                    841.0
+                ],
+                [
+                    878.0,
+                    879.0
+                ],
+                [
+                    346.0,
+                    879.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "116",
+            "block_bbox": [
+                326,
+                908,
+                355,
+                925
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    326.0,
+                    908.0
+                ],
+                [
+                    354.0,
+                    908.0
+                ],
+                [
+                    354.0,
+                    924.0
+                ],
+                [
+                    326.0,
+                    924.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7470765709877014,
+                "coordinate": [
+                    323,
+                    72,
+                    393,
+                    90
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        323.0,
+                        72.0
+                    ],
+                    [
+                        392.0,
+                        72.0
+                    ],
+                    [
+                        392.0,
+                        89.0
+                    ],
+                    [
+                        323.0,
+                        89.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9345149397850037,
+                "coordinate": [
+                    347,
+                    133,
+                    880,
+                    223
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        347.0,
+                        133.0
+                    ],
+                    [
+                        880.0,
+                        133.0
+                    ],
+                    [
+                        880.0,
+                        223.0
+                    ],
+                    [
+                        347.0,
+                        223.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.941063404083252,
+                "coordinate": [
+                    347,
+                    227,
+                    880,
+                    334
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        347.0,
+                        227.0
+                    ],
+                    [
+                        880.0,
+                        227.0
+                    ],
+                    [
+                        880.0,
+                        334.0
+                    ],
+                    [
+                        347.0,
+                        334.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9294541478157043,
+                "coordinate": [
+                    346,
+                    337,
+                    880,
+                    444
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        346.0,
+                        337.0
+                    ],
+                    [
+                        880.0,
+                        337.0
+                    ],
+                    [
+                        880.0,
+                        444.0
+                    ],
+                    [
+                        346.0,
+                        444.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5658534169197083,
+                "coordinate": [
+                    379,
+                    462,
+                    789,
+                    483
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        379.0,
+                        462.0
+                    ],
+                    [
+                        789.0,
+                        462.0
+                    ],
+                    [
+                        789.0,
+                        483.0
+                    ],
+                    [
+                        379.0,
+                        483.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4724961519241333,
+                "coordinate": [
+                    379,
+                    496,
+                    581,
+                    567
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        379.0,
+                        496.0
+                    ],
+                    [
+                        581.0,
+                        496.0
+                    ],
+                    [
+                        581.0,
+                        567.0
+                    ],
+                    [
+                        379.0,
+                        567.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9268732666969299,
+                "coordinate": [
+                    376,
+                    588,
+                    878,
+                    693
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        376.0,
+                        588.0
+                    ],
+                    [
+                        878.0,
+                        588.0
+                    ],
+                    [
+                        878.0,
+                        693.0
+                    ],
+                    [
+                        376.0,
+                        693.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7469394207000732,
+                "coordinate": [
+                    324,
+                    699,
+                    499,
+                    718
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        324.0,
+                        699.0
+                    ],
+                    [
+                        498.0,
+                        699.0
+                    ],
+                    [
+                        498.0,
+                        717.0
+                    ],
+                    [
+                        324.0,
+                        717.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9128257036209106,
+                "coordinate": [
+                    347,
+                    723,
+                    877,
+                    778
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        347.0,
+                        723.0
+                    ],
+                    [
+                        877.0,
+                        723.0
+                    ],
+                    [
+                        877.0,
+                        778.0
+                    ],
+                    [
+                        347.0,
+                        778.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9162421226501465,
+                "coordinate": [
+                    347,
+                    782,
+                    877,
+                    837
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        347.0,
+                        782.0
+                    ],
+                    [
+                        877.0,
+                        782.0
+                    ],
+                    [
+                        877.0,
+                        837.0
+                    ],
+                    [
+                        347.0,
+                        837.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.878502607345581,
+                "coordinate": [
+                    346,
+                    841,
+                    878,
+                    879
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        346.0,
+                        841.0
+                    ],
+                    [
+                        878.0,
+                        841.0
+                    ],
+                    [
+                        878.0,
+                        879.0
+                    ],
+                    [
+                        346.0,
+                        879.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6608067750930786,
+                "coordinate": [
+                    326,
+                    908,
+                    355,
+                    925
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        326.0,
+                        908.0
+                    ],
+                    [
+                        354.0,
+                        908.0
+                    ],
+                    [
+                        354.0,
+                        924.0
+                    ],
+                    [
+                        326.0,
+                        924.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

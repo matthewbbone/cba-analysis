@@ -1,0 +1,278 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 1,
+    "page_count": 206,
+    "width": 1224,
+    "height": 2016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "University of California\nand\nAFSCME\n(American Federation of State,\nCounty and Municipal Employees)",
+            "block_bbox": [
+                410,
+                375,
+                815,
+                521
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    410.0,
+                    375.0
+                ],
+                [
+                    815.0,
+                    375.0
+                ],
+                [
+                    815.0,
+                    521.0
+                ],
+                [
+                    410.0,
+                    521.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Agreement",
+            "block_bbox": [
+                543,
+                541,
+                681,
+                574
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    543.0,
+                    541.0
+                ],
+                [
+                    681.0,
+                    541.0
+                ],
+                [
+                    681.0,
+                    574.0
+                ],
+                [
+                    543.0,
+                    574.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "PATIENT CARE TECHNICAL",
+            "block_bbox": [
+                445,
+                843,
+                776,
+                875
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    445.0,
+                    843.0
+                ],
+                [
+                    776.0,
+                    843.0
+                ],
+                [
+                    776.0,
+                    875.0
+                ],
+                [
+                    445.0,
+                    875.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "July 2, 2004 – September 30, 2007",
+            "block_bbox": [
+                415,
+                954,
+                810,
+                987
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    415.0,
+                    954.0
+                ],
+                [
+                    810.0,
+                    954.0
+                ],
+                [
+                    810.0,
+                    987.0
+                ],
+                [
+                    415.0,
+                    987.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8372145295143127,
+                "coordinate": [
+                    410,
+                    375,
+                    815,
+                    521
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        410.0,
+                        375.0
+                    ],
+                    [
+                        815.0,
+                        375.0
+                    ],
+                    [
+                        815.0,
+                        521.0
+                    ],
+                    [
+                        410.0,
+                        521.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7491261959075928,
+                "coordinate": [
+                    543,
+                    541,
+                    681,
+                    574
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        543.0,
+                        541.0
+                    ],
+                    [
+                        681.0,
+                        541.0
+                    ],
+                    [
+                        681.0,
+                        574.0
+                    ],
+                    [
+                        543.0,
+                        574.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7750207781791687,
+                "coordinate": [
+                    445,
+                    843,
+                    776,
+                    875
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        445.0,
+                        843.0
+                    ],
+                    [
+                        776.0,
+                        843.0
+                    ],
+                    [
+                        776.0,
+                        875.0
+                    ],
+                    [
+                        445.0,
+                        875.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8117049932479858,
+                "coordinate": [
+                    415,
+                    954,
+                    810,
+                    987
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        415.0,
+                        954.0
+                    ],
+                    [
+                        810.0,
+                        954.0
+                    ],
+                    [
+                        810.0,
+                        987.0
+                    ],
+                    [
+                        415.0,
+                        987.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

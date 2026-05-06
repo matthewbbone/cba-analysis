@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/8433ABBYY.pdf",
+    "page_index": 66,
+    "page_count": 81,
+    "width": 529,
+    "height": 883,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "eight (8) hours in any one work week except in unusual circumstances. No apprentice shall be entitled to any back pay or other monetary remedy for any violation of this provision, it being understood that this provision shall be enforced solely by a cease and desist remedy for any such violation.",
+            "block_bbox": [
+                43,
+                29,
+                484,
+                128
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    43.0,
+                    29.0
+                ],
+                [
+                    484.0,
+                    29.0
+                ],
+                [
+                    484.0,
+                    128.0
+                ],
+                [
+                    43.0,
+                    128.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "F. An apprentice category designated \"Novice Trainee\" will exist, with such category ceasing to exist effective May 31, 2004, unless the Parties agree otherwise. Employers may employ novice trainees to perform work covered by Article X. Each novice trainee must pay a $25.00 registration fee to the applicable Local Union and must produce the receipt for such payment while working as a novice trainee, and no Employer shall permit an individual to work as a novice trainee unless and until that individual presents the registration fee receipt to the Employer. Employment of each novice trainee is limited to a 200 hour probationary period, after which period the Employer must decide whether the novice trainee will be retained, either as an advanced apprentice through the Local 21 apprenticeship program or as an apprentice through the apprenticeship program of Local 14, 20, 27, 56, or 74, or be terminated. No individual may work as a novice trainee for more than 200 hours for any one Employer or a cumulative total of more than 200 hours for more than one Employer; and it shall be the responsibility of each Employer hiring an individual as a novice trainee to assure compliance with this requirement. The Employer must notify the District Council in writing when a novice trainee is either terminated or retained, and must do so within 48 hours of informing the novice trainee. Failure by the Employer to provide such written notice or otherwise abide by the requirements of this Section 33.33 may be grounds for the Joint Arbitration Board to impose an appropriate remedy, including barring the Employer from future employment of novice trainees. If the novice trainee is to be retained, it will be his or her responsibility to apply to the apprenticeship program affiliated with the appropriate Local Union, and such application will be treated as would any application for entry into that apprenticeship program. The decision of the Employer to terminate a novice trainee during or at the end of the probationary period will be at the Employer's sole discretion and will not be subject to challenge through",
+            "block_bbox": [
+                40,
+                145,
+                486,
+                821
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    40.0,
+                    145.0
+                ],
+                [
+                    486.0,
+                    145.0
+                ],
+                [
+                    486.0,
+                    821.0
+                ],
+                [
+                    40.0,
+                    821.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "63",
+            "block_bbox": [
+                226,
+                826,
+                246,
+                842
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    226.0,
+                    826.0
+                ],
+                [
+                    245.0,
+                    826.0
+                ],
+                [
+                    245.0,
+                    841.0
+                ],
+                [
+                    226.0,
+                    841.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8587837219238281,
+                "coordinate": [
+                    43,
+                    29,
+                    484,
+                    128
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        43.0,
+                        29.0
+                    ],
+                    [
+                        484.0,
+                        29.0
+                    ],
+                    [
+                        484.0,
+                        128.0
+                    ],
+                    [
+                        43.0,
+                        128.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9466636180877686,
+                "coordinate": [
+                    40,
+                    145,
+                    486,
+                    821
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        40.0,
+                        145.0
+                    ],
+                    [
+                        486.0,
+                        145.0
+                    ],
+                    [
+                        486.0,
+                        821.0
+                    ],
+                    [
+                        40.0,
+                        821.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7730071544647217,
+                "coordinate": [
+                    226,
+                    826,
+                    246,
+                    842
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        226.0,
+                        826.0
+                    ],
+                    [
+                        245.0,
+                        826.0
+                    ],
+                    [
+                        245.0,
+                        841.0
+                    ],
+                    [
+                        226.0,
+                        841.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

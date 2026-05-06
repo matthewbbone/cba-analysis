@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/dol_archive/document_2690.pdf",
+    "page_index": 7,
+    "page_count": 77,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 6\nAcademic Freedom and Responsibility",
+            "block_bbox": [
+                350,
+                146,
+                872,
+                234
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    350.0,
+                    146.0
+                ],
+                [
+                    872.0,
+                    146.0
+                ],
+                [
+                    872.0,
+                    234.0
+                ],
+                [
+                    350.0,
+                    234.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "6.1 The University and United Academics agree that academic freedom is essential to the mission of the University and that providing an environment of free and honest inquiry is essential to its functioning. Nothing contained in this Agreement shall be construed to limit or abridge any individual's right to free speech or to infringe upon the academic freedom of any member of the University community.",
+            "block_bbox": [
+                174,
+                279,
+                1045,
+                447
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    174.0,
+                    279.0
+                ],
+                [
+                    1045.0,
+                    279.0
+                ],
+                [
+                    1045.0,
+                    447.0
+                ],
+                [
+                    174.0,
+                    447.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "6.2 Academic freedom is accompanied by the corresponding responsibility to provide objective and skillful exposition of one's subject, to at all times be accurate, to exercise appropriate restraint, to show respect for the opinions of others and to indicate when appropriate that one is an institutional representative.",
+            "block_bbox": [
+                174,
+                471,
+                1042,
+                586
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    174.0,
+                    471.0
+                ],
+                [
+                    1042.0,
+                    471.0
+                ],
+                [
+                    1042.0,
+                    586.0
+                ],
+                [
+                    174.0,
+                    586.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "6.3 The University of Alaska and United Academics endorse the “1940 Statement of Principles on Academic Freedom and Tenure with 1970 Interpretive Comments,” issued by the American Association of University Professors and the Association of American Colleges.",
+            "block_bbox": [
+                174,
+                609,
+                1039,
+                723
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    174.0,
+                    609.0
+                ],
+                [
+                    1039.0,
+                    609.0
+                ],
+                [
+                    1039.0,
+                    723.0
+                ],
+                [
+                    174.0,
+                    723.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "Tentative Agreement",
+            "block_bbox": [
+                177,
+                1487,
+                369,
+                1513
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    177.0,
+                    1487.0
+                ],
+                [
+                    369.0,
+                    1487.0
+                ],
+                [
+                    369.0,
+                    1513.0
+                ],
+                [
+                    177.0,
+                    1513.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 8 of 77",
+            "block_bbox": [
+                931,
+                1487,
+                1047,
+                1514
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    931.0,
+                    1487.0
+                ],
+                [
+                    1047.0,
+                    1487.0
+                ],
+                [
+                    1047.0,
+                    1514.0
+                ],
+                [
+                    931.0,
+                    1514.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.552459180355072,
+                "coordinate": [
+                    350,
+                    146,
+                    872,
+                    234
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        350.0,
+                        146.0
+                    ],
+                    [
+                        872.0,
+                        146.0
+                    ],
+                    [
+                        872.0,
+                        234.0
+                    ],
+                    [
+                        350.0,
+                        234.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9451844096183777,
+                "coordinate": [
+                    174,
+                    279,
+                    1045,
+                    447
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        174.0,
+                        279.0
+                    ],
+                    [
+                        1045.0,
+                        279.0
+                    ],
+                    [
+                        1045.0,
+                        447.0
+                    ],
+                    [
+                        174.0,
+                        447.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9422658085823059,
+                "coordinate": [
+                    174,
+                    471,
+                    1042,
+                    586
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        174.0,
+                        471.0
+                    ],
+                    [
+                        1042.0,
+                        471.0
+                    ],
+                    [
+                        1042.0,
+                        586.0
+                    ],
+                    [
+                        174.0,
+                        586.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9393711686134338,
+                "coordinate": [
+                    174,
+                    609,
+                    1039,
+                    723
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        174.0,
+                        609.0
+                    ],
+                    [
+                        1039.0,
+                        609.0
+                    ],
+                    [
+                        1039.0,
+                        723.0
+                    ],
+                    [
+                        174.0,
+                        723.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8589857816696167,
+                "coordinate": [
+                    177,
+                    1487,
+                    369,
+                    1513
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        177.0,
+                        1487.0
+                    ],
+                    [
+                        369.0,
+                        1487.0
+                    ],
+                    [
+                        369.0,
+                        1513.0
+                    ],
+                    [
+                        177.0,
+                        1513.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8546540141105652,
+                "coordinate": [
+                    931,
+                    1487,
+                    1047,
+                    1514
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        931.0,
+                        1487.0
+                    ],
+                    [
+                        1047.0,
+                        1487.0
+                    ],
+                    [
+                        1047.0,
+                        1514.0
+                    ],
+                    [
+                        931.0,
+                        1514.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

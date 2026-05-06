@@ -1,0 +1,644 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 74,
+    "page_count": 189,
+    "width": 1224,
+    "height": 1574,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Davis\nFresno\nModesto/Stanislaus\nRancho Cordova\nRoseville",
+            "block_bbox": [
+                330,
+                189,
+                549,
+                330
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    330.0,
+                    189.0
+                ],
+                [
+                    549.0,
+                    189.0
+                ],
+                [
+                    549.0,
+                    330.0
+                ],
+                [
+                    330.0,
+                    330.0
+                ]
+            ]
+        },
+        {
+            "block_label": "header",
+            "block_content": "Sacramento\nSouth Sacramento\nStockton",
+            "block_bbox": [
+                709,
+                190,
+                917,
+                274
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    709.0,
+                    190.0
+                ],
+                [
+                    917.0,
+                    190.0
+                ],
+                [
+                    917.0,
+                    274.0
+                ],
+                [
+                    709.0,
+                    274.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Section 3. ADMINISTRATION OF WAGE STRUCTURE \"A\"",
+            "block_bbox": [
+                148,
+                408,
+                824,
+                439
+            ],
+            "block_id": 2,
+            "block_order": 1,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    148.0,
+                    408.0
+                ],
+                [
+                    824.0,
+                    408.0
+                ],
+                [
+                    824.0,
+                    439.0
+                ],
+                [
+                    148.0,
+                    439.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Employees on Structure \"A\" shall remain on that Structure regardless of any transfers, promotions or demotions within or between Areas I and II.",
+            "block_bbox": [
+                290,
+                463,
+                1087,
+                524
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    290.0,
+                    463.0
+                ],
+                [
+                    1087.0,
+                    463.0
+                ],
+                [
+                    1087.0,
+                    524.0
+                ],
+                [
+                    290.0,
+                    524.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Section 4. ADMINISTRATION OF WAGE STRUCTURES \"B-1\" AND \"B-2\"",
+            "block_bbox": [
+                147,
+                545,
+                978,
+                577
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    147.0,
+                    545.0
+                ],
+                [
+                    978.0,
+                    545.0
+                ],
+                [
+                    978.0,
+                    577.0
+                ],
+                [
+                    147.0,
+                    577.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Employees on Structure \"B-1\" or Structure \"B-2\" will remain on either of these two \"B\" Structures but may move between the two Structures as a result of the following:",
+            "block_bbox": [
+                290,
+                601,
+                1086,
+                688
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    290.0,
+                    601.0
+                ],
+                [
+                    1086.0,
+                    601.0
+                ],
+                [
+                    1086.0,
+                    688.0
+                ],
+                [
+                    290.0,
+                    688.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A. Lateral transfers between Area I and Area II - Employees on either Structure B-1 or B-2 who permanently transfer between the two Areas in the same job classification will be placed on the \"B\" Structure within the Area to which the employee transfers. The employee will be placed on the tenure step of the new \"B\" Structure which is the same as the tenure step held on the previous \"B\" Structure. Tenure credit earned on the previous \"B\" Structure will apply for movement to higher tenure steps on the new \"B\" Structure.",
+            "block_bbox": [
+                288,
+                711,
+                1087,
+                962
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    288.0,
+                    711.0
+                ],
+                [
+                    1087.0,
+                    711.0
+                ],
+                [
+                    1087.0,
+                    962.0
+                ],
+                [
+                    288.0,
+                    962.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "B. Promotions and Demotions between Area I and Area II - In determining the appropriate wage rates for employees who are promoted or demoted into a different area, the following shall apply:",
+            "block_bbox": [
+                288,
+                984,
+                1084,
+                1098
+            ],
+            "block_id": 7,
+            "block_order": 6,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    288.0,
+                    984.0
+                ],
+                [
+                    1084.0,
+                    984.0
+                ],
+                [
+                    1084.0,
+                    1098.0
+                ],
+                [
+                    288.0,
+                    1098.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The employee will first be treated as a lateral transfer in accordance with (1) above. Once the lateral transfer wage rate and tenure step is determined, the appropriate promotion or demotion language contained in Article XI, Section 9, #144 (C) or #145 (D) or Article XI, Section 10, #147 (B) or #150 (D) shall be applied.",
+            "block_bbox": [
+                429,
+                1121,
+                1082,
+                1292
+            ],
+            "block_id": 8,
+            "block_order": 7,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    429.0,
+                    1121.0
+                ],
+                [
+                    1082.0,
+                    1121.0
+                ],
+                [
+                    1082.0,
+                    1292.0
+                ],
+                [
+                    429.0,
+                    1292.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "74",
+            "block_bbox": [
+                597,
+                1469,
+                626,
+                1493
+            ],
+            "block_id": 9,
+            "block_order": null,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    597.0,
+                    1469.0
+                ],
+                [
+                    625.0,
+                    1469.0
+                ],
+                [
+                    625.0,
+                    1492.0
+                ],
+                [
+                    597.0,
+                    1492.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8704439997673035,
+                "coordinate": [
+                    330,
+                    189,
+                    549,
+                    330
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        330.0,
+                        189.0
+                    ],
+                    [
+                        549.0,
+                        189.0
+                    ],
+                    [
+                        549.0,
+                        330.0
+                    ],
+                    [
+                        330.0,
+                        330.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8355705142021179,
+                "coordinate": [
+                    709,
+                    190,
+                    917,
+                    274
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        709.0,
+                        190.0
+                    ],
+                    [
+                        917.0,
+                        190.0
+                    ],
+                    [
+                        917.0,
+                        274.0
+                    ],
+                    [
+                        709.0,
+                        274.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8627027869224548,
+                "coordinate": [
+                    148,
+                    408,
+                    824,
+                    439
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        148.0,
+                        408.0
+                    ],
+                    [
+                        824.0,
+                        408.0
+                    ],
+                    [
+                        824.0,
+                        439.0
+                    ],
+                    [
+                        148.0,
+                        439.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9172171950340271,
+                "coordinate": [
+                    290,
+                    463,
+                    1087,
+                    524
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        290.0,
+                        463.0
+                    ],
+                    [
+                        1087.0,
+                        463.0
+                    ],
+                    [
+                        1087.0,
+                        524.0
+                    ],
+                    [
+                        290.0,
+                        524.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.864995539188385,
+                "coordinate": [
+                    147,
+                    545,
+                    978,
+                    577
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        147.0,
+                        545.0
+                    ],
+                    [
+                        978.0,
+                        545.0
+                    ],
+                    [
+                        978.0,
+                        577.0
+                    ],
+                    [
+                        147.0,
+                        577.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9337620139122009,
+                "coordinate": [
+                    290,
+                    601,
+                    1086,
+                    688
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        290.0,
+                        601.0
+                    ],
+                    [
+                        1086.0,
+                        601.0
+                    ],
+                    [
+                        1086.0,
+                        688.0
+                    ],
+                    [
+                        290.0,
+                        688.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9531258940696716,
+                "coordinate": [
+                    288,
+                    711,
+                    1087,
+                    962
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        288.0,
+                        711.0
+                    ],
+                    [
+                        1087.0,
+                        711.0
+                    ],
+                    [
+                        1087.0,
+                        962.0
+                    ],
+                    [
+                        288.0,
+                        962.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.940345823764801,
+                "coordinate": [
+                    288,
+                    984,
+                    1084,
+                    1098
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        288.0,
+                        984.0
+                    ],
+                    [
+                        1084.0,
+                        984.0
+                    ],
+                    [
+                        1084.0,
+                        1098.0
+                    ],
+                    [
+                        288.0,
+                        1098.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9554906487464905,
+                "coordinate": [
+                    429,
+                    1121,
+                    1082,
+                    1292
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        429.0,
+                        1121.0
+                    ],
+                    [
+                        1082.0,
+                        1121.0
+                    ],
+                    [
+                        1082.0,
+                        1292.0
+                    ],
+                    [
+                        429.0,
+                        1292.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7536649107933044,
+                "coordinate": [
+                    597,
+                    1469,
+                    626,
+                    1493
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        597.0,
+                        1469.0
+                    ],
+                    [
+                        625.0,
+                        1469.0
+                    ],
+                    [
+                        625.0,
+                        1492.0
+                    ],
+                    [
+                        597.0,
+                        1492.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

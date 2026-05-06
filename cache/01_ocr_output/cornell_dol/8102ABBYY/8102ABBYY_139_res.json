@@ -1,0 +1,583 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 139,
+    "page_count": 439,
+    "width": 1233,
+    "height": 1591,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article 21",
+            "block_bbox": [
+                839,
+                81,
+                908,
+                99
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    839.0,
+                    81.0
+                ],
+                [
+                    907.0,
+                    81.0
+                ],
+                [
+                    907.0,
+                    98.0
+                ],
+                [
+                    839.0,
+                    98.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 21 - LAYOFF ALLOWANCES",
+            "block_bbox": [
+                491,
+                119,
+                771,
+                140
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    491.0,
+                    119.0
+                ],
+                [
+                    770.0,
+                    119.0
+                ],
+                [
+                    770.0,
+                    139.0
+                ],
+                [
+                    491.0,
+                    139.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "1 Schedule of Allowances",
+            "block_bbox": [
+                353,
+                160,
+                544,
+                180
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    353.0,
+                    160.0
+                ],
+                [
+                    543.0,
+                    160.0
+                ],
+                [
+                    543.0,
+                    179.0
+                ],
+                [
+                    353.0,
+                    179.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Employees Laid-Off shall be granted a Layoff allowance based on Term of Employment at date of such Layoff, in accordance with the following schedule, except as provided in Paragraph 4 below:",
+            "block_bbox": [
+                373,
+                184,
+                910,
+                242
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    373.0,
+                    184.0
+                ],
+                [
+                    910.0,
+                    184.0
+                ],
+                [
+                    910.0,
+                    242.0
+                ],
+                [
+                    373.0,
+                    242.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Term of Employment</td><td>Layoff Allowance</td></tr><tr><td>At Date of Leverage</td><td>Number of Weeks&#x27; Pay</td></tr><tr><td>Less than 1 year</td><td>0</td></tr><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>2</td></tr><tr><td>3</td><td>3</td></tr><tr><td>4</td><td>4</td></tr><tr><td>5</td><td>5</td></tr><tr><td>6</td><td>6</td></tr><tr><td>7</td><td>7</td></tr><tr><td>8</td><td>9</td></tr><tr><td>9</td><td>11</td></tr><tr><td>10</td><td>13</td></tr><tr><td>11</td><td>15</td></tr><tr><td>12</td><td>17</td></tr><tr><td>13</td><td>19</td></tr><tr><td>14</td><td>21</td></tr><tr><td>15</td><td>24</td></tr><tr><td>16</td><td>28</td></tr><tr><td>17</td><td>32</td></tr><tr><td>18</td><td>36</td></tr><tr><td>19</td><td>40</td></tr></table>",
+            "block_bbox": [
+                442,
+                261,
+                826,
+                666
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    442.0,
+                    261.0
+                ],
+                [
+                    826.0,
+                    261.0
+                ],
+                [
+                    826.0,
+                    666.0
+                ],
+                [
+                    442.0,
+                    666.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Five (5) weeks' additional pay for each full year of TERM OF EMPLOYMENT in excess of nineteen (19) years up to a maximum of one hundred and four (104) weeks.",
+            "block_bbox": [
+                406,
+                685,
+                908,
+                740
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    406.0,
+                    685.0
+                ],
+                [
+                    908.0,
+                    685.0
+                ],
+                [
+                    908.0,
+                    740.0
+                ],
+                [
+                    406.0,
+                    740.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "2 Computation of Allowance Payments",
+            "block_bbox": [
+                351,
+                745,
+                630,
+                766
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    351.0,
+                    745.0
+                ],
+                [
+                    629.0,
+                    745.0
+                ],
+                [
+                    629.0,
+                    765.0
+                ],
+                [
+                    351.0,
+                    765.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) Layoff allowance payments shall be based on the Employee's established schedule of working hours or days (excluding overtime) in effect as of the date of Layoff, with a minimum of thirty-two (32) hours per week. For individual Employees whose Scheduled Tours are less than the thirty-two (32) hour minimum mentioned above, the allowance shall be based on their Scheduled Tours. The rate of pay used in such",
+            "block_bbox": [
+                372,
+                769,
+                907,
+                878
+            ],
+            "block_id": 7,
+            "block_order": 6,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    372.0,
+                    769.0
+                ],
+                [
+                    907.0,
+                    769.0
+                ],
+                [
+                    907.0,
+                    878.0
+                ],
+                [
+                    372.0,
+                    878.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "131",
+            "block_bbox": [
+                875,
+                912,
+                902,
+                930
+            ],
+            "block_id": 8,
+            "block_order": null,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    875.0,
+                    912.0
+                ],
+                [
+                    901.0,
+                    912.0
+                ],
+                [
+                    901.0,
+                    929.0
+                ],
+                [
+                    875.0,
+                    929.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8112508654594421,
+                "coordinate": [
+                    839,
+                    81,
+                    908,
+                    99
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        839.0,
+                        81.0
+                    ],
+                    [
+                        907.0,
+                        81.0
+                    ],
+                    [
+                        907.0,
+                        98.0
+                    ],
+                    [
+                        839.0,
+                        98.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7184590101242065,
+                "coordinate": [
+                    491,
+                    119,
+                    771,
+                    140
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        491.0,
+                        119.0
+                    ],
+                    [
+                        770.0,
+                        119.0
+                    ],
+                    [
+                        770.0,
+                        139.0
+                    ],
+                    [
+                        491.0,
+                        139.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8262907862663269,
+                "coordinate": [
+                    353,
+                    160,
+                    544,
+                    180
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        353.0,
+                        160.0
+                    ],
+                    [
+                        543.0,
+                        160.0
+                    ],
+                    [
+                        543.0,
+                        179.0
+                    ],
+                    [
+                        353.0,
+                        179.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9036381244659424,
+                "coordinate": [
+                    373,
+                    184,
+                    910,
+                    242
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        373.0,
+                        184.0
+                    ],
+                    [
+                        910.0,
+                        184.0
+                    ],
+                    [
+                        910.0,
+                        242.0
+                    ],
+                    [
+                        373.0,
+                        242.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9405117630958557,
+                "coordinate": [
+                    442,
+                    261,
+                    826,
+                    666
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        442.0,
+                        261.0
+                    ],
+                    [
+                        826.0,
+                        261.0
+                    ],
+                    [
+                        826.0,
+                        666.0
+                    ],
+                    [
+                        442.0,
+                        666.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9069938063621521,
+                "coordinate": [
+                    406,
+                    685,
+                    908,
+                    740
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        406.0,
+                        685.0
+                    ],
+                    [
+                        908.0,
+                        685.0
+                    ],
+                    [
+                        908.0,
+                        740.0
+                    ],
+                    [
+                        406.0,
+                        740.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.820285975933075,
+                "coordinate": [
+                    351,
+                    745,
+                    630,
+                    766
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        351.0,
+                        745.0
+                    ],
+                    [
+                        629.0,
+                        745.0
+                    ],
+                    [
+                        629.0,
+                        765.0
+                    ],
+                    [
+                        351.0,
+                        765.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9374703168869019,
+                "coordinate": [
+                    372,
+                    769,
+                    907,
+                    878
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        372.0,
+                        769.0
+                    ],
+                    [
+                        907.0,
+                        769.0
+                    ],
+                    [
+                        907.0,
+                        878.0
+                    ],
+                    [
+                        372.0,
+                        878.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6899763345718384,
+                "coordinate": [
+                    875,
+                    912,
+                    902,
+                    930
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        875.0,
+                        912.0
+                    ],
+                    [
+                        901.0,
+                        912.0
+                    ],
+                    [
+                        901.0,
+                        929.0
+                    ],
+                    [
+                        875.0,
+                        929.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,637 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 84,
+    "page_count": 439,
+    "width": 1234,
+    "height": 1586,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article 12",
+            "block_bbox": [
+                323,
+                78,
+                393,
+                96
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    323.0,
+                    78.0
+                ],
+                [
+                    392.0,
+                    78.0
+                ],
+                [
+                    392.0,
+                    95.0
+                ],
+                [
+                    323.0,
+                    95.0
+                ]
+            ]
+        },
+        {
+            "block_label": "reference_content",
+            "block_content": "(3) The Employee's Payroll Debit Card will be usable at any ATM.",
+            "block_bbox": [
+                377,
+                118,
+                833,
+                138
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    377.0,
+                    118.0
+                ],
+                [
+                    377.0,
+                    137.0
+                ],
+                [
+                    832.0,
+                    137.0
+                ],
+                [
+                    832.0,
+                    118.0
+                ]
+            ]
+        },
+        {
+            "block_label": "reference_content",
+            "block_content": "(4) The Company will work with the vendor(s) of the Payroll Debit Card Program to ensure that an Employee's net pay will be available to the Employee at ATM machines at the beginning of each pay day.",
+            "block_bbox": [
+                378,
+                142,
+                877,
+                196
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    378.0,
+                    142.0
+                ],
+                [
+                    877.0,
+                    142.0
+                ],
+                [
+                    877.0,
+                    196.0
+                ],
+                [
+                    378.0,
+                    196.0
+                ]
+            ]
+        },
+        {
+            "block_label": "reference_content",
+            "block_content": "(5) An Employee's Payroll Debit Card account will not be available for other deposits.",
+            "block_bbox": [
+                378,
+                201,
+                877,
+                238
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    378.0,
+                    201.0
+                ],
+                [
+                    877.0,
+                    201.0
+                ],
+                [
+                    877.0,
+                    238.0
+                ],
+                [
+                    378.0,
+                    238.0
+                ]
+            ]
+        },
+        {
+            "block_label": "reference_content",
+            "block_content": "(6) The activation fee for an Employee's Payroll Debit Card account will be paid by the Company.",
+            "block_bbox": [
+                379,
+                243,
+                877,
+                280
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    379.0,
+                    243.0
+                ],
+                [
+                    877.0,
+                    243.0
+                ],
+                [
+                    877.0,
+                    280.0
+                ],
+                [
+                    379.0,
+                    280.0
+                ]
+            ]
+        },
+        {
+            "block_label": "reference_content",
+            "block_content": "(7) Each Employee will be permitted two (2) ATM withdrawals per week with ATM fees paid by the Company.",
+            "block_bbox": [
+                378,
+                284,
+                877,
+                322
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    378.0,
+                    284.0
+                ],
+                [
+                    877.0,
+                    284.0
+                ],
+                [
+                    877.0,
+                    322.0
+                ],
+                [
+                    378.0,
+                    322.0
+                ]
+            ]
+        },
+        {
+            "block_label": "reference_content",
+            "block_content": "(8) The Payroll Debit Card Program and its administration will be subject to the grievance procedure but shall not be subject to arbitration.",
+            "block_bbox": [
+                379,
+                326,
+                877,
+                380
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    379.0,
+                    326.0
+                ],
+                [
+                    877.0,
+                    326.0
+                ],
+                [
+                    877.0,
+                    380.0
+                ],
+                [
+                    379.0,
+                    380.0
+                ]
+            ]
+        },
+        {
+            "block_label": "reference_content",
+            "block_content": "(9) The Company reserves the right to change vendors of the Payroll Debit Card Program and to terminate the Program upon 60 days notice to the Union.",
+            "block_bbox": [
+                379,
+                385,
+                877,
+                439
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    379.0,
+                    385.0
+                ],
+                [
+                    877.0,
+                    385.0
+                ],
+                [
+                    877.0,
+                    439.0
+                ],
+                [
+                    379.0,
+                    439.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "75",
+            "block_bbox": [
+                324,
+                914,
+                346,
+                932
+            ],
+            "block_id": 8,
+            "block_order": null,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    324.0,
+                    914.0
+                ],
+                [
+                    324.0,
+                    925.0
+                ],
+                [
+                    338.0,
+                    925.0
+                ],
+                [
+                    339.0,
+                    926.0
+                ],
+                [
+                    339.0,
+                    931.0
+                ],
+                [
+                    345.0,
+                    931.0
+                ],
+                [
+                    345.0,
+                    914.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.736280083656311,
+                "coordinate": [
+                    323,
+                    78,
+                    393,
+                    96
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        323.0,
+                        78.0
+                    ],
+                    [
+                        392.0,
+                        78.0
+                    ],
+                    [
+                        392.0,
+                        95.0
+                    ],
+                    [
+                        323.0,
+                        95.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 18,
+                "label": "reference",
+                "score": 0.8171254992485046,
+                "coordinate": [
+                    379,
+                    114,
+                    879,
+                    439
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        379.0,
+                        114.0
+                    ],
+                    [
+                        879.0,
+                        114.0
+                    ],
+                    [
+                        879.0,
+                        439.0
+                    ],
+                    [
+                        379.0,
+                        439.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 19,
+                "label": "reference_content",
+                "score": 0.6807511448860168,
+                "coordinate": [
+                    377,
+                    118,
+                    833,
+                    138
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        377.0,
+                        118.0
+                    ],
+                    [
+                        377.0,
+                        137.0
+                    ],
+                    [
+                        832.0,
+                        137.0
+                    ],
+                    [
+                        832.0,
+                        118.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 19,
+                "label": "reference_content",
+                "score": 0.7853450179100037,
+                "coordinate": [
+                    378,
+                    142,
+                    877,
+                    196
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        378.0,
+                        142.0
+                    ],
+                    [
+                        877.0,
+                        142.0
+                    ],
+                    [
+                        877.0,
+                        196.0
+                    ],
+                    [
+                        378.0,
+                        196.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 19,
+                "label": "reference_content",
+                "score": 0.7086233496665955,
+                "coordinate": [
+                    378,
+                    201,
+                    877,
+                    238
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        378.0,
+                        201.0
+                    ],
+                    [
+                        877.0,
+                        201.0
+                    ],
+                    [
+                        877.0,
+                        238.0
+                    ],
+                    [
+                        378.0,
+                        238.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 19,
+                "label": "reference_content",
+                "score": 0.7481899857521057,
+                "coordinate": [
+                    379,
+                    243,
+                    877,
+                    280
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        379.0,
+                        243.0
+                    ],
+                    [
+                        877.0,
+                        243.0
+                    ],
+                    [
+                        877.0,
+                        280.0
+                    ],
+                    [
+                        379.0,
+                        280.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 19,
+                "label": "reference_content",
+                "score": 0.7186573147773743,
+                "coordinate": [
+                    378,
+                    284,
+                    877,
+                    322
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        378.0,
+                        284.0
+                    ],
+                    [
+                        877.0,
+                        284.0
+                    ],
+                    [
+                        877.0,
+                        322.0
+                    ],
+                    [
+                        378.0,
+                        322.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 19,
+                "label": "reference_content",
+                "score": 0.784339189529419,
+                "coordinate": [
+                    379,
+                    326,
+                    877,
+                    380
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        379.0,
+                        326.0
+                    ],
+                    [
+                        877.0,
+                        326.0
+                    ],
+                    [
+                        877.0,
+                        380.0
+                    ],
+                    [
+                        379.0,
+                        380.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 19,
+                "label": "reference_content",
+                "score": 0.809029757976532,
+                "coordinate": [
+                    379,
+                    385,
+                    877,
+                    439
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        379.0,
+                        385.0
+                    ],
+                    [
+                        877.0,
+                        385.0
+                    ],
+                    [
+                        877.0,
+                        439.0
+                    ],
+                    [
+                        379.0,
+                        439.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6581596732139587,
+                "coordinate": [
+                    324,
+                    914,
+                    346,
+                    932
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        324.0,
+                        914.0
+                    ],
+                    [
+                        324.0,
+                        925.0
+                    ],
+                    [
+                        338.0,
+                        925.0
+                    ],
+                    [
+                        339.0,
+                        926.0
+                    ],
+                    [
+                        339.0,
+                        931.0
+                    ],
+                    [
+                        345.0,
+                        931.0
+                    ],
+                    [
+                        345.0,
+                        914.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

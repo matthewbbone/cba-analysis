@@ -1,0 +1,949 @@
+{
+    "input_path": "cache/cornell_dol/6513ABBYY.pdf",
+    "page_index": 43,
+    "page_count": 91,
+    "width": 1583,
+    "height": 1227,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Contract",
+            "block_bbox": [
+                34,
+                22,
+                123,
+                48
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    34.0,
+                    22.0
+                ],
+                [
+                    123.0,
+                    22.0
+                ],
+                [
+                    123.0,
+                    48.0
+                ],
+                [
+                    34.0,
+                    48.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 43 of 94",
+            "block_bbox": [
+                1410,
+                22,
+                1548,
+                50
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    1410.0,
+                    22.0
+                ],
+                [
+                    1548.0,
+                    22.0
+                ],
+                [
+                    1548.0,
+                    50.0
+                ],
+                [
+                    1410.0,
+                    50.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "48 months Thereafter rate",
+            "block_bbox": [
+                350,
+                62,
+                644,
+                93
+            ],
+            "block_id": 2,
+            "block_order": 1,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    350.0,
+                    62.0
+                ],
+                [
+                    644.0,
+                    62.0
+                ],
+                [
+                    644.0,
+                    93.0
+                ],
+                [
+                    350.0,
+                    93.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Rates of pay under the progression schedules shall be as follows:",
+            "block_bbox": [
+                347,
+                119,
+                1056,
+                151
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    347.0,
+                    119.0
+                ],
+                [
+                    1056.0,
+                    119.0
+                ],
+                [
+                    1056.0,
+                    151.0
+                ],
+                [
+                    347.0,
+                    151.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. Inexperienced employees may be hired at the lowest rate of pay of the progression schedule for their classification of work.",
+            "block_bbox": [
+                348,
+                175,
+                1482,
+                234
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    348.0,
+                    175.0
+                ],
+                [
+                    1482.0,
+                    175.0
+                ],
+                [
+                    1482.0,
+                    234.0
+                ],
+                [
+                    348.0,
+                    234.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. An experienced employee who has had comparable experience in the retail and department store industry equivalent to the completion of one or more steps within the progression schedule for his/her classification of work, may be hired at the rate of pay for the progression step equivalent to his/her past experience, but such employee shall not be entitled to the highest rate in the progression schedule until s/he completes fifty (50) working days. However, this language does not preclude the Employer from hiring individuals above the maximum of the classification if such action is necessary to secure an individual. The Employer agrees that it will not act in an arbitrary manner in this regard and that it will not exercise its right herein, except in certain limited situations where the individual is of a reputation that will enhance the Employer's selling opportunities.",
+            "block_bbox": [
+                347,
+                260,
+                1484,
+                519
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    347.0,
+                    260.0
+                ],
+                [
+                    1484.0,
+                    260.0
+                ],
+                [
+                    1484.0,
+                    519.0
+                ],
+                [
+                    347.0,
+                    519.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3. The rates of pay as established in 1 and 2 above will also apply to Seasonal Employees. Such employees shall not receive progressive wage increases during the period of their seasonal employment. Christmas Season Employees may be hired at 70% of the thereafter rate.",
+            "block_bbox": [
+                348,
+                542,
+                1483,
+                633
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    348.0,
+                    542.0
+                ],
+                [
+                    1483.0,
+                    542.0
+                ],
+                [
+                    1483.0,
+                    633.0
+                ],
+                [
+                    348.0,
+                    633.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "4. All progression steps will be adjusted according to their % of the thereafter rate consistent with the wage increases.",
+            "block_bbox": [
+                348,
+                655,
+                1468,
+                717
+            ],
+            "block_id": 7,
+            "block_order": 6,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    348.0,
+                    655.0
+                ],
+                [
+                    1468.0,
+                    655.0
+                ],
+                [
+                    1468.0,
+                    717.0
+                ],
+                [
+                    348.0,
+                    717.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "5. Effective June 1, 2003 the entry rate of pay may be $8.50 in selling grades I, II and III, and in all non-selling grades.",
+            "block_bbox": [
+                349,
+                739,
+                1480,
+                802
+            ],
+            "block_id": 8,
+            "block_order": 7,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    349.0,
+                    739.0
+                ],
+                [
+                    1480.0,
+                    739.0
+                ],
+                [
+                    1480.0,
+                    802.0
+                ],
+                [
+                    349.0,
+                    802.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "C. An employee who works more than fifty percent (50%) of the time in any one day in a classification calling for a higher rate of pay than his/her regular rate shall be paid for the entire day at such higher rate.",
+            "block_bbox": [
+                349,
+                825,
+                1467,
+                913
+            ],
+            "block_id": 9,
+            "block_order": 8,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    349.0,
+                    825.0
+                ],
+                [
+                    1467.0,
+                    825.0
+                ],
+                [
+                    1467.0,
+                    913.0
+                ],
+                [
+                    349.0,
+                    913.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "D. Biweekly Pay",
+            "block_bbox": [
+                352,
+                938,
+                541,
+                971
+            ],
+            "block_id": 10,
+            "block_order": 9,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    352.0,
+                    938.0
+                ],
+                [
+                    541.0,
+                    938.0
+                ],
+                [
+                    541.0,
+                    971.0
+                ],
+                [
+                    352.0,
+                    971.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The Employer, with thirty (30) days advance notice to the Union and the Employees, may convert at the same time as the majority of the other Employer's employees to a biweekly pay period.",
+            "block_bbox": [
+                350,
+                995,
+                1486,
+                1057
+            ],
+            "block_id": 11,
+            "block_order": 10,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    350.0,
+                    995.0
+                ],
+                [
+                    1486.0,
+                    995.0
+                ],
+                [
+                    1486.0,
+                    1057.0
+                ],
+                [
+                    350.0,
+                    1057.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "E. The reclassification of a Regular employee as the result of a successful complaint of improper classification, shall be effective retroactively to the date the employee was placed in the disputed classification, or the date not more than one hundred twenty (120) days prior to the claim of",
+            "block_bbox": [
+                350,
+                1080,
+                1432,
+                1170
+            ],
+            "block_id": 12,
+            "block_order": 11,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    350.0,
+                    1080.0
+                ],
+                [
+                    1432.0,
+                    1080.0
+                ],
+                [
+                    1432.0,
+                    1170.0
+                ],
+                [
+                    350.0,
+                    1170.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "http://macys.local101.com/contract.htm",
+            "block_bbox": [
+                39,
+                1184,
+                428,
+                1212
+            ],
+            "block_id": 13,
+            "block_order": null,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    39.0,
+                    1184.0
+                ],
+                [
+                    428.0,
+                    1184.0
+                ],
+                [
+                    428.0,
+                    1212.0
+                ],
+                [
+                    39.0,
+                    1212.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "1/31/2005",
+            "block_bbox": [
+                1452,
+                1182,
+                1552,
+                1210
+            ],
+            "block_id": 14,
+            "block_order": null,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    1452.0,
+                    1182.0
+                ],
+                [
+                    1552.0,
+                    1182.0
+                ],
+                [
+                    1552.0,
+                    1210.0
+                ],
+                [
+                    1452.0,
+                    1210.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.765501856803894,
+                "coordinate": [
+                    34,
+                    22,
+                    123,
+                    48
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        34.0,
+                        22.0
+                    ],
+                    [
+                        123.0,
+                        22.0
+                    ],
+                    [
+                        123.0,
+                        48.0
+                    ],
+                    [
+                        34.0,
+                        48.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8271776437759399,
+                "coordinate": [
+                    1410,
+                    22,
+                    1548,
+                    50
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        1410.0,
+                        22.0
+                    ],
+                    [
+                        1548.0,
+                        22.0
+                    ],
+                    [
+                        1548.0,
+                        50.0
+                    ],
+                    [
+                        1410.0,
+                        50.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8390777707099915,
+                "coordinate": [
+                    350,
+                    62,
+                    644,
+                    93
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        350.0,
+                        62.0
+                    ],
+                    [
+                        644.0,
+                        62.0
+                    ],
+                    [
+                        644.0,
+                        93.0
+                    ],
+                    [
+                        350.0,
+                        93.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8818628787994385,
+                "coordinate": [
+                    347,
+                    119,
+                    1056,
+                    151
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        347.0,
+                        119.0
+                    ],
+                    [
+                        1056.0,
+                        119.0
+                    ],
+                    [
+                        1056.0,
+                        151.0
+                    ],
+                    [
+                        347.0,
+                        151.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9200180768966675,
+                "coordinate": [
+                    348,
+                    175,
+                    1482,
+                    234
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        348.0,
+                        175.0
+                    ],
+                    [
+                        1482.0,
+                        175.0
+                    ],
+                    [
+                        1482.0,
+                        234.0
+                    ],
+                    [
+                        348.0,
+                        234.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9645494222640991,
+                "coordinate": [
+                    347,
+                    260,
+                    1484,
+                    519
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        347.0,
+                        260.0
+                    ],
+                    [
+                        1484.0,
+                        260.0
+                    ],
+                    [
+                        1484.0,
+                        519.0
+                    ],
+                    [
+                        347.0,
+                        519.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9409154057502747,
+                "coordinate": [
+                    348,
+                    542,
+                    1483,
+                    633
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        348.0,
+                        542.0
+                    ],
+                    [
+                        1483.0,
+                        542.0
+                    ],
+                    [
+                        1483.0,
+                        633.0
+                    ],
+                    [
+                        348.0,
+                        633.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9201803803443909,
+                "coordinate": [
+                    348,
+                    655,
+                    1468,
+                    717
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        348.0,
+                        655.0
+                    ],
+                    [
+                        1468.0,
+                        655.0
+                    ],
+                    [
+                        1468.0,
+                        717.0
+                    ],
+                    [
+                        348.0,
+                        717.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9241504669189453,
+                "coordinate": [
+                    349,
+                    739,
+                    1480,
+                    802
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        349.0,
+                        739.0
+                    ],
+                    [
+                        1480.0,
+                        739.0
+                    ],
+                    [
+                        1480.0,
+                        802.0
+                    ],
+                    [
+                        349.0,
+                        802.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9468652606010437,
+                "coordinate": [
+                    349,
+                    825,
+                    1467,
+                    913
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        349.0,
+                        825.0
+                    ],
+                    [
+                        1467.0,
+                        825.0
+                    ],
+                    [
+                        1467.0,
+                        913.0
+                    ],
+                    [
+                        349.0,
+                        913.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8589960932731628,
+                "coordinate": [
+                    352,
+                    938,
+                    541,
+                    971
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        352.0,
+                        938.0
+                    ],
+                    [
+                        541.0,
+                        938.0
+                    ],
+                    [
+                        541.0,
+                        971.0
+                    ],
+                    [
+                        352.0,
+                        971.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9333149790763855,
+                "coordinate": [
+                    350,
+                    995,
+                    1486,
+                    1057
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        350.0,
+                        995.0
+                    ],
+                    [
+                        1486.0,
+                        995.0
+                    ],
+                    [
+                        1486.0,
+                        1057.0
+                    ],
+                    [
+                        350.0,
+                        1057.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9442821741104126,
+                "coordinate": [
+                    350,
+                    1080,
+                    1432,
+                    1170
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        350.0,
+                        1080.0
+                    ],
+                    [
+                        1432.0,
+                        1080.0
+                    ],
+                    [
+                        1432.0,
+                        1170.0
+                    ],
+                    [
+                        350.0,
+                        1170.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8694688677787781,
+                "coordinate": [
+                    39,
+                    1184,
+                    428,
+                    1212
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        39.0,
+                        1184.0
+                    ],
+                    [
+                        428.0,
+                        1184.0
+                    ],
+                    [
+                        428.0,
+                        1212.0
+                    ],
+                    [
+                        39.0,
+                        1212.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8285689949989319,
+                "coordinate": [
+                    1452,
+                    1182,
+                    1552,
+                    1210
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1452.0,
+                        1182.0
+                    ],
+                    [
+                        1552.0,
+                        1182.0
+                    ],
+                    [
+                        1552.0,
+                        1210.0
+                    ],
+                    [
+                        1452.0,
+                        1210.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

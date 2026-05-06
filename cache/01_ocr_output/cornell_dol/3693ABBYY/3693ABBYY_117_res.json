@@ -1,0 +1,278 @@
+{
+    "input_path": "cache/cornell_dol/3693ABBYY.pdf",
+    "page_index": 117,
+    "page_count": 135,
+    "width": 803,
+    "height": 1235,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Supplemental Agreement #18",
+            "block_bbox": [
+                93,
+                97,
+                361,
+                116
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    93.0,
+                    97.0
+                ],
+                [
+                    360.0,
+                    97.0
+                ],
+                [
+                    360.0,
+                    115.0
+                ],
+                [
+                    93.0,
+                    115.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "K. G. Dodd\nMay 23, 2005\nPage 2",
+            "block_bbox": [
+                91,
+                150,
+                221,
+                208
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    91.0,
+                    150.0
+                ],
+                [
+                    221.0,
+                    150.0
+                ],
+                [
+                    221.0,
+                    208.0
+                ],
+                [
+                    91.0,
+                    208.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "5. Layoffs will be in accordance with the collective bargaining agreement.",
+            "block_bbox": [
+                92,
+                240,
+                621,
+                281
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    92.0,
+                    240.0
+                ],
+                [
+                    621.0,
+                    240.0
+                ],
+                [
+                    621.0,
+                    281.0
+                ],
+                [
+                    92.0,
+                    281.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "109",
+            "block_bbox": [
+                381,
+                1157,
+                412,
+                1177
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    381.0,
+                    1157.0
+                ],
+                [
+                    408.0,
+                    1157.0
+                ],
+                [
+                    408.0,
+                    1176.0
+                ],
+                [
+                    381.0,
+                    1176.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8470561504364014,
+                "coordinate": [
+                    93,
+                    97,
+                    361,
+                    116
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        93.0,
+                        97.0
+                    ],
+                    [
+                        360.0,
+                        97.0
+                    ],
+                    [
+                        360.0,
+                        115.0
+                    ],
+                    [
+                        93.0,
+                        115.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6623347401618958,
+                "coordinate": [
+                    91,
+                    150,
+                    221,
+                    208
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        91.0,
+                        150.0
+                    ],
+                    [
+                        221.0,
+                        150.0
+                    ],
+                    [
+                        221.0,
+                        208.0
+                    ],
+                    [
+                        91.0,
+                        208.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8802736401557922,
+                "coordinate": [
+                    92,
+                    240,
+                    621,
+                    281
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        92.0,
+                        240.0
+                    ],
+                    [
+                        621.0,
+                        240.0
+                    ],
+                    [
+                        621.0,
+                        281.0
+                    ],
+                    [
+                        92.0,
+                        281.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7339457273483276,
+                "coordinate": [
+                    381,
+                    1157,
+                    412,
+                    1177
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        381.0,
+                        1157.0
+                    ],
+                    [
+                        408.0,
+                        1157.0
+                    ],
+                    [
+                        408.0,
+                        1176.0
+                    ],
+                    [
+                        381.0,
+                        1176.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

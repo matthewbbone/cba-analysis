@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_001b022f001_02.pdf",
+    "page_index": 13,
+    "page_count": 28,
+    "width": 571,
+    "height": 841,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "Section 3. All regular part time employees are entitled to holiday pay provided they average twenty (20) hours per week for four (4) weeks immediately preceding the holiday and provided they have six (6) calendar months service with the Company.",
+            "block_bbox": [
+                45,
+                68,
+                533,
+                155
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    45.0,
+                    68.0
+                ],
+                [
+                    533.0,
+                    68.0
+                ],
+                [
+                    533.0,
+                    155.0
+                ],
+                [
+                    45.0,
+                    155.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 4. In a week which includes any of the holidays noted in Section 1 above, the work week shall be composed of thirty-two (32) hours of work and eight (8) hours of holiday time. All work performed in excess of thirty-two (32) hours in such a week shall be compensated at time and one-half.",
+            "block_bbox": [
+                45,
+                162,
+                531,
+                251
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    45.0,
+                    162.0
+                ],
+                [
+                    531.0,
+                    162.0
+                ],
+                [
+                    531.0,
+                    251.0
+                ],
+                [
+                    45.0,
+                    251.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE IX.",
+            "block_bbox": [
+                229,
+                269,
+                347,
+                289
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    229.0,
+                    268.9999694824219
+                ],
+                [
+                    344.0,
+                    268.9999694824219
+                ],
+                [
+                    344.0,
+                    287.9999694824219
+                ],
+                [
+                    229.0,
+                    287.9999694824219
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "VACATION PLAN",
+            "block_bbox": [
+                208,
+                297,
+                370,
+                317
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    208.0,
+                    297.0
+                ],
+                [
+                    369.0,
+                    297.0
+                ],
+                [
+                    369.0,
+                    316.0
+                ],
+                [
+                    208.0,
+                    316.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The Company will grant a paid vacation, as set forth under Section 1, and subject to the conditions under Section 2 of this Article, to eligible employees covered by this Agreement.",
+            "block_bbox": [
+                46,
+                326,
+                533,
+                381
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    46.0,
+                    326.0
+                ],
+                [
+                    533.0,
+                    326.0
+                ],
+                [
+                    533.0,
+                    381.0
+                ],
+                [
+                    46.0,
+                    381.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "13",
+            "block_bbox": [
+                274,
+                778,
+                296,
+                797
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    274.0,
+                    778.0
+                ],
+                [
+                    295.0,
+                    778.0
+                ],
+                [
+                    295.0,
+                    796.0
+                ],
+                [
+                    274.0,
+                    796.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9482500553131104,
+                "coordinate": [
+                    45,
+                    68,
+                    533,
+                    155
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        45.0,
+                        68.0
+                    ],
+                    [
+                        533.0,
+                        68.0
+                    ],
+                    [
+                        533.0,
+                        155.0
+                    ],
+                    [
+                        45.0,
+                        155.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9471746683120728,
+                "coordinate": [
+                    45,
+                    162,
+                    531,
+                    251
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        45.0,
+                        162.0
+                    ],
+                    [
+                        531.0,
+                        162.0
+                    ],
+                    [
+                        531.0,
+                        251.0
+                    ],
+                    [
+                        45.0,
+                        251.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8516804575920105,
+                "coordinate": [
+                    229,
+                    269,
+                    347,
+                    289
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        229.0,
+                        268.9999694824219
+                    ],
+                    [
+                        344.0,
+                        268.9999694824219
+                    ],
+                    [
+                        344.0,
+                        287.9999694824219
+                    ],
+                    [
+                        229.0,
+                        287.9999694824219
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8463814854621887,
+                "coordinate": [
+                    208,
+                    297,
+                    370,
+                    317
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        208.0,
+                        297.0
+                    ],
+                    [
+                        369.0,
+                        297.0
+                    ],
+                    [
+                        369.0,
+                        316.0
+                    ],
+                    [
+                        208.0,
+                        316.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.927958071231842,
+                "coordinate": [
+                    46,
+                    326,
+                    533,
+                    381
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        46.0,
+                        326.0
+                    ],
+                    [
+                        533.0,
+                        326.0
+                    ],
+                    [
+                        533.0,
+                        381.0
+                    ],
+                    [
+                        46.0,
+                        381.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.781472384929657,
+                "coordinate": [
+                    274,
+                    778,
+                    296,
+                    797
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        274.0,
+                        778.0
+                    ],
+                    [
+                        295.0,
+                        778.0
+                    ],
+                    [
+                        295.0,
+                        796.0
+                    ],
+                    [
+                        274.0,
+                        796.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

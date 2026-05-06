@@ -1,0 +1,339 @@
+{
+    "input_path": "cache/dol_archive/document_549.pdf",
+    "page_index": 2,
+    "page_count": 26,
+    "width": 1588,
+    "height": 1226,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "AGREEMENT",
+            "block_bbox": [
+                734,
+                35,
+                857,
+                59
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    734.0,
+                    35.0
+                ],
+                [
+                    857.0,
+                    35.0
+                ],
+                [
+                    857.0,
+                    59.0
+                ],
+                [
+                    734.0,
+                    59.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Entered into as of this March 7, 2004, by and between Shaw's Supermarkets, Inc., hereinafter referred to as the \"Company\" and Local Union 371, chartered by the United Food and Commercial Workers International Union, affiliated with the AFL-CIO-CLC, hereinafter referred to as the \"Union\", for and on behalf of its members now employed and those who hereinafter may be employed by the Company.",
+            "block_bbox": [
+                559,
+                80,
+                1031,
+                256
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    559.0,
+                    80.0
+                ],
+                [
+                    1031.0,
+                    80.0
+                ],
+                [
+                    1031.0,
+                    256.0
+                ],
+                [
+                    559.0,
+                    256.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 1 RECOGNITION",
+            "block_bbox": [
+                731,
+                274,
+                862,
+                319
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    731.0,
+                    274.0
+                ],
+                [
+                    862.0,
+                    274.0
+                ],
+                [
+                    862.0,
+                    319.0
+                ],
+                [
+                    731.0,
+                    319.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Subject to any applicable provisions of State or Federal law or regulation now or hereafter in effect, the Employer recognizes the Union, Local 371, UFCW, as the exclusive bargaining agent with respect to wages, hours, and other conditions of employment of all Employees at the Company's stores presently, or hereafter, located in the State of Connecticut including part-time employees, but excluding executives, buyers, store mangers, perishable managers, non-perishable managers, fresh food managers, administrative managers, personnel coordinators, pharmacists, office clerical employees, guards, professional employees and supervisors as defined by the National Labor Relations Act, and as hereinafter used in this Agreement the words \"Employee\" and \"Employees\" will be deemed to refer to and only to an employee or employees, respectively, of the Company in the bargaining unit described above.",
+            "block_bbox": [
+                561,
+                338,
+                1033,
+                710
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    561.0,
+                    338.0
+                ],
+                [
+                    1033.0,
+                    338.0
+                ],
+                [
+                    1033.0,
+                    710.0
+                ],
+                [
+                    561.0,
+                    710.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "1-",
+            "block_bbox": [
+                790,
+                782,
+                809,
+                797
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    790.0,
+                    782.0
+                ],
+                [
+                    808.0,
+                    782.0
+                ],
+                [
+                    808.0,
+                    796.0
+                ],
+                [
+                    790.0,
+                    796.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7044925689697266,
+                "coordinate": [
+                    734,
+                    35,
+                    857,
+                    59
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        734.0,
+                        35.0
+                    ],
+                    [
+                        857.0,
+                        35.0
+                    ],
+                    [
+                        857.0,
+                        59.0
+                    ],
+                    [
+                        734.0,
+                        59.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9261179566383362,
+                "coordinate": [
+                    559,
+                    80,
+                    1031,
+                    256
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        559.0,
+                        80.0
+                    ],
+                    [
+                        1031.0,
+                        80.0
+                    ],
+                    [
+                        1031.0,
+                        256.0
+                    ],
+                    [
+                        559.0,
+                        256.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.788431704044342,
+                "coordinate": [
+                    731,
+                    274,
+                    862,
+                    319
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        731.0,
+                        274.0
+                    ],
+                    [
+                        862.0,
+                        274.0
+                    ],
+                    [
+                        862.0,
+                        319.0
+                    ],
+                    [
+                        731.0,
+                        319.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9416391849517822,
+                "coordinate": [
+                    561,
+                    338,
+                    1033,
+                    710
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        561.0,
+                        338.0
+                    ],
+                    [
+                        1033.0,
+                        338.0
+                    ],
+                    [
+                        1033.0,
+                        710.0
+                    ],
+                    [
+                        561.0,
+                        710.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.4169953167438507,
+                "coordinate": [
+                    790,
+                    782,
+                    809,
+                    797
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        790.0,
+                        782.0
+                    ],
+                    [
+                        808.0,
+                        782.0
+                    ],
+                    [
+                        808.0,
+                        796.0
+                    ],
+                    [
+                        790.0,
+                        796.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

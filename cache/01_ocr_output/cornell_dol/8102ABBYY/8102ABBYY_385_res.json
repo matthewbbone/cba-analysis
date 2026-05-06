@@ -1,0 +1,705 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 385,
+    "page_count": 439,
+    "width": 1234,
+    "height": 1592,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                748,
+                114,
+                908,
+                132
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    747.9999389648438,
+                    114.0
+                ],
+                [
+                    906.9999389648438,
+                    114.0
+                ],
+                [
+                    906.9999389648438,
+                    131.0
+                ],
+                [
+                    747.9999389648438,
+                    131.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>AGE</td><td>NCS</td></tr><tr><td>any age</td><td>29 years</td></tr><tr><td>49</td><td>24 years</td></tr><tr><td>54</td><td>19 years</td></tr><tr><td>64</td><td>9 years</td></tr></table>",
+            "block_bbox": [
+                521,
+                148,
+                741,
+                237
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    521.0,
+                    148.0
+                ],
+                [
+                    741.0,
+                    148.0
+                ],
+                [
+                    741.0,
+                    237.0
+                ],
+                [
+                    521.0,
+                    237.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The service and age attained during the TLA are counted only for service pension eligibility and not for computing the amount of the service pension.",
+            "block_bbox": [
+                432,
+                258,
+                909,
+                313
+            ],
+            "block_id": 2,
+            "block_order": 1,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    432.0,
+                    258.0
+                ],
+                [
+                    909.0,
+                    258.0
+                ],
+                [
+                    909.0,
+                    313.0
+                ],
+                [
+                    432.0,
+                    313.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(d) A TLA shall not exceed one (1) year from the date the leave starts (i.e., leave expires on the calendar date anniversary of the Company specified separation date), but in any case, will end on the earliest of:",
+            "block_bbox": [
+                385,
+                321,
+                909,
+                378
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    385.0,
+                    321.0
+                ],
+                [
+                    909.0,
+                    321.0
+                ],
+                [
+                    909.0,
+                    378.0
+                ],
+                [
+                    385.0,
+                    378.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(i) the data the eligible employee returns to work for the Company, a Participating Company, a Lucent Controlled Group entity, or any other Lucent Subsidiary or the eligible employee becomes employed by an Interchange Company in which the employee is eligible for portability of service,",
+            "block_bbox": [
+                482,
+                388,
+                908,
+                495
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    482.0,
+                    388.0
+                ],
+                [
+                    908.0,
+                    388.0
+                ],
+                [
+                    908.0,
+                    495.0
+                ],
+                [
+                    482.0,
+                    495.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(ii) the date the employee attains required age and/or service to become service pension eligible, or",
+            "block_bbox": [
+                482,
+                507,
+                907,
+                546
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    482.0,
+                    507.0
+                ],
+                [
+                    907.0,
+                    507.0
+                ],
+                [
+                    907.0,
+                    546.0
+                ],
+                [
+                    482.0,
+                    546.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(iii) death of the employee.",
+            "block_bbox": [
+                482,
+                557,
+                691,
+                579
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    482.0,
+                    557.0
+                ],
+                [
+                    690.0,
+                    557.0
+                ],
+                [
+                    690.0,
+                    578.0
+                ],
+                [
+                    482.0,
+                    578.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(e) The TLA will be canceled effective with the date of (re)hire or death and pension entitlements will be those as of the day before the effective date of the TLA.",
+            "block_bbox": [
+                384,
+                589,
+                907,
+                645
+            ],
+            "block_id": 7,
+            "block_order": 6,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    384.0,
+                    589.0
+                ],
+                [
+                    907.0,
+                    589.0
+                ],
+                [
+                    907.0,
+                    645.0
+                ],
+                [
+                    384.0,
+                    645.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "5 Involuntary Termination Due To Layoff",
+            "block_bbox": [
+                351,
+                657,
+                672,
+                679
+            ],
+            "block_id": 8,
+            "block_order": 7,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    351.0,
+                    657.0
+                ],
+                [
+                    672.0,
+                    657.0
+                ],
+                [
+                    672.0,
+                    679.0
+                ],
+                [
+                    351.0,
+                    679.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) Employees involuntarily terminated due to layoff will have the termination payment schedule, as well as the method of payment computed in accordance with the appropriate collective bargaining agreement. In addition, regular full-time and regular part-time employees (not term or temporary employees) who have been involuntarily terminated pursuant to the force adjustment procedures of the applicable collective bargaining agreement and have a minimum of one (1) year net credited service as of the date of termination are eligible for up to $2,500 in funds for certain education, training, outplacement and relocation expenses. These funds will be available through the Funds for the Alliance/ETOP Distribution (FAED) program.",
+            "block_bbox": [
+                386,
+                690,
+                909,
+                885
+            ],
+            "block_id": 9,
+            "block_order": 8,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    386.0,
+                    690.0
+                ],
+                [
+                    909.0,
+                    690.0
+                ],
+                [
+                    909.0,
+                    885.0
+                ],
+                [
+                    386.0,
+                    885.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "377",
+            "block_bbox": [
+                875,
+                911,
+                905,
+                928
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    875.0,
+                    911.0
+                ],
+                [
+                    904.0,
+                    911.0
+                ],
+                [
+                    904.0,
+                    927.0
+                ],
+                [
+                    875.0,
+                    927.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8356293439865112,
+                "coordinate": [
+                    748,
+                    114,
+                    908,
+                    132
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        747.9999389648438,
+                        114.0
+                    ],
+                    [
+                        906.9999389648438,
+                        114.0
+                    ],
+                    [
+                        906.9999389648438,
+                        131.0
+                    ],
+                    [
+                        747.9999389648438,
+                        131.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9107894897460938,
+                "coordinate": [
+                    521,
+                    148,
+                    741,
+                    237
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        521.0,
+                        148.0
+                    ],
+                    [
+                        741.0,
+                        148.0
+                    ],
+                    [
+                        741.0,
+                        237.0
+                    ],
+                    [
+                        521.0,
+                        237.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9047681093215942,
+                "coordinate": [
+                    432,
+                    258,
+                    909,
+                    313
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        432.0,
+                        258.0
+                    ],
+                    [
+                        909.0,
+                        258.0
+                    ],
+                    [
+                        909.0,
+                        313.0
+                    ],
+                    [
+                        432.0,
+                        313.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.921493411064148,
+                "coordinate": [
+                    385,
+                    321,
+                    909,
+                    378
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        385.0,
+                        321.0
+                    ],
+                    [
+                        909.0,
+                        321.0
+                    ],
+                    [
+                        909.0,
+                        378.0
+                    ],
+                    [
+                        385.0,
+                        378.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9430162906646729,
+                "coordinate": [
+                    482,
+                    388,
+                    908,
+                    495
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        482.0,
+                        388.0
+                    ],
+                    [
+                        908.0,
+                        388.0
+                    ],
+                    [
+                        908.0,
+                        495.0
+                    ],
+                    [
+                        482.0,
+                        495.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8902928233146667,
+                "coordinate": [
+                    482,
+                    507,
+                    907,
+                    546
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        482.0,
+                        507.0
+                    ],
+                    [
+                        907.0,
+                        507.0
+                    ],
+                    [
+                        907.0,
+                        546.0
+                    ],
+                    [
+                        482.0,
+                        546.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8127835988998413,
+                "coordinate": [
+                    482,
+                    557,
+                    691,
+                    579
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        482.0,
+                        557.0
+                    ],
+                    [
+                        690.0,
+                        557.0
+                    ],
+                    [
+                        690.0,
+                        578.0
+                    ],
+                    [
+                        482.0,
+                        578.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9034627079963684,
+                "coordinate": [
+                    384,
+                    589,
+                    907,
+                    645
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        384.0,
+                        589.0
+                    ],
+                    [
+                        907.0,
+                        589.0
+                    ],
+                    [
+                        907.0,
+                        645.0
+                    ],
+                    [
+                        384.0,
+                        645.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8445940613746643,
+                "coordinate": [
+                    351,
+                    657,
+                    672,
+                    679
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        351.0,
+                        657.0
+                    ],
+                    [
+                        672.0,
+                        657.0
+                    ],
+                    [
+                        672.0,
+                        679.0
+                    ],
+                    [
+                        351.0,
+                        679.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9578006863594055,
+                "coordinate": [
+                    386,
+                    690,
+                    909,
+                    885
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        386.0,
+                        690.0
+                    ],
+                    [
+                        909.0,
+                        690.0
+                    ],
+                    [
+                        909.0,
+                        885.0
+                    ],
+                    [
+                        386.0,
+                        885.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.713860034942627,
+                "coordinate": [
+                    875,
+                    911,
+                    905,
+                    928
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        875.0,
+                        911.0
+                    ],
+                    [
+                        904.0,
+                        911.0
+                    ],
+                    [
+                        904.0,
+                        927.0
+                    ],
+                    [
+                        875.0,
+                        927.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

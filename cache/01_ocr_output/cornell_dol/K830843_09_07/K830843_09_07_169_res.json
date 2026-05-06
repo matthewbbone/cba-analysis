@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 169,
+    "page_count": 206,
+    "width": 1224,
+    "height": 2016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "APPENDIX A",
+            "block_bbox": [
+                544,
+                98,
+                700,
+                125
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    544.0,
+                    98.0
+                ],
+                [
+                    700.0,
+                    98.0
+                ],
+                [
+                    700.0,
+                    125.0
+                ],
+                [
+                    544.0,
+                    125.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>LINK CODE</td><td>TITLE CODE</td><td>TITLE NAME</td><td>STEP</td><td>MONTHLY RATE</td><td>HOURLY RATE</td><td>EVE</td><td>NIGHT</td><td>WKEND</td><td colspan=\"3\">ON CALL RATES</td></tr><tr><td colspan=\"12\">SAN FRANCISCO - cont. January 1, 2004</td></tr><tr><td>028</td><td>9233</td><td>PATIENT CARE ASSISTANT</td><td>22.</td><td>$3,263</td><td>$18.75</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>028</td><td>9233</td><td>PATIENT CARE ASSISTANT</td><td>23.</td><td>$3,305</td><td>$18.99</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>028</td><td>9233</td><td>PATIENT CARE ASSISTANT</td><td>24.</td><td>$3,346</td><td>$19.23</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>028</td><td>9234</td><td>PATIENT CARE ASSISTANT PERDIEM</td><td>1.</td><td>$3,267</td><td>$18.78</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>1.</td><td>$3,670</td><td>$21.09</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>2.</td><td>$3,715</td><td>$21.35</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>3.</td><td>$3,761</td><td>$21.61</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>4.</td><td>$3,809</td><td>$21.89</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>5.</td><td>$3,857</td><td>$22.17</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>6.</td><td>$3,906</td><td>$22.45</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>7.</td><td>$3,954</td><td>$22.72</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>8.</td><td>$4,004</td><td>$23.01</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>9.</td><td>$4,053</td><td>$23.29</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>10.</td><td>$4,102</td><td>$23.57</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>11.</td><td>$4,157</td><td>$23.89</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>12.</td><td>$4,209</td><td>$24.19</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>13.</td><td>$4,260</td><td>$24.48</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>14.</td><td>$4,313</td><td>$24.79</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>15.</td><td>$4,368</td><td>$25.10</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>16.</td><td>$4,423</td><td>$25.42</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>17.</td><td>$4,477</td><td>$25.73</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>18.</td><td>$4,534</td><td>$26.06</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>19.</td><td>$4,591</td><td>$26.39</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>20.</td><td>$4,646</td><td>$26.70</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>21.</td><td>$4,705</td><td>$27.04</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>22.</td><td>$4,764</td><td>$27.38</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>23.</td><td>$4,825</td><td>$27.73</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td>PHYSICAL THERAPY ASSISTANT III</td><td>24.</td><td>$4,885</td><td>$28.07</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>1.</td><td>$3,274</td><td>$18.82</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>2.</td><td>$3,315</td><td>$19.05</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>3.</td><td>$3,356</td><td>$19.29</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>4.</td><td>$3,399</td><td>$19.53</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>5.</td><td>$3,439</td><td>$19.76</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>6.</td><td>$3,481</td><td>$20.01</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>7.</td><td>$3,528</td><td>$20.28</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>8.</td><td>$3,571</td><td>$20.52</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>9.</td><td>$3,615</td><td>$20.78</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>10.</td><td>$3,660</td><td>$21.03</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>11.</td><td>$3,708</td><td>$21.31</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>12.</td><td>$3,752</td><td>$21.56</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>13.</td><td>$3,800</td><td>$21.84</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>14.</td><td>$3,848</td><td>$22.11</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>15.</td><td>$3,895</td><td>$22.39</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>16.</td><td>$3,943</td><td>$22.66</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>17.</td><td>$3,995</td><td>$22.96</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>18.</td><td>$4,043</td><td>$23.24</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>19.</td><td>$4,094</td><td>$23.53</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>20.</td><td>$4,145</td><td>$23.82</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>21.</td><td>$4,196</td><td>$24.11</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>22.</td><td>$4,251</td><td>$24.43</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>23.</td><td>$4,303</td><td>$24.73</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td>PHYSICAL THERAPY ASSISTANT II</td><td>24.</td><td>$4,354</td><td>$25.02</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8946</td><td>PHYSICAL THERAPY ASSISTANT I</td><td>1.</td><td>$2,939</td><td>$16.89</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8946</td><td>PHYSICAL THERAPY ASSISTANT I</td><td>2.</td><td>$2,974</td><td>$17.09</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8946</td><td>PHYSICAL THERAPY ASSISTANT I</td><td>3.</td><td>$3,012</td><td>$17.31</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8946</td><td>PHYSICAL THERAPY ASSISTANT I</td><td>4.</td><td>$3,049</td><td>$17.52</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8946</td><td>PHYSICAL THERAPY ASSISTANT I</td><td>5.</td><td>$3,090</td><td>$17.76</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8946</td><td>PHYSICAL THERAPY ASSISTANT I</td><td>6.</td><td>$3,125</td><td>$17.96</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8946</td><td>PHYSICAL THERAPY ASSISTANT I</td><td>7.</td><td>$3,164</td><td>$18.18</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8946</td><td>PHYSICAL THERAPY ASSISTANT I</td><td>8.</td><td>$3,205</td><td>$18.42</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8946</td><td>PHYSICAL THERAPY ASSISTANT I</td><td>9.</td><td>$3,245</td><td>$18.65</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr><tr><td>033</td><td>8946</td><td>PHYSICAL THERAPY ASSISTANT I</td><td>10.</td><td>$3,285</td><td>$18.88</td><td>$2.25</td><td>$3.75</td><td>$1.25</td><td>50%</td><td></td><td></td></tr></table>",
+            "block_bbox": [
+                69,
+                155,
+                1174,
+                1838
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    69.0,
+                    155.0
+                ],
+                [
+                    1174.0,
+                    155.0
+                ],
+                [
+                    1174.0,
+                    1838.0
+                ],
+                [
+                    69.0,
+                    1838.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "167",
+            "block_bbox": [
+                575,
+                1918,
+                622,
+                1942
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    575.0,
+                    1918.0
+                ],
+                [
+                    621.0,
+                    1918.0
+                ],
+                [
+                    621.0,
+                    1941.0
+                ],
+                [
+                    575.0,
+                    1941.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.576235830783844,
+                "coordinate": [
+                    544,
+                    98,
+                    700,
+                    125
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        544.0,
+                        98.0
+                    ],
+                    [
+                        700.0,
+                        98.0
+                    ],
+                    [
+                        700.0,
+                        125.0
+                    ],
+                    [
+                        544.0,
+                        125.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9671160578727722,
+                "coordinate": [
+                    69,
+                    155,
+                    1174,
+                    1838
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        69.0,
+                        155.0
+                    ],
+                    [
+                        1174.0,
+                        155.0
+                    ],
+                    [
+                        1174.0,
+                        1838.0
+                    ],
+                    [
+                        69.0,
+                        1838.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7643893957138062,
+                "coordinate": [
+                    575,
+                    1918,
+                    622,
+                    1942
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        575.0,
+                        1918.0
+                    ],
+                    [
+                        621.0,
+                        1918.0
+                    ],
+                    [
+                        621.0,
+                        1941.0
+                    ],
+                    [
+                        575.0,
+                        1941.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

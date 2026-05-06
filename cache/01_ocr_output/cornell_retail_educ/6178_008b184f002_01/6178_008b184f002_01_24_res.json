@@ -1,0 +1,949 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b184f002_01.pdf",
+    "page_index": 24,
+    "page_count": 73,
+    "width": 575,
+    "height": 980,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 17",
+            "block_bbox": [
+                231,
+                65,
+                343,
+                85
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    231.0,
+                    65.0
+                ],
+                [
+                    342.0,
+                    65.0
+                ],
+                [
+                    342.0,
+                    84.0
+                ],
+                [
+                    231.0,
+                    84.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "TRANSFERS",
+            "block_bbox": [
+                228,
+                94,
+                346,
+                114
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    228.0,
+                    94.0
+                ],
+                [
+                    345.0,
+                    94.0
+                ],
+                [
+                    345.0,
+                    113.0
+                ],
+                [
+                    228.0,
+                    113.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "This article is subject to the New Jersey Supreme Court decision, August 2, 1978 (Ridgefield Park Education Association vs. the Board of Education of Ridgefield Park.)",
+            "block_bbox": [
+                67,
+                133,
+                505,
+                203
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    67.0,
+                    133.0
+                ],
+                [
+                    505.0,
+                    133.0
+                ],
+                [
+                    505.0,
+                    203.0
+                ],
+                [
+                    67.0,
+                    203.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "17-1. The Board and the Association believe that frequent transfers of teachers from one school to another are inimical to the educational process and interfere with optimum teacher performance. Only true vacancies caused by establishment of new positions, resignation, retirement, termination or death shall be filled by transfers. Therefore, they agree as follows:",
+            "block_bbox": [
+                67,
+                212,
+                506,
+                350
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    67.0,
+                    212.0
+                ],
+                [
+                    506.0,
+                    212.0
+                ],
+                [
+                    506.0,
+                    350.0
+                ],
+                [
+                    67.0,
+                    350.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "17-2. In all cases of transfer, the following shall apply:",
+            "block_bbox": [
+                68,
+                358,
+                505,
+                395
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    68.0,
+                    358.0
+                ],
+                [
+                    505.0,
+                    358.0
+                ],
+                [
+                    505.0,
+                    395.0
+                ],
+                [
+                    68.0,
+                    395.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "17-2.1. In cases of Voluntary transfer, seniority begins when the teacher assumes the new position.",
+            "block_bbox": [
+                67,
+                403,
+                506,
+                441
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    67.0,
+                    403.0
+                ],
+                [
+                    506.0,
+                    403.0
+                ],
+                [
+                    506.0,
+                    441.0
+                ],
+                [
+                    67.0,
+                    441.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "17-2.2. In cases of Involuntary transfer, the teacher shall retain all accrued seniority.",
+            "block_bbox": [
+                68,
+                449,
+                506,
+                486
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    68.0,
+                    449.0
+                ],
+                [
+                    506.0,
+                    449.0
+                ],
+                [
+                    506.0,
+                    486.0
+                ],
+                [
+                    68.0,
+                    486.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "17-2.3. For the purposes of this Article, promotional and extra compensation positions applied for shall be deemed voluntary transfers.",
+            "block_bbox": [
+                67,
+                495,
+                506,
+                549
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    67.0,
+                    495.0
+                ],
+                [
+                    506.0,
+                    495.0
+                ],
+                [
+                    506.0,
+                    549.0
+                ],
+                [
+                    67.0,
+                    549.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "17-3. Voluntary Transfers",
+            "block_bbox": [
+                86,
+                561,
+                318,
+                580
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    86.0,
+                    561.0
+                ],
+                [
+                    317.0,
+                    561.0
+                ],
+                [
+                    317.0,
+                    579.0
+                ],
+                [
+                    86.0,
+                    579.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A teacher seeking transfer to another school shall submit a written request to the Superintendent of Schools no later than March 1st of the current year. The teacher shall state the reasons for the request, the school, grade and/or subject to which the teacher seeks transfer. Three (3) choices, in order of preference, if there be preference, shall also be stated. If none of the choices is available then the written request shall be deemed withdrawn.",
+            "block_bbox": [
+                66,
+                583,
+                507,
+                734
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    66.0,
+                    583.0
+                ],
+                [
+                    507.0,
+                    583.0
+                ],
+                [
+                    507.0,
+                    734.0
+                ],
+                [
+                    66.0,
+                    734.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "17-3.1. In cases of voluntary transfer the following criteria shall be applied.",
+            "block_bbox": [
+                67,
+                743,
+                505,
+                779
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    67.0,
+                    743.0
+                ],
+                [
+                    505.0,
+                    743.0
+                ],
+                [
+                    505.0,
+                    779.0
+                ],
+                [
+                    67.0,
+                    779.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A. Availability of vacancies.",
+            "block_bbox": [
+                84,
+                789,
+                328,
+                806
+            ],
+            "block_id": 11,
+            "block_order": 12,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    84.0,
+                    789.0
+                ],
+                [
+                    326.99993896484375,
+                    789.0
+                ],
+                [
+                    326.99993896484375,
+                    805.0
+                ],
+                [
+                    83.99998474121094,
+                    805.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "B. Seniority in the Jersey City Public Schools as a regular teacher.",
+            "block_bbox": [
+                84,
+                806,
+                488,
+                838
+            ],
+            "block_id": 12,
+            "block_order": 13,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    84.0,
+                    806.0
+                ],
+                [
+                    488.0,
+                    806.0
+                ],
+                [
+                    488.0,
+                    838.0
+                ],
+                [
+                    84.0,
+                    838.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "C. Seniority as a regular teacher in the school from which the transfer is requested.",
+            "block_bbox": [
+                84,
+                839,
+                505,
+                874
+            ],
+            "block_id": 13,
+            "block_order": 14,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    84.0,
+                    839.0
+                ],
+                [
+                    505.0,
+                    839.0
+                ],
+                [
+                    505.0,
+                    874.0
+                ],
+                [
+                    84.0,
+                    874.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "19",
+            "block_bbox": [
+                276,
+                903,
+                297,
+                919
+            ],
+            "block_id": 14,
+            "block_order": null,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    276.0,
+                    903.0
+                ],
+                [
+                    296.0,
+                    903.0
+                ],
+                [
+                    296.0,
+                    918.0
+                ],
+                [
+                    276.0,
+                    918.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.549570620059967,
+                "coordinate": [
+                    231,
+                    65,
+                    343,
+                    85
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        231.0,
+                        65.0
+                    ],
+                    [
+                        342.0,
+                        65.0
+                    ],
+                    [
+                        342.0,
+                        84.0
+                    ],
+                    [
+                        231.0,
+                        84.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6385211944580078,
+                "coordinate": [
+                    228,
+                    94,
+                    346,
+                    114
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        228.0,
+                        94.0
+                    ],
+                    [
+                        345.0,
+                        94.0
+                    ],
+                    [
+                        345.0,
+                        113.0
+                    ],
+                    [
+                        228.0,
+                        113.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9361041188240051,
+                "coordinate": [
+                    67,
+                    133,
+                    505,
+                    203
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        67.0,
+                        133.0
+                    ],
+                    [
+                        505.0,
+                        133.0
+                    ],
+                    [
+                        505.0,
+                        203.0
+                    ],
+                    [
+                        67.0,
+                        203.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9558414816856384,
+                "coordinate": [
+                    67,
+                    212,
+                    506,
+                    350
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        67.0,
+                        212.0
+                    ],
+                    [
+                        506.0,
+                        212.0
+                    ],
+                    [
+                        506.0,
+                        350.0
+                    ],
+                    [
+                        67.0,
+                        350.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9092336893081665,
+                "coordinate": [
+                    68,
+                    358,
+                    505,
+                    395
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        68.0,
+                        358.0
+                    ],
+                    [
+                        505.0,
+                        358.0
+                    ],
+                    [
+                        505.0,
+                        395.0
+                    ],
+                    [
+                        68.0,
+                        395.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9134968519210815,
+                "coordinate": [
+                    67,
+                    403,
+                    506,
+                    441
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        67.0,
+                        403.0
+                    ],
+                    [
+                        506.0,
+                        403.0
+                    ],
+                    [
+                        506.0,
+                        441.0
+                    ],
+                    [
+                        67.0,
+                        441.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9039307236671448,
+                "coordinate": [
+                    68,
+                    449,
+                    506,
+                    486
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        68.0,
+                        449.0
+                    ],
+                    [
+                        506.0,
+                        449.0
+                    ],
+                    [
+                        506.0,
+                        486.0
+                    ],
+                    [
+                        68.0,
+                        486.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9354884028434753,
+                "coordinate": [
+                    67,
+                    495,
+                    506,
+                    549
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        67.0,
+                        495.0
+                    ],
+                    [
+                        506.0,
+                        495.0
+                    ],
+                    [
+                        506.0,
+                        549.0
+                    ],
+                    [
+                        67.0,
+                        549.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8547787666320801,
+                "coordinate": [
+                    86,
+                    561,
+                    318,
+                    580
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        86.0,
+                        561.0
+                    ],
+                    [
+                        317.0,
+                        561.0
+                    ],
+                    [
+                        317.0,
+                        579.0
+                    ],
+                    [
+                        86.0,
+                        579.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9625265002250671,
+                "coordinate": [
+                    66,
+                    583,
+                    507,
+                    734
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        66.0,
+                        583.0
+                    ],
+                    [
+                        507.0,
+                        583.0
+                    ],
+                    [
+                        507.0,
+                        734.0
+                    ],
+                    [
+                        66.0,
+                        734.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9112629890441895,
+                "coordinate": [
+                    67,
+                    743,
+                    505,
+                    779
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        67.0,
+                        743.0
+                    ],
+                    [
+                        505.0,
+                        743.0
+                    ],
+                    [
+                        505.0,
+                        779.0
+                    ],
+                    [
+                        67.0,
+                        779.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.848472535610199,
+                "coordinate": [
+                    84,
+                    789,
+                    328,
+                    806
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        84.0,
+                        789.0
+                    ],
+                    [
+                        326.99993896484375,
+                        789.0
+                    ],
+                    [
+                        326.99993896484375,
+                        805.0
+                    ],
+                    [
+                        83.99998474121094,
+                        805.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9083213210105896,
+                "coordinate": [
+                    84,
+                    806,
+                    488,
+                    838
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        84.0,
+                        806.0
+                    ],
+                    [
+                        488.0,
+                        806.0
+                    ],
+                    [
+                        488.0,
+                        838.0
+                    ],
+                    [
+                        84.0,
+                        838.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.894949734210968,
+                "coordinate": [
+                    84,
+                    839,
+                    505,
+                    874
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        84.0,
+                        839.0
+                    ],
+                    [
+                        505.0,
+                        839.0
+                    ],
+                    [
+                        505.0,
+                        874.0
+                    ],
+                    [
+                        84.0,
+                        874.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7897268533706665,
+                "coordinate": [
+                    276,
+                    903,
+                    297,
+                    919
+                ],
+                "order": 15,
+                "polygon_points": [
+                    [
+                        276.0,
+                        903.0
+                    ],
+                    [
+                        296.0,
+                        903.0
+                    ],
+                    [
+                        296.0,
+                        918.0
+                    ],
+                    [
+                        276.0,
+                        918.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,522 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b178f008_02.pdf",
+    "page_index": 5,
+    "page_count": 42,
+    "width": 1239,
+    "height": 1604,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "ARTICLE III - PROBATIONARY PERIOD",
+            "block_bbox": [
+                171,
+                180,
+                606,
+                207
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    171.0,
+                    180.0
+                ],
+                [
+                    606.0,
+                    180.0
+                ],
+                [
+                    606.0,
+                    207.0
+                ],
+                [
+                    171.0,
+                    207.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Each employee shall be on probationary status during the first three (3) months of employment, excluding time lost for sickness and other leaves of absence. During or at the end of the probationary period, the Employer may discharge any such employee and such discharge shall not be subject to the grievance and arbitration provisions of this Agreement. Extensions of the probationary period may be agreed upon by the Employer and the Association.",
+            "block_bbox": [
+                169,
+                228,
+                1087,
+                558
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    169.0,
+                    228.0
+                ],
+                [
+                    1087.0,
+                    228.0
+                ],
+                [
+                    1087.0,
+                    558.0
+                ],
+                [
+                    169.0,
+                    558.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE IV - TEMPORARY EMPLOYEES",
+            "block_bbox": [
+                171,
+                623,
+                594,
+                652
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    171.0,
+                    623.0
+                ],
+                [
+                    594.0,
+                    623.0
+                ],
+                [
+                    594.0,
+                    652.0
+                ],
+                [
+                    171.0,
+                    652.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Employees hired to fill a specific job for less than three (3) months shall acquire no seniority and be deemed temporary employees.\nIf such employees are retained in the same position after three (3) continuous months, they shall be classified as permanent employees, and receive seniority credit and all other benefits as provided in this Agreement, as would an employee who had completed his/her probationary period. These three (3) months shall serve as said employee's probationary period.",
+            "block_bbox": [
+                168,
+                672,
+                1101,
+                1049
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    168.0,
+                    672.0
+                ],
+                [
+                    1101.0,
+                    672.0
+                ],
+                [
+                    1101.0,
+                    1049.0
+                ],
+                [
+                    168.0,
+                    1049.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "In no event shall a series of temporary employees be used to fill a vacancy in a job of a permanent nature. This shall not preclude the hiring of a temporary employee while a permanent employee is being sought. This provision has no reference or application to student employees.",
+            "block_bbox": [
+                168,
+                1069,
+                1100,
+                1247
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    168.0,
+                    1069.0
+                ],
+                [
+                    1100.0,
+                    1069.0
+                ],
+                [
+                    1100.0,
+                    1247.0
+                ],
+                [
+                    168.0,
+                    1247.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Extensions of the three (3) month period for a temporary employee must be agreed upon by the Association and the University.",
+            "block_bbox": [
+                169,
+                1263,
+                1063,
+                1343
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    169.0,
+                    1263.0
+                ],
+                [
+                    1063.0,
+                    1263.0
+                ],
+                [
+                    1063.0,
+                    1343.0
+                ],
+                [
+                    169.0,
+                    1343.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Should a vacancy which originally was temporary become a permanent",
+            "block_bbox": [
+                253,
+                1361,
+                1075,
+                1391
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    253.0,
+                    1361.0
+                ],
+                [
+                    1075.0,
+                    1361.0
+                ],
+                [
+                    1075.0,
+                    1391.0
+                ],
+                [
+                    253.0,
+                    1391.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "4",
+            "block_bbox": [
+                632,
+                1479,
+                649,
+                1499
+            ],
+            "block_id": 7,
+            "block_order": null,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    632.0,
+                    1479.0
+                ],
+                [
+                    648.0,
+                    1479.0
+                ],
+                [
+                    648.0,
+                    1498.0
+                ],
+                [
+                    632.0,
+                    1498.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8081690669059753,
+                "coordinate": [
+                    171,
+                    180,
+                    606,
+                    207
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        171.0,
+                        180.0
+                    ],
+                    [
+                        606.0,
+                        180.0
+                    ],
+                    [
+                        606.0,
+                        207.0
+                    ],
+                    [
+                        171.0,
+                        207.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9545067548751831,
+                "coordinate": [
+                    169,
+                    228,
+                    1087,
+                    558
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        169.0,
+                        228.0
+                    ],
+                    [
+                        1087.0,
+                        228.0
+                    ],
+                    [
+                        1087.0,
+                        558.0
+                    ],
+                    [
+                        169.0,
+                        558.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8292117714881897,
+                "coordinate": [
+                    171,
+                    623,
+                    594,
+                    652
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        171.0,
+                        623.0
+                    ],
+                    [
+                        594.0,
+                        623.0
+                    ],
+                    [
+                        594.0,
+                        652.0
+                    ],
+                    [
+                        171.0,
+                        652.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9515104293823242,
+                "coordinate": [
+                    168,
+                    672,
+                    1101,
+                    1049
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        168.0,
+                        672.0
+                    ],
+                    [
+                        1101.0,
+                        672.0
+                    ],
+                    [
+                        1101.0,
+                        1049.0
+                    ],
+                    [
+                        168.0,
+                        1049.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9428945183753967,
+                "coordinate": [
+                    168,
+                    1069,
+                    1100,
+                    1247
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        168.0,
+                        1069.0
+                    ],
+                    [
+                        1100.0,
+                        1069.0
+                    ],
+                    [
+                        1100.0,
+                        1247.0
+                    ],
+                    [
+                        168.0,
+                        1247.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9122198820114136,
+                "coordinate": [
+                    169,
+                    1263,
+                    1063,
+                    1343
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        169.0,
+                        1263.0
+                    ],
+                    [
+                        1063.0,
+                        1263.0
+                    ],
+                    [
+                        1063.0,
+                        1343.0
+                    ],
+                    [
+                        169.0,
+                        1343.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.804382860660553,
+                "coordinate": [
+                    253,
+                    1361,
+                    1075,
+                    1391
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        253.0,
+                        1361.0
+                    ],
+                    [
+                        1075.0,
+                        1361.0
+                    ],
+                    [
+                        1075.0,
+                        1391.0
+                    ],
+                    [
+                        253.0,
+                        1391.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6354156732559204,
+                "coordinate": [
+                    632,
+                    1479,
+                    649,
+                    1499
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        632.0,
+                        1479.0
+                    ],
+                    [
+                        648.0,
+                        1479.0
+                    ],
+                    [
+                        648.0,
+                        1498.0
+                    ],
+                    [
+                        632.0,
+                        1498.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

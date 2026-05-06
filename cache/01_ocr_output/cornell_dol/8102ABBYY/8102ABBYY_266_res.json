@@ -1,0 +1,339 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 266,
+    "page_count": 439,
+    "width": 1232,
+    "height": 1580,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                320,
+                107,
+                482,
+                126
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    107.0
+                ],
+                [
+                    481.0,
+                    107.0
+                ],
+                [
+                    481.0,
+                    125.0
+                ],
+                [
+                    320.0,
+                    125.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) The Union may present grievances related to matters covered by the Plan. Any such grievance shall be filed at the final step of the grievance procedure provided for in the applicable local contract.",
+            "block_bbox": [
+                352,
+                140,
+                876,
+                197
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    352.0,
+                    140.0
+                ],
+                [
+                    876.0,
+                    140.0
+                ],
+                [
+                    876.0,
+                    197.0
+                ],
+                [
+                    352.0,
+                    197.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(c) Arbitration of grievances relative to the matters covered by the Plan shall be limited to whether or not the administration of the Business Group Performance Award violated the agreement reached by the parties under paragraph 3 of this provision. Except as provided, nothing herein shall be construed to subject the Plan to arbitration. Any arbitration provided for under this provision shall be subject to the appropriate arbitration procedures in each local contract.",
+            "block_bbox": [
+                354,
+                207,
+                877,
+                331
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    354.0,
+                    207.0
+                ],
+                [
+                    877.0,
+                    207.0
+                ],
+                [
+                    877.0,
+                    331.0
+                ],
+                [
+                    354.0,
+                    331.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(d) Lucent Technologies reserves the right to adjust payment levels upward or downward to offset the effects of significant and unusual events such as the purchase or sale of a Group, etc.",
+            "block_bbox": [
+                354,
+                342,
+                875,
+                398
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    354.0,
+                    342.0
+                ],
+                [
+                    875.0,
+                    342.0
+                ],
+                [
+                    875.0,
+                    398.0
+                ],
+                [
+                    354.0,
+                    398.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "258",
+            "block_bbox": [
+                320,
+                897,
+                352,
+                917
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    897.0
+                ],
+                [
+                    351.0,
+                    897.0
+                ],
+                [
+                    351.0,
+                    916.0
+                ],
+                [
+                    320.0,
+                    916.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6604025959968567,
+                "coordinate": [
+                    320,
+                    107,
+                    482,
+                    126
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        320.0,
+                        107.0
+                    ],
+                    [
+                        481.0,
+                        107.0
+                    ],
+                    [
+                        481.0,
+                        125.0
+                    ],
+                    [
+                        320.0,
+                        125.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.913325309753418,
+                "coordinate": [
+                    352,
+                    140,
+                    876,
+                    197
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        352.0,
+                        140.0
+                    ],
+                    [
+                        876.0,
+                        140.0
+                    ],
+                    [
+                        876.0,
+                        197.0
+                    ],
+                    [
+                        352.0,
+                        197.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9398708939552307,
+                "coordinate": [
+                    354,
+                    207,
+                    877,
+                    331
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        354.0,
+                        207.0
+                    ],
+                    [
+                        877.0,
+                        207.0
+                    ],
+                    [
+                        877.0,
+                        331.0
+                    ],
+                    [
+                        354.0,
+                        331.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8964390158653259,
+                "coordinate": [
+                    354,
+                    342,
+                    875,
+                    398
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        354.0,
+                        342.0
+                    ],
+                    [
+                        875.0,
+                        342.0
+                    ],
+                    [
+                        875.0,
+                        398.0
+                    ],
+                    [
+                        354.0,
+                        398.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6824376583099365,
+                "coordinate": [
+                    320,
+                    897,
+                    352,
+                    917
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        320.0,
+                        897.0
+                    ],
+                    [
+                        351.0,
+                        897.0
+                    ],
+                    [
+                        351.0,
+                        916.0
+                    ],
+                    [
+                        320.0,
+                        916.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

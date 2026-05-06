@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/dol_archive/document_1778.pdf",
+    "page_index": 30,
+    "page_count": 32,
+    "width": 560,
+    "height": 1224,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "doc_title",
+            "block_content": "ABC - Active Ballot Club",
+            "block_bbox": [
+                67,
+                53,
+                491,
+                90
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    67.0,
+                    53.0
+                ],
+                [
+                    491.0,
+                    53.0
+                ],
+                [
+                    491.0,
+                    90.0
+                ],
+                [
+                    67.0,
+                    90.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The ABC, the UFCW's Active Ballot Club, needs you and every other member to become politically active.",
+            "block_bbox": [
+                48,
+                95,
+                366,
+                169
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    48.0,
+                    95.0
+                ],
+                [
+                    366.0,
+                    95.0
+                ],
+                [
+                    366.0,
+                    169.0
+                ],
+                [
+                    48.0,
+                    169.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "ABC works to elect people to public office who understand the needs of working men and women. ABC assists their campaigns and keeps them informed on the issues as organized labor sees them.",
+            "block_bbox": [
+                47,
+                189,
+                367,
+                261
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    47.0,
+                    189.0
+                ],
+                [
+                    367.0,
+                    189.0
+                ],
+                [
+                    367.0,
+                    261.0
+                ],
+                [
+                    47.0,
+                    261.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "",
+            "block_bbox": [
+                48,
+                261,
+                511,
+                312
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    48.0,
+                    261.0
+                ],
+                [
+                    511.0,
+                    261.0
+                ],
+                [
+                    511.0,
+                    312.0
+                ],
+                [
+                    48.0,
+                    312.0
+                ]
+            ]
+        },
+        {
+            "block_label": "image",
+            "block_content": "",
+            "block_bbox": [
+                373,
+                102,
+                513,
+                242
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    373.0,
+                    102.0
+                ],
+                [
+                    513.0,
+                    102.0
+                ],
+                [
+                    513.0,
+                    242.0
+                ],
+                [
+                    373.0,
+                    242.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Today, there is a great need for labor to have a voice in political action. Help make sure our Union has that voice by joining ABC now.",
+            "block_bbox": [
+                48,
+                333,
+                512,
+                408
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    48.0,
+                    333.0
+                ],
+                [
+                    512.0,
+                    333.0
+                ],
+                [
+                    512.0,
+                    408.0
+                ],
+                [
+                    48.0,
+                    408.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Due to the many critical issues before Congress; state, city and local governments this year; it is important that we have sufficient funds to support our friends and defeat those candidates who do not support the working man and woman. We encourage all members to participate in the Active Ballot Club as a means of protecting our interests in the various governmental bodies and in the laws they pass that may affect our livelihood.",
+            "block_bbox": [
+                46,
+                430,
+                512,
+                625
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    46.0,
+                    430.0
+                ],
+                [
+                    512.0,
+                    430.0
+                ],
+                [
+                    512.0,
+                    625.0
+                ],
+                [
+                    46.0,
+                    625.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "If you haven't already signed up, see your Union Representative or Service Representative. Sign up today!",
+            "block_bbox": [
+                48,
+                646,
+                511,
+                698
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    48.0,
+                    646.0
+                ],
+                [
+                    511.0,
+                    646.0
+                ],
+                [
+                    511.0,
+                    698.0
+                ],
+                [
+                    48.0,
+                    698.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Members employed by companies where there is no check-off will be able to purchase their ABC Membership Cards from their Union Representatives or Shop Stewards in the normal manner.",
+            "block_bbox": [
+                46,
+                719,
+                512,
+                818
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    46.0,
+                    719.0
+                ],
+                [
+                    512.0,
+                    719.0
+                ],
+                [
+                    512.0,
+                    818.0
+                ],
+                [
+                    46.0,
+                    818.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Contributions of gifts to the\nUFCW Active Ballot Club are not\ndeductible as charitable contributions for\nfederal tax purposes.",
+            "block_bbox": [
+                84,
+                839,
+                475,
+                939
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    84.0,
+                    839.0
+                ],
+                [
+                    475.0,
+                    839.0
+                ],
+                [
+                    475.0,
+                    939.0
+                ],
+                [
+                    84.0,
+                    939.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Be Informed!!!",
+            "block_bbox": [
+                185,
+                1032,
+                374,
+                1065
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    185.0,
+                    1032.0
+                ],
+                [
+                    374.0,
+                    1032.0
+                ],
+                [
+                    374.0,
+                    1065.0
+                ],
+                [
+                    185.0,
+                    1065.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "www.UFCW1500.org",
+            "block_bbox": [
+                59,
+                1082,
+                501,
+                1121
+            ],
+            "block_id": 11,
+            "block_order": 11,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    59.0,
+                    1082.0
+                ],
+                [
+                    501.0,
+                    1082.0
+                ],
+                [
+                    501.0,
+                    1121.0
+                ],
+                [
+                    59.0,
+                    1121.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.5882784128189087,
+                "coordinate": [
+                    67,
+                    53,
+                    491,
+                    90
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        67.0,
+                        53.0
+                    ],
+                    [
+                        491.0,
+                        53.0
+                    ],
+                    [
+                        491.0,
+                        90.0
+                    ],
+                    [
+                        67.0,
+                        90.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8755241632461548,
+                "coordinate": [
+                    48,
+                    95,
+                    366,
+                    169
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        48.0,
+                        95.0
+                    ],
+                    [
+                        366.0,
+                        95.0
+                    ],
+                    [
+                        366.0,
+                        169.0
+                    ],
+                    [
+                        48.0,
+                        169.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8478870391845703,
+                "coordinate": [
+                    47,
+                    189,
+                    367,
+                    261
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        47.0,
+                        189.0
+                    ],
+                    [
+                        367.0,
+                        189.0
+                    ],
+                    [
+                        367.0,
+                        261.0
+                    ],
+                    [
+                        47.0,
+                        261.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.9104983806610107,
+                "coordinate": [
+                    373,
+                    102,
+                    513,
+                    242
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        373.0,
+                        102.0
+                    ],
+                    [
+                        513.0,
+                        102.0
+                    ],
+                    [
+                        513.0,
+                        242.0
+                    ],
+                    [
+                        373.0,
+                        242.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8681665658950806,
+                "coordinate": [
+                    48,
+                    261,
+                    511,
+                    312
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        48.0,
+                        261.0
+                    ],
+                    [
+                        511.0,
+                        261.0
+                    ],
+                    [
+                        511.0,
+                        312.0
+                    ],
+                    [
+                        48.0,
+                        312.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9127218127250671,
+                "coordinate": [
+                    48,
+                    333,
+                    512,
+                    408
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        48.0,
+                        333.0
+                    ],
+                    [
+                        512.0,
+                        333.0
+                    ],
+                    [
+                        512.0,
+                        408.0
+                    ],
+                    [
+                        48.0,
+                        408.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9491327404975891,
+                "coordinate": [
+                    46,
+                    430,
+                    512,
+                    625
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        46.0,
+                        430.0
+                    ],
+                    [
+                        512.0,
+                        430.0
+                    ],
+                    [
+                        512.0,
+                        625.0
+                    ],
+                    [
+                        46.0,
+                        625.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8792009949684143,
+                "coordinate": [
+                    48,
+                    646,
+                    511,
+                    698
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        48.0,
+                        646.0
+                    ],
+                    [
+                        511.0,
+                        646.0
+                    ],
+                    [
+                        511.0,
+                        698.0
+                    ],
+                    [
+                        48.0,
+                        698.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9260024428367615,
+                "coordinate": [
+                    46,
+                    719,
+                    512,
+                    818
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        46.0,
+                        719.0
+                    ],
+                    [
+                        512.0,
+                        719.0
+                    ],
+                    [
+                        512.0,
+                        818.0
+                    ],
+                    [
+                        46.0,
+                        818.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8942065238952637,
+                "coordinate": [
+                    84,
+                    839,
+                    475,
+                    939
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        84.0,
+                        839.0
+                    ],
+                    [
+                        475.0,
+                        839.0
+                    ],
+                    [
+                        475.0,
+                        939.0
+                    ],
+                    [
+                        84.0,
+                        939.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.643217146396637,
+                "coordinate": [
+                    185,
+                    1032,
+                    374,
+                    1065
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        185.0,
+                        1032.0
+                    ],
+                    [
+                        374.0,
+                        1032.0
+                    ],
+                    [
+                        374.0,
+                        1065.0
+                    ],
+                    [
+                        185.0,
+                        1065.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5343056917190552,
+                "coordinate": [
+                    59,
+                    1082,
+                    501,
+                    1121
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        59.0,
+                        1082.0
+                    ],
+                    [
+                        501.0,
+                        1082.0
+                    ],
+                    [
+                        501.0,
+                        1121.0
+                    ],
+                    [
+                        59.0,
+                        1121.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

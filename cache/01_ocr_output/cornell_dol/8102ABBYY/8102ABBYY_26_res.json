@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 26,
+    "page_count": 439,
+    "width": 1232,
+    "height": 1580,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article 6",
+            "block_bbox": [
+                321,
+                80,
+                383,
+                97
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    320.9999694824219,
+                    79.99999237060547
+                ],
+                [
+                    381.9999694824219,
+                    79.99999237060547
+                ],
+                [
+                    381.9999694824219,
+                    95.99999237060547
+                ],
+                [
+                    320.9999694824219,
+                    95.99999237060547
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 8 - COLLECTIVE BARGAINING PROCEDURE",
+            "block_bbox": [
+                400,
+                141,
+                795,
+                160
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    400.0,
+                    141.0
+                ],
+                [
+                    794.0,
+                    141.0
+                ],
+                [
+                    794.0,
+                    159.0
+                ],
+                [
+                    400.0,
+                    159.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1 Collective bargaining shall be conducted by the duly authorized bargaining representatives of the Company and the duly authorized bargaining representatives of the National or Local, as the case may be. The parties to such bargaining shall notify each other of the names of such representatives and of any subsequent changes which may occur.",
+            "block_bbox": [
+                321,
+                174,
+                876,
+                262
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    174.0
+                ],
+                [
+                    876.0,
+                    174.0
+                ],
+                [
+                    876.0,
+                    262.0
+                ],
+                [
+                    321.0,
+                    262.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2 Meetings for the purpose of collective bargaining shall be held upon request of either of the parties to such bargaining. The party requesting the meeting shall furnish the other in advance of the meeting with a notice of the subjects to be considered, except in those instances where the urgency of the case precludes such advance notification.",
+            "block_bbox": [
+                320,
+                268,
+                876,
+                356
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    320.0,
+                    268.0
+                ],
+                [
+                    876.0,
+                    268.0
+                ],
+                [
+                    876.0,
+                    356.0
+                ],
+                [
+                    320.0,
+                    356.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3 It is the intention of the parties, with respect to the collective bargaining of future replacing contracts, to conduct their negotiations thereon in such a manner as to reach a new agreement on or before the termination date of this present contract.",
+            "block_bbox": [
+                321,
+                360,
+                876,
+                433
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    321.0,
+                    360.0
+                ],
+                [
+                    876.0,
+                    360.0
+                ],
+                [
+                    876.0,
+                    433.0
+                ],
+                [
+                    321.0,
+                    433.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "18",
+            "block_bbox": [
+                323,
+                904,
+                343,
+                922
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    323.0,
+                    904.0
+                ],
+                [
+                    342.0,
+                    904.0
+                ],
+                [
+                    342.0,
+                    921.0
+                ],
+                [
+                    323.0,
+                    921.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7706429362297058,
+                "coordinate": [
+                    321,
+                    80,
+                    383,
+                    97
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        320.9999694824219,
+                        79.99999237060547
+                    ],
+                    [
+                        381.9999694824219,
+                        79.99999237060547
+                    ],
+                    [
+                        381.9999694824219,
+                        95.99999237060547
+                    ],
+                    [
+                        320.9999694824219,
+                        95.99999237060547
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8209845423698425,
+                "coordinate": [
+                    400,
+                    141,
+                    795,
+                    160
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        400.0,
+                        141.0
+                    ],
+                    [
+                        794.0,
+                        141.0
+                    ],
+                    [
+                        794.0,
+                        159.0
+                    ],
+                    [
+                        400.0,
+                        159.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9412478804588318,
+                "coordinate": [
+                    321,
+                    174,
+                    876,
+                    262
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        321.0,
+                        174.0
+                    ],
+                    [
+                        876.0,
+                        174.0
+                    ],
+                    [
+                        876.0,
+                        262.0
+                    ],
+                    [
+                        321.0,
+                        262.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9388660788536072,
+                "coordinate": [
+                    320,
+                    268,
+                    876,
+                    356
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        320.0,
+                        268.0
+                    ],
+                    [
+                        876.0,
+                        268.0
+                    ],
+                    [
+                        876.0,
+                        356.0
+                    ],
+                    [
+                        320.0,
+                        356.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9224137663841248,
+                "coordinate": [
+                    321,
+                    360,
+                    876,
+                    433
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        321.0,
+                        360.0
+                    ],
+                    [
+                        876.0,
+                        360.0
+                    ],
+                    [
+                        876.0,
+                        433.0
+                    ],
+                    [
+                        321.0,
+                        433.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6586092114448547,
+                "coordinate": [
+                    323,
+                    904,
+                    343,
+                    922
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        323.0,
+                        904.0
+                    ],
+                    [
+                        342.0,
+                        904.0
+                    ],
+                    [
+                        342.0,
+                        921.0
+                    ],
+                    [
+                        323.0,
+                        921.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

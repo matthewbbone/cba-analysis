@@ -1,0 +1,705 @@
+{
+    "input_path": "cache/cornell_dol/K830313_08_07combined.pdf",
+    "page_index": 93,
+    "page_count": 139,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Jeffco Schools: JCEA Negotiated Agreement",
+            "block_bbox": [
+                34,
+                27,
+                476,
+                54
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    34.0,
+                    27.0
+                ],
+                [
+                    476.0,
+                    27.0
+                ],
+                [
+                    476.0,
+                    54.0
+                ],
+                [
+                    34.0,
+                    54.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 1 of 1",
+            "block_bbox": [
+                1076,
+                27,
+                1191,
+                54
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    1076.0,
+                    27.0
+                ],
+                [
+                    1191.0,
+                    27.0
+                ],
+                [
+                    1191.0,
+                    54.0
+                ],
+                [
+                    1076.0,
+                    54.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 36",
+            "block_bbox": [
+                34,
+                66,
+                213,
+                96
+            ],
+            "block_id": 2,
+            "block_order": 1,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    34.0,
+                    66.0
+                ],
+                [
+                    213.0,
+                    66.0
+                ],
+                [
+                    213.0,
+                    96.0
+                ],
+                [
+                    34.0,
+                    96.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Association President",
+            "block_bbox": [
+                34,
+                124,
+                230,
+                147
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    34.0,
+                    124.0
+                ],
+                [
+                    230.0,
+                    124.0
+                ],
+                [
+                    230.0,
+                    147.0
+                ],
+                [
+                    34.0,
+                    147.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "36-1 The Board shall release the president of the Association from his/her assignment during the term of office. The amount of release time shall be determined annually, and the Association shall reimburse the District for the president's salary and benefits in proportion to the amount of release time.",
+            "block_bbox": [
+                33,
+                171,
+                1192,
+                237
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    33.0,
+                    171.0
+                ],
+                [
+                    1192.0,
+                    171.0
+                ],
+                [
+                    1192.0,
+                    237.0
+                ],
+                [
+                    33.0,
+                    237.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "36-2 The president of the Association has the right to visit schools. He/She shall coordinate his/her visit(s) with the principal, or his/her designee, in order to facilitate the purpose of his/her visit. Visits that are made to solve special problems of teachers shall be arranged for in advance by notifying the principal, or his/her office.",
+            "block_bbox": [
+                33,
+                261,
+                1191,
+                328
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    33.0,
+                    261.0
+                ],
+                [
+                    1191.0,
+                    261.0
+                ],
+                [
+                    1191.0,
+                    328.0
+                ],
+                [
+                    33.0,
+                    328.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "36-3 Upon completion of one (1) two-year presidential term, the teacher can be returned to his/her former position, if available, or a comparable position at the same school. Upon re-election to a second two-year term, the Association president shall relinquish his/her former position. At the end of a second term, JCEA and the District shall work together to find a mutually agreeable position.",
+            "block_bbox": [
+                32,
+                350,
+                1192,
+                416
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    32.0,
+                    350.0
+                ],
+                [
+                    1192.0,
+                    350.0
+                ],
+                [
+                    1192.0,
+                    416.0
+                ],
+                [
+                    32.0,
+                    416.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Jefferson County Public Schools\nJefferson County, Colorado",
+            "block_bbox": [
+                468,
+                462,
+                758,
+                507
+            ],
+            "block_id": 7,
+            "block_order": 6,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    468.0,
+                    462.0
+                ],
+                [
+                    758.0,
+                    462.0
+                ],
+                [
+                    758.0,
+                    507.0
+                ],
+                [
+                    468.0,
+                    507.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Jeffco Schools Home",
+            "block_bbox": [
+                544,
+                526,
+                682,
+                599
+            ],
+            "block_id": 8,
+            "block_order": 7,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    544.0,
+                    526.0
+                ],
+                [
+                    682.0,
+                    526.0
+                ],
+                [
+                    682.0,
+                    599.0
+                ],
+                [
+                    544.0,
+                    599.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "http://jeffcoweb.jeffco.k12.co.us/emprelations/jcea/article_36.html",
+            "block_bbox": [
+                36,
+                1539,
+                684,
+                1569
+            ],
+            "block_id": 9,
+            "block_order": null,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    1539.0
+                ],
+                [
+                    684.0,
+                    1539.0
+                ],
+                [
+                    684.0,
+                    1569.0
+                ],
+                [
+                    36.0,
+                    1569.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "2/5/04",
+            "block_bbox": [
+                1124,
+                1540,
+                1191,
+                1566
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    1124.0,
+                    1540.0
+                ],
+                [
+                    1190.0,
+                    1540.0
+                ],
+                [
+                    1190.0,
+                    1565.0
+                ],
+                [
+                    1124.0,
+                    1565.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8422281742095947,
+                "coordinate": [
+                    34,
+                    27,
+                    476,
+                    54
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        34.0,
+                        27.0
+                    ],
+                    [
+                        476.0,
+                        27.0
+                    ],
+                    [
+                        476.0,
+                        54.0
+                    ],
+                    [
+                        34.0,
+                        54.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.820111095905304,
+                "coordinate": [
+                    1076,
+                    27,
+                    1191,
+                    54
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        1076.0,
+                        27.0
+                    ],
+                    [
+                        1191.0,
+                        27.0
+                    ],
+                    [
+                        1191.0,
+                        54.0
+                    ],
+                    [
+                        1076.0,
+                        54.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6667311787605286,
+                "coordinate": [
+                    34,
+                    66,
+                    213,
+                    96
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        34.0,
+                        66.0
+                    ],
+                    [
+                        213.0,
+                        66.0
+                    ],
+                    [
+                        213.0,
+                        96.0
+                    ],
+                    [
+                        34.0,
+                        96.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8516709804534912,
+                "coordinate": [
+                    34,
+                    124,
+                    230,
+                    147
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        34.0,
+                        124.0
+                    ],
+                    [
+                        230.0,
+                        124.0
+                    ],
+                    [
+                        230.0,
+                        147.0
+                    ],
+                    [
+                        34.0,
+                        147.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9189926385879517,
+                "coordinate": [
+                    33,
+                    171,
+                    1192,
+                    237
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        33.0,
+                        171.0
+                    ],
+                    [
+                        1192.0,
+                        171.0
+                    ],
+                    [
+                        1192.0,
+                        237.0
+                    ],
+                    [
+                        33.0,
+                        237.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9216548800468445,
+                "coordinate": [
+                    33,
+                    261,
+                    1191,
+                    328
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        33.0,
+                        261.0
+                    ],
+                    [
+                        1191.0,
+                        261.0
+                    ],
+                    [
+                        1191.0,
+                        328.0
+                    ],
+                    [
+                        33.0,
+                        328.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9242225289344788,
+                "coordinate": [
+                    32,
+                    350,
+                    1192,
+                    416
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        32.0,
+                        350.0
+                    ],
+                    [
+                        1192.0,
+                        350.0
+                    ],
+                    [
+                        1192.0,
+                        416.0
+                    ],
+                    [
+                        32.0,
+                        416.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8714343905448914,
+                "coordinate": [
+                    468,
+                    462,
+                    758,
+                    507
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        468.0,
+                        462.0
+                    ],
+                    [
+                        758.0,
+                        462.0
+                    ],
+                    [
+                        758.0,
+                        507.0
+                    ],
+                    [
+                        468.0,
+                        507.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5937504768371582,
+                "coordinate": [
+                    544,
+                    526,
+                    682,
+                    599
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        544.0,
+                        526.0
+                    ],
+                    [
+                        682.0,
+                        526.0
+                    ],
+                    [
+                        682.0,
+                        599.0
+                    ],
+                    [
+                        544.0,
+                        599.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8254154324531555,
+                "coordinate": [
+                    36,
+                    1539,
+                    684,
+                    1569
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        36.0,
+                        1539.0
+                    ],
+                    [
+                        684.0,
+                        1539.0
+                    ],
+                    [
+                        684.0,
+                        1569.0
+                    ],
+                    [
+                        36.0,
+                        1569.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.7092054486274719,
+                "coordinate": [
+                    1124,
+                    1540,
+                    1191,
+                    1566
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1124.0,
+                        1540.0
+                    ],
+                    [
+                        1190.0,
+                        1540.0
+                    ],
+                    [
+                        1190.0,
+                        1565.0
+                    ],
+                    [
+                        1124.0,
+                        1565.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

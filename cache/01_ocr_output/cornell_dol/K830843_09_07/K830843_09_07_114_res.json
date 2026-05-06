@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 114,
+    "page_count": 206,
+    "width": 2016,
+    "height": 1224,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "APPENDIX A",
+            "block_bbox": [
+                935,
+                117,
+                1092,
+                144
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    935.0,
+                    117.0
+                ],
+                [
+                    1092.0,
+                    117.0
+                ],
+                [
+                    1092.0,
+                    144.0
+                ],
+                [
+                    935.0,
+                    144.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>LINK CODE</td><td>TITLE CODE</td><td>TITLE NAME</td><td>MONTHLY MINIMUM RATE</td><td>HOURLY MINIMUM RATE</td><td>MONTHLY MIDPOINT RATE</td><td>HOURLY MIDPOINT RATE</td><td>MONTHLY MAXIMUM RATE</td><td>HOURLY MAXIMUM RATE</td><td>SHIFT DIFFERENTIAL EVE</td><td>NIGHT</td><td>WKEND</td><td>1</td></tr><tr><td colspan=\"13\">Los Angeles - cont.</td></tr><tr><td colspan=\"13\">Date: January and February 2004</td></tr><tr><td>014</td><td>8968</td><td>TECHNOLOGIST,U/S,SR,PER DIEM</td><td></td><td>$35.19</td><td></td><td></td><td></td><td></td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>8990</td><td>TECHNOLOGIST RADIOLOGIC SR PD</td><td></td><td>$30.00</td><td></td><td></td><td></td><td></td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9007</td><td>DOSIMETRIST, SR</td><td>$6,522</td><td>$37.48</td><td>$7,499</td><td>$43.10</td><td>$8,479</td><td>$48.73</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9008</td><td>DOSIMETRIST</td><td>$5,671</td><td>$32.59</td><td>$6,522</td><td>$37.48</td><td>$7,726</td><td>$44.40</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9011</td><td>TECHNOLOGIST,RAD THPY,ASSO,CHI</td><td>$5,792</td><td>$33.29</td><td>$6,951</td><td>$39.95</td><td>$8,110</td><td>$46.61</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9012</td><td>TECHNOLOGIST,RAD THPY, SR</td><td>$5,624</td><td>$32.32</td><td>$6,749</td><td>$38.79</td><td>$7,874</td><td>$45.25</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9013</td><td>TECHNOLOGIST,RADIATION THPY</td><td>$5,241</td><td>$30.12</td><td>$6,288</td><td>$36.14</td><td>$7,338</td><td>$42.17</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9014</td><td>TECHNOLOGIST,RAD THPY,TRAINEE</td><td></td><td>$19.98</td><td></td><td></td><td></td><td></td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td></td></tr><tr><td>014</td><td>9015</td><td>TECHNOLOGIST,RAD, THPY,PER DIEM</td><td></td><td>$52.00</td><td></td><td>$58.50</td><td></td><td>$65.00</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9016</td><td>TECHNO, RAD, LEAD PRIN</td><td>$4,547</td><td>$26.13</td><td>$5,331</td><td>$30.64</td><td>$6,116</td><td>$35.15</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9021</td><td>TECHNOLOGIST,RADIOLOGIC,PRIN</td><td>$4,206</td><td>$24.17</td><td>$4,931</td><td>$28.34</td><td>$5,657</td><td>$32.51</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9022</td><td>TECHNOLOGIST, RADIOLOGIC, SR</td><td>$4,181</td><td>$24.03</td><td>$4,902</td><td>$28.17</td><td>$5,624</td><td>$32.32</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9023</td><td>TECHNOLOGIST,RADIOLOGIC</td><td>$3,898</td><td>$22.40</td><td>$4,569</td><td>$26.26</td><td>$5,243</td><td>$30.13</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9024</td><td>TECHNOLOGIST,RADIOLOG,TRAINEE</td><td></td><td>$17.00</td><td></td><td></td><td></td><td></td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td></td></tr><tr><td>014</td><td>9025</td><td>TECHNOLOGIST,RADIOLOG,PER DIEM</td><td></td><td>$28.00</td><td></td><td>$29.00</td><td></td><td>$30.00</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9026</td><td>TECHNOLOGIST,RAD,PRIN,PER DIEM</td><td></td><td>$35.19</td><td></td><td></td><td></td><td></td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9079</td><td>TECHNOLOGIST, MRI, SENIOR</td><td>$4,959</td><td>$28.50</td><td>$5,815</td><td>$33.42</td><td>$6,669</td><td>$38.33</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9083</td><td>LEAD MRI TECHNOLOGIST</td><td>$5,481</td><td>$31.50</td><td>$6,426</td><td>$36.93</td><td>$7,372</td><td>$42.37</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9084</td><td>TECHNOLOGIST, MRI, PER DIEM</td><td></td><td>$35.19</td><td></td><td></td><td></td><td></td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9085</td><td>TECHNOLOGIST, MRI</td><td>$4,724</td><td>$27.15</td><td>$5,538</td><td>$31.83</td><td>$6,353</td><td>$36.51</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9086</td><td>TECHNOLOGIST, CT</td><td>$4,724</td><td>$27.15</td><td>$5,538</td><td>$31.83</td><td>$6,353</td><td>$36.51</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9087</td><td>TECHNOLOGIST, CT, PER DIEM</td><td></td><td>$35.19</td><td></td><td></td><td></td><td></td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9088</td><td>TECHNOLOGIST, CT, LEAD</td><td>$5,481</td><td>$31.50</td><td>$6,426</td><td>$36.93</td><td>$7,372</td><td>$42.37</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9089</td><td>MAMMOGRAPHY TECHNOLOGIST</td><td>$4,500</td><td>$25.86</td><td>$5,276</td><td>$30.32</td><td>$6,052</td><td>$34.78</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9102</td><td>TECHNOLOGIST, CT, SENIOR</td><td>$4,959</td><td>$28.50</td><td>$5,815</td><td>$33.42</td><td>$6,669</td><td>$38.33</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9106</td><td>TECHNOLOGIST, ULTRASOUND PD</td><td></td><td>$30.00</td><td></td><td></td><td></td><td></td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>014</td><td>9107</td><td>TECHNOLOGIST, CATH LAB RAD</td><td>$4,524</td><td>$26.00</td><td>$5,417</td><td>$31.13</td><td>$6,308</td><td>$36.25</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>015</td><td>9048</td><td>THERAPIST, RESPIRATORY, II</td><td>$3,849</td><td>$22.12</td><td>$4,811</td><td>$27.65</td><td>$5,773</td><td>$33.18</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>015</td><td>9049</td><td>THERAPIST, RESPIRATORY, REG, I</td><td>$3,503</td><td>$20.13</td><td>$4,380</td><td>$25.17</td><td>$5,255</td><td>$30.20</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr><tr><td>015</td><td>9050</td><td>THERAPIST, RESPIRATORY, I</td><td>$3,346</td><td>$19.23</td><td>$4,183</td><td>$24.04</td><td>$5,020</td><td>$28.85</td><td>$1.35</td><td>$2.25</td><td>$0.60</td><td>$8.00</td></tr></table>",
+            "block_bbox": [
+                68,
+                173,
+                1576,
+                1095
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    68.0,
+                    173.0
+                ],
+                [
+                    1576.0,
+                    173.0
+                ],
+                [
+                    1576.0,
+                    1095.0
+                ],
+                [
+                    68.0,
+                    1095.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "112",
+            "block_bbox": [
+                633,
+                1154,
+                683,
+                1178
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    633.0,
+                    1154.0
+                ],
+                [
+                    682.0,
+                    1154.0
+                ],
+                [
+                    682.0,
+                    1177.0
+                ],
+                [
+                    633.0,
+                    1177.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.5894447565078735,
+                "coordinate": [
+                    935,
+                    117,
+                    1092,
+                    144
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        935.0,
+                        117.0
+                    ],
+                    [
+                        1092.0,
+                        117.0
+                    ],
+                    [
+                        1092.0,
+                        144.0
+                    ],
+                    [
+                        935.0,
+                        144.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9226869940757751,
+                "coordinate": [
+                    68,
+                    173,
+                    1576,
+                    1095
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        68.0,
+                        173.0
+                    ],
+                    [
+                        1576.0,
+                        173.0
+                    ],
+                    [
+                        1576.0,
+                        1095.0
+                    ],
+                    [
+                        68.0,
+                        1095.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7484161853790283,
+                "coordinate": [
+                    633,
+                    1154,
+                    683,
+                    1178
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        633.0,
+                        1154.0
+                    ],
+                    [
+                        682.0,
+                        1154.0
+                    ],
+                    [
+                        682.0,
+                        1177.0
+                    ],
+                    [
+                        633.0,
+                        1177.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

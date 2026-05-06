@@ -1,0 +1,521 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 212,
+    "page_count": 287,
+    "width": 675,
+    "height": 1016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "CLASSIFICATIONS",
+            "block_bbox": [
+                52,
+                54,
+                163,
+                70
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    52.0,
+                    54.0
+                ],
+                [
+                    161.99998474121094,
+                    54.0
+                ],
+                [
+                    161.99998474121094,
+                    69.0
+                ],
+                [
+                    52.0,
+                    69.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Incentive Program Opportunities\nNegotiated For 1998 Local #80 Contract",
+            "block_bbox": [
+                166,
+                82,
+                519,
+                134
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    166.0,
+                    82.0
+                ],
+                [
+                    519.0,
+                    82.0
+                ],
+                [
+                    519.0,
+                    134.0
+                ],
+                [
+                    166.0,
+                    134.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "On April 17, 1997, the parties executed an agreement as an addendum to the Collective Bargaining Agreement, dated December 4, 1994, with respect to the wages and working conditions of the Service Consumption Technician classification within the Meter Reading Department. That agreement became effective on April 17, 1997. By way of further clarification of the agreement, which we mutually deem appropriate, I have set out the following understanding: A New Pay Incentive Program. The Union agrees that the $1,000 lump sum payment given on January 15, 1998, and a $750 lump sum payment given on December 6, 1998, to the Service Consumption Technicians is a result of 1997 contract negotiations with Local #80. The guaranteed lump sums incentive of $1,000 will be paid to all Service Consumption Technicians on the payroll as of October 1, 1997. The $750 will be paid out to all Service Consumption Technicians on the payroll December 6, 1998. This agreement is in consideration of Letter of Agreement Meter Reading Department (G)(4).",
+            "block_bbox": [
+                48,
+                151,
+                634,
+                461
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    48.0,
+                    151.0
+                ],
+                [
+                    634.0,
+                    151.0
+                ],
+                [
+                    634.0,
+                    461.0
+                ],
+                [
+                    48.0,
+                    461.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "This Agreement does not preclude the Union from working with Management to identify and/or implement any additional departmental level incentive programs.",
+            "block_bbox": [
+                51,
+                474,
+                633,
+                520
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    51.0,
+                    474.0
+                ],
+                [
+                    633.0,
+                    474.0
+                ],
+                [
+                    633.0,
+                    520.0
+                ],
+                [
+                    51.0,
+                    520.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Effective December 3, 2000, the parties reached agreement on a Department Incentive Program. The terms and conditions of said program are as follows:",
+            "block_bbox": [
+                51,
+                532,
+                633,
+                599
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    51.0,
+                    532.0
+                ],
+                [
+                    633.0,
+                    532.0
+                ],
+                [
+                    633.0,
+                    599.0
+                ],
+                [
+                    51.0,
+                    599.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td colspan=\"3\">ESTIMATED INCENTIVE PAYOUT</td></tr><tr><td></td><td colspan=\"2\">Average Productivity - Entire Detroit District (Reads/Day) Per Quarter</td></tr><tr><td></td><td>600</td><td>625</td></tr><tr><td>Employee Pay Category - Quarterly Payout:</td><td></td><td></td></tr><tr><td>$10.00 Per Hour</td><td>$159</td><td>$263</td></tr><tr><td>$13.00 Per Hour</td><td>$206</td><td>$341</td></tr><tr><td>$19.34 Per Hour</td><td>$306</td><td>$508</td></tr><tr><td>Employee Pay Category - Annual Payout:</td><td></td><td></td></tr><tr><td>$10.00 Per Hour</td><td>$635</td><td>$1,050</td></tr><tr><td>$13.00 Per Hour</td><td>$825</td><td>$1,365</td></tr><tr><td>$19.34 Per Hour</td><td>$1,225</td><td>$2,030</td></tr></table>",
+            "block_bbox": [
+                52,
+                608,
+                630,
+                933
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    52.0,
+                    608.0
+                ],
+                [
+                    630.0,
+                    608.0
+                ],
+                [
+                    630.0,
+                    933.0
+                ],
+                [
+                    52.0,
+                    933.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "202",
+            "block_bbox": [
+                326,
+                946,
+                355,
+                962
+            ],
+            "block_id": 6,
+            "block_order": null,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    326.0,
+                    946.0
+                ],
+                [
+                    354.0,
+                    946.0
+                ],
+                [
+                    354.0,
+                    961.0
+                ],
+                [
+                    326.0,
+                    961.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8107694387435913,
+                "coordinate": [
+                    52,
+                    54,
+                    163,
+                    70
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        52.0,
+                        54.0
+                    ],
+                    [
+                        161.99998474121094,
+                        54.0
+                    ],
+                    [
+                        161.99998474121094,
+                        69.0
+                    ],
+                    [
+                        52.0,
+                        69.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6026519536972046,
+                "coordinate": [
+                    166,
+                    82,
+                    519,
+                    134
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        166.0,
+                        82.0
+                    ],
+                    [
+                        519.0,
+                        82.0
+                    ],
+                    [
+                        519.0,
+                        134.0
+                    ],
+                    [
+                        166.0,
+                        134.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.49498623609542847,
+                "coordinate": [
+                    51,
+                    151,
+                    122,
+                    172
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        51.0,
+                        151.0
+                    ],
+                    [
+                        121.0,
+                        151.0
+                    ],
+                    [
+                        121.0,
+                        171.0
+                    ],
+                    [
+                        51.0,
+                        171.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7845166325569153,
+                "coordinate": [
+                    48,
+                    151,
+                    634,
+                    461
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        48.0,
+                        151.0
+                    ],
+                    [
+                        634.0,
+                        151.0
+                    ],
+                    [
+                        634.0,
+                        461.0
+                    ],
+                    [
+                        48.0,
+                        461.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9063138365745544,
+                "coordinate": [
+                    51,
+                    474,
+                    633,
+                    520
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        51.0,
+                        474.0
+                    ],
+                    [
+                        633.0,
+                        474.0
+                    ],
+                    [
+                        633.0,
+                        520.0
+                    ],
+                    [
+                        51.0,
+                        520.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8060662150382996,
+                "coordinate": [
+                    51,
+                    532,
+                    633,
+                    599
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        51.0,
+                        532.0
+                    ],
+                    [
+                        633.0,
+                        532.0
+                    ],
+                    [
+                        633.0,
+                        599.0
+                    ],
+                    [
+                        51.0,
+                        599.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.33788803219795227,
+                "coordinate": [
+                    174,
+                    613,
+                    507,
+                    637
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        177.99996948242188,
+                        612.9999389648438
+                    ],
+                    [
+                        505.9999084472656,
+                        612.9999389648438
+                    ],
+                    [
+                        505.9999084472656,
+                        635.9999389648438
+                    ],
+                    [
+                        177.99996948242188,
+                        635.9999389648438
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9269556999206543,
+                "coordinate": [
+                    52,
+                    608,
+                    630,
+                    933
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        52.0,
+                        608.0
+                    ],
+                    [
+                        630.0,
+                        608.0
+                    ],
+                    [
+                        630.0,
+                        933.0
+                    ],
+                    [
+                        52.0,
+                        933.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7665969729423523,
+                "coordinate": [
+                    326,
+                    946,
+                    355,
+                    962
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        326.0,
+                        946.0
+                    ],
+                    [
+                        354.0,
+                        946.0
+                    ],
+                    [
+                        354.0,
+                        961.0
+                    ],
+                    [
+                        326.0,
+                        961.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

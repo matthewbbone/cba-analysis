@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 75,
+    "page_count": 189,
+    "width": 1225,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Section 5. SELECTION OF EMPLOYEES AND WAGE STRUCTURES",
+            "block_bbox": [
+                147,
+                138,
+                943,
+                167
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    147.0,
+                    138.0
+                ],
+                [
+                    943.0,
+                    138.0
+                ],
+                [
+                    943.0,
+                    167.0
+                ],
+                [
+                    147.0,
+                    167.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Employees shall be considered for promotions, demotions, transfers and reductions in force based upon the seniority provisions and other relevant sections outlined in the Labor Agreement. Wage structures will not be a factor in selecting employees for promotions, demotions, transfers and reductions in force.",
+            "block_bbox": [
+                254,
+                194,
+                1086,
+                336
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    254.0,
+                    194.0
+                ],
+                [
+                    1086.0,
+                    194.0
+                ],
+                [
+                    1086.0,
+                    336.0
+                ],
+                [
+                    254.0,
+                    336.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "75",
+            "block_bbox": [
+                602,
+                1452,
+                632,
+                1478
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    602.0,
+                    1452.0
+                ],
+                [
+                    631.0,
+                    1452.0
+                ],
+                [
+                    631.0,
+                    1477.0
+                ],
+                [
+                    602.0,
+                    1477.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8349577784538269,
+                "coordinate": [
+                    147,
+                    138,
+                    943,
+                    167
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        147.0,
+                        138.0
+                    ],
+                    [
+                        943.0,
+                        138.0
+                    ],
+                    [
+                        943.0,
+                        167.0
+                    ],
+                    [
+                        147.0,
+                        167.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9332469701766968,
+                "coordinate": [
+                    254,
+                    194,
+                    1086,
+                    336
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        254.0,
+                        194.0
+                    ],
+                    [
+                        1086.0,
+                        194.0
+                    ],
+                    [
+                        1086.0,
+                        336.0
+                    ],
+                    [
+                        254.0,
+                        336.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7151963114738464,
+                "coordinate": [
+                    602,
+                    1452,
+                    632,
+                    1478
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        602.0,
+                        1452.0
+                    ],
+                    [
+                        631.0,
+                        1452.0
+                    ],
+                    [
+                        631.0,
+                        1477.0
+                    ],
+                    [
+                        602.0,
+                        1477.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

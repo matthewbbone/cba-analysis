@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 117,
+    "page_count": 206,
+    "width": 2016,
+    "height": 1224,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "APPENDIX A",
+            "block_bbox": [
+                935,
+                117,
+                1092,
+                144
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    935.0,
+                    117.0
+                ],
+                [
+                    1092.0,
+                    117.0
+                ],
+                [
+                    1092.0,
+                    144.0
+                ],
+                [
+                    935.0,
+                    144.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>LINK</td><td colspan=\"3\">TITLE</td><td colspan=\"2\">MONTHLY</td><td colspan=\"2\">HOURLY</td><td colspan=\"2\">MONTHLY</td><td colspan=\"6\">HOURLY</td></tr><tr><td rowspan=\"2\">CODE</td><td rowspan=\"2\">CODE</td><td colspan=\"2\">TITLE NAME</td><td colspan=\"2\">MINIMUM</td><td colspan=\"2\">MINIMUM</td><td colspan=\"2\">MIDPOINT</td><td colspan=\"2\">MAXIMUM</td><td colspan=\"2\">MAXIMUM</td><td colspan=\"2\">SHIFT DIFFERENTIAL</td></tr><tr><td colspan=\"2\"></td><td>RATE</td><td>RATE</td><td>RATE</td><td>RATE</td><td>RATE</td><td>RATE</td><td>RATE</td><td>EVE</td><td>NIGHT</td><td>WKEND</td><td>1</td><td></td></tr><tr><td colspan=\"16\">CAMPUS - Los Angeles - cont.</td></tr><tr><td colspan=\"16\">Date - January and February 2004</td></tr><tr><td>019</td><td>9072</td><td colspan=\"2\">RADIATION EQUIP SPECIALIST, SR</td><td>$4,164</td><td>$23.93</td><td>$4,997</td><td>$28.72</td><td>$5,829</td><td>$33.50</td><td>$1.10</td><td>$1.75</td><td>$0.60</td><td></td><td></td><td></td></tr><tr><td>019</td><td>9073</td><td colspan=\"2\">RADIATION EQUIP SPECIALIST</td><td>$3,623</td><td>$20.82</td><td>$4,347</td><td>$24.98</td><td>$5,072</td><td>$29.15</td><td>$1.10</td><td>$1.75</td><td>$0.60</td><td></td><td></td><td></td></tr><tr><td>020</td><td>5418</td><td colspan=\"2\">TECH, REGISTERED DIETETIC, PD</td><td></td><td>$16.95</td><td></td><td></td><td></td><td></td><td>$0.85</td><td>$1.25</td><td>$0.60</td><td></td><td></td><td></td></tr><tr><td>020</td><td>5419</td><td colspan=\"2\">DIETETIC TECH, REGISTERED</td><td>$2,132</td><td>$12.25</td><td>$2,558</td><td>$14.70</td><td>$2,984</td><td>$17.15</td><td>$0.85</td><td>$1.25</td><td>$0.60</td><td></td><td></td><td></td></tr><tr><td>020</td><td>5430</td><td colspan=\"2\">DIETETIC ASSISTANT</td><td>$1,931</td><td>$11.10</td><td>$2,318</td><td>$13.32</td><td>$2,704</td><td>$15.54</td><td>$0.85</td><td>$1.25</td><td>$0.60</td><td></td><td></td><td></td></tr><tr><td>033</td><td>8944</td><td colspan=\"2\">PHYSICAL THERAPY ASSISTANT III</td><td>$3,423</td><td>$19.67</td><td>$4,106</td><td>$23.60</td><td>$4,792</td><td>$27.54</td><td>$0.85</td><td>$1.25</td><td>$0.60</td><td>$3.95</td><td></td><td></td></tr><tr><td>033</td><td>8945</td><td colspan=\"2\">PHYSICAL THERAPY ASSISTANT II</td><td>$3,132</td><td>$18.00</td><td>$3,758</td><td>$21.60</td><td>$4,385</td><td>$25.20</td><td>$0.85</td><td>$1.25</td><td>$0.60</td><td>$3.95</td><td></td><td></td></tr><tr><td>033</td><td>8946</td><td colspan=\"2\">PHYSICAL THERAPY ASSISTANT I</td><td>$2,876</td><td>$16.53</td><td>$3,452</td><td>$19.84</td><td>$4,026</td><td>$23.14</td><td>$0.85</td><td>$1.25</td><td>$0.60</td><td>$3.95</td><td></td><td></td></tr><tr><td>033</td><td>8947</td><td colspan=\"2\">CERT OCCUP THERAPY ASST III</td><td>$3,423</td><td>$19.67</td><td>$4,106</td><td>$23.60</td><td>$4,792</td><td>$27.54</td><td>$0.85</td><td>$1.25</td><td>$0.60</td><td>$3.95</td><td></td><td></td></tr><tr><td>033</td><td>8948</td><td colspan=\"2\">CERT OCCUP THERAPY ASST II</td><td>$3,132</td><td>$18.00</td><td>$3,758</td><td>$21.60</td><td>$4,385</td><td>$25.20</td><td>$0.85</td><td>$1.25</td><td>$0.60</td><td>$3.95</td><td></td><td></td></tr><tr><td>033</td><td>8949</td><td colspan=\"2\">CERT OCCUP THERAPY ASST I</td><td>$2,876</td><td>$16.53</td><td>$3,452</td><td>$19.84</td><td>$4,026</td><td>$23.14</td><td>$0.85</td><td>$1.25</td><td>$0.60</td><td>$3.95</td><td></td><td></td></tr><tr><td>033</td><td>8951</td><td colspan=\"2\">PHYSICAL THERAPY ASST PD</td><td></td><td>$28.08</td><td></td><td></td><td></td><td></td><td>$0.85</td><td>$1.25</td><td>$0.60</td><td></td><td></td><td></td></tr><tr><td>033</td><td>8952</td><td colspan=\"2\">CERT OCCUP THERAPY ASST PD</td><td></td><td>$28.08</td><td></td><td></td><td></td><td></td><td>$0.85</td><td>$1.25</td><td>$0.60</td><td></td><td></td><td></td></tr><tr><td>034</td><td>8987</td><td colspan=\"2\">TECHNOLOGIST CYTOGENETIC II</td><td>$4,087</td><td>$23.49</td><td>$4,914</td><td>$28.24</td><td>$5,740</td><td>$32.99</td><td>$1.90</td><td>$2.80</td><td>$0.60</td><td>$5.05</td><td></td><td></td></tr><tr><td>034</td><td>8988</td><td colspan=\"2\">TECHNOLOGIST, CYTOGENETIC I</td><td>$3,725</td><td>$21.41</td><td>$4,470</td><td>$25.69</td><td>$5,215</td><td>$29.97</td><td>$1.90</td><td>$2.80</td><td>$0.60</td><td>$5.05</td><td></td><td></td></tr><tr><td>034</td><td>8989</td><td colspan=\"2\">TECHNOLOGIST, CYTO, TRAINEE</td><td>$3,090</td><td>$17.76</td><td>$3,710</td><td>$21.32</td><td>$4,327</td><td>$24.87</td><td>$1.90</td><td>$2.80</td><td>$0.60</td><td>$5.05</td><td></td><td></td></tr><tr><td>034</td><td>8996</td><td colspan=\"2\">TECHNOLOGIST, CYTOGENETIC, PD</td><td></td><td>$30.21</td><td></td><td></td><td></td><td></td><td>$1.90</td><td>$2.80</td><td>$0.60</td><td>$5.05</td><td></td><td></td></tr><tr><td>034</td><td>9057</td><td colspan=\"2\">HISTOTECHNOLOGIST, LEAD</td><td>$3,833</td><td>$22.03</td><td>$4,599</td><td>$26.43</td><td>$5,366</td><td>$30.84</td><td>$1.10</td><td>$1.75</td><td>$0.60</td><td>$8.00</td><td></td><td></td></tr><tr><td>034</td><td>9065</td><td colspan=\"2\">HISTOTECHNOLOGIST I</td><td>$3,033</td><td>$17.43</td><td>$3,640</td><td>$20.92</td><td>$4,246</td><td>$24.40</td><td>$1.10</td><td>$1.75</td><td>$0.60</td><td>$8.00</td><td></td><td></td></tr><tr><td>034</td><td>9066</td><td colspan=\"2\">HISTOTECHNOLOGIST II</td><td>$3,322</td><td>$19.09</td><td>$3,986</td><td>$22.91</td><td>$4,651</td><td>$26.73</td><td>$1.10</td><td>$1.75</td><td>$0.60</td><td>$8.00</td><td></td><td></td></tr><tr><td>034</td><td>9067</td><td colspan=\"2\">HISTOTECHNOLOGIST III</td><td>$3,651</td><td>$20.98</td><td>$4,381</td><td>$25.18</td><td>$5,110</td><td>$29.37</td><td>$1.10</td><td>$1.75</td><td>$0.60</td><td>$8.00</td><td></td><td></td></tr><tr><td colspan=\"16\">CAMPUS - Riverside</td></tr><tr><td colspan=\"16\">Date - September 1, 2004</td></tr><tr><td>011</td><td>8904</td><td colspan=\"2\">HOSPITAL ASST, SR</td><td>$1,820</td><td>$10.46</td><td>$2,168</td><td>$12.46</td><td>$2,514</td><td>$14.45</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>011</td><td>8905</td><td colspan=\"2\">HOSPITAL ASST</td><td>$1,694</td><td>$9.74</td><td>$2,017</td><td>$11.59</td><td>$2,341</td><td>$13.45</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>012</td><td>9190</td><td colspan=\"2\">DENTAL HYGIENIST</td><td>$4,450</td><td>$25.57</td><td>$5,551</td><td>$31.90</td><td>$6,650</td><td>$38.22</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>012</td><td>9196</td><td colspan=\"2\">DENTAL ASST, REGISTERED</td><td>$2,337</td><td>$13.43</td><td>$2,807</td><td>$16.13</td><td>$3,275</td><td>$18.82</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>012</td><td>9199</td><td colspan=\"2\">DENTAL ASST</td><td>$1,825</td><td>$10.49</td><td>$2,163</td><td>$12.43</td><td>$2,500</td><td>$14.37</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>014</td><td>9021</td><td colspan=\"2\">TECHNOLOGIST, RADIOLOGIC, PRIN</td><td>$3,567</td><td>$20.50</td><td>$4,246</td><td>$24.40</td><td>$4,926</td><td>$28.31</td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>",
+            "block_bbox": [
+                72,
+                172,
+                1566,
+                1112
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    72.0,
+                    172.0
+                ],
+                [
+                    1566.0,
+                    172.0
+                ],
+                [
+                    1566.0,
+                    1112.0
+                ],
+                [
+                    72.0,
+                    1112.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "115",
+            "block_bbox": [
+                633,
+                1155,
+                681,
+                1178
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    632.9999389648438,
+                    1154.9998779296875
+                ],
+                [
+                    679.9999389648438,
+                    1154.9998779296875
+                ],
+                [
+                    679.9999389648438,
+                    1176.9998779296875
+                ],
+                [
+                    632.9999389648438,
+                    1176.9998779296875
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.5310574769973755,
+                "coordinate": [
+                    935,
+                    117,
+                    1092,
+                    144
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        935.0,
+                        117.0
+                    ],
+                    [
+                        1092.0,
+                        117.0
+                    ],
+                    [
+                        1092.0,
+                        144.0
+                    ],
+                    [
+                        935.0,
+                        144.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.8951581716537476,
+                "coordinate": [
+                    72,
+                    172,
+                    1566,
+                    1112
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        72.0,
+                        172.0
+                    ],
+                    [
+                        1566.0,
+                        172.0
+                    ],
+                    [
+                        1566.0,
+                        1112.0
+                    ],
+                    [
+                        72.0,
+                        1112.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7265720367431641,
+                "coordinate": [
+                    633,
+                    1155,
+                    681,
+                    1178
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        632.9999389648438,
+                        1154.9998779296875
+                    ],
+                    [
+                        679.9999389648438,
+                        1154.9998779296875
+                    ],
+                    [
+                        679.9999389648438,
+                        1176.9998779296875
+                    ],
+                    [
+                        632.9999389648438,
+                        1176.9998779296875
+                    ]
+                ]
+            }
+        ]
+    }
+}

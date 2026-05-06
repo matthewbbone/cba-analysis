@@ -1,0 +1,1 @@
+NOTES AND MEMO

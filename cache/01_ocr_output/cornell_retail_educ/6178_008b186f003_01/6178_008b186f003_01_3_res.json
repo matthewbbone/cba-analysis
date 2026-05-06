@@ -1,0 +1,912 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b186f003_01.pdf",
+    "page_index": 3,
+    "page_count": 106,
+    "width": 562,
+    "height": 1036,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 1",
+            "block_bbox": [
+                225,
+                97,
+                310,
+                115
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    225.0,
+                    97.0
+                ],
+                [
+                    309.0,
+                    97.0
+                ],
+                [
+                    309.0,
+                    114.0
+                ],
+                [
+                    225.0,
+                    114.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "RECOGNITION",
+            "block_bbox": [
+                208,
+                121,
+                326,
+                140
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    208.0,
+                    121.0
+                ],
+                [
+                    325.0,
+                    121.0
+                ],
+                [
+                    325.0,
+                    139.0
+                ],
+                [
+                    208.0,
+                    139.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A. The Board hereby recognizes and acknowledges the Orange County Classroom Teachers Association, Inc., as the exclusive bargaining agent and agrees to negotiate with the Association's designated representative pursuant to the provisions of Part II, Chapter 447, Florida Statutes for all certified non-administrative personnel as defined herein, whether under contract or on Board-approved leave of absence.",
+            "block_bbox": [
+                40,
+                146,
+                497,
+                273
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    40.0,
+                    146.0
+                ],
+                [
+                    497.0,
+                    146.0
+                ],
+                [
+                    497.0,
+                    273.0
+                ],
+                [
+                    40.0,
+                    273.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "B. The Association acknowledges and recognizes the School Board of Orange County, Florida, as the duly elected representative of the people of Orange County, Florida, and agrees to negotiate with the Chief Executive Officer or his representative pursuant to the provisions of Part II, Chapter 447, Florida Statutes.",
+            "block_bbox": [
+                40,
+                272,
+                497,
+                362
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    40.0,
+                    272.0
+                ],
+                [
+                    497.0,
+                    272.0
+                ],
+                [
+                    497.0,
+                    362.0
+                ],
+                [
+                    40.0,
+                    362.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "C. The bargaining unit shall be defined as set forth by the Public Employees Relations Commission in Case Number 8H-RC-754-1039, Certificate Number 27, CERTIFICATION OF REPRESENTATION FOLLOWING ELECTION AND ORDER TO NEGOTIATE issued by the Florida Public Employees Relations Commission on the twenty-first day of May, 1975, to wit:",
+            "block_bbox": [
+                41,
+                362,
+                499,
+                469
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    41.0,
+                    362.0
+                ],
+                [
+                    499.0,
+                    362.0
+                ],
+                [
+                    499.0,
+                    469.0
+                ],
+                [
+                    41.0,
+                    469.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1. INCLUDED: All certified non-administrative personnel including the following: teachers, teachers-county-wide, teachers-exceptional, teachers-gifted, speech therapists, teachers-specific learning disabilities, teachers-adult full-time, guidance personnel, occupational specialists, teachers-adult basic education, librarians/media specialists, deans, department chairpersons, and compensatory education teachers.",
+            "block_bbox": [
+                66,
+                470,
+                500,
+                611
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    66.0,
+                    470.0
+                ],
+                [
+                    500.0,
+                    470.0
+                ],
+                [
+                    500.0,
+                    611.0
+                ],
+                [
+                    66.0,
+                    611.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. EXCLUDED: All other positions of the Orange County Public Schools are excluded.",
+            "block_bbox": [
+                67,
+                612,
+                499,
+                647
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    67.0,
+                    612.0
+                ],
+                [
+                    499.0,
+                    612.0
+                ],
+                [
+                    499.0,
+                    647.0
+                ],
+                [
+                    67.0,
+                    647.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3. This definition shall be subject to PERC clarification of job titles and new job titles within the bargaining unit.",
+            "block_bbox": [
+                68,
+                648,
+                500,
+                683
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    68.0,
+                    648.0
+                ],
+                [
+                    500.0,
+                    648.0
+                ],
+                [
+                    500.0,
+                    683.0
+                ],
+                [
+                    68.0,
+                    683.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "D. Unless otherwise specified, terms used in this Contract shall be as defined in the Glossary of Terms which is incorporated into, and hereby made a part of this Contract.",
+            "block_bbox": [
+                44,
+                683,
+                501,
+                736
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    44.0,
+                    683.0
+                ],
+                [
+                    501.0,
+                    683.0
+                ],
+                [
+                    501.0,
+                    736.0
+                ],
+                [
+                    44.0,
+                    736.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "E. Any official notice between the Association and the Board required under this Contract shall be made by U.S. Mail at the current address of the party to be notified or by hand delivery to a designated representative of the party. Any change of address shall be communicated in writing to the other party.",
+            "block_bbox": [
+                45,
+                736,
+                502,
+                826
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    45.0,
+                    736.0
+                ],
+                [
+                    502.0,
+                    736.0
+                ],
+                [
+                    502.0,
+                    826.0
+                ],
+                [
+                    45.0,
+                    826.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE II",
+            "block_bbox": [
+                229,
+                832,
+                319,
+                849
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    229.0,
+                    832.0
+                ],
+                [
+                    318.0,
+                    832.0
+                ],
+                [
+                    318.0,
+                    848.0
+                ],
+                [
+                    229.0,
+                    848.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "NEGOTIATIONS PROCEDURES",
+            "block_bbox": [
+                154,
+                854,
+                395,
+                873
+            ],
+            "block_id": 11,
+            "block_order": 12,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    154.0,
+                    854.0
+                ],
+                [
+                    394.0,
+                    854.0
+                ],
+                [
+                    394.0,
+                    872.0
+                ],
+                [
+                    154.0,
+                    872.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A. Except as stated below, both parties may select up to two (2) articles for negotiations each year of this agreement. Any items previously imposed by the Board, the calendar, salary and fringe benefits shall be automatically reopened each year. The parties agree to exchange these proposals by April 15 and to enter into negotiations by May 1,",
+            "block_bbox": [
+                47,
+                879,
+                504,
+                970
+            ],
+            "block_id": 12,
+            "block_order": 13,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    47.0,
+                    879.0
+                ],
+                [
+                    504.0,
+                    879.0
+                ],
+                [
+                    504.0,
+                    970.0
+                ],
+                [
+                    47.0,
+                    970.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "1",
+            "block_bbox": [
+                268,
+                992,
+                276,
+                1006
+            ],
+            "block_id": 13,
+            "block_order": null,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    268.0,
+                    992.0
+                ],
+                [
+                    268.0,
+                    998.0
+                ],
+                [
+                    270.0,
+                    998.0
+                ],
+                [
+                    271.0,
+                    999.0
+                ],
+                [
+                    271.0,
+                    1005.0
+                ],
+                [
+                    275.0,
+                    1005.0
+                ],
+                [
+                    275.0,
+                    992.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7190231084823608,
+                "coordinate": [
+                    225,
+                    97,
+                    310,
+                    115
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        225.0,
+                        97.0
+                    ],
+                    [
+                        309.0,
+                        97.0
+                    ],
+                    [
+                        309.0,
+                        114.0
+                    ],
+                    [
+                        225.0,
+                        114.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7407122254371643,
+                "coordinate": [
+                    208,
+                    121,
+                    326,
+                    140
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        208.0,
+                        121.0
+                    ],
+                    [
+                        325.0,
+                        121.0
+                    ],
+                    [
+                        325.0,
+                        139.0
+                    ],
+                    [
+                        208.0,
+                        139.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.954470694065094,
+                "coordinate": [
+                    40,
+                    146,
+                    497,
+                    273
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        40.0,
+                        146.0
+                    ],
+                    [
+                        497.0,
+                        146.0
+                    ],
+                    [
+                        497.0,
+                        273.0
+                    ],
+                    [
+                        40.0,
+                        273.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9452424645423889,
+                "coordinate": [
+                    40,
+                    272,
+                    497,
+                    362
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        40.0,
+                        272.0
+                    ],
+                    [
+                        497.0,
+                        272.0
+                    ],
+                    [
+                        497.0,
+                        362.0
+                    ],
+                    [
+                        40.0,
+                        362.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9524073600769043,
+                "coordinate": [
+                    41,
+                    362,
+                    499,
+                    469
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        41.0,
+                        362.0
+                    ],
+                    [
+                        499.0,
+                        362.0
+                    ],
+                    [
+                        499.0,
+                        469.0
+                    ],
+                    [
+                        41.0,
+                        469.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9539983868598938,
+                "coordinate": [
+                    66,
+                    470,
+                    500,
+                    611
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        66.0,
+                        470.0
+                    ],
+                    [
+                        500.0,
+                        470.0
+                    ],
+                    [
+                        500.0,
+                        611.0
+                    ],
+                    [
+                        66.0,
+                        611.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9178650975227356,
+                "coordinate": [
+                    67,
+                    612,
+                    499,
+                    647
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        67.0,
+                        612.0
+                    ],
+                    [
+                        499.0,
+                        612.0
+                    ],
+                    [
+                        499.0,
+                        647.0
+                    ],
+                    [
+                        67.0,
+                        647.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9139862656593323,
+                "coordinate": [
+                    68,
+                    648,
+                    500,
+                    683
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        68.0,
+                        648.0
+                    ],
+                    [
+                        500.0,
+                        648.0
+                    ],
+                    [
+                        500.0,
+                        683.0
+                    ],
+                    [
+                        68.0,
+                        683.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9415222406387329,
+                "coordinate": [
+                    44,
+                    683,
+                    501,
+                    736
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        44.0,
+                        683.0
+                    ],
+                    [
+                        501.0,
+                        683.0
+                    ],
+                    [
+                        501.0,
+                        736.0
+                    ],
+                    [
+                        44.0,
+                        736.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9562450647354126,
+                "coordinate": [
+                    45,
+                    736,
+                    502,
+                    826
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        45.0,
+                        736.0
+                    ],
+                    [
+                        502.0,
+                        736.0
+                    ],
+                    [
+                        502.0,
+                        826.0
+                    ],
+                    [
+                        45.0,
+                        826.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8061237335205078,
+                "coordinate": [
+                    229,
+                    832,
+                    319,
+                    849
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        229.0,
+                        832.0
+                    ],
+                    [
+                        318.0,
+                        832.0
+                    ],
+                    [
+                        318.0,
+                        848.0
+                    ],
+                    [
+                        229.0,
+                        848.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8233624696731567,
+                "coordinate": [
+                    154,
+                    854,
+                    395,
+                    873
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        154.0,
+                        854.0
+                    ],
+                    [
+                        394.0,
+                        854.0
+                    ],
+                    [
+                        394.0,
+                        872.0
+                    ],
+                    [
+                        154.0,
+                        872.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9490776658058167,
+                "coordinate": [
+                    47,
+                    879,
+                    504,
+                    970
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        47.0,
+                        879.0
+                    ],
+                    [
+                        504.0,
+                        879.0
+                    ],
+                    [
+                        504.0,
+                        970.0
+                    ],
+                    [
+                        47.0,
+                        970.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7110185623168945,
+                "coordinate": [
+                    268,
+                    992,
+                    276,
+                    1006
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        268.0,
+                        992.0
+                    ],
+                    [
+                        268.0,
+                        998.0
+                    ],
+                    [
+                        270.0,
+                        998.0
+                    ],
+                    [
+                        271.0,
+                        999.0
+                    ],
+                    [
+                        271.0,
+                        1005.0
+                    ],
+                    [
+                        275.0,
+                        1005.0
+                    ],
+                    [
+                        275.0,
+                        992.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

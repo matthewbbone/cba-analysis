@@ -1,0 +1,705 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 41,
+    "page_count": 287,
+    "width": 680,
+    "height": 1011,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Article V",
+            "block_bbox": [
+                550,
+                50,
+                623,
+                68
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    550.0,
+                    50.0
+                ],
+                [
+                    622.0,
+                    50.0
+                ],
+                [
+                    622.0,
+                    67.0
+                ],
+                [
+                    550.0,
+                    67.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(i) Unpaid sick family will be allowed for an absence required to take or accompany a member of the immediate family to or from medical treatment only when it is clearly shown that there were no other practical means available by which the family member could get the needed medical attention and not more than four (4) hours will be allowed to make alternate arrangements for the care of a member of the immediate family when such family member is so ill that the services of an attendant are required and only when it can be clearly shown that the services of the employee are required for such purposes; and",
+            "block_bbox": [
+                111,
+                80,
+                625,
+                301
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    111.0,
+                    80.0
+                ],
+                [
+                    625.0,
+                    80.0
+                ],
+                [
+                    625.0,
+                    301.0
+                ],
+                [
+                    111.0,
+                    301.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(ii) Unpaid sick family up to a maximum of eight (8) hours per occurrence will be allowed in surgical cases or critical illnesses involving a member of the employee's immediate family only when the employee's presence is required by the attending physician; and",
+            "block_bbox": [
+                110,
+                315,
+                624,
+                405
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    110.0,
+                    315.0
+                ],
+                [
+                    624.0,
+                    315.0
+                ],
+                [
+                    624.0,
+                    405.0
+                ],
+                [
+                    110.0,
+                    405.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(iii) A maximum of eight (8) hours of sick leave credits will be allowed for childbirth cases. The eight (8) hours shall include the time the employee spends taking his wife to the hospital and awaiting the birth. An additional eight (8) hours will be granted to allow the employee to take the mother and child home.",
+            "block_bbox": [
+                109,
+                419,
+                624,
+                530
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    109.0,
+                    419.0
+                ],
+                [
+                    624.0,
+                    419.0
+                ],
+                [
+                    624.0,
+                    530.0
+                ],
+                [
+                    109.0,
+                    530.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "This benefit shall also be available in the event the employee and the mother of the employee's child are not married, provided the employee documents his parenthood upon request.",
+            "block_bbox": [
+                144,
+                541,
+                623,
+                609
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    144.0,
+                    541.0
+                ],
+                [
+                    623.0,
+                    541.0
+                ],
+                [
+                    623.0,
+                    609.0
+                ],
+                [
+                    144.0,
+                    609.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) Paid or unpaid sick self shall be allowed for an employee's medical or dental appointments provided that the following conditions are met:",
+            "block_bbox": [
+                79,
+                628,
+                622,
+                674
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    79.0,
+                    628.0
+                ],
+                [
+                    622.0,
+                    628.0
+                ],
+                [
+                    622.0,
+                    674.0
+                ],
+                [
+                    79.0,
+                    674.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(i) The appointment cannot be scheduled at a time other than the employee's regularly scheduled hours of work; and",
+            "block_bbox": [
+                108,
+                688,
+                621,
+                734
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    108.0,
+                    688.0
+                ],
+                [
+                    621.0,
+                    688.0
+                ],
+                [
+                    621.0,
+                    734.0
+                ],
+                [
+                    108.0,
+                    734.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(ii) The employee's workweek schedule (excluding shift changes and changing days off with other employees) cannot be changed to accommodate the appointment; and",
+            "block_bbox": [
+                108,
+                748,
+                622,
+                815
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    108.0,
+                    748.0
+                ],
+                [
+                    622.0,
+                    748.0
+                ],
+                [
+                    622.0,
+                    815.0
+                ],
+                [
+                    108.0,
+                    815.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(iii) The employee submits written notice to his or her immediate supervisor at least thirty-six hours prior to the scheduled appointment.",
+            "block_bbox": [
+                108,
+                829,
+                621,
+                874
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    108.0,
+                    829.0
+                ],
+                [
+                    621.0,
+                    829.0
+                ],
+                [
+                    621.0,
+                    874.0
+                ],
+                [
+                    108.0,
+                    874.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(iv) Only such time as is required for the appointment including travel time shall be allowed.",
+            "block_bbox": [
+                108,
+                889,
+                620,
+                933
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    108.0,
+                    889.0
+                ],
+                [
+                    620.0,
+                    889.0
+                ],
+                [
+                    620.0,
+                    933.0
+                ],
+                [
+                    108.0,
+                    933.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "33",
+            "block_bbox": [
+                322,
+                942,
+                343,
+                958
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    322.0,
+                    942.0
+                ],
+                [
+                    342.0,
+                    942.0
+                ],
+                [
+                    342.0,
+                    957.0
+                ],
+                [
+                    322.0,
+                    957.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7948755025863647,
+                "coordinate": [
+                    550,
+                    50,
+                    623,
+                    68
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        550.0,
+                        50.0
+                    ],
+                    [
+                        622.0,
+                        50.0
+                    ],
+                    [
+                        622.0,
+                        67.0
+                    ],
+                    [
+                        550.0,
+                        67.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9557821154594421,
+                "coordinate": [
+                    111,
+                    80,
+                    625,
+                    301
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        111.0,
+                        80.0
+                    ],
+                    [
+                        625.0,
+                        80.0
+                    ],
+                    [
+                        625.0,
+                        301.0
+                    ],
+                    [
+                        111.0,
+                        301.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9398943781852722,
+                "coordinate": [
+                    110,
+                    315,
+                    624,
+                    405
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        110.0,
+                        315.0
+                    ],
+                    [
+                        624.0,
+                        315.0
+                    ],
+                    [
+                        624.0,
+                        405.0
+                    ],
+                    [
+                        110.0,
+                        405.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9473005533218384,
+                "coordinate": [
+                    109,
+                    419,
+                    624,
+                    530
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        109.0,
+                        419.0
+                    ],
+                    [
+                        624.0,
+                        419.0
+                    ],
+                    [
+                        624.0,
+                        530.0
+                    ],
+                    [
+                        109.0,
+                        530.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9260054230690002,
+                "coordinate": [
+                    144,
+                    541,
+                    623,
+                    609
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        144.0,
+                        541.0
+                    ],
+                    [
+                        623.0,
+                        541.0
+                    ],
+                    [
+                        623.0,
+                        609.0
+                    ],
+                    [
+                        144.0,
+                        609.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9060561060905457,
+                "coordinate": [
+                    79,
+                    628,
+                    622,
+                    674
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        79.0,
+                        628.0
+                    ],
+                    [
+                        622.0,
+                        628.0
+                    ],
+                    [
+                        622.0,
+                        674.0
+                    ],
+                    [
+                        79.0,
+                        674.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9044946432113647,
+                "coordinate": [
+                    108,
+                    688,
+                    621,
+                    734
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        108.0,
+                        688.0
+                    ],
+                    [
+                        621.0,
+                        688.0
+                    ],
+                    [
+                        621.0,
+                        734.0
+                    ],
+                    [
+                        108.0,
+                        734.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9351464509963989,
+                "coordinate": [
+                    108,
+                    748,
+                    622,
+                    815
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        108.0,
+                        748.0
+                    ],
+                    [
+                        622.0,
+                        748.0
+                    ],
+                    [
+                        622.0,
+                        815.0
+                    ],
+                    [
+                        108.0,
+                        815.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.91285640001297,
+                "coordinate": [
+                    108,
+                    829,
+                    621,
+                    874
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        108.0,
+                        829.0
+                    ],
+                    [
+                        621.0,
+                        829.0
+                    ],
+                    [
+                        621.0,
+                        874.0
+                    ],
+                    [
+                        108.0,
+                        874.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8987358212471008,
+                "coordinate": [
+                    108,
+                    889,
+                    620,
+                    933
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        108.0,
+                        889.0
+                    ],
+                    [
+                        620.0,
+                        889.0
+                    ],
+                    [
+                        620.0,
+                        933.0
+                    ],
+                    [
+                        108.0,
+                        933.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7717827558517456,
+                "coordinate": [
+                    322,
+                    942,
+                    343,
+                    958
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        322.0,
+                        942.0
+                    ],
+                    [
+                        342.0,
+                        942.0
+                    ],
+                    [
+                        342.0,
+                        957.0
+                    ],
+                    [
+                        322.0,
+                        957.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

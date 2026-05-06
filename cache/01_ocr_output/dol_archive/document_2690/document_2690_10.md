@@ -1,0 +1,25 @@
+a. the specific term(s) of this Agreement, Board of Regents' Policy or University Regulation alleged to have been violated, misinterpreted, or misapplied;
+
+b. a description of the grounds of the grievance including names, dates, places, and times necessary for a complete understanding of the grievance;
+
+c. the remedy sought
+
+d. the name(s), academic unit(s), MAU, telephone number, and address at which the grievant shall receive all correspondence related to the grievance; and
+
+### e. the name, telephone number, and address of the grievant's representative
+
+The supervisor receiving the grievance shall, within 10 days, schedule a meeting with the grievant to occur as soon as it can be mutually arranged. Within 10 days following that meeting, the supervisor shall issue a written finding to the grievant and to United Academics.
+
+If the grievant or United Academics is not satisfied with the finding of the supervisor at Step 2, the grievance may be advanced in writing to the chancellor within 10 days of the grievant's receipt of the Step 2 finding, or the date the finding was due, whichever occurs first.
+
+If the supervisor in Step 2 is the chancellor, the grievance shall move immediately to Step 4. If the supervisor in Step 2 is the president, the grievance shall move immediately to Step 5.
+
+#### 7.2.3 Step 3: Appeal to Chancellor
+
+The chancellor, or designee, receiving the Step 3 grievance shall, within 10 days, schedule a meeting with the grievant to occur as soon as it can be mutually arranged. Within 10 days following the meeting, the chancellor, or designee, shall issue a written finding to the grievant and to United Academics.
+
+If the grievant or United Academics is not satisfied with the finding of the supervisor in Step 3, the grievance may be advanced in writing to the president of the University within 10 days of the grievant's receipt of the Step 3 finding or the date the finding was due, whichever occurs first.
+
+#### 7.2.4 Step 4: Appeal to President
+
+The president, or designee, shall, within 10 days of receipt of the grievance, schedule a meeting with the grievant to occur as soon as it can be mutually arranged. The president, or designee, shall issue a written finding to the grievant and United Academics, within 10 days following the meeting.

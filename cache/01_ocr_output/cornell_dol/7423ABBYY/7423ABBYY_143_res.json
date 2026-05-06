@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/7423ABBYY.pdf",
+    "page_index": 143,
+    "page_count": 185,
+    "width": 1592,
+    "height": 1178,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "GTE / INTERNATIONAL BROTHERHOOD OF ELECTRICAL WORKERS POS / PPO MEDICAL PLANS SUMMARY – POINT OF SERVICE MEDICAL PLAN",
+            "block_bbox": [
+                341,
+                22,
+                1298,
+                74
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    341.0,
+                    22.0
+                ],
+                [
+                    1298.0,
+                    22.0
+                ],
+                [
+                    1298.0,
+                    74.0
+                ],
+                [
+                    341.0,
+                    74.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td rowspan=\"2\"></td><td colspan=\"3\">Point-of-Service HMO</td></tr><tr><td>In-Network</td><td>Out-of-Network</td><td>Out-of-Area PPO</td></tr><tr><td rowspan=\"3\">ANNUAL DEDUCTIBLE</td><td rowspan=\"3\">No Deductible</td><td>$295 per individual</td><td>$150 per individual</td></tr><tr><td>$590 per individual + 1</td><td>$300 per individual + 1</td></tr><tr><td>$885 per family</td><td>$450 per family</td></tr><tr><td rowspan=\"3\">PER PERSON - ANNUAL OUT OF POCKET</td><td rowspan=\"3\">No maximum limit</td><td>$1,750 per individual</td><td>$1,500 per individual</td></tr><tr><td>$3,500 per individual + 1</td><td>$3,000 per individual + 1</td></tr><tr><td>$5,250 per family</td><td>$4,500 per family</td></tr><tr><td>MAXIMUM BENEFIT</td><td></td><td></td><td></td></tr><tr><td>Per Person - Annual</td><td>No maximum limit</td><td>No maximum limit</td><td>No maximum limit</td></tr><tr><td>Per Person - Lifetime</td><td>No maximum limit</td><td>$2,000,000</td><td>$2,000,000</td></tr><tr><td>INPATIENT HOSPITAL</td><td></td><td></td><td></td></tr><tr><td>Hospital Days, as preauthorized</td><td>No charge</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.;70% Non PPO</td></tr><tr><td>Diagnostics, e.g. Lab, X-ray, etc.</td><td>No charge</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.;70% Non PPO</td></tr><tr><td>Drugs, Medications and Radiotherapy</td><td>No charge</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.;70% Non PPO</td></tr><tr><td>Intensive and Coronary Care Units</td><td>No charge</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.;70% Non PPO</td></tr><tr><td>Medical Services</td><td>No charge</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.;70% Non PPO</td></tr><tr><td>Necessary Specialist Care/Consultations</td><td>No charge</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.;70% Non PPO</td></tr><tr><td>Operating and Recovery Rooms</td><td>No charge</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.;70% Non PPO</td></tr><tr><td>Anesthesia</td><td>No charge</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.;70% Non PPO</td></tr><tr><td>Special Duty Nursing</td><td>No charge</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.;70% Non PPO</td></tr><tr><td>SURGERY - Medically Necessary Procedures</td><td></td><td></td><td></td></tr><tr><td>Physician&#x27;s Office</td><td>$15 co-pay</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.;70% Non PPO</td></tr><tr><td>Inpatient Hospital</td><td>No charge</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.;70% Non PPO</td></tr><tr><td>Outpatient Hospital</td><td>No charge</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.;70% Non PPO</td></tr><tr><td>PHYSICIAN&#x27;S OFFICE</td><td></td><td></td><td></td></tr><tr><td>Doctor&#x27;s Visits</td><td>$15 co-pay</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.;70% Non PPO</td></tr><tr><td>Illness or Injury Visits to PCP</td><td>$15 co-pay</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.;70% Non PPO</td></tr><tr><td>Consult/Treatment by a Specialist Physician</td><td>$15 co-pay</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.;70% Non PPO</td></tr><tr><td>Lab, X-Ray and Other Diagnostic Procedures</td><td>No charge</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.;70% Non PPO</td></tr><tr><td>Allergy Testing</td><td>$15 co-pay</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.;70% Non PPO</td></tr><tr><td>Allergy Injections and Serum</td><td>$15 co-pay</td><td>70% R&amp;C after deductible</td><td>80% R&amp;C after ded.;70% Non PPO</td></tr></table>",
+            "block_bbox": [
+                96,
+                118,
+                1535,
+                1032
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    96.0,
+                    118.0
+                ],
+                [
+                    1535.0,
+                    118.0
+                ],
+                [
+                    1535.0,
+                    1032.0
+                ],
+                [
+                    96.0,
+                    1032.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "135",
+            "block_bbox": [
+                803,
+                1087,
+                849,
+                1112
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    803.0,
+                    1087.0
+                ],
+                [
+                    848.0,
+                    1087.0
+                ],
+                [
+                    848.0,
+                    1111.0
+                ],
+                [
+                    803.0,
+                    1111.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.4362278878688812,
+                "coordinate": [
+                    341,
+                    22,
+                    1298,
+                    74
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        341.0,
+                        22.0
+                    ],
+                    [
+                        1298.0,
+                        22.0
+                    ],
+                    [
+                        1298.0,
+                        74.0
+                    ],
+                    [
+                        341.0,
+                        74.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9567537307739258,
+                "coordinate": [
+                    96,
+                    118,
+                    1535,
+                    1032
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        96.0,
+                        118.0
+                    ],
+                    [
+                        1535.0,
+                        118.0
+                    ],
+                    [
+                        1535.0,
+                        1032.0
+                    ],
+                    [
+                        96.0,
+                        1032.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7844789624214172,
+                "coordinate": [
+                    803,
+                    1087,
+                    849,
+                    1112
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        803.0,
+                        1087.0
+                    ],
+                    [
+                        848.0,
+                        1087.0
+                    ],
+                    [
+                        848.0,
+                        1111.0
+                    ],
+                    [
+                        803.0,
+                        1111.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

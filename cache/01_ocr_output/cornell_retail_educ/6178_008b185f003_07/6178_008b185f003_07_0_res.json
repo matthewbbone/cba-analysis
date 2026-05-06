@@ -1,0 +1,644 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b185f003_07.pdf",
+    "page_index": 0,
+    "page_count": 71,
+    "width": 777,
+    "height": 1235,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "aside_text",
+            "block_content": "12.94",
+            "block_bbox": [
+                1,
+                442,
+                45,
+                625
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    -1.4489283561706543,
+                    442.04351806640625
+                ],
+                [
+                    40.75670623779297,
+                    441.2943115234375
+                ],
+                [
+                    44.000003814697266,
+                    624.0000610351562
+                ],
+                [
+                    1.7943692207336426,
+                    624.749267578125
+                ]
+            ]
+        },
+        {
+            "block_label": "header",
+            "block_content": "K830553",
+            "block_bbox": [
+                511,
+                33,
+                661,
+                85
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    511.0,
+                    33.0
+                ],
+                [
+                    661.0,
+                    33.0
+                ],
+                [
+                    661.0,
+                    85.0
+                ],
+                [
+                    511.0,
+                    85.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "AGREEMENT",
+            "block_bbox": [
+                245,
+                168,
+                492,
+                215
+            ],
+            "block_id": 2,
+            "block_order": 1,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    245.0,
+                    168.0
+                ],
+                [
+                    492.0,
+                    168.0
+                ],
+                [
+                    492.0,
+                    215.0
+                ],
+                [
+                    245.0,
+                    215.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "between",
+            "block_bbox": [
+                304,
+                240,
+                435,
+                279
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    304.0,
+                    240.0
+                ],
+                [
+                    435.0,
+                    240.0
+                ],
+                [
+                    435.0,
+                    279.0
+                ],
+                [
+                    304.0,
+                    279.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Montgomery County Council\nof\nSupporting Services\nEmployees",
+            "block_bbox": [
+                92,
+                322,
+                648,
+                506
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    92.0,
+                    322.0
+                ],
+                [
+                    648.0,
+                    322.0
+                ],
+                [
+                    648.0,
+                    506.0
+                ],
+                [
+                    92.0,
+                    506.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "and",
+            "block_bbox": [
+                340,
+                532,
+                401,
+                569
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    340.0,
+                    532.0
+                ],
+                [
+                    401.0,
+                    532.0
+                ],
+                [
+                    401.0,
+                    569.0
+                ],
+                [
+                    340.0,
+                    569.0
+                ]
+            ]
+        },
+        {
+            "block_label": "doc_title",
+            "block_content": "Board of Education of Montgomery County",
+            "block_bbox": [
+                157,
+                614,
+                585,
+                712
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    157.0,
+                    614.0
+                ],
+                [
+                    585.0,
+                    614.0
+                ],
+                [
+                    585.0,
+                    712.0
+                ],
+                [
+                    157.0,
+                    712.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "for the",
+            "block_bbox": [
+                319,
+                733,
+                424,
+                773
+            ],
+            "block_id": 7,
+            "block_order": 6,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    319.0,
+                    733.0
+                ],
+                [
+                    424.0,
+                    733.0
+                ],
+                [
+                    424.0,
+                    773.0
+                ],
+                [
+                    319.0,
+                    773.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "School Years\n1993-1995",
+            "block_bbox": [
+                252,
+                819,
+                488,
+                906
+            ],
+            "block_id": 8,
+            "block_order": 7,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    252.0,
+                    819.0
+                ],
+                [
+                    488.0,
+                    819.0
+                ],
+                [
+                    488.0,
+                    906.0
+                ],
+                [
+                    252.0,
+                    906.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Rockville, Maryland",
+            "block_bbox": [
+                249,
+                1048,
+                493,
+                1086
+            ],
+            "block_id": 9,
+            "block_order": 8,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    249.0,
+                    1048.0
+                ],
+                [
+                    493.0,
+                    1048.0
+                ],
+                [
+                    493.0,
+                    1086.0
+                ],
+                [
+                    249.0,
+                    1086.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 2,
+                "label": "aside_text",
+                "score": 0.4555334150791168,
+                "coordinate": [
+                    1,
+                    442,
+                    45,
+                    625
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        -1.4489283561706543,
+                        442.04351806640625
+                    ],
+                    [
+                        40.75670623779297,
+                        441.2943115234375
+                    ],
+                    [
+                        44.000003814697266,
+                        624.0000610351562
+                    ],
+                    [
+                        1.7943692207336426,
+                        624.749267578125
+                    ]
+                ]
+            },
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.4629330039024353,
+                "coordinate": [
+                    511,
+                    33,
+                    661,
+                    85
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        511.0,
+                        33.0
+                    ],
+                    [
+                        661.0,
+                        33.0
+                    ],
+                    [
+                        661.0,
+                        85.0
+                    ],
+                    [
+                        511.0,
+                        85.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.30686938762664795,
+                "coordinate": [
+                    245,
+                    168,
+                    492,
+                    215
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        245.0,
+                        168.0
+                    ],
+                    [
+                        492.0,
+                        168.0
+                    ],
+                    [
+                        492.0,
+                        215.0
+                    ],
+                    [
+                        245.0,
+                        215.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4890235364437103,
+                "coordinate": [
+                    304,
+                    240,
+                    435,
+                    279
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        304.0,
+                        240.0
+                    ],
+                    [
+                        435.0,
+                        240.0
+                    ],
+                    [
+                        435.0,
+                        279.0
+                    ],
+                    [
+                        304.0,
+                        279.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5394584536552429,
+                "coordinate": [
+                    92,
+                    322,
+                    648,
+                    506
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        92.0,
+                        322.0
+                    ],
+                    [
+                        648.0,
+                        322.0
+                    ],
+                    [
+                        648.0,
+                        506.0
+                    ],
+                    [
+                        92.0,
+                        506.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.5953902006149292,
+                "coordinate": [
+                    340,
+                    532,
+                    401,
+                    569
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        340.0,
+                        532.0
+                    ],
+                    [
+                        401.0,
+                        532.0
+                    ],
+                    [
+                        401.0,
+                        569.0
+                    ],
+                    [
+                        340.0,
+                        569.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.4507392346858978,
+                "coordinate": [
+                    157,
+                    614,
+                    585,
+                    712
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        157.0,
+                        614.0
+                    ],
+                    [
+                        585.0,
+                        614.0
+                    ],
+                    [
+                        585.0,
+                        712.0
+                    ],
+                    [
+                        157.0,
+                        712.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6919753551483154,
+                "coordinate": [
+                    319,
+                    733,
+                    424,
+                    773
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        319.0,
+                        733.0
+                    ],
+                    [
+                        424.0,
+                        733.0
+                    ],
+                    [
+                        424.0,
+                        773.0
+                    ],
+                    [
+                        319.0,
+                        773.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8147681355476379,
+                "coordinate": [
+                    252,
+                    819,
+                    488,
+                    906
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        252.0,
+                        819.0
+                    ],
+                    [
+                        488.0,
+                        819.0
+                    ],
+                    [
+                        488.0,
+                        906.0
+                    ],
+                    [
+                        252.0,
+                        906.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.743229329586029,
+                "coordinate": [
+                    249,
+                    1048,
+                    493,
+                    1086
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        249.0,
+                        1048.0
+                    ],
+                    [
+                        493.0,
+                        1048.0
+                    ],
+                    [
+                        493.0,
+                        1086.0
+                    ],
+                    [
+                        249.0,
+                        1086.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

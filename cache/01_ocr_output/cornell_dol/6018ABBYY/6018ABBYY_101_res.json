@@ -1,0 +1,339 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 101,
+    "page_count": 287,
+    "width": 675,
+    "height": 1016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "ARTICLE XIV",
+            "block_bbox": [
+                537,
+                51,
+                628,
+                69
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    537.0,
+                    51.0
+                ],
+                [
+                    627.0,
+                    51.0
+                ],
+                [
+                    627.0,
+                    68.0
+                ],
+                [
+                    537.0,
+                    68.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE XIV",
+            "block_bbox": [
+                267,
+                78,
+                409,
+                103
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    267.0,
+                    78.0
+                ],
+                [
+                    409.0,
+                    78.0
+                ],
+                [
+                    409.0,
+                    103.0
+                ],
+                [
+                    267.0,
+                    103.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(1) Disciplinary Warnings – When an action by an employee is such as to result in a supervisory warning, which may in the future be used in considering more severe disciplinary action, such warning shall be in writing, and one (1) copy of such written warning shall be given to the employee and two (2) copies of such written warning shall be delivered or mailed to the Union office within twenty (20) calendar days after the Company's first knowledge of the occurrence. One copy of the warning will be noted by the Union Grievance Committee and returned to the Company and a written warning given to an employee after such twenty (20) day period shall be a nullity.",
+            "block_bbox": [
+                47,
+                127,
+                630,
+                328
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    47.0,
+                    127.0
+                ],
+                [
+                    630.0,
+                    127.0
+                ],
+                [
+                    630.0,
+                    328.0
+                ],
+                [
+                    47.0,
+                    328.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(2) Discipline Resulting in Suspension or Discharge – When disciplinary action is taken which results in the suspension or discharge of an employee, the Company shall notify the Union office within ten (10) calendar days of the action and the reason therefore. If the Company fails to give notification to the Union office within the ten (10) calendar day period, the suspension or discharge shall be considered a nullity. In the investigation of any employee's conduct which may result in suspension or discharge, if the employee so requests, he or she shall be accompanied by a Union representative or officer who will not be paid by the Company for such Union activity. When the suspension is of indefinite duration, pending review of the facts and determination of the ultimate penalty, the Company shall keep the Union advised of the status of the review and shall not unnecessarily delay its decision. Suspension penalties shall be the equivalent of straight-time hours lost. During the suspension period, notwithstanding any other provision of the Collective Bargaining Agreement, the suspended employee shall accrue vacation credits, he or she shall retain his or her rights under the Group Life Insurance Plan, Medical Plan and Comprehensive Medical Plan or Health Maintenance Insurance Plans, Group Dental Plan, Retirement Plan, Surviving Spouse Annuity Plan and Prescription Drug Co-Pay Plan; such employee shall be considered for advanced assignment opportunities if he or she can be contacted by reasonable effort, and he or she shall be entitled to idle holiday pay, if a holiday falls during the suspension period. If a discharge is reduced to a suspension by arbitration, the employee's right to fringe benefits during the suspension period shall be governed by the arbitrator's award. If an employee reports for work on his or her scheduled shift and is subsequently suspended or discharged for an offense committed on a prior shift, he or she will receive a minimum of two (2) hours pay.",
+            "block_bbox": [
+                43,
+                347,
+                630,
+                943
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    43.0,
+                    347.0
+                ],
+                [
+                    630.0,
+                    347.0
+                ],
+                [
+                    630.0,
+                    943.0
+                ],
+                [
+                    43.0,
+                    943.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "93",
+            "block_bbox": [
+                325,
+                945,
+                347,
+                961
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    325.0,
+                    945.0
+                ],
+                [
+                    346.0,
+                    945.0
+                ],
+                [
+                    346.0,
+                    960.0
+                ],
+                [
+                    325.0,
+                    960.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8141492605209351,
+                "coordinate": [
+                    537,
+                    51,
+                    628,
+                    69
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        537.0,
+                        51.0
+                    ],
+                    [
+                        627.0,
+                        51.0
+                    ],
+                    [
+                        627.0,
+                        68.0
+                    ],
+                    [
+                        537.0,
+                        68.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8019970655441284,
+                "coordinate": [
+                    267,
+                    78,
+                    409,
+                    103
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        267.0,
+                        78.0
+                    ],
+                    [
+                        409.0,
+                        78.0
+                    ],
+                    [
+                        409.0,
+                        103.0
+                    ],
+                    [
+                        267.0,
+                        103.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8833531141281128,
+                "coordinate": [
+                    47,
+                    127,
+                    630,
+                    328
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        47.0,
+                        127.0
+                    ],
+                    [
+                        630.0,
+                        127.0
+                    ],
+                    [
+                        630.0,
+                        328.0
+                    ],
+                    [
+                        47.0,
+                        328.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8868270516395569,
+                "coordinate": [
+                    43,
+                    347,
+                    630,
+                    943
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        43.0,
+                        347.0
+                    ],
+                    [
+                        630.0,
+                        347.0
+                    ],
+                    [
+                        630.0,
+                        943.0
+                    ],
+                    [
+                        43.0,
+                        943.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7366402745246887,
+                "coordinate": [
+                    325,
+                    945,
+                    347,
+                    961
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        325.0,
+                        945.0
+                    ],
+                    [
+                        346.0,
+                        945.0
+                    ],
+                    [
+                        346.0,
+                        960.0
+                    ],
+                    [
+                        325.0,
+                        960.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

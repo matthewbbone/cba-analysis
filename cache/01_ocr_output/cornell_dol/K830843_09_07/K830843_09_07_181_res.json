@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 181,
+    "page_count": 206,
+    "width": 1224,
+    "height": 2016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "doc_title",
+            "block_content": "APPENDIX D\nMEETING ROOMS AND BULLETIN BOARDS",
+            "block_bbox": [
+                363,
+                96,
+                870,
+                154
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    363.0,
+                    96.0
+                ],
+                [
+                    870.0,
+                    96.0
+                ],
+                [
+                    870.0,
+                    154.0
+                ],
+                [
+                    363.0,
+                    154.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "1. UC BERKELEY",
+            "block_bbox": [
+                112,
+                179,
+                365,
+                209
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    112.0,
+                    179.0
+                ],
+                [
+                    365.0,
+                    179.0
+                ],
+                [
+                    365.0,
+                    209.0
+                ],
+                [
+                    112.0,
+                    209.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "(a) Meeting Rooms",
+            "block_bbox": [
+                185,
+                236,
+                443,
+                265
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    185.0,
+                    236.0
+                ],
+                [
+                    443.0,
+                    236.0
+                ],
+                [
+                    443.0,
+                    265.0
+                ],
+                [
+                    185.0,
+                    265.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1) Tang Health Center, by appointment with the administration",
+            "block_bbox": [
+                257,
+                290,
+                979,
+                320
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    257.0,
+                    290.0
+                ],
+                [
+                    979.0,
+                    290.0
+                ],
+                [
+                    979.0,
+                    320.0
+                ],
+                [
+                    257.0,
+                    320.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Education Center - Sections A & B\nSecond Floor Clinical Conference Room - Room 2284\nThird Floor Counseling and Psychology Conference Room - Room 3290",
+            "block_bbox": [
+                328,
+                346,
+                1102,
+                431
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    328.0,
+                    346.0
+                ],
+                [
+                    1102.0,
+                    346.0
+                ],
+                [
+                    1102.0,
+                    431.0
+                ],
+                [
+                    328.0,
+                    431.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) Bulletin Boards",
+            "block_bbox": [
+                186,
+                456,
+                441,
+                486
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    186.0,
+                    456.0
+                ],
+                [
+                    441.0,
+                    456.0
+                ],
+                [
+                    441.0,
+                    486.0
+                ],
+                [
+                    186.0,
+                    486.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1) Tang Health Center",
+            "block_bbox": [
+                258,
+                512,
+                556,
+                541
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    258.0,
+                    512.0
+                ],
+                [
+                    556.0,
+                    512.0
+                ],
+                [
+                    556.0,
+                    541.0
+                ],
+                [
+                    258.0,
+                    541.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Main Staff Lounge, First Floor Clinical Lounge 1, Room 2122",
+            "block_bbox": [
+                328,
+                566,
+                657,
+                623
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    328.0,
+                    566.0
+                ],
+                [
+                    657.0,
+                    566.0
+                ],
+                [
+                    657.0,
+                    623.0
+                ],
+                [
+                    328.0,
+                    623.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "2. UC DAVIS",
+            "block_bbox": [
+                112,
+                648,
+                306,
+                678
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    112.0,
+                    648.0
+                ],
+                [
+                    306.0,
+                    648.0
+                ],
+                [
+                    306.0,
+                    678.0
+                ],
+                [
+                    112.0,
+                    678.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "(a) Meeting Rooms",
+            "block_bbox": [
+                186,
+                705,
+                441,
+                734
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    186.0,
+                    705.0
+                ],
+                [
+                    441.0,
+                    705.0
+                ],
+                [
+                    441.0,
+                    734.0
+                ],
+                [
+                    186.0,
+                    734.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Ambulatory Care 3010 – windows\nAmbulatory Care 3013\nAmbulatory Care 3015B\nAmbulatory Care 3015A\nAmbulatory Care 3030C - windows\nAmbulatory Care 3300E\nBroadway Bldg. 1190\nBroadway Bldg. 2510\nBroadway Bldg. 2648\nCancer Center AUD\nCancer Center B.O.\nDavis Tower 1700 - 2530\nDavis Tower 3701\nDavis Tower 4701\nDavis Tower 5703\nDavis Tower 6704\nDavis Tower 7705\nDavis Tower 7712\nDavis Tower 7714\nDavis Tower 8712\nESSB 2020\nESSB 2030\nGlassrock 7106\nLabou 1104\nLabou 1108\nLabou 1109\nMain Hosp. ACSU AUD\nMain Hosp. ACSU Class\nMain Hosp. 1518 A\nMain Hosp. DCR\nNew Path 1002\nP.C.C. G104 – Cypress Bldg.\nPSSB G300\nPSSB G032\nPSSB 1015\nPSSB 3037\nResearch I 1002\nSherman Way 1700 B\nTicon II 326\nCamellia Ballroom – Marriot Courtyard",
+            "block_bbox": [
+                253,
+                761,
+                657,
+                1866
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    253.0,
+                    761.0
+                ],
+                [
+                    657.0,
+                    761.0
+                ],
+                [
+                    657.0,
+                    1866.0
+                ],
+                [
+                    253.0,
+                    1866.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "179",
+            "block_bbox": [
+                594,
+                1918,
+                641,
+                1943
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    594.0,
+                    1918.0
+                ],
+                [
+                    640.0,
+                    1918.0
+                ],
+                [
+                    640.0,
+                    1942.0
+                ],
+                [
+                    594.0,
+                    1942.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.8960991501808167,
+                "coordinate": [
+                    363,
+                    96,
+                    870,
+                    154
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        363.0,
+                        96.0
+                    ],
+                    [
+                        870.0,
+                        96.0
+                    ],
+                    [
+                        870.0,
+                        154.0
+                    ],
+                    [
+                        363.0,
+                        154.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7282166481018066,
+                "coordinate": [
+                    112,
+                    179,
+                    365,
+                    209
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        112.0,
+                        179.0
+                    ],
+                    [
+                        365.0,
+                        179.0
+                    ],
+                    [
+                        365.0,
+                        209.0
+                    ],
+                    [
+                        112.0,
+                        209.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5029112100601196,
+                "coordinate": [
+                    185,
+                    236,
+                    443,
+                    265
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        185.0,
+                        236.0
+                    ],
+                    [
+                        443.0,
+                        236.0
+                    ],
+                    [
+                        443.0,
+                        265.0
+                    ],
+                    [
+                        185.0,
+                        265.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.768441379070282,
+                "coordinate": [
+                    257,
+                    290,
+                    979,
+                    320
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        257.0,
+                        290.0
+                    ],
+                    [
+                        979.0,
+                        290.0
+                    ],
+                    [
+                        979.0,
+                        320.0
+                    ],
+                    [
+                        257.0,
+                        320.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8700997233390808,
+                "coordinate": [
+                    328,
+                    346,
+                    1102,
+                    431
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        328.0,
+                        346.0
+                    ],
+                    [
+                        1102.0,
+                        346.0
+                    ],
+                    [
+                        1102.0,
+                        431.0
+                    ],
+                    [
+                        328.0,
+                        431.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4863767623901367,
+                "coordinate": [
+                    186,
+                    456,
+                    441,
+                    486
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        186.0,
+                        456.0
+                    ],
+                    [
+                        441.0,
+                        456.0
+                    ],
+                    [
+                        441.0,
+                        486.0
+                    ],
+                    [
+                        186.0,
+                        486.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6880305409431458,
+                "coordinate": [
+                    258,
+                    512,
+                    556,
+                    541
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        258.0,
+                        512.0
+                    ],
+                    [
+                        556.0,
+                        512.0
+                    ],
+                    [
+                        556.0,
+                        541.0
+                    ],
+                    [
+                        258.0,
+                        541.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8567870259284973,
+                "coordinate": [
+                    328,
+                    566,
+                    657,
+                    623
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        328.0,
+                        566.0
+                    ],
+                    [
+                        657.0,
+                        566.0
+                    ],
+                    [
+                        657.0,
+                        623.0
+                    ],
+                    [
+                        328.0,
+                        623.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7899295687675476,
+                "coordinate": [
+                    112,
+                    648,
+                    306,
+                    678
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        112.0,
+                        648.0
+                    ],
+                    [
+                        306.0,
+                        648.0
+                    ],
+                    [
+                        306.0,
+                        678.0
+                    ],
+                    [
+                        112.0,
+                        678.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5673297047615051,
+                "coordinate": [
+                    186,
+                    705,
+                    441,
+                    734
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        186.0,
+                        705.0
+                    ],
+                    [
+                        441.0,
+                        705.0
+                    ],
+                    [
+                        441.0,
+                        734.0
+                    ],
+                    [
+                        186.0,
+                        734.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9495528340339661,
+                "coordinate": [
+                    253,
+                    761,
+                    657,
+                    1866
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        253.0,
+                        761.0
+                    ],
+                    [
+                        657.0,
+                        761.0
+                    ],
+                    [
+                        657.0,
+                        1866.0
+                    ],
+                    [
+                        253.0,
+                        1866.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7716405391693115,
+                "coordinate": [
+                    594,
+                    1918,
+                    641,
+                    1943
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        594.0,
+                        1918.0
+                    ],
+                    [
+                        640.0,
+                        1918.0
+                    ],
+                    [
+                        640.0,
+                        1942.0
+                    ],
+                    [
+                        594.0,
+                        1942.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

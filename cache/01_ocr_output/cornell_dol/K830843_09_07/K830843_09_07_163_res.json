@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 163,
+    "page_count": 206,
+    "width": 1224,
+    "height": 2016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "figure_title",
+            "block_content": "APPENDIX A",
+            "block_bbox": [
+                544,
+                98,
+                699,
+                125
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    544.0,
+                    98.0
+                ],
+                [
+                    699.0,
+                    98.0
+                ],
+                [
+                    699.0,
+                    125.0
+                ],
+                [
+                    544.0,
+                    125.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>LINK CODE</td><td>TITLE CODE</td><td>TITLE NAME</td><td>STEP</td><td>MONTHLY RATE</td><td>HOURLY RATE</td><td>EVE</td><td>NIGHT</td><td>WKEND</td><td colspan=\"3\">ON CALL RATES</td></tr><tr><td colspan=\"12\">SAN FRANCISCO - cont. January 1, 2004</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>019</td><td>8671</td><td>MECHANICIAN, LAB, PRIN-MED FAC</td><td>22.</td><td>$5,386</td><td>$30.95</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8671</td><td>MECHANICIAN, LAB, PRIN-MED FAC</td><td>23.</td><td>$5,453</td><td>$31.34</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8671</td><td>MECHANICIAN, LAB, PRIN-MED FAC</td><td>24.</td><td>$5,520</td><td>$31.72</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>1.</td><td>$3,778</td><td>$21.71</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>2.</td><td>$3,823</td><td>$21.97</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>3.</td><td>$3,873</td><td>$22.26</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>4.</td><td>$3,919</td><td>$22.52</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>5.</td><td>$3,971</td><td>$22.82</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>6.</td><td>$4,020</td><td>$23.10</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>7.</td><td>$4,070</td><td>$23.39</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>8.</td><td>$4,122</td><td>$23.69</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>9.</td><td>$4,173</td><td>$23.98</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>10.</td><td>$4,224</td><td>$24.28</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>11.</td><td>$4,278</td><td>$24.59</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>12.</td><td>$4,331</td><td>$24.89</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>13.</td><td>$4,385</td><td>$25.20</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>14.</td><td>$4,439</td><td>$25.51</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>15.</td><td>$4,494</td><td>$25.83</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>16.</td><td>$4,551</td><td>$26.16</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>17.</td><td>$4,608</td><td>$26.48</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>18.</td><td>$4,668</td><td>$26.83</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>19.</td><td>$4,724</td><td>$27.15</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>20.</td><td>$4,783</td><td>$27.49</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>21.</td><td>$4,842</td><td>$27.83</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>22.</td><td>$4,902</td><td>$28.17</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>23.</td><td>$4,964</td><td>$28.53</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8672</td><td>MECHANICIAN, LAB, SR-MED FAC</td><td>24.</td><td>$5,028</td><td>$28.90</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>1.</td><td>$3,446</td><td>$19.80</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>2.</td><td>$3,489</td><td>$20.05</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>3.</td><td>$3,531</td><td>$20.29</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>4.</td><td>$3,576</td><td>$20.55</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>5.</td><td>$3,622</td><td>$20.82</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>6.</td><td>$3,665</td><td>$21.06</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>7.</td><td>$3,714</td><td>$21.34</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>8.</td><td>$3,757</td><td>$21.59</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>9.</td><td>$3,806</td><td>$21.87</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>10.</td><td>$3,854</td><td>$22.15</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>11.</td><td>$3,902</td><td>$22.43</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>12.</td><td>$3,948</td><td>$22.69</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>13.</td><td>$4,000</td><td>$22.99</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>14.</td><td>$4,050</td><td>$23.28</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>15.</td><td>$4,099</td><td>$23.56</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>16.</td><td>$4,151</td><td>$23.86</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>17.</td><td>$4,204</td><td>$24.16</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>18.</td><td>$4,256</td><td>$24.46</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>19.</td><td>$4,308</td><td>$24.76</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>20.</td><td>$4,365</td><td>$25.09</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>21.</td><td>$4,420</td><td>$25.40</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>22.</td><td>$4,473</td><td>$25.71</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>23.</td><td>$4,528</td><td>$26.02</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8673</td><td>MECHANICIAN, LAB-MED FAC</td><td>24.</td><td>$4,584</td><td>$26.34</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8674</td><td>MECHANICIAN, LAB, HELPER-MED FAC</td><td>1.</td><td>$2,999</td><td>$17.24</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8674</td><td>MECHANICIAN, LAB, HELPER-MED FAC</td><td>2.</td><td>$3,035</td><td>$17.44</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8674</td><td>MECHANICIAN, LAB, HELPER-MED FAC</td><td>3.</td><td>$3,074</td><td>$17.67</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8674</td><td>MECHANICIAN, LAB, HELPER-MED FAC</td><td>4.</td><td>$3,111</td><td>$17.88</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8674</td><td>MECHANICIAN, LAB, HELPER-MED FAC</td><td>5.</td><td>$3,152</td><td>$18.11</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8674</td><td>MECHANICIAN, LAB, HELPER-MED FAC</td><td>6.</td><td>$3,190</td><td>$18.33</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8674</td><td>MECHANICIAN, LAB, HELPER-MED FAC</td><td>7.</td><td>$3,230</td><td>$18.56</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8674</td><td>MECHANICIAN, LAB, HELPER-MED FAC</td><td>8.</td><td>$3,268</td><td>$18.78</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8674</td><td>MECHANICIAN, LAB, HELPER-MED FAC</td><td>9.</td><td>$3,311</td><td>$19.03</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8674</td><td>MECHANICIAN, LAB, HELPER-MED FAC</td><td>10.</td><td>$3,355</td><td>$19.28</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr><tr><td>019</td><td>8674</td><td>MECHANICIAN, LAB, HELPER-MED FAC</td><td>11.</td><td>$3,394</td><td>$19.51</td><td>$2.00</td><td>$3.25</td><td>$1.00</td><td></td><td></td><td></td></tr></table>",
+            "block_bbox": [
+                69,
+                152,
+                1174,
+                1837
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    69.0,
+                    152.0
+                ],
+                [
+                    1174.0,
+                    152.0
+                ],
+                [
+                    1174.0,
+                    1837.0
+                ],
+                [
+                    69.0,
+                    1837.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "161",
+            "block_bbox": [
+                575,
+                1919,
+                622,
+                1942
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    575.0,
+                    1919.0
+                ],
+                [
+                    621.0,
+                    1919.0
+                ],
+                [
+                    621.0,
+                    1941.0
+                ],
+                [
+                    575.0,
+                    1941.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.508783757686615,
+                "coordinate": [
+                    544,
+                    98,
+                    699,
+                    125
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        544.0,
+                        98.0
+                    ],
+                    [
+                        699.0,
+                        98.0
+                    ],
+                    [
+                        699.0,
+                        125.0
+                    ],
+                    [
+                        544.0,
+                        125.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9711884260177612,
+                "coordinate": [
+                    69,
+                    152,
+                    1174,
+                    1837
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        69.0,
+                        152.0
+                    ],
+                    [
+                        1174.0,
+                        152.0
+                    ],
+                    [
+                        1174.0,
+                        1837.0
+                    ],
+                    [
+                        69.0,
+                        1837.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7594094276428223,
+                "coordinate": [
+                    575,
+                    1919,
+                    622,
+                    1942
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        575.0,
+                        1919.0
+                    ],
+                    [
+                        621.0,
+                        1919.0
+                    ],
+                    [
+                        621.0,
+                        1941.0
+                    ],
+                    [
+                        575.0,
+                        1941.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

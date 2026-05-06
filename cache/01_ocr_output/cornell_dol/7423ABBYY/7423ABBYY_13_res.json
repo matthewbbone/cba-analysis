@@ -1,0 +1,888 @@
+{
+    "input_path": "cache/cornell_dol/7423ABBYY.pdf",
+    "page_index": 13,
+    "page_count": 185,
+    "width": 1191,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "SECTION 2.16. \"Suspension\" applies when an employee's services are terminated for a temporary period as a result of disciplinary action.",
+            "block_bbox": [
+                138,
+                37,
+                921,
+                97
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    138.0,
+                    37.0
+                ],
+                [
+                    921.0,
+                    37.0
+                ],
+                [
+                    921.0,
+                    97.0
+                ],
+                [
+                    138.0,
+                    97.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "SECTION 2.17. \"Discharged\" applies when an employee's services are terminated because they are not satisfactory, or for other just cause.",
+            "block_bbox": [
+                137,
+                120,
+                917,
+                181
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    137.0,
+                    120.0
+                ],
+                [
+                    917.0,
+                    120.0
+                ],
+                [
+                    917.0,
+                    181.0
+                ],
+                [
+                    137.0,
+                    181.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "SECTION 2.18. \"Released\" refers to termination of employment by Company action when the employee's qualifications for telephone work are not satisfactory.",
+            "block_bbox": [
+                138,
+                203,
+                1016,
+                264
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    138.0,
+                    203.0
+                ],
+                [
+                    1016.0,
+                    203.0
+                ],
+                [
+                    1016.0,
+                    264.0
+                ],
+                [
+                    138.0,
+                    264.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "SECTION 2.19. \"Holiday\" is any of the days prescribed in Article 10, and means the twenty-four hour period between 12:01 A.M. of the calendar holiday, or the day thus observed, and 12:00 midnight.",
+            "block_bbox": [
+                137,
+                287,
+                1009,
+                375
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    137.0,
+                    287.0
+                ],
+                [
+                    1009.0,
+                    287.0
+                ],
+                [
+                    1009.0,
+                    375.0
+                ],
+                [
+                    137.0,
+                    375.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "SECTION 2.20. \"Calendar Year\" means a period of 12 months beginning on January 1st and ending on the next succeeding December 31st.",
+            "block_bbox": [
+                136,
+                398,
+                968,
+                459
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    136.0,
+                    398.0
+                ],
+                [
+                    968.0,
+                    398.0
+                ],
+                [
+                    968.0,
+                    459.0
+                ],
+                [
+                    136.0,
+                    459.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "SECTION 2.21. A \"Service Week\" is a period of seven consecutive days beginning and ending at 12:01 A.M. on successive Sundays.",
+            "block_bbox": [
+                135,
+                481,
+                926,
+                542
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    135.0,
+                    481.0
+                ],
+                [
+                    926.0,
+                    481.0
+                ],
+                [
+                    926.0,
+                    542.0
+                ],
+                [
+                    135.0,
+                    542.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "SECTION 2.22. A \"Service Day\" is a period of 24 hours beginning and ending at 12:01 A.M. on successive days.",
+            "block_bbox": [
+                136,
+                565,
+                1011,
+                624
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    136.0,
+                    565.0
+                ],
+                [
+                    1011.0,
+                    565.0
+                ],
+                [
+                    1011.0,
+                    624.0
+                ],
+                [
+                    136.0,
+                    624.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "SECTION 2.23. For scheduling purposes only, a formal tour of duty as described herein shall be considered as falling on the calendar day in which the majority of hours are worked.",
+            "block_bbox": [
+                135,
+                650,
+                1016,
+                734
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    135.0,
+                    650.0
+                ],
+                [
+                    1016.0,
+                    650.0
+                ],
+                [
+                    1016.0,
+                    734.0
+                ],
+                [
+                    135.0,
+                    734.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) A scheduled tour of duty shall consist of not more than 8 consecutive hours exclusive of a meal period. Meal periods of less than 1/2 hour shall be included as part of the tour.",
+            "block_bbox": [
+                230,
+                761,
+                989,
+                847
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    230.0,
+                    761.0
+                ],
+                [
+                    989.0,
+                    761.0
+                ],
+                [
+                    989.0,
+                    847.0
+                ],
+                [
+                    230.0,
+                    847.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 3",
+            "block_bbox": [
+                512,
+                871,
+                643,
+                900
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    512.0,
+                    871.0
+                ],
+                [
+                    643.0,
+                    871.0
+                ],
+                [
+                    643.0,
+                    900.0
+                ],
+                [
+                    512.0,
+                    900.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "RESPONSIBILITY OF MANAGEMENT",
+            "block_bbox": [
+                363,
+                926,
+                793,
+                955
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    363.0,
+                    926.0
+                ],
+                [
+                    793.0,
+                    926.0
+                ],
+                [
+                    793.0,
+                    955.0
+                ],
+                [
+                    363.0,
+                    955.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "SECTION 3.1. Nothing contained in this Agreement shall be deemed to limit the Company in any way in the exercise of the regular generally recognized customary functions and responsibilities of Management of the business and direction of the working force consistent with safe working practices including the right to hire, to use improved methods or equipment, to combine jobs, to discontinue jobs, to determine work assignments and tours, to decide the number of employees needed at any particular time or place, to establish reasonable rules and regulations, to discipline and discharge employees for cause and to be the sole judge of the communications service rendered the public. Moreover, such functions of Management as may be included herein shall not be deemed to limit other functions of Management not specifically included herein.",
+            "block_bbox": [
+                133,
+                983,
+                1015,
+                1294
+            ],
+            "block_id": 11,
+            "block_order": 12,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    133.0,
+                    983.0
+                ],
+                [
+                    1015.0,
+                    983.0
+                ],
+                [
+                    1015.0,
+                    1294.0
+                ],
+                [
+                    133.0,
+                    1294.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "SECTION 3.2. The right of the Company to establish, determine and maintain standards of telephone service to the public is fully recognized. The Company shall not be required to retain in its employ any employee who fails continuously",
+            "block_bbox": [
+                134,
+                1316,
+                1002,
+                1404
+            ],
+            "block_id": 12,
+            "block_order": 13,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    134.0,
+                    1316.0
+                ],
+                [
+                    1002.0,
+                    1316.0
+                ],
+                [
+                    1002.0,
+                    1404.0
+                ],
+                [
+                    134.0,
+                    1404.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "5",
+            "block_bbox": [
+                612,
+                1473,
+                630,
+                1497
+            ],
+            "block_id": 13,
+            "block_order": null,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    612.0,
+                    1473.0
+                ],
+                [
+                    629.0,
+                    1473.0
+                ],
+                [
+                    629.0,
+                    1496.0
+                ],
+                [
+                    612.0,
+                    1496.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9150644540786743,
+                "coordinate": [
+                    138,
+                    37,
+                    921,
+                    97
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        138.0,
+                        37.0
+                    ],
+                    [
+                        921.0,
+                        37.0
+                    ],
+                    [
+                        921.0,
+                        97.0
+                    ],
+                    [
+                        138.0,
+                        97.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9205647110939026,
+                "coordinate": [
+                    137,
+                    120,
+                    917,
+                    181
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        137.0,
+                        120.0
+                    ],
+                    [
+                        917.0,
+                        120.0
+                    ],
+                    [
+                        917.0,
+                        181.0
+                    ],
+                    [
+                        137.0,
+                        181.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9134282469749451,
+                "coordinate": [
+                    138,
+                    203,
+                    1016,
+                    264
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        138.0,
+                        203.0
+                    ],
+                    [
+                        1016.0,
+                        203.0
+                    ],
+                    [
+                        1016.0,
+                        264.0
+                    ],
+                    [
+                        138.0,
+                        264.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9332331418991089,
+                "coordinate": [
+                    137,
+                    287,
+                    1009,
+                    375
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        137.0,
+                        287.0
+                    ],
+                    [
+                        1009.0,
+                        287.0
+                    ],
+                    [
+                        1009.0,
+                        375.0
+                    ],
+                    [
+                        137.0,
+                        375.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9177921414375305,
+                "coordinate": [
+                    136,
+                    398,
+                    968,
+                    459
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        136.0,
+                        398.0
+                    ],
+                    [
+                        968.0,
+                        398.0
+                    ],
+                    [
+                        968.0,
+                        459.0
+                    ],
+                    [
+                        136.0,
+                        459.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9261542558670044,
+                "coordinate": [
+                    135,
+                    481,
+                    926,
+                    542
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        135.0,
+                        481.0
+                    ],
+                    [
+                        926.0,
+                        481.0
+                    ],
+                    [
+                        926.0,
+                        542.0
+                    ],
+                    [
+                        135.0,
+                        542.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9098543524742126,
+                "coordinate": [
+                    136,
+                    565,
+                    1011,
+                    624
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        136.0,
+                        565.0
+                    ],
+                    [
+                        1011.0,
+                        565.0
+                    ],
+                    [
+                        1011.0,
+                        624.0
+                    ],
+                    [
+                        136.0,
+                        624.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9370890259742737,
+                "coordinate": [
+                    135,
+                    650,
+                    1016,
+                    734
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        135.0,
+                        650.0
+                    ],
+                    [
+                        1016.0,
+                        650.0
+                    ],
+                    [
+                        1016.0,
+                        734.0
+                    ],
+                    [
+                        135.0,
+                        734.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9268696904182434,
+                "coordinate": [
+                    230,
+                    761,
+                    989,
+                    847
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        230.0,
+                        761.0
+                    ],
+                    [
+                        989.0,
+                        761.0
+                    ],
+                    [
+                        989.0,
+                        847.0
+                    ],
+                    [
+                        230.0,
+                        847.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8143479228019714,
+                "coordinate": [
+                    512,
+                    871,
+                    643,
+                    900
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        512.0,
+                        871.0
+                    ],
+                    [
+                        643.0,
+                        871.0
+                    ],
+                    [
+                        643.0,
+                        900.0
+                    ],
+                    [
+                        512.0,
+                        900.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8426198363304138,
+                "coordinate": [
+                    363,
+                    926,
+                    793,
+                    955
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        363.0,
+                        926.0
+                    ],
+                    [
+                        793.0,
+                        926.0
+                    ],
+                    [
+                        793.0,
+                        955.0
+                    ],
+                    [
+                        363.0,
+                        955.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.965561032295227,
+                "coordinate": [
+                    133,
+                    983,
+                    1015,
+                    1294
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        133.0,
+                        983.0
+                    ],
+                    [
+                        1015.0,
+                        983.0
+                    ],
+                    [
+                        1015.0,
+                        1294.0
+                    ],
+                    [
+                        133.0,
+                        1294.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9326669573783875,
+                "coordinate": [
+                    134,
+                    1316,
+                    1002,
+                    1404
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        134.0,
+                        1316.0
+                    ],
+                    [
+                        1002.0,
+                        1316.0
+                    ],
+                    [
+                        1002.0,
+                        1404.0
+                    ],
+                    [
+                        134.0,
+                        1404.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7304310202598572,
+                "coordinate": [
+                    612,
+                    1473,
+                    630,
+                    1497
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        612.0,
+                        1473.0
+                    ],
+                    [
+                        629.0,
+                        1473.0
+                    ],
+                    [
+                        629.0,
+                        1496.0
+                    ],
+                    [
+                        612.0,
+                        1496.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

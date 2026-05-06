@@ -1,0 +1,156 @@
+{
+    "input_path": "cache/dol_archive/document_3522.pdf",
+    "page_index": 59,
+    "page_count": 62,
+    "width": 1223,
+    "height": 1582,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>REQUEST FOR OFFICIAL TIME</td></tr><tr><td>Nature of Business:</td></tr><tr><td>Destination:</td></tr><tr><td>Estimated amount of time needed:</td></tr><tr><td>Departure Date and Time from Workplace:</td></tr><tr><td>Return Date and Time to Workplace:</td></tr><tr><td>Union Representative Name (Printed):</td></tr><tr><td>Signature with Date and Time:</td></tr><tr><td>Supervisor Name (Printed):</td></tr><tr><td>Approval or Disapproval (Circle one): If Disapproved, why?</td></tr><tr><td>Supervisor Signature with Date and Time:</td></tr></table>",
+            "block_bbox": [
+                99,
+                145,
+                1118,
+                870
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    99.0,
+                    145.0
+                ],
+                [
+                    1118.0,
+                    145.0
+                ],
+                [
+                    1118.0,
+                    870.0
+                ],
+                [
+                    99.0,
+                    870.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Appendix A",
+            "block_bbox": [
+                102,
+                905,
+                296,
+                946
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    102.0,
+                    905.0
+                ],
+                [
+                    296.0,
+                    905.0
+                ],
+                [
+                    296.0,
+                    946.0
+                ],
+                [
+                    102.0,
+                    946.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9683245420455933,
+                "coordinate": [
+                    99,
+                    145,
+                    1118,
+                    870
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        99.0,
+                        145.0
+                    ],
+                    [
+                        1118.0,
+                        145.0
+                    ],
+                    [
+                        1118.0,
+                        870.0
+                    ],
+                    [
+                        99.0,
+                        870.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5787320137023926,
+                "coordinate": [
+                    102,
+                    905,
+                    296,
+                    946
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        102.0,
+                        905.0
+                    ],
+                    [
+                        296.0,
+                        905.0
+                    ],
+                    [
+                        296.0,
+                        946.0
+                    ],
+                    [
+                        102.0,
+                        946.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

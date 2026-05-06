@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_001b022f001_02.pdf",
+    "page_index": 4,
+    "page_count": 28,
+    "width": 577,
+    "height": 838,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "Section 3. All employees who are members of the Union shall maintain their membership during the period of this Agreement.",
+            "block_bbox": [
+                43,
+                70,
+                531,
+                126
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    43.0,
+                    70.0
+                ],
+                [
+                    531.0,
+                    70.0
+                ],
+                [
+                    531.0,
+                    126.0
+                ],
+                [
+                    43.0,
+                    126.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE III.",
+            "block_bbox": [
+                228,
+                133,
+                346,
+                153
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    228.0,
+                    133.0
+                ],
+                [
+                    345.0,
+                    133.0
+                ],
+                [
+                    345.0,
+                    152.0
+                ],
+                [
+                    228.0,
+                    152.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "HOURS OF WORK AND OVERTIME",
+            "block_bbox": [
+                124,
+                157,
+                451,
+                177
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    124.0,
+                    157.0
+                ],
+                [
+                    450.0,
+                    157.0
+                ],
+                [
+                    450.0,
+                    176.0
+                ],
+                [
+                    124.0,
+                    176.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 1. The regular work week shall consist of forty (40) hours. Time worked by full time employees in excess of forty (40) hours per week shall be compensated for at time and one-half the regular straight time hourly rate.",
+            "block_bbox": [
+                43,
+                181,
+                531,
+                252
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    43.0,
+                    181.0
+                ],
+                [
+                    531.0,
+                    181.0
+                ],
+                [
+                    531.0,
+                    252.0
+                ],
+                [
+                    43.0,
+                    252.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 2. Employees may be scheduled to work any one (1) night in a week beyond 6:00 p.m. at their regular straight time rates. Work beyond 6:00 p.m. on any other night in a week by full time employees shall be compensated for at time and one-half the regular straight time hourly rate and shall be scheduled outside of such employee's regular forty (40) hours.",
+            "block_bbox": [
+                44,
+                255,
+                532,
+                359
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    44.0,
+                    255.0
+                ],
+                [
+                    532.0,
+                    255.0
+                ],
+                [
+                    532.0,
+                    359.0
+                ],
+                [
+                    44.0,
+                    359.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 3. Full time employees working after 6:00 p.m. on New Year's Eve or Christmas Eve shall be compensated at double time; such employees working from 12:01 a.m. to 12:00 midnight on Sunday shall be compensated at triple time for all time so worked. Triple time will be paid for all work performed on Sundays only when the store is open for business, except in cases of emergency which shall include competitive store opening. In such instances double time will be paid.",
+            "block_bbox": [
+                44,
+                365,
+                532,
+                502
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    44.0,
+                    365.0
+                ],
+                [
+                    532.0,
+                    365.0
+                ],
+                [
+                    532.0,
+                    502.0
+                ],
+                [
+                    44.0,
+                    502.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 4. Excepting those working on a regular night shift, all full time employees working prior to 7:00 a.m. shall be compensated at time and one-half the regular straight time hourly rate for all time so worked.",
+            "block_bbox": [
+                44,
+                508,
+                533,
+                579
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    44.0,
+                    508.0
+                ],
+                [
+                    533.0,
+                    508.0
+                ],
+                [
+                    533.0,
+                    579.0
+                ],
+                [
+                    44.0,
+                    579.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 5. If any employee is required to work outside of his regular schedule he shall not be required to take time off from that schedule in order to avoid overtime.",
+            "block_bbox": [
+                44,
+                584,
+                533,
+                639
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    44.0,
+                    587.9999389648438
+                ],
+                [
+                    531.9999389648438,
+                    587.9999389648438
+                ],
+                [
+                    531.9999389648438,
+                    634.9999389648438
+                ],
+                [
+                    44.0,
+                    634.9999389648438
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 6. There shall be no split shift schedule for regular full time employees.",
+            "block_bbox": [
+                46,
+                645,
+                533,
+                684
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    46.0,
+                    645.0
+                ],
+                [
+                    533.0,
+                    645.0
+                ],
+                [
+                    533.0,
+                    684.0
+                ],
+                [
+                    46.0,
+                    684.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 7. Nothing in this Agreement shall be construed as providing for superimposing daily and weekly overtime.",
+            "block_bbox": [
+                46,
+                689,
+                534,
+                728
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    46.0,
+                    689.0
+                ],
+                [
+                    534.0,
+                    689.0
+                ],
+                [
+                    534.0,
+                    728.0
+                ],
+                [
+                    46.0,
+                    728.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Section 8. Any full time employee required to work beyond his scheduled quitting time shall be paid time and one-half for",
+            "block_bbox": [
+                46,
+                733,
+                535,
+                772
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    46.0,
+                    733.0
+                ],
+                [
+                    535.0,
+                    733.0
+                ],
+                [
+                    535.0,
+                    772.0
+                ],
+                [
+                    46.0,
+                    772.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "4",
+            "block_bbox": [
+                283,
+                781,
+                295,
+                796
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    283.0,
+                    781.0
+                ],
+                [
+                    294.0,
+                    781.0
+                ],
+                [
+                    294.0,
+                    795.0
+                ],
+                [
+                    283.0,
+                    795.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.908592164516449,
+                "coordinate": [
+                    43,
+                    70,
+                    531,
+                    126
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        43.0,
+                        70.0
+                    ],
+                    [
+                        531.0,
+                        70.0
+                    ],
+                    [
+                        531.0,
+                        126.0
+                    ],
+                    [
+                        43.0,
+                        126.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7039898633956909,
+                "coordinate": [
+                    228,
+                    133,
+                    346,
+                    153
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        228.0,
+                        133.0
+                    ],
+                    [
+                        345.0,
+                        133.0
+                    ],
+                    [
+                        345.0,
+                        152.0
+                    ],
+                    [
+                        228.0,
+                        152.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7049819827079773,
+                "coordinate": [
+                    124,
+                    157,
+                    451,
+                    177
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        124.0,
+                        157.0
+                    ],
+                    [
+                        450.0,
+                        157.0
+                    ],
+                    [
+                        450.0,
+                        176.0
+                    ],
+                    [
+                        124.0,
+                        176.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9358863830566406,
+                "coordinate": [
+                    43,
+                    181,
+                    531,
+                    252
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        43.0,
+                        181.0
+                    ],
+                    [
+                        531.0,
+                        181.0
+                    ],
+                    [
+                        531.0,
+                        252.0
+                    ],
+                    [
+                        43.0,
+                        252.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9518802165985107,
+                "coordinate": [
+                    44,
+                    255,
+                    532,
+                    359
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        44.0,
+                        255.0
+                    ],
+                    [
+                        532.0,
+                        255.0
+                    ],
+                    [
+                        532.0,
+                        359.0
+                    ],
+                    [
+                        44.0,
+                        359.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9576886892318726,
+                "coordinate": [
+                    44,
+                    365,
+                    532,
+                    502
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        44.0,
+                        365.0
+                    ],
+                    [
+                        532.0,
+                        365.0
+                    ],
+                    [
+                        532.0,
+                        502.0
+                    ],
+                    [
+                        44.0,
+                        502.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9439467191696167,
+                "coordinate": [
+                    44,
+                    508,
+                    533,
+                    579
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        44.0,
+                        508.0
+                    ],
+                    [
+                        533.0,
+                        508.0
+                    ],
+                    [
+                        533.0,
+                        579.0
+                    ],
+                    [
+                        44.0,
+                        579.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9364161491394043,
+                "coordinate": [
+                    44,
+                    584,
+                    533,
+                    639
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        44.0,
+                        587.9999389648438
+                    ],
+                    [
+                        531.9999389648438,
+                        587.9999389648438
+                    ],
+                    [
+                        531.9999389648438,
+                        634.9999389648438
+                    ],
+                    [
+                        44.0,
+                        634.9999389648438
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9238820672035217,
+                "coordinate": [
+                    46,
+                    645,
+                    533,
+                    684
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        46.0,
+                        645.0
+                    ],
+                    [
+                        533.0,
+                        645.0
+                    ],
+                    [
+                        533.0,
+                        684.0
+                    ],
+                    [
+                        46.0,
+                        684.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9180419445037842,
+                "coordinate": [
+                    46,
+                    689,
+                    534,
+                    728
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        46.0,
+                        689.0
+                    ],
+                    [
+                        534.0,
+                        689.0
+                    ],
+                    [
+                        534.0,
+                        728.0
+                    ],
+                    [
+                        46.0,
+                        728.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9173272252082825,
+                "coordinate": [
+                    46,
+                    733,
+                    535,
+                    772
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        46.0,
+                        733.0
+                    ],
+                    [
+                        535.0,
+                        733.0
+                    ],
+                    [
+                        535.0,
+                        772.0
+                    ],
+                    [
+                        46.0,
+                        772.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6740694046020508,
+                "coordinate": [
+                    283,
+                    781,
+                    295,
+                    796
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        283.0,
+                        781.0
+                    ],
+                    [
+                        294.0,
+                        781.0
+                    ],
+                    [
+                        294.0,
+                        795.0
+                    ],
+                    [
+                        283.0,
+                        795.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

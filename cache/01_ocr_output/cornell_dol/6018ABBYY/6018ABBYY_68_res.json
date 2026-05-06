@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 68,
+    "page_count": 287,
+    "width": 728,
+    "height": 1008,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Article VII",
+            "block_bbox": [
+                57,
+                51,
+                142,
+                70
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    57.0,
+                    51.0
+                ],
+                [
+                    141.0,
+                    51.0
+                ],
+                [
+                    141.0,
+                    69.0
+                ],
+                [
+                    57.0,
+                    69.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Effective January 1, 2002, the plan participant's deductible and co-payments for the Traditional Dental Plan are as follows:",
+            "block_bbox": [
+                85,
+                80,
+                635,
+                125
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    85.0,
+                    80.0
+                ],
+                [
+                    635.0,
+                    80.0
+                ],
+                [
+                    635.0,
+                    125.0
+                ],
+                [
+                    85.0,
+                    125.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>DEDUCTIBLE</td><td>PREVENTIVE</td><td>BASIC</td><td>MAJOR</td><td>CROWNS/BRIDGES</td><td>ORTHODONTIA</td></tr><tr><td>$50/$100</td><td>0%</td><td>20%</td><td>20%</td><td>50%</td><td>50%</td></tr></table>",
+            "block_bbox": [
+                85,
+                132,
+                633,
+                195
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    85.0,
+                    132.0
+                ],
+                [
+                    633.0,
+                    132.0
+                ],
+                [
+                    633.0,
+                    195.0
+                ],
+                [
+                    85.0,
+                    195.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The Traditional Dental Plan has a $900 maximum annual benefit, effective January 1, 1998 the annual maximum benefit shall be raised to $1,000, effective January 1, 1999 the annual maximum benefit shall be raised to $1,050 and effective January 1, 2000 the annual maximum benefit shall be raised to $1,100. Effective January 1, 2002, the annual maximum benefit, per covered life, shall be raised to $1,150. There is a lifetime orthodontia limit of $1,500. Effective January 1, 2002, the lifetime orthodontia limit is $1,250 per covered life.",
+            "block_bbox": [
+                84,
+                214,
+                637,
+                391
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    84.0,
+                    214.0
+                ],
+                [
+                    637.0,
+                    214.0
+                ],
+                [
+                    637.0,
+                    391.0
+                ],
+                [
+                    84.0,
+                    391.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Note: The following benefit changes (Physical Exams, PPOM In-Network Office Visit Co-pays, Chiropractic Care, Hearing Test and Aid Coverage and Dental changes) as written shall be effective January 1, 2002, or with the first full plan year following the merger with DTE Energy. If there is no merger with DTE Energy the benefit levels as provided for under the prior contract as they relate to the said areas of benefits if any, shall continue in effect and these new provisions shall not become part of the Traditional Medical and Dental Plans.",
+            "block_bbox": [
+                86,
+                410,
+                637,
+                609
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    86.0,
+                    410.0
+                ],
+                [
+                    637.0,
+                    410.0
+                ],
+                [
+                    637.0,
+                    609.0
+                ],
+                [
+                    86.0,
+                    609.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "60",
+            "block_bbox": [
+                332,
+                936,
+                355,
+                952
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    332.0,
+                    936.0
+                ],
+                [
+                    354.0,
+                    936.0
+                ],
+                [
+                    354.0,
+                    951.0
+                ],
+                [
+                    332.0,
+                    951.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5307068228721619,
+                "coordinate": [
+                    57,
+                    51,
+                    142,
+                    70
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        57.0,
+                        51.0
+                    ],
+                    [
+                        141.0,
+                        51.0
+                    ],
+                    [
+                        141.0,
+                        69.0
+                    ],
+                    [
+                        57.0,
+                        69.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8475258946418762,
+                "coordinate": [
+                    85,
+                    80,
+                    635,
+                    125
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        85.0,
+                        80.0
+                    ],
+                    [
+                        635.0,
+                        80.0
+                    ],
+                    [
+                        635.0,
+                        125.0
+                    ],
+                    [
+                        85.0,
+                        125.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.7562921643257141,
+                "coordinate": [
+                    85,
+                    132,
+                    633,
+                    195
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        85.0,
+                        132.0
+                    ],
+                    [
+                        633.0,
+                        132.0
+                    ],
+                    [
+                        633.0,
+                        195.0
+                    ],
+                    [
+                        85.0,
+                        195.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9525226354598999,
+                "coordinate": [
+                    84,
+                    214,
+                    637,
+                    391
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        84.0,
+                        214.0
+                    ],
+                    [
+                        637.0,
+                        214.0
+                    ],
+                    [
+                        637.0,
+                        391.0
+                    ],
+                    [
+                        84.0,
+                        391.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9510394334793091,
+                "coordinate": [
+                    86,
+                    410,
+                    637,
+                    609
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        86.0,
+                        410.0
+                    ],
+                    [
+                        637.0,
+                        410.0
+                    ],
+                    [
+                        637.0,
+                        609.0
+                    ],
+                    [
+                        86.0,
+                        609.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7372037768363953,
+                "coordinate": [
+                    332,
+                    936,
+                    355,
+                    952
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        332.0,
+                        936.0
+                    ],
+                    [
+                        354.0,
+                        936.0
+                    ],
+                    [
+                        354.0,
+                        951.0
+                    ],
+                    [
+                        332.0,
+                        951.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

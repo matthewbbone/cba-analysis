@@ -1,0 +1,827 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_001b022f001_02.pdf",
+    "page_index": 16,
+    "page_count": 28,
+    "width": 573,
+    "height": 839,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "8. Employees whose allotted vacation period includes a paid holiday will at the Company's option, be granted one day's basic straight time wage, or one additional day of vacation, in addition to the vacation grant.",
+            "block_bbox": [
+                38,
+                68,
+                527,
+                140
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    38.0,
+                    68.0
+                ],
+                [
+                    527.0,
+                    68.0
+                ],
+                [
+                    527.0,
+                    140.0
+                ],
+                [
+                    38.0,
+                    140.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "9. Monthly vacation credits do not accrue in the case of:",
+            "block_bbox": [
+                55,
+                147,
+                501,
+                168
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    55.0,
+                    147.0
+                ],
+                [
+                    501.0,
+                    147.0
+                ],
+                [
+                    501.0,
+                    168.0
+                ],
+                [
+                    55.0,
+                    168.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a. Layoffs of more than thirty (30) days.",
+            "block_bbox": [
+                56,
+                176,
+                383,
+                197
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    56.0,
+                    176.0
+                ],
+                [
+                    382.0,
+                    176.0
+                ],
+                [
+                    382.0,
+                    196.0
+                ],
+                [
+                    56.0,
+                    196.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b. Student employees, or temporary help hired for peak or seasonal periods",
+            "block_bbox": [
+                56,
+                204,
+                527,
+                242
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    56.0,
+                    204.0
+                ],
+                [
+                    527.0,
+                    204.0
+                ],
+                [
+                    527.0,
+                    242.0
+                ],
+                [
+                    56.0,
+                    242.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "c. Leave of absence exceeding thirty (30) days",
+            "block_bbox": [
+                56,
+                249,
+                429,
+                270
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    56.0,
+                    249.0
+                ],
+                [
+                    428.0,
+                    249.0
+                ],
+                [
+                    428.0,
+                    269.0
+                ],
+                [
+                    56.0,
+                    269.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "d. Absence for other reasons except as provided in paragraph 10 below.",
+            "block_bbox": [
+                56,
+                273,
+                526,
+                310
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    56.0,
+                    273.0
+                ],
+                [
+                    526.0,
+                    273.0
+                ],
+                [
+                    526.0,
+                    310.0
+                ],
+                [
+                    56.0,
+                    310.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "c. Except as provided by law (see paragraph 11).",
+            "block_bbox": [
+                56,
+                314,
+                445,
+                336
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    56.0,
+                    314.0
+                ],
+                [
+                    445.0,
+                    314.0
+                ],
+                [
+                    445.0,
+                    336.0
+                ],
+                [
+                    56.0,
+                    336.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "10. Eligible employees absent from work due to on-the-job (Workmen's Compensation) injury sustained during the vacation year will nevertheless be entitled to their vacation grant for that particular vacation year.",
+            "block_bbox": [
+                38,
+                343,
+                527,
+                414
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    38.0,
+                    343.0
+                ],
+                [
+                    527.0,
+                    343.0
+                ],
+                [
+                    527.0,
+                    414.0
+                ],
+                [
+                    38.0,
+                    414.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Eligible employees absent from work due to non-occupational accident and sickness, for a cumulative period not to exceed six months (6/12th) within the vacation year, will nevertheless be entitled to their vacation grant for that particular vacation year. In the event of absence in excess of six months, employees will be entitled to 6/12ths of the annual vacation grant, plus an additional 1/12th for each full month actively on the job during the vacation year.",
+            "block_bbox": [
+                38,
+                420,
+                527,
+                557
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    38.0,
+                    420.0
+                ],
+                [
+                    527.0,
+                    420.0
+                ],
+                [
+                    527.0,
+                    557.0
+                ],
+                [
+                    38.0,
+                    557.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "11. a. Employees entering the U. S. Armed Forces will be paid their earned pro-rata vacation grant through the last day of the month of active employment.",
+            "block_bbox": [
+                58,
+                562,
+                527,
+                617
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    58.0,
+                    562.0
+                ],
+                [
+                    527.0,
+                    562.0
+                ],
+                [
+                    527.0,
+                    617.0
+                ],
+                [
+                    58.0,
+                    617.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b. In compliance with the Selective Service and Training Act, returning veterans who re-enter the Company's service within the vacation period (defined Section 2, paragraph 2) will be paid one-twelfth (1/12th) of the annual vacation grant for each full month on the job during the vacation period.",
+            "block_bbox": [
+                57,
+                623,
+                528,
+                726
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    57.0,
+                    623.0
+                ],
+                [
+                    528.0,
+                    623.0
+                ],
+                [
+                    528.0,
+                    726.0
+                ],
+                [
+                    57.0,
+                    726.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "c. Veterans who re-enter the Company's service after the final day of the vacation period (defined Section 2, para-",
+            "block_bbox": [
+                56,
+                732,
+                528,
+                770
+            ],
+            "block_id": 11,
+            "block_order": 12,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    55.783447265625,
+                    735.0014038085938
+                ],
+                [
+                    527.0,
+                    732.0000610351562
+                ],
+                [
+                    527.216552734375,
+                    765.9987182617188
+                ],
+                [
+                    56.0,
+                    769.0000610351562
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "16",
+            "block_bbox": [
+                271,
+                778,
+                292,
+                795
+            ],
+            "block_id": 12,
+            "block_order": null,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    271.0,
+                    778.0
+                ],
+                [
+                    291.0,
+                    778.0
+                ],
+                [
+                    291.0,
+                    794.0
+                ],
+                [
+                    271.0,
+                    794.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9405418634414673,
+                "coordinate": [
+                    38,
+                    68,
+                    527,
+                    140
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        38.0,
+                        68.0
+                    ],
+                    [
+                        527.0,
+                        68.0
+                    ],
+                    [
+                        527.0,
+                        140.0
+                    ],
+                    [
+                        38.0,
+                        140.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8556361198425293,
+                "coordinate": [
+                    55,
+                    147,
+                    501,
+                    168
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        55.0,
+                        147.0
+                    ],
+                    [
+                        501.0,
+                        147.0
+                    ],
+                    [
+                        501.0,
+                        168.0
+                    ],
+                    [
+                        55.0,
+                        168.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8372775912284851,
+                "coordinate": [
+                    56,
+                    176,
+                    383,
+                    197
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        56.0,
+                        176.0
+                    ],
+                    [
+                        382.0,
+                        176.0
+                    ],
+                    [
+                        382.0,
+                        196.0
+                    ],
+                    [
+                        56.0,
+                        196.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9051064252853394,
+                "coordinate": [
+                    56,
+                    204,
+                    527,
+                    242
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        56.0,
+                        204.0
+                    ],
+                    [
+                        527.0,
+                        204.0
+                    ],
+                    [
+                        527.0,
+                        242.0
+                    ],
+                    [
+                        56.0,
+                        242.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8486790060997009,
+                "coordinate": [
+                    56,
+                    249,
+                    429,
+                    270
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        56.0,
+                        249.0
+                    ],
+                    [
+                        428.0,
+                        249.0
+                    ],
+                    [
+                        428.0,
+                        269.0
+                    ],
+                    [
+                        56.0,
+                        269.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9014000296592712,
+                "coordinate": [
+                    56,
+                    273,
+                    526,
+                    310
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        56.0,
+                        273.0
+                    ],
+                    [
+                        526.0,
+                        273.0
+                    ],
+                    [
+                        526.0,
+                        310.0
+                    ],
+                    [
+                        56.0,
+                        310.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8378597497940063,
+                "coordinate": [
+                    56,
+                    314,
+                    445,
+                    336
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        56.0,
+                        314.0
+                    ],
+                    [
+                        445.0,
+                        314.0
+                    ],
+                    [
+                        445.0,
+                        336.0
+                    ],
+                    [
+                        56.0,
+                        336.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.939501941204071,
+                "coordinate": [
+                    38,
+                    343,
+                    527,
+                    414
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        38.0,
+                        343.0
+                    ],
+                    [
+                        527.0,
+                        343.0
+                    ],
+                    [
+                        527.0,
+                        414.0
+                    ],
+                    [
+                        38.0,
+                        414.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9604429602622986,
+                "coordinate": [
+                    38,
+                    420,
+                    527,
+                    557
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        38.0,
+                        420.0
+                    ],
+                    [
+                        527.0,
+                        420.0
+                    ],
+                    [
+                        527.0,
+                        557.0
+                    ],
+                    [
+                        38.0,
+                        557.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.932174563407898,
+                "coordinate": [
+                    58,
+                    562,
+                    527,
+                    617
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        58.0,
+                        562.0
+                    ],
+                    [
+                        527.0,
+                        562.0
+                    ],
+                    [
+                        527.0,
+                        617.0
+                    ],
+                    [
+                        58.0,
+                        617.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9593734741210938,
+                "coordinate": [
+                    57,
+                    623,
+                    528,
+                    726
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        57.0,
+                        623.0
+                    ],
+                    [
+                        528.0,
+                        623.0
+                    ],
+                    [
+                        528.0,
+                        726.0
+                    ],
+                    [
+                        57.0,
+                        726.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9026787281036377,
+                "coordinate": [
+                    56,
+                    732,
+                    528,
+                    770
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        55.783447265625,
+                        735.0014038085938
+                    ],
+                    [
+                        527.0,
+                        732.0000610351562
+                    ],
+                    [
+                        527.216552734375,
+                        765.9987182617188
+                    ],
+                    [
+                        56.0,
+                        769.0000610351562
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8135977983474731,
+                "coordinate": [
+                    271,
+                    778,
+                    292,
+                    795
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        271.0,
+                        778.0
+                    ],
+                    [
+                        291.0,
+                        778.0
+                    ],
+                    [
+                        291.0,
+                        794.0
+                    ],
+                    [
+                        271.0,
+                        794.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

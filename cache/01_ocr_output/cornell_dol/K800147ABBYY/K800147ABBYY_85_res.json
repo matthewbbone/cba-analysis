@@ -1,0 +1,278 @@
+{
+    "input_path": "cache/cornell_dol/K800147ABBYY.pdf",
+    "page_index": 85,
+    "page_count": 125,
+    "width": 1584,
+    "height": 1224,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Appendix A",
+            "block_bbox": [
+                748,
+                37,
+                838,
+                58
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    748.0,
+                    37.0
+                ],
+                [
+                    837.0,
+                    37.0
+                ],
+                [
+                    837.0,
+                    57.0
+                ],
+                [
+                    748.0,
+                    57.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "COMMONWEALTH OF PENNSYLVANIA\n37½ HOUR STANDARD PAY SCHEDULE\nEFFECTIVE JULY 1, 2002\nSCHEDULE S",
+            "block_bbox": [
+                539,
+                74,
+                1039,
+                195
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    539.0,
+                    74.0
+                ],
+                [
+                    1039.0,
+                    74.0
+                ],
+                [
+                    1039.0,
+                    195.0
+                ],
+                [
+                    539.0,
+                    195.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>PAY STEP</td><td>PAY RANGE 1</td><td>PAY RANGE 2</td><td>PAY RANGE 3</td><td>PAY RANGE 4</td><td>PAY RANGE 5</td><td>PAY RANGE 6</td><td>PAY RANGE 7</td><td>PAY RANGE 8</td><td>PAY RANGE 9</td><td>PAY RANGE 10</td><td>PAY RANGE 11</td></tr><tr><td>1</td><td>Biwekeek Annual*</td><td>9.16 687.00 17,917</td><td>10.31 773.25 20,166</td><td>11.62 871.50 22,729</td><td>13.10 982.50 25,624</td><td>14.78 1,108.50 28,910</td><td>16.73 1,254.75 32,724</td><td>19.10 1,432.50 37,360</td><td>21.79 1,634.25 42,621</td><td>24.87 1,865.25 48,646</td><td>28.39 2,129.25 55,531</td></tr><tr><td>2</td><td>Biwekeek Annual*</td><td>9.35 701.25 18,289</td><td>10.52 789.00 20,577</td><td>11.83 887.25 23,139</td><td>13.35 1,001.25 26,113</td><td>15.10 1,132.50 29,536</td><td>17.09 1,281.75 33,428</td><td>19.53 1,464.75 38,201</td><td>22.27 1,670.25 43,560</td><td>25.42 1,906.50 49,722</td><td>29.02 2,176.50 56,763</td></tr><tr><td>3</td><td>Biwekeek Annual*</td><td>9.53 714.75 18,641</td><td>10.71 803.25 20,949</td><td>12.08 906.00 23,628</td><td>13.63 1,022.25 26,660</td><td>15.39 1,154.25 30,103</td><td>17.45 1,308.75 34,132</td><td>19.94 1,495.50 39,003</td><td>22.78 1,708.50 44,558</td><td>26.00 1,950.00 50,856</td><td>29.67 2,225.25 58,035</td></tr><tr><td>4</td><td>Biwekeek Annual*</td><td>9.72 729.00 19,012</td><td>10.94 820.50 21,399</td><td>12.34 925.50 24,137</td><td>13.93 1,044.75 27,247</td><td>15.71 1,178.25 30,729</td><td>17.85 1,338.75 34,915</td><td>20.39 1,529.25 39,883</td><td>23.30 1,747.50 45,575</td><td>26.57 1,992.75 51,971</td><td>30.32 2,274.00 59,306</td></tr><tr><td>5</td><td>Biwekeek Annual*</td><td>9.90 742.50 19,364</td><td>11.15 836.25 21,809</td><td>12.55 941.25 24,548</td><td>14.18 1,063.50 27,736</td><td>16.03 1,202.25 31,355</td><td>18.27 1,370.25 35,736</td><td>20.84 1,563.00 40,763</td><td>23.81 1,785.75 46,572</td><td>27.18 2,038.50 53,164</td><td>30.98 2,323.50 60,597</td></tr><tr><td>6</td><td>Biwekeek Annual*</td><td>10.10 757.50 19,756</td><td>11.37 852.75 22,240</td><td>12.83 962.25 25,095</td><td>14.48 1,086.00 28,323</td><td>16.38 1,228.50 32,039</td><td>18.66 1,399.50 36,499</td><td>21.33 1,599.75 41,721</td><td>24.34 1,825.50 47,609</td><td>27.76 2,082.00 54,299</td><td>31.69 2,376.75 61,986</td></tr><tr><td>7</td><td>Biwekeek Annual*</td><td>10.31 773.25 20,166</td><td>11.62 871.50 22,729</td><td>13.10 982.50 25,624</td><td>14.78 1,108.50 28,910</td><td>16.73 1,254.75 32,724</td><td>19.10 1,432.50 37,360</td><td>21.79 1,634.25 42,621</td><td>24.87 1,865.25 48,646</td><td>28.39 2,129.25 55,531</td><td>32.41 2,430.75 63,394</td></tr><tr><td>8</td><td>Biwekeek Annual*</td><td>10.52 789.00 20,577</td><td>11.83 887.25 23,139</td><td>13.35 1,001.25 26,113</td><td>15.10 1,132.50 29,536</td><td>17.09 1,281.75 33,428</td><td>19.53 1,464.75 38,201</td><td>22.27 1,670.25 43,560</td><td>25.42 1,906.50 49,722</td><td>29.02 2,176.50 56,763</td><td>33.11 2,483.25 64,763</td></tr><tr><td>9</td><td>Biwekeek Annual*</td><td>10.71 803.25 20,949</td><td>12.08 906.00 23,628</td><td>13.63 1,022.25 26,660</td><td>15.39 1,154.25 30,103</td><td>17.45 1,308.75 34,132</td><td>19.94 1,495.50 39,003</td><td>22.78 1,708.50 44,558</td><td>26.00 1,950.00 50,856</td><td>29.67 2,225.25 58,035</td><td>33.85 2,538.75 66,211</td></tr><tr><td>10</td><td>Biwekeek Annual*</td><td>10.94 820.50 21,399</td><td>12.34 925.50 24,137</td><td>13.93 1,044.75 27,247</td><td>15.71 1,178.25 30,729</td><td>17.85 1,338.75 34,915</td><td>20.39 1,529.25 39,883</td><td>23.30 1,747.50 45,575</td><td>26.57 1,992.75 51,971</td><td>30.32 2,274.00 59,306</td><td>34.60 2,595.00 67,678</td></tr></table>",
+            "block_bbox": [
+                258,
+                201,
+                1323,
+                1053
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    258.0,
+                    201.0
+                ],
+                [
+                    1323.0,
+                    201.0
+                ],
+                [
+                    1323.0,
+                    1053.0
+                ],
+                [
+                    258.0,
+                    1053.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 1 of 4",
+            "block_bbox": [
+                1238,
+                1072,
+                1310,
+                1091
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    1238.0,
+                    1072.0
+                ],
+                [
+                    1309.0,
+                    1072.0
+                ],
+                [
+                    1309.0,
+                    1090.0
+                ],
+                [
+                    1238.0,
+                    1090.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.5350947976112366,
+                "coordinate": [
+                    748,
+                    37,
+                    838,
+                    58
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        748.0,
+                        37.0
+                    ],
+                    [
+                        837.0,
+                        37.0
+                    ],
+                    [
+                        837.0,
+                        57.0
+                    ],
+                    [
+                        748.0,
+                        57.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.591545581817627,
+                "coordinate": [
+                    539,
+                    74,
+                    1039,
+                    195
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        539.0,
+                        74.0
+                    ],
+                    [
+                        1039.0,
+                        74.0
+                    ],
+                    [
+                        1039.0,
+                        195.0
+                    ],
+                    [
+                        539.0,
+                        195.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9543958306312561,
+                "coordinate": [
+                    258,
+                    201,
+                    1323,
+                    1053
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        258.0,
+                        201.0
+                    ],
+                    [
+                        1323.0,
+                        201.0
+                    ],
+                    [
+                        1323.0,
+                        1053.0
+                    ],
+                    [
+                        258.0,
+                        1053.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7791465520858765,
+                "coordinate": [
+                    1238,
+                    1072,
+                    1310,
+                    1091
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        1238.0,
+                        1072.0
+                    ],
+                    [
+                        1309.0,
+                        1072.0
+                    ],
+                    [
+                        1309.0,
+                        1090.0
+                    ],
+                    [
+                        1238.0,
+                        1090.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

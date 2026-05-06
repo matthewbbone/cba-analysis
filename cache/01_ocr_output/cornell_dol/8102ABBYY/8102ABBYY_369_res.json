@@ -1,0 +1,522 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 369,
+    "page_count": 439,
+    "width": 1235,
+    "height": 1592,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                747,
+                114,
+                907,
+                134
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    746.9999389648438,
+                    114.0
+                ],
+                [
+                    905.9999389648438,
+                    114.0
+                ],
+                [
+                    905.9999389648438,
+                    133.0
+                ],
+                [
+                    746.9999389648438,
+                    133.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Number of weeks after effective date of the assignment</td><td>Reduction to be applied</td></tr><tr><td>0 - 10 Years N.C.S.\nWeeks 1 thru 4\nWeeks 5 thru 8\nWeeks 9 thru 12\nWeeks 13 &amp; thereafter</td><td>No reduction\n1/3 reduction\n2/3 reduction\nFull reduction</td></tr><tr><td>10 - 15 Years N.C.S.\nWeeks 1 thru 30\nWeeks 31 thru 34\nWeeks 35 thru 38\nWeeks 39 &amp; thereafter</td><td>No reduction\n1/3 reduction\n2/3 reduction\nFull reduction</td></tr><tr><td>15 Years N.C.S. and over\nWeeks 1 thru 56\nWeeks 57 thru 60\nWeeks 61 thru 64\nWeeks 55 &amp; thereafter</td><td>No reduction\n1/3 reduction\n2/3 reduction\nFull reduction</td></tr></table>",
+            "block_bbox": [
+                400,
+                169,
+                858,
+                541
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    400.0,
+                    169.0
+                ],
+                [
+                    858.0,
+                    169.0
+                ],
+                [
+                    858.0,
+                    541.0
+                ],
+                [
+                    400.0,
+                    541.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "8 RELOCATION EXPENSES",
+            "block_bbox": [
+                352,
+                577,
+                578,
+                597
+            ],
+            "block_id": 2,
+            "block_order": 1,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    352.0,
+                    577.0
+                ],
+                [
+                    577.0,
+                    577.0
+                ],
+                [
+                    577.0,
+                    596.0
+                ],
+                [
+                    352.0,
+                    596.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(a) Occupational employees, shall bear any costs and expenses associated with relocation under the Career Placement features of the LTP, unless the employee is surplus at the time the Career Placement job offer is accepted.",
+            "block_bbox": [
+                385,
+                611,
+                906,
+                683
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    385.0,
+                    611.0
+                ],
+                [
+                    906.0,
+                    611.0
+                ],
+                [
+                    906.0,
+                    683.0
+                ],
+                [
+                    385.0,
+                    683.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(b) A former occupational employee shall bear any costs and expenses associated with relocation under Career Rehire Placement features of the LTP.",
+            "block_bbox": [
+                384,
+                695,
+                906,
+                750
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    384.0,
+                    695.0
+                ],
+                [
+                    906.0,
+                    695.0
+                ],
+                [
+                    906.0,
+                    750.0
+                ],
+                [
+                    384.0,
+                    750.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(c) A Surplus Employee who accepts a position within his/her current LPA shall bear any costs and expenses associated with relocation under the LTP.",
+            "block_bbox": [
+                384,
+                762,
+                906,
+                816
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    384.0,
+                    762.0
+                ],
+                [
+                    906.0,
+                    762.0
+                ],
+                [
+                    906.0,
+                    816.0
+                ],
+                [
+                    384.0,
+                    816.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(d) A former occupational employee who accepts a position within his/her current LPA under the Surplus Rehire Placement features of the LTP shall bear any costs and expenses associated with relocation under the LTP.",
+            "block_bbox": [
+                384,
+                829,
+                906,
+                899
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    384.0,
+                    829.0
+                ],
+                [
+                    906.0,
+                    829.0
+                ],
+                [
+                    906.0,
+                    899.0
+                ],
+                [
+                    384.0,
+                    899.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "381",
+            "block_bbox": [
+                874,
+                912,
+                902,
+                928
+            ],
+            "block_id": 7,
+            "block_order": null,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    874.0,
+                    912.0
+                ],
+                [
+                    901.0,
+                    912.0
+                ],
+                [
+                    901.0,
+                    927.0
+                ],
+                [
+                    874.0,
+                    927.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8039234280586243,
+                "coordinate": [
+                    747,
+                    114,
+                    907,
+                    134
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        746.9999389648438,
+                        114.0
+                    ],
+                    [
+                        905.9999389648438,
+                        114.0
+                    ],
+                    [
+                        905.9999389648438,
+                        133.0
+                    ],
+                    [
+                        746.9999389648438,
+                        133.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.8971378207206726,
+                "coordinate": [
+                    400,
+                    169,
+                    858,
+                    541
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        400.0,
+                        169.0
+                    ],
+                    [
+                        858.0,
+                        169.0
+                    ],
+                    [
+                        858.0,
+                        541.0
+                    ],
+                    [
+                        400.0,
+                        541.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8140864968299866,
+                "coordinate": [
+                    352,
+                    577,
+                    578,
+                    597
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        352.0,
+                        577.0
+                    ],
+                    [
+                        577.0,
+                        577.0
+                    ],
+                    [
+                        577.0,
+                        596.0
+                    ],
+                    [
+                        352.0,
+                        596.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9180095791816711,
+                "coordinate": [
+                    385,
+                    611,
+                    906,
+                    683
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        385.0,
+                        611.0
+                    ],
+                    [
+                        906.0,
+                        611.0
+                    ],
+                    [
+                        906.0,
+                        683.0
+                    ],
+                    [
+                        385.0,
+                        683.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9091978073120117,
+                "coordinate": [
+                    384,
+                    695,
+                    906,
+                    750
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        384.0,
+                        695.0
+                    ],
+                    [
+                        906.0,
+                        695.0
+                    ],
+                    [
+                        906.0,
+                        750.0
+                    ],
+                    [
+                        384.0,
+                        750.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9192832112312317,
+                "coordinate": [
+                    384,
+                    762,
+                    906,
+                    816
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        384.0,
+                        762.0
+                    ],
+                    [
+                        906.0,
+                        762.0
+                    ],
+                    [
+                        906.0,
+                        816.0
+                    ],
+                    [
+                        384.0,
+                        816.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9295223951339722,
+                "coordinate": [
+                    384,
+                    829,
+                    906,
+                    899
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        384.0,
+                        829.0
+                    ],
+                    [
+                        906.0,
+                        829.0
+                    ],
+                    [
+                        906.0,
+                        899.0
+                    ],
+                    [
+                        384.0,
+                        899.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6679201722145081,
+                "coordinate": [
+                    874,
+                    912,
+                    902,
+                    928
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        874.0,
+                        912.0
+                    ],
+                    [
+                        901.0,
+                        912.0
+                    ],
+                    [
+                        901.0,
+                        927.0
+                    ],
+                    [
+                        874.0,
+                        927.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,1681 @@
+{
+    "input_path": "cache/cornell_dol/K830313_08_07combined.pdf",
+    "page_index": 99,
+    "page_count": 139,
+    "width": 1225,
+    "height": 1585,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Jeffco Schools: JCEA Negotiated Agreement",
+            "block_bbox": [
+                36,
+                28,
+                477,
+                55
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    28.0
+                ],
+                [
+                    477.0,
+                    28.0
+                ],
+                [
+                    477.0,
+                    55.0
+                ],
+                [
+                    36.0,
+                    55.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 1 of 3",
+            "block_bbox": [
+                1078,
+                27,
+                1193,
+                56
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    1078.0,
+                    27.0
+                ],
+                [
+                    1193.0,
+                    27.0
+                ],
+                [
+                    1193.0,
+                    56.0
+                ],
+                [
+                    1078.0,
+                    56.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 39",
+            "block_bbox": [
+                35,
+                67,
+                213,
+                98
+            ],
+            "block_id": 2,
+            "block_order": 1,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    35.0,
+                    67.0
+                ],
+                [
+                    213.0,
+                    67.0
+                ],
+                [
+                    213.0,
+                    98.0
+                ],
+                [
+                    35.0,
+                    98.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Reduction in Force",
+            "block_bbox": [
+                36,
+                125,
+                206,
+                148
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    125.0
+                ],
+                [
+                    206.0,
+                    125.0
+                ],
+                [
+                    206.0,
+                    148.0
+                ],
+                [
+                    36.0,
+                    148.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "39-1 Definitions",
+            "block_bbox": [
+                36,
+                174,
+                168,
+                196
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    174.0
+                ],
+                [
+                    167.0,
+                    174.0
+                ],
+                [
+                    167.0,
+                    195.0
+                ],
+                [
+                    36.0,
+                    195.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "39-1-1 \"Teacher\" for the purpose of this Article shall mean any person who is regularly licensed by the teacher licensing authority for the State of Colorado, and who is employed full-time by the District, except those persons holding letters of authorization and the Chief Administra-tive Officer of the District.",
+            "block_bbox": [
+                93,
+                222,
+                1127,
+                287
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    93.0,
+                    222.0
+                ],
+                [
+                    1127.0,
+                    222.0
+                ],
+                [
+                    1127.0,
+                    287.0
+                ],
+                [
+                    93.0,
+                    287.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "39-1-2 \"Cancellation of employment\" shall mean the termination of employment of a teacher when there is a justifiable reduction in the number of teaching positions in the District.",
+            "block_bbox": [
+                94,
+                311,
+                1125,
+                355
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    94.0,
+                    311.0
+                ],
+                [
+                    1125.0,
+                    311.0
+                ],
+                [
+                    1125.0,
+                    355.0
+                ],
+                [
+                    94.0,
+                    355.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "39-1-3 \"Layoff\" shall mean a removal from active service to the District because of a reduction of teacher(s).",
+            "block_bbox": [
+                94,
+                381,
+                965,
+                405
+            ],
+            "block_id": 7,
+            "block_order": 6,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    94.0,
+                    381.0
+                ],
+                [
+                    965.0,
+                    381.0
+                ],
+                [
+                    965.0,
+                    405.0
+                ],
+                [
+                    94.0,
+                    405.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "39-1-4 \"Full-time Continuous Service\" for the purpose of this Article shall mean the length of service as a contracted teacher of the District and shall be computed from the employee's first year of employment. Time spent on sabbatical leaves shall be credited toward continuous service. Continuous service shall not be interrupted by approved leaves of absence, resignation, or termination followed by rehiring within thirty-nine (39) months. However, such period of time during such leaves of absence or after termination or resignation, and prior to rehire, shall not be credited as continuous service.",
+            "block_bbox": [
+                94,
+                429,
+                1115,
+                534
+            ],
+            "block_id": 8,
+            "block_order": 7,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    94.0,
+                    429.0
+                ],
+                [
+                    1115.0,
+                    429.0
+                ],
+                [
+                    1115.0,
+                    534.0
+                ],
+                [
+                    94.0,
+                    534.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "39-1-5 \"Recall status\" shall mean that period of time that the teacher is on unpaid leave prior to being returned to work.",
+            "block_bbox": [
+                94,
+                558,
+                1048,
+                582
+            ],
+            "block_id": 9,
+            "block_order": 8,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    94.0,
+                    558.0
+                ],
+                [
+                    1048.0,
+                    558.0
+                ],
+                [
+                    1048.0,
+                    582.0
+                ],
+                [
+                    94.0,
+                    582.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "39-1-6 \"Recall\" shall mean notification of, and return to, active service in the District of a teacher(s) on layoff status.",
+            "block_bbox": [
+                94,
+                607,
+                1017,
+                630
+            ],
+            "block_id": 10,
+            "block_order": 9,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    101.0,
+                    607.0
+                ],
+                [
+                    1016.0,
+                    607.0
+                ],
+                [
+                    1016.0,
+                    629.0
+                ],
+                [
+                    101.0,
+                    629.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "39-2 Any reduction in the number of teaching positions in the District shall be in accordance with Colorado Statutes then in effect.",
+            "block_bbox": [
+                35,
+                655,
+                1070,
+                680
+            ],
+            "block_id": 11,
+            "block_order": 10,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    35.0,
+                    655.0
+                ],
+                [
+                    1070.0,
+                    655.0
+                ],
+                [
+                    1070.0,
+                    680.0
+                ],
+                [
+                    35.0,
+                    680.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "39-3 If the Board determines that teachers should be laid off (cancellation of employment) by reason of financial neces-sity, declining enrollment, or for other reasons justify-ing a decrease in the number of teaching positions, the District will institute the procedure described hereafter. This procedure shall apply equally to all teachers defined in Section 39-1-1.",
+            "block_bbox": [
+                35,
+                704,
+                1193,
+                769
+            ],
+            "block_id": 12,
+            "block_order": 11,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    35.0,
+                    704.0
+                ],
+                [
+                    1193.0,
+                    704.0
+                ],
+                [
+                    1193.0,
+                    769.0
+                ],
+                [
+                    35.0,
+                    769.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "39-4 Reduction in Force Conditions",
+            "block_bbox": [
+                36,
+                793,
+                325,
+                816
+            ],
+            "block_id": 13,
+            "block_order": 12,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    793.0
+                ],
+                [
+                    325.0,
+                    793.0
+                ],
+                [
+                    325.0,
+                    816.0
+                ],
+                [
+                    36.0,
+                    816.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "39-4-1 Before District representatives recommend a reduction in force to the Board, the Association will be notified of the conditions necessitating the reduction. If possible, said notification will be given by November 1 prior to a semester layoff, or by March 1 of the school year preceding an anticipated end-of-the-year layoff. With such notification, the Superintendent or his/her designee will furnish the Association with relevant data necessitating the cancellation of employment contracts. Layoffs will only occur at the end of a semester or academic year.",
+            "block_bbox": [
+                94,
+                841,
+                1123,
+                946
+            ],
+            "block_id": 14,
+            "block_order": 13,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    94.0,
+                    841.0
+                ],
+                [
+                    1123.0,
+                    841.0
+                ],
+                [
+                    1123.0,
+                    946.0
+                ],
+                [
+                    94.0,
+                    946.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "39-4-2 Within five (5) school days of said notification, representatives of the District and the Association will meet to discuss the reduction in force. Discussions will include, but not be limited to, the following:",
+            "block_bbox": [
+                95,
+                970,
+                1121,
+                1014
+            ],
+            "block_id": 15,
+            "block_order": 14,
+            "group_id": 15,
+            "block_polygon_points": [
+                [
+                    95.0,
+                    970.0
+                ],
+                [
+                    1121.0,
+                    970.0
+                ],
+                [
+                    1121.0,
+                    1014.0
+                ],
+                [
+                    95.0,
+                    1014.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "A. Alternatives to a reduction in force.",
+            "block_bbox": [
+                156,
+                1039,
+                461,
+                1061
+            ],
+            "block_id": 16,
+            "block_order": 15,
+            "group_id": 16,
+            "block_polygon_points": [
+                [
+                    156.0,
+                    1039.0
+                ],
+                [
+                    461.0,
+                    1039.0
+                ],
+                [
+                    461.0,
+                    1061.0
+                ],
+                [
+                    156.0,
+                    1061.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "B. The needs of the District.",
+            "block_bbox": [
+                158,
+                1088,
+                384,
+                1110
+            ],
+            "block_id": 17,
+            "block_order": 16,
+            "group_id": 17,
+            "block_polygon_points": [
+                [
+                    158.0,
+                    1088.0
+                ],
+                [
+                    384.0,
+                    1088.0
+                ],
+                [
+                    384.0,
+                    1110.0
+                ],
+                [
+                    158.0,
+                    1110.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "C. Budget information.",
+            "block_bbox": [
+                158,
+                1136,
+                342,
+                1159
+            ],
+            "block_id": 18,
+            "block_order": 17,
+            "group_id": 18,
+            "block_polygon_points": [
+                [
+                    158.0,
+                    1136.0
+                ],
+                [
+                    342.0,
+                    1136.0
+                ],
+                [
+                    342.0,
+                    1159.0
+                ],
+                [
+                    158.0,
+                    1159.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "D. Effective date of the reduction in force.",
+            "block_bbox": [
+                156,
+                1185,
+                492,
+                1208
+            ],
+            "block_id": 19,
+            "block_order": 18,
+            "group_id": 19,
+            "block_polygon_points": [
+                [
+                    156.0,
+                    1185.0
+                ],
+                [
+                    492.0,
+                    1185.0
+                ],
+                [
+                    492.0,
+                    1208.0
+                ],
+                [
+                    156.0,
+                    1208.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "E. Number of teachers affected within each pro-gram, i.e., level (elementary or secondary), subject area, SERS, and/or teachers of the handicapped.",
+            "block_bbox": [
+                155,
+                1234,
+                1052,
+                1278
+            ],
+            "block_id": 20,
+            "block_order": 19,
+            "group_id": 20,
+            "block_polygon_points": [
+                [
+                    155.0,
+                    1234.0
+                ],
+                [
+                    1052.0,
+                    1234.0
+                ],
+                [
+                    1052.0,
+                    1278.0
+                ],
+                [
+                    155.0,
+                    1278.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "F. Other relevant matters.",
+            "block_bbox": [
+                157,
+                1303,
+                368,
+                1326
+            ],
+            "block_id": 21,
+            "block_order": 20,
+            "group_id": 21,
+            "block_polygon_points": [
+                [
+                    157.0,
+                    1303.0
+                ],
+                [
+                    368.0,
+                    1303.0
+                ],
+                [
+                    368.0,
+                    1326.0
+                ],
+                [
+                    157.0,
+                    1326.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "39-4-3 Before implementation of a layoff of teachers, the District will utilize attrition (i.e., voluntary retirement, resignations, termination of temporary contracted teachers, termination of part-time teachers, and the number of teachers who will be on leave) as the first means of reducing staff.",
+            "block_bbox": [
+                97,
+                1352,
+                1132,
+                1416
+            ],
+            "block_id": 22,
+            "block_order": 21,
+            "group_id": 22,
+            "block_polygon_points": [
+                [
+                    97.0,
+                    1352.0
+                ],
+                [
+                    1132.0,
+                    1352.0
+                ],
+                [
+                    1132.0,
+                    1416.0
+                ],
+                [
+                    97.0,
+                    1416.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "39-5 Implementation of Layoff",
+            "block_bbox": [
+                37,
+                1440,
+                283,
+                1465
+            ],
+            "block_id": 23,
+            "block_order": 22,
+            "group_id": 23,
+            "block_polygon_points": [
+                [
+                    37.0,
+                    1440.0
+                ],
+                [
+                    283.0,
+                    1440.0
+                ],
+                [
+                    283.0,
+                    1465.0
+                ],
+                [
+                    37.0,
+                    1465.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "If a layoff is still necessary following the fulfillment of the aforementioned provisions (39-4), the District will consider the",
+            "block_bbox": [
+                96,
+                1489,
+                1046,
+                1514
+            ],
+            "block_id": 24,
+            "block_order": 23,
+            "group_id": 24,
+            "block_polygon_points": [
+                [
+                    96.0,
+                    1489.0
+                ],
+                [
+                    1046.0,
+                    1489.0
+                ],
+                [
+                    1046.0,
+                    1514.0
+                ],
+                [
+                    96.0,
+                    1514.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "http://jeffcoweb.jeffco.k12.co.us/emprelations/jcea/article_39.html",
+            "block_bbox": [
+                37,
+                1542,
+                684,
+                1569
+            ],
+            "block_id": 25,
+            "block_order": 24,
+            "group_id": 25,
+            "block_polygon_points": [
+                [
+                    37.0,
+                    1542.0
+                ],
+                [
+                    684.0,
+                    1542.0
+                ],
+                [
+                    684.0,
+                    1569.0
+                ],
+                [
+                    37.0,
+                    1569.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "2/5/04",
+            "block_bbox": [
+                1126,
+                1542,
+                1191,
+                1566
+            ],
+            "block_id": 26,
+            "block_order": null,
+            "group_id": 26,
+            "block_polygon_points": [
+                [
+                    1126.0,
+                    1542.0
+                ],
+                [
+                    1190.0,
+                    1542.0
+                ],
+                [
+                    1190.0,
+                    1565.0
+                ],
+                [
+                    1126.0,
+                    1565.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8215602040290833,
+                "coordinate": [
+                    36,
+                    28,
+                    477,
+                    55
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        36.0,
+                        28.0
+                    ],
+                    [
+                        477.0,
+                        28.0
+                    ],
+                    [
+                        477.0,
+                        55.0
+                    ],
+                    [
+                        36.0,
+                        55.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8271673917770386,
+                "coordinate": [
+                    1078,
+                    27,
+                    1193,
+                    56
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        1078.0,
+                        27.0
+                    ],
+                    [
+                        1193.0,
+                        27.0
+                    ],
+                    [
+                        1193.0,
+                        56.0
+                    ],
+                    [
+                        1078.0,
+                        56.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5698835849761963,
+                "coordinate": [
+                    35,
+                    67,
+                    213,
+                    98
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        35.0,
+                        67.0
+                    ],
+                    [
+                        213.0,
+                        67.0
+                    ],
+                    [
+                        213.0,
+                        98.0
+                    ],
+                    [
+                        35.0,
+                        98.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8094199299812317,
+                "coordinate": [
+                    36,
+                    125,
+                    206,
+                    148
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        36.0,
+                        125.0
+                    ],
+                    [
+                        206.0,
+                        125.0
+                    ],
+                    [
+                        206.0,
+                        148.0
+                    ],
+                    [
+                        36.0,
+                        148.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8164870738983154,
+                "coordinate": [
+                    36,
+                    174,
+                    168,
+                    196
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        36.0,
+                        174.0
+                    ],
+                    [
+                        167.0,
+                        174.0
+                    ],
+                    [
+                        167.0,
+                        195.0
+                    ],
+                    [
+                        36.0,
+                        195.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9293784499168396,
+                "coordinate": [
+                    93,
+                    222,
+                    1127,
+                    287
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        93.0,
+                        222.0
+                    ],
+                    [
+                        1127.0,
+                        222.0
+                    ],
+                    [
+                        1127.0,
+                        287.0
+                    ],
+                    [
+                        93.0,
+                        287.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9067040085792542,
+                "coordinate": [
+                    94,
+                    311,
+                    1125,
+                    355
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        94.0,
+                        311.0
+                    ],
+                    [
+                        1125.0,
+                        311.0
+                    ],
+                    [
+                        1125.0,
+                        355.0
+                    ],
+                    [
+                        94.0,
+                        355.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8502777218818665,
+                "coordinate": [
+                    94,
+                    381,
+                    965,
+                    405
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        94.0,
+                        381.0
+                    ],
+                    [
+                        965.0,
+                        381.0
+                    ],
+                    [
+                        965.0,
+                        405.0
+                    ],
+                    [
+                        94.0,
+                        405.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9487804174423218,
+                "coordinate": [
+                    94,
+                    429,
+                    1115,
+                    534
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        94.0,
+                        429.0
+                    ],
+                    [
+                        1115.0,
+                        429.0
+                    ],
+                    [
+                        1115.0,
+                        534.0
+                    ],
+                    [
+                        94.0,
+                        534.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8586950302124023,
+                "coordinate": [
+                    94,
+                    558,
+                    1048,
+                    582
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        94.0,
+                        558.0
+                    ],
+                    [
+                        1048.0,
+                        558.0
+                    ],
+                    [
+                        1048.0,
+                        582.0
+                    ],
+                    [
+                        94.0,
+                        582.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8646776676177979,
+                "coordinate": [
+                    94,
+                    607,
+                    1017,
+                    630
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        101.0,
+                        607.0
+                    ],
+                    [
+                        1016.0,
+                        607.0
+                    ],
+                    [
+                        1016.0,
+                        629.0
+                    ],
+                    [
+                        101.0,
+                        629.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8576982617378235,
+                "coordinate": [
+                    35,
+                    655,
+                    1070,
+                    680
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        35.0,
+                        655.0
+                    ],
+                    [
+                        1070.0,
+                        655.0
+                    ],
+                    [
+                        1070.0,
+                        680.0
+                    ],
+                    [
+                        35.0,
+                        680.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9334646463394165,
+                "coordinate": [
+                    35,
+                    704,
+                    1193,
+                    769
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        35.0,
+                        704.0
+                    ],
+                    [
+                        1193.0,
+                        704.0
+                    ],
+                    [
+                        1193.0,
+                        769.0
+                    ],
+                    [
+                        35.0,
+                        769.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8560550212860107,
+                "coordinate": [
+                    36,
+                    793,
+                    325,
+                    816
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        36.0,
+                        793.0
+                    ],
+                    [
+                        325.0,
+                        793.0
+                    ],
+                    [
+                        325.0,
+                        816.0
+                    ],
+                    [
+                        36.0,
+                        816.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9439678192138672,
+                "coordinate": [
+                    94,
+                    841,
+                    1123,
+                    946
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        94.0,
+                        841.0
+                    ],
+                    [
+                        1123.0,
+                        841.0
+                    ],
+                    [
+                        1123.0,
+                        946.0
+                    ],
+                    [
+                        94.0,
+                        946.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.912641167640686,
+                "coordinate": [
+                    95,
+                    970,
+                    1121,
+                    1014
+                ],
+                "order": 15,
+                "polygon_points": [
+                    [
+                        95.0,
+                        970.0
+                    ],
+                    [
+                        1121.0,
+                        970.0
+                    ],
+                    [
+                        1121.0,
+                        1014.0
+                    ],
+                    [
+                        95.0,
+                        1014.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8387100100517273,
+                "coordinate": [
+                    156,
+                    1039,
+                    461,
+                    1061
+                ],
+                "order": 16,
+                "polygon_points": [
+                    [
+                        156.0,
+                        1039.0
+                    ],
+                    [
+                        461.0,
+                        1039.0
+                    ],
+                    [
+                        461.0,
+                        1061.0
+                    ],
+                    [
+                        156.0,
+                        1061.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8407856822013855,
+                "coordinate": [
+                    158,
+                    1088,
+                    384,
+                    1110
+                ],
+                "order": 17,
+                "polygon_points": [
+                    [
+                        158.0,
+                        1088.0
+                    ],
+                    [
+                        384.0,
+                        1088.0
+                    ],
+                    [
+                        384.0,
+                        1110.0
+                    ],
+                    [
+                        158.0,
+                        1110.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8341546058654785,
+                "coordinate": [
+                    158,
+                    1136,
+                    342,
+                    1159
+                ],
+                "order": 18,
+                "polygon_points": [
+                    [
+                        158.0,
+                        1136.0
+                    ],
+                    [
+                        342.0,
+                        1136.0
+                    ],
+                    [
+                        342.0,
+                        1159.0
+                    ],
+                    [
+                        158.0,
+                        1159.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8497065305709839,
+                "coordinate": [
+                    156,
+                    1185,
+                    492,
+                    1208
+                ],
+                "order": 19,
+                "polygon_points": [
+                    [
+                        156.0,
+                        1185.0
+                    ],
+                    [
+                        492.0,
+                        1185.0
+                    ],
+                    [
+                        492.0,
+                        1208.0
+                    ],
+                    [
+                        156.0,
+                        1208.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.915212094783783,
+                "coordinate": [
+                    155,
+                    1234,
+                    1052,
+                    1278
+                ],
+                "order": 20,
+                "polygon_points": [
+                    [
+                        155.0,
+                        1234.0
+                    ],
+                    [
+                        1052.0,
+                        1234.0
+                    ],
+                    [
+                        1052.0,
+                        1278.0
+                    ],
+                    [
+                        155.0,
+                        1278.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.840912938117981,
+                "coordinate": [
+                    157,
+                    1303,
+                    368,
+                    1326
+                ],
+                "order": 21,
+                "polygon_points": [
+                    [
+                        157.0,
+                        1303.0
+                    ],
+                    [
+                        368.0,
+                        1303.0
+                    ],
+                    [
+                        368.0,
+                        1326.0
+                    ],
+                    [
+                        157.0,
+                        1326.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9353320598602295,
+                "coordinate": [
+                    97,
+                    1352,
+                    1132,
+                    1416
+                ],
+                "order": 22,
+                "polygon_points": [
+                    [
+                        97.0,
+                        1352.0
+                    ],
+                    [
+                        1132.0,
+                        1352.0
+                    ],
+                    [
+                        1132.0,
+                        1416.0
+                    ],
+                    [
+                        97.0,
+                        1416.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8663425445556641,
+                "coordinate": [
+                    37,
+                    1440,
+                    283,
+                    1465
+                ],
+                "order": 23,
+                "polygon_points": [
+                    [
+                        37.0,
+                        1440.0
+                    ],
+                    [
+                        283.0,
+                        1440.0
+                    ],
+                    [
+                        283.0,
+                        1465.0
+                    ],
+                    [
+                        37.0,
+                        1465.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8589526414871216,
+                "coordinate": [
+                    96,
+                    1489,
+                    1046,
+                    1514
+                ],
+                "order": 24,
+                "polygon_points": [
+                    [
+                        96.0,
+                        1489.0
+                    ],
+                    [
+                        1046.0,
+                        1489.0
+                    ],
+                    [
+                        1046.0,
+                        1514.0
+                    ],
+                    [
+                        96.0,
+                        1514.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7906349897384644,
+                "coordinate": [
+                    37,
+                    1542,
+                    684,
+                    1569
+                ],
+                "order": 25,
+                "polygon_points": [
+                    [
+                        37.0,
+                        1542.0
+                    ],
+                    [
+                        684.0,
+                        1542.0
+                    ],
+                    [
+                        684.0,
+                        1569.0
+                    ],
+                    [
+                        37.0,
+                        1569.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.7777746319770813,
+                "coordinate": [
+                    1126,
+                    1542,
+                    1191,
+                    1566
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1126.0,
+                        1542.0
+                    ],
+                    [
+                        1190.0,
+                        1542.0
+                    ],
+                    [
+                        1190.0,
+                        1565.0
+                    ],
+                    [
+                        1126.0,
+                        1565.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,827 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b184f002_01.pdf",
+    "page_index": 19,
+    "page_count": 73,
+    "width": 589,
+    "height": 981,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "doc_title",
+            "block_content": "ARTICLE 12",
+            "block_bbox": [
+                240,
+                78,
+                350,
+                99
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    240.0,
+                    77.99999237060547
+                ],
+                [
+                    349.0,
+                    77.99999237060547
+                ],
+                [
+                    349.0,
+                    97.99999237060547
+                ],
+                [
+                    240.0,
+                    97.99999237060547
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "TEACHER EVALUATION",
+            "block_bbox": [
+                182,
+                107,
+                408,
+                127
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    182.0,
+                    107.0
+                ],
+                [
+                    407.0,
+                    107.0
+                ],
+                [
+                    407.0,
+                    126.0
+                ],
+                [
+                    182.0,
+                    126.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "12-1. The Board and the Association agree, inasmuch as supervision and evaluation of teachers is a process in which those concerned are equally involved, that a committee made up of representatives of the principals, assistant principals, supervisors and representatives of the Association will be established to prepare joint recommendations as to policy regulating the supervisory function.",
+            "block_bbox": [
+                76,
+                138,
+                515,
+                275
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    76.0,
+                    138.0
+                ],
+                [
+                    515.0,
+                    138.0
+                ],
+                [
+                    515.0,
+                    275.0
+                ],
+                [
+                    76.0,
+                    275.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "12-2. In cases where a teacher has been given an unsatisfactory rating, the teacher will be given a written statement setting forth the particulars of the unsatisfactory rating.",
+            "block_bbox": [
+                75,
+                284,
+                515,
+                353
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    75.0,
+                    284.0
+                ],
+                [
+                    515.0,
+                    284.0
+                ],
+                [
+                    515.0,
+                    353.0
+                ],
+                [
+                    75.0,
+                    353.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "12-2.1. Where such rating endangers increment or contract status of the teacher for the ensuing year, the teacher must be notified of his status by April 1st.",
+            "block_bbox": [
+                76,
+                362,
+                515,
+                432
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    76.0,
+                    362.0
+                ],
+                [
+                    515.0,
+                    362.0
+                ],
+                [
+                    515.0,
+                    432.0
+                ],
+                [
+                    76.0,
+                    432.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "12-2.2. When an unsatisfactory rating comes after April 30th, the teacher's contract status for the ensuing year cannot be denied except for cause.",
+            "block_bbox": [
+                76,
+                441,
+                515,
+                495
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    76.0,
+                    441.0
+                ],
+                [
+                    515.0,
+                    441.0
+                ],
+                [
+                    515.0,
+                    495.0
+                ],
+                [
+                    76.0,
+                    495.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "12-2.3. Cause will be subject to the provision of the Grievance Procedure.",
+            "block_bbox": [
+                77,
+                507,
+                515,
+                543
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    77.0,
+                    507.0
+                ],
+                [
+                    515.0,
+                    507.0
+                ],
+                [
+                    515.0,
+                    543.0
+                ],
+                [
+                    77.0,
+                    543.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "12-3. A teacher evaluation committee shall continue to meet. Such committee shall consist of three (3) teachers appointed by the Association and three (3) administrators appointed by the Board. The committee shall meet and submit a written report with recommendations on or before April 30, 1979.",
+            "block_bbox": [
+                77,
+                556,
+                516,
+                659
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    77.0,
+                    556.0
+                ],
+                [
+                    516.0,
+                    556.0
+                ],
+                [
+                    516.0,
+                    659.0
+                ],
+                [
+                    77.0,
+                    659.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE 13",
+            "block_bbox": [
+                241,
+                686,
+                352,
+                706
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    241.0,
+                    685.9999389648438
+                ],
+                [
+                    351.0,
+                    685.9999389648438
+                ],
+                [
+                    351.0,
+                    704.9999389648438
+                ],
+                [
+                    241.0,
+                    704.9999389648438
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "TEACHING ASSIGNMENTS",
+            "block_bbox": [
+                173,
+                715,
+                428,
+                735
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    173.0,
+                    715.0
+                ],
+                [
+                    427.0,
+                    715.0
+                ],
+                [
+                    427.0,
+                    734.0
+                ],
+                [
+                    173.0,
+                    734.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "13-1. Teachers shall not be regularly assigned to teach subjects or grades outside the scope of their teaching certificate.",
+            "block_bbox": [
+                78,
+                745,
+                516,
+                799
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    78.0,
+                    745.0
+                ],
+                [
+                    516.0,
+                    745.0
+                ],
+                [
+                    516.0,
+                    799.0
+                ],
+                [
+                    78.0,
+                    799.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "13-2. Assignments shall be given to teachers at least three (3) days before the closing of school. 13-3. Extra-compensation positions are those listed in Schedule H.",
+            "block_bbox": [
+                77,
+                807,
+                514,
+                876
+            ],
+            "block_id": 11,
+            "block_order": 12,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    77.0,
+                    807.0
+                ],
+                [
+                    514.0,
+                    807.0
+                ],
+                [
+                    514.0,
+                    876.0
+                ],
+                [
+                    77.0,
+                    876.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "14",
+            "block_bbox": [
+                286,
+                906,
+                307,
+                921
+            ],
+            "block_id": 12,
+            "block_order": null,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    286.0,
+                    906.0
+                ],
+                [
+                    306.0,
+                    906.0
+                ],
+                [
+                    306.0,
+                    920.0
+                ],
+                [
+                    286.0,
+                    920.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.5796120166778564,
+                "coordinate": [
+                    240,
+                    78,
+                    350,
+                    99
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        240.0,
+                        77.99999237060547
+                    ],
+                    [
+                        349.0,
+                        77.99999237060547
+                    ],
+                    [
+                        349.0,
+                        97.99999237060547
+                    ],
+                    [
+                        240.0,
+                        97.99999237060547
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6472796201705933,
+                "coordinate": [
+                    182,
+                    107,
+                    408,
+                    127
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        182.0,
+                        107.0
+                    ],
+                    [
+                        407.0,
+                        107.0
+                    ],
+                    [
+                        407.0,
+                        126.0
+                    ],
+                    [
+                        182.0,
+                        126.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9577770829200745,
+                "coordinate": [
+                    76,
+                    138,
+                    515,
+                    275
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        76.0,
+                        138.0
+                    ],
+                    [
+                        515.0,
+                        138.0
+                    ],
+                    [
+                        515.0,
+                        275.0
+                    ],
+                    [
+                        76.0,
+                        275.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9389240145683289,
+                "coordinate": [
+                    75,
+                    284,
+                    515,
+                    353
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        75.0,
+                        284.0
+                    ],
+                    [
+                        515.0,
+                        284.0
+                    ],
+                    [
+                        515.0,
+                        353.0
+                    ],
+                    [
+                        75.0,
+                        353.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9439254403114319,
+                "coordinate": [
+                    76,
+                    362,
+                    515,
+                    432
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        76.0,
+                        362.0
+                    ],
+                    [
+                        515.0,
+                        362.0
+                    ],
+                    [
+                        515.0,
+                        432.0
+                    ],
+                    [
+                        76.0,
+                        432.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9291945099830627,
+                "coordinate": [
+                    76,
+                    441,
+                    515,
+                    495
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        76.0,
+                        441.0
+                    ],
+                    [
+                        515.0,
+                        441.0
+                    ],
+                    [
+                        515.0,
+                        495.0
+                    ],
+                    [
+                        76.0,
+                        495.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9065960645675659,
+                "coordinate": [
+                    77,
+                    507,
+                    515,
+                    543
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        77.0,
+                        507.0
+                    ],
+                    [
+                        515.0,
+                        507.0
+                    ],
+                    [
+                        515.0,
+                        543.0
+                    ],
+                    [
+                        77.0,
+                        543.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9531047940254211,
+                "coordinate": [
+                    77,
+                    556,
+                    516,
+                    659
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        77.0,
+                        556.0
+                    ],
+                    [
+                        516.0,
+                        556.0
+                    ],
+                    [
+                        516.0,
+                        659.0
+                    ],
+                    [
+                        77.0,
+                        659.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8437366485595703,
+                "coordinate": [
+                    241,
+                    686,
+                    352,
+                    706
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        241.0,
+                        685.9999389648438
+                    ],
+                    [
+                        351.0,
+                        685.9999389648438
+                    ],
+                    [
+                        351.0,
+                        704.9999389648438
+                    ],
+                    [
+                        241.0,
+                        704.9999389648438
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8392471671104431,
+                "coordinate": [
+                    173,
+                    715,
+                    428,
+                    735
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        173.0,
+                        715.0
+                    ],
+                    [
+                        427.0,
+                        715.0
+                    ],
+                    [
+                        427.0,
+                        734.0
+                    ],
+                    [
+                        173.0,
+                        734.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9443058371543884,
+                "coordinate": [
+                    78,
+                    745,
+                    516,
+                    799
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        78.0,
+                        745.0
+                    ],
+                    [
+                        516.0,
+                        745.0
+                    ],
+                    [
+                        516.0,
+                        799.0
+                    ],
+                    [
+                        78.0,
+                        799.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.934313952922821,
+                "coordinate": [
+                    77,
+                    807,
+                    514,
+                    876
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        77.0,
+                        807.0
+                    ],
+                    [
+                        514.0,
+                        807.0
+                    ],
+                    [
+                        514.0,
+                        876.0
+                    ],
+                    [
+                        77.0,
+                        876.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7865675091743469,
+                "coordinate": [
+                    286,
+                    906,
+                    307,
+                    921
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        286.0,
+                        906.0
+                    ],
+                    [
+                        306.0,
+                        906.0
+                    ],
+                    [
+                        306.0,
+                        920.0
+                    ],
+                    [
+                        286.0,
+                        920.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,156 @@
+{
+    "input_path": "cache/cornell_dol/K800033_12ABBYY.pdf",
+    "page_index": 85,
+    "page_count": 123,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td colspan=\"14\">Appendix B-4 Weekly Schedule of Weekly Salary Rates Unit 9 Effective January 1, 2001</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Job</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Group</td><td>Step 1</td><td>Step 2</td><td>Step 3</td><td>Step 4</td><td>Step 5</td><td>Step 6</td><td>Step 7</td><td>Step 8</td><td>Step 9</td><td>Step 10</td><td>Step 11</td><td>Step 12</td><td></td></tr><tr><td>9</td><td>$423.85</td><td>$432.42</td><td>$441.19</td><td>$450.12</td><td>$459.23</td><td>$468.53</td><td>$478.01</td><td>$487.68</td><td>$497.56</td><td>$507.64</td><td>$517.79</td><td>$528.15</td><td></td></tr><tr><td>10</td><td>$441.37</td><td>$450.49</td><td>$459.81</td><td>$469.30</td><td>$478.99</td><td>$488.91</td><td>$499.01</td><td>$509.31</td><td>$519.84</td><td>$530.58</td><td>$541.19</td><td>$552.01</td><td></td></tr><tr><td>11</td><td>$458.70</td><td>$468.58</td><td>$478.66</td><td>$488.96</td><td>$499.49</td><td>$510.23</td><td>$521.20</td><td>$532.43</td><td>$543.88</td><td>$555.59</td><td>$566.71</td><td>$578.04</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>12</td><td>$479.68</td><td>$490.02</td><td>$500.57</td><td>$511.36</td><td>$522.36</td><td>$533.62</td><td>$545.12</td><td>$556.87</td><td>$568.86</td><td>$581.11</td><td>$592.72</td><td>$604.57</td><td></td></tr><tr><td>13</td><td>$507.22</td><td>$518.11</td><td>$529.22</td><td>$540.57</td><td>$552.17</td><td>$564.03</td><td>$576.11</td><td>$588.49</td><td>$601.10</td><td>$614.01</td><td>$626.29</td><td>$638.82</td><td></td></tr><tr><td>14</td><td>$532.93</td><td>$545.60</td><td>$558.58</td><td>$571.87</td><td>$585.45</td><td>$599.38</td><td>$613.63</td><td>$628.23</td><td>$643.15</td><td>$658.45</td><td>$671.62</td><td>$685.05</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>15</td><td>$560.99</td><td>$574.76</td><td>$588.88</td><td>$603.35</td><td>$618.16</td><td>$633.35</td><td>$648.91</td><td>$664.84</td><td>$681.18</td><td>$697.90</td><td>$711.85</td><td>$726.09</td><td></td></tr><tr><td>16</td><td>$589.82</td><td>$605.17</td><td>$620.90</td><td>$637.08</td><td>$653.65</td><td>$670.64</td><td>$688.09</td><td>$706.01</td><td>$724.37</td><td>$743.22</td><td>$758.08</td><td>$773.24</td><td></td></tr><tr><td>17</td><td>$623.89</td><td>$639.93</td><td>$656.40</td><td>$673.27</td><td>$690.59</td><td>$708.34</td><td>$726.57</td><td>$745.26</td><td>$764.41</td><td>$784.08</td><td>$799.75</td><td>$815.75</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>18</td><td>$652.64</td><td>$669.90</td><td>$687.65</td><td>$705.85</td><td>$724.54</td><td>$743.72</td><td>$763.42</td><td>$783.62</td><td>$804.36</td><td>$825.65</td><td>$842.16</td><td>$859.00</td><td></td></tr><tr><td>19</td><td>$684.98</td><td>$703.53</td><td>$722.61</td><td>$742.20</td><td>$762.30</td><td>$782.95</td><td>$804.18</td><td>$825.98</td><td>$848.35</td><td>$871.35</td><td>$888.78</td><td>$906.56</td><td></td></tr><tr><td>20</td><td>$720.36</td><td>$739.57</td><td>$759.31</td><td>$779.56</td><td>$800.34</td><td>$821.69</td><td>$843.60</td><td>$866.10</td><td>$889.20</td><td>$912.91</td><td>$931.17</td><td>$949.79</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>21</td><td>$752.68</td><td>$773.29</td><td>$794.48</td><td>$816.24</td><td>$838.61</td><td>$861.56</td><td>$885.16</td><td>$909.41</td><td>$934.32</td><td>$959.91</td><td>$979.11</td><td>$998.69</td><td></td></tr><tr><td>22</td><td>$788.87</td><td>$810.83</td><td>$833.37</td><td>$856.57</td><td>$880.41</td><td>$904.91</td><td>$930.09</td><td>$955.97</td><td>$982.58</td><td>$1,009.92</td><td>$1,030.11</td><td>$1,050.71</td><td></td></tr><tr><td>23</td><td>$827.90</td><td>$850.50</td><td>$873.72</td><td>$897.57</td><td>$922.10</td><td>$947.25</td><td>$973.11</td><td>$999.69</td><td>$1,026.98</td><td>$1,055.02</td><td>$1,076.12</td><td>$1,097.64</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>24</td><td>$864.14</td><td>$887.97</td><td>$912.47</td><td>$937.63</td><td>$963.50</td><td>$990.06</td><td>$1,017.38</td><td>$1,045.44</td><td>$1,074.27</td><td>$1,103.90</td><td>$1,125.99</td><td>$1,148.51</td><td></td></tr><tr><td>25</td><td>$900.46</td><td>$925.62</td><td>$951.46</td><td>$978.05</td><td>$1,005.38</td><td>$1,033.45</td><td>$1,062.33</td><td>$1,092.01</td><td>$1,122.51</td><td>$1,153.87</td><td>$1,176.95</td><td>$1,200.49</td><td></td></tr><tr><td>26</td><td>$932.73</td><td>$959.08</td><td>$986.18</td><td>$1,014.07</td><td>$1,042.72</td><td>$1,072.19</td><td>$1,102.49</td><td>$1,133.64</td><td>$1,165.67</td><td>$1,198.61</td><td>$1,222.58</td><td>$1,247.03</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>27</td><td>$971.79</td><td>$999.03</td><td>$1,027.00</td><td>$1,055.78</td><td>$1,085.35</td><td>$1,115.77</td><td>$1,147.02</td><td>$1,179.15</td><td>$1,212.19</td><td>$1,246.16</td><td>$1,271.08</td><td>$1,296.50</td><td></td></tr><tr><td>28</td><td>$1,010.30</td><td>$1,038.82</td><td>$1,068.14</td><td>$1,098.30</td><td>$1,129.30</td><td>$1,161.17</td><td>$1,193.96</td><td>$1,227.66</td><td>$1,262.31</td><td>$1,297.94</td><td>$1,323.90</td><td>$1,350.38</td><td></td></tr><tr><td>29</td><td>$1,047.97</td><td>$1,077.76</td><td>$1,108.41</td><td>$1,139.91</td><td>$1,172.32</td><td>$1,205.65</td><td>$1,239.92</td><td>$1,275.18</td><td>$1,311.43</td><td>$1,348.70</td><td>$1,375.68</td><td>$1,403.19</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>30</td><td>$1,091.73</td><td>$1,122.81</td><td>$1,154.76</td><td>$1,187.63</td><td>$1,221.46</td><td>$1,256.23</td><td>$1,291.98</td><td>$1,328.77</td><td>$1,366.58</td><td>$1,405.50</td><td>$1,433.61</td><td>$1,462.28</td><td></td></tr><tr><td>31</td><td>$1,131.75</td><td>$1,164.19</td><td>$1,197.54</td><td>$1,231.83</td><td>$1,267.14</td><td>$1,303.43</td><td>$1,340.76</td><td>$1,379.18</td><td>$1,418.68</td><td>$1,459.33</td><td>$1,488.53</td><td>$1,518.30</td><td></td></tr><tr><td>32</td><td>$1,175.60</td><td>$1,209.31</td><td>$1,243.99</td><td>$1,279.67</td><td>$1,316.37</td><td>$1,354.13</td><td>$1,392.96</td><td>$1,432.89</td><td>$1,473.98</td><td>$1,516.25</td><td>$1,546.58</td><td>$1,577.51</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>33</td><td>$1,219.43</td><td>$1,254.43</td><td>$1,290.45</td><td>$1,327.48</td><td>$1,365.59</td><td>$1,404.81</td><td>$1,445.13</td><td>$1,486.61</td><td>$1,529.28</td><td>$1,573.19</td><td>$1,604.66</td><td>$1,636.75</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>",
+            "block_bbox": [
+                162,
+                214,
+                1063,
+                1310
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    162.0,
+                    214.0
+                ],
+                [
+                    1063.0,
+                    214.0
+                ],
+                [
+                    1063.0,
+                    1310.0
+                ],
+                [
+                    162.0,
+                    1310.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "81",
+            "block_bbox": [
+                598,
+                1462,
+                624,
+                1482
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    598.0,
+                    1462.0
+                ],
+                [
+                    623.0,
+                    1462.0
+                ],
+                [
+                    623.0,
+                    1481.0
+                ],
+                [
+                    598.0,
+                    1481.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9787598252296448,
+                "coordinate": [
+                    162,
+                    214,
+                    1063,
+                    1310
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        162.0,
+                        214.0
+                    ],
+                    [
+                        1063.0,
+                        214.0
+                    ],
+                    [
+                        1063.0,
+                        1310.0
+                    ],
+                    [
+                        162.0,
+                        1310.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7160282135009766,
+                "coordinate": [
+                    598,
+                    1462,
+                    624,
+                    1482
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        598.0,
+                        1462.0
+                    ],
+                    [
+                        623.0,
+                        1462.0
+                    ],
+                    [
+                        623.0,
+                        1481.0
+                    ],
+                    [
+                        598.0,
+                        1481.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

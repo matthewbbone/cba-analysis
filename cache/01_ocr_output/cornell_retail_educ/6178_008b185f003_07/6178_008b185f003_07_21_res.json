@@ -1,0 +1,644 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b185f003_07.pdf",
+    "page_index": 21,
+    "page_count": 71,
+    "width": 769,
+    "height": 1237,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "(6) All requests to draw upon the sick leave bank must be accompanied by a physician's statement confirming the cause of the illness or confinement made on a MCCSSE Sick Leave Bank Physician's Confirmation Form, signed by the physician.",
+            "block_bbox": [
+                155,
+                65,
+                711,
+                166
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    155.0,
+                    65.0
+                ],
+                [
+                    711.0,
+                    65.0
+                ],
+                [
+                    711.0,
+                    166.0
+                ],
+                [
+                    155.0,
+                    166.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(7) After an applicant has drawn and used thirty (30) consecutive sick leave days (determined by his/her duty days) from the bank, he/she shall be given a medical review by a physician of the administering committee's choice, at the contributor's expense. The physician's report is to be sent directly to the committee before the committee may act upon his/her application for an extension of use of the sick leave bank. Such medical review may be eliminated by the committee if the applicant has been confined to a hospital or other medical facility through the prior thirty (30) days he/she has used the sick leave bank.",
+            "block_bbox": [
+                156,
+                175,
+                711,
+                421
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    156.0,
+                    175.0
+                ],
+                [
+                    711.0,
+                    175.0
+                ],
+                [
+                    711.0,
+                    421.0
+                ],
+                [
+                    156.0,
+                    421.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(8) An applicant may be required to undergo a medical review by a physician of the committee's choice at any time at the member's expense.",
+            "block_bbox": [
+                155,
+                431,
+                711,
+                506
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    155.0,
+                    431.0
+                ],
+                [
+                    711.0,
+                    431.0
+                ],
+                [
+                    711.0,
+                    506.0
+                ],
+                [
+                    155.0,
+                    506.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(9) In case a contributor has been incapacitated, his/her application may be submitted to the committee by his/her agent or member of his/her family on his/her behalf.",
+            "block_bbox": [
+                153,
+                516,
+                711,
+                591
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    153.0,
+                    516.0
+                ],
+                [
+                    711.0,
+                    516.0
+                ],
+                [
+                    711.0,
+                    591.0
+                ],
+                [
+                    153.0,
+                    591.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(10) Leave grants from the bank, recommended by the committee, shall be made in units of no more than thirty (30) consecutive duty days for the individual applicant.",
+            "block_bbox": [
+                145,
+                601,
+                711,
+                676
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    145.0,
+                    601.0
+                ],
+                [
+                    711.0,
+                    601.0
+                ],
+                [
+                    711.0,
+                    676.0
+                ],
+                [
+                    145.0,
+                    676.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(11) Applicants may submit requests for extension of such leave grants as their prior grants expire. Such applications shall be made on the regular request form.",
+            "block_bbox": [
+                145,
+                687,
+                711,
+                762
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    145.0,
+                    687.0
+                ],
+                [
+                    711.0,
+                    687.0
+                ],
+                [
+                    711.0,
+                    762.0
+                ],
+                [
+                    145.0,
+                    762.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(12) In cases where the committee recommends denial of an application for use of the sick leave bank or an extension of such use, the applicant may appeal his/her request to the MCCSSE Board of Directors.",
+            "block_bbox": [
+                145,
+                773,
+                712,
+                870
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    145.0,
+                    773.0
+                ],
+                [
+                    712.0,
+                    773.0
+                ],
+                [
+                    712.0,
+                    870.0
+                ],
+                [
+                    145.0,
+                    870.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(13) In cases where the recommendation of the committee is denied by the MCPS Office of Personnel Services, the applicant may appeal his/her request to the MCCSSE Board of Directors, who may request the superintendent to consider the appeal.",
+            "block_bbox": [
+                146,
+                882,
+                711,
+                982
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    146.0,
+                    882.0
+                ],
+                [
+                    711.0,
+                    882.0
+                ],
+                [
+                    711.0,
+                    982.0
+                ],
+                [
+                    146.0,
+                    982.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(14) Unit members may request all appropriate forms from the MCCSSE office by telephone.",
+            "block_bbox": [
+                146,
+                992,
+                712,
+                1040
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    146.0,
+                    992.0
+                ],
+                [
+                    712.0,
+                    992.0
+                ],
+                [
+                    712.0,
+                    1040.0
+                ],
+                [
+                    146.0,
+                    1040.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "19",
+            "block_bbox": [
+                371,
+                1161,
+                394,
+                1181
+            ],
+            "block_id": 9,
+            "block_order": null,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    371.0,
+                    1161.0
+                ],
+                [
+                    393.0,
+                    1161.0
+                ],
+                [
+                    393.0,
+                    1180.0
+                ],
+                [
+                    371.0,
+                    1180.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9403589963912964,
+                "coordinate": [
+                    155,
+                    65,
+                    711,
+                    166
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        155.0,
+                        65.0
+                    ],
+                    [
+                        711.0,
+                        65.0
+                    ],
+                    [
+                        711.0,
+                        166.0
+                    ],
+                    [
+                        155.0,
+                        166.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9554683566093445,
+                "coordinate": [
+                    156,
+                    175,
+                    711,
+                    421
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        156.0,
+                        175.0
+                    ],
+                    [
+                        711.0,
+                        175.0
+                    ],
+                    [
+                        711.0,
+                        421.0
+                    ],
+                    [
+                        156.0,
+                        421.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9244532585144043,
+                "coordinate": [
+                    155,
+                    431,
+                    711,
+                    506
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        155.0,
+                        431.0
+                    ],
+                    [
+                        711.0,
+                        431.0
+                    ],
+                    [
+                        711.0,
+                        506.0
+                    ],
+                    [
+                        155.0,
+                        506.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9204366207122803,
+                "coordinate": [
+                    153,
+                    516,
+                    711,
+                    591
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        153.0,
+                        516.0
+                    ],
+                    [
+                        711.0,
+                        516.0
+                    ],
+                    [
+                        711.0,
+                        591.0
+                    ],
+                    [
+                        153.0,
+                        591.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.924277663230896,
+                "coordinate": [
+                    145,
+                    601,
+                    711,
+                    676
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        145.0,
+                        601.0
+                    ],
+                    [
+                        711.0,
+                        601.0
+                    ],
+                    [
+                        711.0,
+                        676.0
+                    ],
+                    [
+                        145.0,
+                        676.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9231744408607483,
+                "coordinate": [
+                    145,
+                    687,
+                    711,
+                    762
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        145.0,
+                        687.0
+                    ],
+                    [
+                        711.0,
+                        687.0
+                    ],
+                    [
+                        711.0,
+                        762.0
+                    ],
+                    [
+                        145.0,
+                        762.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9400714039802551,
+                "coordinate": [
+                    145,
+                    773,
+                    712,
+                    870
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        145.0,
+                        773.0
+                    ],
+                    [
+                        712.0,
+                        773.0
+                    ],
+                    [
+                        712.0,
+                        870.0
+                    ],
+                    [
+                        145.0,
+                        870.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9469903111457825,
+                "coordinate": [
+                    146,
+                    882,
+                    711,
+                    982
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        146.0,
+                        882.0
+                    ],
+                    [
+                        711.0,
+                        882.0
+                    ],
+                    [
+                        711.0,
+                        982.0
+                    ],
+                    [
+                        146.0,
+                        982.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8757941722869873,
+                "coordinate": [
+                    146,
+                    992,
+                    712,
+                    1040
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        146.0,
+                        992.0
+                    ],
+                    [
+                        712.0,
+                        992.0
+                    ],
+                    [
+                        712.0,
+                        1040.0
+                    ],
+                    [
+                        146.0,
+                        1040.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7658424973487854,
+                "coordinate": [
+                    371,
+                    1161,
+                    394,
+                    1181
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        371.0,
+                        1161.0
+                    ],
+                    [
+                        393.0,
+                        1161.0
+                    ],
+                    [
+                        393.0,
+                        1180.0
+                    ],
+                    [
+                        371.0,
+                        1180.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

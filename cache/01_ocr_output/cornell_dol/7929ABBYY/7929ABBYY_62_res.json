@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 62,
+    "page_count": 189,
+    "width": 1226,
+    "height": 1574,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "293. A grievance appealed to this third step must be served within the time limits previously described by the Representative of the Union to the Employee Relations Manager or his/her designee. Such notice shall state the subject matter of the grievance, identifying grievance control number and objections taken by either party to the previous disposition. Review of the appealed grievance shall take place promptly, not to exceed ten (10) working days following receipt of notice of appeal.",
+            "block_bbox": [
+                146,
+                164,
+                1088,
+                362
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    146.0,
+                    164.0
+                ],
+                [
+                    1088.0,
+                    164.0
+                ],
+                [
+                    1088.0,
+                    362.0
+                ],
+                [
+                    146.0,
+                    362.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "294. A grievance discussed in such meeting must be answered in writing by the Employee Relations Manager or his/her designee within ten (10) working days after the date of such meeting. If the reply of the Employee Relations Manager or his/her designee is not appealed to Step 4 within ten (10) calendar days after receipt in writing by the Field Representative, the grievance shall be considered-settled on the basis of such reply and shall not be eligible for further appeal. If the Employee Relations Manager or his/her designee fails to satisfy the time limits herein provided, the grievance shall automatically progress to arbitration upon notification by the Union in writing within thirty (30) working days after presentation of the grievance to this Step 3 that the time limits have not been waived.",
+            "block_bbox": [
+                145,
+                384,
+                1085,
+                692
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    145.0,
+                    384.0
+                ],
+                [
+                    1085.0,
+                    384.0
+                ],
+                [
+                    1085.0,
+                    692.0
+                ],
+                [
+                    145.0,
+                    692.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Step 4",
+            "block_bbox": [
+                233,
+                713,
+                313,
+                744
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    233.0,
+                    713.0
+                ],
+                [
+                    313.0,
+                    713.0
+                ],
+                [
+                    313.0,
+                    744.0
+                ],
+                [
+                    233.0,
+                    744.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": ".295. A grievance appealed to this fourth step shall be submitted to an Arbitrator who shall be impartial and who shall be appointed by mutual agreement of the parties. In the event mutual agreement cannot be reached on an Arbitrator within ten (10) working days of receipt of notice of appeal to arbitration, the State Conciliation Service shall be asked to name a panel of five (5) individuals from which one (1) name shall be selected by the parties within five (5) working days after receipt of the names provided by the State Conciliation Service.",
+            "block_bbox": [
+                136,
+                768,
+                1083,
+                991
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    136.0,
+                    768.0
+                ],
+                [
+                    1083.0,
+                    768.0
+                ],
+                [
+                    1083.0,
+                    991.0
+                ],
+                [
+                    136.0,
+                    991.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "296. The arbitrator shall have jurisdiction and authority only to interpret, apply or determine compliance with specific terms of this Agreement and shall not have jurisdiction to add to, detract from or alter in any way the provisions of this Agreement. Any decision within the jurisdiction of the arbitrator shall be final and binding upon all concerned. The expenses and salary incident to the services of the arbitrator shall be shared equally by the Employer and the Union.",
+            "block_bbox": [
+                139,
+                1015,
+                1082,
+                1211
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    139.0,
+                    1015.0
+                ],
+                [
+                    1082.0,
+                    1015.0
+                ],
+                [
+                    1082.0,
+                    1211.0
+                ],
+                [
+                    139.0,
+                    1211.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "62",
+            "block_bbox": [
+                592,
+                1472,
+                621,
+                1496
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    592.0,
+                    1472.0
+                ],
+                [
+                    620.0,
+                    1472.0
+                ],
+                [
+                    620.0,
+                    1495.0
+                ],
+                [
+                    592.0,
+                    1495.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9505610466003418,
+                "coordinate": [
+                    146,
+                    164,
+                    1088,
+                    362
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        146.0,
+                        164.0
+                    ],
+                    [
+                        1088.0,
+                        164.0
+                    ],
+                    [
+                        1088.0,
+                        362.0
+                    ],
+                    [
+                        146.0,
+                        362.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9587739109992981,
+                "coordinate": [
+                    145,
+                    384,
+                    1085,
+                    692
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        145.0,
+                        384.0
+                    ],
+                    [
+                        1085.0,
+                        384.0
+                    ],
+                    [
+                        1085.0,
+                        692.0
+                    ],
+                    [
+                        145.0,
+                        692.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7812328338623047,
+                "coordinate": [
+                    233,
+                    713,
+                    313,
+                    744
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        233.0,
+                        713.0
+                    ],
+                    [
+                        313.0,
+                        713.0
+                    ],
+                    [
+                        313.0,
+                        744.0
+                    ],
+                    [
+                        233.0,
+                        744.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9507022500038147,
+                "coordinate": [
+                    136,
+                    768,
+                    1083,
+                    991
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        136.0,
+                        768.0
+                    ],
+                    [
+                        1083.0,
+                        768.0
+                    ],
+                    [
+                        1083.0,
+                        991.0
+                    ],
+                    [
+                        136.0,
+                        991.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9522061944007874,
+                "coordinate": [
+                    139,
+                    1015,
+                    1082,
+                    1211
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        139.0,
+                        1015.0
+                    ],
+                    [
+                        1082.0,
+                        1015.0
+                    ],
+                    [
+                        1082.0,
+                        1211.0
+                    ],
+                    [
+                        139.0,
+                        1211.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7577279210090637,
+                "coordinate": [
+                    592,
+                    1472,
+                    621,
+                    1496
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        592.0,
+                        1472.0
+                    ],
+                    [
+                        620.0,
+                        1472.0
+                    ],
+                    [
+                        620.0,
+                        1495.0
+                    ],
+                    [
+                        592.0,
+                        1495.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b178f008_02.pdf",
+    "page_index": 22,
+    "page_count": 42,
+    "width": 1224,
+    "height": 1597,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "of service as follows:",
+            "block_bbox": [
+                178,
+                173,
+                453,
+                202
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    178.0,
+                    173.0
+                ],
+                [
+                    453.0,
+                    173.0
+                ],
+                [
+                    453.0,
+                    202.0
+                ],
+                [
+                    178.0,
+                    202.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Years of Service as of September 15</td><td>Maximum Annual Vacation Allowance</td><td>Monthly Accrual Rate from Sept. 1 to Aug. 31</td></tr><tr><td>less than 5</td><td>10 days (2 weeks)</td><td>.83 day</td></tr><tr><td>5 but less than 8</td><td>15 days (3 weeks)</td><td>1.25 days</td></tr><tr><td>8 but less than 15</td><td>20 days (4 weeks)</td><td>1.66 days</td></tr><tr><td>15 and over</td><td>22 days (1 month)</td><td>1.83 days</td></tr></table>",
+            "block_bbox": [
+                219,
+                226,
+                1118,
+                491
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    219.0,
+                    226.0
+                ],
+                [
+                    1118.0,
+                    226.0
+                ],
+                [
+                    1118.0,
+                    491.0
+                ],
+                [
+                    219.0,
+                    491.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The monthly accumulation is counted from September 1 through August 31 of each fiscal year. On June 1 of each year, employees are advanced credit for June, July, and August, so that the total annual vacation entitlement is available during the summer months.",
+            "block_bbox": [
+                175,
+                544,
+                1119,
+                722
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    175.0,
+                    544.0
+                ],
+                [
+                    1119.0,
+                    544.0
+                ],
+                [
+                    1119.0,
+                    722.0
+                ],
+                [
+                    175.0,
+                    722.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2. Part-time permanent employees are eligible for prorated vacation accumulation based on the number of hours the employee is scheduled to work each week.",
+            "block_bbox": [
+                174,
+                740,
+                1096,
+                870
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    174.0,
+                    740.0
+                ],
+                [
+                    1096.0,
+                    740.0
+                ],
+                [
+                    1096.0,
+                    870.0
+                ],
+                [
+                    174.0,
+                    870.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3. New employees are not credited with any monthly vacation accumulation until they have completed six (6) months of service. They are given retroactive credit for a six (6) month accumulation. An employee whose hire date falls on or before the fifteenth (15th) of the month is given vacation credit for that month. An employee hired after the fifteenth (15th) does not receive credit for that month. New employees hired after September 15 of the academic year have a total annual accrual for that year which is fractional (rather than the ten (10) days total allowance the employee would get for a  $ \\underline{\\text{full}} $ year of service). These fractions are rounded up or down, so that the vacation time available",
+            "block_bbox": [
+                173,
+                889,
+                1106,
+                1365
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    173.0,
+                    889.0
+                ],
+                [
+                    1106.0,
+                    889.0
+                ],
+                [
+                    1106.0,
+                    1365.0
+                ],
+                [
+                    173.0,
+                    1365.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "21",
+            "block_bbox": [
+                591,
+                1480,
+                620,
+                1503
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    591.0,
+                    1480.0
+                ],
+                [
+                    619.0,
+                    1480.0
+                ],
+                [
+                    619.0,
+                    1502.0
+                ],
+                [
+                    591.0,
+                    1502.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4775336980819702,
+                "coordinate": [
+                    178,
+                    173,
+                    453,
+                    202
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        178.0,
+                        173.0
+                    ],
+                    [
+                        453.0,
+                        173.0
+                    ],
+                    [
+                        453.0,
+                        202.0
+                    ],
+                    [
+                        178.0,
+                        202.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9197938442230225,
+                "coordinate": [
+                    219,
+                    226,
+                    1118,
+                    491
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        219.0,
+                        226.0
+                    ],
+                    [
+                        1118.0,
+                        226.0
+                    ],
+                    [
+                        1118.0,
+                        491.0
+                    ],
+                    [
+                        219.0,
+                        491.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9426993131637573,
+                "coordinate": [
+                    175,
+                    544,
+                    1119,
+                    722
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        175.0,
+                        544.0
+                    ],
+                    [
+                        1119.0,
+                        544.0
+                    ],
+                    [
+                        1119.0,
+                        722.0
+                    ],
+                    [
+                        175.0,
+                        722.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9267409443855286,
+                "coordinate": [
+                    174,
+                    740,
+                    1096,
+                    870
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        174.0,
+                        740.0
+                    ],
+                    [
+                        1096.0,
+                        740.0
+                    ],
+                    [
+                        1096.0,
+                        870.0
+                    ],
+                    [
+                        174.0,
+                        870.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9609231352806091,
+                "coordinate": [
+                    173,
+                    889,
+                    1106,
+                    1365
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        173.0,
+                        889.0
+                    ],
+                    [
+                        1106.0,
+                        889.0
+                    ],
+                    [
+                        1106.0,
+                        1365.0
+                    ],
+                    [
+                        173.0,
+                        1365.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6518872976303101,
+                "coordinate": [
+                    591,
+                    1480,
+                    620,
+                    1503
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        591.0,
+                        1480.0
+                    ],
+                    [
+                        619.0,
+                        1480.0
+                    ],
+                    [
+                        619.0,
+                        1502.0
+                    ],
+                    [
+                        591.0,
+                        1502.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,339 @@
+{
+    "input_path": "cache/cornell_dol/K830313_08_07combined.pdf",
+    "page_index": 60,
+    "page_count": 139,
+    "width": 1227,
+    "height": 1586,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Jeffco Schools: JCEA Negotiated Agreement",
+            "block_bbox": [
+                32,
+                16,
+                478,
+                45
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    32.0,
+                    16.0
+                ],
+                [
+                    478.0,
+                    16.0
+                ],
+                [
+                    478.0,
+                    45.0
+                ],
+                [
+                    32.0,
+                    45.0
+                ]
+            ]
+        },
+        {
+            "block_label": "header_image",
+            "block_content": "",
+            "block_bbox": [
+                544,
+                55,
+                683,
+                127
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    544.0,
+                    55.0
+                ],
+                [
+                    683.0,
+                    55.0
+                ],
+                [
+                    683.0,
+                    127.0
+                ],
+                [
+                    544.0,
+                    127.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 2 of 2",
+            "block_bbox": [
+                1078,
+                17,
+                1198,
+                46
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    1078.0,
+                    17.0
+                ],
+                [
+                    1198.0,
+                    17.0
+                ],
+                [
+                    1198.0,
+                    46.0
+                ],
+                [
+                    1078.0,
+                    46.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "http://jeffcoweb.jeffco.k12.co.us/emprelations/jcea/article_25.html",
+            "block_bbox": [
+                33,
+                1531,
+                686,
+                1562
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    33.0,
+                    1531.0
+                ],
+                [
+                    686.0,
+                    1531.0
+                ],
+                [
+                    686.0,
+                    1562.0
+                ],
+                [
+                    33.0,
+                    1562.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "2/5/04",
+            "block_bbox": [
+                1126,
+                1531,
+                1195,
+                1559
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    1126.0,
+                    1531.0
+                ],
+                [
+                    1195.0,
+                    1531.0
+                ],
+                [
+                    1195.0,
+                    1559.0
+                ],
+                [
+                    1126.0,
+                    1559.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8229929208755493,
+                "coordinate": [
+                    32,
+                    16,
+                    478,
+                    45
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        32.0,
+                        16.0
+                    ],
+                    [
+                        478.0,
+                        16.0
+                    ],
+                    [
+                        478.0,
+                        45.0
+                    ],
+                    [
+                        32.0,
+                        45.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 13,
+                "label": "header_image",
+                "score": 0.7430753707885742,
+                "coordinate": [
+                    544,
+                    55,
+                    683,
+                    127
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        544.0,
+                        55.0
+                    ],
+                    [
+                        683.0,
+                        55.0
+                    ],
+                    [
+                        683.0,
+                        127.0
+                    ],
+                    [
+                        544.0,
+                        127.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8428463935852051,
+                "coordinate": [
+                    1078,
+                    17,
+                    1198,
+                    46
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        1078.0,
+                        17.0
+                    ],
+                    [
+                        1198.0,
+                        17.0
+                    ],
+                    [
+                        1198.0,
+                        46.0
+                    ],
+                    [
+                        1078.0,
+                        46.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.849952757358551,
+                "coordinate": [
+                    33,
+                    1531,
+                    686,
+                    1562
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        33.0,
+                        1531.0
+                    ],
+                    [
+                        686.0,
+                        1531.0
+                    ],
+                    [
+                        686.0,
+                        1562.0
+                    ],
+                    [
+                        33.0,
+                        1562.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.7013227939605713,
+                "coordinate": [
+                    1126,
+                    1531,
+                    1195,
+                    1559
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1126.0,
+                        1531.0
+                    ],
+                    [
+                        1195.0,
+                        1531.0
+                    ],
+                    [
+                        1195.0,
+                        1559.0
+                    ],
+                    [
+                        1126.0,
+                        1559.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

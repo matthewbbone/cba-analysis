@@ -1,0 +1,1437 @@
+{
+    "input_path": "cache/cornell_dol/4208Abbyy.pdf",
+    "page_index": 79,
+    "page_count": 128,
+    "width": 772,
+    "height": 1204,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "aside_text",
+            "block_content": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56",
+            "block_bbox": [
+                33,
+                67,
+                57,
+                1137
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    33.0,
+                    67.0
+                ],
+                [
+                    57.0,
+                    67.0
+                ],
+                [
+                    57.0,
+                    1137.0
+                ],
+                [
+                    33.0,
+                    1137.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "c) Physical therapy visits by a physical therapist.",
+            "block_bbox": [
+                185,
+                70,
+                481,
+                94
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    185.0,
+                    70.0
+                ],
+                [
+                    481.0,
+                    70.0
+                ],
+                [
+                    481.0,
+                    94.0
+                ],
+                [
+                    185.0,
+                    94.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "d) Speech therapy visits by a speech therapist.",
+            "block_bbox": [
+                185,
+                108,
+                464,
+                132
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    185.0,
+                    108.0
+                ],
+                [
+                    464.0,
+                    108.0
+                ],
+                [
+                    464.0,
+                    132.0
+                ],
+                [
+                    185.0,
+                    132.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "e) Occupational therapy visits by an occupational therapist.",
+            "block_bbox": [
+                184,
+                146,
+                547,
+                170
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    184.0,
+                    146.0
+                ],
+                [
+                    547.0,
+                    146.0
+                ],
+                [
+                    547.0,
+                    170.0
+                ],
+                [
+                    184.0,
+                    170.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "f) Medical social visits by a person with a master's degree in social work (M.S.W.).",
+            "block_bbox": [
+                183,
+                184,
+                708,
+                225
+            ],
+            "block_id": 4,
+            "block_order": 4,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    183.0,
+                    184.0
+                ],
+                [
+                    708.0,
+                    184.0
+                ],
+                [
+                    708.0,
+                    225.0
+                ],
+                [
+                    183.0,
+                    225.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "g) Home health aide visits.",
+            "block_bbox": [
+                185,
+                241,
+                354,
+                264
+            ],
+            "block_id": 5,
+            "block_order": 5,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    185.0,
+                    241.0
+                ],
+                [
+                    354.0,
+                    241.0
+                ],
+                [
+                    354.0,
+                    264.0
+                ],
+                [
+                    185.0,
+                    264.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b) Respiratory therapy visits by an inhalation therapist certified by the National Board of Respiratory Therapists.",
+            "block_bbox": [
+                183,
+                279,
+                706,
+                321
+            ],
+            "block_id": 6,
+            "block_order": 6,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    183.0,
+                    279.0
+                ],
+                [
+                    706.0,
+                    279.0
+                ],
+                [
+                    706.0,
+                    321.0
+                ],
+                [
+                    183.0,
+                    321.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "i) Medical supplies dispensed by the home health care agency that would have been provided on an inpatient basis.",
+            "block_bbox": [
+                183,
+                336,
+                705,
+                379
+            ],
+            "block_id": 7,
+            "block_order": 7,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    183.0,
+                    336.0
+                ],
+                [
+                    705.0,
+                    336.0
+                ],
+                [
+                    705.0,
+                    379.0
+                ],
+                [
+                    183.0,
+                    379.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "i) Nutritional supplements such as diet substitutes administered intravenously or through hyperalimentation.",
+            "block_bbox": [
+                182,
+                393,
+                706,
+                435
+            ],
+            "block_id": 8,
+            "block_order": 8,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    182.0,
+                    393.0
+                ],
+                [
+                    706.0,
+                    393.0
+                ],
+                [
+                    706.0,
+                    435.0
+                ],
+                [
+                    182.0,
+                    435.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "k) Nutritional guidance by a registered dietitian.",
+            "block_bbox": [
+                182,
+                450,
+                485,
+                473
+            ],
+            "block_id": 9,
+            "block_order": 9,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    182.0,
+                    450.0
+                ],
+                [
+                    485.0,
+                    450.0
+                ],
+                [
+                    485.0,
+                    473.0
+                ],
+                [
+                    182.0,
+                    473.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(1) Services and supplies for infusion therapy. (Patients do not need to meet the treatment plan and homebound requirements.)",
+            "block_bbox": [
+                181,
+                489,
+                705,
+                530
+            ],
+            "block_id": 10,
+            "block_order": 10,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    181.0,
+                    489.0
+                ],
+                [
+                    705.0,
+                    489.0
+                ],
+                [
+                    705.0,
+                    530.0
+                ],
+                [
+                    181.0,
+                    530.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3) See Section 11.H. for listed home health care exclusions.",
+            "block_bbox": [
+                155,
+                546,
+                524,
+                568
+            ],
+            "block_id": 11,
+            "block_order": 11,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    155.0,
+                    546.0
+                ],
+                [
+                    524.0,
+                    546.0
+                ],
+                [
+                    524.0,
+                    568.0
+                ],
+                [
+                    155.0,
+                    568.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b. Visits and supplies of a hospice agency when provided in place of confinement in a hospital or skilled nursing facility.",
+            "block_bbox": [
+                128,
+                583,
+                705,
+                626
+            ],
+            "block_id": 12,
+            "block_order": 12,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    128.0,
+                    583.0
+                ],
+                [
+                    705.0,
+                    583.0
+                ],
+                [
+                    705.0,
+                    626.0
+                ],
+                [
+                    128.0,
+                    626.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Benefits are subject to the medical review program.",
+            "block_bbox": [
+                154,
+                641,
+                464,
+                664
+            ],
+            "block_id": 13,
+            "block_order": 13,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    154.0,
+                    641.0
+                ],
+                [
+                    464.0,
+                    641.0
+                ],
+                [
+                    464.0,
+                    664.0
+                ],
+                [
+                    154.0,
+                    664.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1) To be eligible for benefits:",
+            "block_bbox": [
+                154,
+                679,
+                342,
+                701
+            ],
+            "block_id": 14,
+            "block_order": 14,
+            "group_id": 14,
+            "block_polygon_points": [
+                [
+                    154.0,
+                    679.0
+                ],
+                [
+                    341.0,
+                    679.0
+                ],
+                [
+                    341.0,
+                    700.0
+                ],
+                [
+                    154.0,
+                    700.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a) Hospice care visits and supplies must be for the medically necessary treatment or palliative care of terminally ill patients with a life expectancy of six (6) months or less.",
+            "block_bbox": [
+                179,
+                718,
+                703,
+                759
+            ],
+            "block_id": 15,
+            "block_order": 15,
+            "group_id": 15,
+            "block_polygon_points": [
+                [
+                    179.0,
+                    718.0
+                ],
+                [
+                    703.0,
+                    718.0
+                ],
+                [
+                    703.0,
+                    759.0
+                ],
+                [
+                    179.0,
+                    759.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b) The physician must establish a written hospice care treatment plan.",
+            "block_bbox": [
+                179,
+                775,
+                598,
+                798
+            ],
+            "block_id": 16,
+            "block_order": 16,
+            "group_id": 16,
+            "block_polygon_points": [
+                [
+                    179.0,
+                    775.0
+                ],
+                [
+                    598.0,
+                    775.0
+                ],
+                [
+                    598.0,
+                    798.0
+                ],
+                [
+                    179.0,
+                    798.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2) Hospice visits and supplies in the patient's home must be provided by and billed by the hospice agency and are limited to the same items as listed under Section 11.D.5.a. In addition, benefits are provided for respite care for a minimum of two (2) hours per day (continuous patient care to provide temporary relief to family members or friends).",
+            "block_bbox": [
+                153,
+                814,
+                703,
+                894
+            ],
+            "block_id": 17,
+            "block_order": 17,
+            "group_id": 17,
+            "block_polygon_points": [
+                [
+                    153.0,
+                    814.0
+                ],
+                [
+                    702.0,
+                    814.0
+                ],
+                [
+                    702.0,
+                    888.0
+                ],
+                [
+                    153.0,
+                    888.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3) Expenses for inpatient hospice confinement are covered to the same extent as if incurred in a hospital.",
+            "block_bbox": [
+                153,
+                909,
+                702,
+                949
+            ],
+            "block_id": 18,
+            "block_order": 18,
+            "group_id": 18,
+            "block_polygon_points": [
+                [
+                    153.0,
+                    909.0
+                ],
+                [
+                    702.0,
+                    909.0
+                ],
+                [
+                    702.0,
+                    949.0
+                ],
+                [
+                    153.0,
+                    949.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "4) Limits.",
+            "block_bbox": [
+                152,
+                966,
+                226,
+                987
+            ],
+            "block_id": 19,
+            "block_order": 19,
+            "group_id": 19,
+            "block_polygon_points": [
+                [
+                    152.0,
+                    966.0
+                ],
+                [
+                    225.0,
+                    966.0
+                ],
+                [
+                    225.0,
+                    986.0
+                ],
+                [
+                    152.0,
+                    986.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "a) Respite care of two (2) or more hours per day when no skilled care is required is limited to a combined total of one hundred twenty (120) hours in each three (3)-month period.",
+            "block_bbox": [
+                178,
+                1004,
+                702,
+                1064
+            ],
+            "block_id": 20,
+            "block_order": 20,
+            "group_id": 20,
+            "block_polygon_points": [
+                [
+                    178.0,
+                    1004.0
+                ],
+                [
+                    702.0,
+                    1004.0
+                ],
+                [
+                    702.0,
+                    1064.0
+                ],
+                [
+                    178.0,
+                    1064.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "b) Expenses for hospice care char qualify under this benefit and under any other benefit of this Plan are covered only under the benefit the service representative determines as the most appropriate.",
+            "block_bbox": [
+                178,
+                1080,
+                702,
+                1140
+            ],
+            "block_id": 21,
+            "block_order": 21,
+            "group_id": 21,
+            "block_polygon_points": [
+                [
+                    178.0,
+                    1080.0
+                ],
+                [
+                    702.0,
+                    1080.0
+                ],
+                [
+                    702.0,
+                    1140.0
+                ],
+                [
+                    178.0,
+                    1140.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "A.26",
+            "block_bbox": [
+                366,
+                1158,
+                402,
+                1175
+            ],
+            "block_id": 22,
+            "block_order": null,
+            "group_id": 22,
+            "block_polygon_points": [
+                [
+                    366.0,
+                    1158.0
+                ],
+                [
+                    401.0,
+                    1158.0
+                ],
+                [
+                    401.0,
+                    1174.0
+                ],
+                [
+                    366.0,
+                    1174.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 2,
+                "label": "aside_text",
+                "score": 0.8167250156402588,
+                "coordinate": [
+                    33,
+                    67,
+                    57,
+                    1137
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        33.0,
+                        67.0
+                    ],
+                    [
+                        57.0,
+                        67.0
+                    ],
+                    [
+                        57.0,
+                        1137.0
+                    ],
+                    [
+                        33.0,
+                        1137.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7980717420578003,
+                "coordinate": [
+                    185,
+                    70,
+                    481,
+                    94
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        185.0,
+                        70.0
+                    ],
+                    [
+                        481.0,
+                        70.0
+                    ],
+                    [
+                        481.0,
+                        94.0
+                    ],
+                    [
+                        185.0,
+                        94.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8074022531509399,
+                "coordinate": [
+                    185,
+                    108,
+                    464,
+                    132
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        185.0,
+                        108.0
+                    ],
+                    [
+                        464.0,
+                        108.0
+                    ],
+                    [
+                        464.0,
+                        132.0
+                    ],
+                    [
+                        185.0,
+                        132.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8205177783966064,
+                "coordinate": [
+                    184,
+                    146,
+                    547,
+                    170
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        184.0,
+                        146.0
+                    ],
+                    [
+                        547.0,
+                        146.0
+                    ],
+                    [
+                        547.0,
+                        170.0
+                    ],
+                    [
+                        184.0,
+                        170.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8715390563011169,
+                "coordinate": [
+                    183,
+                    184,
+                    708,
+                    225
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        183.0,
+                        184.0
+                    ],
+                    [
+                        708.0,
+                        184.0
+                    ],
+                    [
+                        708.0,
+                        225.0
+                    ],
+                    [
+                        183.0,
+                        225.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7865227460861206,
+                "coordinate": [
+                    185,
+                    241,
+                    354,
+                    264
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        185.0,
+                        241.0
+                    ],
+                    [
+                        354.0,
+                        241.0
+                    ],
+                    [
+                        354.0,
+                        264.0
+                    ],
+                    [
+                        185.0,
+                        264.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8747131824493408,
+                "coordinate": [
+                    183,
+                    279,
+                    706,
+                    321
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        183.0,
+                        279.0
+                    ],
+                    [
+                        706.0,
+                        279.0
+                    ],
+                    [
+                        706.0,
+                        321.0
+                    ],
+                    [
+                        183.0,
+                        321.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8804673552513123,
+                "coordinate": [
+                    183,
+                    336,
+                    705,
+                    379
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        183.0,
+                        336.0
+                    ],
+                    [
+                        705.0,
+                        336.0
+                    ],
+                    [
+                        705.0,
+                        379.0
+                    ],
+                    [
+                        183.0,
+                        379.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8778177499771118,
+                "coordinate": [
+                    182,
+                    393,
+                    706,
+                    435
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        182.0,
+                        393.0
+                    ],
+                    [
+                        706.0,
+                        393.0
+                    ],
+                    [
+                        706.0,
+                        435.0
+                    ],
+                    [
+                        182.0,
+                        435.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8298179507255554,
+                "coordinate": [
+                    182,
+                    450,
+                    485,
+                    473
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        182.0,
+                        450.0
+                    ],
+                    [
+                        485.0,
+                        450.0
+                    ],
+                    [
+                        485.0,
+                        473.0
+                    ],
+                    [
+                        182.0,
+                        473.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8765369653701782,
+                "coordinate": [
+                    181,
+                    489,
+                    705,
+                    530
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        181.0,
+                        489.0
+                    ],
+                    [
+                        705.0,
+                        489.0
+                    ],
+                    [
+                        705.0,
+                        530.0
+                    ],
+                    [
+                        181.0,
+                        530.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8100259304046631,
+                "coordinate": [
+                    155,
+                    546,
+                    524,
+                    568
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        155.0,
+                        546.0
+                    ],
+                    [
+                        524.0,
+                        546.0
+                    ],
+                    [
+                        524.0,
+                        568.0
+                    ],
+                    [
+                        155.0,
+                        568.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8601219654083252,
+                "coordinate": [
+                    128,
+                    583,
+                    705,
+                    626
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        128.0,
+                        583.0
+                    ],
+                    [
+                        705.0,
+                        583.0
+                    ],
+                    [
+                        705.0,
+                        626.0
+                    ],
+                    [
+                        128.0,
+                        626.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8200711011886597,
+                "coordinate": [
+                    154,
+                    641,
+                    464,
+                    664
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        154.0,
+                        641.0
+                    ],
+                    [
+                        464.0,
+                        641.0
+                    ],
+                    [
+                        464.0,
+                        664.0
+                    ],
+                    [
+                        154.0,
+                        664.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8130980134010315,
+                "coordinate": [
+                    154,
+                    679,
+                    342,
+                    701
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        154.0,
+                        679.0
+                    ],
+                    [
+                        341.0,
+                        679.0
+                    ],
+                    [
+                        341.0,
+                        700.0
+                    ],
+                    [
+                        154.0,
+                        700.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8883629441261292,
+                "coordinate": [
+                    179,
+                    718,
+                    703,
+                    759
+                ],
+                "order": 15,
+                "polygon_points": [
+                    [
+                        179.0,
+                        718.0
+                    ],
+                    [
+                        703.0,
+                        718.0
+                    ],
+                    [
+                        703.0,
+                        759.0
+                    ],
+                    [
+                        179.0,
+                        759.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8365685939788818,
+                "coordinate": [
+                    179,
+                    775,
+                    598,
+                    798
+                ],
+                "order": 16,
+                "polygon_points": [
+                    [
+                        179.0,
+                        775.0
+                    ],
+                    [
+                        598.0,
+                        775.0
+                    ],
+                    [
+                        598.0,
+                        798.0
+                    ],
+                    [
+                        179.0,
+                        798.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.938988447189331,
+                "coordinate": [
+                    153,
+                    814,
+                    703,
+                    894
+                ],
+                "order": 17,
+                "polygon_points": [
+                    [
+                        153.0,
+                        814.0
+                    ],
+                    [
+                        702.0,
+                        814.0
+                    ],
+                    [
+                        702.0,
+                        888.0
+                    ],
+                    [
+                        153.0,
+                        888.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8939760327339172,
+                "coordinate": [
+                    153,
+                    909,
+                    702,
+                    949
+                ],
+                "order": 18,
+                "polygon_points": [
+                    [
+                        153.0,
+                        909.0
+                    ],
+                    [
+                        702.0,
+                        909.0
+                    ],
+                    [
+                        702.0,
+                        949.0
+                    ],
+                    [
+                        153.0,
+                        949.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.802363932132721,
+                "coordinate": [
+                    152,
+                    966,
+                    226,
+                    987
+                ],
+                "order": 19,
+                "polygon_points": [
+                    [
+                        152.0,
+                        966.0
+                    ],
+                    [
+                        225.0,
+                        966.0
+                    ],
+                    [
+                        225.0,
+                        986.0
+                    ],
+                    [
+                        152.0,
+                        986.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9148576855659485,
+                "coordinate": [
+                    178,
+                    1004,
+                    702,
+                    1064
+                ],
+                "order": 20,
+                "polygon_points": [
+                    [
+                        178.0,
+                        1004.0
+                    ],
+                    [
+                        702.0,
+                        1004.0
+                    ],
+                    [
+                        702.0,
+                        1064.0
+                    ],
+                    [
+                        178.0,
+                        1064.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9138504266738892,
+                "coordinate": [
+                    178,
+                    1080,
+                    702,
+                    1140
+                ],
+                "order": 21,
+                "polygon_points": [
+                    [
+                        178.0,
+                        1080.0
+                    ],
+                    [
+                        702.0,
+                        1080.0
+                    ],
+                    [
+                        702.0,
+                        1140.0
+                    ],
+                    [
+                        178.0,
+                        1140.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7853269577026367,
+                "coordinate": [
+                    366,
+                    1158,
+                    402,
+                    1175
+                ],
+                "order": 22,
+                "polygon_points": [
+                    [
+                        366.0,
+                        1158.0
+                    ],
+                    [
+                        401.0,
+                        1158.0
+                    ],
+                    [
+                        401.0,
+                        1174.0
+                    ],
+                    [
+                        366.0,
+                        1174.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

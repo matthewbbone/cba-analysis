@@ -1,0 +1,339 @@
+{
+    "input_path": "cache/cornell_dol/K800147ABBYY.pdf",
+    "page_index": 86,
+    "page_count": 125,
+    "width": 1584,
+    "height": 1224,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Appendix A",
+            "block_bbox": [
+                748,
+                37,
+                838,
+                58
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    748.0,
+                    37.0
+                ],
+                [
+                    837.0,
+                    37.0
+                ],
+                [
+                    837.0,
+                    57.0
+                ],
+                [
+                    748.0,
+                    57.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "COMMONWEALTH OF PENNSYLVANIA\n37½ HOUR STANDARD PAY SCHEDULE\nEFFECTIVE JULY 1, 2002\nSCHEDULE S",
+            "block_bbox": [
+                534,
+                74,
+                1035,
+                195
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    534.0,
+                    74.0
+                ],
+                [
+                    1035.0,
+                    74.0
+                ],
+                [
+                    1035.0,
+                    195.0
+                ],
+                [
+                    534.0,
+                    195.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>PAY STEP</td><td>PAY RANGE 1</td><td>PAY RANGE 2</td><td>PAY RANGE 3</td><td>PAY RANGE 4</td><td>PAY RANGE 5</td><td>PAY RANGE 6</td><td>PAY RANGE 7</td><td>PAY RANGE 8</td><td>PAY RANGE 9</td><td>PAY RANGE 10</td></tr><tr><td rowspan=\"3\">11</td><td>Hourly 11.15</td><td>12.55</td><td>14.18</td><td>16.03</td><td>18.27</td><td>20.84</td><td>23.81</td><td>27.18</td><td>30.98</td><td>35.39</td></tr><tr><td>Biweekly 836.25</td><td>941.25</td><td>1,063.50</td><td>1,202.25</td><td>1,370.25</td><td>1,563.00</td><td>1,785.75</td><td>2,038.50</td><td>2,323.50</td><td>2,654.25</td></tr><tr><td>Annual* 21,809</td><td>24,548</td><td>27,736</td><td>31,355</td><td>35,736</td><td>40,763</td><td>46,572</td><td>53,164</td><td>60,597</td><td>69,223</td></tr><tr><td rowspan=\"3\">12</td><td>Hourly 11.37</td><td>12.83</td><td>14.48</td><td>16.38</td><td>18.66</td><td>21.33</td><td>24.34</td><td>27.76</td><td>31.69</td><td>36.16</td></tr><tr><td>Biweekly 852.75</td><td>962.25</td><td>1,086.00</td><td>1,228.50</td><td>1,399.50</td><td>1,599.75</td><td>1,825.50</td><td>2,082.00</td><td>2,376.75</td><td>2,712.00</td></tr><tr><td>Annual* 22,240</td><td>25,095</td><td>28,323</td><td>32,039</td><td>36,499</td><td>41,721</td><td>47,609</td><td>54,299</td><td>61,986</td><td>70,729</td></tr><tr><td rowspan=\"3\">13</td><td>Hourly 11.62</td><td>13.10</td><td>14.78</td><td>16.73</td><td>19.10</td><td>21.79</td><td>24.87</td><td>28.39</td><td>32.41</td><td>36.99</td></tr><tr><td>Biweekly 871.50</td><td>982.50</td><td>1,108.50</td><td>1,254.75</td><td>1,432.50</td><td>1,634.25</td><td>1,865.25</td><td>2,129.25</td><td>2,430.75</td><td>2,774.25</td></tr><tr><td>Annual* 22,729</td><td>25,624</td><td>28,910</td><td>32,724</td><td>37,360</td><td>42,621</td><td>48,646</td><td>55,531</td><td>63,394</td><td>72,352</td></tr><tr><td rowspan=\"3\">14</td><td>Hourly 11.83</td><td>13.35</td><td>15.10</td><td>17.09</td><td>19.53</td><td>22.27</td><td>25.42</td><td>29.02</td><td>33.11</td><td>37.81</td></tr><tr><td>Biweekly 887.25</td><td>1,001.25</td><td>1,132.50</td><td>1,281.75</td><td>1,464.75</td><td>1,670.25</td><td>1,906.50</td><td>2,176.50</td><td>2,483.25</td><td>2,835.75</td></tr><tr><td>Annual* 23,139</td><td>26,113</td><td>29,536</td><td>33,428</td><td>38,201</td><td>43,560</td><td>49,722</td><td>56,763</td><td>64,763</td><td>73,956</td></tr><tr><td rowspan=\"3\">15</td><td>Hourly 12.08</td><td>13.63</td><td>15.39</td><td>17.45</td><td>19.94</td><td>22.78</td><td>26.00</td><td>29.67</td><td>33.85</td><td>38.65</td></tr><tr><td>Biweekly 906.00</td><td>1,022.25</td><td>1,154.25</td><td>1,308.75</td><td>1,495.50</td><td>1,708.50</td><td>1,950.00</td><td>2,225.25</td><td>2,538.75</td><td>2,898.75</td></tr><tr><td>Annual* 23,628</td><td>26,660</td><td>30,103</td><td>34,132</td><td>39,003</td><td>44,558</td><td>50,856</td><td>58,035</td><td>66,211</td><td>75,599</td></tr><tr><td rowspan=\"3\">16</td><td>Hourly 12.34</td><td>13.93</td><td>15.71</td><td>17.85</td><td>20.39</td><td>23.30</td><td>26.57</td><td>30.32</td><td>34.60</td><td>39.50</td></tr><tr><td>Biweekly 925.50</td><td>1,044.75</td><td>1,178.25</td><td>1,338.75</td><td>1,529.25</td><td>1,747.50</td><td>1,992.75</td><td>2,274.00</td><td>2,595.00</td><td>2,962.50</td></tr><tr><td>Annual* 24,137</td><td>27,247</td><td>30,729</td><td>34,915</td><td>39,883</td><td>45,575</td><td>51,971</td><td>59,306</td><td>67,678</td><td>77,262</td></tr><tr><td rowspan=\"3\">17</td><td>Hourly 12.55</td><td>14.18</td><td>16.03</td><td>18.27</td><td>20.84</td><td>23.81</td><td>27.18</td><td>30.98</td><td>35.39</td><td>40.41</td></tr><tr><td>Biweekly 941.25</td><td>1,063.50</td><td>1,202.25</td><td>1,370.25</td><td>1,563.00</td><td>1,785.75</td><td>2,038.50</td><td>2,323.50</td><td>2,654.25</td><td>3,030.75</td></tr><tr><td>Annual* 24,548</td><td>27,736</td><td>31,355</td><td>35,736</td><td>40,763</td><td>46,572</td><td>53,164</td><td>60,597</td><td>69,223</td><td>79,042</td></tr><tr><td rowspan=\"3\">18</td><td>Hourly 12.83</td><td>14.48</td><td>16.38</td><td>18.66</td><td>21.33</td><td>24.34</td><td>27.76</td><td>31.69</td><td>36.16</td><td>41.30</td></tr><tr><td>Biweekly 962.25</td><td>1,086.00</td><td>1,228.50</td><td>1,399.50</td><td>1,599.75</td><td>1,825.50</td><td>2,082.00</td><td>2,376.75</td><td>2,712.00</td><td>3,097.50</td></tr><tr><td>Annual* 25,095</td><td>28,323</td><td>32,039</td><td>36,499</td><td>41,721</td><td>47,609</td><td>54,299</td><td>61,986</td><td>70,729</td><td>80,783</td></tr><tr><td rowspan=\"3\">19</td><td>Hourly 13.10</td><td>14.78</td><td>16.73</td><td>19.10</td><td>21.79</td><td>24.87</td><td>28.39</td><td>32.41</td><td>36.99</td><td>42.21</td></tr><tr><td>Biweekly 982.50</td><td>1,108.50</td><td>1,254.75</td><td>1,432.50</td><td>1,634.25</td><td>1,865.25</td><td>2,129.25</td><td>2,430.75</td><td>2,774.25</td><td>3,165.75</td></tr><tr><td>Annual* 25,624</td><td>28,910</td><td>32,724</td><td>37,360</td><td>42,621</td><td>48,646</td><td>55,531</td><td>63,394</td><td>72,352</td><td>82,563</td></tr><tr><td rowspan=\"3\">20</td><td>Hourly 13.35</td><td>15.10</td><td>17.09</td><td>19.53</td><td>22.27</td><td>25.42</td><td>29.02</td><td>33.11</td><td>37.81</td><td>43.15</td></tr><tr><td>Biweekly 1,001.25</td><td>1,132.50</td><td>1,281.75</td><td>1,464.75</td><td>1,670.25</td><td>1,906.50</td><td>2,176.50</td><td>2,483.25</td><td>2,835.75</td><td>3,236.25</td></tr><tr><td>Annual* 26,113</td><td>29,536</td><td>33,428</td><td>38,201</td><td>43,560</td><td>49,722</td><td>56,763</td><td>64,763</td><td>73,956</td><td>84,401</td></tr></table>",
+            "block_bbox": [
+                256,
+                205,
+                1323,
+                1050
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    256.0,
+                    205.0
+                ],
+                [
+                    1323.0,
+                    205.0
+                ],
+                [
+                    1323.0,
+                    1050.0
+                ],
+                [
+                    256.0,
+                    1050.0
+                ]
+            ]
+        },
+        {
+            "block_label": "vision_footnote",
+            "block_content": " $ ^{*} $ Approximate annual rate is derived by multiplying the biweekly rate by 26.08 and rounding to the nearest dollar.",
+            "block_bbox": [
+                263,
+                1051,
+                956,
+                1071
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    263.0,
+                    1051.0
+                ],
+                [
+                    955.0,
+                    1051.0
+                ],
+                [
+                    955.0,
+                    1070.0
+                ],
+                [
+                    263.0,
+                    1070.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 2 of 4",
+            "block_bbox": [
+                1237,
+                1070,
+                1310,
+                1089
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    1237.0,
+                    1070.0
+                ],
+                [
+                    1309.0,
+                    1070.0
+                ],
+                [
+                    1309.0,
+                    1088.0
+                ],
+                [
+                    1237.0,
+                    1088.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.6006420850753784,
+                "coordinate": [
+                    748,
+                    37,
+                    838,
+                    58
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        748.0,
+                        37.0
+                    ],
+                    [
+                        837.0,
+                        37.0
+                    ],
+                    [
+                        837.0,
+                        57.0
+                    ],
+                    [
+                        748.0,
+                        57.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.5933974981307983,
+                "coordinate": [
+                    534,
+                    74,
+                    1035,
+                    195
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        534.0,
+                        74.0
+                    ],
+                    [
+                        1035.0,
+                        74.0
+                    ],
+                    [
+                        1035.0,
+                        195.0
+                    ],
+                    [
+                        534.0,
+                        195.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9675690531730652,
+                "coordinate": [
+                    256,
+                    205,
+                    1323,
+                    1050
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        256.0,
+                        205.0
+                    ],
+                    [
+                        1323.0,
+                        205.0
+                    ],
+                    [
+                        1323.0,
+                        1050.0
+                    ],
+                    [
+                        256.0,
+                        1050.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 24,
+                "label": "vision_footnote",
+                "score": 0.8424344062805176,
+                "coordinate": [
+                    263,
+                    1051,
+                    956,
+                    1071
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        263.0,
+                        1051.0
+                    ],
+                    [
+                        955.0,
+                        1051.0
+                    ],
+                    [
+                        955.0,
+                        1070.0
+                    ],
+                    [
+                        263.0,
+                        1070.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7660048007965088,
+                "coordinate": [
+                    1237,
+                    1070,
+                    1310,
+                    1089
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        1237.0,
+                        1070.0
+                    ],
+                    [
+                        1309.0,
+                        1070.0
+                    ],
+                    [
+                        1309.0,
+                        1088.0
+                    ],
+                    [
+                        1237.0,
+                        1088.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

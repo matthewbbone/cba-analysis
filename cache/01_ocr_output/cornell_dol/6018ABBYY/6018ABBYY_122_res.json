@@ -1,0 +1,186 @@
+{
+    "input_path": "cache/cornell_dol/6018ABBYY.pdf",
+    "page_index": 122,
+    "page_count": 287,
+    "width": 729,
+    "height": 1009,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "content",
+            "block_content": "CLASSIFICATION RATES\nEffective\n12/07/03\n\nMetering Department:\nGeneral Metering Technician ..... $24.45\nMaintenance Technician ..... 23.81\nMetering Technician ..... 23.46\nClerk ..... 23.46\nUtility ..... 21.87\n\nMeter Reading Department:\nMeter Reading Clerk / P.C. Operator ..... $19.50\nGeneral Service Consumption Technician ..... 19.34\nMeter Reader - 94 ..... 13.00\nMeter Reader ..... (1)\n\n(1) Pay progression: $10.00 at hire; $12.00 after first year;\n$12.50 after two years; and $13.00 after three years.\n\nProperty Operation and Maintenance Department:\nGeneral Carpenter/Electrician/Plumber Employee ..... $24.56\nBuilding Repair Employee ..... 23.46\nBuilding Operator ..... 22.22\nBuilding Operator (New Hire/Transfers) ..... (2)\n\n(2) ($2.00, $2.50, $10.00, $10.50) hourly rates for first,\nsecond, third and fourth year of employment.\n\nStock Department:\nGeneral Storekeeper ..... $24.45\nEquipment Technician ..... 24.45\nStorekeeper ..... 23.64\nUtility Employee ..... 22.99\n\nTransportation Department:\nGeneral Mechanic ..... $24.56\nMechanic ..... 23.74\nUtility Employee ..... 22.58\nClerk - Group A ..... 23.64",
+            "block_bbox": [
+                53,
+                63,
+                629,
+                922
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    53.0,
+                    63.0
+                ],
+                [
+                    629.0,
+                    63.0
+                ],
+                [
+                    629.0,
+                    922.0
+                ],
+                [
+                    53.0,
+                    922.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "114",
+            "block_bbox": [
+                331,
+                947,
+                361,
+                963
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    331.0,
+                    947.0
+                ],
+                [
+                    360.0,
+                    947.0
+                ],
+                [
+                    360.0,
+                    962.0
+                ],
+                [
+                    331.0,
+                    962.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.32093560695648193,
+                "coordinate": [
+                    55,
+                    57,
+                    205,
+                    80
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        55.0,
+                        57.0
+                    ],
+                    [
+                        205.0,
+                        57.0
+                    ],
+                    [
+                        205.0,
+                        80.0
+                    ],
+                    [
+                        55.0,
+                        80.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.9339423179626465,
+                "coordinate": [
+                    53,
+                    63,
+                    629,
+                    922
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        53.0,
+                        63.0
+                    ],
+                    [
+                        629.0,
+                        63.0
+                    ],
+                    [
+                        629.0,
+                        922.0
+                    ],
+                    [
+                        53.0,
+                        922.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7665380835533142,
+                "coordinate": [
+                    331,
+                    947,
+                    361,
+                    963
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        331.0,
+                        947.0
+                    ],
+                    [
+                        360.0,
+                        947.0
+                    ],
+                    [
+                        360.0,
+                        962.0
+                    ],
+                    [
+                        331.0,
+                        962.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

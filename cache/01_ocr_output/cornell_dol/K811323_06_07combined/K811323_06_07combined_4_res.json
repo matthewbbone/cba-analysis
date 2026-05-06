@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/K811323_06_07combined.pdf",
+    "page_index": 4,
+    "page_count": 62,
+    "width": 1224,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "content",
+            "block_content": "ARTICLE 40 - PROMOTIONS/ADVANCEMENT ..... 41\nARTICLE 41 - TRIAL SERVICE ..... 41\nARTICLE 42 - TRAINING/EDUCATION ..... 42\nARTICLE 43 - JOB SHARING ..... 42\nARTICLE 44 - LAYOFF PROCEDURE ..... 43\nARTICLE 45 - REVIEW OF CLASSIFICATION SERIES ..... 45\nARTICLE 46 - RECLASSIFICATION PROCEDURE ..... 46\nARTICLE 47 - EMPLOYEE RIGHTS ..... 47\nARTICLE 48 - LIMITED DURATION APPOINTMENT ..... 47\nARTICLE 49 - PERSONNEL FILES ..... 48\nARTICLE 50 - DISCIPLINE AND DISCHARGE ..... 48\nARTICLE 51 - GRIEVANCE AND ARBITRATION ..... 49\nARTICLE 52 - GENERAL PROVISIONS ..... 51\nARTICLE 53 - STRESS/CAREER COUNSELING ..... 51\nARTICLE 54 - PAYMENT OF LEGAL DEFENSE EXPENSES FOR CRIMINAL CASES ..... 51\n2005-2007 AFSCME SIGNATURE PAGE ..... 52\nLETTERS OF AGREEMENT\nLETTER OF AGREEMENT - Article 13 - Lump Sum Payment ..... 53\nLETTER OF AGREEMENT - Article 13 - Part-time Employee Health Insurance Subsidy ..... 54\nLETTER OF AGREEMENT - Article 13 - Additional Step Increase ..... 55\nLETTER OF AGREEMENT - Article 14 - Salary Administration ..... 56\nLETTER OF UNDERSTANDING - Article 25 - (EOCI) Bidding ..... 57\nLETTER OF AGREEMENT - Article 25 - (Transportation Unit) Hospital Watch ..... 58\nLETTER OF AGREEMENT - Article 25(1)(a) - (Salem Transportation Office) - Workweek ..... 59\nLETTER OF AGREEMENT - Change of Bid Shift and Days Off ..... 60\nCOMP PLAN ..... 61",
+            "block_bbox": [
+                102,
+                106,
+                1121,
+                1159
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    102.0,
+                    106.0
+                ],
+                [
+                    1121.0,
+                    106.0
+                ],
+                [
+                    1121.0,
+                    1159.0
+                ],
+                [
+                    102.0,
+                    1159.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "4",
+            "block_bbox": [
+                109,
+                1496,
+                124,
+                1514
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    109.0,
+                    1496.0
+                ],
+                [
+                    123.0,
+                    1496.0
+                ],
+                [
+                    123.0,
+                    1513.0
+                ],
+                [
+                    109.0,
+                    1513.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "2005-2007 AFSCME DOC Security",
+            "block_bbox": [
+                494,
+                1492,
+                729,
+                1512
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    494.0,
+                    1492.0
+                ],
+                [
+                    728.0,
+                    1492.0
+                ],
+                [
+                    728.0,
+                    1511.0
+                ],
+                [
+                    494.0,
+                    1511.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.9692158699035645,
+                "coordinate": [
+                    102,
+                    106,
+                    1121,
+                    1159
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        102.0,
+                        106.0
+                    ],
+                    [
+                        1121.0,
+                        106.0
+                    ],
+                    [
+                        1121.0,
+                        1159.0
+                    ],
+                    [
+                        102.0,
+                        1159.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6903328895568848,
+                "coordinate": [
+                    109,
+                    1496,
+                    124,
+                    1514
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        109.0,
+                        1496.0
+                    ],
+                    [
+                        123.0,
+                        1496.0
+                    ],
+                    [
+                        123.0,
+                        1513.0
+                    ],
+                    [
+                        109.0,
+                        1513.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8145670890808105,
+                "coordinate": [
+                    494,
+                    1492,
+                    729,
+                    1512
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        494.0,
+                        1492.0
+                    ],
+                    [
+                        728.0,
+                        1492.0
+                    ],
+                    [
+                        728.0,
+                        1511.0
+                    ],
+                    [
+                        494.0,
+                        1511.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

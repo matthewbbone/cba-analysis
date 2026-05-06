@@ -1,0 +1,766 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b184f002_01.pdf",
+    "page_index": 54,
+    "page_count": 73,
+    "width": 586,
+    "height": 980,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "paragraph_title",
+            "block_content": "Effective February 1, 1979",
+            "block_bbox": [
+                182,
+                69,
+                400,
+                90
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    182.0,
+                    69.0
+                ],
+                [
+                    399.0,
+                    69.0
+                ],
+                [
+                    399.0,
+                    89.0
+                ],
+                [
+                    182.0,
+                    89.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "SCHOOL PSYCHOLOGISTS",
+            "block_bbox": [
+                171,
+                97,
+                410,
+                120
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    171.0,
+                    97.0
+                ],
+                [
+                    410.0,
+                    97.0
+                ],
+                [
+                    410.0,
+                    120.0
+                ],
+                [
+                    171.0,
+                    120.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Step</td><td>M.A.</td><td>M.A.  $ \\dagger $ 32</td><td>DR.</td></tr><tr><td>1</td><td>18,200</td><td>18,900</td><td>19,600</td></tr><tr><td>2</td><td>19,600</td><td>20,300</td><td>21,000</td></tr><tr><td>3</td><td>20,200</td><td>20,900</td><td>21,600</td></tr><tr><td>4</td><td>20,800</td><td>21,500</td><td>22,200</td></tr><tr><td>5</td><td>22,000</td><td>22,700</td><td>23,400</td></tr><tr><td>6</td><td>23,300</td><td>24,000</td><td>24,700</td></tr></table>",
+            "block_bbox": [
+                73,
+                127,
+                509,
+                255
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    73.0,
+                    127.0
+                ],
+                [
+                    509.0,
+                    127.0
+                ],
+                [
+                    509.0,
+                    255.0
+                ],
+                [
+                    73.0,
+                    255.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "SEPTEMBER 1, 1979",
+            "block_bbox": [
+                201,
+                311,
+                381,
+                334
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    201.0,
+                    311.0
+                ],
+                [
+                    381.0,
+                    311.0
+                ],
+                [
+                    381.0,
+                    334.0
+                ],
+                [
+                    201.0,
+                    334.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "Incremental increases will be granted Sept 1, 1979",
+            "block_bbox": [
+                74,
+                340,
+                510,
+                365
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    73.78166198730469,
+                    345.00250244140625
+                ],
+                [
+                    509.0,
+                    340.0
+                ],
+                [
+                    509.27435302734375,
+                    363.87042236328125
+                ],
+                [
+                    74.05601501464844,
+                    368.8729248046875
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "Effective February 1, 1980",
+            "block_bbox": [
+                179,
+                370,
+                398,
+                392
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    179.0,
+                    370.0
+                ],
+                [
+                    398.0,
+                    370.0
+                ],
+                [
+                    398.0,
+                    392.0
+                ],
+                [
+                    179.0,
+                    392.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>1</td><td>18,200</td><td>18,900</td><td>19,600</td></tr><tr><td>2</td><td>19,600</td><td>20,300</td><td>21,000</td></tr><tr><td>3</td><td>20,200</td><td>20,900</td><td>21,600</td></tr><tr><td>4</td><td>20,800</td><td>21,500</td><td>22,200</td></tr><tr><td>5</td><td>22,000</td><td>22,700</td><td>23,400</td></tr><tr><td>6</td><td>23,300</td><td>24,000</td><td>24,700</td></tr><tr><td>7</td><td>24,400</td><td>25,300</td><td>26,200</td></tr></table>",
+            "block_bbox": [
+                81,
+                397,
+                511,
+                521
+            ],
+            "block_id": 6,
+            "block_order": null,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    81.0,
+                    397.0
+                ],
+                [
+                    511.0,
+                    397.0
+                ],
+                [
+                    511.0,
+                    521.0
+                ],
+                [
+                    81.0,
+                    521.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "SCHEDULE C",
+            "block_bbox": [
+                230,
+                576,
+                355,
+                599
+            ],
+            "block_id": 7,
+            "block_order": null,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    230.0,
+                    576.0
+                ],
+                [
+                    354.0,
+                    576.0
+                ],
+                [
+                    354.0,
+                    598.0
+                ],
+                [
+                    230.0,
+                    598.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "ATTENDANCE OFFICERS",
+            "block_bbox": [
+                175,
+                604,
+                409,
+                629
+            ],
+            "block_id": 8,
+            "block_order": null,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    175.0,
+                    604.0
+                ],
+                [
+                    409.0,
+                    604.0
+                ],
+                [
+                    409.0,
+                    629.0
+                ],
+                [
+                    175.0,
+                    629.0
+                ]
+            ]
+        },
+        {
+            "block_label": "figure_title",
+            "block_content": "Effective September 1, 1978",
+            "block_bbox": [
+                177,
+                634,
+                407,
+                657
+            ],
+            "block_id": 9,
+            "block_order": null,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    177.0,
+                    634.0
+                ],
+                [
+                    407.0,
+                    634.0
+                ],
+                [
+                    407.0,
+                    657.0
+                ],
+                [
+                    177.0,
+                    657.0
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>Step</td><td>B.A.</td><td>M.A.</td></tr><tr><td>1</td><td>10,709</td><td>11,140</td></tr><tr><td>2</td><td>11,959</td><td>12,390</td></tr><tr><td>3</td><td>12,409</td><td>12,840</td></tr><tr><td>4</td><td>12,859</td><td>13,290</td></tr><tr><td>5</td><td>13,309</td><td>13,740</td></tr><tr><td>6</td><td>13,759</td><td>14,190</td></tr><tr><td>7</td><td>14,209</td><td>14,640</td></tr><tr><td>8</td><td>14,659</td><td>15,090</td></tr><tr><td>9</td><td>15,109</td><td>15,540</td></tr><tr><td>10</td><td>15,909</td><td>16,340</td></tr></table>",
+            "block_bbox": [
+                127,
+                662,
+                458,
+                856
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    127.0,
+                    662.0
+                ],
+                [
+                    458.0,
+                    662.0
+                ],
+                [
+                    458.0,
+                    856.0
+                ],
+                [
+                    127.0,
+                    856.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "49",
+            "block_bbox": [
+                282,
+                898,
+                304,
+                915
+            ],
+            "block_id": 11,
+            "block_order": null,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    282.0,
+                    898.0
+                ],
+                [
+                    303.0,
+                    898.0
+                ],
+                [
+                    303.0,
+                    914.0
+                ],
+                [
+                    282.0,
+                    914.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5730441212654114,
+                "coordinate": [
+                    182,
+                    69,
+                    400,
+                    90
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        182.0,
+                        69.0
+                    ],
+                    [
+                        399.0,
+                        69.0
+                    ],
+                    [
+                        399.0,
+                        89.0
+                    ],
+                    [
+                        182.0,
+                        89.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.4849103093147278,
+                "coordinate": [
+                    171,
+                    97,
+                    410,
+                    120
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        171.0,
+                        97.0
+                    ],
+                    [
+                        410.0,
+                        97.0
+                    ],
+                    [
+                        410.0,
+                        120.0
+                    ],
+                    [
+                        171.0,
+                        120.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9284844398498535,
+                "coordinate": [
+                    73,
+                    127,
+                    509,
+                    255
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        73.0,
+                        127.0
+                    ],
+                    [
+                        509.0,
+                        127.0
+                    ],
+                    [
+                        509.0,
+                        255.0
+                    ],
+                    [
+                        73.0,
+                        255.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5202059149742126,
+                "coordinate": [
+                    201,
+                    311,
+                    381,
+                    334
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        201.0,
+                        311.0
+                    ],
+                    [
+                        381.0,
+                        311.0
+                    ],
+                    [
+                        381.0,
+                        334.0
+                    ],
+                    [
+                        201.0,
+                        334.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.3462846875190735,
+                "coordinate": [
+                    74,
+                    340,
+                    510,
+                    365
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        73.78166198730469,
+                        345.00250244140625
+                    ],
+                    [
+                        509.0,
+                        340.0
+                    ],
+                    [
+                        509.27435302734375,
+                        363.87042236328125
+                    ],
+                    [
+                        74.05601501464844,
+                        368.8729248046875
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.556504487991333,
+                "coordinate": [
+                    179,
+                    370,
+                    398,
+                    392
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        179.0,
+                        370.0
+                    ],
+                    [
+                        398.0,
+                        370.0
+                    ],
+                    [
+                        398.0,
+                        392.0
+                    ],
+                    [
+                        179.0,
+                        392.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9006711840629578,
+                "coordinate": [
+                    81,
+                    397,
+                    511,
+                    521
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        81.0,
+                        397.0
+                    ],
+                    [
+                        511.0,
+                        397.0
+                    ],
+                    [
+                        511.0,
+                        521.0
+                    ],
+                    [
+                        81.0,
+                        521.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.44410961866378784,
+                "coordinate": [
+                    230,
+                    576,
+                    355,
+                    599
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        230.0,
+                        576.0
+                    ],
+                    [
+                        354.0,
+                        576.0
+                    ],
+                    [
+                        354.0,
+                        598.0
+                    ],
+                    [
+                        230.0,
+                        598.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.3837684690952301,
+                "coordinate": [
+                    175,
+                    604,
+                    409,
+                    629
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        175.0,
+                        604.0
+                    ],
+                    [
+                        409.0,
+                        604.0
+                    ],
+                    [
+                        409.0,
+                        629.0
+                    ],
+                    [
+                        175.0,
+                        629.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 7,
+                "label": "figure_title",
+                "score": 0.6109862923622131,
+                "coordinate": [
+                    177,
+                    634,
+                    407,
+                    657
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        177.0,
+                        634.0
+                    ],
+                    [
+                        407.0,
+                        634.0
+                    ],
+                    [
+                        407.0,
+                        657.0
+                    ],
+                    [
+                        177.0,
+                        657.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9373772740364075,
+                "coordinate": [
+                    127,
+                    662,
+                    458,
+                    856
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        127.0,
+                        662.0
+                    ],
+                    [
+                        458.0,
+                        662.0
+                    ],
+                    [
+                        458.0,
+                        856.0
+                    ],
+                    [
+                        127.0,
+                        856.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7686432003974915,
+                "coordinate": [
+                    282,
+                    898,
+                    304,
+                    915
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        282.0,
+                        898.0
+                    ],
+                    [
+                        303.0,
+                        898.0
+                    ],
+                    [
+                        303.0,
+                        914.0
+                    ],
+                    [
+                        282.0,
+                        914.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

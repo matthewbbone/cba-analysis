@@ -1,0 +1,339 @@
+{
+    "input_path": "cache/cornell_retail_educ/6178_008b178f008_02.pdf",
+    "page_index": 35,
+    "page_count": 42,
+    "width": 1232,
+    "height": 1595,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "ARTICLE XXVIII - MANAGEMENT RIGHTS",
+            "block_bbox": [
+                155,
+                159,
+                603,
+                186
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    155.0,
+                    159.0
+                ],
+                [
+                    603.0,
+                    159.0
+                ],
+                [
+                    603.0,
+                    186.0
+                ],
+                [
+                    155.0,
+                    186.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The operation and management of the University and the supervision and direction of the employees are and shall continue to be solely and exclusively the functions and prerogatives of the University. All of the rights, functions and prerogatives of management which are not expressly and specifically restricted or modified by one or more explicit provisions of this Agreement are reserved and retained exclusively by the University and shall not be deemed or construed to have been modified, diminished or impaired by any past practice or course of conduct or otherwise than by express provision of this Agreement. Without in any manner limiting or affecting the generality of the foregoing, the right and power to select and hire all employees, to suspend, discipline, demote or discharge them for cause, to promote them to supervisory or other positions, to assign, transfer, supervise and direct all working forces, to maintain discipline and efficiency among them, to determine the facilities, methods, means, equipment, procedures and personnel required to conduct activities, to promulgate rules and regulations and to exercise the other customary functions of the University for the carrying on of its business and operations, are recognized as vested exclusively in the University.",
+            "block_bbox": [
+                153,
+                207,
+                1074,
+                1082
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    153.0,
+                    207.0
+                ],
+                [
+                    1074.0,
+                    207.0
+                ],
+                [
+                    1074.0,
+                    1082.0
+                ],
+                [
+                    153.0,
+                    1082.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "ARTICLE XXIX - ENTIRE AGREEMENT",
+            "block_bbox": [
+                156,
+                1145,
+                570,
+                1173
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    156.0,
+                    1145.0
+                ],
+                [
+                    570.0,
+                    1145.0
+                ],
+                [
+                    570.0,
+                    1173.0
+                ],
+                [
+                    156.0,
+                    1173.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "The Employer and the Association agree that all matters desired by either party have been presented, discussed and incorporated herein or",
+            "block_bbox": [
+                155,
+                1193,
+                1060,
+                1274
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    155.0,
+                    1193.0
+                ],
+                [
+                    1060.0,
+                    1193.0
+                ],
+                [
+                    1060.0,
+                    1274.0
+                ],
+                [
+                    155.0,
+                    1274.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "34",
+            "block_bbox": [
+                592,
+                1435,
+                619,
+                1456
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    592.0,
+                    1435.0
+                ],
+                [
+                    618.0,
+                    1435.0
+                ],
+                [
+                    618.0,
+                    1455.0
+                ],
+                [
+                    592.0,
+                    1455.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.84632408618927,
+                "coordinate": [
+                    155,
+                    159,
+                    603,
+                    186
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        155.0,
+                        159.0
+                    ],
+                    [
+                        603.0,
+                        159.0
+                    ],
+                    [
+                        603.0,
+                        186.0
+                    ],
+                    [
+                        155.0,
+                        186.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9314641952514648,
+                "coordinate": [
+                    153,
+                    207,
+                    1074,
+                    1082
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        153.0,
+                        207.0
+                    ],
+                    [
+                        1074.0,
+                        207.0
+                    ],
+                    [
+                        1074.0,
+                        1082.0
+                    ],
+                    [
+                        153.0,
+                        1082.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.8145191669464111,
+                "coordinate": [
+                    156,
+                    1145,
+                    570,
+                    1173
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        156.0,
+                        1145.0
+                    ],
+                    [
+                        570.0,
+                        1145.0
+                    ],
+                    [
+                        570.0,
+                        1173.0
+                    ],
+                    [
+                        156.0,
+                        1173.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.90081787109375,
+                "coordinate": [
+                    155,
+                    1193,
+                    1060,
+                    1274
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        155.0,
+                        1193.0
+                    ],
+                    [
+                        1060.0,
+                        1193.0
+                    ],
+                    [
+                        1060.0,
+                        1274.0
+                    ],
+                    [
+                        155.0,
+                        1274.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6922764182090759,
+                "coordinate": [
+                    592,
+                    1435,
+                    619,
+                    1456
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        592.0,
+                        1435.0
+                    ],
+                    [
+                        618.0,
+                        1435.0
+                    ],
+                    [
+                        618.0,
+                        1455.0
+                    ],
+                    [
+                        592.0,
+                        1455.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

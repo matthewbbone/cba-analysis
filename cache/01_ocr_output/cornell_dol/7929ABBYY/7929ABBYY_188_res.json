@@ -1,0 +1,888 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 188,
+    "page_count": 189,
+    "width": 1234,
+    "height": 1581,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "doc_title",
+            "block_content": "FOUR/FORTY WORKWEEK SCHEDULE",
+            "block_bbox": [
+                380,
+                163,
+                820,
+                193
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    380.0,
+                    163.0
+                ],
+                [
+                    820.0,
+                    163.0
+                ],
+                [
+                    820.0,
+                    193.0
+                ],
+                [
+                    380.0,
+                    193.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "I, ___ voluntarily agree to a schedule of work effective",
+            "block_bbox": [
+                107,
+                249,
+                938,
+                278
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    107.0,
+                    249.0
+                ],
+                [
+                    938.0,
+                    249.0
+                ],
+                [
+                    938.0,
+                    278.0
+                ],
+                [
+                    107.0,
+                    278.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "whereby I may be scheduled up to ten (10) hours per each work day for not more than four (4) working days, within five (5) consecutive work days in a regularly scheduled week of work with the following provisions for overtime (Reference IWC Order 4-80, Part 3(B) copy attached):",
+            "block_bbox": [
+                107,
+                278,
+                1083,
+                394
+            ],
+            "block_id": 2,
+            "block_order": 3,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    106.17613983154297,
+                    278.2284851074219
+                ],
+                [
+                    1081.951416015625,
+                    271.2229309082031
+                ],
+                [
+                    1082.775390625,
+                    385.9944763183594
+                ],
+                [
+                    107.00011444091797,
+                    393.0000305175781
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "1) The Employer is not required to pay the premium wage rate prescribed in Section (A) for the ninth and tenth hours worked during such work days.",
+            "block_bbox": [
+                180,
+                418,
+                1087,
+                478
+            ],
+            "block_id": 3,
+            "block_order": 4,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    180.0,
+                    418.0
+                ],
+                [
+                    1087.0,
+                    418.0
+                ],
+                [
+                    1087.0,
+                    478.0
+                ],
+                [
+                    180.0,
+                    478.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "2) If an employee on such a four day work schedule is required or permitted to work more than ten (10) hours in any work day, the premium wage rate provisions in sub-section (A) shall apply to such employee for those hours worked in excess of the tenth hour of that work day.",
+            "block_bbox": [
+                178,
+                503,
+                1073,
+                619
+            ],
+            "block_id": 4,
+            "block_order": 5,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    178.0,
+                    503.0
+                ],
+                [
+                    1073.0,
+                    503.0
+                ],
+                [
+                    1073.0,
+                    619.0
+                ],
+                [
+                    178.0,
+                    619.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "3) Any employee on such a schedule who is required or permitted to work on more than four (4) work days in a workweek shall be compensated at the rate of not less than one and one half (1½) times the employee's regular rate of pay for the first eight (8) hours on such additional work days, and double the employee's regular rate of pay for work in excess of eight (8) hours on those work days.",
+            "block_bbox": [
+                176,
+                645,
+                1082,
+                790
+            ],
+            "block_id": 5,
+            "block_order": 6,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    176.0,
+                    645.0
+                ],
+                [
+                    1082.0,
+                    645.0
+                ],
+                [
+                    1082.0,
+                    790.0
+                ],
+                [
+                    176.0,
+                    790.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "(Sub Section A, as cited above, refers to the requirements to compensate employees one and one half (1½) times their regular rate for all hours worked in excess of eight (8) hours up to and including twelve (12) hours in any one work day.)",
+            "block_bbox": [
+                103,
+                815,
+                1045,
+                904
+            ],
+            "block_id": 6,
+            "block_order": 7,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    103.0,
+                    815.0
+                ],
+                [
+                    1045.0,
+                    815.0
+                ],
+                [
+                    1045.0,
+                    904.0
+                ],
+                [
+                    103.0,
+                    904.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "It is understood that the actual implementation of a 4-40 work schedule requires the adjustment of certain contractual provisions and the written agreement of my collective bargaining agent.",
+            "block_bbox": [
+                102,
+                926,
+                1061,
+                988
+            ],
+            "block_id": 7,
+            "block_order": 8,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    102.0,
+                    926.0
+                ],
+                [
+                    1061.0,
+                    926.0
+                ],
+                [
+                    1061.0,
+                    988.0
+                ],
+                [
+                    102.0,
+                    988.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "SIGNATURE",
+            "block_bbox": [
+                607,
+                1069,
+                755,
+                1098
+            ],
+            "block_id": 8,
+            "block_order": 9,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    607.0,
+                    1069.0
+                ],
+                [
+                    755.0,
+                    1069.0
+                ],
+                [
+                    755.0,
+                    1098.0
+                ],
+                [
+                    607.0,
+                    1098.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "DATE",
+            "block_bbox": [
+                903,
+                1069,
+                977,
+                1098
+            ],
+            "block_id": 9,
+            "block_order": 10,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    903.0,
+                    1069.0
+                ],
+                [
+                    977.0,
+                    1069.0
+                ],
+                [
+                    977.0,
+                    1098.0
+                ],
+                [
+                    903.0,
+                    1098.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "I, ___ do not agree to any change in the provisions of overtime payments of provided for by State and Federal regulations or Company policy, as may be appropriate.",
+            "block_bbox": [
+                100,
+                1180,
+                1004,
+                1270
+            ],
+            "block_id": 10,
+            "block_order": 11,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    100.0,
+                    1180.0
+                ],
+                [
+                    1004.0,
+                    1180.0
+                ],
+                [
+                    1004.0,
+                    1270.0
+                ],
+                [
+                    100.0,
+                    1270.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "SIGNATURE",
+            "block_bbox": [
+                607,
+                1352,
+                753,
+                1381
+            ],
+            "block_id": 11,
+            "block_order": 12,
+            "group_id": 11,
+            "block_polygon_points": [
+                [
+                    607.0,
+                    1352.0
+                ],
+                [
+                    753.0,
+                    1352.0
+                ],
+                [
+                    753.0,
+                    1381.0
+                ],
+                [
+                    607.0,
+                    1381.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "DATE",
+            "block_bbox": [
+                900,
+                1352,
+                975,
+                1380
+            ],
+            "block_id": 12,
+            "block_order": 13,
+            "group_id": 12,
+            "block_polygon_points": [
+                [
+                    900.0,
+                    1352.0
+                ],
+                [
+                    975.0,
+                    1352.0
+                ],
+                [
+                    975.0,
+                    1380.0
+                ],
+                [
+                    900.0,
+                    1380.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "188",
+            "block_bbox": [
+                570,
+                1476,
+                612,
+                1502
+            ],
+            "block_id": 13,
+            "block_order": null,
+            "group_id": 13,
+            "block_polygon_points": [
+                [
+                    569.9999389648438,
+                    1475.9998779296875
+                ],
+                [
+                    610.9999389648438,
+                    1475.9998779296875
+                ],
+                [
+                    610.9999389648438,
+                    1500.9998779296875
+                ],
+                [
+                    569.9999389648438,
+                    1500.9998779296875
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 6,
+                "label": "doc_title",
+                "score": 0.8086767792701721,
+                "coordinate": [
+                    380,
+                    163,
+                    820,
+                    193
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        380.0,
+                        163.0
+                    ],
+                    [
+                        820.0,
+                        163.0
+                    ],
+                    [
+                        820.0,
+                        193.0
+                    ],
+                    [
+                        380.0,
+                        193.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7941571474075317,
+                "coordinate": [
+                    107,
+                    249,
+                    938,
+                    278
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        107.0,
+                        249.0
+                    ],
+                    [
+                        938.0,
+                        249.0
+                    ],
+                    [
+                        938.0,
+                        278.0
+                    ],
+                    [
+                        107.0,
+                        278.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9096977114677429,
+                "coordinate": [
+                    107,
+                    278,
+                    1083,
+                    394
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        106.17613983154297,
+                        278.2284851074219
+                    ],
+                    [
+                        1081.951416015625,
+                        271.2229309082031
+                    ],
+                    [
+                        1082.775390625,
+                        385.9944763183594
+                    ],
+                    [
+                        107.00011444091797,
+                        393.0000305175781
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9002037644386292,
+                "coordinate": [
+                    180,
+                    418,
+                    1087,
+                    478
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        180.0,
+                        418.0
+                    ],
+                    [
+                        1087.0,
+                        418.0
+                    ],
+                    [
+                        1087.0,
+                        478.0
+                    ],
+                    [
+                        180.0,
+                        478.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.933560311794281,
+                "coordinate": [
+                    178,
+                    503,
+                    1073,
+                    619
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        178.0,
+                        503.0
+                    ],
+                    [
+                        1073.0,
+                        503.0
+                    ],
+                    [
+                        1073.0,
+                        619.0
+                    ],
+                    [
+                        178.0,
+                        619.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9419822096824646,
+                "coordinate": [
+                    176,
+                    645,
+                    1082,
+                    790
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        176.0,
+                        645.0
+                    ],
+                    [
+                        1082.0,
+                        645.0
+                    ],
+                    [
+                        1082.0,
+                        790.0
+                    ],
+                    [
+                        176.0,
+                        790.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9347048997879028,
+                "coordinate": [
+                    103,
+                    815,
+                    1045,
+                    904
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        103.0,
+                        815.0
+                    ],
+                    [
+                        1045.0,
+                        815.0
+                    ],
+                    [
+                        1045.0,
+                        904.0
+                    ],
+                    [
+                        103.0,
+                        904.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9144328236579895,
+                "coordinate": [
+                    102,
+                    926,
+                    1061,
+                    988
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        102.0,
+                        926.0
+                    ],
+                    [
+                        1061.0,
+                        926.0
+                    ],
+                    [
+                        1061.0,
+                        988.0
+                    ],
+                    [
+                        102.0,
+                        988.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.6703236103057861,
+                "coordinate": [
+                    607,
+                    1069,
+                    755,
+                    1098
+                ],
+                "order": 9,
+                "polygon_points": [
+                    [
+                        607.0,
+                        1069.0
+                    ],
+                    [
+                        755.0,
+                        1069.0
+                    ],
+                    [
+                        755.0,
+                        1098.0
+                    ],
+                    [
+                        607.0,
+                        1098.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7438340783119202,
+                "coordinate": [
+                    903,
+                    1069,
+                    977,
+                    1098
+                ],
+                "order": 10,
+                "polygon_points": [
+                    [
+                        903.0,
+                        1069.0
+                    ],
+                    [
+                        977.0,
+                        1069.0
+                    ],
+                    [
+                        977.0,
+                        1098.0
+                    ],
+                    [
+                        903.0,
+                        1098.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9043622016906738,
+                "coordinate": [
+                    100,
+                    1180,
+                    1004,
+                    1270
+                ],
+                "order": 11,
+                "polygon_points": [
+                    [
+                        100.0,
+                        1180.0
+                    ],
+                    [
+                        1004.0,
+                        1180.0
+                    ],
+                    [
+                        1004.0,
+                        1270.0
+                    ],
+                    [
+                        100.0,
+                        1270.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.3929768204689026,
+                "coordinate": [
+                    607,
+                    1352,
+                    753,
+                    1381
+                ],
+                "order": 12,
+                "polygon_points": [
+                    [
+                        607.0,
+                        1352.0
+                    ],
+                    [
+                        753.0,
+                        1352.0
+                    ],
+                    [
+                        753.0,
+                        1381.0
+                    ],
+                    [
+                        607.0,
+                        1381.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6283544301986694,
+                "coordinate": [
+                    900,
+                    1352,
+                    975,
+                    1380
+                ],
+                "order": 13,
+                "polygon_points": [
+                    [
+                        900.0,
+                        1352.0
+                    ],
+                    [
+                        975.0,
+                        1352.0
+                    ],
+                    [
+                        975.0,
+                        1380.0
+                    ],
+                    [
+                        900.0,
+                        1380.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7798881530761719,
+                "coordinate": [
+                    570,
+                    1476,
+                    612,
+                    1502
+                ],
+                "order": 14,
+                "polygon_points": [
+                    [
+                        569.9999389648438,
+                        1475.9998779296875
+                    ],
+                    [
+                        610.9999389648438,
+                        1475.9998779296875
+                    ],
+                    [
+                        610.9999389648438,
+                        1500.9998779296875
+                    ],
+                    [
+                        569.9999389648438,
+                        1500.9998779296875
+                    ]
+                ]
+            }
+        ]
+    }
+}

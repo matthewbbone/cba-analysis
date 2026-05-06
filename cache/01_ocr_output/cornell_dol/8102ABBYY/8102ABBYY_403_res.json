@@ -1,0 +1,339 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 403,
+    "page_count": 439,
+    "width": 1235,
+    "height": 1592,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "National Memorandum",
+            "block_bbox": [
+                748,
+                115,
+                908,
+                132
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    747.9999389648438,
+                    115.0
+                ],
+                [
+                    906.9999389648438,
+                    115.0
+                ],
+                [
+                    906.9999389648438,
+                    131.0
+                ],
+                [
+                    747.9999389648438,
+                    131.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Nevertheless, Lucent will, after an initial transition period of one year following the closing on an acquisition, and subject to any contrary legal or contractual requirements, apply this Neutrality and Consent Election agreement to any wholly owned subsidiary.",
+            "block_bbox": [
+                385,
+                147,
+                911,
+                222
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    385.0,
+                    147.0
+                ],
+                [
+                    911.0,
+                    147.0
+                ],
+                [
+                    911.0,
+                    222.0
+                ],
+                [
+                    385.0,
+                    222.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "10 Annual Review",
+            "block_bbox": [
+                353,
+                257,
+                501,
+                277
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    353.0,
+                    257.0
+                ],
+                [
+                    500.0,
+                    257.0
+                ],
+                [
+                    500.0,
+                    276.0
+                ],
+                [
+                    353.0,
+                    276.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "On an annual basis, the Lucent Vice President of Workforce Effectiveness, the President of the CWA and the President of the IBEW may review whether there has been substantial compliance with the provisions of this Agreement and, if the parties find repeated instances of violations or repeated instances of interference during the period up to the review, may implement a process for recognition based on \"card check\" to replace elections in all cases or, if not, this Agreement shall continue in effect for the remaining term of the Agreement.",
+            "block_bbox": [
+                383,
+                282,
+                911,
+                427
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    383.0,
+                    282.0
+                ],
+                [
+                    911.0,
+                    282.0
+                ],
+                [
+                    911.0,
+                    427.0
+                ],
+                [
+                    383.0,
+                    427.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "395",
+            "block_bbox": [
+                875,
+                910,
+                906,
+                929
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    875.0,
+                    910.0
+                ],
+                [
+                    905.0,
+                    910.0
+                ],
+                [
+                    905.0,
+                    928.0
+                ],
+                [
+                    875.0,
+                    928.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.8154367208480835,
+                "coordinate": [
+                    748,
+                    115,
+                    908,
+                    132
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        747.9999389648438,
+                        115.0
+                    ],
+                    [
+                        906.9999389648438,
+                        115.0
+                    ],
+                    [
+                        906.9999389648438,
+                        131.0
+                    ],
+                    [
+                        747.9999389648438,
+                        131.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9222807288169861,
+                "coordinate": [
+                    385,
+                    147,
+                    911,
+                    222
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        385.0,
+                        147.0
+                    ],
+                    [
+                        911.0,
+                        147.0
+                    ],
+                    [
+                        911.0,
+                        222.0
+                    ],
+                    [
+                        385.0,
+                        222.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.814502477645874,
+                "coordinate": [
+                    353,
+                    257,
+                    501,
+                    277
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        353.0,
+                        257.0
+                    ],
+                    [
+                        500.0,
+                        257.0
+                    ],
+                    [
+                        500.0,
+                        276.0
+                    ],
+                    [
+                        353.0,
+                        276.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9361128211021423,
+                "coordinate": [
+                    383,
+                    282,
+                    911,
+                    427
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        383.0,
+                        282.0
+                    ],
+                    [
+                        911.0,
+                        282.0
+                    ],
+                    [
+                        911.0,
+                        427.0
+                    ],
+                    [
+                        383.0,
+                        427.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6602512001991272,
+                "coordinate": [
+                    875,
+                    910,
+                    906,
+                    929
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        875.0,
+                        910.0
+                    ],
+                    [
+                        905.0,
+                        910.0
+                    ],
+                    [
+                        905.0,
+                        928.0
+                    ],
+                    [
+                        875.0,
+                        928.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

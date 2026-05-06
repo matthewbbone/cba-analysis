@@ -1,0 +1,156 @@
+{
+    "input_path": "cache/cornell_dol/K830843_09_07.pdf",
+    "page_index": 203,
+    "page_count": 206,
+    "width": 1224,
+    "height": 2016,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "content",
+            "block_content": "SICK LEAVE ..... 77-81\nAccumulation of Sick Leave Credit ..... 77-78\nSick Leave Credit Table ..... 77\nUse of Accumulated Sick Leave ..... 78-79\nEligibility ..... 78\nGeneral Provisions ..... 78\nSick Leave Utilization ..... 78\nPersonal Illness or Disability ..... 78\nFamily Illness or Disability ..... 78\nUse for Illness During Vacation ..... 79\nBereavement Leave ..... 79\nSick Leave Pay ..... 79\nSick Leave Notification and Verification ..... 79-80\nNotice ..... 79\nDocumentation and Verification ..... 79-80\nTransfer and Reinstatement of Sick Leave ..... 80\nTransfer Without a Break in Service ..... 80\nReinstatement Upon Reemployment ..... 80\nTransfer to Position Not Covered by This Agreement ..... 80\nAttendance Standards ..... 81\nSTAFFING COMMITTEE ..... 81-82\nTRANSFER/PROMOTION/RECLASSIFICATION ..... 82-84\nDefinitions ..... 82\nTransfer/Promotion of Employees ..... 82-84\nTRAVEL REIMBURSEMENT ..... 84-85\nPer Diem Rates – Lawrence Berkeley Laboratory ..... 85\nUNIFORMS ..... 85\nUniforms ..... 85\nUniform Change Time ..... 85\nUniform Allowance/Laundering ..... 85\nVACATION LEAVE ..... 85-88\nVacation Credit ..... 85-86\nVacation Credit Use ..... 86\nVacation Scheduling ..... 86\nVacation Maximums ..... 87\nVacation Pay ..... 87\nTransfer of Vacation Credit ..... 87\nCurtailment Period ..... 87-88\nWAGES ..... 88-90\nGeneral Range Adjustment and Individual Increases ..... 88\nJanuary 1, 2004 – August 31, 2005 ..... 88\nSeptember 1, 2005 – August 31, 2006 ..... 88\nSeptember 1, 2006 – September 30, 2007 ..... 89\nOther Increases ..... 89\nPay Equities ..... 89\nPay Rate Equity Adjustments Process ..... 90\nGrievability and Arbitrability ..... 90\nNormal Procedure for Adjusting Pay Equities Existing From January 28, 2002 ..... 90\nShift Differential Rate Changes ..... 90\nWAIVER ..... 90\nWORK-INCURRED INJURY OR ILLNESS ..... 90-93\nGeneral Conditions ..... 90-91\nSupplemental Sick Leave and Vacation ..... 91\nExtended Sick Leave ..... 91\nEffect on Pay Status ..... 92\nSupplemental Leave ..... 92",
+            "block_bbox": [
+                109,
+                86,
+                1042,
+                1909
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    109.0,
+                    86.0
+                ],
+                [
+                    1042.0,
+                    86.0
+                ],
+                [
+                    1042.0,
+                    1909.0
+                ],
+                [
+                    109.0,
+                    1909.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "201",
+            "block_bbox": [
+                593,
+                1918,
+                638,
+                1942
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    593.0,
+                    1918.0
+                ],
+                [
+                    637.0,
+                    1918.0
+                ],
+                [
+                    637.0,
+                    1941.0
+                ],
+                [
+                    593.0,
+                    1941.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.969181478023529,
+                "coordinate": [
+                    109,
+                    86,
+                    1042,
+                    1909
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        109.0,
+                        86.0
+                    ],
+                    [
+                        1042.0,
+                        86.0
+                    ],
+                    [
+                        1042.0,
+                        1909.0
+                    ],
+                    [
+                        109.0,
+                        1909.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7581477165222168,
+                "coordinate": [
+                    593,
+                    1918,
+                    638,
+                    1942
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        593.0,
+                        1918.0
+                    ],
+                    [
+                        637.0,
+                        1918.0
+                    ],
+                    [
+                        637.0,
+                        1941.0
+                    ],
+                    [
+                        593.0,
+                        1941.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

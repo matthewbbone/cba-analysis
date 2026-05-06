@@ -1,0 +1,156 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 123,
+    "page_count": 189,
+    "width": 1225,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>RESPIRATORY CARE PERMITTEE</td><td>22.5656</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>RESPIRATORY SUPPLY AIDE</td><td>16.1849</td><td>16.5996</td><td>17.0253</td><td>17.4162</td><td>17.8214</td><td>18.1832</td></tr><tr><td>RESPIRATORY SUPPLY AIDE SR</td><td>16.4630</td><td>16.8852</td><td>17.3184</td><td>17.6370</td><td>18.0997</td><td>18.5629</td></tr><tr><td>SERVICE PARTNER</td><td>15.7503</td><td>16.1540</td><td>16.5680</td><td>17.0022</td><td>17.4362</td><td></td></tr><tr><td>STERILE PROC TECH II CERT</td><td>17.5057</td><td>17.9541</td><td>18.4144</td><td>18.8376</td><td>19.2757</td><td>19.6670</td></tr><tr><td>STERILE PROC TECH SR CERT</td><td>18.2057</td><td>18.6726</td><td>19.1509</td><td>19.5911</td><td>20.0467</td><td>20.4538</td></tr><tr><td>STERILE PROCESSING TECH I</td><td>16.8324</td><td>17.2638</td><td>17.7062</td><td>18.1131</td><td>18.5343</td><td>18.9105</td></tr><tr><td>STOCK ROOM ASST REG LAB SR</td><td>17.8250</td><td>18.2937</td><td>18.7628</td><td>19.0145</td><td>19.2662</td><td>19.7240</td></tr><tr><td>STOCK RM ASST REG LAB ONLY</td><td>16.1945</td><td>16.6207</td><td>17.0467</td><td>17.2754</td><td>17.5046</td><td>17.9388</td></tr><tr><td>STOREKEEPER</td><td>15.9290</td><td>16.3374</td><td>16.7564</td><td>17.1896</td><td>17.6243</td><td></td></tr><tr><td>STOREKEEPER - CHIEF</td><td>17.8484</td><td>18.3061</td><td>18.7753</td><td>19.2837</td><td>19.7263</td><td></td></tr><tr><td>STOREKEEPER I</td><td>16.2295</td><td>16.6456</td><td>17.0726</td><td>17.5142</td><td>17.9566</td><td></td></tr><tr><td>STOREKEEPER II</td><td>16.4901</td><td>16.9131</td><td>17.3466</td><td>17.7861</td><td>18.3919</td><td></td></tr><tr><td>SURGICAL ASSISTANT CERT</td><td>21.9356</td><td>22.4981</td><td>23.0751</td><td>23.6727</td><td>24.3832</td><td>25.2055</td></tr><tr><td>SURGICAL ASST SR</td><td>21.8428</td><td>22.4178</td><td>22.9924</td><td>23.5756</td><td>24.2689</td><td>25.0708</td></tr><tr><td>SURGICAL ASST TRAINEE</td><td>20.7511</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>SURGICAL ASST.</td><td>21.4007</td><td>21.9493</td><td>22.5120</td><td>23.0954</td><td>23.7886</td><td>24.5908</td></tr><tr><td>SURGICAL TECHNICIAN</td><td>19.9506</td><td>20.4620</td><td>20.9868</td><td>21.5068</td><td>22.0771</td><td>22.5968</td></tr><tr><td>SURGICAL TECHNICIAN SR</td><td>20.4288</td><td>20.9528</td><td>21.4899</td><td>22.0106</td><td>22.5802</td><td>23.1001</td></tr><tr><td>SURPLUS MATERLS ASST/OPER</td><td>20.4211</td><td>20.9447</td><td>21.4817</td><td>21.9832</td><td>22.4852</td><td>23.0335</td></tr><tr><td>TRUCK DRIVER</td><td>23.6002</td><td>24.2050</td><td>24.8256</td><td>25.3272</td><td>25.8292</td><td>26.3775</td></tr><tr><td>UNIT ASSISTANT</td><td>16.8029</td><td>17.2336</td><td>17.6757</td><td>18.0443</td><td>18.4346</td><td>18.8902</td></tr><tr><td>UNIT ASSISTANT SR</td><td>17.1510</td><td>17.6020</td><td>18.0537</td><td>18.3895</td><td>18.8763</td><td>19.3640</td></tr><tr><td>VISION SERVICES ASST I</td><td>16.4727</td><td>16.8952</td><td>17.3283</td><td>17.7249</td><td>18.1215</td><td>18.4441</td></tr><tr><td>VISION SERVICES ASST II</td><td>17.0516</td><td>17.4890</td><td>17.9373</td><td>18.3478</td><td>18.7582</td><td>19.0923</td></tr><tr><td>WAREHOUSE LEADPERSON</td><td>20.8977</td><td>21.4339</td><td>21.9835</td><td>22.8196</td><td>23.3204</td><td>23.8694</td></tr><tr><td>WAREHOUSE PERSON</td><td>20.4212</td><td>20.9447</td><td>21.4817</td><td>21.9832</td><td>22.4850</td><td>23.0335</td></tr><tr><td>YARDKEEPER</td><td>15.7641</td><td>16.1677</td><td>16.5824</td><td>17.0166</td><td>17.4505</td><td></td></tr></table>",
+            "block_bbox": [
+                113,
+                138,
+                1033,
+                1081
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    113.0,
+                    138.0
+                ],
+                [
+                    1033.0,
+                    138.0
+                ],
+                [
+                    1033.0,
+                    1081.0
+                ],
+                [
+                    113.0,
+                    1081.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "123",
+            "block_bbox": [
+                578,
+                1451,
+                620,
+                1479
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    577.9999389648438,
+                    1450.9998779296875
+                ],
+                [
+                    618.9999389648438,
+                    1450.9998779296875
+                ],
+                [
+                    618.9999389648438,
+                    1477.9998779296875
+                ],
+                [
+                    577.9999389648438,
+                    1477.9998779296875
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.970575213432312,
+                "coordinate": [
+                    113,
+                    138,
+                    1033,
+                    1081
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        113.0,
+                        138.0
+                    ],
+                    [
+                        1033.0,
+                        138.0
+                    ],
+                    [
+                        1033.0,
+                        1081.0
+                    ],
+                    [
+                        113.0,
+                        1081.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7690092325210571,
+                "coordinate": [
+                    578,
+                    1451,
+                    620,
+                    1479
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        577.9999389648438,
+                        1450.9998779296875
+                    ],
+                    [
+                        618.9999389648438,
+                        1450.9998779296875
+                    ],
+                    [
+                        618.9999389648438,
+                        1477.9998779296875
+                    ],
+                    [
+                        577.9999389648438,
+                        1477.9998779296875
+                    ]
+                ]
+            }
+        ]
+    }
+}

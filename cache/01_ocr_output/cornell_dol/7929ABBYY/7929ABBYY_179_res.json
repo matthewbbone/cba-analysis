@@ -1,0 +1,217 @@
+{
+    "input_path": "cache/cornell_dol/7929ABBYY.pdf",
+    "page_index": 179,
+    "page_count": 189,
+    "width": 1225,
+    "height": 1584,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "D. The employee representatives of the Board shall be compensated for time spent at Board meetings.",
+            "block_bbox": [
+                181,
+                138,
+                1085,
+                200
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    181.0,
+                    138.0
+                ],
+                [
+                    1085.0,
+                    138.0
+                ],
+                [
+                    1085.0,
+                    200.0
+                ],
+                [
+                    181.0,
+                    200.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "E. Issues which are covered by the provisions of this Agreement, which are proper subjects of collective bargaining between the Employer and the Union, or which are the proper subject of the grievance procedure contained herein, shall not be discussed by this Board. Nothing in this Article shall be subject to the grievance and arbitration provisions of this Agreement, with the exception of disputes related to the pay of employee committee members. Discussions or agreements made pursuant to this Article are non-precedent setting and may not be used in whole or in part in any dispute.",
+            "block_bbox": [
+                180,
+                222,
+                1087,
+                451
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    180.0,
+                    222.0
+                ],
+                [
+                    1087.0,
+                    222.0
+                ],
+                [
+                    1087.0,
+                    451.0
+                ],
+                [
+                    180.0,
+                    451.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "179",
+            "block_bbox": [
+                579,
+                1453,
+                621,
+                1480
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    578.9999389648438,
+                    1452.9998779296875
+                ],
+                [
+                    619.9999389648438,
+                    1452.9998779296875
+                ],
+                [
+                    619.9999389648438,
+                    1478.9998779296875
+                ],
+                [
+                    578.9999389648438,
+                    1478.9998779296875
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.8545226454734802,
+                "coordinate": [
+                    181,
+                    138,
+                    1085,
+                    200
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        181.0,
+                        138.0
+                    ],
+                    [
+                        1085.0,
+                        138.0
+                    ],
+                    [
+                        1085.0,
+                        200.0
+                    ],
+                    [
+                        181.0,
+                        200.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.938107430934906,
+                "coordinate": [
+                    180,
+                    222,
+                    1087,
+                    451
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        180.0,
+                        222.0
+                    ],
+                    [
+                        1087.0,
+                        222.0
+                    ],
+                    [
+                        1087.0,
+                        451.0
+                    ],
+                    [
+                        180.0,
+                        451.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7429379224777222,
+                "coordinate": [
+                    579,
+                    1453,
+                    621,
+                    1480
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        578.9999389648438,
+                        1452.9998779296875
+                    ],
+                    [
+                        619.9999389648438,
+                        1452.9998779296875
+                    ],
+                    [
+                        619.9999389648438,
+                        1478.9998779296875
+                    ],
+                    [
+                        578.9999389648438,
+                        1478.9998779296875
+                    ]
+                ]
+            }
+        ]
+    }
+}

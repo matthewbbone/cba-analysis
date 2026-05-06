@@ -1,0 +1,156 @@
+{
+    "input_path": "cache/dol_archive/document_1778.pdf",
+    "page_index": 28,
+    "page_count": 32,
+    "width": 557,
+    "height": 1222,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "NOTES",
+            "block_bbox": [
+                242,
+                29,
+                307,
+                51
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    242.0,
+                    29.0
+                ],
+                [
+                    306.0,
+                    29.0
+                ],
+                [
+                    306.0,
+                    50.0
+                ],
+                [
+                    242.0,
+                    50.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "27",
+            "block_bbox": [
+                266,
+                1174,
+                286,
+                1192
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    266.0,
+                    1174.0
+                ],
+                [
+                    285.0,
+                    1174.0
+                ],
+                [
+                    285.0,
+                    1191.0
+                ],
+                [
+                    266.0,
+                    1191.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.3256834149360657,
+                "coordinate": [
+                    242,
+                    29,
+                    307,
+                    51
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        242.0,
+                        29.0
+                    ],
+                    [
+                        306.0,
+                        29.0
+                    ],
+                    [
+                        306.0,
+                        50.0
+                    ],
+                    [
+                        242.0,
+                        50.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7191137075424194,
+                "coordinate": [
+                    266,
+                    1174,
+                    286,
+                    1192
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        266.0,
+                        1174.0
+                    ],
+                    [
+                        285.0,
+                        1174.0
+                    ],
+                    [
+                        285.0,
+                        1191.0
+                    ],
+                    [
+                        266.0,
+                        1191.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

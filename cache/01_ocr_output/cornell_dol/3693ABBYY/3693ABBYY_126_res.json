@@ -1,0 +1,156 @@
+{
+    "input_path": "cache/cornell_dol/3693ABBYY.pdf",
+    "page_index": 126,
+    "page_count": 135,
+    "width": 803,
+    "height": 1223,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "content",
+            "block_content": "JOB    JOB TITLE    LAB\nCODE    GRA\n40203 AIR CONDITIONING & REFRIGERATION MECHANIC A 23\n40204 AIR CONDITIONING & REFRIGERATION MECHANIC B 13\n40333 AIRCRAFT GROUND SUPPORT EQUIPMENT MECH A 24\n40334 AIRCRAFT GROUND SUPPORT EQUIPMENT MECH B 14\n40213 AIRCRAFT MAINTENANCE MECHANIC 14\n40215 AIRCRAFT MAINTENANCE MECH HELPER 09\n40216 AIRCRAFT MAINTENANCE MECHANIC SR 24\n41153 ASSEMBLER BRAZING 06\n41163 ASSEMBLER ELECTROMECHANICAL 02\n41363 ASSEMBLER ELECTRONIC 06\n41343 ASSEMBLER ELECTRONIC ASSEMBLY 11\n41253 ASSEMBLER ELECTRONIC DEVELOPMENTAL 11\n41303 ASSEMBLER ELECTRONIC EXPERIMENTAL LAB A 11\n41304 ASSEMBLER ELECTRONIC EXPERIMENTAL LAB B 06\n41373 ASSEMBLER ELECTRONIC MICROWAVE DEVICES 11\n41383 ASSEMBLER ELECTRONIC TRIDENT PROGRAM 07\n41393 ASSEMBLER ELECTRICAL ELECTRONICS DIVISION 11\n41473 ASSEMBLER INSTALLER STRUCTURES A 14\n41474 ASSEMBLER INSTALLER STRUCTURES B 11\n41475 ASSEMBLER INSTALLER STRUCTURES C 06\n41523 ASSEMBLER MASTER SR. 13\n41524 ASSEMBLER MASTER 07\n41535 ASSEMBLER MICROELECTRONIC COMPONENTS C 11\n41534 ASSEMBLER MICROELECTRONIC COMPONENTS B 14\n41533 ASSEMBLER MICROELECTRONIC COMPONENTS A 22\n41536 ASSEMBLER MICROELECTRONIC COMPONENTS SR 24\n41573 ASSEMBLER MICROWELD 02\n41576 ASSEMBLER MICROWELD SR 05\n41553 ASSEMBLER PRECISION A 15\n41554 ASSEMBLER PRECISION B 11\n41555 ASSEMBLER PRECISION C 06\n41653 ASSEMBLER SEMICONDUCTOR 06\n41663 ASSEMBLER SEMICONDUCTOR DEVICES EXPERIMENTAL 09\n41713 ASSEMBLER SUPPORT MECH 12\n41483 ASSEMBLER SYSTEMS ELECTROMECHANICAL A 09\n41484 ASSEMBLER SYSTEMS ELECTROMECHANICAL B 06\n42116 AUTOMATED EQUIPMENT TECHNICIAN 24\n42123 AUTOMATIC REFLOW SOLDER MACHINE OPERATOR A 11\n42124 AUTOMATIC REFLOW SOLDER MACHINE OPERATOR B 06\n42213 AUTOMATIC WIRE LAYING MACHINE MECHANIC 14\n42253 AUTOMOTIVE MECHANIC A 20\n42254 AUTOMOTIVE MECHANIC B 12",
+            "block_bbox": [
+                106,
+                69,
+                692,
+                1102
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    106.0,
+                    69.0
+                ],
+                [
+                    692.0,
+                    69.0
+                ],
+                [
+                    692.0,
+                    1102.0
+                ],
+                [
+                    106.0,
+                    1102.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "118",
+            "block_bbox": [
+                382,
+                1142,
+                414,
+                1161
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    382.0,
+                    1142.0
+                ],
+                [
+                    413.0,
+                    1142.0
+                ],
+                [
+                    413.0,
+                    1160.0
+                ],
+                [
+                    382.0,
+                    1160.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.9786690473556519,
+                "coordinate": [
+                    106,
+                    69,
+                    692,
+                    1102
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        106.0,
+                        69.0
+                    ],
+                    [
+                        692.0,
+                        69.0
+                    ],
+                    [
+                        692.0,
+                        1102.0
+                    ],
+                    [
+                        106.0,
+                        1102.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7348524928092957,
+                "coordinate": [
+                    382,
+                    1142,
+                    414,
+                    1161
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        382.0,
+                        1142.0
+                    ],
+                    [
+                        413.0,
+                        1142.0
+                    ],
+                    [
+                        413.0,
+                        1160.0
+                    ],
+                    [
+                        382.0,
+                        1160.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

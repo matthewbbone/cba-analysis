@@ -1,0 +1,367 @@
+{
+    "input_path": "cache/cornell_dol/4208Abbyy.pdf",
+    "page_index": 78,
+    "page_count": 128,
+    "width": 775,
+    "height": 1204,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "text",
+            "block_content": "d. Rental (or purchase if approved by the service representative) of durable medical or surgical equipment used exclusively for the patient's therapeutic treatment.",
+            "block_bbox": [
+                124,
+                70,
+                698,
+                113
+            ],
+            "block_id": 0,
+            "block_order": 1,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    124.0,
+                    70.0
+                ],
+                [
+                    698.0,
+                    70.0
+                ],
+                [
+                    698.0,
+                    113.0
+                ],
+                [
+                    124.0,
+                    113.0
+                ]
+            ]
+        },
+        {
+            "block_label": "content",
+            "block_content": "c. Orthopedic appliances and braces, including repair and replacement necessary as a result of normal usage or change in condition.\n\nf. Oxygen and anesthesia.\n\ng. Artificial limbs, artificial eyes, and other prostheses. This benefit includes repair and replacement necessary as a result of normal usage or change in condition.\n\nh. Radiation therapy (including X-ray therapy) and chemotherapy.\n\ni. Smoking cessation services, including the services of a physician or other health care professional who is practicing within the scope of his or her license, or an approved smoking cessation provider. To receive benefits for smoking cessation treatment, the patient must complete the full course of treatment. No smoking cessation benefits will be provided for inpatient services; vitamins, minerals, or other supplements; acupuncture; over-the-counter drugs or provider-prescribed prescription drugs to ease nicotine withdrawal; books; tapes; or hypnotherapy (unless performed by an approved provider). Prescription drugs prescribed by an approved provider to ease nicotine withdrawal are covered under the prescription drug benefit.\n\n4. Hospital room, board, services, and supplies, including a medically necessary private room. If a private room is used when one is not medically necessary, any excess of daily board and room charges over the hospital's average semi-private room charge is not covered. If the hospital does not have semi-private accommodations, the semi-private charge for similar facilities in the area is considered in determining the rate.\n\n5. Hospital alternatives.\n\na. Home health care visits and supplies provided to patients in their home by a home health care agency instead of confinement in a hospital or skilled nursing facility.\n\nBenefits are subject to the medical review program.\n\n1) To be eligible for benefits:\n\na) Home health care visits and supplies must be for the medically necessary treatment of a covered illness or injury.\n\nb) A physician must establish a written home health care treatment plan.\n\nc) The patient must be homebound, which means leaving home involves a considerable, taxing effort and the patient is unable to use public transportation without assistance.\n\n2) Covered benefits for home health care visits and supplies must be provided by and billed by the home health care agency and are limited to:\n\na) Physician services.\n\nb) Nursing visits by a registered nurse (R.N.) or licensed practical nurse (L.P.N.).",
+            "block_bbox": [
+                101,
+                133,
+                733,
+                1159
+            ],
+            "block_id": 1,
+            "block_order": 2,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    101.0,
+                    133.0
+                ],
+                [
+                    733.0,
+                    133.0
+                ],
+                [
+                    733.0,
+                    1159.0
+                ],
+                [
+                    101.0,
+                    1159.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "A-25",
+            "block_bbox": [
+                366,
+                1162,
+                400,
+                1178
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    366.0,
+                    1162.0
+                ],
+                [
+                    399.0,
+                    1162.0
+                ],
+                [
+                    399.0,
+                    1177.0
+                ],
+                [
+                    366.0,
+                    1177.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.712238073348999,
+                "coordinate": [
+                    124,
+                    70,
+                    698,
+                    113
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        124.0,
+                        70.0
+                    ],
+                    [
+                        698.0,
+                        70.0
+                    ],
+                    [
+                        698.0,
+                        113.0
+                    ],
+                    [
+                        124.0,
+                        113.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.6810348629951477,
+                "coordinate": [
+                    124,
+                    128,
+                    699,
+                    169
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        124.0,
+                        128.0
+                    ],
+                    [
+                        699.0,
+                        128.0
+                    ],
+                    [
+                        699.0,
+                        169.0
+                    ],
+                    [
+                        124.0,
+                        169.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4125789403915405,
+                "coordinate": [
+                    125,
+                    184,
+                    295,
+                    207
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        125.0,
+                        184.0
+                    ],
+                    [
+                        295.0,
+                        184.0
+                    ],
+                    [
+                        295.0,
+                        207.0
+                    ],
+                    [
+                        125.0,
+                        207.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 4,
+                "label": "content",
+                "score": 0.5850321650505066,
+                "coordinate": [
+                    101,
+                    133,
+                    733,
+                    1159
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        101.0,
+                        133.0
+                    ],
+                    [
+                        733.0,
+                        133.0
+                    ],
+                    [
+                        733.0,
+                        1159.0
+                    ],
+                    [
+                        101.0,
+                        1159.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3502672016620636,
+                "coordinate": [
+                    124,
+                    223,
+                    697,
+                    264
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        124.0,
+                        223.0
+                    ],
+                    [
+                        697.0,
+                        223.0
+                    ],
+                    [
+                        697.0,
+                        264.0
+                    ],
+                    [
+                        124.0,
+                        264.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.3498728275299072,
+                "coordinate": [
+                    124,
+                    280,
+                    533,
+                    303
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        124.0,
+                        280.0
+                    ],
+                    [
+                        533.0,
+                        280.0
+                    ],
+                    [
+                        533.0,
+                        303.0
+                    ],
+                    [
+                        124.0,
+                        303.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7510524988174438,
+                "coordinate": [
+                    366,
+                    1162,
+                    400,
+                    1178
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        366.0,
+                        1162.0
+                    ],
+                    [
+                        399.0,
+                        1162.0
+                    ],
+                    [
+                        399.0,
+                        1177.0
+                    ],
+                    [
+                        366.0,
+                        1177.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 2,
+                "label": "aside_text",
+                "score": 0.6997686624526978,
+                "coordinate": [
+                    713,
+                    66,
+                    736,
+                    1143
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        713.0,
+                        73.0
+                    ],
+                    [
+                        735.0,
+                        73.0
+                    ],
+                    [
+                        735.0,
+                        1142.0
+                    ],
+                    [
+                        713.0,
+                        1142.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

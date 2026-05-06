@@ -1,0 +1,17 @@
+7-4. The Board shall provide bulletin boards to the Association for its exclusive use as sole bargaining agent. These shall be provided in schools in locations recommended by the Association and approved by the principal.
+
+7-4.1. Bulletin boards shall be provided as follows: One (1) board to a school with a faculty of 35 teachers, or less. Two (2) boards to a school with a faculty of 35 to 70 teachers. Three (3) boards to a school with a faculty of 70 teachers, or more.
+
+7-4.2. Existing bulletin boards which are in good condition shall be accepted by the Association.
+
+7-5. No other bulletin board, display or mail space shall be made available to any other organization representing teachers on a school system-wide base.
+
+7-6. Whenever any representative of the Association or any teacher participates during working hours in negotiations or grievance proceedings, that person shall suffer no loss of pay.
+
+7-7. The Association may be granted permission to use school buildings, at reasonable hours for meetings. The usual procedure to obtain permission, in accordance with the Rules of the Board of Education, shall be followed.
+
+7-8. An Association Building Director, if faced with an emergency situation requiring immediate attention, may request the immediate supervisor to relieve the building director temporarily.
+
+7-8.1. To the extent that building directors, other than Copenhagen teachers, do not have at least one (1) preparation period a week, they will be given said preparation period, which they may devote, in their discretion, to the conduct of Association business, provided, however, that no more than fifteen (15) additional preparation periods per week for the entire school system will be made available for such purposes.
+
+7-9. The rights and privileges of the Association and its representatives as set forth in this Agreement shall be granted only to the Association as the exclusive representative of the teachers and to no other organization.

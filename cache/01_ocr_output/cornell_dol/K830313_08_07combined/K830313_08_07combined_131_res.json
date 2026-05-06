@@ -1,0 +1,705 @@
+{
+    "input_path": "cache/cornell_dol/K830313_08_07combined.pdf",
+    "page_index": 131,
+    "page_count": 139,
+    "width": 1225,
+    "height": 1585,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "INDEX",
+            "block_bbox": [
+                36,
+                28,
+                117,
+                55
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    36.0,
+                    28.0
+                ],
+                [
+                    117.0,
+                    28.0
+                ],
+                [
+                    117.0,
+                    55.0
+                ],
+                [
+                    36.0,
+                    55.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 1 of 7",
+            "block_bbox": [
+                1077,
+                28,
+                1195,
+                57
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    1077.0,
+                    28.0
+                ],
+                [
+                    1195.0,
+                    28.0
+                ],
+                [
+                    1195.0,
+                    57.0
+                ],
+                [
+                    1077.0,
+                    57.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "INDEX",
+            "block_bbox": [
+                545,
+                90,
+                685,
+                129
+            ],
+            "block_id": 2,
+            "block_order": 1,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    545.0,
+                    90.0
+                ],
+                [
+                    685.0,
+                    90.0
+                ],
+                [
+                    685.0,
+                    129.0
+                ],
+                [
+                    545.0,
+                    129.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "A",
+            "block_bbox": [
+                108,
+                163,
+                144,
+                198
+            ],
+            "block_id": 3,
+            "block_order": 2,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    108.0,
+                    163.0
+                ],
+                [
+                    143.0,
+                    163.0
+                ],
+                [
+                    143.0,
+                    197.0
+                ],
+                [
+                    108.0,
+                    197.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Academic Freedom, 23\nAdditional Performance, 100\nIntramurals, 100\nPlacement and Payment, 100\nSchedule, 101\nAdministrative Openings, 51\nAdministrative Transfers, 58\nAdoption, 74\nAdvancement on Salary Schedule, 94\nCollege Credit, 29\nCredit for Projects, 31\nDisputes, 30\nGraduate Credit, 31\nInservice Credit, 28, 29, 96\nJunior/Community College Credit, 30\nTelecommunication Courses, 30\nWarren Occupational Technical Center, 101\nAffirmative Action Complaints, 4\nAnnouncement of Vacancies\nAdministrative, 51\nSummer School, 51\nTeacher, 51, 52\nArbitration, 14, 15\nAssault, 42\nAssignment, 17\nAssistants, Educational, 23\nAssociation Leave 67\nAssociation Membership, 4\nAssociation President, 79\nAssociation Representatives, 80",
+            "block_bbox": [
+                107,
+                225,
+                527,
+                838
+            ],
+            "block_id": 4,
+            "block_order": 3,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    107.0,
+                    225.0
+                ],
+                [
+                    527.0,
+                    225.0
+                ],
+                [
+                    527.0,
+                    838.0
+                ],
+                [
+                    107.0,
+                    838.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "B",
+            "block_bbox": [
+                109,
+                865,
+                142,
+                899
+            ],
+            "block_id": 5,
+            "block_order": 4,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    109.0,
+                    865.0
+                ],
+                [
+                    141.0,
+                    865.0
+                ],
+                [
+                    141.0,
+                    898.0
+                ],
+                [
+                    109.0,
+                    898.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Bereavement Leave, 21, 22, 70\nBoard Policies and Procedures, 5\nBoard Powers, 5\nBuilding Schedules\nLiaison Committee, 43\nBuilding Staffing Pattern, 57\nBulletin Boards, Use of, 46",
+            "block_bbox": [
+                109,
+                930,
+                382,
+                1075
+            ],
+            "block_id": 6,
+            "block_order": 5,
+            "group_id": 6,
+            "block_polygon_points": [
+                [
+                    109.0,
+                    930.0
+                ],
+                [
+                    382.0,
+                    930.0
+                ],
+                [
+                    382.0,
+                    1075.0
+                ],
+                [
+                    109.0,
+                    1075.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "C",
+            "block_bbox": [
+                110,
+                1103,
+                142,
+                1138
+            ],
+            "block_id": 7,
+            "block_order": 6,
+            "group_id": 7,
+            "block_polygon_points": [
+                [
+                    110.0,
+                    1103.0
+                ],
+                [
+                    141.0,
+                    1103.0
+                ],
+                [
+                    141.0,
+                    1137.0
+                ],
+                [
+                    110.0,
+                    1137.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Censorship, 23, 24\nChallenged Materials, 24\nChild Care Leave, 75, 76\nClass Coverage, 19, 20\nClass Size, 36-39\nFacilities, 36\nHandicapped Students, 36\nK-6, 36, 37\nRatio, 37\nClerical Assistants, 23\nCompensation Agreement, 117\nComplaints, Parental, 29\nConferences, Funding, 28\nContinuous Service Definition, 3\nContract Year, 17, 18\nConversion of Teaching Position, 38",
+            "block_bbox": [
+                109,
+                1168,
+                401,
+                1516
+            ],
+            "block_id": 8,
+            "block_order": 7,
+            "group_id": 8,
+            "block_polygon_points": [
+                [
+                    109.0,
+                    1168.0
+                ],
+                [
+                    401.0,
+                    1168.0
+                ],
+                [
+                    401.0,
+                    1516.0
+                ],
+                [
+                    109.0,
+                    1516.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "http://jeffcoweb.jeffco.k12.co.us/emprelations/jcea/end_index.html",
+            "block_bbox": [
+                37,
+                1542,
+                690,
+                1572
+            ],
+            "block_id": 9,
+            "block_order": null,
+            "group_id": 9,
+            "block_polygon_points": [
+                [
+                    37.0,
+                    1542.0
+                ],
+                [
+                    690.0,
+                    1542.0
+                ],
+                [
+                    690.0,
+                    1572.0
+                ],
+                [
+                    37.0,
+                    1572.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "2/5/04",
+            "block_bbox": [
+                1127,
+                1542,
+                1193,
+                1568
+            ],
+            "block_id": 10,
+            "block_order": null,
+            "group_id": 10,
+            "block_polygon_points": [
+                [
+                    1127.0,
+                    1542.0
+                ],
+                [
+                    1192.0,
+                    1542.0
+                ],
+                [
+                    1192.0,
+                    1567.0
+                ],
+                [
+                    1127.0,
+                    1567.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7908691763877869,
+                "coordinate": [
+                    36,
+                    28,
+                    117,
+                    55
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        36.0,
+                        28.0
+                    ],
+                    [
+                        117.0,
+                        28.0
+                    ],
+                    [
+                        117.0,
+                        55.0
+                    ],
+                    [
+                        36.0,
+                        55.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8155518174171448,
+                "coordinate": [
+                    1077,
+                    28,
+                    1195,
+                    57
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        1077.0,
+                        28.0
+                    ],
+                    [
+                        1195.0,
+                        28.0
+                    ],
+                    [
+                        1195.0,
+                        57.0
+                    ],
+                    [
+                        1077.0,
+                        57.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.5836777091026306,
+                "coordinate": [
+                    545,
+                    90,
+                    685,
+                    129
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        545.0,
+                        90.0
+                    ],
+                    [
+                        685.0,
+                        90.0
+                    ],
+                    [
+                        685.0,
+                        129.0
+                    ],
+                    [
+                        545.0,
+                        129.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7672083973884583,
+                "coordinate": [
+                    108,
+                    163,
+                    144,
+                    198
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        108.0,
+                        163.0
+                    ],
+                    [
+                        143.0,
+                        163.0
+                    ],
+                    [
+                        143.0,
+                        197.0
+                    ],
+                    [
+                        108.0,
+                        197.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9527194499969482,
+                "coordinate": [
+                    107,
+                    225,
+                    527,
+                    838
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        107.0,
+                        225.0
+                    ],
+                    [
+                        527.0,
+                        225.0
+                    ],
+                    [
+                        527.0,
+                        838.0
+                    ],
+                    [
+                        107.0,
+                        838.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7668803930282593,
+                "coordinate": [
+                    109,
+                    865,
+                    142,
+                    899
+                ],
+                "order": 5,
+                "polygon_points": [
+                    [
+                        109.0,
+                        865.0
+                    ],
+                    [
+                        141.0,
+                        865.0
+                    ],
+                    [
+                        141.0,
+                        898.0
+                    ],
+                    [
+                        109.0,
+                        898.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9282633066177368,
+                "coordinate": [
+                    109,
+                    930,
+                    382,
+                    1075
+                ],
+                "order": 6,
+                "polygon_points": [
+                    [
+                        109.0,
+                        930.0
+                    ],
+                    [
+                        382.0,
+                        930.0
+                    ],
+                    [
+                        382.0,
+                        1075.0
+                    ],
+                    [
+                        109.0,
+                        1075.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.7708308100700378,
+                "coordinate": [
+                    110,
+                    1103,
+                    142,
+                    1138
+                ],
+                "order": 7,
+                "polygon_points": [
+                    [
+                        110.0,
+                        1103.0
+                    ],
+                    [
+                        141.0,
+                        1103.0
+                    ],
+                    [
+                        141.0,
+                        1137.0
+                    ],
+                    [
+                        110.0,
+                        1137.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.9523797035217285,
+                "coordinate": [
+                    109,
+                    1168,
+                    401,
+                    1516
+                ],
+                "order": 8,
+                "polygon_points": [
+                    [
+                        109.0,
+                        1168.0
+                    ],
+                    [
+                        401.0,
+                        1168.0
+                    ],
+                    [
+                        401.0,
+                        1516.0
+                    ],
+                    [
+                        109.0,
+                        1516.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.7934772372245789,
+                "coordinate": [
+                    37,
+                    1542,
+                    690,
+                    1572
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        37.0,
+                        1542.0
+                    ],
+                    [
+                        690.0,
+                        1542.0
+                    ],
+                    [
+                        690.0,
+                        1572.0
+                    ],
+                    [
+                        37.0,
+                        1572.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.7380134463310242,
+                "coordinate": [
+                    1127,
+                    1542,
+                    1193,
+                    1568
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1127.0,
+                        1542.0
+                    ],
+                    [
+                        1192.0,
+                        1542.0
+                    ],
+                    [
+                        1192.0,
+                        1567.0
+                    ],
+                    [
+                        1127.0,
+                        1567.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

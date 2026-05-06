@@ -1,0 +1,400 @@
+{
+    "input_path": "cache/cornell_dol/K830313_08_07combined.pdf",
+    "page_index": 32,
+    "page_count": 139,
+    "width": 1228,
+    "height": 1587,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Jeffco Schools: JCEA Negotiated Agreement",
+            "block_bbox": [
+                32,
+                8,
+                477,
+                38
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    32.0,
+                    8.0
+                ],
+                [
+                    477.0,
+                    8.0
+                ],
+                [
+                    477.0,
+                    38.0
+                ],
+                [
+                    32.0,
+                    38.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "Page 2 of 2",
+            "block_bbox": [
+                1078,
+                9,
+                1196,
+                38
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    1078.0,
+                    9.0
+                ],
+                [
+                    1196.0,
+                    9.0
+                ],
+                [
+                    1196.0,
+                    38.0
+                ],
+                [
+                    1078.0,
+                    38.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "Jefferson County Public Schools\nJefferson County, Colorado",
+            "block_bbox": [
+                469,
+                69,
+                759,
+                114
+            ],
+            "block_id": 2,
+            "block_order": 1,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    469.0,
+                    69.0
+                ],
+                [
+                    759.0,
+                    69.0
+                ],
+                [
+                    759.0,
+                    114.0
+                ],
+                [
+                    469.0,
+                    114.0
+                ]
+            ]
+        },
+        {
+            "block_label": "image",
+            "block_content": "",
+            "block_bbox": [
+                544,
+                134,
+                683,
+                206
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    544.0,
+                    134.0
+                ],
+                [
+                    683.0,
+                    134.0
+                ],
+                [
+                    683.0,
+                    206.0
+                ],
+                [
+                    544.0,
+                    206.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "http://jeffcoweb.jeffco.k12.co.us/emprelations/jcea/article_13.html",
+            "block_bbox": [
+                35,
+                1525,
+                687,
+                1556
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    35.0,
+                    1525.0
+                ],
+                [
+                    687.0,
+                    1525.0
+                ],
+                [
+                    687.0,
+                    1556.0
+                ],
+                [
+                    35.0,
+                    1556.0
+                ]
+            ]
+        },
+        {
+            "block_label": "footer",
+            "block_content": "2/5/04",
+            "block_bbox": [
+                1126,
+                1525,
+                1195,
+                1553
+            ],
+            "block_id": 5,
+            "block_order": null,
+            "group_id": 5,
+            "block_polygon_points": [
+                [
+                    1126.0,
+                    1525.0
+                ],
+                [
+                    1195.0,
+                    1525.0
+                ],
+                [
+                    1195.0,
+                    1553.0
+                ],
+                [
+                    1126.0,
+                    1553.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7966480851173401,
+                "coordinate": [
+                    32,
+                    8,
+                    477,
+                    38
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        32.0,
+                        8.0
+                    ],
+                    [
+                        477.0,
+                        8.0
+                    ],
+                    [
+                        477.0,
+                        38.0
+                    ],
+                    [
+                        32.0,
+                        38.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.8414478898048401,
+                "coordinate": [
+                    1078,
+                    9,
+                    1196,
+                    38
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        1078.0,
+                        9.0
+                    ],
+                    [
+                        1196.0,
+                        9.0
+                    ],
+                    [
+                        1196.0,
+                        38.0
+                    ],
+                    [
+                        1078.0,
+                        38.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.7127336263656616,
+                "coordinate": [
+                    469,
+                    69,
+                    759,
+                    114
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        469.0,
+                        69.0
+                    ],
+                    [
+                        759.0,
+                        69.0
+                    ],
+                    [
+                        759.0,
+                        114.0
+                    ],
+                    [
+                        469.0,
+                        114.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 14,
+                "label": "image",
+                "score": 0.7045885920524597,
+                "coordinate": [
+                    544,
+                    134,
+                    683,
+                    206
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        544.0,
+                        134.0
+                    ],
+                    [
+                        683.0,
+                        134.0
+                    ],
+                    [
+                        683.0,
+                        206.0
+                    ],
+                    [
+                        544.0,
+                        206.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.8527665138244629,
+                "coordinate": [
+                    35,
+                    1525,
+                    687,
+                    1556
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        35.0,
+                        1525.0
+                    ],
+                    [
+                        687.0,
+                        1525.0
+                    ],
+                    [
+                        687.0,
+                        1556.0
+                    ],
+                    [
+                        35.0,
+                        1556.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 8,
+                "label": "footer",
+                "score": 0.6845405697822571,
+                "coordinate": [
+                    1126,
+                    1525,
+                    1195,
+                    1553
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        1126.0,
+                        1525.0
+                    ],
+                    [
+                        1195.0,
+                        1525.0
+                    ],
+                    [
+                        1195.0,
+                        1553.0
+                    ],
+                    [
+                        1126.0,
+                        1553.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

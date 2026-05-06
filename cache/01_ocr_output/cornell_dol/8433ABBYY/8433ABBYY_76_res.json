@@ -1,0 +1,156 @@
+{
+    "input_path": "cache/cornell_dol/8433ABBYY.pdf",
+    "page_index": 76,
+    "page_count": 81,
+    "width": 522,
+    "height": 870,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Notes or Phone Numbers",
+            "block_bbox": [
+                144,
+                28,
+                390,
+                53
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    144.0,
+                    28.0
+                ],
+                [
+                    390.0,
+                    28.0
+                ],
+                [
+                    390.0,
+                    53.0
+                ],
+                [
+                    144.0,
+                    53.0
+                ]
+            ]
+        },
+        {
+            "block_label": "paragraph_title",
+            "block_content": "……",
+            "block_bbox": [
+                1,
+                73,
+                52,
+                862
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    1.0,
+                    73.0
+                ],
+                [
+                    46.0,
+                    73.0
+                ],
+                [
+                    46.0,
+                    861.0
+                ],
+                [
+                    1.0,
+                    861.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7985649108886719,
+                "coordinate": [
+                    144,
+                    28,
+                    390,
+                    53
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        144.0,
+                        28.0
+                    ],
+                    [
+                        390.0,
+                        28.0
+                    ],
+                    [
+                        390.0,
+                        53.0
+                    ],
+                    [
+                        144.0,
+                        53.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 17,
+                "label": "paragraph_title",
+                "score": 0.3385046720504761,
+                "coordinate": [
+                    1,
+                    73,
+                    52,
+                    862
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        1.0,
+                        73.0
+                    ],
+                    [
+                        46.0,
+                        73.0
+                    ],
+                    [
+                        46.0,
+                        861.0
+                    ],
+                    [
+                        1.0,
+                        861.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

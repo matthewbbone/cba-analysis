@@ -1,0 +1,339 @@
+{
+    "input_path": "cache/cornell_dol/8102ABBYY.pdf",
+    "page_index": 187,
+    "page_count": 439,
+    "width": 1235,
+    "height": 1592,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "Appendix 7",
+            "block_bbox": [
+                825,
+                79,
+                908,
+                101
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    825.0,
+                    78.99999237060547
+                ],
+                [
+                    907.0,
+                    78.99999237060547
+                ],
+                [
+                    907.0,
+                    99.99999237060547
+                ],
+                [
+                    825.0,
+                    99.99999237060547
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "LUCENT/CWA - INSTALLATION - 24, APPENDIX 7",
+            "block_bbox": [
+                446,
+                258,
+                811,
+                283
+            ],
+            "block_id": 1,
+            "block_order": 1,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    446.0,
+                    258.0
+                ],
+                [
+                    811.0,
+                    258.0
+                ],
+                [
+                    811.0,
+                    283.0
+                ],
+                [
+                    446.0,
+                    283.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "BETWEEN LUCENT TECHNOLOGIES INC.",
+            "block_bbox": [
+                473,
+                331,
+                784,
+                354
+            ],
+            "block_id": 2,
+            "block_order": 2,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    473.0,
+                    331.0
+                ],
+                [
+                    784.0,
+                    331.0
+                ],
+                [
+                    784.0,
+                    354.0
+                ],
+                [
+                    473.0,
+                    354.0
+                ]
+            ]
+        },
+        {
+            "block_label": "text",
+            "block_content": "COMMUNICATIONS WORKERS OF AMERICA",
+            "block_bbox": [
+                461,
+                402,
+                797,
+                425
+            ],
+            "block_id": 3,
+            "block_order": 3,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    461.0,
+                    402.0
+                ],
+                [
+                    797.0,
+                    402.0
+                ],
+                [
+                    797.0,
+                    425.0
+                ],
+                [
+                    461.0,
+                    425.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "179",
+            "block_bbox": [
+                872,
+                910,
+                904,
+                930
+            ],
+            "block_id": 4,
+            "block_order": null,
+            "group_id": 4,
+            "block_polygon_points": [
+                [
+                    872.0,
+                    910.0
+                ],
+                [
+                    903.0,
+                    910.0
+                ],
+                [
+                    903.0,
+                    929.0
+                ],
+                [
+                    872.0,
+                    929.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.5682762861251831,
+                "coordinate": [
+                    825,
+                    79,
+                    908,
+                    101
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        825.0,
+                        78.99999237060547
+                    ],
+                    [
+                        907.0,
+                        78.99999237060547
+                    ],
+                    [
+                        907.0,
+                        99.99999237060547
+                    ],
+                    [
+                        825.0,
+                        99.99999237060547
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.31054455041885376,
+                "coordinate": [
+                    446,
+                    258,
+                    811,
+                    283
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        446.0,
+                        258.0
+                    ],
+                    [
+                        811.0,
+                        258.0
+                    ],
+                    [
+                        811.0,
+                        283.0
+                    ],
+                    [
+                        446.0,
+                        283.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.331184059381485,
+                "coordinate": [
+                    473,
+                    331,
+                    784,
+                    354
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        473.0,
+                        331.0
+                    ],
+                    [
+                        784.0,
+                        331.0
+                    ],
+                    [
+                        784.0,
+                        354.0
+                    ],
+                    [
+                        473.0,
+                        354.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 22,
+                "label": "text",
+                "score": 0.4146239161491394,
+                "coordinate": [
+                    461,
+                    402,
+                    797,
+                    425
+                ],
+                "order": 3,
+                "polygon_points": [
+                    [
+                        461.0,
+                        402.0
+                    ],
+                    [
+                        797.0,
+                        402.0
+                    ],
+                    [
+                        797.0,
+                        425.0
+                    ],
+                    [
+                        461.0,
+                        425.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.5800347328186035,
+                "coordinate": [
+                    872,
+                    910,
+                    904,
+                    930
+                ],
+                "order": 4,
+                "polygon_points": [
+                    [
+                        872.0,
+                        910.0
+                    ],
+                    [
+                        903.0,
+                        910.0
+                    ],
+                    [
+                        903.0,
+                        929.0
+                    ],
+                    [
+                        872.0,
+                        929.0
+                    ]
+                ]
+            }
+        ]
+    }
+}
