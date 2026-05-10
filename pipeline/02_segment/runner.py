@@ -31,20 +31,24 @@ def clean_document(page):
         "abstract": "text",
         "display_formula": "text",
         "display_formula": "text",
+        "reference_content": "text",
+        "content": "text",
+        "algorithm": "text",
         "number": None,
         "aside_text": None,
         "header_image": None,
         "footer": None,
-        "content": None,
         "figure_title": None,
         "footnote": None,
         "image": None,
         "vision_footnote": None,
         "footer_image": None,
+        "chart": None,
     }
     
     sections = [
         {
+            "page_num": res["page_number"],
             "type": type_map[res["block_label"]],
             "content": res["block_content"],
         }
@@ -83,15 +87,11 @@ def process_documents(input_dir, output_dir):
         with open(doc_output_dir / (doc.stem + ".json"), "w") as f:
             json.dump(sections, f, indent=2)
         with open(md_path, "w") as f:
-            f.write(md_content)
-    
-    
-    
-    
+            f.write(md_content) 
     
 def main():
     
-    SOURCE = "cornell_retail_educ"
+    SOURCE = "dol_archive"
     
     input_dir = Path("cache/01_ocr_output") / SOURCE
     output_dir = Path("cache/02_segment_output") / SOURCE

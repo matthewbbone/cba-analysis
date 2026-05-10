@@ -1,9 +1,0 @@
-3. In addition to the above management rights, The Adjutant General is given special authority in Public Law 90-486 (32 USC 709) to take the following actions and the right of appeal shall not extend beyond the adjutant general.
-
-a. Separate a technician who is separated from the National Guard, or ceases to hold the military grade specified for his position by the secretary concerned.
-
-b. Separate a technician who fails to meet the military security standards.
-
-c. Separate a technician for cause.
-
-d. Separate a technician for reduction-in-force, removal, or take adverse action involving discharge from technician employment, suspension, furlough without pay, or reduction in technician rank or compensation.

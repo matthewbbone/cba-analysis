@@ -71,7 +71,7 @@ def process_cbas(pipeline, input_dir, output_dir):
             
 def main():
     
-    SOURCE = "cornell_retail_educ"
+    SOURCE = "cornell_dol"
     
     input_dir = Path("cache") / SOURCE
     output_dir = Path("cache/01_ocr_output") / SOURCE
