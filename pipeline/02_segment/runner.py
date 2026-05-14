@@ -91,7 +91,7 @@ def process_documents(input_dir, output_dir):
     
 def main():
     
-    SOURCE = "dol_archive"
+    SOURCE = "cornell_retail_educ"
     
     input_dir = Path("cache/01_ocr_output") / SOURCE
     output_dir = Path("cache/02_segment_output") / SOURCE

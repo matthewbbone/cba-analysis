@@ -1,31 +1,16 @@
 import asyncio
-from openai import OpenAI
 import json
 from pathlib import Path
+import sys
 from dotenv import load_dotenv
 from tqdm import tqdm
+
+sys.path.append(str(Path(__file__).resolve().parents[2]))
+from pipeline.utils.llm import LLMClientPool, model_slug
 load_dotenv()
 
 MARKDOWN_ESCAPABLE_CHARACTERS = frozenset("\\`*_{}[]()#+-.!|$")
 
-def build_query(model_name: str, system_prompt: str, prompt: str, schema: dict) -> list:
-    return {
-        "model": model_name,
-        "messages": [
-            {
-                "role": "system",
-                "content": system_prompt
-            },
-            {
-                "role": "user",
-                "content": [
-                    {"type": "text", "text": prompt},
-                ],
-            }
-        ],
-        "response_format": schema,
-    }
-    
 def find_unique_match_start(text: str, needle: str) -> int | None:
     start_positions: list[int] = []
     search_start = 0
@@ -120,7 +105,7 @@ def ground_provisions(
             grounded_provisions.append(grounded_provision)
         return grounded_provisions
 
-def process_section(section: str, parties: dict, model_name: str, client: OpenAI) -> str:
+def process_section(section: str, parties: dict, llm_client: LLMClientPool) -> tuple:
     
     system_prompt = " ".join([
         "You are a legal expert tasked with extracting contract provisions from sections of legal documents.",
@@ -136,7 +121,7 @@ def process_section(section: str, parties: dict, model_name: str, client: OpenAI
     ])
     
     prompt = " ".join([
-        "Extract the provision from the following section:",
+        "Extract the provisions from the following section:",
         section
     ])
     
@@ -178,23 +163,33 @@ def process_section(section: str, parties: dict, model_name: str, client: OpenAI
             }
         }
     
-    query = build_query(model_name, system_prompt, prompt, schema)
-    response = client.chat.completions.create(**query)
-    raw = response.choices[0].message.content or ""
-    payload = json.loads(raw) if raw.strip() else {}
-    return ground_provisions(
+    payload, usage = llm_client.call_json(system_prompt, prompt, schema)
+    provisions = ground_provisions(
         section_text=section,
         provisions=payload.get("provisions", []),
     )
+    return provisions, usage
     
-def process_document(document_path: Path, parties: dict, model_name: str, client: OpenAI) -> dict:
+def process_document(document_path: Path, parties: dict, llm_client: LLMClientPool) -> dict:
     
     with document_path.open("r", encoding="utf-8") as f:
         sections = json.load(f)
     
     for section in sections:
         section_text = section.get("content", "")
-        section["extracted_provisions"] = process_section(section_text, parties, model_name, client)
+        try:
+            provisions, usage = process_section(section_text, parties, llm_client)
+        except Exception as exc:
+            section["extracted_provisions"] = []
+            section["provision_extraction_usage"] = None
+            section["provision_extraction_error"] = {
+                "type": type(exc).__name__,
+                "message": str(exc),
+            }
+        else:
+            section["extracted_provisions"] = provisions
+            section["provision_extraction_usage"] = usage
+            section.pop("provision_extraction_error", None)
     
     return sections
 
@@ -202,13 +197,11 @@ def process_and_save_document(
     doc: Path,
     output_dir: Path,
     parties: dict,
-    model_name: str,
-    client: OpenAI,
+    llm_client: LLMClientPool,
 ):
-    doc_output_dir = output_dir / doc.parent.name
-    doc_output_dir.mkdir(parents=True, exist_ok=True)
-    processed_doc = process_document(doc, parties, model_name, client)
-    save_file = doc_output_dir / f"{doc.stem}_provisions.json"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    processed_doc = process_document(doc, parties, llm_client)
+    save_file = output_dir / f"{doc.stem}.json"
     with save_file.open("w", encoding="utf-8") as f:
         json.dump(processed_doc, f, indent=4, ensure_ascii=False)
 
@@ -217,9 +210,8 @@ async def process_all(
     input_dir: Path,
     output_dir: Path,
     parties: dict,
-    model_name: str,
-    client: OpenAI,
-    num_workers: int = 4,
+    llm_client: LLMClientPool,
+    num_workers: int = 25,
 ):
     documents = sorted(input_dir.glob("*/*.json"))
     queue = asyncio.Queue()
@@ -238,8 +230,7 @@ async def process_all(
                     doc,
                     output_dir,
                     parties,
-                    model_name,
-                    client,
+                    llm_client,
                 )
             except Exception as exc:
                 errors.append((doc, exc))
@@ -271,19 +262,21 @@ def main():
     MANAGER = "A manager is an individual who has authority over workers but is not the owner of the firm."
     parties = {"Worker": WORKER, "Firm": FIRM, "Union": UNION, "Manager": MANAGER}
     
-    client = OpenAI()
-    
     SOURCE = "cornell_dol"
+    MODEL_NAME = "qwen/qwen3.6-35b-a3b"
+    N_WORKERS = 14
+    llm_client = LLMClientPool(MODEL_NAME, size=N_WORKERS)
+    model_cache_dir = model_slug(MODEL_NAME)
     input_dir = Path("cache/02_segment_output") / SOURCE
-    output_dir = Path("cache/03_provisions_output") / SOURCE
+    output_dir = Path("cache/03_provisions_output") / model_cache_dir / SOURCE
     
     asyncio.run(
         process_all(
             input_dir,
             output_dir,
             parties,
-            model_name="gpt-5.4-mini",
-            client=client,
+            llm_client,
+            num_workers=N_WORKERS,
         )
     )
     

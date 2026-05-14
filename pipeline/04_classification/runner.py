@@ -1,40 +1,30 @@
 import asyncio
 import json
 from pathlib import Path
+import sys
 
 from dotenv import load_dotenv
-from openai import OpenAI
 from tqdm import tqdm
+
+sys.path.append(str(Path(__file__).resolve().parents[2]))
+from pipeline.utils.llm import LLMClientPool, model_slug
 
 load_dotenv()
 
 
-def build_query(model_name: str, system_prompt: str, prompt: str, schema: dict) -> list:
-    return {
-        "model": model_name,
-        "messages": [
-            {
-                "role": "system",
-                "content": system_prompt,
-            },
-            {
-                "role": "user",
-                "content": [
-                    {"type": "text", "text": prompt},
-                ],
-            },
-        ],
-        "response_format": schema,
-    }
-
-
-def classify_provision(provision: dict, taxonomy: dict, model_name: str, client: OpenAI):
+def classify_provision(
+    provision: dict,
+    section_content: str,
+    taxonomy: dict,
+    llm_client: LLMClientPool,
+):
     categories = [item for item in taxonomy["categories"]]
     labels = [item["name"] for item in categories]
 
     system_prompt = " ".join(
         [
             "You are a legal expert tasked with classifying contract provisions.",
+            "You are given a provision extracted from a contract, along with the full text of the section it was extracted from.",
             "You should classify each provision according to the following taxonomy:",
             json.dumps(categories, indent=4),
         ]
@@ -44,6 +34,8 @@ def classify_provision(provision: dict, taxonomy: dict, model_name: str, client:
         [
             "Classify the following provision:\n\n",
             provision["span"],
+            "\n\nSection Context:\n\n",
+            section_content,
         ]
     )
 
@@ -66,25 +58,28 @@ def classify_provision(provision: dict, taxonomy: dict, model_name: str, client:
         },
     }
 
-    query = build_query(model_name, system_prompt, prompt, schema)
-    response = client.chat.completions.create(**query)
-    raw = response.choices[0].message.content or ""
-    payload = json.loads(raw) if raw.strip() else {}
-    return payload.get("category")
+    payload, usage = llm_client.call_json(system_prompt, prompt, schema)
+    return payload.get("category"), usage
 
 
-def process_document(document_path: Path, taxonomy: dict, model_name: str, client: OpenAI):
+def process_document(
+    document_path: Path,
+    taxonomy: dict,
+    llm_client: LLMClientPool,
+):
     with document_path.open("r", encoding="utf-8") as f:
         sections = json.load(f)
 
     for section in sections:
         for provision in section.get("extracted_provisions", []):
-            provision["category"] = classify_provision(
+            category, usage = classify_provision(
                 provision,
+                section["content"],
                 taxonomy,
-                model_name,
-                client,
+                llm_client,
             )
+            provision["category"] = category
+            provision["classification_usage"] = usage
 
     return sections
 
@@ -93,13 +88,15 @@ def process_and_save_document(
     doc: Path,
     output_dir: Path,
     taxonomy: dict,
-    model_name: str,
-    client: OpenAI,
+    llm_client: LLMClientPool,
 ):
-    doc_output_dir = output_dir / doc.parent.name
-    doc_output_dir.mkdir(parents=True, exist_ok=True)
-    processed_doc = process_document(doc, taxonomy, model_name, client)
-    save_file = doc_output_dir / f"{doc.stem}_classified.json"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    processed_doc = process_document(
+        doc,
+        taxonomy,
+        llm_client,
+    )
+    save_file = output_dir / f"{doc.parent.name}.json"
     with save_file.open("w", encoding="utf-8") as f:
         json.dump(processed_doc, f, indent=4, ensure_ascii=False)
 
@@ -108,9 +105,8 @@ async def process_all(
     input_dir: Path,
     output_dir: Path,
     taxonomy: dict,
-    model_name: str,
-    client: OpenAI,
-    num_workers: int = 4,
+    llm_client: LLMClientPool,
+    num_workers: int = 5,
 ):
     documents = sorted(input_dir.glob("*/*.json"))
     queue = asyncio.Queue()
@@ -129,8 +125,7 @@ async def process_all(
                     doc,
                     output_dir,
                     taxonomy,
-                    model_name,
-                    client,
+                    llm_client,
                 )
             except Exception as exc:
                 errors.append((doc, exc))
@@ -157,23 +152,26 @@ async def process_all(
 
 
 def main():
-    SOURCE = "cornell_retail_educ"
+    SOURCE = "dol_archive"
+    MODEL_NAME = "gpt-5.4-nano"
+    N_WORKERS = 4
 
     with open("references/provision_taxonomy.json", "r", encoding="utf-8") as f:
         taxonomy = json.load(f)
 
-    client = OpenAI()
+    llm_client = LLMClientPool(MODEL_NAME, size=N_WORKERS)
+    model_cache_dir = model_slug(MODEL_NAME)
 
-    input_dir = Path("cache/03_provisions_output") / SOURCE
-    output_dir = Path("cache/04_classification_output") / SOURCE
+    input_dir = Path("cache/03_provisions_output") / model_cache_dir / SOURCE
+    output_dir = Path("cache/04_classification_output") / model_cache_dir / SOURCE
 
     asyncio.run(
         process_all(
             input_dir,
             output_dir,
             taxonomy,
-            model_name="gpt-5.4-mini",
-            client=client,
+            llm_client,
+            num_workers=N_WORKERS,
         )
     )
 

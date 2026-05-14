@@ -7,6 +7,7 @@ requires-python = ">=3.13"
 dependencies = [
     "matplotlib>=3.10.9",
     "python-dotenv>=1.2.2",
+    "sentence-transformers>=5.4.1",
     "torch>=2.11.0",
     "torchvision>=0.26.0",
     "wordcloud>=1.9.6",
