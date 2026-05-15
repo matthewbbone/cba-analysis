@@ -12,9 +12,8 @@ from pipeline.utils.llm import LLMClientPool, model_slug
 load_dotenv()
 
 
-def classify_provision(
-    provision: dict,
-    section_content: str,
+def classify_chunk(
+    section: dict,
     taxonomy: dict,
     llm_client: LLMClientPool,
 ):
@@ -24,7 +23,7 @@ def classify_provision(
     system_prompt = " ".join(
         [
             "You are a legal expert tasked with classifying contract provisions.",
-            "You are given a provision extracted from a contract, along with the full text of the section it was extracted from.",
+            "You are given a chunk of contract text that has been identified as containing a provision.",
             "You should classify each provision according to the following taxonomy:",
             json.dumps(categories, indent=4),
         ]
@@ -32,10 +31,8 @@ def classify_provision(
 
     prompt = " ".join(
         [
-            "Classify the following provision:\n\n",
-            provision["span"],
-            "\n\nSection Context:\n\n",
-            section_content,
+            "Classify the provision contained in the following chunk of contract text:\n\n",
+            section.get("content", ""),
         ]
     )
 
@@ -71,15 +68,18 @@ def process_document(
         sections = json.load(f)
 
     for section in sections:
-        for provision in section.get("extracted_provisions", []):
-            category, usage = classify_provision(
-                provision,
-                section["content"],
-                taxonomy,
-                llm_client,
-            )
-            provision["category"] = category
-            provision["classification_usage"] = usage
+        if not section.get("is_provision", False):
+            section["category"] = None
+            section["classification_usage"] = None
+            continue
+
+        category, usage = classify_chunk(
+            section,
+            taxonomy,
+            llm_client,
+        )
+        section["category"] = category
+        section["classification_usage"] = usage
 
     return sections
 
@@ -96,7 +96,7 @@ def process_and_save_document(
         taxonomy,
         llm_client,
     )
-    save_file = output_dir / f"{doc.parent.name}.json"
+    save_file = output_dir / f"{doc.stem}.json"
     with save_file.open("w", encoding="utf-8") as f:
         json.dump(processed_doc, f, indent=4, ensure_ascii=False)
 
@@ -108,7 +108,7 @@ async def process_all(
     llm_client: LLMClientPool,
     num_workers: int = 5,
 ):
-    documents = sorted(input_dir.glob("*/*.json"))
+    documents = sorted(input_dir.glob("*.json"))
     queue = asyncio.Queue()
 
     for doc in documents:
@@ -152,9 +152,9 @@ async def process_all(
 
 
 def main():
-    SOURCE = "dol_archive"
+    SOURCE = "cornell_dol"
     MODEL_NAME = "gpt-5.4-nano"
-    N_WORKERS = 4
+    N_WORKERS = 14
 
     with open("references/provision_taxonomy.json", "r", encoding="utf-8") as f:
         taxonomy = json.load(f)

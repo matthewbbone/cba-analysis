@@ -16,9 +16,8 @@ def collect_provisions_by_category(sections, category: str) -> list[str]:
     provisions = []
 
     for section in sections:
-        for provision in section.get("extracted_provisions", []):
-            if provision.get("category") == category:
-                provisions.append(provision.get("span", ""))
+        if section.get("category") == category:
+            provisions.append(section.get("content", ""))
 
     return provisions
 
@@ -180,9 +179,9 @@ async def process_all(
 
 
 def main():
-    SOURCE = "dol_archive"
+    SOURCE = "cornell_dol"
     MODEL_NAME = "gpt-5.4-nano"
-    N_WORKERS = 5
+    N_WORKERS = 14
 
     with open("references/provision_taxonomy.json", "r", encoding="utf-8") as f:
         taxonomy = json.load(f)

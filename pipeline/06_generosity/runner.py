@@ -42,8 +42,8 @@ def process_pairwise_summaries(
     system_prompt = " ".join([
         "You are a legal expert tasked with comparing two provision summaries",
         "from different contracts. Your goal is to identify which set of provisions",
-        "is more generous to the specified party. Generosity is determined by which" 
-        "set of provisions provides more favorable terms to the specified party in the specified category.",
+        f"is more generous to the {agent}. Generosity is determined by which" 
+        f"set of provisions provides more favorable terms to the {agent} in the specified category.",
     ])
     
     prompt = " ".join([
@@ -301,11 +301,11 @@ async def process_comparison_jobs(
 
 
 def main():
-    N = 300
+    N = 190
     RANDOM_SEED = 123
     AGENT = "Worker"
     MODEL_NAME = "gpt-5.4-nano"
-    NUM_WORKERS = 8
+    NUM_WORKERS = 25
     MODEL_CACHE_DIR = model_slug(MODEL_NAME)
     INPUT_DIR = Path("cache/05_summarize_output") / MODEL_CACHE_DIR
     OUTPUT_DIR = Path("cache/06_generosity_output") / MODEL_CACHE_DIR

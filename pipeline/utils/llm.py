@@ -29,11 +29,6 @@ MODEL_PRICING = {
         "cached_input": 0.02,
         "output": 1.25,
     },
-    "qwen/qwen3.6-35b-a3b": {
-        "input": 0.1612,
-        "cached_input": 0.0,
-        "output": 0.9653,
-    },
 }
 
 

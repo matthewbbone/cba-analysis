@@ -10,9 +10,8 @@ from pipeline.utils.llm import model_slug
 def collect_provisions_by_category(sections: list[dict], category: str) -> list[str]:
     provisions = []
     for section in sections:
-        for provision in section.get("extracted_provisions", []):
-            if provision.get("category") == category:
-                provisions.append(provision.get("span", ""))
+        if section.get("category") == category:
+            provisions.append(section.get("content", ""))
     return provisions
 
 
@@ -28,6 +27,21 @@ def format_summarization_prompt(category: str, provisions: list[str]) -> str:
 def load_json(path: Path):
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
+
+
+def resolve_document_path(root: Path, document_id: str) -> Path:
+    candidates = [
+        root / f"{document_id}.json",
+        root / f"{document_id}_res.json",
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+
+    raise FileNotFoundError(
+        f"Document not found under {root}: tried "
+        + ", ".join(candidate.name for candidate in candidates)
+    )
 
 
 def find_category_summary(summarized_document: dict, category: str) -> dict | None:
@@ -55,23 +69,10 @@ def parse_args():
 def main():
     args = parse_args()
     model_cache_dir = model_slug(args.model_name)
-    classified_path = (
-        Path("cache/04_classification_output")
-        / model_cache_dir
-        / args.source
-        / f"{args.document_id}.json"
-    )
-    summarized_path = (
-        Path("cache/05_summarize_output")
-        / model_cache_dir
-        / args.source
-        / f"{args.document_id}.json"
-    )
-
-    if not classified_path.exists():
-        raise FileNotFoundError(f"Classified document not found: {classified_path}")
-    if not summarized_path.exists():
-        raise FileNotFoundError(f"Summarized document not found: {summarized_path}")
+    classified_root = Path("cache/04_classification_output") / model_cache_dir / args.source
+    summarized_root = Path("cache/05_summarize_output") / model_cache_dir / args.source
+    classified_path = resolve_document_path(classified_root, args.document_id)
+    summarized_path = resolve_document_path(summarized_root, args.document_id)
 
     sections = load_json(classified_path)
     summarized_document = load_json(summarized_path)
@@ -80,6 +81,8 @@ def main():
 
     print(f"Source: {args.source}")
     print(f"Document: {args.document_id}")
+    print(f"Classified file: {classified_path.name}")
+    print(f"Summarized file: {summarized_path.name}")
     print(f"Category: {args.category}")
     print(f"Model: {args.model_name} ({model_cache_dir})")
     print(f"Provision count: {len(provisions)}")

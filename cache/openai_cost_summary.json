@@ -1,205 +1,203 @@
 {
+    "cache_model": "gpt_5_4_nano",
     "03_provisions": {
         "total": {
-            "api_calls": 26193,
-            "input_tokens": 10844617,
+            "api_calls": 23851,
+            "files": 20,
+            "input_tokens": 9325002,
             "cached_input_tokens": 0,
-            "billable_input_tokens": 10844617,
-            "output_tokens": 1179558,
-            "total_tokens": 12024175,
+            "billable_input_tokens": 9325002,
+            "output_tokens": 572424,
+            "total_tokens": 9897426,
+            "input_cost_usd": 1.8650004000000362,
+            "cached_input_cost_usd": 0.0,
+            "output_cost_usd": 0.7155299999996201,
+            "total_cost_usd": 2.5805304000000135,
             "cost_estimates_usd": {
                 "gpt-5.5": {
-                    "input_cost_usd": 54.223085,
+                    "input_cost_usd": 46.625009999999996,
                     "cached_input_cost_usd": 0.0,
-                    "output_cost_usd": 35.38674,
-                    "total_cost_usd": 89.609825
+                    "output_cost_usd": 17.17272,
+                    "total_cost_usd": 63.79773
                 },
                 "gpt-5.4": {
-                    "input_cost_usd": 27.1115425,
+                    "input_cost_usd": 23.312504999999998,
                     "cached_input_cost_usd": 0.0,
-                    "output_cost_usd": 17.69337,
-                    "total_cost_usd": 44.8049125
+                    "output_cost_usd": 8.58636,
+                    "total_cost_usd": 31.898865
                 },
                 "gpt-5.4-mini": {
-                    "input_cost_usd": 8.13346275,
+                    "input_cost_usd": 6.9937515,
                     "cached_input_cost_usd": 0.0,
-                    "output_cost_usd": 5.3080110000000005,
-                    "total_cost_usd": 13.44147375
+                    "output_cost_usd": 2.575908,
+                    "total_cost_usd": 9.5696595
                 },
                 "gpt-5.4-nano": {
-                    "input_cost_usd": 2.1689234,
+                    "input_cost_usd": 1.8650004,
                     "cached_input_cost_usd": 0.0,
-                    "output_cost_usd": 1.4744475000000001,
-                    "total_cost_usd": 3.6433709000000003
-                },
-                "qwen/qwen3.6-35b-a3b": {
-                    "input_cost_usd": 1.7481522604,
-                    "cached_input_cost_usd": 0.0,
-                    "output_cost_usd": 1.1386273374000002,
-                    "total_cost_usd": 2.8867795978000004
+                    "output_cost_usd": 0.71553,
+                    "total_cost_usd": 2.5805304
                 }
             }
         },
         "by_source": {
             "cornell_dol": {
                 "api_calls": 20530,
-                "input_tokens": 8616702,
+                "files": 14,
+                "input_tokens": 8103452,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 8616702,
-                "output_tokens": 891081,
-                "total_tokens": 9507783,
+                "billable_input_tokens": 8103452,
+                "output_tokens": 492720,
+                "total_tokens": 8596172,
+                "input_cost_usd": 1.62069040000003,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.6158999999997048,
+                "total_cost_usd": 2.236590399999992,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 43.083510000000004,
+                        "input_cost_usd": 40.51726000000001,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 26.73243,
-                        "total_cost_usd": 69.81594000000001
+                        "output_cost_usd": 14.7816,
+                        "total_cost_usd": 55.298860000000005
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 21.541755000000002,
+                        "input_cost_usd": 20.258630000000004,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 13.366215,
-                        "total_cost_usd": 34.907970000000006
+                        "output_cost_usd": 7.3908,
+                        "total_cost_usd": 27.649430000000002
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 6.4625265,
+                        "input_cost_usd": 6.077589000000001,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 4.0098645,
-                        "total_cost_usd": 10.472391
+                        "output_cost_usd": 2.21724,
+                        "total_cost_usd": 8.294829
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 1.7233404,
+                        "input_cost_usd": 1.6206904000000002,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 1.11385125,
-                        "total_cost_usd": 2.8371916500000003
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 1.3890123624000001,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.8601604893000001,
-                        "total_cost_usd": 2.2491728517
+                        "output_cost_usd": 0.6159,
+                        "total_cost_usd": 2.2365904000000003
                     }
                 }
             },
             "cornell_retail_educ": {
                 "api_calls": 3321,
-                "input_tokens": 1304575,
+                "files": 6,
+                "input_tokens": 1221550,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 1304575,
-                "output_tokens": 168742,
-                "total_tokens": 1473317,
+                "billable_input_tokens": 1221550,
+                "output_tokens": 79704,
+                "total_tokens": 1301254,
+                "input_cost_usd": 0.2443100000000003,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.09963000000000458,
+                "total_cost_usd": 0.34394000000000025,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 6.522875,
+                        "input_cost_usd": 6.107749999999999,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 5.06226,
-                        "total_cost_usd": 11.585135000000001
+                        "output_cost_usd": 2.39112,
+                        "total_cost_usd": 8.49887
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 3.2614375,
+                        "input_cost_usd": 3.0538749999999997,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 2.53113,
-                        "total_cost_usd": 5.7925675000000005
+                        "output_cost_usd": 1.19556,
+                        "total_cost_usd": 4.249435
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.9784312500000001,
+                        "input_cost_usd": 0.9161625,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.759339,
-                        "total_cost_usd": 1.73777025
+                        "output_cost_usd": 0.358668,
+                        "total_cost_usd": 1.2748305
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.260915,
+                        "input_cost_usd": 0.24431,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.2109275,
-                        "total_cost_usd": 0.4718425
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.21029749000000003,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.16288665260000001,
-                        "total_cost_usd": 0.37318414260000005
+                        "output_cost_usd": 0.09963,
+                        "total_cost_usd": 0.34394
                     }
                 }
-            },
-            "dol_archive": {
-                "api_calls": 2342,
-                "input_tokens": 923340,
+            }
+        },
+        "by_cache_model": {
+            "gpt_5_4_nano": {
+                "api_calls": 23851,
+                "files": 20,
+                "input_tokens": 9325002,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 923340,
-                "output_tokens": 119735,
-                "total_tokens": 1043075,
+                "billable_input_tokens": 9325002,
+                "output_tokens": 572424,
+                "total_tokens": 9897426,
+                "input_cost_usd": 1.8650004000000362,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.7155299999996201,
+                "total_cost_usd": 2.5805304000000135,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 4.6167,
+                        "input_cost_usd": 46.625009999999996,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 3.59205,
-                        "total_cost_usd": 8.20875
+                        "output_cost_usd": 17.17272,
+                        "total_cost_usd": 63.79773
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 2.30835,
+                        "input_cost_usd": 23.312504999999998,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 1.796025,
-                        "total_cost_usd": 4.104375
+                        "output_cost_usd": 8.58636,
+                        "total_cost_usd": 31.898865
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.692505,
+                        "input_cost_usd": 6.9937515,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.5388075,
-                        "total_cost_usd": 1.2313125
+                        "output_cost_usd": 2.575908,
+                        "total_cost_usd": 9.5696595
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.18466800000000003,
+                        "input_cost_usd": 1.8650004,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.14966875,
-                        "total_cost_usd": 0.33433675
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.148842408,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.1155801955,
-                        "total_cost_usd": 0.2644226035
+                        "output_cost_usd": 0.71553,
+                        "total_cost_usd": 2.5805304
                     }
                 }
             }
         },
         "by_model": {
             "gpt-5.4-nano": {
-                "api_calls": 26193,
-                "input_tokens": 10844617,
+                "api_calls": 23851,
+                "files": 0,
+                "input_tokens": 9325002,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 10844617,
-                "output_tokens": 1179558,
-                "total_tokens": 12024175,
+                "billable_input_tokens": 9325002,
+                "output_tokens": 572424,
+                "total_tokens": 9897426,
+                "input_cost_usd": 1.8650004000000362,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.7155299999996201,
+                "total_cost_usd": 2.5805304000000135,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 54.223085,
+                        "input_cost_usd": 46.625009999999996,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 35.38674,
-                        "total_cost_usd": 89.609825
+                        "output_cost_usd": 17.17272,
+                        "total_cost_usd": 63.79773
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 27.1115425,
+                        "input_cost_usd": 23.312504999999998,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 17.69337,
-                        "total_cost_usd": 44.8049125
+                        "output_cost_usd": 8.58636,
+                        "total_cost_usd": 31.898865
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 8.13346275,
+                        "input_cost_usd": 6.9937515,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 5.3080110000000005,
-                        "total_cost_usd": 13.44147375
+                        "output_cost_usd": 2.575908,
+                        "total_cost_usd": 9.5696595
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 2.1689234,
+                        "input_cost_usd": 1.8650004,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 1.4744475000000001,
-                        "total_cost_usd": 3.6433709000000003
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 1.7481522604,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 1.1386273374000002,
-                        "total_cost_usd": 2.8867795978000004
+                        "output_cost_usd": 0.71553,
+                        "total_cost_usd": 2.5805304
                     }
                 }
             }
@@ -207,205 +205,241 @@
     },
     "04_classification": {
         "total": {
-            "api_calls": 24489,
-            "input_tokens": 34074920,
-            "cached_input_tokens": 1792,
-            "billable_input_tokens": 34073128,
-            "output_tokens": 358708,
-            "total_tokens": 34433628,
+            "api_calls": 8163,
+            "files": 20,
+            "input_tokens": 11012858,
+            "cached_input_tokens": 0,
+            "billable_input_tokens": 11012858,
+            "output_tokens": 118920,
+            "total_tokens": 11131778,
+            "input_cost_usd": 2.202571599999997,
+            "cached_input_cost_usd": 0.0,
+            "output_cost_usd": 0.1486500000000099,
+            "total_cost_usd": 2.351221600000003,
             "cost_estimates_usd": {
                 "gpt-5.5": {
-                    "input_cost_usd": 170.36563999999998,
-                    "cached_input_cost_usd": 0.000896,
-                    "output_cost_usd": 10.76124,
-                    "total_cost_usd": 181.12777599999998
+                    "input_cost_usd": 55.06429,
+                    "cached_input_cost_usd": 0.0,
+                    "output_cost_usd": 3.5676,
+                    "total_cost_usd": 58.63189
                 },
                 "gpt-5.4": {
-                    "input_cost_usd": 85.18281999999999,
-                    "cached_input_cost_usd": 0.000448,
-                    "output_cost_usd": 5.38062,
-                    "total_cost_usd": 90.56388799999999
+                    "input_cost_usd": 27.532145,
+                    "cached_input_cost_usd": 0.0,
+                    "output_cost_usd": 1.7838,
+                    "total_cost_usd": 29.315945
                 },
                 "gpt-5.4-mini": {
-                    "input_cost_usd": 25.554845999999998,
-                    "cached_input_cost_usd": 0.0001344,
-                    "output_cost_usd": 1.6141860000000001,
-                    "total_cost_usd": 27.169166399999998
+                    "input_cost_usd": 8.2596435,
+                    "cached_input_cost_usd": 0.0,
+                    "output_cost_usd": 0.53514,
+                    "total_cost_usd": 8.7947835
                 },
                 "gpt-5.4-nano": {
-                    "input_cost_usd": 6.814625599999999,
-                    "cached_input_cost_usd": 3.584e-05,
-                    "output_cost_usd": 0.44838500000000003,
-                    "total_cost_usd": 7.263046439999999
-                },
-                "qwen/qwen3.6-35b-a3b": {
-                    "input_cost_usd": 5.4925882336,
+                    "input_cost_usd": 2.2025716,
                     "cached_input_cost_usd": 0.0,
-                    "output_cost_usd": 0.34626083240000005,
-                    "total_cost_usd": 5.838849066
+                    "output_cost_usd": 0.14865,
+                    "total_cost_usd": 2.3512216
                 }
             }
         },
         "by_source": {
             "cornell_dol": {
-                "api_calls": 18094,
-                "input_tokens": 25222281,
+                "api_calls": 6728,
+                "files": 14,
+                "input_tokens": 9089609,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 25222281,
-                "output_tokens": 264764,
-                "total_tokens": 25487045,
+                "billable_input_tokens": 9089609,
+                "output_tokens": 98046,
+                "total_tokens": 9187655,
+                "input_cost_usd": 1.817921800000001,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.12255750000000724,
+                "total_cost_usd": 1.9404792999999942,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 126.11140499999999,
+                        "input_cost_usd": 45.44804499999999,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 7.94292,
-                        "total_cost_usd": 134.05432499999998
+                        "output_cost_usd": 2.9413799999999997,
+                        "total_cost_usd": 48.389424999999996
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 63.055702499999995,
+                        "input_cost_usd": 22.724022499999997,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 3.97146,
-                        "total_cost_usd": 67.02716249999999
+                        "output_cost_usd": 1.4706899999999998,
+                        "total_cost_usd": 24.194712499999998
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 18.91671075,
+                        "input_cost_usd": 6.8172067499999995,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 1.191438,
-                        "total_cost_usd": 20.10814875
+                        "output_cost_usd": 0.44120699999999996,
+                        "total_cost_usd": 7.25841375
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 5.0444562,
+                        "input_cost_usd": 1.8179218,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.330955,
-                        "total_cost_usd": 5.3754112
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 4.0658316972,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.2555766892,
-                        "total_cost_usd": 4.3214083864
+                        "output_cost_usd": 0.12255749999999999,
+                        "total_cost_usd": 1.9404792999999998
                     }
                 }
             },
             "cornell_retail_educ": {
-                "api_calls": 3784,
-                "input_tokens": 5229459,
-                "cached_input_tokens": 1792,
-                "billable_input_tokens": 5227667,
-                "output_tokens": 55375,
-                "total_tokens": 5284834,
+                "api_calls": 1435,
+                "files": 6,
+                "input_tokens": 1923249,
+                "cached_input_tokens": 0,
+                "billable_input_tokens": 1923249,
+                "output_tokens": 20874,
+                "total_tokens": 1944123,
+                "input_cost_usd": 0.3846498000000002,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.026092500000000005,
+                "total_cost_usd": 0.4107422999999993,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 26.138335,
-                        "cached_input_cost_usd": 0.000896,
-                        "output_cost_usd": 1.6612500000000001,
-                        "total_cost_usd": 27.800481
+                        "input_cost_usd": 9.616245,
+                        "cached_input_cost_usd": 0.0,
+                        "output_cost_usd": 0.62622,
+                        "total_cost_usd": 10.242465
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 13.0691675,
-                        "cached_input_cost_usd": 0.000448,
-                        "output_cost_usd": 0.8306250000000001,
-                        "total_cost_usd": 13.9002405
+                        "input_cost_usd": 4.8081225,
+                        "cached_input_cost_usd": 0.0,
+                        "output_cost_usd": 0.31311,
+                        "total_cost_usd": 5.1212325
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 3.92075025,
-                        "cached_input_cost_usd": 0.0001344,
-                        "output_cost_usd": 0.2491875,
-                        "total_cost_usd": 4.17007215
+                        "input_cost_usd": 1.44243675,
+                        "cached_input_cost_usd": 0.0,
+                        "output_cost_usd": 0.093933,
+                        "total_cost_usd": 1.53636975
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 1.0455334,
-                        "cached_input_cost_usd": 3.584e-05,
-                        "output_cost_usd": 0.06921875,
-                        "total_cost_usd": 1.11478799
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.8426999204000001,
+                        "input_cost_usd": 0.38464980000000004,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0534534875,
-                        "total_cost_usd": 0.8961534079000001
+                        "output_cost_usd": 0.0260925,
+                        "total_cost_usd": 0.41074230000000006
                     }
                 }
-            },
-            "dol_archive": {
-                "api_calls": 2611,
-                "input_tokens": 3623180,
+            }
+        },
+        "by_cache_model": {
+            "gpt_5_4_nano": {
+                "api_calls": 8163,
+                "files": 20,
+                "input_tokens": 11012858,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 3623180,
-                "output_tokens": 38569,
-                "total_tokens": 3661749,
+                "billable_input_tokens": 11012858,
+                "output_tokens": 118920,
+                "total_tokens": 11131778,
+                "input_cost_usd": 2.202571599999997,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.1486500000000099,
+                "total_cost_usd": 2.351221600000003,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 18.1159,
+                        "input_cost_usd": 55.06429,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 1.15707,
-                        "total_cost_usd": 19.27297
+                        "output_cost_usd": 3.5676,
+                        "total_cost_usd": 58.63189
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 9.05795,
+                        "input_cost_usd": 27.532145,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.578535,
-                        "total_cost_usd": 9.636485
+                        "output_cost_usd": 1.7838,
+                        "total_cost_usd": 29.315945
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 2.717385,
+                        "input_cost_usd": 8.2596435,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.1735605,
-                        "total_cost_usd": 2.8909455
+                        "output_cost_usd": 0.53514,
+                        "total_cost_usd": 8.7947835
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.7246360000000001,
+                        "input_cost_usd": 2.2025716,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.04821125,
-                        "total_cost_usd": 0.7728472500000001
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.584056616,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.037230655700000004,
-                        "total_cost_usd": 0.6212872717
+                        "output_cost_usd": 0.14865,
+                        "total_cost_usd": 2.3512216
                     }
                 }
             }
         },
         "by_model": {
             "gpt-5.4-nano": {
-                "api_calls": 24489,
-                "input_tokens": 34074920,
-                "cached_input_tokens": 1792,
-                "billable_input_tokens": 34073128,
-                "output_tokens": 358708,
-                "total_tokens": 34433628,
+                "api_calls": 8163,
+                "files": 0,
+                "input_tokens": 11012858,
+                "cached_input_tokens": 0,
+                "billable_input_tokens": 11012858,
+                "output_tokens": 118920,
+                "total_tokens": 11131778,
+                "input_cost_usd": 2.202571599999997,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.1486500000000099,
+                "total_cost_usd": 2.351221600000003,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 170.36563999999998,
-                        "cached_input_cost_usd": 0.000896,
-                        "output_cost_usd": 10.76124,
-                        "total_cost_usd": 181.12777599999998
+                        "input_cost_usd": 55.06429,
+                        "cached_input_cost_usd": 0.0,
+                        "output_cost_usd": 3.5676,
+                        "total_cost_usd": 58.63189
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 85.18281999999999,
-                        "cached_input_cost_usd": 0.000448,
-                        "output_cost_usd": 5.38062,
-                        "total_cost_usd": 90.56388799999999
+                        "input_cost_usd": 27.532145,
+                        "cached_input_cost_usd": 0.0,
+                        "output_cost_usd": 1.7838,
+                        "total_cost_usd": 29.315945
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 25.554845999999998,
-                        "cached_input_cost_usd": 0.0001344,
-                        "output_cost_usd": 1.6141860000000001,
-                        "total_cost_usd": 27.169166399999998
+                        "input_cost_usd": 8.2596435,
+                        "cached_input_cost_usd": 0.0,
+                        "output_cost_usd": 0.53514,
+                        "total_cost_usd": 8.7947835
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 6.814625599999999,
-                        "cached_input_cost_usd": 3.584e-05,
-                        "output_cost_usd": 0.44838500000000003,
-                        "total_cost_usd": 7.263046439999999
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 5.4925882336,
+                        "input_cost_usd": 2.2025716,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.34626083240000005,
-                        "total_cost_usd": 5.838849066
+                        "output_cost_usd": 0.14865,
+                        "total_cost_usd": 2.3512216
+                    }
+                }
+            },
+            "unknown": {
+                "api_calls": 0,
+                "files": 0,
+                "input_tokens": 0,
+                "cached_input_tokens": 0,
+                "billable_input_tokens": 0,
+                "output_tokens": 0,
+                "total_tokens": 0,
+                "input_cost_usd": 0.0,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.0,
+                "total_cost_usd": 0.0,
+                "cost_estimates_usd": {
+                    "gpt-5.5": {
+                        "input_cost_usd": 0.0,
+                        "cached_input_cost_usd": 0.0,
+                        "output_cost_usd": 0.0,
+                        "total_cost_usd": 0.0
+                    },
+                    "gpt-5.4": {
+                        "input_cost_usd": 0.0,
+                        "cached_input_cost_usd": 0.0,
+                        "output_cost_usd": 0.0,
+                        "total_cost_usd": 0.0
+                    },
+                    "gpt-5.4-mini": {
+                        "input_cost_usd": 0.0,
+                        "cached_input_cost_usd": 0.0,
+                        "output_cost_usd": 0.0,
+                        "total_cost_usd": 0.0
+                    },
+                    "gpt-5.4-nano": {
+                        "input_cost_usd": 0.0,
+                        "cached_input_cost_usd": 0.0,
+                        "output_cost_usd": 0.0,
+                        "total_cost_usd": 0.0
                     }
                 }
             }
@@ -413,737 +447,726 @@
     },
     "05_summarize": {
         "total": {
-            "api_calls": 323,
-            "input_tokens": 578841,
+            "api_calls": 253,
+            "files": 20,
+            "input_tokens": 593197,
             "cached_input_tokens": 0,
-            "billable_input_tokens": 578841,
-            "output_tokens": 135412,
-            "total_tokens": 714253,
+            "billable_input_tokens": 593197,
+            "output_tokens": 112341,
+            "total_tokens": 705538,
+            "input_cost_usd": 0.11863939999999995,
+            "cached_input_cost_usd": 0.0,
+            "output_cost_usd": 0.14042625000000003,
+            "total_cost_usd": 0.25906564999999987,
             "cost_estimates_usd": {
                 "gpt-5.5": {
-                    "input_cost_usd": 2.8942050000000004,
+                    "input_cost_usd": 2.965985,
                     "cached_input_cost_usd": 0.0,
-                    "output_cost_usd": 4.06236,
-                    "total_cost_usd": 6.956565
+                    "output_cost_usd": 3.37023,
+                    "total_cost_usd": 6.336214999999999
                 },
                 "gpt-5.4": {
-                    "input_cost_usd": 1.4471025000000002,
+                    "input_cost_usd": 1.4829925,
                     "cached_input_cost_usd": 0.0,
-                    "output_cost_usd": 2.03118,
-                    "total_cost_usd": 3.4782825
+                    "output_cost_usd": 1.685115,
+                    "total_cost_usd": 3.1681074999999996
                 },
                 "gpt-5.4-mini": {
-                    "input_cost_usd": 0.43413075,
+                    "input_cost_usd": 0.44489775,
                     "cached_input_cost_usd": 0.0,
-                    "output_cost_usd": 0.6093540000000001,
-                    "total_cost_usd": 1.0434847500000002
+                    "output_cost_usd": 0.5055345,
+                    "total_cost_usd": 0.95043225
                 },
                 "gpt-5.4-nano": {
-                    "input_cost_usd": 0.11576820000000002,
+                    "input_cost_usd": 0.1186394,
                     "cached_input_cost_usd": 0.0,
-                    "output_cost_usd": 0.169265,
-                    "total_cost_usd": 0.2850332
-                },
-                "qwen/qwen3.6-35b-a3b": {
-                    "input_cost_usd": 0.09330916920000001,
-                    "cached_input_cost_usd": 0.0,
-                    "output_cost_usd": 0.13071320360000002,
-                    "total_cost_usd": 0.22402237280000004
+                    "output_cost_usd": 0.14042625,
+                    "total_cost_usd": 0.25906565000000004
                 }
             }
         },
         "by_source": {
             "cornell_dol": {
-                "api_calls": 182,
-                "input_tokens": 424567,
+                "api_calls": 180,
+                "files": 14,
+                "input_tokens": 498431,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 424567,
-                "output_tokens": 84462,
-                "total_tokens": 509029,
+                "billable_input_tokens": 498431,
+                "output_tokens": 84877,
+                "total_tokens": 583308,
+                "input_cost_usd": 0.09968619999999999,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.10609625000000004,
+                "total_cost_usd": 0.20578244999999995,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 2.1228350000000002,
+                        "input_cost_usd": 2.492155,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 2.53386,
-                        "total_cost_usd": 4.656695
+                        "output_cost_usd": 2.5463099999999996,
+                        "total_cost_usd": 5.0384649999999995
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 1.0614175000000001,
+                        "input_cost_usd": 1.2460775,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 1.26693,
-                        "total_cost_usd": 2.3283475
+                        "output_cost_usd": 1.2731549999999998,
+                        "total_cost_usd": 2.5192324999999998
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.31842525,
+                        "input_cost_usd": 0.37382325,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.380079,
-                        "total_cost_usd": 0.69850425
+                        "output_cost_usd": 0.38194649999999997,
+                        "total_cost_usd": 0.75576975
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.08491340000000001,
+                        "input_cost_usd": 0.0996862,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.10557749999999999,
-                        "total_cost_usd": 0.19049090000000002
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.06844020040000001,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0815311686,
-                        "total_cost_usd": 0.14997136900000002
+                        "output_cost_usd": 0.10609624999999999,
+                        "total_cost_usd": 0.20578245
                     }
                 }
             },
             "cornell_retail_educ": {
-                "api_calls": 76,
-                "input_tokens": 88885,
+                "api_calls": 73,
+                "files": 6,
+                "input_tokens": 94766,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 88885,
-                "output_tokens": 28306,
-                "total_tokens": 117191,
+                "billable_input_tokens": 94766,
+                "output_tokens": 27464,
+                "total_tokens": 122230,
+                "input_cost_usd": 0.0189532,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.034330000000000006,
+                "total_cost_usd": 0.0532832,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 0.444425,
+                        "input_cost_usd": 0.47383000000000003,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.84918,
-                        "total_cost_usd": 1.2936050000000001
+                        "output_cost_usd": 0.82392,
+                        "total_cost_usd": 1.29775
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 0.2222125,
+                        "input_cost_usd": 0.23691500000000001,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.42459,
-                        "total_cost_usd": 0.6468025000000001
+                        "output_cost_usd": 0.41196,
+                        "total_cost_usd": 0.648875
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.06666375000000001,
+                        "input_cost_usd": 0.0710745,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.12737700000000002,
-                        "total_cost_usd": 0.19404075000000004
+                        "output_cost_usd": 0.12358799999999999,
+                        "total_cost_usd": 0.1946625
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.017777,
+                        "input_cost_usd": 0.018953200000000003,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.035382500000000004,
-                        "total_cost_usd": 0.053159500000000005
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.014328262000000001,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.027323781800000002,
-                        "total_cost_usd": 0.0416520438
+                        "output_cost_usd": 0.03433,
+                        "total_cost_usd": 0.0532832
                     }
                 }
-            },
-            "dol_archive": {
-                "api_calls": 65,
-                "input_tokens": 65389,
+            }
+        },
+        "by_cache_model": {
+            "gpt_5_4_nano": {
+                "api_calls": 253,
+                "files": 20,
+                "input_tokens": 593197,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 65389,
-                "output_tokens": 22644,
-                "total_tokens": 88033,
+                "billable_input_tokens": 593197,
+                "output_tokens": 112341,
+                "total_tokens": 705538,
+                "input_cost_usd": 0.11863939999999995,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.14042625000000003,
+                "total_cost_usd": 0.25906564999999987,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 0.32694500000000004,
+                        "input_cost_usd": 2.965985,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.67932,
-                        "total_cost_usd": 1.006265
+                        "output_cost_usd": 3.37023,
+                        "total_cost_usd": 6.336214999999999
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 0.16347250000000002,
+                        "input_cost_usd": 1.4829925,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.33966,
-                        "total_cost_usd": 0.5031325
+                        "output_cost_usd": 1.685115,
+                        "total_cost_usd": 3.1681074999999996
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.04904175,
+                        "input_cost_usd": 0.44489775,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.101898,
-                        "total_cost_usd": 0.15093975
+                        "output_cost_usd": 0.5055345,
+                        "total_cost_usd": 0.95043225
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.0130778,
+                        "input_cost_usd": 0.1186394,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.028305,
-                        "total_cost_usd": 0.0413828
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.0105407068,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0218582532,
-                        "total_cost_usd": 0.032398960000000004
+                        "output_cost_usd": 0.14042625,
+                        "total_cost_usd": 0.25906565000000004
                     }
                 }
             }
         },
         "by_category": {
             "Ancillary": {
-                "api_calls": 25,
-                "input_tokens": 20627,
+                "api_calls": 19,
+                "files": 0,
+                "input_tokens": 21728,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 20627,
-                "output_tokens": 7582,
-                "total_tokens": 28209,
+                "billable_input_tokens": 21728,
+                "output_tokens": 5520,
+                "total_tokens": 27248,
+                "input_cost_usd": 0.0043456,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.006900000000000001,
+                "total_cost_usd": 0.011245600000000001,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 0.103135,
+                        "input_cost_usd": 0.10864,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.22746,
-                        "total_cost_usd": 0.33059499999999997
+                        "output_cost_usd": 0.1656,
+                        "total_cost_usd": 0.27424
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 0.0515675,
+                        "input_cost_usd": 0.05432,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.11373,
-                        "total_cost_usd": 0.16529749999999999
+                        "output_cost_usd": 0.0828,
+                        "total_cost_usd": 0.13712
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.01547025,
+                        "input_cost_usd": 0.016296,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.034119000000000003,
-                        "total_cost_usd": 0.04958925
+                        "output_cost_usd": 0.024839999999999997,
+                        "total_cost_usd": 0.041136
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.0041254,
+                        "input_cost_usd": 0.004345600000000001,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0094775,
-                        "total_cost_usd": 0.013602900000000001
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.0033250724000000002,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0073189046,
-                        "total_cost_usd": 0.010643977
+                        "output_cost_usd": 0.0069,
+                        "total_cost_usd": 0.011245600000000001
                     }
                 }
             },
             "Compensation": {
-                "api_calls": 25,
-                "input_tokens": 67001,
+                "api_calls": 20,
+                "files": 0,
+                "input_tokens": 62557,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 67001,
-                "output_tokens": 15241,
-                "total_tokens": 82242,
+                "billable_input_tokens": 62557,
+                "output_tokens": 13069,
+                "total_tokens": 75626,
+                "input_cost_usd": 0.012511399999999999,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.01633625,
+                "total_cost_usd": 0.02884765000000001,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 0.335005,
+                        "input_cost_usd": 0.312785,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.45722999999999997,
-                        "total_cost_usd": 0.792235
+                        "output_cost_usd": 0.39207000000000003,
+                        "total_cost_usd": 0.704855
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 0.1675025,
+                        "input_cost_usd": 0.1563925,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.22861499999999998,
-                        "total_cost_usd": 0.3961175
+                        "output_cost_usd": 0.19603500000000001,
+                        "total_cost_usd": 0.3524275
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.050250750000000004,
+                        "input_cost_usd": 0.04691775,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.06858449999999999,
-                        "total_cost_usd": 0.11883525
+                        "output_cost_usd": 0.0588105,
+                        "total_cost_usd": 0.10572825
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.013400200000000001,
+                        "input_cost_usd": 0.0125114,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.01905125,
-                        "total_cost_usd": 0.03245145
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.010800561200000001,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0147121373,
-                        "total_cost_usd": 0.0255126985
+                        "output_cost_usd": 0.01633625,
+                        "total_cost_usd": 0.028847650000000002
                     }
                 }
             },
             "Disputes": {
-                "api_calls": 25,
-                "input_tokens": 79292,
+                "api_calls": 20,
+                "files": 0,
+                "input_tokens": 80000,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 79292,
-                "output_tokens": 12232,
-                "total_tokens": 91524,
+                "billable_input_tokens": 80000,
+                "output_tokens": 9555,
+                "total_tokens": 89555,
+                "input_cost_usd": 0.016,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.011943750000000001,
+                "total_cost_usd": 0.027943749999999993,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 0.39646000000000003,
+                        "input_cost_usd": 0.4,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.36696,
-                        "total_cost_usd": 0.76342
+                        "output_cost_usd": 0.28664999999999996,
+                        "total_cost_usd": 0.68665
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 0.19823000000000002,
+                        "input_cost_usd": 0.2,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.18348,
-                        "total_cost_usd": 0.38171
+                        "output_cost_usd": 0.14332499999999998,
+                        "total_cost_usd": 0.343325
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.059469,
+                        "input_cost_usd": 0.06,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.055043999999999996,
-                        "total_cost_usd": 0.114513
+                        "output_cost_usd": 0.042997499999999994,
+                        "total_cost_usd": 0.10299749999999999
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.0158584,
+                        "input_cost_usd": 0.016,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.01529,
-                        "total_cost_usd": 0.0311484
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.012781870400000001,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0118075496,
-                        "total_cost_usd": 0.02458942
+                        "output_cost_usd": 0.01194375,
+                        "total_cost_usd": 0.02794375
                     }
                 }
             },
             "Duration": {
-                "api_calls": 25,
-                "input_tokens": 19469,
+                "api_calls": 17,
+                "files": 0,
+                "input_tokens": 9347,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 19469,
-                "output_tokens": 6401,
-                "total_tokens": 25870,
+                "billable_input_tokens": 9347,
+                "output_tokens": 3276,
+                "total_tokens": 12623,
+                "input_cost_usd": 0.0018694000000000002,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.0040950000000000005,
+                "total_cost_usd": 0.005964400000000001,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 0.097345,
+                        "input_cost_usd": 0.046735,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.19202999999999998,
-                        "total_cost_usd": 0.289375
+                        "output_cost_usd": 0.09827999999999999,
+                        "total_cost_usd": 0.145015
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 0.0486725,
+                        "input_cost_usd": 0.0233675,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.09601499999999999,
-                        "total_cost_usd": 0.1446875
+                        "output_cost_usd": 0.049139999999999996,
+                        "total_cost_usd": 0.0725075
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.01460175,
+                        "input_cost_usd": 0.007010249999999999,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.028804499999999997,
-                        "total_cost_usd": 0.04340624999999999
+                        "output_cost_usd": 0.014742,
+                        "total_cost_usd": 0.02175225
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.0038938,
+                        "input_cost_usd": 0.0018694,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.00800125,
-                        "total_cost_usd": 0.01189505
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.0031384028,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0061788853,
-                        "total_cost_usd": 0.0093172881
+                        "output_cost_usd": 0.004095,
+                        "total_cost_usd": 0.0059644
                     }
                 }
             },
             "Healthcare": {
-                "api_calls": 25,
-                "input_tokens": 44687,
+                "api_calls": 20,
+                "files": 0,
+                "input_tokens": 48819,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 44687,
-                "output_tokens": 10140,
-                "total_tokens": 54827,
+                "billable_input_tokens": 48819,
+                "output_tokens": 9253,
+                "total_tokens": 58072,
+                "input_cost_usd": 0.009763800000000001,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.01156625,
+                "total_cost_usd": 0.021330050000000003,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 0.223435,
+                        "input_cost_usd": 0.244095,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.30419999999999997,
-                        "total_cost_usd": 0.527635
+                        "output_cost_usd": 0.27759,
+                        "total_cost_usd": 0.521685
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 0.1117175,
+                        "input_cost_usd": 0.1220475,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.15209999999999999,
-                        "total_cost_usd": 0.2638175
+                        "output_cost_usd": 0.138795,
+                        "total_cost_usd": 0.2608425
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.033515249999999996,
+                        "input_cost_usd": 0.03661425,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.04563,
-                        "total_cost_usd": 0.07914525
+                        "output_cost_usd": 0.0416385,
+                        "total_cost_usd": 0.07825275000000001
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.0089374,
+                        "input_cost_usd": 0.009763800000000001,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.012674999999999999,
-                        "total_cost_usd": 0.021612399999999997
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.0072035444,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.009788142,
-                        "total_cost_usd": 0.0169916864
+                        "output_cost_usd": 0.01156625,
+                        "total_cost_usd": 0.021330050000000003
                     }
                 }
             },
             "Leave": {
-                "api_calls": 25,
-                "input_tokens": 80838,
+                "api_calls": 19,
+                "files": 0,
+                "input_tokens": 96548,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 80838,
-                "output_tokens": 17138,
-                "total_tokens": 97976,
+                "billable_input_tokens": 96548,
+                "output_tokens": 15136,
+                "total_tokens": 111684,
+                "input_cost_usd": 0.0193096,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.018920000000000003,
+                "total_cost_usd": 0.038229599999999996,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 0.40418999999999994,
+                        "input_cost_usd": 0.48273999999999995,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.51414,
-                        "total_cost_usd": 0.91833
+                        "output_cost_usd": 0.45408,
+                        "total_cost_usd": 0.93682
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 0.20209499999999997,
+                        "input_cost_usd": 0.24136999999999997,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.25707,
-                        "total_cost_usd": 0.459165
+                        "output_cost_usd": 0.22704,
+                        "total_cost_usd": 0.46841
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.060628499999999995,
+                        "input_cost_usd": 0.072411,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.077121,
-                        "total_cost_usd": 0.1377495
+                        "output_cost_usd": 0.068112,
+                        "total_cost_usd": 0.140523
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.0161676,
+                        "input_cost_usd": 0.0193096,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0214225,
-                        "total_cost_usd": 0.0375901
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.013031085599999999,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0165433114,
-                        "total_cost_usd": 0.029574397
+                        "output_cost_usd": 0.01892,
+                        "total_cost_usd": 0.0382296
                     }
                 }
             },
             "Management": {
-                "api_calls": 25,
-                "input_tokens": 23629,
+                "api_calls": 20,
+                "files": 0,
+                "input_tokens": 21899,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 23629,
-                "output_tokens": 7935,
-                "total_tokens": 31564,
+                "billable_input_tokens": 21899,
+                "output_tokens": 7448,
+                "total_tokens": 29347,
+                "input_cost_usd": 0.0043798,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.009310000000000002,
+                "total_cost_usd": 0.013689800000000002,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 0.118145,
+                        "input_cost_usd": 0.109495,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.23804999999999998,
-                        "total_cost_usd": 0.356195
+                        "output_cost_usd": 0.22344,
+                        "total_cost_usd": 0.332935
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 0.0590725,
+                        "input_cost_usd": 0.0547475,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.11902499999999999,
-                        "total_cost_usd": 0.1780975
+                        "output_cost_usd": 0.11172,
+                        "total_cost_usd": 0.1664675
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.01772175,
+                        "input_cost_usd": 0.016424249999999998,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.035707499999999996,
-                        "total_cost_usd": 0.05342925
+                        "output_cost_usd": 0.033516,
+                        "total_cost_usd": 0.04994024999999999
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.0047258000000000005,
+                        "input_cost_usd": 0.0043798,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.009918749999999999,
-                        "total_cost_usd": 0.01464455
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.0038089948000000003,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.007659655499999999,
-                        "total_cost_usd": 0.0114686503
+                        "output_cost_usd": 0.009309999999999999,
+                        "total_cost_usd": 0.013689799999999998
                     }
                 }
             },
             "Miscellany": {
-                "api_calls": 25,
-                "input_tokens": 55151,
+                "api_calls": 20,
+                "files": 0,
+                "input_tokens": 42402,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 55151,
-                "output_tokens": 11914,
-                "total_tokens": 67065,
+                "billable_input_tokens": 42402,
+                "output_tokens": 9602,
+                "total_tokens": 52004,
+                "input_cost_usd": 0.0084804,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.012002499999999998,
+                "total_cost_usd": 0.0204829,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 0.275755,
+                        "input_cost_usd": 0.21201,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.35741999999999996,
-                        "total_cost_usd": 0.6331749999999999
+                        "output_cost_usd": 0.28806,
+                        "total_cost_usd": 0.50007
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 0.1378775,
+                        "input_cost_usd": 0.106005,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.17870999999999998,
-                        "total_cost_usd": 0.31658749999999997
+                        "output_cost_usd": 0.14403,
+                        "total_cost_usd": 0.250035
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.04136325,
+                        "input_cost_usd": 0.0318015,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.053612999999999994,
-                        "total_cost_usd": 0.09497624999999998
+                        "output_cost_usd": 0.043209,
+                        "total_cost_usd": 0.07501050000000001
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.0110302,
+                        "input_cost_usd": 0.0084804,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0148925,
-                        "total_cost_usd": 0.0259227
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.0088903412,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0115005842,
-                        "total_cost_usd": 0.020390925400000003
+                        "output_cost_usd": 0.0120025,
+                        "total_cost_usd": 0.0204829
                     }
                 }
             },
             "Recognition": {
-                "api_calls": 25,
-                "input_tokens": 23647,
+                "api_calls": 20,
+                "files": 0,
+                "input_tokens": 27207,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 23647,
-                "output_tokens": 7669,
-                "total_tokens": 31316,
+                "billable_input_tokens": 27207,
+                "output_tokens": 6870,
+                "total_tokens": 34077,
+                "input_cost_usd": 0.005441399999999999,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.0085875,
+                "total_cost_usd": 0.014028900000000002,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 0.118235,
+                        "input_cost_usd": 0.136035,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.23007,
-                        "total_cost_usd": 0.348305
+                        "output_cost_usd": 0.2061,
+                        "total_cost_usd": 0.34213499999999997
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 0.0591175,
+                        "input_cost_usd": 0.0680175,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.115035,
-                        "total_cost_usd": 0.1741525
+                        "output_cost_usd": 0.10305,
+                        "total_cost_usd": 0.17106749999999998
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.01773525,
+                        "input_cost_usd": 0.02040525,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0345105,
-                        "total_cost_usd": 0.05224575
+                        "output_cost_usd": 0.030915,
+                        "total_cost_usd": 0.05132025
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.004729400000000001,
+                        "input_cost_usd": 0.0054414,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.00958625,
-                        "total_cost_usd": 0.01431565
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.0038118964000000005,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0074028857,
-                        "total_cost_usd": 0.0112147821
+                        "output_cost_usd": 0.0085875,
+                        "total_cost_usd": 0.0140289
                     }
                 }
             },
             "Safety": {
-                "api_calls": 25,
-                "input_tokens": 27469,
+                "api_calls": 20,
+                "files": 0,
+                "input_tokens": 29322,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 27469,
-                "output_tokens": 8193,
-                "total_tokens": 35662,
+                "billable_input_tokens": 29322,
+                "output_tokens": 7201,
+                "total_tokens": 36523,
+                "input_cost_usd": 0.0058644000000000005,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.009001249999999999,
+                "total_cost_usd": 0.014865650000000001,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 0.137345,
+                        "input_cost_usd": 0.14661000000000002,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.24579,
-                        "total_cost_usd": 0.383135
+                        "output_cost_usd": 0.21603,
+                        "total_cost_usd": 0.36264
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 0.0686725,
+                        "input_cost_usd": 0.07330500000000001,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.122895,
-                        "total_cost_usd": 0.1915675
+                        "output_cost_usd": 0.108015,
+                        "total_cost_usd": 0.18132
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.020601750000000002,
+                        "input_cost_usd": 0.0219915,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.036868500000000005,
-                        "total_cost_usd": 0.05747025000000001
+                        "output_cost_usd": 0.0324045,
+                        "total_cost_usd": 0.054396
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.0054938,
+                        "input_cost_usd": 0.0058644000000000005,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.01024125,
-                        "total_cost_usd": 0.01573505
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.004428002800000001,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.007908702900000002,
-                        "total_cost_usd": 0.012336705700000002
+                        "output_cost_usd": 0.00900125,
+                        "total_cost_usd": 0.014865650000000001
                     }
                 }
             },
             "Scheduling": {
-                "api_calls": 25,
-                "input_tokens": 40511,
+                "api_calls": 20,
+                "files": 0,
+                "input_tokens": 47175,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 40511,
-                "output_tokens": 13138,
-                "total_tokens": 53649,
+                "billable_input_tokens": 47175,
+                "output_tokens": 10796,
+                "total_tokens": 57971,
+                "input_cost_usd": 0.009434999999999999,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.013494999999999998,
+                "total_cost_usd": 0.02293,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 0.20255499999999999,
+                        "input_cost_usd": 0.235875,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.39414,
-                        "total_cost_usd": 0.596695
+                        "output_cost_usd": 0.32388,
+                        "total_cost_usd": 0.559755
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 0.10127749999999999,
+                        "input_cost_usd": 0.1179375,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.19707,
-                        "total_cost_usd": 0.2983475
+                        "output_cost_usd": 0.16194,
+                        "total_cost_usd": 0.2798775
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.03038325,
+                        "input_cost_usd": 0.03538125,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.059121,
-                        "total_cost_usd": 0.08950425000000001
+                        "output_cost_usd": 0.048582,
+                        "total_cost_usd": 0.08396325
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.0081022,
+                        "input_cost_usd": 0.009435,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0164225,
-                        "total_cost_usd": 0.0245247
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.0065303732,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.012682111400000001,
-                        "total_cost_usd": 0.019212484600000003
+                        "output_cost_usd": 0.013495,
+                        "total_cost_usd": 0.02293
                     }
                 }
             },
             "Security": {
-                "api_calls": 25,
-                "input_tokens": 79123,
+                "api_calls": 20,
+                "files": 0,
+                "input_tokens": 86695,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 79123,
-                "output_tokens": 11378,
-                "total_tokens": 90501,
+                "billable_input_tokens": 86695,
+                "output_tokens": 8371,
+                "total_tokens": 95066,
+                "input_cost_usd": 0.017339,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.010463749999999999,
+                "total_cost_usd": 0.027802749999999998,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 0.395615,
+                        "input_cost_usd": 0.43347499999999994,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.34134,
-                        "total_cost_usd": 0.736955
+                        "output_cost_usd": 0.25113,
+                        "total_cost_usd": 0.6846049999999999
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 0.1978075,
+                        "input_cost_usd": 0.21673749999999997,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.17067,
-                        "total_cost_usd": 0.3684775
+                        "output_cost_usd": 0.125565,
+                        "total_cost_usd": 0.34230249999999995
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.05934225,
+                        "input_cost_usd": 0.06502125,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.051200999999999997,
-                        "total_cost_usd": 0.11054325
+                        "output_cost_usd": 0.0376695,
+                        "total_cost_usd": 0.10269075
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.0158246,
+                        "input_cost_usd": 0.017339,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.014222499999999999,
-                        "total_cost_usd": 0.0300471
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.0127546276,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.010983183399999999,
-                        "total_cost_usd": 0.023737810999999998
+                        "output_cost_usd": 0.01046375,
+                        "total_cost_usd": 0.02780275
                     }
                 }
             },
             "Training": {
-                "api_calls": 23,
-                "input_tokens": 17397,
+                "api_calls": 18,
+                "files": 0,
+                "input_tokens": 19498,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 17397,
-                "output_tokens": 6451,
-                "total_tokens": 23848,
+                "billable_input_tokens": 19498,
+                "output_tokens": 6244,
+                "total_tokens": 25742,
+                "input_cost_usd": 0.0038996,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.007805000000000001,
+                "total_cost_usd": 0.011704600000000004,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 0.08698499999999999,
+                        "input_cost_usd": 0.09749000000000001,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.19353,
-                        "total_cost_usd": 0.280515
+                        "output_cost_usd": 0.18732000000000001,
+                        "total_cost_usd": 0.28481
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 0.043492499999999996,
+                        "input_cost_usd": 0.048745000000000004,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.096765,
-                        "total_cost_usd": 0.1402575
+                        "output_cost_usd": 0.09366000000000001,
+                        "total_cost_usd": 0.142405
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.01304775,
+                        "input_cost_usd": 0.014623500000000001,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0290295,
-                        "total_cost_usd": 0.04207725
+                        "output_cost_usd": 0.028098,
+                        "total_cost_usd": 0.0427215
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.0034794,
+                        "input_cost_usd": 0.0038996000000000005,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.00806375,
-                        "total_cost_usd": 0.01154315
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.0028043964,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0062271503,
-                        "total_cost_usd": 0.0090315467
+                        "output_cost_usd": 0.007805,
+                        "total_cost_usd": 0.0117046
                     }
                 }
             }
         },
         "by_model": {
             "gpt-5.4-nano": {
-                "api_calls": 323,
-                "input_tokens": 578841,
+                "api_calls": 253,
+                "files": 0,
+                "input_tokens": 593197,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 578841,
-                "output_tokens": 135412,
-                "total_tokens": 714253,
+                "billable_input_tokens": 593197,
+                "output_tokens": 112341,
+                "total_tokens": 705538,
+                "input_cost_usd": 0.11863939999999995,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.14042625000000003,
+                "total_cost_usd": 0.25906564999999987,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 2.8942050000000004,
+                        "input_cost_usd": 2.965985,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 4.06236,
-                        "total_cost_usd": 6.956565
+                        "output_cost_usd": 3.37023,
+                        "total_cost_usd": 6.336214999999999
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 1.4471025000000002,
+                        "input_cost_usd": 1.4829925,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 2.03118,
-                        "total_cost_usd": 3.4782825
+                        "output_cost_usd": 1.685115,
+                        "total_cost_usd": 3.1681074999999996
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.43413075,
+                        "input_cost_usd": 0.44489775,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.6093540000000001,
-                        "total_cost_usd": 1.0434847500000002
+                        "output_cost_usd": 0.5055345,
+                        "total_cost_usd": 0.95043225
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.11576820000000002,
+                        "input_cost_usd": 0.1186394,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.169265,
-                        "total_cost_usd": 0.2850332
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.09330916920000001,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.13071320360000002,
-                        "total_cost_usd": 0.22402237280000004
+                        "output_cost_usd": 0.14042625,
+                        "total_cost_usd": 0.25906565000000004
                     }
                 }
             },
             "unknown": {
                 "api_calls": 0,
+                "files": 0,
                 "input_tokens": 0,
                 "cached_input_tokens": 0,
                 "billable_input_tokens": 0,
                 "output_tokens": 0,
                 "total_tokens": 0,
+                "input_cost_usd": 0.0,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.0,
+                "total_cost_usd": 0.0,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
                         "input_cost_usd": 0.0,
@@ -1164,12 +1187,6 @@
                         "total_cost_usd": 0.0
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.0,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0,
-                        "total_cost_usd": 0.0
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
                         "input_cost_usd": 0.0,
                         "cached_input_cost_usd": 0.0,
                         "output_cost_usd": 0.0,
@@ -1181,615 +1198,646 @@
     },
     "06_generosity": {
         "total": {
-            "api_calls": 7798,
-            "input_tokens": 7384798,
+            "api_calls": 4932,
+            "files": 1,
+            "input_tokens": 4831794,
             "cached_input_tokens": 0,
-            "billable_input_tokens": 7384798,
-            "output_tokens": 146870,
-            "total_tokens": 7531668,
+            "billable_input_tokens": 4831794,
+            "output_tokens": 92896,
+            "total_tokens": 4924690,
+            "input_cost_usd": 0.9663588000000001,
+            "cached_input_cost_usd": 0.0,
+            "output_cost_usd": 0.11612000000000942,
+            "total_cost_usd": 1.082478800000004,
             "cost_estimates_usd": {
                 "gpt-5.5": {
-                    "input_cost_usd": 36.92399,
+                    "input_cost_usd": 24.158970000000004,
                     "cached_input_cost_usd": 0.0,
-                    "output_cost_usd": 4.4061,
-                    "total_cost_usd": 41.330090000000006
+                    "output_cost_usd": 2.78688,
+                    "total_cost_usd": 26.945850000000004
                 },
                 "gpt-5.4": {
-                    "input_cost_usd": 18.461995,
+                    "input_cost_usd": 12.079485000000002,
                     "cached_input_cost_usd": 0.0,
-                    "output_cost_usd": 2.20305,
-                    "total_cost_usd": 20.665045000000003
+                    "output_cost_usd": 1.39344,
+                    "total_cost_usd": 13.472925000000002
                 },
                 "gpt-5.4-mini": {
-                    "input_cost_usd": 5.5385985,
+                    "input_cost_usd": 3.6238455000000003,
                     "cached_input_cost_usd": 0.0,
-                    "output_cost_usd": 0.660915,
-                    "total_cost_usd": 6.1995135
+                    "output_cost_usd": 0.418032,
+                    "total_cost_usd": 4.0418775
                 },
                 "gpt-5.4-nano": {
-                    "input_cost_usd": 1.4769596,
+                    "input_cost_usd": 0.9663588000000001,
                     "cached_input_cost_usd": 0.0,
-                    "output_cost_usd": 0.18358750000000001,
-                    "total_cost_usd": 1.6605471
-                },
-                "qwen/qwen3.6-35b-a3b": {
-                    "input_cost_usd": 1.1904294376,
-                    "cached_input_cost_usd": 0.0,
-                    "output_cost_usd": 0.141773611,
-                    "total_cost_usd": 1.3322030486
+                    "output_cost_usd": 0.11612,
+                    "total_cost_usd": 1.0824788
+                }
+            }
+        },
+        "by_cache_model": {
+            "gpt_5_4_nano": {
+                "api_calls": 4932,
+                "files": 1,
+                "input_tokens": 4831794,
+                "cached_input_tokens": 0,
+                "billable_input_tokens": 4831794,
+                "output_tokens": 92896,
+                "total_tokens": 4924690,
+                "input_cost_usd": 0.9663588000000001,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.11612000000000942,
+                "total_cost_usd": 1.082478800000004,
+                "cost_estimates_usd": {
+                    "gpt-5.5": {
+                        "input_cost_usd": 24.158970000000004,
+                        "cached_input_cost_usd": 0.0,
+                        "output_cost_usd": 2.78688,
+                        "total_cost_usd": 26.945850000000004
+                    },
+                    "gpt-5.4": {
+                        "input_cost_usd": 12.079485000000002,
+                        "cached_input_cost_usd": 0.0,
+                        "output_cost_usd": 1.39344,
+                        "total_cost_usd": 13.472925000000002
+                    },
+                    "gpt-5.4-mini": {
+                        "input_cost_usd": 3.6238455000000003,
+                        "cached_input_cost_usd": 0.0,
+                        "output_cost_usd": 0.418032,
+                        "total_cost_usd": 4.0418775
+                    },
+                    "gpt-5.4-nano": {
+                        "input_cost_usd": 0.9663588000000001,
+                        "cached_input_cost_usd": 0.0,
+                        "output_cost_usd": 0.11612,
+                        "total_cost_usd": 1.0824788
+                    }
                 }
             }
         },
         "by_category": {
             "Ancillary": {
-                "api_calls": 600,
-                "input_tokens": 432336,
+                "api_calls": 380,
+                "files": 0,
+                "input_tokens": 253612,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 432336,
-                "output_tokens": 11346,
-                "total_tokens": 443682,
+                "billable_input_tokens": 253612,
+                "output_tokens": 7190,
+                "total_tokens": 260802,
+                "input_cost_usd": 0.050722400000000015,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.008987500000000016,
+                "total_cost_usd": 0.059709900000000045,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 2.16168,
+                        "input_cost_usd": 1.26806,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.34038,
-                        "total_cost_usd": 2.50206
+                        "output_cost_usd": 0.2157,
+                        "total_cost_usd": 1.48376
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 1.08084,
+                        "input_cost_usd": 0.63403,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.17019,
-                        "total_cost_usd": 1.25103
+                        "output_cost_usd": 0.10785,
+                        "total_cost_usd": 0.74188
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.324252,
+                        "input_cost_usd": 0.19020900000000002,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.051057,
-                        "total_cost_usd": 0.375309
+                        "output_cost_usd": 0.032355,
+                        "total_cost_usd": 0.222564
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.08646720000000001,
+                        "input_cost_usd": 0.0507224,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0141825,
-                        "total_cost_usd": 0.10064970000000001
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.0696925632,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0109522938,
-                        "total_cost_usd": 0.080644857
+                        "output_cost_usd": 0.0089875,
+                        "total_cost_usd": 0.0597099
                     }
                 }
             },
             "Compensation": {
-                "api_calls": 600,
-                "input_tokens": 799368,
+                "api_calls": 380,
+                "files": 0,
+                "input_tokens": 539562,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 799368,
-                "output_tokens": 11252,
-                "total_tokens": 810620,
+                "billable_input_tokens": 539562,
+                "output_tokens": 7120,
+                "total_tokens": 546682,
+                "input_cost_usd": 0.10791240000000007,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.008900000000000019,
+                "total_cost_usd": 0.1168123999999999,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 3.9968399999999997,
+                        "input_cost_usd": 2.69781,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.33755999999999997,
-                        "total_cost_usd": 4.3344
+                        "output_cost_usd": 0.21359999999999998,
+                        "total_cost_usd": 2.91141
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 1.9984199999999999,
+                        "input_cost_usd": 1.348905,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.16877999999999999,
-                        "total_cost_usd": 2.1672
+                        "output_cost_usd": 0.10679999999999999,
+                        "total_cost_usd": 1.455705
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.599526,
+                        "input_cost_usd": 0.40467149999999996,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.050634,
-                        "total_cost_usd": 0.65016
+                        "output_cost_usd": 0.03204,
+                        "total_cost_usd": 0.4367115
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.1598736,
+                        "input_cost_usd": 0.1079124,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.014065,
-                        "total_cost_usd": 0.1739386
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.12885812160000001,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.010861555600000001,
-                        "total_cost_usd": 0.1397196772
+                        "output_cost_usd": 0.0089,
+                        "total_cost_usd": 0.11681240000000001
                     }
                 }
             },
             "Disputes": {
-                "api_calls": 600,
-                "input_tokens": 655944,
+                "api_calls": 380,
+                "files": 0,
+                "input_tokens": 406828,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 655944,
-                "output_tokens": 11312,
-                "total_tokens": 667256,
+                "billable_input_tokens": 406828,
+                "output_tokens": 7162,
+                "total_tokens": 413990,
+                "input_cost_usd": 0.08136560000000019,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.008952500000000018,
+                "total_cost_usd": 0.09031810000000003,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 3.2797199999999997,
+                        "input_cost_usd": 2.0341400000000003,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.33936,
-                        "total_cost_usd": 3.61908
+                        "output_cost_usd": 0.21486,
+                        "total_cost_usd": 2.249
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 1.6398599999999999,
+                        "input_cost_usd": 1.0170700000000001,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.16968,
-                        "total_cost_usd": 1.80954
+                        "output_cost_usd": 0.10743,
+                        "total_cost_usd": 1.1245
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.491958,
+                        "input_cost_usd": 0.30512100000000003,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.050904,
-                        "total_cost_usd": 0.542862
+                        "output_cost_usd": 0.032229,
+                        "total_cost_usd": 0.33735000000000004
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.1311888,
+                        "input_cost_usd": 0.08136560000000001,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.01414,
-                        "total_cost_usd": 0.14532879999999998
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.1057381728,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0109194736,
-                        "total_cost_usd": 0.11665764640000001
+                        "output_cost_usd": 0.0089525,
+                        "total_cost_usd": 0.09031810000000001
                     }
                 }
             },
             "Duration": {
-                "api_calls": 600,
-                "input_tokens": 375096,
+                "api_calls": 374,
+                "files": 0,
+                "input_tokens": 168344,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 375096,
-                "output_tokens": 11340,
-                "total_tokens": 386436,
+                "billable_input_tokens": 168344,
+                "output_tokens": 7098,
+                "total_tokens": 175442,
+                "input_cost_usd": 0.03366879999999997,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.00887250000000002,
+                "total_cost_usd": 0.04254129999999999,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 1.87548,
+                        "input_cost_usd": 0.84172,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.3402,
-                        "total_cost_usd": 2.21568
+                        "output_cost_usd": 0.21294000000000002,
+                        "total_cost_usd": 1.0546600000000002
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 0.93774,
+                        "input_cost_usd": 0.42086,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.1701,
-                        "total_cost_usd": 1.10784
+                        "output_cost_usd": 0.10647000000000001,
+                        "total_cost_usd": 0.5273300000000001
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.28132199999999996,
+                        "input_cost_usd": 0.12625799999999998,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.05103,
-                        "total_cost_usd": 0.332352
+                        "output_cost_usd": 0.031941,
+                        "total_cost_usd": 0.15819899999999998
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.07501920000000001,
+                        "input_cost_usd": 0.0336688,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.014175,
-                        "total_cost_usd": 0.0891942
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.0604654752,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.010946502,
-                        "total_cost_usd": 0.0714119772
+                        "output_cost_usd": 0.0088725,
+                        "total_cost_usd": 0.0425413
                     }
                 }
             },
             "Healthcare": {
-                "api_calls": 600,
-                "input_tokens": 554472,
+                "api_calls": 380,
+                "files": 0,
+                "input_tokens": 394440,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 554472,
-                "output_tokens": 11336,
-                "total_tokens": 565808,
+                "billable_input_tokens": 394440,
+                "output_tokens": 7170,
+                "total_tokens": 401610,
+                "input_cost_usd": 0.07888800000000014,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.008962500000000019,
+                "total_cost_usd": 0.08785049999999998,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 2.77236,
+                        "input_cost_usd": 1.9722,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.34008,
-                        "total_cost_usd": 3.11244
+                        "output_cost_usd": 0.2151,
+                        "total_cost_usd": 2.1873
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 1.38618,
+                        "input_cost_usd": 0.9861,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.17004,
-                        "total_cost_usd": 1.55622
+                        "output_cost_usd": 0.10755,
+                        "total_cost_usd": 1.09365
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.41585399999999995,
+                        "input_cost_usd": 0.29583000000000004,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.051012,
-                        "total_cost_usd": 0.46686599999999995
+                        "output_cost_usd": 0.032265,
+                        "total_cost_usd": 0.328095
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.1108944,
+                        "input_cost_usd": 0.07888800000000001,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.01417,
-                        "total_cost_usd": 0.1250644
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.0893808864,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0109426408,
-                        "total_cost_usd": 0.1003235272
+                        "output_cost_usd": 0.0089625,
+                        "total_cost_usd": 0.08785050000000001
                     }
                 }
             },
             "Leave": {
-                "api_calls": 600,
-                "input_tokens": 890184,
+                "api_calls": 380,
+                "files": 0,
+                "input_tokens": 618640,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 890184,
-                "output_tokens": 11284,
-                "total_tokens": 901468,
+                "billable_input_tokens": 618640,
+                "output_tokens": 7110,
+                "total_tokens": 625750,
+                "input_cost_usd": 0.12372799999999998,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.008887500000000019,
+                "total_cost_usd": 0.13261550000000005,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 4.45092,
+                        "input_cost_usd": 3.0932,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.33852000000000004,
-                        "total_cost_usd": 4.78944
+                        "output_cost_usd": 0.2133,
+                        "total_cost_usd": 3.3064999999999998
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 2.22546,
+                        "input_cost_usd": 1.5466,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.16926000000000002,
-                        "total_cost_usd": 2.39472
+                        "output_cost_usd": 0.10665,
+                        "total_cost_usd": 1.6532499999999999
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.667638,
+                        "input_cost_usd": 0.46397999999999995,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.050778000000000004,
-                        "total_cost_usd": 0.7184159999999999
+                        "output_cost_usd": 0.031995,
+                        "total_cost_usd": 0.49597499999999994
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.1780368,
+                        "input_cost_usd": 0.123728,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.014105000000000001,
-                        "total_cost_usd": 0.1921418
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.1434976608,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.010892445200000002,
-                        "total_cost_usd": 0.154390106
+                        "output_cost_usd": 0.0088875,
+                        "total_cost_usd": 0.1326155
                     }
                 }
             },
             "Management": {
-                "api_calls": 600,
-                "input_tokens": 448680,
+                "api_calls": 380,
+                "files": 0,
+                "input_tokens": 325926,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 448680,
-                "output_tokens": 11304,
-                "total_tokens": 459984,
+                "billable_input_tokens": 325926,
+                "output_tokens": 7178,
+                "total_tokens": 333104,
+                "input_cost_usd": 0.0651852,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.008972500000000017,
+                "total_cost_usd": 0.07415769999999995,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 2.2434000000000003,
+                        "input_cost_usd": 1.62963,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.33912,
-                        "total_cost_usd": 2.58252
+                        "output_cost_usd": 0.21534,
+                        "total_cost_usd": 1.84497
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 1.1217000000000001,
+                        "input_cost_usd": 0.814815,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.16956,
-                        "total_cost_usd": 1.29126
+                        "output_cost_usd": 0.10767,
+                        "total_cost_usd": 0.922485
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.33651000000000003,
+                        "input_cost_usd": 0.2444445,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.050868,
-                        "total_cost_usd": 0.387378
+                        "output_cost_usd": 0.032301,
+                        "total_cost_usd": 0.27674550000000003
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.08973600000000001,
+                        "input_cost_usd": 0.0651852,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.01413,
-                        "total_cost_usd": 0.10386600000000001
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.07232721600000001,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0109117512,
-                        "total_cost_usd": 0.08323896720000001
+                        "output_cost_usd": 0.008972500000000001,
+                        "total_cost_usd": 0.0741577
                     }
                 }
             },
             "Miscellany": {
-                "api_calls": 600,
-                "input_tokens": 640824,
+                "api_calls": 380,
+                "files": 0,
+                "input_tokens": 408500,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 640824,
-                "output_tokens": 11234,
-                "total_tokens": 652058,
+                "billable_input_tokens": 408500,
+                "output_tokens": 7098,
+                "total_tokens": 415598,
+                "input_cost_usd": 0.08169999999999988,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.008872500000000014,
+                "total_cost_usd": 0.09057250000000008,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 3.2041199999999996,
+                        "input_cost_usd": 2.0425,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.33702,
-                        "total_cost_usd": 3.5411399999999995
+                        "output_cost_usd": 0.21294000000000002,
+                        "total_cost_usd": 2.25544
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 1.6020599999999998,
+                        "input_cost_usd": 1.02125,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.16851,
-                        "total_cost_usd": 1.7705699999999998
+                        "output_cost_usd": 0.10647000000000001,
+                        "total_cost_usd": 1.12772
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.480618,
+                        "input_cost_usd": 0.30637499999999995,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.050552999999999994,
-                        "total_cost_usd": 0.531171
+                        "output_cost_usd": 0.031941,
+                        "total_cost_usd": 0.33831599999999995
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.1281648,
+                        "input_cost_usd": 0.0817,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0140425,
-                        "total_cost_usd": 0.14220729999999998
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.1033008288,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0108441802,
-                        "total_cost_usd": 0.11414500899999999
+                        "output_cost_usd": 0.0088725,
+                        "total_cost_usd": 0.0905725
                     }
                 }
             },
             "Recognition": {
-                "api_calls": 600,
-                "input_tokens": 435912,
+                "api_calls": 380,
+                "files": 0,
+                "input_tokens": 304000,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 435912,
-                "output_tokens": 11238,
-                "total_tokens": 447150,
+                "billable_input_tokens": 304000,
+                "output_tokens": 7126,
+                "total_tokens": 311126,
+                "input_cost_usd": 0.060799999999999965,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.008907500000000013,
+                "total_cost_usd": 0.06970750000000007,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 2.17956,
+                        "input_cost_usd": 1.52,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.33714,
-                        "total_cost_usd": 2.5167
+                        "output_cost_usd": 0.21378000000000003,
+                        "total_cost_usd": 1.73378
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 1.08978,
+                        "input_cost_usd": 0.76,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.16857,
-                        "total_cost_usd": 1.25835
+                        "output_cost_usd": 0.10689000000000001,
+                        "total_cost_usd": 0.86689
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.326934,
+                        "input_cost_usd": 0.22799999999999998,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.050571,
-                        "total_cost_usd": 0.377505
+                        "output_cost_usd": 0.032067,
+                        "total_cost_usd": 0.260067
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.08718240000000001,
+                        "input_cost_usd": 0.0608,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0140475,
-                        "total_cost_usd": 0.10122990000000001
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.07026901440000001,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.010848041400000001,
-                        "total_cost_usd": 0.0811170558
+                        "output_cost_usd": 0.0089075,
+                        "total_cost_usd": 0.0697075
                     }
                 }
             },
             "Safety": {
-                "api_calls": 600,
-                "input_tokens": 461064,
+                "api_calls": 380,
+                "files": 0,
+                "input_tokens": 316578,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 461064,
-                "output_tokens": 11332,
-                "total_tokens": 472396,
+                "billable_input_tokens": 316578,
+                "output_tokens": 7178,
+                "total_tokens": 323756,
+                "input_cost_usd": 0.06331560000000007,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.008972500000000022,
+                "total_cost_usd": 0.07228810000000002,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 2.30532,
+                        "input_cost_usd": 1.5828900000000001,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.33996,
-                        "total_cost_usd": 2.64528
+                        "output_cost_usd": 0.21534,
+                        "total_cost_usd": 1.7982300000000002
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 1.15266,
+                        "input_cost_usd": 0.7914450000000001,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.16998,
-                        "total_cost_usd": 1.32264
+                        "output_cost_usd": 0.10767,
+                        "total_cost_usd": 0.8991150000000001
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.345798,
+                        "input_cost_usd": 0.23743350000000002,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.050994,
-                        "total_cost_usd": 0.396792
+                        "output_cost_usd": 0.032301,
+                        "total_cost_usd": 0.26973450000000004
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.0922128,
+                        "input_cost_usd": 0.06331560000000001,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.014165,
-                        "total_cost_usd": 0.1063778
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.0743235168,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0109387796,
-                        "total_cost_usd": 0.0852622964
+                        "output_cost_usd": 0.008972500000000001,
+                        "total_cost_usd": 0.07228810000000002
                     }
                 }
             },
             "Scheduling": {
-                "api_calls": 600,
-                "input_tokens": 698424,
+                "api_calls": 380,
+                "files": 0,
+                "input_tokens": 453188,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 698424,
-                "output_tokens": 11294,
-                "total_tokens": 709718,
+                "billable_input_tokens": 453188,
+                "output_tokens": 7154,
+                "total_tokens": 460342,
+                "input_cost_usd": 0.09063759999999994,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.00894250000000002,
+                "total_cost_usd": 0.09958009999999994,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 3.4921200000000003,
+                        "input_cost_usd": 2.26594,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.33882,
-                        "total_cost_usd": 3.8309400000000005
+                        "output_cost_usd": 0.21462,
+                        "total_cost_usd": 2.48056
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 1.7460600000000002,
+                        "input_cost_usd": 1.13297,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.16941,
-                        "total_cost_usd": 1.9154700000000002
+                        "output_cost_usd": 0.10731,
+                        "total_cost_usd": 1.24028
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.523818,
+                        "input_cost_usd": 0.339891,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.050823,
-                        "total_cost_usd": 0.574641
+                        "output_cost_usd": 0.032193,
+                        "total_cost_usd": 0.37208399999999997
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.13968480000000003,
+                        "input_cost_usd": 0.0906376,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0141175,
-                        "total_cost_usd": 0.15380230000000003
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.11258594880000002,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0109020982,
-                        "total_cost_usd": 0.12348804700000002
+                        "output_cost_usd": 0.008942499999999999,
+                        "total_cost_usd": 0.0995801
                     }
                 }
             },
             "Security": {
-                "api_calls": 600,
-                "input_tokens": 613800,
+                "api_calls": 380,
+                "files": 0,
+                "input_tokens": 361038,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 613800,
-                "output_tokens": 11286,
-                "total_tokens": 625086,
+                "billable_input_tokens": 361038,
+                "output_tokens": 7158,
+                "total_tokens": 368196,
+                "input_cost_usd": 0.07220759999999997,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.00894750000000002,
+                "total_cost_usd": 0.08115510000000005,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 3.069,
+                        "input_cost_usd": 1.80519,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.33858,
-                        "total_cost_usd": 3.40758
+                        "output_cost_usd": 0.21474000000000001,
+                        "total_cost_usd": 2.01993
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 1.5345,
+                        "input_cost_usd": 0.902595,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.16929,
-                        "total_cost_usd": 1.70379
+                        "output_cost_usd": 0.10737000000000001,
+                        "total_cost_usd": 1.009965
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.46035000000000004,
+                        "input_cost_usd": 0.27077850000000003,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.050787,
-                        "total_cost_usd": 0.5111370000000001
+                        "output_cost_usd": 0.032211000000000004,
+                        "total_cost_usd": 0.3029895
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.12276000000000001,
+                        "input_cost_usd": 0.07220760000000001,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.014107499999999999,
-                        "total_cost_usd": 0.1368675
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.09894456000000001,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0108943758,
-                        "total_cost_usd": 0.10983893580000001
+                        "output_cost_usd": 0.0089475,
+                        "total_cost_usd": 0.08115510000000001
                     }
                 }
             },
             "Training": {
-                "api_calls": 598,
-                "input_tokens": 378694,
+                "api_calls": 378,
+                "files": 0,
+                "input_tokens": 281138,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 378694,
-                "output_tokens": 11312,
-                "total_tokens": 390006,
+                "billable_input_tokens": 281138,
+                "output_tokens": 7154,
+                "total_tokens": 288292,
+                "input_cost_usd": 0.05622759999999996,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.008942500000000016,
+                "total_cost_usd": 0.06517010000000001,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 1.8934699999999998,
+                        "input_cost_usd": 1.4056899999999999,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.33936,
-                        "total_cost_usd": 2.23283
+                        "output_cost_usd": 0.21462,
+                        "total_cost_usd": 1.62031
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 0.9467349999999999,
+                        "input_cost_usd": 0.7028449999999999,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.16968,
-                        "total_cost_usd": 1.116415
+                        "output_cost_usd": 0.10731,
+                        "total_cost_usd": 0.810155
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 0.2840205,
+                        "input_cost_usd": 0.2108535,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.050904,
-                        "total_cost_usd": 0.3349245
+                        "output_cost_usd": 0.032193,
+                        "total_cost_usd": 0.2430465
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.0757388,
+                        "input_cost_usd": 0.0562276,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.01414,
-                        "total_cost_usd": 0.0898788
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 0.0610454728,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0109194736,
-                        "total_cost_usd": 0.07196494640000001
+                        "output_cost_usd": 0.008942499999999999,
+                        "total_cost_usd": 0.06517010000000001
                     }
                 }
             }
         },
         "by_model": {
             "gpt-5.4-nano": {
-                "api_calls": 7798,
-                "input_tokens": 7384798,
+                "api_calls": 4932,
+                "files": 0,
+                "input_tokens": 4831794,
                 "cached_input_tokens": 0,
-                "billable_input_tokens": 7384798,
-                "output_tokens": 146870,
-                "total_tokens": 7531668,
+                "billable_input_tokens": 4831794,
+                "output_tokens": 92896,
+                "total_tokens": 4924690,
+                "input_cost_usd": 0.9663588000000001,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.11612000000000942,
+                "total_cost_usd": 1.082478800000004,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
-                        "input_cost_usd": 36.92399,
+                        "input_cost_usd": 24.158970000000004,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 4.4061,
-                        "total_cost_usd": 41.330090000000006
+                        "output_cost_usd": 2.78688,
+                        "total_cost_usd": 26.945850000000004
                     },
                     "gpt-5.4": {
-                        "input_cost_usd": 18.461995,
+                        "input_cost_usd": 12.079485000000002,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 2.20305,
-                        "total_cost_usd": 20.665045000000003
+                        "output_cost_usd": 1.39344,
+                        "total_cost_usd": 13.472925000000002
                     },
                     "gpt-5.4-mini": {
-                        "input_cost_usd": 5.5385985,
+                        "input_cost_usd": 3.6238455000000003,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.660915,
-                        "total_cost_usd": 6.1995135
+                        "output_cost_usd": 0.418032,
+                        "total_cost_usd": 4.0418775
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 1.4769596,
+                        "input_cost_usd": 0.9663588000000001,
                         "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.18358750000000001,
-                        "total_cost_usd": 1.6605471
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
-                        "input_cost_usd": 1.1904294376,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.141773611,
-                        "total_cost_usd": 1.3322030486
+                        "output_cost_usd": 0.11612,
+                        "total_cost_usd": 1.0824788
                     }
                 }
             },
             "unknown": {
                 "api_calls": 0,
+                "files": 0,
                 "input_tokens": 0,
                 "cached_input_tokens": 0,
                 "billable_input_tokens": 0,
                 "output_tokens": 0,
                 "total_tokens": 0,
+                "input_cost_usd": 0.0,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 0.0,
+                "total_cost_usd": 0.0,
                 "cost_estimates_usd": {
                     "gpt-5.5": {
                         "input_cost_usd": 0.0,
@@ -1810,12 +1858,6 @@
                         "total_cost_usd": 0.0
                     },
                     "gpt-5.4-nano": {
-                        "input_cost_usd": 0.0,
-                        "cached_input_cost_usd": 0.0,
-                        "output_cost_usd": 0.0,
-                        "total_cost_usd": 0.0
-                    },
-                    "qwen/qwen3.6-35b-a3b": {
                         "input_cost_usd": 0.0,
                         "cached_input_cost_usd": 0.0,
                         "output_cost_usd": 0.0,
@@ -1826,42 +1868,41 @@
         }
     },
     "pipeline_total": {
-        "api_calls": 58803,
-        "input_tokens": 52883176,
-        "cached_input_tokens": 1792,
-        "billable_input_tokens": 52881384,
-        "output_tokens": 1820548,
-        "total_tokens": 54703724,
+        "api_calls": 37199,
+        "files": 61,
+        "input_tokens": 25762851,
+        "cached_input_tokens": 0,
+        "billable_input_tokens": 25762851,
+        "output_tokens": 896581,
+        "total_tokens": 26659432,
+        "input_cost_usd": 5.152570200000033,
+        "cached_input_cost_usd": 0.0,
+        "output_cost_usd": 1.1207262499996393,
+        "total_cost_usd": 6.273296450000021,
         "cost_estimates_usd": {
             "gpt-5.5": {
-                "input_cost_usd": 264.40692,
-                "cached_input_cost_usd": 0.000896,
-                "output_cost_usd": 54.616440000000004,
-                "total_cost_usd": 319.02425600000004
+                "input_cost_usd": 128.814255,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 26.89743,
+                "total_cost_usd": 155.711685
             },
             "gpt-5.4": {
-                "input_cost_usd": 132.20346,
-                "cached_input_cost_usd": 0.000448,
-                "output_cost_usd": 27.308220000000002,
-                "total_cost_usd": 159.51212800000002
+                "input_cost_usd": 64.4071275,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 13.448715,
+                "total_cost_usd": 77.8558425
             },
             "gpt-5.4-mini": {
-                "input_cost_usd": 39.661038,
-                "cached_input_cost_usd": 0.0001344,
-                "output_cost_usd": 8.192466,
-                "total_cost_usd": 47.853638399999994
+                "input_cost_usd": 19.322138250000002,
+                "cached_input_cost_usd": 0.0,
+                "output_cost_usd": 4.0346145,
+                "total_cost_usd": 23.356752750000002
             },
             "gpt-5.4-nano": {
-                "input_cost_usd": 10.5762768,
-                "cached_input_cost_usd": 3.584e-05,
-                "output_cost_usd": 2.275685,
-                "total_cost_usd": 12.85199764
-            },
-            "qwen/qwen3.6-35b-a3b": {
-                "input_cost_usd": 8.5244791008,
+                "input_cost_usd": 5.1525702,
                 "cached_input_cost_usd": 0.0,
-                "output_cost_usd": 1.7573749844000002,
-                "total_cost_usd": 10.2818540852
+                "output_cost_usd": 1.12072625,
+                "total_cost_usd": 6.27329645
             }
         }
     }

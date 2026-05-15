@@ -9,166 +9,57 @@ sys.path.append(str(Path(__file__).resolve().parents[2]))
 from pipeline.utils.llm import LLMClientPool, model_slug
 load_dotenv()
 
-MARKDOWN_ESCAPABLE_CHARACTERS = frozenset("\\`*_{}[]()#+-.!|$")
-
-def find_unique_match_start(text: str, needle: str) -> int | None:
-    start_positions: list[int] = []
-    search_start = 0
-    while True:
-        match_index = text.find(needle, search_start)
-        if match_index == -1:
-            break
-        start_positions.append(match_index)
-        search_start = match_index + 1
-        if len(start_positions) > 1:
-            return None
-
-    if len(start_positions) != 1:
-        return None
-    return start_positions[0]
-    
-def normalize_markdown_escaped_text(text: str) -> tuple[str, list[int]]:
-    normalized_chars: list[str] = []
-    original_boundaries = [0]
-    index = 0
-
-    while index < len(text):
-        current_char = text[index]
-        if (
-            current_char == "\\"
-            and index + 1 < len(text)
-            and text[index + 1] in MARKDOWN_ESCAPABLE_CHARACTERS
-        ):
-            normalized_chars.append(text[index + 1])
-            index += 2
-            original_boundaries.append(index)
-            continue
-
-        normalized_chars.append(current_char)
-        index += 1
-        original_boundaries.append(index)
-
-    return "".join(normalized_chars), original_boundaries
-    
-def resolve_unique_span_offsets(
-        section_text: str,
-        span: str | None,
-    ) -> tuple[int | None, int | None, str]:
-        text = str(section_text or "")
-        span_text = str(span or "")
-        if not text or not span_text:
-            return None, None, "unresolved"
-
-        start_pos = find_unique_match_start(text, span_text)
-        normalized_text, original_boundaries = normalize_markdown_escaped_text(text)
-        normalized_span, _ = normalize_markdown_escaped_text(span_text)
-        if normalized_text != text or normalized_span != span_text:
-            normalized_start = find_unique_match_start(normalized_text, normalized_span)
-            if normalized_start is not None:
-                end_index = normalized_start + len(normalized_span)
-                normalized_bounds = (
-                    original_boundaries[normalized_start],
-                    original_boundaries[end_index],
-                )
-                exact_bounds = (
-                    None
-                    if start_pos is None
-                    else (start_pos, start_pos + len(span_text))
-                )
-                if normalized_bounds != exact_bounds:
-                    return *normalized_bounds, "markdown_escaped"
-
-        if start_pos is not None:
-            return start_pos, start_pos + len(span_text), "exact"
-        return None, None, "unresolved"
-    
-def ground_provisions(
-        section_text: str,
-        provisions: list[dict[str, str]],
-    ):
-        if not isinstance(provisions, list):
-            return []
-
-        grounded_provisions = []
-        for provision in provisions:
-            if not isinstance(provision, dict):
-                continue
-
-            grounded_provision = dict(provision)
-            span_start, span_end, grounding_status = resolve_unique_span_offsets(
-                section_text=section_text,
-                span=grounded_provision.get("span"),
-            )
-            grounded_provision["span_start"] = span_start
-            grounded_provision["span_end"] = span_end
-            grounded_provision["grounding_status"] = grounding_status
-            grounded_provisions.append(grounded_provision)
-        return grounded_provisions
-
 def process_section(section: str, parties: dict, llm_client: LLMClientPool) -> tuple:
     
     system_prompt = " ".join([
-        "You are a legal expert tasked with extracting contract provisions from sections of legal documents.",
+        "You are a legal expert tasked with identifying whether a chunk of text in a contract",
+        "includes a provision with a clear subject and beneficiary.",
         "You must identify which party is the subject in the provision and who is the beneficiary.",
         "The legal parties in this contract are as follows:",
         "\n".join([f"{party}: {desc}" for party, desc in parties.items()]),
-        "Return the provisions in the following format:\n",
-        "{provisions: [{'subject': the party that enacts the provision, 'beneficiary': the party that benefits from the provision, 'span': a minimal verbatim substring that grounds the provision}]}\n",
-        "If there are no provisions with clear beneficiaries and subject in the text, return {provisions: []}.",
-        "If there are no conditions stated in the provision, set conditions to 'None'.",
-        "If you cannot provide an exact verbatim span for a provision, omit that provision instead of paraphrasing.",
-        "These provisions should not overlap in their spans, and should be individually grounded in the text as accurately as possible.",
+        "Return your response in the following format:\n",
+        "{'is_provision': True/False, 'subject': the party that enacts the provision, 'beneficiary': the party that benefits from the provision}\n",
+        "If this chunk of text does not include a provision with a clear subject and beneficiary, return {'is_provision': False, 'subject': None, 'beneficiary': None}.",
+        "If there are multiple provisions in the chunk, identify the most important one and return the subject and beneficiary for that provision.",
     ])
     
     prompt = " ".join([
-        "Extract the provisions from the following section:",
+        "Review the following chunk of text:\n",
         section
     ])
     
     schema = {
-            "type": "json_schema",
-            "json_schema": {
-                "name": "extracted_provisions",
-                "strict": True,
-                "schema": {
-                    "type": "object",
-                    "additionalProperties": False,
-                    "required": [
-                        "provisions"
-                    ],
-                    "properties": {
-                        "provisions": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "additionalProperties": False,
-                                "properties": {
-                                    "subject": {
-                                        "type": "string",
-                                        "enum": list(parties.keys()),
-                                    },
-                                    "beneficiary": {
-                                        "type": "string",
-                                        "enum": list(parties.keys()),
-                                    },
-                                    "span": {
-                                        "type": "string",
-                                    }
-                                },
-                                "required": ["subject", "beneficiary", "span"],
-                            },
-                        },
+        "type": "json_schema",
+        "json_schema": {
+            "name": "provision_filter",
+            "strict": True,
+            "schema": {
+                "type": "object",
+                "additionalProperties": False,
+                "required": [
+                    "is_provision",
+                    "subject",                        
+                    "beneficiary",
+                ],
+                "properties": {
+                    "is_provision": {
+                        "type": "boolean"
                     },
+                    "subject": {
+                        "type": ["string", "null"],
+                        "enum": [*list(parties.keys()), None],
+                    },
+                    "beneficiary": {
+                        "type": ["string", "null"],
+                        "enum": [*list(parties.keys()), None],
+                    }
                 },
-            }
+            },
         }
+    }
     
     payload, usage = llm_client.call_json(system_prompt, prompt, schema)
-    provisions = ground_provisions(
-        section_text=section,
-        provisions=payload.get("provisions", []),
-    )
-    return provisions, usage
+    return payload, usage
     
 def process_document(document_path: Path, parties: dict, llm_client: LLMClientPool) -> dict:
     
@@ -178,18 +69,23 @@ def process_document(document_path: Path, parties: dict, llm_client: LLMClientPo
     for section in sections:
         section_text = section.get("content", "")
         try:
-            provisions, usage = process_section(section_text, parties, llm_client)
+            result, usage = process_section(section_text, parties, llm_client)
         except Exception as exc:
-            section["extracted_provisions"] = []
-            section["provision_extraction_usage"] = None
-            section["provision_extraction_error"] = {
+            section["is_provision"] = False
+            section["subject"] = None
+            section["beneficiary"] = None
+            section["provision_filter_usage"] = None
+            section["provision_filter_error"] = {
                 "type": type(exc).__name__,
                 "message": str(exc),
             }
         else:
-            section["extracted_provisions"] = provisions
-            section["provision_extraction_usage"] = usage
-            section.pop("provision_extraction_error", None)
+            is_provision = bool(result.get("is_provision", False))
+            section["is_provision"] = is_provision
+            section["subject"] = result.get("subject") if is_provision else None
+            section["beneficiary"] = result.get("beneficiary") if is_provision else None
+            section["provision_filter_usage"] = usage
+            section.pop("provision_filter_error", None)
     
     return sections
 
@@ -263,7 +159,7 @@ def main():
     parties = {"Worker": WORKER, "Firm": FIRM, "Union": UNION, "Manager": MANAGER}
     
     SOURCE = "cornell_dol"
-    MODEL_NAME = "qwen/qwen3.6-35b-a3b"
+    MODEL_NAME = "gpt-5.4-nano"
     N_WORKERS = 14
     llm_client = LLMClientPool(MODEL_NAME, size=N_WORKERS)
     model_cache_dir = model_slug(MODEL_NAME)
