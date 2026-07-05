@@ -202,22 +202,25 @@ def fit_davidson(
         alphas = params[:-1]
         alphas = alphas - alphas.mean()
         log_tie_param = params[-1]
-        tie_param = math.exp(log_tie_param)
         nll = 0.0
 
         for outcome, doc_1, doc_2 in usable_observations:
             alpha_1 = alphas[doc_index[doc_1]]
             alpha_2 = alphas[doc_index[doc_2]]
-            strength_1 = math.exp(alpha_1)
-            strength_2 = math.exp(alpha_2)
-            tie_component = tie_param * math.sqrt(strength_1 * strength_2)
-            denominator = strength_1 + strength_2 + tie_component + epsilon
+            log_tie_component = log_tie_param + 0.5 * (alpha_1 + alpha_2)
+            max_log_component = max(alpha_1, alpha_2, log_tie_component)
+            log_denominator = max_log_component + math.log(
+                math.exp(alpha_1 - max_log_component)
+                + math.exp(alpha_2 - max_log_component)
+                + math.exp(log_tie_component - max_log_component)
+                + epsilon
+            )
 
             if outcome == "tie":
-                probability = tie_component / denominator
+                log_probability = log_tie_component - log_denominator
             else:
-                probability = strength_1 / denominator
-            nll -= math.log(probability + epsilon)
+                log_probability = alpha_1 - log_denominator
+            nll -= log_probability
 
         return nll
 

@@ -152,7 +152,7 @@ async def process_all(
 
 
 def main():
-    SOURCE = "cornell_dol"
+    SOURCE = "cornell_retail_educ"
     MODEL_NAME = "gpt-5.4-nano"
     N_WORKERS = 14
 

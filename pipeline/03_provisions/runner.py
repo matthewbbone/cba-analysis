@@ -158,7 +158,7 @@ def main():
     MANAGER = "A manager is an individual who has authority over workers but is not the owner of the firm."
     parties = {"Worker": WORKER, "Firm": FIRM, "Union": UNION, "Manager": MANAGER}
     
-    SOURCE = "cornell_dol"
+    SOURCE = "cornell_retail_educ"
     MODEL_NAME = "gpt-5.4-nano"
     N_WORKERS = 14
     llm_client = LLMClientPool(MODEL_NAME, size=N_WORKERS)

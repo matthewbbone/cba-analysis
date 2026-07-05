@@ -301,7 +301,7 @@ async def process_comparison_jobs(
 
 
 def main():
-    N = 190
+    N = 2000
     RANDOM_SEED = 123
     AGENT = "Worker"
     MODEL_NAME = "gpt-5.4-nano"

@@ -34,6 +34,7 @@ def clean_document(page):
         "reference_content": "text",
         "content": "text",
         "algorithm": "text",
+        "inline_formula": "text",
         "number": None,
         "aside_text": None,
         "header_image": None,
@@ -44,6 +45,7 @@ def clean_document(page):
         "vision_footnote": None,
         "footer_image": None,
         "chart": None,
+        "seal": None,
     }
     
     sections = [
