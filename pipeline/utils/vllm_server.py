@@ -386,6 +386,14 @@ class VLLMServer:
         tokenizer_dir = ensure_ovis26_tokenizer(self.model_name, self.cache_dir)
         if tokenizer_dir is not None:
             cmd.extend(["--tokenizer", str(tokenizer_dir)])
+            # save_pretrained writes the chat template to a standalone
+            # chat_template.jinja rather than tokenizer_config.json, and vLLM
+            # does not read the standalone file from a --tokenizer directory.
+            # Without it the OpenAI chat endpoint rejects every request with
+            # "default chat template is no longer allowed".
+            chat_template = tokenizer_dir / "chat_template.jinja"
+            if chat_template.exists():
+                cmd.extend(["--chat-template", str(chat_template)])
         cmd.extend(model_attention_args(self.model_name))
         if self.language_only:
             cmd.extend(["--language-model-only"])

@@ -36,12 +36,14 @@ from pipeline.stg_02_extract.structures import (
 from pipeline.utils.vllm_server import VLLMServer
 
 
-DEFAULT_MODEL_NAME = "AIDC-AI/Ovis2.6-30B-A3B"
+# Must be an instruction-tuned model: langextract talks to vLLM's chat
+# endpoint, and base models have no chat template (vLLM rejects with 400).
+DEFAULT_MODEL_NAME = "google/gemma-4-31B-it"
 INPUT_STAGE_NAME = "stg_01_ocr"
 STAGE_NAME = "stg_02_extract"
 OUTPUT_FILENAME = "wage_tables.jsonl"
-DEFAULT_EXTRACTION_PASSES = 1
-DEFAULT_LANGEXTRACT_MAX_WORKERS = 1
+DEFAULT_EXTRACTION_PASSES = 3
+DEFAULT_LANGEXTRACT_MAX_WORKERS = 20
 DEFAULT_LANGEXTRACT_BATCH_LENGTH = 1
 THINK_BLOCK_PATTERN = re.compile(r"<think\b[^>]*>.*?</think>", re.IGNORECASE | re.DOTALL)
 
@@ -370,7 +372,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
     parser.add_argument("--port", type=int, default=8123)
     parser.add_argument("--num-gpus", type=int, default=1)
-    parser.add_argument("--max-model-len", type=int, default=32768)
+    parser.add_argument("--max-model-len", type=int, default=19296)
     parser.add_argument(
         "--gpu-memory-utilization",
         type=float,
@@ -379,7 +381,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
             "Defaults to vLLM's own setting."
         ),
     )
-    parser.add_argument("--max-char-buffer", type=int, default=12000)
+    parser.add_argument("--max-char-buffer", type=int, default=2400)
     parser.add_argument("--extraction-passes", type=int, default=DEFAULT_EXTRACTION_PASSES)
     parser.add_argument(
         "--langextract-max-workers",

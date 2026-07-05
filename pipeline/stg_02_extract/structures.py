@@ -15,6 +15,13 @@ annual salaries, or compensation schedules. Extract the full verbatim table
 text, including headings, row labels, column labels, notes immediately attached
 to the table, and all numeric values.
 
+Each extraction must be the COMPLETE table: begin at the table's title or
+heading (or its first header row if it has no title) and end at its final row.
+Never emit a fragment of a table, a single row, or a table that is missing its
+header rows. If the same table continues after an interruption such as a page
+break, include the continuation as part of the same extraction. One table =
+one extraction; do not split a table into multiple extractions.
+
 Only extract a table if its values are amounts of pay (e.g. dollar amounts per
 hour, week, month, or year) earned for working. Do NOT extract other
 table-like blocks even if they contain numbers, dates, hours, or dollar
