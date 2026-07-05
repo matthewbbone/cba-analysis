@@ -1,0 +1,262 @@
+:root {
+  --bg: #f5f6f8;
+  --panel: #ffffff;
+  --border: #d7dbe0;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #1971c2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#topbar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 8px 14px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.field select {
+  font-size: 13px;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  max-width: 460px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav button {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 6px;
+  width: 30px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.nav button:hover {
+  background: #eef2f7;
+}
+
+#counter {
+  font-variant-numeric: tabular-nums;
+  font-size: 13px;
+  min-width: 58px;
+  text-align: center;
+}
+
+.legend {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+#workspace {
+  flex: 1 1 auto;
+  display: flex;
+  min-height: 0;
+}
+
+.pane {
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#pdf-pane {
+  flex: 0 0 50%;
+  background: #333;
+}
+
+#pdf-frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.empty {
+  display: none;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  color: #cbd5e1;
+}
+
+#divider {
+  flex: 0 0 6px;
+  cursor: col-resize;
+  background: var(--border);
+}
+
+#divider:hover {
+  background: var(--accent);
+}
+
+#review-pane {
+  flex: 1 1 50%;
+  background: var(--panel);
+}
+
+.detail {
+  flex: 0 0 auto;
+  max-height: 42%;
+  overflow: auto;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  background: #fbfcfe;
+}
+
+.detail-empty {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.detail-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.badge.class {
+  background: #495057;
+}
+
+.badge.dim {
+  background: #7048e8;
+}
+
+.offsets {
+  font-size: 11px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  margin-left: auto;
+}
+
+.detail-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.detail-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.detail-text {
+  margin: 0;
+  padding: 8px 10px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: "SF Mono", ui-monospace, Menlo, monospace;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.detail-text.src {
+  background: #f0fbf4;
+}
+
+.text-view {
+  flex: 1 1 auto;
+  overflow: auto;
+  padding: 16px 20px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: "SF Mono", ui-monospace, Menlo, monospace;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #263238;
+}
+
+mark.hl {
+  background: color-mix(in srgb, var(--hl) 26%, transparent);
+  color: inherit;
+  border-radius: 2px;
+  box-shadow: inset 0 -2px 0 var(--hl);
+  cursor: pointer;
+}
+
+mark.hl:hover {
+  background: color-mix(in srgb, var(--hl) 42%, transparent);
+}
+
+mark.hl.active {
+  background: color-mix(in srgb, var(--hl) 55%, transparent);
+  outline: 2px solid var(--hl);
+}
