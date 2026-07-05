@@ -1,0 +1,231 @@
+import asyncio
+from pathlib import Path
+from tempfile import TemporaryDirectory
+import unittest
+from unittest.mock import patch
+
+from pipeline.stg_01_ocr.runner import (
+    DocumentJob,
+    PageJob,
+    PageResult,
+    ProgressReporter,
+    PROJECT_ROOT,
+    build_page_jobs,
+    combine_document_pages,
+    default_input_root,
+    default_stage_output_root,
+    discover_documents,
+    path_safe_model_name,
+    resolve_project_path,
+    process_page_job,
+    render_page_to_data_url_isolated,
+    run_page_queue,
+)
+
+
+class OcrDiscoveryTests(unittest.TestCase):
+    def test_discovers_source_pdfs_and_ignores_output_root(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir) / "cache"
+            output_root = root / "stg_01_ocr"
+            model_name = "org/model"
+            (root / "source_a").mkdir(parents=True)
+            (root / "source_b").mkdir()
+            output_root.mkdir()
+            (root / "source_a" / "doc_1.pdf").write_bytes(b"%PDF")
+            (root / "source_a" / ".hidden.pdf").write_bytes(b"%PDF")
+            (root / "source_a" / "notes.txt").write_text("ignore", encoding="utf-8")
+            (root / "source_b" / "doc_2.pdf").write_bytes(b"%PDF")
+            (output_root / "full.pdf").write_bytes(b"%PDF")
+
+            documents = discover_documents(
+                root,
+                output_root,
+                model_name=model_name,
+                source_filter="source_a",
+            )
+
+        self.assertEqual(len(documents), 1)
+        self.assertEqual(documents[0].source, "source_a")
+        self.assertEqual(documents[0].document_id, "doc_1")
+        self.assertEqual(
+            documents[0].output_dir,
+            output_root / "source_a" / "org_model" / "doc_1",
+        )
+
+    def test_stage_output_defaults_to_cache_dir_and_stage_name(self) -> None:
+        with patch.dict("os.environ", {"CACHE_DIR": "/tmp/cba-cache"}):
+            self.assertEqual(default_stage_output_root(), Path("/tmp/cba-cache/stg_01_ocr"))
+
+    def test_relative_cache_dir_resolves_from_project_root(self) -> None:
+        with patch.dict("os.environ", {"CACHE_DIR": "relative-cache"}):
+            self.assertEqual(default_input_root(), PROJECT_ROOT / "relative-cache")
+            self.assertEqual(
+                default_stage_output_root(),
+                PROJECT_ROOT / "relative-cache" / "stg_01_ocr",
+            )
+
+    def test_resolve_project_path_keeps_absolute_paths(self) -> None:
+        self.assertEqual(resolve_project_path("/tmp/cba-cache"), Path("/tmp/cba-cache"))
+
+    def test_model_name_is_safe_for_single_path_segment(self) -> None:
+        self.assertEqual(path_safe_model_name("AIDC-AI/Ovis2.6-30B-A3B"), "AIDC-AI_Ovis2.6-30B-A3B")
+
+    def test_builds_page_jobs_for_all_pages_before_processing(self) -> None:
+        document = DocumentJob(
+            source="source",
+            document_id="doc",
+            pdf_path=Path("cache/source/doc.pdf"),
+            output_dir=Path("cache/stg_01_ocr/source/model/doc"),
+        )
+
+        jobs, states = build_page_jobs([document], page_counter=lambda _: 3)
+
+        self.assertEqual([job.page_number for job in jobs], [1, 2, 3])
+        self.assertEqual(states[("source", "doc")].total_pages, 3)
+        self.assertEqual(
+            states[("source", "doc")].page_paths[2],
+            Path("cache/stg_01_ocr/source/model/doc/page_2.txt"),
+        )
+
+    def test_isolated_renderer_reports_native_crash_as_python_error(self) -> None:
+        completed = __import__("subprocess").CompletedProcess(
+            args=["python"],
+            returncode=-6,
+            stdout="",
+            stderr="*** stack smashing detected ***: terminated\n",
+        )
+
+        with patch("pipeline.stg_01_ocr.runner.subprocess.run", return_value=completed):
+            with self.assertRaisesRegex(RuntimeError, "stack smashing"):
+                render_page_to_data_url_isolated(Path("doc.pdf"), 1, 200)
+
+
+class OcrQueueTests(unittest.IsolatedAsyncioTestCase):
+    async def test_process_page_job_skips_existing_output_without_client(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            output_path = Path(tmp_dir) / "page_1.txt"
+            output_path.write_text("already done\n", encoding="utf-8")
+            job = PageJob(
+                source="source",
+                document_id="doc",
+                pdf_path=Path("doc.pdf"),
+                page_number=1,
+                output_path=output_path,
+            )
+
+            result = await process_page_job(
+                job=job,
+                client=None,
+                model_name="model",
+                dpi=200,
+                max_tokens=1024,
+                force=False,
+            )
+
+        self.assertEqual(result.status, "skipped")
+
+    async def test_queue_records_success_skips_and_failures(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            document = DocumentJob(
+                source="source",
+                document_id="doc",
+                pdf_path=Path(tmp_dir) / "doc.pdf",
+                output_dir=Path(tmp_dir) / "out",
+            )
+            jobs, states = build_page_jobs([document], page_counter=lambda _: 3)
+            jobs[1].output_path.parent.mkdir(parents=True)
+            jobs[1].output_path.write_text("existing\n", encoding="utf-8")
+
+            async def processor(job: PageJob) -> PageResult:
+                await asyncio.sleep(0)
+                if job.page_number == 1:
+                    job.output_path.parent.mkdir(parents=True, exist_ok=True)
+                    job.output_path.write_text("page one\n", encoding="utf-8")
+                    return PageResult(job=job, status="completed")
+                if job.page_number == 2:
+                    return PageResult(job=job, status="skipped")
+                raise RuntimeError("bad page")
+
+            await run_page_queue(jobs, states, concurrency=2, processor=processor)
+            state = states[("source", "doc")]
+
+        self.assertEqual(state.completed_pages, {1, 2})
+        self.assertEqual(state.skipped_pages, {2})
+        self.assertEqual(set(state.failed_pages), {3})
+        self.assertFalse(state.is_complete)
+
+    async def test_queue_then_combines_complete_document_pages(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            document = DocumentJob(
+                source="source",
+                document_id="doc",
+                pdf_path=Path(tmp_dir) / "doc.pdf",
+                output_dir=Path(tmp_dir) / "out",
+            )
+            jobs, states = build_page_jobs([document], page_counter=lambda _: 2)
+
+            async def processor(job: PageJob) -> PageResult:
+                job.output_path.parent.mkdir(parents=True, exist_ok=True)
+                if job.page_number == 1:
+                    text = "text for page 1\n<think>internal note</think>\nvisible ending\n"
+                else:
+                    text = "text for page 2\n<THINK>\nmultiline\nnote\n</THINK>\nvisible page 2\n"
+                job.output_path.write_text(text, encoding="utf-8")
+                return PageResult(job=job, status="completed")
+
+            await run_page_queue(jobs, states, concurrency=2, processor=processor)
+            full_path = combine_document_pages(states[("source", "doc")])
+            full_text = full_path.read_text(encoding="utf-8")
+            page_one_text = states[("source", "doc")].page_paths[1].read_text(encoding="utf-8")
+
+        self.assertIn("<think>internal note</think>", page_one_text)
+        self.assertIn("--- Page 1 ---\n\ntext for page 1\n\nvisible ending", full_text)
+        self.assertIn("--- Page 2 ---\n\ntext for page 2\n\nvisible page 2", full_text)
+        self.assertNotIn("internal note", full_text)
+        self.assertNotIn("multiline\nnote", full_text)
+        self.assertNotIn("<think>", full_text.lower())
+
+    async def test_queue_updates_progress_callback_for_each_page(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            document = DocumentJob(
+                source="source",
+                document_id="doc",
+                pdf_path=Path(tmp_dir) / "doc.pdf",
+                output_dir=Path(tmp_dir) / "out",
+            )
+            jobs, states = build_page_jobs([document], page_counter=lambda _: 2)
+            seen_statuses: list[str] = []
+            closed = False
+
+            def progress_callback(result: PageResult) -> None:
+                seen_statuses.append(result.status)
+
+            def close_progress() -> None:
+                nonlocal closed
+                closed = True
+
+            async def processor(job: PageJob) -> PageResult:
+                return PageResult(job=job, status="completed")
+
+            with patch(
+                "pipeline.stg_01_ocr.runner.make_progress_callback",
+                return_value=ProgressReporter(
+                    callback=progress_callback,
+                    close=close_progress,
+                ),
+            ):
+                await run_page_queue(
+                    jobs,
+                    states,
+                    concurrency=2,
+                    processor=processor,
+                    show_progress=True,
+                )
+
+        self.assertEqual(seen_statuses, ["completed", "completed"])
+        self.assertTrue(closed)
+
+
+if __name__ == "__main__":
+    unittest.main()
