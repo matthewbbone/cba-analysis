@@ -102,55 +102,62 @@ function sendJson(res: Parameters<Connect.NextHandleFunction>[1], data: unknown,
   res.end(JSON.stringify(data));
 }
 
+const apiHandler: Connect.NextHandleFunction = (req, res, next) => {
+  const url = new URL(req.url ?? "", "http://localhost");
+  const q = url.searchParams;
+  const path = url.pathname; // relative to /api
+
+  try {
+    if (path === "/documents") {
+      return sendJson(res, { documents: discoverDocuments(), sources: KNOWN_SOURCES });
+    }
+
+    if (path === "/document") {
+      const source = q.get("source")!;
+      const model = q.get("model")!;
+      const doc = q.get("doc")!;
+      const file = q.get("file") ?? "wage_tables.jsonl";
+      const text = readText(source, model, doc);
+      if (text === null) return sendJson(res, { error: "OCR text not found" }, 404);
+      const extractions = readExtractions(source, model, doc, file);
+      const pdf = findPdf(source, doc);
+      return sendJson(res, {
+        source,
+        model,
+        documentId: doc,
+        text,
+        extractions,
+        pdfUrl: pdf ? `/api/pdf?source=${encodeURIComponent(source)}&doc=${encodeURIComponent(doc)}` : null,
+      });
+    }
+
+    if (path === "/pdf") {
+      const source = q.get("source")!;
+      const doc = q.get("doc")!;
+      const pdf = findPdf(source, doc);
+      if (!pdf) return sendJson(res, { error: "PDF not found" }, 404);
+      res.statusCode = 200;
+      res.setHeader("Content-Type", "application/pdf");
+      res.setHeader("Content-Length", statSync(pdf).size);
+      res.setHeader("Content-Disposition", `inline; filename="${doc}.pdf"`);
+      return createReadStream(pdf).pipe(res);
+    }
+  } catch (err) {
+    return sendJson(res, { error: String(err) }, 500);
+  }
+  next();
+};
+
+// Register on BOTH the dev server and the preview (built) server so the API
+// is available whether you run `npm run dev` or `npm run build && npm run preview`.
 function apiPlugin(): Plugin {
   return {
     name: "cba-reviewer-api",
     configureServer(server) {
-      server.middlewares.use("/api", (req, res, next) => {
-        const url = new URL(req.url ?? "", "http://localhost");
-        const q = url.searchParams;
-        const path = url.pathname; // relative to /api
-
-        try {
-          if (path === "/documents") {
-            return sendJson(res, { documents: discoverDocuments(), sources: KNOWN_SOURCES });
-          }
-
-          if (path === "/document") {
-            const source = q.get("source")!;
-            const model = q.get("model")!;
-            const doc = q.get("doc")!;
-            const file = q.get("file") ?? "wage_tables.jsonl";
-            const text = readText(source, model, doc);
-            if (text === null) return sendJson(res, { error: "OCR text not found" }, 404);
-            const extractions = readExtractions(source, model, doc, file);
-            const pdf = findPdf(source, doc);
-            return sendJson(res, {
-              source,
-              model,
-              documentId: doc,
-              text,
-              extractions,
-              pdfUrl: pdf ? `/api/pdf?source=${encodeURIComponent(source)}&doc=${encodeURIComponent(doc)}` : null,
-            });
-          }
-
-          if (path === "/pdf") {
-            const source = q.get("source")!;
-            const doc = q.get("doc")!;
-            const pdf = findPdf(source, doc);
-            if (!pdf) return sendJson(res, { error: "PDF not found" }, 404);
-            res.statusCode = 200;
-            res.setHeader("Content-Type", "application/pdf");
-            res.setHeader("Content-Length", statSync(pdf).size);
-            res.setHeader("Content-Disposition", `inline; filename="${doc}.pdf"`);
-            return createReadStream(pdf).pipe(res);
-          }
-        } catch (err) {
-          return sendJson(res, { error: String(err) }, 500);
-        }
-        next();
-      });
+      server.middlewares.use("/api", apiHandler);
+    },
+    configurePreviewServer(server) {
+      server.middlewares.use("/api", apiHandler);
     },
   };
 }
