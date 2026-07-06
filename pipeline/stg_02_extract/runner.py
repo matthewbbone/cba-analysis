@@ -42,10 +42,11 @@ DEFAULT_MODEL_NAME = "google/gemma-4-31B-it"
 INPUT_STAGE_NAME = "stg_01_ocr"
 STAGE_NAME = "stg_02_extract"
 OUTPUT_FILENAME = "wage_tables.jsonl"
-DEFAULT_EXTRACTION_PASSES = 3
+DEFAULT_EXTRACTION_PASSES = 1
 DEFAULT_LANGEXTRACT_MAX_WORKERS = 20
 DEFAULT_LANGEXTRACT_BATCH_LENGTH = 1
 THINK_BLOCK_PATTERN = re.compile(r"<think\b[^>]*>.*?</think>", re.IGNORECASE | re.DOTALL)
+MAX_CHAR_BUFFER = 24000
 
 
 @dataclass(frozen=True)
@@ -381,7 +382,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
             "Defaults to vLLM's own setting."
         ),
     )
-    parser.add_argument("--max-char-buffer", type=int, default=2400)
+    parser.add_argument("--max-char-buffer", type=int, default=MAX_CHAR_BUFFER)
     parser.add_argument("--extraction-passes", type=int, default=DEFAULT_EXTRACTION_PASSES)
     parser.add_argument(
         "--langextract-max-workers",
