@@ -79,18 +79,28 @@ def synthetic_wage_table_examples():
     # the example text but deliberately NOT extracted, to teach the model that
     # table-like blocks without pay rates are not wage tables.
     document_text = (
-        "Holidays\n"
-        "| Holiday |\n"
-        "| New Year's Day |\n"
-        "| Independence Day |\n"
-        "| Thanksgiving Day |\n"
+        "...\n"
+        "Section 3. Vacations shall be scheduled and granted for periods of time requested by the employee subject to management's responsibility to maintain efficient operations. If the nature of the work makes it necessary to limit the number of employees on vacation at the same time, the employee with the greatest seniority as it relates to total years of service with the Employer shall be given preference in the event of any conflict in selection. Where reasonable opportunities are available for selection of vacation on a seniority basis, approved requests shall not be revoked if a conflict in selection develops after the selection period. The selection periods shall be as follows, unless there are existing or subsequent agreements on the selection period at appropriate local levels: \n"
+        "\n\nVacations\n"
+        "| Selection Period       | Response to Requests | Vacation Period         |\n"
+        "|------------------------|----------------------|-------------------------|\n"
+        "| September 1-30         | October 10           | January 1-June 30       |\n"
+        "| March 1-31             | April 10             | July 1-December 31      |\n"
         "\n"
+        "The scheduling of weekends off in conjunction with pre-selected vacations may be the subject of a local level meet and discuss.\n"
+        "...\n"
         + wage_table_text
-        + "\n\n"
-        "Annual Leave\n"
-        "| Years of Service | Leave Days Per Year |\n"
-        "| Up to 5 | 10 |\n"
-        "| Over 5 | 15 |"
+        "...\n"
+        + "\n"
+        "Section 5. Where a family member’s serious health condition requires the employee’s absence from work beyond 20 days (150/160 hours as applicable) in a calendar year, permanent employees with at least one year of service may use accrued sick leave, in addition to that provided by Section 4 above.\n\n"
+        "a. Employees who meet the eligibility criteria in b. through e. below may use accrued sick leave in accordance with the following schedule:\n\n"
+        "Leave Service Credit | Sick Family Allowance\n"
+        "Over 1 year to 3 years | Up to 52.5/56 additional hours (7 days)\n"
+        "Over 3 years to 15 years | Up to 112.5/120 additional hours (15 days)\n"
+        "Over 15 years to 25 years | Up to 150/160 additional hours (20 days)\n"
+        "Over 25 years | Up to 195/208 additional hours (26 days)\n"
+        "b. During the initial 20 days (150/160 hours) of absence, paid annual and personal leave and/or unpaid leave shall be used and may include leave provided under Section 4 above. The additional sick family leave allowance must be used prospectively, and may not be retroactively charged for any of the initial 20 days (150/160 hours). A separate 20 day (150/160 hour) requirement must be met for each different serious health condition and/or family member and for each calendar year, even if not all of the additional days were used during the previous calendar year.\n"
+        "...\n"
     )
     return [
         lx.data.ExampleData(
