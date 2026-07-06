@@ -89,9 +89,9 @@ def synthetic_wage_table_examples():
         "\n"
         "The scheduling of weekends off in conjunction with pre-selected vacations may be the subject of a local level meet and discuss.\n"
         "...\n"
-        + wage_table_text
+        + wage_table_text +
         "...\n"
-        + "\n"
+        "\n"
         "Section 5. Where a family member’s serious health condition requires the employee’s absence from work beyond 20 days (150/160 hours as applicable) in a calendar year, permanent employees with at least one year of service may use accrued sick leave, in addition to that provided by Section 4 above.\n\n"
         "a. Employees who meet the eligibility criteria in b. through e. below may use accrued sick leave in accordance with the following schedule:\n\n"
         "Leave Service Credit | Sick Family Allowance\n"
