@@ -307,7 +307,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "dash", specifier = ">=2.18.2" },
-    { name = "langextract", extras = ["openai"] },
+    { name = "langextract", extras = ["openai"], git = "https://github.com/matthewbbone/langextract?branch=feature%2Fchunk-size-jitter" },
     { name = "matplotlib", specifier = ">=3.10.9" },
     { name = "openai", specifier = ">=2.0.0" },
     { name = "pymupdf", specifier = ">=1.26.0" },
@@ -1769,8 +1769,8 @@ wheels = [
 
 [[package]]
 name = "langextract"
-version = "1.5.0"
-source = { registry = "https://pypi.org/simple" }
+version = "1.6.0"
+source = { git = "https://github.com/matthewbbone/langextract?branch=feature%2Fchunk-size-jitter#cbf9fad036810953ebc18948cc85e8212130cc85" }
 dependencies = [
     { name = "absl-py" },
     { name = "aiohttp" },
@@ -1789,10 +1789,6 @@ dependencies = [
     { name = "requests" },
     { name = "tqdm" },
     { name = "typing-extensions" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/91/3f/29980894e32d76dbeee9b3b13e1c47b91b43f234b0b231b1959d79d81d35/langextract-1.5.0.tar.gz", hash = "sha256:cdf205b7b9e45770be360c75ab4ff4f27bff204914b2974341ee6db1225d217c", size = 134801, upload-time = "2026-05-20T03:17:50.968Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/a7/7a/98128c0fc76e58eb1ac6bee0375c86cf475ab62e7a0e993a9dd56cfa84d2/langextract-1.5.0-py3-none-any.whl", hash = "sha256:b1b51b756689222997df9d3e0e05df83bcfa9e7dd452c9b4fc0a932f8cebd5eb", size = 142104, upload-time = "2026-05-20T03:17:49.568Z" },
 ]
 
 [package.optional-dependencies]
