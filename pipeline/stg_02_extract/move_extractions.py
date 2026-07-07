@@ -22,6 +22,7 @@ load_dotenv(PROJECT_ROOT / ".env")
 STAGE_NAME = "stg_02_extract"
 INPUT_STAGE_NAME = "stg_01_ocr"
 GROUNDING_FILENAME = "full.txt"
+OCR_MODEL_DIR = "AIDC-AI_Ovis2.6-30B-A3B"
 KNOWN_SOURCES = ("dol_archive", "cornell_dol", "cornell_retail_educ")
 
 
@@ -88,15 +89,18 @@ def move_grounding(
     copied = 0
     missing = 0
     for rel_dir in doc_rel_dirs:
-        src_grounding = src_stage_dir / rel_dir / GROUNDING_FILENAME
+        # Extractions may come from a different model than the OCR stage, so
+        # groundings are always looked up under the fixed OCR model dir.
+        ocr_rel_dir = Path(OCR_MODEL_DIR) / rel_dir.name
+        src_grounding = src_stage_dir / ocr_rel_dir / GROUNDING_FILENAME
         if not src_grounding.exists():
             missing += 1
             print(f"  [warn] missing grounding: {src_grounding}")
             continue
 
-        dst_grounding = dst_stage_dir / rel_dir / GROUNDING_FILENAME
+        dst_grounding = dst_stage_dir / ocr_rel_dir / GROUNDING_FILENAME
         if dry_run:
-            print(f"  [dry-run] {rel_dir / GROUNDING_FILENAME}")
+            print(f"  [dry-run] {ocr_rel_dir / GROUNDING_FILENAME}")
         else:
             _copy_file(src_grounding, dst_grounding)
         copied += 1
