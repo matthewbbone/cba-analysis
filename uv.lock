@@ -307,7 +307,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "dash", specifier = ">=2.18.2" },
-    { name = "langextract", extras = ["openai"], git = "https://github.com/matthewbbone/langextract?branch=feature%2Fchunk-size-jitter" },
+    { name = "langextract", extras = ["openai"], git = "https://github.com/matthewbbone/langextract?branch=feat%2Fchunk-offset" },
     { name = "matplotlib", specifier = ">=3.10.9" },
     { name = "openai", specifier = ">=2.0.0" },
     { name = "pymupdf", specifier = ">=1.26.0" },
@@ -1770,7 +1770,7 @@ wheels = [
 [[package]]
 name = "langextract"
 version = "1.6.0"
-source = { git = "https://github.com/matthewbbone/langextract?branch=feature%2Fchunk-size-jitter#b7941439830e50375a6abb6a1af9a63f336c0124" }
+source = { git = "https://github.com/matthewbbone/langextract?branch=feat%2Fchunk-offset#6b6fe317a2481bee03b6ec0f4849cecca0ae518e" }
 dependencies = [
     { name = "absl-py" },
     { name = "aiohttp" },

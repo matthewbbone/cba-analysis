@@ -39,11 +39,11 @@ from pipeline.utils.vllm_server import VLLMServer
 # Must be an instruction-tuned model: langextract talks to vLLM's chat
 # endpoint, and base models have no chat template (vLLM rejects with 400).
 DEFAULT_MODEL_NAME = "google/gemma-4-31B-it"
+DEFAULT_OCR_MODEL_NAME = "AIDC-AI/Ovis2.6-30B-A3B"
 INPUT_STAGE_NAME = "stg_01_ocr"
 STAGE_NAME = "stg_02_extract"
 OUTPUT_FILENAME = "wage_tables.jsonl"
 DEFAULT_EXTRACTION_PASSES = 5
-DEFAULT_CHUNK_SIZE_JITTER = 0.0
 DEFAULT_LANGEXTRACT_MAX_WORKERS = 10
 DEFAULT_LANGEXTRACT_BATCH_LENGTH = 10
 THINK_BLOCK_PATTERN = re.compile(r"<think\b[^>]*>.*?</think>", re.IGNORECASE | re.DOTALL)
@@ -222,7 +222,6 @@ def make_langextract_extractor(
     port: int,
     max_char_buffer: int,
     extraction_passes: int,
-    chunk_size_jitter: float,
     langextract_max_workers: int,
     langextract_batch_length: int,
 ) -> Extractor:
@@ -247,7 +246,6 @@ def make_langextract_extractor(
             config=config,
             temperature=0,
             extraction_passes=extraction_passes,
-            chunk_size_jitter=chunk_size_jitter,
             max_workers=langextract_max_workers,
             batch_length=langextract_batch_length,
             max_char_buffer=max_char_buffer,
@@ -372,7 +370,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--model-name", default=DEFAULT_MODEL_NAME)
     parser.add_argument(
         "--ocr-model-name",
-        help="Stage 1 OCR model directory name; defaults to --model-name.",
+        default=DEFAULT_OCR_MODEL_NAME,
+        help=(
+            "Stage 1 OCR model directory name; "
+            f"defaults to {DEFAULT_OCR_MODEL_NAME}."
+        ),
     )
     parser.add_argument("--port", type=int, default=8123)
     parser.add_argument("--num-gpus", type=int, default=1)
@@ -387,16 +389,6 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
     parser.add_argument("--max-char-buffer", type=int, default=MAX_CHAR_BUFFER)
     parser.add_argument("--extraction-passes", type=int, default=DEFAULT_EXTRACTION_PASSES)
-    parser.add_argument(
-        "--chunk-size-jitter",
-        type=float,
-        default=DEFAULT_CHUNK_SIZE_JITTER,
-        help=(
-            "Half-width of the random multiplier applied to --max-char-buffer on "
-            "extraction passes after the first, so chunk boundaries shift between "
-            "passes. 0 disables jitter; only has an effect with --extraction-passes > 1."
-        ),
-    )
     parser.add_argument(
         "--langextract-max-workers",
         type=int,
@@ -428,8 +420,6 @@ def validate_args(args: argparse.Namespace) -> None:
         raise ValueError("--max-char-buffer must be at least 1")
     if args.extraction_passes < 1:
         raise ValueError("--extraction-passes must be at least 1")
-    if not 0 <= args.chunk_size_jitter < 1:
-        raise ValueError("--chunk-size-jitter must be at least 0 and less than 1")
     if args.langextract_max_workers < 1:
         raise ValueError("--langextract-max-workers must be at least 1")
     if args.langextract_batch_length < 1:
@@ -492,7 +482,6 @@ def main(argv: list[str] | None = None) -> None:
             port=args.port,
             max_char_buffer=args.max_char_buffer,
             extraction_passes=args.extraction_passes,
-            chunk_size_jitter=args.chunk_size_jitter,
             langextract_max_workers=args.langextract_max_workers,
             langextract_batch_length=args.langextract_batch_length,
         )
