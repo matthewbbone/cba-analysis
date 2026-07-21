@@ -5,6 +5,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 import json
 from pathlib import Path
+import random
 import re
 import sys
 from typing import Callable
@@ -43,11 +44,11 @@ DEFAULT_OCR_MODEL_NAME = "AIDC-AI/Ovis2.6-30B-A3B"
 INPUT_STAGE_NAME = "stg_01_ocr"
 STAGE_NAME = "stg_02_extract"
 OUTPUT_FILENAME = "wage_tables.jsonl"
-DEFAULT_EXTRACTION_PASSES = 3
+DEFAULT_EXTRACTION_PASSES = 5
 DEFAULT_LANGEXTRACT_MAX_WORKERS = 10
 DEFAULT_LANGEXTRACT_BATCH_LENGTH = 10
 THINK_BLOCK_PATTERN = re.compile(r"<think\b[^>]*>.*?</think>", re.IGNORECASE | re.DOTALL)
-MAX_CHAR_BUFFER = 15_000
+MAX_CHAR_BUFFER = 10_000
 
 
 @dataclass(frozen=True)
@@ -404,6 +405,19 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--no-progress", action="store_true")
     parser.add_argument("--source")
     parser.add_argument("--document-id")
+    parser.add_argument(
+        "--sample",
+        type=int,
+        help=(
+            "Randomly select at most this many documents from those matched "
+            "(after --source/--document-id filtering) instead of running all."
+        ),
+    )
+    parser.add_argument(
+        "--seed",
+        type=int,
+        help="Seed for --sample selection, for reproducible runs.",
+    )
     return parser.parse_args(argv)
 
 
@@ -424,6 +438,8 @@ def validate_args(args: argparse.Namespace) -> None:
         raise ValueError("--langextract-max-workers must be at least 1")
     if args.langextract_batch_length < 1:
         raise ValueError("--langextract-batch-length must be at least 1")
+    if args.sample is not None and args.sample < 1:
+        raise ValueError("--sample must be at least 1")
 
 
 def report_results(results: list[ExtractionResult]) -> None:
@@ -455,6 +471,19 @@ def main(argv: list[str] | None = None) -> None:
     if not jobs:
         print("No stage 1 full.txt documents found.")
         return
+
+    if args.sample is not None and args.sample < len(jobs):
+        sampler = random.Random(args.seed)
+        jobs = sorted(
+            sampler.sample(jobs, args.sample),
+            key=lambda job: (job.source, job.document_id),
+        )
+        print(
+            f"sampled {len(jobs)} documents"
+            + (f" (seed={args.seed})" if args.seed is not None else "")
+            + ": "
+            + ", ".join(f"{job.source}/{job.document_id}" for job in jobs)
+        )
 
     pending_jobs = [job for job in jobs if args.force or not job.output_path.exists()]
     if not pending_jobs:
