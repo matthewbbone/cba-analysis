@@ -69,16 +69,18 @@ WAGE_TABLE_TASK = ExtractionTask(
 def synthetic_wage_table_examples():
     import langextract as lx
 
-    wage_table_text = (
-        "Wage Schedule\n"
+    # Example 0: occupation x experience wage table, embedded in a document
+    # that also contains distractor blocks (a vacation schedule and a sick
+    # leave accrual schedule). The distractors are deliberately NOT extracted,
+    # to teach the model that table-like blocks without pay rates are not wage
+    # tables.
+    wage_table_text_0 = (
+        "Payment Rates\n"
         "| Occupation | Start | After 1 Year |\n"
         "| Laborer | $15.00 | $16.25 |\n"
         "| Clerk | $14.50 | $15.75 |"
     )
-    # Distractor blocks (holiday list, leave accrual schedule) are included in
-    # the example text but deliberately NOT extracted, to teach the model that
-    # table-like blocks without pay rates are not wage tables.
-    document_text = (
+    document_text_0 = (
         "...\n"
         "Section 3. Vacations shall be scheduled and granted for periods of time requested by the employee subject to management's responsibility to maintain efficient operations. If the nature of the work makes it necessary to limit the number of employees on vacation at the same time, the employee with the greatest seniority as it relates to total years of service with the Employer shall be given preference in the event of any conflict in selection. Where reasonable opportunities are available for selection of vacation on a seniority basis, approved requests shall not be revoked if a conflict in selection develops after the selection period. The selection periods shall be as follows, unless there are existing or subsequent agreements on the selection period at appropriate local levels: \n"
         "\n\nVacations\n"
@@ -89,7 +91,7 @@ def synthetic_wage_table_examples():
         "\n"
         "The scheduling of weekends off in conjunction with pre-selected vacations may be the subject of a local level meet and discuss.\n"
         "...\n"
-        + wage_table_text +
+        + wage_table_text_0 +
         "...\n"
         "\n"
         "Section 5. Where a family member’s serious health condition requires the employee’s absence from work beyond 20 days (150/160 hours as applicable) in a calendar year, permanent employees with at least one year of service may use accrued sick leave, in addition to that provided by Section 4 above.\n\n"
@@ -102,15 +104,74 @@ def synthetic_wage_table_examples():
         "b. During the initial 20 days (150/160 hours) of absence, paid annual and personal leave and/or unpaid leave shall be used and may include leave provided under Section 4 above. The additional sick family leave allowance must be used prospectively, and may not be retroactively charged for any of the initial 20 days (150/160 hours). A separate 20 day (150/160 hour) requirement must be met for each different serious health condition and/or family member and for each calendar year, even if not all of the additional days were used during the previous calendar year.\n"
         "...\n"
     )
+
+    # Example 1: occupation x education wage table (rows are occupations,
+    # columns are educational attainment levels; cell values are pay rates).
+    wage_table_text_1 = (
+        "Wage Schedule\n"
+        "| Occupation | Apprenticeship | Bachelor's Degree |\n"
+        "| Laborer | $18.00 | $20.50 |\n"
+        "| Machinist | $22.00 | $24.75 |\n"
+        "| Clerk | $17.25 | $19.50 |\n"
+        "| Engineer | $28.50 | $32.00 |"
+    )
+    document_text_1 = (
+        "...\n"
+        "Section 8. The hourly rates of pay set forth below reflect the "
+        "employee's occupational classification together with the level of "
+        "educational attainment achieved.\n"
+        "...\n"
+        + wage_table_text_1 +
+        "\n...\n"
+    )
+
+    # Example 2: occupation-only wage table (columns are effective dates, not a
+    # stratification dimension, so the only dimension present is occupation).
+    wage_table_text_2 = (
+        "Wage Schedule\n"
+        "| Occupation | 1 April, 1984 | 1 April, 1985 |\n"
+        "| Laborer | $15.00-$18.00 | 2% increase |\n"
+        "| Clerk | $14.50-$17.50 | 2% increase |"
+    )
+    document_text_2 = (
+        "...\n"
+        "Section 12. Rates of pay for the term of this Agreement shall be as "
+        "set forth in the schedule below, with the adjustments indicated "
+        "effective on the dates shown.\n"
+        "...\n"
+        + wage_table_text_2 +
+        "\n...\n"
+    )
+
     return [
         lx.data.ExampleData(
-            text=document_text,
+            text=document_text_0,
             extractions=[
                 lx.data.Extraction(
                     extraction_class=WAGE_TABLE_EXTRACTION_CLASS,
-                    extraction_text=wage_table_text,
+                    extraction_text=wage_table_text_0,
                     attributes={"dimensions": ["occupation", "experience"]},
-                )
+                ),
             ],
-        )
+        ),
+        lx.data.ExampleData(
+            text=document_text_1,
+            extractions=[
+                lx.data.Extraction(
+                    extraction_class=WAGE_TABLE_EXTRACTION_CLASS,
+                    extraction_text=wage_table_text_1,
+                    attributes={"dimensions": ["occupation", "education"]},
+                ),
+            ],
+        ),
+        lx.data.ExampleData(
+            text=document_text_2,
+            extractions=[
+                lx.data.Extraction(
+                    extraction_class=WAGE_TABLE_EXTRACTION_CLASS,
+                    extraction_text=wage_table_text_2,
+                    attributes={"dimensions": ["occupation"]},
+                ),
+            ],
+        ),
     ]
