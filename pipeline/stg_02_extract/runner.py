@@ -28,6 +28,7 @@ except ModuleNotFoundError:
 
 load_dotenv(PROJECT_ROOT / ".env")
 
+from pipeline.stg_02_extract import validate
 from pipeline.stg_02_extract.structures import (
     WAGE_TABLE_DIMENSIONS,
     WAGE_TABLE_EXTRACTION_CLASS,
@@ -66,6 +67,7 @@ class ExtractionResult:
     job: ExtractionJob
     status: str
     extraction_count: int = 0
+    dropped_count: int = 0
     error: str | None = None
 
 
@@ -184,9 +186,41 @@ def normalize_dimensions(attributes: dict[str, object] | None) -> list[str]:
     return [dimension for dimension in WAGE_TABLE_DIMENSIONS if dimension in candidate_set]
 
 
+# Non-exact grounding often anchors only a matched prefix (e.g. a table title)
+# while extraction_text holds the full table, leaving span_start/span_end
+# covering far fewer characters than the text. Recompute the span when the
+# recorded length disagrees with the text length by more than this tolerance.
+SPAN_LENGTH_TOLERANCE = 50
+
+
+def reconcile_span(
+    span_start: int,
+    span_end: int,
+    grounding_status: str,
+    extraction_text: str,
+    source_text: str | None,
+) -> tuple[int, int, bool]:
+    """Return (span_start, span_end, span_reliable), fixing corrupted spans.
+
+    On non-exact grounding, langextract may anchor only a prefix of the table,
+    so the recorded span is much shorter than extraction_text. When that
+    happens, re-locate the full text in the source; if found, use those
+    offsets; otherwise flag the span as unreliable.
+    """
+    length_mismatch = abs((span_end - span_start) - len(extraction_text)) > SPAN_LENGTH_TOLERANCE
+    if grounding_status == "match_exact" and not length_mismatch:
+        return span_start, span_end, True
+    if source_text is not None and extraction_text:
+        found = source_text.find(extraction_text)
+        if found != -1:
+            return found, found + len(extraction_text), True
+    return span_start, span_end, not length_mismatch
+
+
 def extraction_to_record(
     extraction,
     job: ExtractionJob,
+    source_text: str | None = None,
 ) -> dict[str, object] | None:
     if getattr(extraction, "extraction_class", None) != WAGE_TABLE_EXTRACTION_CLASS:
         return None
@@ -195,19 +229,26 @@ def extraction_to_record(
     if span_start is None or span_end is None:
         return None
 
+    extraction_text = getattr(extraction, "extraction_text", "")
+    grounding_status = extraction_grounding_status(extraction)
+    span_start, span_end, span_reliable = reconcile_span(
+        span_start, span_end, grounding_status, extraction_text, source_text
+    )
+
     return {
         "source": job.source,
         "document_id": job.document_id,
         "ocr_model_name": job.ocr_model_name,
         "model_name": job.model_name,
         "extraction_class": WAGE_TABLE_EXTRACTION_CLASS,
-        "extraction_text": getattr(extraction, "extraction_text", ""),
+        "extraction_text": extraction_text,
         "attributes": {
             "dimensions": normalize_dimensions(getattr(extraction, "attributes", None)),
         },
         "span_start": span_start,
         "span_end": span_end,
-        "grounding_status": extraction_grounding_status(extraction),
+        "span_reliable": span_reliable,
+        "grounding_status": grounding_status,
     }
 
 
@@ -254,7 +295,7 @@ def make_langextract_extractor(
         )
         records: list[dict[str, object]] = []
         for extraction in annotated_document.extractions or []:
-            record = extraction_to_record(extraction, job)
+            record = extraction_to_record(extraction, job, source_text=text)
             if record is not None:
                 records.append(record)
         return records
@@ -262,10 +303,43 @@ def make_langextract_extractor(
     return extractor
 
 
+def apply_validation(
+    records: list[dict[str, object]],
+    validate_enabled: bool,
+    verify_client: object | None,
+    verify_model_name: str | None,
+) -> tuple[list[dict[str, object]], int]:
+    """Filter records that are not base wage tables.
+
+    Returns (kept_records, dropped_count). Deterministic rejection runs first;
+    the optional LLM verification runs only on records that survive it.
+    """
+    if not validate_enabled and verify_client is None:
+        return records, 0
+
+    kept: list[dict[str, object]] = []
+    dropped = 0
+    for record in records:
+        text = str(record.get("extraction_text", ""))
+        if validate_enabled and validate.rejection_reason(text) is not None:
+            dropped += 1
+            continue
+        if verify_client is not None and not validate.verify_is_base_wage_table(
+            text, verify_client, verify_model_name
+        ):
+            dropped += 1
+            continue
+        kept.append(record)
+    return kept, dropped
+
+
 def process_extraction_job(
     job: ExtractionJob,
     extractor: Extractor,
     force: bool,
+    validate_enabled: bool = True,
+    verify_client: object | None = None,
+    verify_model_name: str | None = None,
 ) -> ExtractionResult:
     if job.output_path.exists() and not force:
         return ExtractionResult(job=job, status="skipped")
@@ -273,11 +347,15 @@ def process_extraction_job(
     text = job.input_path.read_text(encoding="utf-8")
     text = strip_think_blocks(text)
     records = extractor(text, job)
+    records, dropped = apply_validation(
+        records, validate_enabled, verify_client, verify_model_name
+    )
     write_jsonl(job.output_path, records)
     return ExtractionResult(
         job=job,
         status="completed",
         extraction_count=len(records),
+        dropped_count=dropped,
     )
 
 
@@ -317,7 +395,8 @@ def run_extraction_queue(
                 else:
                     print(
                         f"wrote {result.job.source}/{result.job.document_id} "
-                        f"({result.extraction_count} wage tables)"
+                        f"({result.extraction_count} wage tables, "
+                        f"{result.dropped_count} filtered)"
                     )
     finally:
         if progress_reporter is not None:
@@ -344,14 +423,17 @@ def make_progress_reporter(jobs: list[ExtractionJob]) -> ProgressReporter:
     )
     counts = {"completed": 0, "skipped": 0, "failed": 0}
     table_count = 0
+    dropped_count = 0
 
     def callback(result: ExtractionResult) -> None:
-        nonlocal table_count
+        nonlocal table_count, dropped_count
         counts[result.status] = counts.get(result.status, 0) + 1
         table_count += result.extraction_count
+        dropped_count += result.dropped_count
         progress.update(1)
         progress.set_postfix(
             extracted=table_count,
+            filtered=dropped_count,
             skipped=counts["skipped"],
             failed=counts["failed"],
             refresh=True,
@@ -401,6 +483,21 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         default=DEFAULT_LANGEXTRACT_BATCH_LENGTH,
     )
     parser.add_argument("--concurrency", type=int, default=1)
+    parser.add_argument(
+        "--validate",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Apply the deterministic filter that drops non-wage-table spans.",
+    )
+    parser.add_argument(
+        "--verify-llm",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help=(
+            "Run a per-span LLM check that drops supplemental/stipend, "
+            "longevity, and percentage/differential pay tables."
+        ),
+    )
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--no-progress", action="store_true")
     parser.add_argument("--source")
@@ -447,9 +544,10 @@ def report_results(results: list[ExtractionResult]) -> None:
     skipped = sum(1 for result in results if result.status == "skipped")
     failed = [result for result in results if result.status == "failed"]
     extracted = sum(result.extraction_count for result in results)
+    dropped = sum(result.dropped_count for result in results)
     print(
         f"complete: {completed} documents, {skipped} skipped, "
-        f"{len(failed)} failed, {extracted} wage tables"
+        f"{len(failed)} failed, {extracted} wage tables, {dropped} filtered"
     )
     for result in failed:
         print(f"failed {result.job.source}/{result.job.document_id}: {result.error}")
@@ -515,11 +613,18 @@ def main(argv: list[str] | None = None) -> None:
             langextract_batch_length=args.langextract_batch_length,
         )
 
+        verify_client = None
+        if args.verify_llm:
+            verify_client = validate.make_verify_client(args.port)
+
         def processor(job: ExtractionJob) -> ExtractionResult:
             return process_extraction_job(
                 job=job,
                 extractor=extractor,
                 force=args.force,
+                validate_enabled=args.validate,
+                verify_client=verify_client,
+                verify_model_name=args.model_name,
             )
 
         results = run_extraction_queue(

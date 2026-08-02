@@ -7,25 +7,30 @@ WAGE_TABLE_EXTRACTION_CLASS = "wage_table"
 WAGE_TABLE_DIMENSIONS = ("occupation", "experience", "education")
 
 WAGE_TABLE_PROMPT = """
-Extract every distinct wage schedule table from the contract text.
+Extract every distinct BASE WAGE schedule table from the contract text.
 
-A wage schedule table is a table-like block whose purpose is to state the pay
-rate for work performed: wages, rates of pay, salary steps, hourly rates,
-annual salaries, or compensation schedules. Extract the full verbatim table
-text, including headings, row labels, column labels, notes immediately attached
-to the table, and all numeric values.
+A base wage schedule table is a table-like block whose purpose is to state the
+base rate of pay for a job classification, salary step or lane, or pay grade:
+wages, rates of pay, salary steps, hourly rates, annual salaries, or
+compensation schedules. Every data row must carry an explicit monetary pay
+amount — either a currency figure such as $27.44, or a salary/hourly/annual
+figure presented in a rate grid (bare numbers like 18105 are fine when they are
+laid out as pay-rate cells in a table). Extract the full verbatim table text,
+including headings, row labels, column labels, notes immediately attached to the
+table, and all numeric values.
 
 Each extraction must be the COMPLETE table: begin at the table's title or
 heading (or its first header row if it has no title) and end at its final row.
 Never emit a fragment of a table, a single row, or a table that is missing its
-header rows. If the same table continues after an interruption such as a page
+header rows. Never emit a header row or a list of job titles on its own with no
+pay amounts. If the same table continues after an interruption such as a page
 break, include the continuation as part of the same extraction. One table =
 one extraction; do not split a table into multiple extractions.
 
-Only extract a table if its values are amounts of pay (e.g. dollar amounts per
-hour, week, month, or year) earned for working. Do NOT extract other
-table-like blocks even if they contain numbers, dates, hours, or dollar
-amounts. Specifically exclude:
+Only extract a table whose cells are absolute amounts of pay (e.g. dollar
+amounts per hour, week, month, or year) earned for working. Do NOT extract other
+table-like blocks even if they contain numbers, dates, hours, ratios, percentages,
+or dollar amounts. Specifically exclude:
 - lists of holidays or observed days off
 - vacation, annual leave, sick leave, or other leave accrual schedules
   (values are hours or days of leave, not pay rates)
@@ -34,8 +39,16 @@ amounts. Specifically exclude:
 - lists of job titles, class codes, or pay-range assignments that do not
   themselves state a wage amount
 - dues, fees, allowance, or reimbursement schedules
+- percentage-of-pay rules, such as disability or injury pay stated as a percent
+  of the regular rate, or shift/rank differentials stated as "X% above" another
+  rank (these state a rule, not a base rate)
+- supplemental, extra-duty, or stipend schedules: coaching, athletic and
+  activity "ratio" or stipend tables, per-session, per-game, or per-hour
+  stipends, club or activity advisor pay, chaperone pay
+- longevity or career-increment clauses, whether stated as prose or as single
+  amounts
 
-Do not extract narrative wage clauses unless they contain a table-like wage
+Do not extract narrative wage clauses unless they contain a table-like base wage
 schedule. Do not summarize, normalize, transpose, or calculate values.
 
 For each wage table, set extraction_class to wage_table. Set attributes to a
@@ -143,6 +156,55 @@ def synthetic_wage_table_examples():
         "\n...\n"
     )
 
+    # Example 3: a genuine base wage table embedded among three distractor
+    # blocks that must NOT be extracted, mirroring the real false positives:
+    # (a) an injury-pay percentage-of-rate block, (b) a coaching/activity
+    # stipend "ratio" schedule, and (c) a header-only classification list with
+    # no pay amounts. Only the base wage table is extracted.
+    wage_table_text_3 = (
+        "Wage Schedule\n"
+        "| Occupation | Start | After 1 Year |\n"
+        "| Operator | $24.18 | $24.78 |\n"
+        "| Technician | $28.61 | $29.20 |"
+    )
+    injury_pay_distractor_3 = (
+        "For Non-Work Related Injuries: 80% of Regular Pay Rate\n"
+        "For Work Related Injuries, 0-19 Years of Service: a pay rate that is "
+        "not less than 85% of Regular Pay Rate\n"
+        "For Work Related Injuries, 20 Years and Over: 90% of Regular Pay Rate"
+    )
+    stipend_distractor_3 = (
+        "Extra-Curricular Assignments\n"
+        "| Activity | Ratio | Stipend |\n"
+        "| Head Basketball Coach | .06 | $2,040 |\n"
+        "| Debate Coach | .067 | $2,280 |\n"
+        "| Band Director | .056 | $1,905 |"
+    )
+    classification_distractor_3 = (
+        "MAIL SERVICES\n"
+        "| NO. | POSITION | STEP 1 | STEP 2 | STEP 3 |\n"
+        "| J01100 | Automated Mail Processor |\n"
+        "| J01101 | Courier Driver |"
+    )
+    document_text_3 = (
+        "...\n"
+        "Section 7. An employee absent due to injury shall be compensated "
+        "according to the following schedule:\n"
+        + injury_pay_distractor_3 +
+        "\n...\n"
+        "Section 9. Coaches and activity advisors shall receive supplemental "
+        "compensation as set forth below.\n"
+        + stipend_distractor_3 +
+        "\n...\n"
+        "Section 10. The hourly rates of pay for the classifications listed "
+        "below are set forth in the wage schedule.\n"
+        + wage_table_text_3 +
+        "\n...\n"
+        "The following classifications are assigned to the Mail Services unit:\n"
+        + classification_distractor_3 +
+        "\n...\n"
+    )
+
     return [
         lx.data.ExampleData(
             text=document_text_0,
@@ -171,6 +233,16 @@ def synthetic_wage_table_examples():
                     extraction_class=WAGE_TABLE_EXTRACTION_CLASS,
                     extraction_text=wage_table_text_2,
                     attributes={"dimensions": ["occupation"]},
+                ),
+            ],
+        ),
+        lx.data.ExampleData(
+            text=document_text_3,
+            extractions=[
+                lx.data.Extraction(
+                    extraction_class=WAGE_TABLE_EXTRACTION_CLASS,
+                    extraction_text=wage_table_text_3,
+                    attributes={"dimensions": ["occupation", "experience"]},
                 ),
             ],
         ),

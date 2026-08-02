@@ -117,7 +117,9 @@ class Stage02ExtractionTests(unittest.TestCase):
                     },
                 ]
 
-            result = runner.process_extraction_job(job, extractor, force=False)
+            result = runner.process_extraction_job(
+                job, extractor, force=False, validate_enabled=False
+            )
             rows = [
                 json.loads(line)
                 for line in output_path.read_text(encoding="utf-8").splitlines()
@@ -326,6 +328,8 @@ class Stage02CliTests(unittest.TestCase):
                         "doc",
                         "--force",
                         "--no-progress",
+                        "--no-validate",
+                        "--no-verify-llm",
                     ]
                 )
 
@@ -337,6 +341,213 @@ class Stage02CliTests(unittest.TestCase):
 
         self.assertEqual(len(rows), 1)
         self.assertEqual(rows[0]["extraction_text"], "table")
+
+
+class Stage02ValidationTests(unittest.TestCase):
+    # Spans drawn from real false positives in the reviewed wage_tables.jsonl.
+    INJURY_PAY = (
+        "All Non-Work Related Injuries 80% of Regular Pay Rate\n"
+        "Years of Company Service 0-19 Years of Service\n"
+        "A Pay Rate That Is Not Less Than 85% of Regular Pay Rate\n"
+        "20 Years and Over 90% of Regular Pay Rate"
+    )
+    HEADER_ONLY_FRAGMENT = (
+        "MAIL SERVICES\n"
+        "| NO. POSITION N STEP 1 STEP 2 STEP 3 STEP 4 STEP 5 STEP 6 STEP 7 STEP 8\n"
+        "| J01100 Automated Mail Processor"
+    )
+    RANK_DIFFERENTIAL = (
+        "The following pay differential shall be maintained between all ranks.\n"
+        "Fire Fighter FAO 8% above Fire Fighter 4\n"
+        "Lieutenant 16% above Fire Fighter 4\n"
+        "Captain 16% above Fire Lieutenant"
+    )
+    TEACHER_GRID_NO_DOLLAR = (
+        "1985-1986 Salary Schedule\n"
+        "| Step | BA | BA+15 | BA+30 | BA+45 |\n"
+        "| 1 | 18105 | 18973 | 19484 | 19996 |\n"
+        "| 2 | 18785 | 19775 | 20286 | 20796 |"
+    )
+    PA_PAY_GRID = (
+        "COMMONWEALTH OF PENNSYLVANIA 37 1/2 HOUR STANDARD PAY SCHEDULE\n"
+        "| PAY STEP | PAY RANGE 1 | PAY RANGE 2 |\n"
+        "| Annual | 26,873 | 30,315 |\n"
+        "| Hourly | 13.15 | 14.85 |"
+    )
+    DOLLAR_WAGE_TABLE = (
+        "Wage Schedule\n"
+        "| Occupation | Start | After 1 Year |\n"
+        "| Laborer | $15.00 | $16.25 |"
+    )
+
+    def test_rejection_reason_drops_percentage_pay_policy(self) -> None:
+        self.assertEqual(
+            runner.validate.rejection_reason(self.INJURY_PAY),
+            "percentage_only_pay_policy",
+        )
+        self.assertEqual(
+            runner.validate.rejection_reason(self.RANK_DIFFERENTIAL),
+            "percentage_only_pay_policy",
+        )
+
+    def test_rejection_reason_drops_header_only_fragment(self) -> None:
+        self.assertEqual(
+            runner.validate.rejection_reason(self.HEADER_ONLY_FRAGMENT),
+            "header_only_fragment",
+        )
+
+    def test_rejection_reason_keeps_tables_without_dollar_signs(self) -> None:
+        self.assertIsNone(runner.validate.rejection_reason(self.TEACHER_GRID_NO_DOLLAR))
+        self.assertIsNone(runner.validate.rejection_reason(self.PA_PAY_GRID))
+
+    def test_rejection_reason_keeps_dollar_wage_table(self) -> None:
+        self.assertIsNone(runner.validate.rejection_reason(self.DOLLAR_WAGE_TABLE))
+
+    def test_has_pay_amount_ignores_calendar_years(self) -> None:
+        prose_with_year = "This Agreement is effective January 1, 2007 for all members."
+        self.assertFalse(runner.validate.has_pay_amount(prose_with_year))
+
+    def _record(self, text: str) -> dict[str, object]:
+        return {"extraction_text": text}
+
+    def test_apply_validation_filters_and_counts(self) -> None:
+        records = [
+            self._record(self.DOLLAR_WAGE_TABLE),
+            self._record(self.INJURY_PAY),
+            self._record(self.HEADER_ONLY_FRAGMENT),
+            self._record(self.TEACHER_GRID_NO_DOLLAR),
+        ]
+
+        kept, dropped = runner.apply_validation(
+            records, validate_enabled=True, verify_client=None, verify_model_name=None
+        )
+
+        self.assertEqual(dropped, 2)
+        self.assertEqual(
+            [row["extraction_text"] for row in kept],
+            [self.DOLLAR_WAGE_TABLE, self.TEACHER_GRID_NO_DOLLAR],
+        )
+
+    def test_apply_validation_disabled_keeps_everything(self) -> None:
+        records = [self._record(self.INJURY_PAY)]
+
+        kept, dropped = runner.apply_validation(
+            records, validate_enabled=False, verify_client=None, verify_model_name=None
+        )
+
+        self.assertEqual(dropped, 0)
+        self.assertEqual(len(kept), 1)
+
+
+class Stage02VerifyLlmTests(unittest.TestCase):
+    def _client(self, answer: str):
+        message = SimpleNamespace(content=answer)
+        choice = SimpleNamespace(message=message)
+        response = SimpleNamespace(choices=[choice])
+        completions = SimpleNamespace(create=lambda **kwargs: response)
+        return SimpleNamespace(chat=SimpleNamespace(completions=completions))
+
+    def test_verify_keeps_on_yes(self) -> None:
+        from pipeline.stg_02_extract import validate
+
+        self.assertTrue(
+            validate.verify_is_base_wage_table("table", self._client("YES"), "model")
+        )
+
+    def test_verify_drops_on_no(self) -> None:
+        from pipeline.stg_02_extract import validate
+
+        self.assertFalse(
+            validate.verify_is_base_wage_table(
+                "coaching stipends", self._client("NO, this is a stipend."), "model"
+            )
+        )
+
+    def test_verify_fails_open_on_client_error(self) -> None:
+        from pipeline.stg_02_extract import validate
+
+        def boom(**kwargs):
+            raise RuntimeError("connection refused")
+
+        client = SimpleNamespace(
+            chat=SimpleNamespace(completions=SimpleNamespace(create=boom))
+        )
+        self.assertTrue(validate.verify_is_base_wage_table("table", client, "model"))
+
+    def test_apply_validation_runs_verify_after_deterministic(self) -> None:
+        # Deterministic keeps this (it has $ amounts) but the LLM says NO.
+        records = [{"extraction_text": "Coaching\n| Coach | $2,040 | $2,130 |"}]
+
+        kept, dropped = runner.apply_validation(
+            records,
+            validate_enabled=True,
+            verify_client=self._client("NO"),
+            verify_model_name="model",
+        )
+
+        self.assertEqual(dropped, 1)
+        self.assertEqual(kept, [])
+
+
+class Stage02SpanReconcileTests(unittest.TestCase):
+    def _job(self) -> "runner.ExtractionJob":
+        return runner.ExtractionJob(
+            source="source",
+            document_id="doc",
+            ocr_model_name="ocr/model",
+            model_name="extract/model",
+            input_path=Path("full.txt"),
+            output_path=Path("wage_tables.jsonl"),
+        )
+
+    def test_reconcile_corrupted_span_from_source(self) -> None:
+        table = "COMMONWEALTH OF PENNSYLVANIA PAY SCHEDULE with lots of rows here"
+        source = "preamble ... " + table + " ... trailer"
+        extraction = SimpleNamespace(
+            extraction_class=WAGE_TABLE_EXTRACTION_CLASS,
+            extraction_text=table,
+            attributes={"dimensions": ["experience"]},
+            # grounding anchored only the 28-char title prefix
+            char_interval=SimpleNamespace(start_pos=13, end_pos=41),
+            alignment_status=SimpleNamespace(value="match_lesser"),
+        )
+
+        record = runner.extraction_to_record(extraction, self._job(), source_text=source)
+
+        self.assertEqual(record["span_start"], source.index(table))
+        self.assertEqual(record["span_end"], source.index(table) + len(table))
+        self.assertTrue(record["span_reliable"])
+
+    def test_reconcile_flags_unreliable_when_not_found(self) -> None:
+        extraction = SimpleNamespace(
+            extraction_class=WAGE_TABLE_EXTRACTION_CLASS,
+            extraction_text="a full wage table with many rows " * 5
+            + "that does not appear in the source text",
+            attributes={"dimensions": ["experience"]},
+            char_interval=SimpleNamespace(start_pos=0, end_pos=5),
+            alignment_status=SimpleNamespace(value="match_fuzzy"),
+        )
+
+        record = runner.extraction_to_record(
+            extraction, self._job(), source_text="unrelated source"
+        )
+
+        self.assertFalse(record["span_reliable"])
+
+    def test_exact_match_stays_reliable(self) -> None:
+        extraction = SimpleNamespace(
+            extraction_class=WAGE_TABLE_EXTRACTION_CLASS,
+            extraction_text="Wage table text",
+            attributes={"dimensions": ["occupation"]},
+            char_interval=SimpleNamespace(start_pos=5, end_pos=20),
+            alignment_status=SimpleNamespace(value="match_exact"),
+        )
+
+        record = runner.extraction_to_record(extraction, self._job())
+
+        self.assertTrue(record["span_reliable"])
+        self.assertEqual(record["span_start"], 5)
+        self.assertEqual(record["span_end"], 20)
 
 
 if __name__ == "__main__":
