@@ -90,10 +90,18 @@ function readExtractions(source: string, model: string, documentId: string, file
     .map((l) => JSON.parse(l));
 }
 
-function readText(source: string, model: string, documentId: string): string | null {
-  const path = join(STG01, source, model, documentId, "full.txt");
-  if (!existsSync(path)) return null;
-  return stripThinkBlocks(readFileSync(path, "utf-8"));
+/** Resolve the OCR full.txt for a document.
+ *
+ *  Deliberately ignores the extraction model: stg_02_extract is keyed by the
+ *  *extraction* model (which varies), while stg_01_ocr is keyed by the *OCR*
+ *  model (a single one for the whole cache). Scanning the OCR model dirs keeps
+ *  the two independent, so extracting with a new model doesn't 404 here. */
+function readText(source: string, documentId: string): string | null {
+  for (const ocrModel of listDirs(join(STG01, source))) {
+    const path = join(STG01, source, ocrModel, documentId, "full.txt");
+    if (existsSync(path)) return stripThinkBlocks(readFileSync(path, "utf-8"));
+  }
+  return null;
 }
 
 function sendJson(res: Parameters<Connect.NextHandleFunction>[1], data: unknown, code = 200) {
@@ -117,7 +125,7 @@ const apiHandler: Connect.NextHandleFunction = (req, res, next) => {
       const model = q.get("model")!;
       const doc = q.get("doc")!;
       const file = q.get("file") ?? "wage_tables.jsonl";
-      const text = readText(source, model, doc);
+      const text = readText(source, doc);
       if (text === null) return sendJson(res, { error: "OCR text not found" }, 404);
       const extractions = readExtractions(source, model, doc, file);
       const pdf = findPdf(source, doc);
