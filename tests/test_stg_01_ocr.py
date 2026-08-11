@@ -4,7 +4,7 @@ from tempfile import TemporaryDirectory
 import unittest
 from unittest.mock import patch
 
-from pipeline.stg_01_ocr.runner import (
+from pipeline.stg_01_ocr.general.runner import (
     DocumentJob,
     PageJob,
     PageResult,
