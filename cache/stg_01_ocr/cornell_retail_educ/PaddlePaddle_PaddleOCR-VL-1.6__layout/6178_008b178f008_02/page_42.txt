@@ -1,0 +1,44 @@
+Bureau of Labor Statistics Collective Bargaining Studies
+
+U.S. Department of Labor
+
+830649 8002
+ie
+February 12, 1982
+
+This report is authorized by law 29 U.S.C. 2. Your voluntary cooperation is needed to make the results of this survey comprehensive, accurate, and timely.
+
+Form Approved
+O.M.B. No. 044-R0003
+
+February 12, 1982
+
+Director of Personnel
+New York University
+246 Greene Street, Room 205
+New York, New York 10003
+
+Respondent:
+
+We now have on file a copy of your collective bargaining agreement(s): covering the Clerical and Laboratory-Technicians with the American Federation of Teachers local #3882. The agreement we have on file expired October 1981.
+
+We would appreciate your sending us the following information to complete our files:
+
+A current copy of your agreement.
+
+Number of employees covered\(\underline{\text{Approximately}}\)1,500
+
+Please return this form with your information in the enclosed envelope which requires no postage.
+
+245310-4-83
+
+Thank you for your cooperation.
+
+Sincerely yours,
+
+Janet L. Norwood
+
+Janet L. Norwood
+
+JANET L. NORWOOD
+Commissioner

@@ -1,0 +1,103 @@
+The user wants the text from the image transcribed verbatim.
+
+1.  **Transcribe text:**
+    "regular school year. Any two half years to be combined for a
+    year of salary credit must occur within a five year period.
+    d. Teaching experience credit shall apply to equivalent school
+    employment, such as guidance, media specialists, and
+    curriculum resource teachers, and permanent substitute
+    experience in Orange County.
+    e. No salary credit shall be given for substitute teaching, except
+    as stated above in G.1.d graduate assistantships, or private
+    nursery school or kindergarten teaching unless kindergarten
+    teaching is a part of an elementary school. For teachers being
+    employed for the first time in Orange County, no salary credit
+    shall be given for teaching for any time prior to a teacher
+    being awarded a four-year degree. Substitute teaching as
+    used in this section does not apply to replacement teachers
+    who are under contract with the Board.
+    2. WORK EXPERIENCE
+    A maximum of fifteen (15) years work experience in Florida and
+    up to twelve (12) years of out of state, excluding those years
+    required for certification, not to exceed a total of fifteen (15)
+    years, shall be granted for salary purposes to:
+    a. Those positions requiring work experience for certification
+    b. Social workers/guidance counselors
+    c. Duly licensed Physical Therapists, Audiologists,
+    Occupational Therapists, and Speech Pathologists.
+    3. MILITARY EXPERIENCE
+    If honorably discharged, including a general discharge under
+    honorable conditions, credit for pay purposes shall be granted for
+    up to four (4) years of active military duty in the armed forces of
+    the United States of America.
+    4. A maximum of four years work experience and/or teaching
+    experience for which a teacher is receiving retirement benefits,
+    including military, shall be applied as years of experience for
+    salary purposes.
+    5. Teachers shall be paid for zero (0) years of experience until such
+    time as verification for experience is received by the Board. Upon
+    verification of experience any payment of back salary shall be
+    made at the end of the next payroll period. Any salary adjustment
+    for experience credit shall begin with the school year in which the
+    adjustment is made and shall be retroactive to the beginning of
+    that school year.
+    6. Half-time teaching, work experience related to certification, and
+    military experience shall be combined for salary credit, i.e., two
+    (2) one-half (1/2) years or two (2) half-time years equals one (1)
+    year of experience. One-half (1/2) year of experience shall be
+    defined as at least fifty (50) but less than ninety-nine (99) days,
+    fifty (50) of which must be continuous, in any regular school year.
+    Any two half-years to be combined for a year of salary credit
+    must occur within a five-year period.
+    46"
+</think>
+
+regular school year. Any two half years to be combined for a
+year of salary credit must occur within a five year period.
+d. Teaching experience credit shall apply to equivalent school
+employment, such as guidance, media specialists, and
+curriculum resource teachers, and permanent substitute
+experience in Orange County.
+e. No salary credit shall be given for substitute teaching, except
+as stated above in G.1.d graduate assistantships, or private
+nursery school or kindergarten teaching unless kindergarten
+teaching is a part of an elementary school. For teachers being
+employed for the first time in Orange County, no salary credit
+shall be given for teaching for any time prior to a teacher
+being awarded a four-year degree. Substitute teaching as
+used in this section does not apply to replacement teachers
+who are under contract with the Board.
+2. WORK EXPERIENCE
+A maximum of fifteen (15) years work experience in Florida and
+up to twelve (12) years of out of state, excluding those years
+required for certification, not to exceed a total of fifteen (15)
+years, shall be granted for salary purposes to:
+a. Those positions requiring work experience for certification
+b. Social workers/guidance counselors
+c. Duly licensed Physical Therapists, Audiologists,
+Occupational Therapists, and Speech Pathologists.
+3. MILITARY EXPERIENCE
+If honorably discharged, including a general discharge under
+honorable conditions, credit for pay purposes shall be granted for
+up to four (4) years of active military duty in the armed forces of
+the United States of America.
+4. A maximum of four years work experience and/or teaching
+experience for which a teacher is receiving retirement benefits,
+including military, shall be applied as years of experience for
+salary purposes.
+5. Teachers shall be paid for zero (0) years of experience until such
+time as verification for experience is received by the Board. Upon
+verification of experience any payment of back salary shall be
+made at the end of the next payroll period. Any salary adjustment
+for experience credit shall begin with the school year in which the
+adjustment is made and shall be retroactive to the beginning of
+that school year.
+6. Half-time teaching, work experience related to certification, and
+military experience shall be combined for salary credit, i.e., two
+(2) one-half (1/2) years or two (2) half-time years equals one (1)
+year of experience. One-half (1/2) year of experience shall be
+defined as at least fifty (50) but less than ninety-nine (99) days,
+fifty (50) of which must be continuous, in any regular school year.
+Any two half-years to be combined for a year of salary credit
+must occur within a five-year period.
+46

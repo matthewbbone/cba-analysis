@@ -271,13 +271,21 @@ def discover_documents(
     output_root: Path,
     model_name: str,
     source_filter: str | None = None,
-    document_id_filter: str | None = None,
+    document_id_filter: str | Sequence[str] | None = None,
     output_variant: str = "",
 ) -> list[DocumentJob]:
     input_root = input_root.expanduser()
     output_root = output_root.expanduser()
     output_root_resolved = output_root.resolve()
     model_output_name = model_output_directory_name(model_name, output_variant)
+    if document_id_filter is None:
+        document_ids = None
+    elif isinstance(document_id_filter, str):
+        # Preserve the historical programmatic API while the CLI now supplies
+        # a list of document IDs.
+        document_ids = frozenset((document_id_filter,))
+    else:
+        document_ids = frozenset(document_id_filter)
     documents: list[DocumentJob] = []
 
     if not input_root.exists():
@@ -295,7 +303,7 @@ def discover_documents(
             if pdf_path.name.startswith("."):
                 continue
             document_id = pdf_path.stem
-            if document_id_filter and document_id != document_id_filter:
+            if document_ids is not None and document_id not in document_ids:
                 continue
             documents.append(
                 DocumentJob(
@@ -801,7 +809,17 @@ def build_parser(spec: RunnerSpec) -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=spec.description)
     parser.add_argument("--input-root", type=Path, default=default_input_root())
     parser.add_argument("--output-root", type=Path, default=default_stage_output_root())
-    parser.add_argument("--model-name", default=spec.default_model_name)
+    parser.add_argument(
+        "--model-name",
+        "--hf-model",
+        dest="model_name",
+        metavar="MODEL_ID_OR_PATH",
+        default=spec.default_model_name,
+        help=(
+            "Hugging Face model repository ID or local model path to serve "
+            f"with vLLM (default: {spec.default_model_name})"
+        ),
+    )
     parser.add_argument("--port", type=int, default=8123)
     parser.add_argument("--num-gpus", type=int, default=1)
     parser.add_argument("--max-model-len", type=int, default=spec.default_max_model_len)
@@ -813,10 +831,29 @@ def build_parser(spec: RunnerSpec) -> argparse.ArgumentParser:
     parser.add_argument("--dpi", type=int, default=200)
     parser.add_argument("--concurrency", type=int, default=spec.default_concurrency)
     parser.add_argument("--max-tokens", type=int, default=spec.default_max_tokens)
+    parser.add_argument(
+        "--max-num-seqs",
+        type=int,
+        help=(
+            "maximum sequences vLLM may process per iteration; defaults to "
+            "--max-inflight-requests"
+        ),
+    )
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--no-progress", action="store_true")
     parser.add_argument("--source")
-    parser.add_argument("--document-id")
+    parser.add_argument(
+        "--document-id",
+        "--document-ids",
+        dest="document_id",
+        metavar="DOCUMENT_ID",
+        nargs="+",
+        action="extend",
+        help=(
+            "process only these document IDs; accepts one or more values and "
+            "may be repeated"
+        ),
+    )
 
     parser.add_argument("--sample", type=int)
     parser.add_argument("--seed", type=int, default=0)
@@ -858,6 +895,13 @@ def parse_args(
     if args.max_inflight_requests is None:
         mode = getattr(args, "mode", "single")
         args.max_inflight_requests = 24 if mode in {"layout", "native"} else args.concurrency
+    if args.max_num_seqs is None:
+        # The OCR client cannot submit more than this many concurrent requests,
+        # so allowing vLLM to infer a much larger hardware-dependent scheduler
+        # capacity only wastes cache/graph memory.  Hybrid Mamba/GDN models can
+        # otherwise fail startup when the inferred sequence count exceeds the
+        # available state-cache blocks.
+        args.max_num_seqs = args.max_inflight_requests
     return args
 
 
@@ -874,6 +918,8 @@ def validate_args(spec: RunnerSpec, args: argparse.Namespace) -> None:
         raise ValueError("--max-tokens must be at least 1")
     if args.max_inflight_requests < 1:
         raise ValueError("--max-inflight-requests must be at least 1")
+    if args.max_num_seqs < 1:
+        raise ValueError("--max-num-seqs must be at least 1")
     if args.repetition_retries < 0:
         raise ValueError("--repetition-retries cannot be negative")
     if args.sample is not None and args.sample < 1:
@@ -1086,6 +1132,7 @@ def main(spec: RunnerSpec, argv: Sequence[str] | None = None) -> None:
                 max_model_len=args.max_model_len,
                 num_gpus=args.num_gpus,
                 gpu_memory_utilization=args.gpu_memory_utilization,
+                max_num_seqs=args.max_num_seqs,
                 extra_serve_args=spec.serve_arguments(args),
             )
             server.start()

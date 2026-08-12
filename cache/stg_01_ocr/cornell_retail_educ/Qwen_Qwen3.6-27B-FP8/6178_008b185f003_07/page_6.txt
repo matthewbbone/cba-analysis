@@ -1,0 +1,37 @@
+The user wants the text from the image transcribed exactly.
+
+1.  **Transcribe paragraph 5:** "5. Lunch hour and playground aide positions shall not be included in the bargaining unit. A bargaining unit member who also holds a position as a lunch hour or playground aide shall receive credit for all purposes under this contract for hours worked as a lunch hour or playground aide."
+2.  **Transcribe section D:** "D. 1. All permanent employees hired will be placed in a six-month probationary status during which time they will have no rights as unit members to contractual protection against termination without proper cause and whose rights, except as those provided by the Agreement, are to be determined in accordance with the Board of Education policies and regulations."
+3.  **Transcribe section 2:** "2. For all other purposes, however, such probationary employees, benefiting as they do from the terms of the Agreement, shall be considered as unit members after their 30th day of employment."
+4.  **Transcribe Article 4:** "Article 4 School Board Authority Subject to the provisions of this Agreement, the Board of Education and the superintendent of schools reserve and retain full rights, authority, and discretion in the proper discharge of their duties and responsibility to control, supervise, and manage the Montgomery County Public Schools under applicable law, rules, and procedures."
+5.  **Transcribe Article 5:** "Article 5 Negotiations Procedures"
+6.  **Transcribe section A:** "A. During the month of October of each fiscal year in which the Council is recognized and in which an agreement will expire the following June 30, the parties will meet to establish negotiation procedures."
+7.  **Transcribe section B:** "B. By November 1 of the calendar year prior to the expiration date of an agreement, MCCSSE will present its positions and demands for a new agreement. No later than November 15 of that year and at the direction of the superintendent of schools, representatives of the Board of Education will meet with MCCSSE at a mutually agreeable time and place to consider and reply to the demands."
+8.  **Transcribe section C:** "C. A chief spokesperson will be appointed by each party; discussion by other members of each team will be first cleared through the chief spokesperson."
+9.  **Transcribe section D:** "D. The parties, numbering no more than thirteen (13) from each team, excluding observers and consultants, will meet at mutually agreed upon times."
+10. **Transcribe page number:** "3"
+</think>
+
+5. Lunch hour and playground aide positions shall not be included in the bargaining unit. A bargaining unit member who also holds a position as a lunch hour or playground aide shall receive credit for all purposes under this contract for hours worked as a lunch hour or playground aide.
+
+D. 1. All permanent employees hired will be placed in a six-month probationary status during which time they will have no rights as unit members to contractual protection against termination without proper cause and whose rights, except as those provided by the Agreement, are to be determined in accordance with the Board of Education policies and regulations.
+
+2. For all other purposes, however, such probationary employees, benefiting as they do from the terms of the Agreement, shall be considered as unit members after their 30th day of employment.
+
+Article 4
+School Board Authority
+
+Subject to the provisions of this Agreement, the Board of Education and the superintendent of schools reserve and retain full rights, authority, and discretion in the proper discharge of their duties and responsibility to control, supervise, and manage the Montgomery County Public Schools under applicable law, rules, and procedures.
+
+Article 5
+Negotiations Procedures
+
+A. During the month of October of each fiscal year in which the Council is recognized and in which an agreement will expire the following June 30, the parties will meet to establish negotiation procedures.
+
+B. By November 1 of the calendar year prior to the expiration date of an agreement, MCCSSE will present its positions and demands for a new agreement. No later than November 15 of that year and at the direction of the superintendent of schools, representatives of the Board of Education will meet with MCCSSE at a mutually agreeable time and place to consider and reply to the demands.
+
+C. A chief spokesperson will be appointed by each party; discussion by other members of each team will be first cleared through the chief spokesperson.
+
+D. The parties, numbering no more than thirteen (13) from each team, excluding observers and consultants, will meet at mutually agreed upon times.
+
+3

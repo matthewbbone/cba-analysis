@@ -1,0 +1,16 @@
+(Page reversed)
+
+comparable position in the area previously held and at no less than the salary earned in the contract the year immediately preceding the sabbatical leave, but to include any salary increases for the classification of the employee in the current salary schedule. Sabbatical leave shall not constitute a year of teaching experience.
+10. Cancellation of Leave · Should the Superintendent have evidence at any time that the teacher is not in good faith attempting to earn the required semester hours, or that he is employed full-time or is violating his agreement in obtaining a sabbatical leave, the salary payments shall be discontinued.
+11. Service Following Sabbatical Leave · Teachers granted sabbatical leave must serve under contract with the School Board for a minimum of one (1) year following the expiration of their leave. As evidence of indebtedness to the District for monies paid to the recipient during sabbatical leave, the recipient shall execute a promissory note in a form approved by the School Board and in a sum equal to the amount paid by the School Board to such employee during sabbatical leave. Twenty (20) percent of said note and all of the accrued interest for such year will be cancelled and forgiven at the end of each year's consecutive service following the sabbatical leave.
+12. In the event the recipient resigns from the District within said five (5) year period, then such event will accelerate the maturity of the entire note, the same as if it had been specified in such note for it to mature on that date. In the event of the recipient's death, disability or dismissal, the balance (principle and interest) due shall be cancelled in full without any further payment.
+
+APPENDIX I
+SUMMER EMPLOYMENT VARIATIONS
+
+A. If the work week for the summer session is modified from a normal five-day work week to a compressed four-day work week, the following contractual variations shall apply to Secondary School teachers, Adult Vocational School teachers, bargaining unit administrative office employees, and Bargaining unit 12-month employees:
+1. The compressed four day work week shall be Monday through Thursday. When July 4 falls on a Tuesday or Thursday, the work week shall be three (3) days and the week immediately preceding this shall be a five (5) day work week.
+2. The full day shall be 9 hours and 22 minutes in length with the required on-site portion of the day to be 8 hours and 30 minutes consecutively. This will include a 30-minute duty-free lunch. Teachers are permitted to leave the worksite during their duty-free lunch. The one-half day will be 4 hours and 41 minutes in length with the required on-site duty portion of the day to be 4 hours consecutively excluding lunch.
+3. The student contact time per day shall not exceed 6 hours and 16
+
+of page 98 -97- 98

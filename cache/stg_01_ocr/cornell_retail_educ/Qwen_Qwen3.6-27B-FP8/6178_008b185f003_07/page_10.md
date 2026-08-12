@@ -1,0 +1,36 @@
+The user wants the text from the image transcribed verbatim.
+
+1.  **Transcribe the first paragraph:** "serve. If the parties are unable to agree upon an arbitrator or to obtain such commitment within the specified period, a request for arbitration shall be sent to the American Arbitration Association and a list of arbitrators requested. A copy of the demand shall be sent to the other party. The parties will then be bound by the rules and procedures of the American Arbitration Association as they apply to the selection of an arbitrator."
+2.  **Transcribe item 4:** "4. The arbitrator shall have no power to add to, subtract, or modify any terms of this Agreement. The arbitrator shall not accept issues or evidence not presented during the grievance procedure. The arbitrator shall be without power or authority to make any recommendations beyond the terms of this Agreement. The decision of the arbitrator shall be final and binding on the parties and should be issued within fifteen (15) days of the close of any hearing or in the event briefs are filed, fifteen (15) days after such filing."
+3.  **Transcribe item 5:** "5. The expense of the arbitrator shall be borne equally by the parties."
+4.  **Transcribe heading:** "E. Miscellaneous"
+5.  **Transcribe item 1:** "1. All documents, communications, and records dealing with the processing of a grievance will be filed in a separate grievance file and will not be kept in the official personnel file of any of the participants."
+6.  **Transcribe item 2:** "2. All decisions rendered at all levels of the grievance procedure will be in writing, setting forth the decision and the reasons therefore, and will be transmitted promptly to both parties."
+7.  **Transcribe item 3:** "3. Forms for filing grievances, serving notices, taking appeals, making reports and recommendations, and other necessary documents will be prepared by the superintendent after consultation with the MCCSSE, and will be given appropriate distribution so as to facilitate operation of the grievance procedure."
+8.  **Transcribe item 4:** "4. Both parties shall be permitted to present evidence and witnesses and to cross-examine all witnesses whenever a hearing is held."
+9.  **Transcribe item 5:** "5. The administrative complaint procedure currently in use to process and resolve unit member complaints pertaining to matters not covered by this Agreement or subject to collective bargaining shall be continued. Matters subject to the grievance procedure and subject to collective bargaining consistent with Article 5, Section J, shall not be heard or processed under the administrative complaint procedure."
+10. **Transcribe item 6:** "6. It is agreed the Union may submit any class action grievance involving a general alleged violation of the Agreement. It may also submit a grievance alleging actions taken by the employer, not otherwise protested, violate basic principles or understandings expressed in the Agreement."
+11. **Transcribe page number:** "7"
+</think>
+
+serve. If the parties are unable to agree upon an arbitrator or to obtain such commitment within the specified period, a request for arbitration shall be sent to the American Arbitration Association and a list of arbitrators requested. A copy of the demand shall be sent to the other party. The parties will then be bound by the rules and procedures of the American Arbitration Association as they apply to the selection of an arbitrator.
+
+4. The arbitrator shall have no power to add to, subtract, or modify any terms of this Agreement. The arbitrator shall not accept issues or evidence not presented during the grievance procedure. The arbitrator shall be without power or authority to make any recommendations beyond the terms of this Agreement. The decision of the arbitrator shall be final and binding on the parties and should be issued within fifteen (15) days of the close of any hearing or in the event briefs are filed, fifteen (15) days after such filing.
+
+5. The expense of the arbitrator shall be borne equally by the parties.
+
+E. Miscellaneous
+
+1. All documents, communications, and records dealing with the processing of a grievance will be filed in a separate grievance file and will not be kept in the official personnel file of any of the participants.
+
+2. All decisions rendered at all levels of the grievance procedure will be in writing, setting forth the decision and the reasons therefore, and will be transmitted promptly to both parties.
+
+3. Forms for filing grievances, serving notices, taking appeals, making reports and recommendations, and other necessary documents will be prepared by the superintendent after consultation with the MCCSSE, and will be given appropriate distribution so as to facilitate operation of the grievance procedure.
+
+4. Both parties shall be permitted to present evidence and witnesses and to cross-examine all witnesses whenever a hearing is held.
+
+5. The administrative complaint procedure currently in use to process and resolve unit member complaints pertaining to matters not covered by this Agreement or subject to collective bargaining shall be continued. Matters subject to the grievance procedure and subject to collective bargaining consistent with Article 5, Section J, shall not be heard or processed under the administrative complaint procedure.
+
+6. It is agreed the Union may submit any class action grievance involving a general alleged violation of the Agreement. It may also submit a grievance alleging actions taken by the employer, not otherwise protested, violate basic principles or understandings expressed in the Agreement.
+
+7

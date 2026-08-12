@@ -1,0 +1,50 @@
+The user wants the text from the image transcribed verbatim.
+
+1.  **Identify the sections:**
+    *   Section c: Jury Duty
+    *   Section d: Military Leave
+    *   Footer: Tentative Agreement Page 67 of 77
+
+2.  **Transcribe Section c:**
+    *   "c. Jury Duty"
+    *   "1. In order that unit members may fulfill their civic responsibility as jurors or witnesses, regular unit members are granted leave of absence with pay for these purposes."
+    *   "2. Definition: Jury duty or duty as a court witness is that service and time spent away from a University job as a result of a subpoena issued by a court. Service as a volunteer expert witness, representative of a party other than the University, or other volunteer court duty is not included in the provisions of this leave of absence."
+    *   "3. Regulations: Deans or directors, or designees, are authorized to grant such leave with pay upon the presentation of a subpoena by the unit member. A record of absences for these purposes shall be maintained and reported as jury duty leave with pay."
+    *   "4. It is the responsibility of the unit member to keep his/her dean or director, or designee, informed of the anticipated time to be spent away from the job for this purpose."
+    *   "5. The unit member's regular University pay shall continue to be paid during such leaves of absence."
+    *   "6. Any pay received by a unit member from a court system for service on jury duty or as court witness duty shall promptly be returned by the unit member to the University to offset part of the cost of such absences."
+
+3.  **Transcribe Section d:**
+    *   "d. Military Leave"
+    *   "1. A regular unit member who is a member of a reserve or auxiliary component of the United States Armed Forces is entitled to a leave of absence with pay to a maximum of sixteen and one-half (16-1/2) working days in one (1) calendar year during which the unit member is ordered to serve with the National Guard or Reserve Forces, or the Civil Air Patrol or Coast Guard auxiliary units. If requested, the unit member must provide a copy of the order that shall establish his/her eligibility for military leave."
+    *   "2. For other than required training periods discussed above, regular unit members are entitled to a military leave of absence without pay to serve in the Armed Forces of the United States and shall be entitled to statutory benefits and rights to re-employment provided for by state or federal law. For a military leave of absence, the unit member must give advance written or verbal notice of leave to the dean or director, or designee. If the leave was for more than thirty-"
+
+4.  **Transcribe Footer:**
+    *   "Tentative Agreement"
+    *   "Page 67 of 77"
+
+5.  **Final Review:** Compare transcription against the image to ensure accuracy, including punctuation and capitalization. The text cuts off at the end ("thirty-"), so I must transcribe it exactly as is.
+</think>
+
+c. Jury Duty
+
+1. In order that unit members may fulfill their civic responsibility as jurors or witnesses, regular unit members are granted leave of absence with pay for these purposes.
+
+2. Definition: Jury duty or duty as a court witness is that service and time spent away from a University job as a result of a subpoena issued by a court. Service as a volunteer expert witness, representative of a party other than the University, or other volunteer court duty is not included in the provisions of this leave of absence.
+
+3. Regulations: Deans or directors, or designees, are authorized to grant such leave with pay upon the presentation of a subpoena by the unit member. A record of absences for these purposes shall be maintained and reported as jury duty leave with pay.
+
+4. It is the responsibility of the unit member to keep his/her dean or director, or designee, informed of the anticipated time to be spent away from the job for this purpose.
+
+5. The unit member's regular University pay shall continue to be paid during such leaves of absence.
+
+6. Any pay received by a unit member from a court system for service on jury duty or as court witness duty shall promptly be returned by the unit member to the University to offset part of the cost of such absences.
+
+d. Military Leave
+
+1. A regular unit member who is a member of a reserve or auxiliary component of the United States Armed Forces is entitled to a leave of absence with pay to a maximum of sixteen and one-half (16-1/2) working days in one (1) calendar year during which the unit member is ordered to serve with the National Guard or Reserve Forces, or the Civil Air Patrol or Coast Guard auxiliary units. If requested, the unit member must provide a copy of the order that shall establish his/her eligibility for military leave.
+
+2. For other than required training periods discussed above, regular unit members are entitled to a military leave of absence without pay to serve in the Armed Forces of the United States and shall be entitled to statutory benefits and rights to re-employment provided for by state or federal law. For a military leave of absence, the unit member must give advance written or verbal notice of leave to the dean or director, or designee. If the leave was for more than thirty-
+
+Tentative Agreement
+Page 67 of 77

@@ -1,0 +1,48 @@
+The user wants the text from the image transcribed verbatim.
+
+1.  **Transcribe the first paragraph:** "regular day off. A unit member may use sick leave during the three (3) day calendar year end holiday closure upon submission of written evidence of illness or a professional appointment or treatment recommended by a recognized health care professional covered by the University's health care program."
+2.  **Transcribe item 3:** "3. Sick leave benefits shall not be paid during any period for which workers' compensation benefits are paid. Eligible unit members shall receive workers' compensation benefits and shall continue to receive other regular University employer-paid benefits, but shall not accrue sick leave."
+3.  **Transcribe item f:** "f. Sick leave shall be used by the unit member for:"
+4.  **Transcribe sub-items 1-4 under f:**
+    *   "1. An illness, disability, injury, or other medical condition of the unit member including the first three (3) days off work due to a work related injury or illness."
+    *   "2. An illness that continues for more than three (3) days when the unit member is on time off."
+    *   "3. A professional appointment or treatment recommended by a recognized health care professional covered by the University health care program."
+    *   "4. Avoidance of passing on a contagious disease."
+5.  **Transcribe item g:** "g. Parental leave."
+6.  **Transcribe paragraph under g:** "Parental leave is available to unit members and shall be granted in the order of sick leave with pay and sick leave without pay. All parental leave shall be granted in accordance with the Family Medical Leave Act under 16.4(e). Conditions of Use of Sick Leave."
+7.  **Transcribe item h:** "h. Sick leave shall be used to arrange or attend a funeral. The eligibility rules for such use are as follows:"
+8.  **Transcribe sub-items 1-3 under h:**
+    *   "1. The sick leave must be approved by the unit member's dean or director, or designee."
+    *   "2. Sick leave of up to five (5) consecutive work days may be used to arrange or attend the funeral of a member of a unit member's immediate family. A written request for periods exceeding five (5) consecutive work days must be provided and approved by the dean or director, or designee."
+    *   "3. Up to one (1) work day of sick leave may be taken to attend the funeral of a friend or relative not in the immediate family."
+9.  **Transcribe footer:** "Tentative Agreement Page 64 of 77"
+</think>
+
+regular day off. A unit member may use sick leave during the three (3) day calendar year end holiday closure upon submission of written evidence of illness or a professional appointment or treatment recommended by a recognized health care professional covered by the University's health care program.
+
+3. Sick leave benefits shall not be paid during any period for which workers' compensation benefits are paid. Eligible unit members shall receive workers' compensation benefits and shall continue to receive other regular University employer-paid benefits, but shall not accrue sick leave.
+
+f. Sick leave shall be used by the unit member for:
+
+1. An illness, disability, injury, or other medical condition of the unit member including the first three (3) days off work due to a work related injury or illness.
+
+2. An illness that continues for more than three (3) days when the unit member is on time off.
+
+3. A professional appointment or treatment recommended by a recognized health care professional covered by the University health care program.
+
+4. Avoidance of passing on a contagious disease.
+
+g. Parental leave.
+
+Parental leave is available to unit members and shall be granted in the order of sick leave with pay and sick leave without pay. All parental leave shall be granted in accordance with the Family Medical Leave Act under 16.4(e). Conditions of Use of Sick Leave.
+
+h. Sick leave shall be used to arrange or attend a funeral. The eligibility rules for such use are as follows:
+
+1. The sick leave must be approved by the unit member's dean or director, or designee.
+
+2. Sick leave of up to five (5) consecutive work days may be used to arrange or attend the funeral of a member of a unit member's immediate family. A written request for periods exceeding five (5) consecutive work days must be provided and approved by the dean or director, or designee.
+
+3. Up to one (1) work day of sick leave may be taken to attend the funeral of a friend or relative not in the immediate family.
+
+Tentative Agreement
+Page 64 of 77

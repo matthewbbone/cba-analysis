@@ -1,0 +1,34 @@
+The user wants the text from the image transcribed verbatim.
+
+1.  **Identify the Header:** "ARTICLE 24 DISCHARGE, DEMOTION, SUSPENSION AND DISCIPLINE"
+2.  **Transcribe Section 1:** "Section 1. The Employer shall not demote, suspend, discharge or take any disciplinary action against an employee without just cause. An employee may appeal a demotion, suspension, or discharge beginning at the first step of the grievance procedure within 15 working days of the date of its occurrence. The Union shall be notified promptly by the Employer of any demotion, suspension, or discharge."
+3.  **Transcribe Section 2:** "Section 2. Any action instituted under Section 1 of this Article shall be implemented within a reasonable period of time after the event giving rise to such disciplinary action or knowledge thereof."
+4.  **Transcribe Section 3:** "Section 3. In the event any action is taken by the Employer under the provisions of this Article which involves patient/resident/inmate/client abuse and a grievance is filed by an employee, the arbitrator shall not consider the failure of the patient/resident/inmate/client to appear as prejudicial."
+5.  **Transcribe Section 4:** "Section 4. The Employer will attempt to discipline employees in such a manner so as not to embarrass the employee before the public or other employees. It must be kept in mind, however, that where insubordination or flouting of authority by an employee in public and in the presence of other employees takes place, the Employer shall not be restricted by the operation of this section. The Employer will not take any disciplinary action against employees for appropriately advocating or appropriately attempting to bring about improvements in standards of patient care."
+6.  **Transcribe Section 5:** "Section 5. The provisions of this Article shall not apply during an employee's probationary period which shall be the initial 180 calendar days of employment except for employees in trainee classes whose probationary period shall coincide with the trainee period. The probationary period can be extended by mutual agreement between the Union and the Employer for an additional period during which time Section 1 shall not apply. Periods of leave without pay and periods of time during which an employee is using paid leave to supplement Workers' Compensation shall not count toward the initial probationary period or any extension period."
+7.  **Transcribe Section 6:** "Section 6. This Article shall not apply to demotions resulting from an employee appeal, an Employer-initiated classification review or unsuccessful completion of a probationary period upon promotion."
+8.  **Transcribe Section 7:** "Section 7. After a period of two years, a written reprimand or reference to an oral reprimand shall be removed from the employee's official personnel folder if no intervening incidents of the same or a similar nature have occurred."
+9.  **Transcribe Section 8:** "Section 8. The Employer and the Union agree to continue the alternative forms of discipline in lieu of suspension actions program in accordance with the side letter."
+10. **Transcribe Page Number:** "50"
+</think>
+
+ARTICLE 24
+DISCHARGE, DEMOTION, SUSPENSION AND DISCIPLINE
+
+Section 1. The Employer shall not demote, suspend, discharge or take any disciplinary action against an employee without just cause. An employee may appeal a demotion, suspension, or discharge beginning at the first step of the grievance procedure within 15 working days of the date of its occurrence. The Union shall be notified promptly by the Employer of any demotion, suspension, or discharge.
+
+Section 2. Any action instituted under Section 1 of this Article shall be implemented within a reasonable period of time after the event giving rise to such disciplinary action or knowledge thereof.
+
+Section 3. In the event any action is taken by the Employer under the provisions of this Article which involves patient/resident/inmate/client abuse and a grievance is filed by an employee, the arbitrator shall not consider the failure of the patient/resident/inmate/client to appear as prejudicial.
+
+Section 4. The Employer will attempt to discipline employees in such a manner so as not to embarrass the employee before the public or other employees. It must be kept in mind, however, that where insubordination or flouting of authority by an employee in public and in the presence of other employees takes place, the Employer shall not be restricted by the operation of this section. The Employer will not take any disciplinary action against employees for appropriately advocating or appropriately attempting to bring about improvements in standards of patient care.
+
+Section 5. The provisions of this Article shall not apply during an employee's probationary period which shall be the initial 180 calendar days of employment except for employees in trainee classes whose probationary period shall coincide with the trainee period. The probationary period can be extended by mutual agreement between the Union and the Employer for an additional period during which time Section 1 shall not apply. Periods of leave without pay and periods of time during which an employee is using paid leave to supplement Workers' Compensation shall not count toward the initial probationary period or any extension period.
+
+Section 6. This Article shall not apply to demotions resulting from an employee appeal, an Employer-initiated classification review or unsuccessful completion of a probationary period upon promotion.
+
+Section 7. After a period of two years, a written reprimand or reference to an oral reprimand shall be removed from the employee's official personnel folder if no intervening incidents of the same or a similar nature have occurred.
+
+Section 8. The Employer and the Union agree to continue the alternative forms of discipline in lieu of suspension actions program in accordance with the side letter.
+
+50

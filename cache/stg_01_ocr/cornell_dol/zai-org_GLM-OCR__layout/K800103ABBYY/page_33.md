@@ -1,0 +1,40 @@
+WICOMICO COUNTY SALARY SCHEDULE FOR TEACHERS 2005-2006
+
+WICOMICO COUNTY SALARY SCHEDULE FOR TEACHERS 2005-2006
+
+This salary agreement is contingent on full projected funding (Thornton Funds) by the State of Maryland and the Wicomico County funding at least to the maintenance of effort. In the event said funding ($9,800,000) is not provided for fiscal year 2006 and/or funding ($12,700,000) for fiscal year 2007,the parties shall renegotiate the agreement upon request of either party.
+
+This salary agreement is contingent on full projected funding (Thornton Funds) by the State of Maryland and the Wicomico County funding at least to the maintenance of effort. In the event said funding ($9,800,000) is not provided for fiscal year 2006 and/or funding ($12,700,000) for fiscal year 2007,the parties shall renegotiate the agreement upon request of either party.
+
+| Yrs. Exp. | Standard Professional | Standard Professional+15hrs | APC w/Equivalent | APC w/Master's | APC w/Master's+30 | APC w/Doctorate |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | 35,320 | 36,490 | 37,230 | 38,390 | 39,690 | 41,150 |
+| 2 | 35,650 | 36,820 | 37,490 | 38,650 | 39,930 | 41,410 |
+| 3 | 36,090 | 37,250 | 37,850 | 38,990 | 40,300 | 41,890 |
+| 4 | 36,640 | 37,810 | 38,730 | 39,880 | 41,160 | 42,790 |
+| 5 | 37,300 | 38,470 | 39,590 | 40,730 | 42,050 | 43,640 |
+| 6 | 38,070 | 39,250 | 40,460 | 41,610 | 43,060 | 44,640 |
+| 7 | 38,960 | 40,120 | 41,320 | 42,470 | 44,060 | 45,660 |
+| 8 | 39,960 | 41,120 | 42,360 | 43,530 | 45,250 | 46,830 |
+| 9 | 41,050 | 42,220 | 43,530 | 44,810 | 46,390 | 48,120 |
+| 10 | 42,270 | 43,430 | 45,420 | 46,760 | 48,510 | 50,080 |
+| 11 | 43,480 | 44,650 | 47,040 | 48,180 | 49,920 | 51,660 |
+| 12 | 44,650 | 45,820 | 48,650 | 49,810 | 51,540 | 53,260 |
+| 13 | 46,240 | 47,420 | 50,100 | 51,550 | 53,260 | 55,030 |
+| 14 | 48,570 | 49,760 | 53,790 | 55,330 | 57,130 | 58,590 |
+|  |  |  |  |  |  |  |
+| 15-18 | 49,510 | 50,730 | 54,830 | 56,400 | 58,230 | 59,720 |
+|  |  |  |  |  |  |  |
+| 19-22 | 51,420 | 52,630 | 56,710 | 58,490 | 60,310 | 61,780 |
+|  |  |  |  |  |  |  |
+| 23-27 | 53,830 | 55,030 | 59,480 | 61,260 | 63,090 | 64,580 |
+|  |  |  |  |  |  |  |
+| 28+ | 56,070 | 57,270 | 61,710 | 63,640 | 65,500 | 66,950 |
+
+- Add $1,000 for Advanced Professional with Masters Equivalent plus thirty (30) hours. To be eligible for this addition to salary, Unit members must meet the qualifications in 13.8 A-C.
+
+- Provisional Degree salary scale is $500 less than the Standard Professional scale on each step.
+
+- Unit I members who receive National Board Certification shall receive $2,000 in addition to the salary listed above.
+
+- All funds received by the Board as a result of any state initiative to increase teachers' salaries will be applied as an across the board percentage raise to the scale above.

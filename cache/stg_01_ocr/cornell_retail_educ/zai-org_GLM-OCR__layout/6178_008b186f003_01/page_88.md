@@ -1,0 +1,45 @@
+LIMITATIONS:
+
+Shall have an amount of time equivalent to one (1) duty period to coordinate activities during the student day.
+
+K. Club Sponsor - Middle School Only
+
+QUALIFICATIONS:
+
+QUALIFICATIONS:
+
+Extracurricular activity for supplements for service clubs and interest clubs which meet outside the regular student day shall be provided. Service club activities must have a minimum of twenty (20) participants, and interest club activities must have a minimum of ten (10) participants, based on average attendance, to qualify for a unit. Exceptions to the minimum number of participants must be approved by the Program Consultant for Extracurricular Activities or his designee. Students shall be made aware of what day(s) they will be participating. The teacher who recieves the supplement shall have on file in the principal's office special club or activity information.
+
+ALLOCATIONS: One (1) unit per 125 students or major fraction thereof
+
+LIMITATIONS:
+
+No teacher shall receive two or more supplements in this area. Assistance and training must occur after the student day.The event may occur during or after the teacher duty day or on weekends.
+
+L. Drama/Thespian Director - Senior High Only
+
+QUALIFICATIONS:
+
+The teacher must sponsor a production group (drama club or Thespian Troupe) which has regular after school activities. The group must participate in interscholastic competition, and have a minimum of two (2) major productions per school year performed before the public. (A major production will consist of a full length play or three (3) one (1) act plays presented in a single performance.)
+
+A schedule of days and hours that students are to participate in drama activities shall be on file in the Principal's office and made available to all students involved.
+
+The rehearsal and performance activities described above are to be held outside the student day.
+
+ALLOCATIONS: Drama Director - One (1) unit
+
+ALLOCATIONS: Drama Director - One (1) unit
+
+Assistant Drama/Thespian Directors shall be allocated when the number of active student participants exceeds 30 students.
+
+LIMITATIONS:
+
+A teacher may not receive two or more supplements in this area.
+
+M. Extracurricular Activity Sponsors - Senior High Only
+
+QUALIFICATIONS:
+
+QUALIFICATIONS:
+
+Extracurricular activity for supplements for service clubs and interest clubs which meet outside of the regular student day shall be provided. Service club activities must have a minimum of twenty (20) participants, and interest club activities must have a minimum of ten (10) participants,

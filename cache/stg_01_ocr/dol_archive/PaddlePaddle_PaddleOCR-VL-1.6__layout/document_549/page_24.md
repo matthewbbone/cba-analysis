@@ -1,0 +1,38 @@
+FT & PT
+
+<fcel>Packer/Bagger<fcel>FT & PT<lcel><lcel><nl><ucel><fcel>Step<fcel>Months<ecel><nl><fcel>Start<fcel>1<ecel><fcel>Minimum Wage<nl><fcel>3 months<fcel>2<fcel>3<fcel>$6.75<nl><fcel>6 months<fcel>3<fcel>3<fcel>$7.00<nl>
+
+A. Wage Progressions for full-time employees and for part-time employees hired before March 7, 2004:
+
+Attached as "EXHIBIT B".
+
+B. General Wage Increases (G.W.I.):
+
+1. All full-time employees shall receive the March 7, 2004 wage increase added to their rate on the effective date of the increase. The increase for employees who are not at the highest rate in their pay scale shall be treated as an advance on their progression step until the employee's rate equals or exceeds the highest rate in the scale. Subsequent GWIs apply to only those who are at the top of the scale.
+
+<fcel>Effective Date<fcel>3/7/04<fcel>3/6/05<fcel>3/5/06<fcel>3/4/07<nl><fcel>All full-time (per week).<fcel>$25.00<fcel>$25.00<fcel>$25.00<fcel>$25.00<nl>
+
+Effective March 7, 2004, the following classifications shall receive an additional GWI of $1.00 per week: Meat Mgr, Asst. Meat Mgr, Deli Mgr, Bakery Mgr, Grocery Mgr, Customer Service Mgr, Produce Mgr.
+
+Eligible part-time meat cutters will receive full-time GWIs on an hourly basis.
+
+2. All part-time employees shall receive the March 7, 2004 wage increase added to their rate on the effective date of the increase. The increase for employees who are not at the highest rate in their pay scale shall be treated as an advance on their progression step until the employee's rate equals or exceeds the highest rate in the scale. Subsequent GWIs apply to only those who are at the top of the scale.
+
+<fcel>Effective Date<fcel>3/7/04<fcel>3/6/05<fcel>3/5/06<fcel>3/4/07<nl><fcel>All Part-time (per hour):<fcel>$0.30<fcel>$0.25<fcel>$0.25<fcel>$0.25<nl>
+
+Effective Date \(\underline{\text{3/7/04}}\) \(\underline{\text{3/6/05}}\) \(\underline{\text{3/5/06}}\) \(\underline{\text{3/4/07}}\) All Part-time (per hour): $0.30 $0.25 $0.25
+
+C. \(\underline{\text{Part-time Wages}}\): All part-time employees hired on and after March 7, 2004 will receive a start rate established by the Company, a probationary increase after1 month, and every 12 months after that, as shown in the following chart:
+
+After 1 month 30¢
+12 months later (after 13 months) 25¢
+12 months later (after 25 months) 25¢
+12 months later (after 37 months) 25¢
+
+<fcel>After 1 month<fcel>30¢<nl><fcel>12 months later (after 13 months)<fcel>25¢<nl><fcel>12 months later (after 25 months)<fcel>25¢<nl><fcel>12 months later (after 37 months)<fcel>25¢<nl>
+
+Relief Pay
+
+Where there is no Department Manager or Assistant Department Manager running a department, and a Full time Clerk is designated by the Company to run the
+
+department, that individual shall receive a $7.00 per day ($35.00 per week) premium for all full shifts running the department.

@@ -1,0 +1,28 @@
+Accumulated Sick Leave Incentive Plan ............ 34
+Other Absence .................................... 34
+Maternity Leave ................................... 36
+Sabbatical Leave For Study or For Rest
+& Recuperation ................................... 37
+Leave For Personal Business ....................... 39
+Leave of Absence For Military Service ............. 40
+Committee Representation .......................... 41
+Committees ....................................... 41
+Breakfast Program ................................. 43
+Teacher Employment ................................ 43
+Driver Education .................................. 43
+Special Classes ................................... 43
+Bi-Lingual Teachers ................................ 43
+Bureau of Pupil Personnel Services ................. 44
+Cost of Printing Contract .......................... 44
+Central Register .................................. 44
+Separability and Savings ........................... 44
+Fully Bargained Provisions ......................... 45
+Miscellaneous ..................................... 45
+Duration .......................................... 45
+Salary Guides and Calendars ....................... 47-55
+Days School Will Closed ............................ 56
+Negotiating Team .................................. 57
+J. C. Bd. of Ed. Officers and Members .............. 58
+Index ............................................. 59-61
+J.C.E.A. Calendar 1978-79 ......................... 63
+J.C.E.A. Calendar 1979-80 ......................... 64

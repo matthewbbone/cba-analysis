@@ -1,0 +1,205 @@
+<think>
+The user now needs to transcribe the content of a PDF page into text, preserving the original format. First, examine the structure of the page: on the left side is the list of positions, and on the right side are the corresponding amounts for different age groups (0-6, 7-14, 15+). Then there are sections such as "MIDDLE SCHOOL SUPPLEMENTS," followed by subsections a, b, c, etc.
+
+First, process the first section:
+
+Department Chairpersons and Vocational/Team Leader  
+$50.00 per full-time or half-time equivalent teacher in the department or team.  
+
+Then the following positions:
+
+Drama/Thespian  
+Assistant Drama/Thespian  
+Extracurricular Activities  
+Quartering or halving of the supplement shall be permitted  
+
+Then the amounts for each position under the three age groups:
+
+0-6 | 7-14 | 15+  
+---|---|---  
+   |   | 779  
+   |   | 519  
+   |   | One unit - 281  
+   |   | Two units - 563  
+   |   | Three units - 843  
+
+Next comes Forensics, JROTC, Orchestra, Newspaper, Special Duty, Quartering or halving..., Spec. Olympics/, Handicap Coordinator, Student Counsel Advisor, Asst. Stud. Counsel Advisor, Vocal Music, Vocational Agriculture (Regular, Extended), Yearbook, with their respective amounts.
+
+Then Section 5: MIDDLE SCHOOL SUPPLEMENTS
+
+a. Activities Coordinator/Intramurals Coordinator 2500 for both units, 1250 for one. Halving of units shall be permitted  
+b. ATHLETICS  
+Basketball | 559 | 958 | 1159  
+Soccer | 559 | 958 | 1159  
+Track | 459 | 658 | 758  
+Volleyball | 559 | 958 | 1159  
+
+c. EXTRACURRICULAR, INSTRUCTIONAL, AND OTHER SUPPLEMENTS  
+Band Director | 974 | 1365 | 1559  
+Asst. Band/Orchestra | 649 | 910 | 1039  
+
+Dept. Chairperson  
+$20.00 per person, must be three or more persons in the department  
+
+Club Sponsor  
+Halving of the supplement shall be permitted  
+One unit - 281  
+Two units - 563  
+Three units - 843  
+
+Finally, the page number 75 at the bottom.
+
+Now ensure that every word and number is accurate, and preserve the original layout, including line breaks and indentation. Pay attention to the alignment of tables, using Markdown tables where appropriate.
+
+Now begin organizing the content:
+
+---
+
+**Department Chairpersons and Vocational/Team Leader**  
+$50.00 per full-time or half-time equivalent teacher in the department or team.  
+
+**Drama/Thespian**  
+**Assistant Drama/Thespian**  
+**Extracurricular Activities**  
+Quartering or halving of the supplement shall be permitted  
+
+| 0-6 | 7-14 | 15+ |  
+| --- | --- | --- |  
+|     |     | 779 |  
+|     |     | 519 |  
+|     |     | One unit - 281 |  
+|     |     | Two units - 563 |  
+|     |     | Three units - 843 |  
+
+**Forensics**  
+**JROTC**  
+**Orchestra**  
+**Newspaper**  
+**Special Duty**  
+Quartering or halving of the supplement shall be permitted  
+
+**Spec. Olympics/**  
+**Handicap Coordinator**  
+**Student Counsel Advisor**  
+**Asst. Stud. Counsel Advisor**  
+**Vocal Music**  
+**Vocational Agriculture**  
+Regular  
+Extended  
+**Yearbook**  
+
+| 0-6 | 7-14 | 15+ |  
+| --- | --- | --- |  
+|     |     | 1053 |  
+|     |     | 1050 |  
+| 974 | 1365 | 1559 |  
+|     |     | 419 |  
+|     |     | 499 |  
+|     |     | 831 |  
+|     |     | 1053 |  
+|     |     | 702 |  
+|     |     | 779 |  
+|     |     | 889 |  
+|     |     | 1102 |  
+|     |     | 838 |  
+
+**5. MIDDLE SCHOOL SUPPLEMENTS**  
+a. Activities Coordinator/Intramurals Coordinator 2500 for both units, 1250 for one. Halving of units shall be permitted  
+b. **ATHLETICS**  
+Basketball | 559 | 958 | 1159  
+Soccer | 559 | 958 | 1159  
+Track | 459 | 658 | 758  
+Volleyball | 559 | 958 | 1159  
+
+c. **EXTRACURRICULAR, INSTRUCTIONAL, AND OTHER SUPPLEMENTS**  
+Band Director | 974 | 1365 | 1559  
+Asst. Band/Orchestra | 649 | 910 | 1039  
+
+**Dept. Chairperson**  
+$20.00 per person, must be three or more persons in the department  
+
+**Club Sponsor**  
+Halving of the supplement shall be permitted  
+One unit - 281  
+Two units - 563  
+Three units - 843  
+
+75  
+
+---
+
+Now check each section for accuracy, ensuring that no information is omitted and that the formatting matches the original. For example, the amount for Orchestra is 974 under 0-6, 1365 under 7-14, and 1559 under 15+. The same applies to other positions. Also, verify the spelling of terms like "Intramurals" and "Extracurricular."
+
+Once verified, output the final result.
+</think>
+
+Department Chairpersons and Vocational/Team Leader  
+$50.00 per full-time or half-time equivalent teacher in the department or team.  
+
+Drama/Thespian  
+Assistant Drama/Thespian  
+Extracurricular Activities  
+Quartering or halving of the supplement shall be permitted  
+
+| 0-6 | 7-14 | 15+ |  
+| --- | --- | --- |  
+|     |     | 779 |  
+|     |     | 519 |  
+|     |     | One unit - 281 |  
+|     |     | Two units - 563 |  
+|     |     | Three units - 843 |  
+
+Forensics  
+JROTC  
+Orchestra  
+Newspaper  
+Special Duty  
+Quartering or halving of the supplement shall be permitted  
+
+Spec. Olympics/  
+Handicap Coordinator  
+Student Counsel Advisor  
+Asst. Stud. Counsel Advisor  
+Vocal Music  
+Vocational Agriculture  
+Regular  
+Extended  
+Yearbook  
+
+| 0-6 | 7-14 | 15+ |  
+| --- | --- | --- |  
+|     |     | 1053 |  
+|     |     | 1050 |  
+| 974 | 1365 | 1559 |  
+|     |     | 419 |  
+|     |     | 499 |  
+|     |     | 831 |  
+|     |     | 1053 |  
+|     |     | 702 |  
+|     |     | 779 |  
+|     |     | 889 |  
+|     |     | 1102 |  
+|     |     | 838 |  
+
+5. MIDDLE SCHOOL SUPPLEMENTS  
+a. Activities Coordinator/Intramurals Coordinator 2500 for both units, 1250 for one. Halving of units shall be permitted  
+b. ATHLETICS  
+Basketball | 559 | 958 | 1159  
+Soccer | 559 | 958 | 1159  
+Track | 459 | 658 | 758  
+Volleyball | 559 | 958 | 1159  
+
+c. EXTRACURRICULAR, INSTRUCTIONAL, AND OTHER SUPPLEMENTS  
+Band Director | 974 | 1365 | 1559  
+Asst. Band/Orchestra | 649 | 910 | 1039  
+
+Dept. Chairperson  
+$20.00 per person, must be three or more persons in the department  
+
+Club Sponsor  
+Halving of the supplement shall be permitted  
+One unit - 281  
+Two units - 563  
+Three units - 843  
+
+75

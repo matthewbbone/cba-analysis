@@ -1,0 +1,51 @@
+The user wants the text from the image transcribed verbatim.
+
+1.  **Identify the sections:** The text is divided into numbered paragraphs (12) through (17), with sub-points (a), (b), (c).
+2.  **Transcribe (12):**
+    *   "(12) Vacation due will be prorated from the preceding January 1 to the date of leaving for the following employees:"
+    *   "(a) Employee who resigns in or after the eleventh (11th) calendar year and who gives the Company at least two (2) weeks' notice in advance of his/her resignation. [This two (2) weeks' advance notice is working time and is exclusive of vacation time.]"
+    *   "(b) Employee who is discharged in or after the eleventh (11th) calendar year."
+    *   "(c) Employee who is laid off for lack of work or for reasons beyond his/her control."
+3.  **Transcribe (13):**
+    *   "(13) In determining the amount of pay to which an employee is entitled in lieu of vacation upon termination of employment as outlined in paragraph (12) above, employment for fifteen (15) calendar days in the same month shall count as a full month, but employment for less than that shall not count at all."
+4.  **Transcribe (14):**
+    *   "(14) When a holiday, as listed in Article XXXII, paragraph (1), occurs during an employee's scheduled vacation, that employee shall be entitled, at his/her option, to an extra day's vacation or pay in lieu thereof, provided the employee gives notice of his/her option at the time the vacation is scheduled."
+5.  **Transcribe (15):**
+    *   "(15) When an employee is to be retired, he/she may at his/her option either:"
+    *   "(a) At any time within the six (6) months before the retirement date take all remaining vacation."
+    *   "(b) At any time within the six (6) months before the retirement date take all vacation earned in the previous year prior to that retirement date and for that portion of the vacation earned since the preceding January 1st, receive pay in lieu of vacation."
+6.  **Transcribe (16):**
+    *   "(16) (a) If an employee is disabled for regular work and is on the Workers' Compensation payroll and has not been able to take vacation due for that year, that employee shall be paid the regular wage for vacation time and also the compensation payment for that length of time."
+    *   "(b) If an employee is hospitalized, during their vacation period, the number of days verified as hospital confinement may be rescheduled as vacation, provided the vacation time can be rescheduled in the same calendar year."
+7.  **Transcribe (17):**
+    *   "(17) Employees called back to work from vacation shall be paid one and one-half (1-1/2) times their regular rate for all work performed, or two (2) times"
+8.  **Transcribe page number:** "27"
+
+Review against image to ensure accuracy of punctuation and capitalization. The transcription looks accurate.
+</think>
+
+(12) Vacation due will be prorated from the preceding January 1 to the date of leaving for the following employees:
+
+(a) Employee who resigns in or after the eleventh (11th) calendar year and who gives the Company at least two (2) weeks' notice in advance of his/her resignation. [This two (2) weeks' advance notice is working time and is exclusive of vacation time.]
+
+(b) Employee who is discharged in or after the eleventh (11th) calendar year.
+
+(c) Employee who is laid off for lack of work or for reasons beyond his/her control.
+
+(13) In determining the amount of pay to which an employee is entitled in lieu of vacation upon termination of employment as outlined in paragraph (12) above, employment for fifteen (15) calendar days in the same month shall count as a full month, but employment for less than that shall not count at all.
+
+(14) When a holiday, as listed in Article XXXII, paragraph (1), occurs during an employee's scheduled vacation, that employee shall be entitled, at his/her option, to an extra day's vacation or pay in lieu thereof, provided the employee gives notice of his/her option at the time the vacation is scheduled.
+
+(15) When an employee is to be retired, he/she may at his/her option either:
+
+(a) At any time within the six (6) months before the retirement date take all remaining vacation.
+
+(b) At any time within the six (6) months before the retirement date take all vacation earned in the previous year prior to that retirement date and for that portion of the vacation earned since the preceding January 1st, receive pay in lieu of vacation.
+
+(16) (a) If an employee is disabled for regular work and is on the Workers' Compensation payroll and has not been able to take vacation due for that year, that employee shall be paid the regular wage for vacation time and also the compensation payment for that length of time.
+
+(b) If an employee is hospitalized, during their vacation period, the number of days verified as hospital confinement may be rescheduled as vacation, provided the vacation time can be rescheduled in the same calendar year.
+
+(17) Employees called back to work from vacation shall be paid one and one-half (1-1/2) times their regular rate for all work performed, or two (2) times
+
+27

@@ -1,0 +1,17 @@
+APPENDIX B
+
+<fcel>DATE<fcel>DAY<fcel>HOLIDAY<nl>
+<fcel>November 26, 1981<fcel>Thursday<fcel>Thanksgiving Day<nl>
+<fcel>November 27<fcel>Friday<ecel><nl>
+<fcel>December 24<fcel>Thursday<fcel>Christmas - New Year's Recess<nl>
+<fcel>December 25<fcel>Friday<ecel><nl>
+<fcel>December 28<fcel>Monday<ecel><nl>
+<fcel>December 29<fcel>Tuesday<ecel><nl>
+<fcel>December 30<fcel>Wednesday<ecel><nl>
+<fcel>December 31<fcel>Thursday<ecel><nl>
+<fcel>January 1, 1982<fcel>Friday<ecel><nl>
+<fcel>January 15<fcel>Friday<fcel>Martin Luther King, Jr.'s Birthday<nl>
+<fcel>February 15<fcel>Monday<fcel>President's Day<nl>
+<fcel>May 31<fcel>Monday<fcel>Memorial Day<nl>
+<fcel>July 5<fcel>Monday<fcel>Independence Day<nl>
+<fcel>September 6<fcel>Monday<fcel>Labor Day<nl>

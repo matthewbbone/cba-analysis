@@ -1,0 +1,148 @@
+The user wants the text from the image transcribed verbatim.
+
+1.  **Identify the structure:** The page contains a table-like structure with headers and rows of data.
+2.  **Transcribe headers:**
+    *   "Eff. November 10, 1962"
+    *   "Eff. February 8, 1964"
+    *   "Classification"
+    *   "per Hour", "Per 40-Hour Week", "Per Hour", "Per 40-Hour Week"
+3.  **Transcribe body content row by row:**
+    *   "First Grocery Clerk"
+    *   "Total Store Volume:"
+    *   "$10,000 to $12,000 2.5625 $102.50 $2.6875 $107.50" (Note: there's a speck or mark after 107.50, looks like a typo or artifact, I will transcribe the numbers clearly).
+    *   "12,000 to 15,000 2.675 107.00 2.80 112.00"
+    *   "15,000 to 25,000 2.7625 110.50 2.8875 115.50"
+    *   "25,000 to 35,000 2.8375 113.50 2.9625 118.50"
+    *   "Over 35,000 2.9125 116.50 3.0375 121.50"
+    *   "First Produce Clerk"
+    *   "Total Produce Volume:"
+    *   "$1,000 to $1,200 2.50 100.00 2.625 105.00"
+    *   "1,200 to 1,500 2.6187 104.75 2.7437 109.75"
+    *   "1,500 to 2,500 2.7125 108.50 2.8375 113.50"
+    *   "2,500 to 3,500 2.7875 111.50 2.9125 116.50"
+    *   "Over 3,500 2.8625 114.50 2.9875 119.50"
+    *   "Head Meat Cutter"
+    *   "Meat Volume:"
+    *   "Up to $2,000 2.9125 116.50 3.05 122.00"
+    *   "2,000 to 3,000 2.9875 119.50 3.125 125.00"
+    *   "3,000 to 4,000 3.0375 121.50 3.175 127.00"
+    *   "4,000 to 5,000 3.1125 124.50 3.25 130.00"
+    *   "5,000 to 7,500 3.1625 126.50 3.30 132.00"
+    *   "7,500 to 10,000 3.2125 128.50 3.35 134.00"
+    *   "10,000 to 15,000 3.2875 131.50 3.425 137.00"
+    *   "Over 15,000 3.3125 132.50 3.45 138.00"
+    *   "First Meat Cutter"
+    *   "(In Markets with meat volume over $5,000) 2.70 108.00 2.8375 113.50"
+    *   "Journeyman Meat Cutter"
+    *   "Full Time 2.6375 105.50 2.775 111.00"
+    *   "Part Time 2.6375 — 2.775 —"
+    *   "Apprentice Meat Cutter"
+    *   "First 3 months 1.75 75.50 2.025 81.00"
+    *   "Second 3 months 1.875 80.50 2.15 86.00"
+    *   "Second 6 months 2.0625 88.00 2.3375 93.50"
+    *   "Second year 2.25 95.50 2.525 101.00"
+    *   "Thereafter to Journeyman Rate"
+    *   "23"
+
+4.  **Formatting:** Use Markdown to represent the layout as closely as possible, likely just plain text with spacing or a markdown table if it fits perfectly, but the prompt asks for verbatim text. I will use spacing to mimic the columns.
+
+Let's refine the transcription.
+Header:
+Eff. November 10, 1962    Eff. February 8, 1964
+Classification    per Hour    Per 40-Hour Week    Per Hour    Per 40-Hour Week
+
+Body:
+First Grocery Clerk
+Total Store Volume:
+$10,000 to $12,000 2.5625 $102.50 $2.6875 $107.50
+12,000 to 15,000 2.675 107.00 2.80 112.00
+15,000 to 25,000 2.7625 110.50 2.8875 115.50
+25,000 to 35,000 2.8375 113.50 2.9625 118.50
+Over 35,000 2.9125 116.50 3.0375 121.50
+
+First Produce Clerk
+Total Produce Volume:
+$1,000 to $1,200 2.50 100.00 2.625 105.00
+1,200 to 1,500 2.6187 104.75 2.7437 109.75
+1,500 to 2,500 2.7125 108.50 2.8375 113.50
+2,500 to 3,500 2.7875 111.50 2.9125 116.50
+Over 3,500 2.8625 114.50 2.9875 119.50
+
+Head Meat Cutter
+Meat Volume:
+Up to $2,000 2.9125 116.50 3.05 122.00
+2,000 to 3,000 2.9875 119.50 3.125 125.00
+3,000 to 4,000 3.0375 121.50 3.175 127.00
+4,000 to 5,000 3.1125 124.50 3.25 130.00
+5,000 to 7,500 3.1625 126.50 3.30 132.00
+7,500 to 10,000 3.2125 128.50 3.35 134.00
+10,000 to 15,000 3.2875 131.50 3.425 137.00
+Over 15,000 3.3125 132.50 3.45 138.00
+
+First Meat Cutter
+(In Markets with meat volume over $5,000) 2.70 108.00 2.8375 113.50
+
+Journeyman Meat Cutter
+Full Time 2.6375 105.50 2.775 111.00
+Part Time 2.6375 — 2.775 —
+
+Apprentice Meat Cutter
+First 3 months 1.75 75.50 2.025 81.00
+Second 3 months 1.875 80.50 2.15 86.00
+Second 6 months 2.0625 88.00 2.3375 93.50
+Second year 2.25 95.50 2.525 101.00
+Thereafter to Journeyman Rate
+
+23
+</think>
+
+Eff. November 10, 1962
+Eff. February 8, 1964
+Classification
+per Hour
+Per 40-Hour Week
+Per Hour
+Per 40-Hour Week
+
+First Grocery Clerk
+Total Store Volume:
+$10,000 to $12,000 2.5625 $102.50 $2.6875 $107.50
+12,000 to 15,000 2.675 107.00 2.80 112.00
+15,000 to 25,000 2.7625 110.50 2.8875 115.50
+25,000 to 35,000 2.8375 113.50 2.9625 118.50
+Over 35,000 2.9125 116.50 3.0375 121.50
+
+First Produce Clerk
+Total Produce Volume:
+$1,000 to $1,200 2.50 100.00 2.625 105.00
+1,200 to 1,500 2.6187 104.75 2.7437 109.75
+1,500 to 2,500 2.7125 108.50 2.8375 113.50
+2,500 to 3,500 2.7875 111.50 2.9125 116.50
+Over 3,500 2.8625 114.50 2.9875 119.50
+
+Head Meat Cutter
+Meat Volume:
+Up to $2,000 2.9125 116.50 3.05 122.00
+2,000 to 3,000 2.9875 119.50 3.125 125.00
+3,000 to 4,000 3.0375 121.50 3.175 127.00
+4,000 to 5,000 3.1125 124.50 3.25 130.00
+5,000 to 7,500 3.1625 126.50 3.30 132.00
+7,500 to 10,000 3.2125 128.50 3.35 134.00
+10,000 to 15,000 3.2875 131.50 3.425 137.00
+Over 15,000 3.3125 132.50 3.45 138.00
+
+First Meat Cutter
+(In Markets with meat volume over $5,000) 2.70 108.00 2.8375 113.50
+
+Journeyman Meat Cutter
+Full Time 2.6375 105.50 2.775 111.00
+Part Time 2.6375 — 2.775 —
+
+Apprentice Meat Cutter
+First 3 months 1.75 75.50 2.025 81.00
+Second 3 months 1.875 80.50 2.15 86.00
+Second 6 months 2.0625 88.00 2.3375 93.50
+Second year 2.25 95.50 2.525 101.00
+Thereafter to Journeyman Rate
+
+23

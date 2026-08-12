@@ -56,6 +56,7 @@ RESERVED_SERVE_OPTIONS = frozenset(
         "--gpu-memory-utilization",
         "--language-model-only",
         "--max-model-len",
+        "--max-num-seqs",
         "--mm-encoder-attn-backend",
         "--nnodes",
         "--port",
@@ -107,6 +108,7 @@ def build_serve_command(
     tokenizer_dir: Path | None = None,
     chat_template: Path | None = None,
     extra_serve_args: list[str] | None = None,
+    max_num_seqs: int | None = None,
 ) -> list[str]:
     """Build the argv for a vLLM OpenAI-compatible server process."""
     validate_extra_serve_args(extra_serve_args)
@@ -136,6 +138,8 @@ def build_serve_command(
     if gpu_memory_utilization is not None:
         command.extend(["--gpu-memory-utilization", str(gpu_memory_utilization)])
     command.extend(["--tensor-parallel-size", str(num_gpus)])
+    if max_num_seqs is not None:
+        command.extend(["--max-num-seqs", str(max_num_seqs)])
     if num_gpus > 1:
         command.extend(["--distributed-executor-backend", "mp", "--nnodes", "1"])
     if extra_serve_args:
@@ -392,11 +396,14 @@ class VLLMServer:
         gpu_memory_utilization: float | None = None,
         language_only: bool = False,
         extra_serve_args: list[str] | None = None,
+        max_num_seqs: int | None = None,
     ):
         if num_gpus < 1:
             raise ValueError("num_gpus must be at least 1")
         if gpu_memory_utilization is not None and not 0 < gpu_memory_utilization <= 1:
             raise ValueError("gpu_memory_utilization must be greater than 0 and at most 1")
+        if max_num_seqs is not None and max_num_seqs < 1:
+            raise ValueError("max_num_seqs must be at least 1")
         validate_extra_serve_args(extra_serve_args)
         
         self.model_name = model_name
@@ -404,6 +411,7 @@ class VLLMServer:
         self.max_model_len = max_model_len
         self.num_gpus = num_gpus
         self.gpu_memory_utilization = gpu_memory_utilization
+        self.max_num_seqs = max_num_seqs
         self.extra_serve_args = list(extra_serve_args or [])
         self.server = None
         self.client = None
@@ -492,6 +500,7 @@ class VLLMServer:
             tokenizer_dir=tokenizer_dir,
             chat_template=chat_template,
             extra_serve_args=self.extra_serve_args,
+            max_num_seqs=self.max_num_seqs,
         )
         
         env = os.environ.copy()
@@ -520,6 +529,7 @@ class VLLMServer:
             f"max_model_len={self.max_model_len}\n"
             f"num_gpus={self.num_gpus}\n"
             f"gpu_memory_utilization={self.gpu_memory_utilization}\n"
+            f"max_num_seqs={self.max_num_seqs}\n"
             f"extra_serve_args={self.extra_serve_args!r}\n"
             f"CUDA_VISIBLE_DEVICES={env.get('CUDA_VISIBLE_DEVICES')}\n"
             f"torch_cuda_device_count={torch_cuda_count}\n"

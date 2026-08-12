@@ -1,0 +1,19 @@
+21-2. The desirable median class size in elementary and secondary schools shall be 30 pupils, exclusive of health and physical education classes. Insofar as special education and kindergarten are concerned, State guidelines shall be followed, and these classes will not be used in computations to arrive at the median class size stated above.
+
+ARTICLE 22
+
+PROTECTION OF TEACHERS, STUDENTS,
+
+AND PROPERTY
+
+22-1. The Board will provide such legal services as may be necessary to any teacher on whom any assault and/or assault and battery is made during the course of his-her employment.
+
+22-2. When absence arises out of or from assault or injury while acting in discharge of duties, the teacher shall be entitled to full salary and other benefits for the period of such absence but shall not forfeit any sick leave or personal leave.
+
+22-3. Teachers shall immediately report cases of assault, physical or verbal, suffered by them in connection with their employment to their principal or other immediate superior.
+
+22-3.1. Such notifications shall be immediately forwarded to the Superintendent, who shall comply with any reasonable request from the teacher for information in the possession of the Superintendent relating to the incident or the persons involved, and shall act in appropriate ways as liaison between the teacher, the police, and the courts.
+
+22-4. If criminal or civil proceedings are brought against a teacher alleging that he-she committed an assault in connection with his-her employment, the Board of Education shall furnish legal counsel to defend him-her in such proceedings.
+
+22-5. Whenever any civil or administrative action has been or shall be brought (except an action, civil or administrative, instituted by the Board) against the teacher for any act or omission arising out of and in the course of the performance of his or her duties,

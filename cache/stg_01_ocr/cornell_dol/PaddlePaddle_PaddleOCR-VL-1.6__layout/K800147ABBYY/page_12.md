@@ -1,0 +1,15 @@
+earns a minor holiday and subsequently terminates employment prior to taking the rescheduled day off with pay, shall be compensated for such holiday. In the event the earning of a holiday is anticipated and the employee terminates employment prior to actually earning the anticipated holiday, the employee shall reimburse the Employer for the holiday taken, but not earned.
+
+Payment specified in Section 5 of this Article shall be applicable only if the employee works on the day on which the minor holiday has been rescheduled.
+
+Section 3. A permanent full-time employee on a Monday through Friday work week shall be paid for any holiday listed in Section 1 of this Article, provided the employee was scheduled to work on that day and if the employee was in an active pay status on the last half of the employee's scheduled work day immediately prior and the first half of the employee's scheduled work day immediately subsequent thereto. If a holiday occurs while employees are on leave without pay under Article 14, Section 3, they shall be paid for the holiday provided they were scheduled to work on that day and if the employees were in active pay status the last half of their scheduled work day immediately prior and the first half of their scheduled work day immediately subsequent to the leave without pay.
+
+An employee who is on long term leave without pay (longer than one full pay period) and returns to active pay status on the day immediately prior and immediately subsequent to a holiday will not be paid for the holiday unless the leave without pay has terminated and the employee continues in active pay status.
+
+If a holiday is observed while a permanent full-time employee is on sick leave, annual, or other paid leave status, the employee will receive holiday pay and the day will not be charged against sick, annual, or other paid leave credits.
+
+An employee who is scheduled to work on a holiday and is absent from work for an unauthorized reason on that day shall be ineligible to receive the holiday, holiday pay or compensatory time off.
+
+Section 4. Permanent full-time employees working other than a regular Monday through Friday work week shall be guaranteed the same number of days off with pay equal to the number of paid holidays received by the employees on a regular Monday through Friday schedule, subject to the same entitlement requirements.
+
+Section 5. Compensation for Work on a Holiday: If a permanent full-time employee works on any of the holidays set forth in Section 1 of this Article, the employee shall be compensated at 1 1/2 times the employee's regular hourly rate of pay for all hours worked on said holiday. The employee shall receive paid time off for all hours worked on a holiday up to a full shift. If the employee works during the employee's regularly scheduled shift on a holiday, the paid time off shall be in lieu of holiday pay under Section 3 above. Paid time off for time worked outside of the employee's regularly scheduled shift on a holiday shall not be in lieu of such holiday pay.

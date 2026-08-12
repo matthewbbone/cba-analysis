@@ -1,0 +1,31 @@
+The user wants the text from the image transcribed exactly.
+
+1.  **Section 2-2**: "Management Responsibilities: The School Board has the right and obligation to manage efficiently and conduct the operation of the school district within its legal limitations and with its primary obligation to provide educational opportunity for the students of the school district."
+2.  **Section 2-3**: "Effect of Laws, Rules, and Regulations: All employees covered by this Agreement shall perform the teaching and nonteaching services prescribed by the School Board and shall be governed by the laws of the State of Minnesota, federal laws, and by School Board rules, regulations, and directions issued by properly designated officials of the school district."
+3.  **Section 2-4**: "Reservation of Board's Rights and Duties: This Agreement is not intended to abrogate the statutory power of the School Board of the school district to make rules and regulations to manage and to direct all the operations and activities to the full extent authorized by law, relative to anything whatever necessary for the proper establishment, maintenance, and management of the public school system."
+4.  **Article III Header**: "ARTICLE III FEDERATION RIGHTS"
+5.  **Section 3-1**: "Recognition: In accordance with PELRA, the Board of Education recognizes the Robbinsdale Federation of Teachers, Local 872, as the exclusive representative of teachers employed by the School Board of Independent School District 281, which exclusive representative shall have those rights and responsibilities as prescribed by the PELRA and as described in the provisions of this Agreement."
+6.  **Section 3-2**: "Meetings Scheduled During Working Hours: When meetings are mutually scheduled by the parties to confer or negotiate during working hours, the teachers upon proper application shall be relieved by substitutes and shall suffer no loss of pay."
+7.  **Section 3-3**: "Federation Business During School Hours: The Federation president may be scheduled for nonteaching time the last teaching period of the day at which time the president may leave the building on Federation business."
+8.  **Section 3-4**: "Use of School Buildings: Upon request to the Community Education Department, or building principal, the Federation shall be permitted to meet within the school at times and under circumstances which will not interfere with the instructional programs of the total school use. Normally, requests for such use shall be at least twenty-four (24) hours in advance. Expenses incident to the meeting, other than those normally a part of school operation, shall be borne by the Federati" (Note: text cuts off at "Federati").
+9.  **Page Number**: "2"
+</think>
+
+2- 2 Management Responsibilities: The School Board has the right and obligation to manage efficiently and conduct the operation of the school district within its legal limitations and with its primary obligation to provide educational opportunity for the students of the school district.
+
+2- 3 Effect of Laws, Rules, and Regulations: All employees covered by this Agreement shall perform the teaching and nonteaching services prescribed by the School Board and shall be governed by the laws of the State of Minnesota, federal laws, and by School Board rules, regulations, and directions issued by properly designated officials of the school district.
+
+2- 4 Reservation of Board's Rights and Duties: This Agreement is not intended to abrogate the statutory power of the School Board of the school district to make rules and regulations to manage and to direct all the operations and activities to the full extent authorized by law, relative to anything whatever necessary for the proper establishment, maintenance, and management of the public school system.
+
+ARTICLE III
+FEDERATION RIGHTS
+
+3- 1 Recognition: In accordance with PELRA, the Board of Education recognizes the Robbinsdale Federation of Teachers, Local 872, as the exclusive representative of teachers employed by the School Board of Independent School District 281, which exclusive representative shall have those rights and responsibilities as prescribed by the PELRA and as described in the provisions of this Agreement.
+
+3- 2 Meetings Scheduled During Working Hours: When meetings are mutually scheduled by the parties to confer or negotiate during working hours, the teachers upon proper application shall be relieved by substitutes and shall suffer no loss of pay.
+
+3- 3 Federation Business During School Hours: The Federation president may be scheduled for nonteaching time the last teaching period of the day at which time the president may leave the building on Federation business.
+
+3- 4 Use of School Buildings: Upon request to the Community Education Department, or building principal, the Federation shall be permitted to meet within the school at times and under circumstances which will not interfere with the instructional programs of the total school use. Normally, requests for such use shall be at least twenty-four (24) hours in advance. Expenses incident to the meeting, other than those normally a part of school operation, shall be borne by the Federati
+
+2

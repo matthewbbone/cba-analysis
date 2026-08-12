@@ -1,0 +1,47 @@
+The user wants the text from the image transcribed verbatim.
+
+1.  **Identify the sections:**
+    *   Heading: "H. CREDIT FOR ADVANCED DEGREES"
+    *   Section 1: "Advance degree credit for placement on the salary schedule shall be as provided below:"
+    *   Subsection a: "The teacher applying for credit for an advanced degree will provide an official college transcript of record showing the award of the earned degree to the Personnel Department."
+    *   Subsection b: "If the transcript does not indicate the date on which the degree was awarded, the teacher will provide additional confirmation that the degree was awarded by either:"
+    *   List items (1), (2), (3).
+    *   Subsection c: "It is understood that the advanced degree shall have been granted by a standard institution or shall have been properly validated as described in the State Board of Education Rules."
+    *   Section 2: "Teachers shall be paid on the salary schedule for persons with a bachelor's degree or its equivalent until such time as an advanced degree is verified, at which time the Board shall adjust the teacher's salary according to his degree or its equivalent. Any payment of back salary shall be made at the end of the next payroll period. Any salary adjustment for advanced degrees earned within the school year shall be retroactive to the date of completion."
+    *   Section I: "Salary adjustments for administrative mistakes in granting salary credit shall be retroactive. The retroactive period for back pay shall include the current year and up to a maximum of five (5) previous years. The teacher shall receive the appropriate back pay, once this is brought to the attention of the Personnel Department, at the end of the next payroll period. If a teacher has been overpaid on the salary schedule, an adjustment on the salary schedule shall be made at the end of the next payroll period, and arrangements shall be made whereby the teacher may take a period of time, up to the end of that school year, to reimburse the Board for such an overpayment. In extreme cases, the time may be extended. Except in cases where a teacher knew or should have known of the overpayment, the total amount due for an overpayment on the salary schedule shall only be retroactive for the school year in which the adjustment is made."
+    *   Section J: "JROTC Instructors shall be paid in accordance with G.2. of this salary article and no less than the difference between their active duty pay and their retirement pay from the military."
+    *   Section K: "A teacher shall be responsible for providing documentation relating to salary credit to the Personnel Department. This shall include current or changed teaching certificates."
+    *   Section L: "This Article shall not diminish salary credits for any currently employed teacher, teacher returning from Board-approved leave, or teacher being re-hired following a reduction in force."
+    *   Page number: "47"
+
+2.  **Transcribe text:**
+    *   H. CREDIT FOR ADVANCED DEGREES
+    *   1. Advance degree credit for placement on the salary schedule shall be as provided below:
+    *   a. The teacher applying for credit for an advanced degree will provide an official college transcript of record showing the award of the earned degree to the Personnel Department.
+    *   b. If the transcript does not indicate the date on which the degree was awarded, the teacher will provide additional confirmation that the degree was awarded by either:
+    *   (1) an updated transcript showing the date of the award;
+    *   (2) a copy of an official letter from the institution indicating the date the degree was awarded; or
+    *   (3) a copy of an official diploma from the institution indicating the date the advanced degree was awarded.
+    *   c. It is understood that the advanced degree shall have been granted by a standard institution or shall have been properly validated as described in the State Board of Education Rules.
+    *   2. Teachers shall be paid on the salary schedule for persons with a bachelor's degree or its equivalent until such time as an advanced degree is verified, at which time the Board shall adjust the teacher's salary according to his degree or its equivalent. Any payment of back salary shall be made at the end of the next payroll period. Any salary adjustment for advanced degrees earned within the school year shall be retroactive to the date of completion.
+    *   I. Salary adjustments for administrative mistakes in granting salary credit shall be retroactive. The retroactive period for back pay shall include the current year and up to a maximum of five (5) previous years. The teacher shall receive the appropriate back pay, once this is brought to the attention of the Personnel Department, at the end of the next payroll period. If a teacher has been overpaid on the salary schedule, an adjustment on the salary schedule shall be made at the end of the next payroll period, and arrangements shall be made whereby the teacher may take a period of time, up to the end of that school year, to reimburse the Board for such an overpayment. In extreme cases, the time may be extended. Except in cases where a teacher knew or should have known of the overpayment, the total amount due for an overpayment on the salary schedule shall only be retroactive for the school year in which the adjustment is made.
+    *   J. JROTC Instructors shall be paid in accordance with G.2. of this salary article and no less than the difference between their active duty pay and their retirement pay from the military.
+    *   K. A teacher shall be responsible for providing documentation relating to salary credit to the Personnel Department. This shall include current or changed teaching certificates.
+    *   L. This Article shall not diminish salary credits for any currently employed teacher, teacher returning from Board-approved leave, or teacher being re-hired following a reduction in force.
+    *   47
+</think>
+
+H. CREDIT FOR ADVANCED DEGREES
+1. Advance degree credit for placement on the salary schedule shall be as provided below:
+a. The teacher applying for credit for an advanced degree will provide an official college transcript of record showing the award of the earned degree to the Personnel Department.
+b. If the transcript does not indicate the date on which the degree was awarded, the teacher will provide additional confirmation that the degree was awarded by either:
+(1) an updated transcript showing the date of the award;
+(2) a copy of an official letter from the institution indicating the date the degree was awarded; or
+(3) a copy of an official diploma from the institution indicating the date the advanced degree was awarded.
+c. It is understood that the advanced degree shall have been granted by a standard institution or shall have been properly validated as described in the State Board of Education Rules.
+2. Teachers shall be paid on the salary schedule for persons with a bachelor's degree or its equivalent until such time as an advanced degree is verified, at which time the Board shall adjust the teacher's salary according to his degree or its equivalent. Any payment of back salary shall be made at the end of the next payroll period. Any salary adjustment for advanced degrees earned within the school year shall be retroactive to the date of completion.
+I. Salary adjustments for administrative mistakes in granting salary credit shall be retroactive. The retroactive period for back pay shall include the current year and up to a maximum of five (5) previous years. The teacher shall receive the appropriate back pay, once this is brought to the attention of the Personnel Department, at the end of the next payroll period. If a teacher has been overpaid on the salary schedule, an adjustment on the salary schedule shall be made at the end of the next payroll period, and arrangements shall be made whereby the teacher may take a period of time, up to the end of that school year, to reimburse the Board for such an overpayment. In extreme cases, the time may be extended. Except in cases where a teacher knew or should have known of the overpayment, the total amount due for an overpayment on the salary schedule shall only be retroactive for the school year in which the adjustment is made.
+J. JROTC Instructors shall be paid in accordance with G.2. of this salary article and no less than the difference between their active duty pay and their retirement pay from the military.
+K. A teacher shall be responsible for providing documentation relating to salary credit to the Personnel Department. This shall include current or changed teaching certificates.
+L. This Article shall not diminish salary credits for any currently employed teacher, teacher returning from Board-approved leave, or teacher being re-hired following a reduction in force.
+47

@@ -1,0 +1,23 @@
+17.3 Unit Member Hours
+
+Unit members shall establish, post, and maintain reasonable office hours, which will meet the educational and programmatic needs of the University. A copy of the notice posted by unit member shall be filed with the unit member's dean or director, or designee.
+
+17.4 Faculty Offices
+
+Office space shall be assigned by the University in a fair and nondiscriminatory manner.
+
+17.5 Assignments Requiring Use of Personal Vehicle or Travel
+
+17.5.1 Unit members shall be eligible for reimbursement of mileage expenses incurred while using a personal vehicle on University business. Reimbursement for vehicle transportation expenses shall be limited to the lower of commercial airfare or the standard vehicle mileage rate allowable for federal income tax purposes.
+
+17.5.2 Unit members incurring expenses while traveling on University business shall be reimbursed in accordance with applicable provisions of University Regulation 05.02.06.
+
+17.6 Relocation
+
+Unit members who are transferred by the University to a work location more than 60 miles from the current work location shall be reimbursed for moving expenses in an amount up to one month's salary at the unit member's current rate of pay. Exceptions shall be as provided in University Regulation 05.02.06. The University shall give at least six (6) months' advance notice to any unit member whom it intends to transfer.
+
+17.7 Outside Activities
+
+17.7.1 Unit Members may engage in outside activities which fall outside of the scope of their University assignment provided they comply with applicable provisions of University Regulation and the provisions of the Alaska Executive Branch Ethics Act, AS 39.52.110 et seq. A copy of the Alaska Executive Branch Ethics Act Handbook will be provided upon request to a unit member by the MAU human resources office or statewide office of human resources.
+
+17.7.2 Outside activities means work or activities which are not within the scope of the regular employment duties of the unit member. It is agreed that outside activities which will increase the effectiveness and broaden the experience of employees in relation to their functions at the University or which will be of service to the community or the state are encouraged, provided outside activities do not interfere with the performance of the employee's regular University duties; and provided the outside activities do not involve the appropriation of University property, facilities, equipment or services.

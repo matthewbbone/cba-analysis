@@ -1,0 +1,13 @@
+1. by the end of his/her appointment period, advise the dean, director or designee that he/she plans to stand for tenure and/or promotion in the upcoming academic year;
+
+2. by September 5th, submit to the appropriate dean or director, or designee, a full file for evaluation, including a CV and, upon request of the dean or director, a list of two (2) external reviewers (no external reviews shall be requested for comprehensive retention reviews or any post-tenure reviews);
+
+3. at the option of the dean or director the file will be transmitted to the department head/chair by the next business day for evaluation. The file shall contain materials appropriate for the purpose of the review being conducted. For comprehensive post tenure review a unit member will submit only a complete CV and Annual Activity Reports in accordance with Article 9.2.4(a);
+
+4. if the department head/chair is requested to provide a written evaluation, the written evaluation shall be provided to the dean or director or designee by September 25. The unit member shall submit any comments in response to the department head/chair's evaluation to the dean or director no later than October 1; and
+
+b. The dean or director or designee shall:
+
+1. when an external review has been requested, distribute the unit member's curriculum vita to the two (2) external reviewers submitted by the unit member and up to two (2) additional external reviewers selected by the dean or director. The reviewers shall be requested to submit their reviews to the dean or director no later than October 1; and
+
+2. by October 1, submit the file to a peer review committee, selected by unit members, with the concurrence of the dean or director or designee, in a department/cluster/unit as determined by the dean or director, with the consent of the unit members. Absent such consent, the provost shall resolve issues over the definition of the appropriate department/cluster/unit. The peer review committee shall be composed at least five (5) tenured faculty at the same or higher rank as the unit member being reviewed, with at least three (3) at the rank of full professor. At UAS these minimums shall be four tenured faculty and three full professors. Committees may determine whether discussions will be open or closed to the public and/or the candidate. The vote of the peer review committee, however, shall be closed to the public and the candidate. The peer review committee's review and recommendation, without individual attribution, shall be provided to the dean or director or

@@ -1,0 +1,27 @@
+The user wants the text from the image transcribed verbatim.
+
+1.  **Transcribe paragraph (2):** "(2) Subject to the availability of funds and the needs of the school system, some selected unit members assigned twelve-month responsibility may receive approval to attend summer school as part of their twelve-month assignment."
+2.  **Transcribe section 4:** "4. Leave to Attend Professional Meetings—Upon written application in advance, and with the recommendation of the appropriate official, the superintendent may grant a unit member leave to attend professional meetings (e.g., conventions, conferences, or committees) as participant or observer without loss of salary."
+3.  **Transcribe section 5:** "5. Leave for Exchange Employment or Overseas Employment—Upon written application in advance and with the recommendation of the superintendent, the Board of Education may grant a leave of absence not to exceed one (1) year for exchange employment or for employment in overseas work. To be eligible, a unit member shall be on permanent status at the time leave is granted. Credit on the appropriate salary schedule for one (1) year of successful experience shall be granted upon verification of completion of one (1) year of satisfactory exchange employment or overseas employment."
+4.  **Transcribe section 6:** "6. Leave for Teaching in a College or University—Upon recommendation of the superintendent, leave up to two (2) full school years may be granted by the Board of Education to a unit member for the purpose of teaching in a college or university. Any remuneration to be paid by the Board of Education to the unit member will be determined by the superintendent, in consultation with the unit member, prior to the time leave is granted. The total of the remuneration by the Board and the regular salary the unit member receives from the college or university shall not exceed the annual salary the unit member would have received had he/she remained in his/her present position in Montgomery County."
+5.  **Transcribe heading "Procedures":** "Procedures"
+6.  **Transcribe subsection a):** "a) Eligibility—To be eligible, a unit member shall be on permanent status at the time leave is granted for the period of leave."
+7.  **Transcribe subsection b):** "b) Benefits—A unit member on leave for teaching shall be treated as a full-time unit member. The unit member's length of service and the right to receive salary increments shall be the same as if he/she had remained in the position he/she held when leave was granted. Sick or annual leave can be neither used nor earned."
+8.  **Transcribe page number:** "28"
+</think>
+
+(2) Subject to the availability of funds and the needs of the school system, some selected unit members assigned twelve-month responsibility may receive approval to attend summer school as part of their twelve-month assignment.
+
+4. Leave to Attend Professional Meetings—Upon written application in advance, and with the recommendation of the appropriate official, the superintendent may grant a unit member leave to attend professional meetings (e.g., conventions, conferences, or committees) as participant or observer without loss of salary.
+
+5. Leave for Exchange Employment or Overseas Employment—Upon written application in advance and with the recommendation of the superintendent, the Board of Education may grant a leave of absence not to exceed one (1) year for exchange employment or for employment in overseas work. To be eligible, a unit member shall be on permanent status at the time leave is granted. Credit on the appropriate salary schedule for one (1) year of successful experience shall be granted upon verification of completion of one (1) year of satisfactory exchange employment or overseas employment.
+
+6. Leave for Teaching in a College or University—Upon recommendation of the superintendent, leave up to two (2) full school years may be granted by the Board of Education to a unit member for the purpose of teaching in a college or university. Any remuneration to be paid by the Board of Education to the unit member will be determined by the superintendent, in consultation with the unit member, prior to the time leave is granted. The total of the remuneration by the Board and the regular salary the unit member receives from the college or university shall not exceed the annual salary the unit member would have received had he/she remained in his/her present position in Montgomery County.
+
+Procedures
+
+a) Eligibility—To be eligible, a unit member shall be on permanent status at the time leave is granted for the period of leave.
+
+b) Benefits—A unit member on leave for teaching shall be treated as a full-time unit member. The unit member's length of service and the right to receive salary increments shall be the same as if he/she had remained in the position he/she held when leave was granted. Sick or annual leave can be neither used nor earned.
+
+28

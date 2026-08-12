@@ -41,26 +41,47 @@ def move_source(
     src_cache: Path,
     dst_cache: Path,
     dry_run: bool,
+    document_ids: Sequence[str] | None = None,
 ) -> list[Path]:
     src_dir = src_cache / stage / source
     dst_dir = dst_cache / stage / source
 
     if not src_dir.exists():
+        if document_ids is not None:
+            print(f"  [warn] extraction source not found: {src_dir}")
+            return []
         raise SystemExit(f"source not found: {src_dir}")
     if not src_dir.is_dir():
         raise SystemExit(f"source is not a directory: {src_dir}")
 
-    files = [path for path in src_dir.rglob("*") if path.is_file()]
     # Document identity comes from the stage layout, not an extraction
     # filename: <extraction-model>/<document-id>/.  Keeping this at exactly two
     # levels also handles nested extraction artifacts and empty document dirs.
-    doc_rel_dirs = sorted(
+    all_doc_rel_dirs = sorted(
         document_dir.relative_to(src_dir)
         for model_dir in src_dir.iterdir()
         if model_dir.is_dir()
         for document_dir in model_dir.iterdir()
         if document_dir.is_dir()
     )
+    selected_ids = None if document_ids is None else set(document_ids)
+    doc_rel_dirs = [
+        rel_dir
+        for rel_dir in all_doc_rel_dirs
+        if selected_ids is None or rel_dir.parts[1] in selected_ids
+    ]
+    if selected_ids is None:
+        files = [path for path in src_dir.rglob("*") if path.is_file()]
+    else:
+        files = sorted(
+            path
+            for rel_dir in doc_rel_dirs
+            for path in (src_dir / rel_dir).rglob("*")
+            if path.is_file()
+        )
+        matched_ids = _extracted_document_ids(doc_rel_dirs)
+        for document_id in sorted(selected_ids - set(matched_ids)):
+            print(f"  [warn] no extraction found for selected document: {document_id}")
 
     print(f"copying {len(files)} file(s)")
     print(f"  from {src_dir}")
@@ -115,14 +136,19 @@ def move_ocr_artifacts(
     src_cache: Path,
     dst_cache: Path,
     dry_run: bool,
+    document_ids: Sequence[str] | None = None,
 ) -> None:
     src_stage_dir = src_cache / input_stage / source
     dst_stage_dir = dst_cache / input_stage / source
-    document_ids = _extracted_document_ids(doc_rel_dirs)
+    selected_document_ids = (
+        _extracted_document_ids(doc_rel_dirs)
+        if document_ids is None
+        else sorted(set(document_ids))
+    )
 
     print(
         "copying OCR full/page artifact file(s) for "
-        f"{len(document_ids)} extracted document(s)"
+        f"{len(selected_document_ids)} selected document(s)"
     )
     print(f"  from {src_stage_dir}")
     print(f"    to {dst_stage_dir}")
@@ -142,7 +168,7 @@ def move_ocr_artifacts(
     matched_documents: set[str] = set()
     matched_model_documents = 0
     for model_dir in model_dirs:
-        for document_id in document_ids:
+        for document_id in selected_document_ids:
             document_dir = model_dir / document_id
             artifacts = _ocr_artifacts(document_dir)
             if not artifacts:
@@ -157,9 +183,9 @@ def move_ocr_artifacts(
                     _copy_file(artifact, dst_stage_dir / rel)
                 copied += 1
 
-    for document_id in sorted(set(document_ids) - matched_documents):
+    for document_id in sorted(set(selected_document_ids) - matched_documents):
         print(
-            "  [warn] no OCR full/page artifacts for extracted document: "
+            "  [warn] no OCR full/page artifacts for selected document: "
             f"{document_id}"
         )
 
@@ -205,6 +231,18 @@ def main(argv: Sequence[str] | None = None) -> None:
     parser.add_argument(
         "source",
         help=f"source folder to copy (e.g. {', '.join(KNOWN_SOURCES)})",
+    )
+    parser.add_argument(
+        "--document-id",
+        "--document-ids",
+        dest="document_ids",
+        metavar="DOCUMENT_ID",
+        nargs="+",
+        action="extend",
+        help=(
+            "copy only these document IDs; accepts one or more values and may "
+            "be repeated"
+        ),
     )
     parser.add_argument(
         "--stage",
@@ -261,7 +299,12 @@ def main(argv: Sequence[str] | None = None) -> None:
         raise SystemExit("source and destination cache are the same directory")
 
     doc_rel_dirs = move_source(
-        args.source, args.stage, src_cache, dst_cache, args.dry_run
+        args.source,
+        args.stage,
+        src_cache,
+        dst_cache,
+        args.dry_run,
+        document_ids=args.document_ids,
     )
 
     if not args.no_ocr:
@@ -272,6 +315,7 @@ def main(argv: Sequence[str] | None = None) -> None:
             src_cache,
             dst_cache,
             args.dry_run,
+            document_ids=args.document_ids,
         )
 
 

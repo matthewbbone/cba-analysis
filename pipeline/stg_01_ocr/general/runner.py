@@ -1,4 +1,4 @@
-"""General Ovis2.6 OCR runner."""
+"""General-purpose Hugging Face vision-language OCR runner."""
 
 from __future__ import annotations
 
@@ -78,8 +78,11 @@ async def transcribe(context: PageContext) -> str:
 
 
 SPEC = common.RunnerSpec(
-    name="ovis2.6",
-    description="OCR PDFs page-by-page through Ovis2.6 on vLLM.",
+    name="general-vlm",
+    description=(
+        "OCR PDFs page-by-page with any Hugging Face vision-language model "
+        "supported by vLLM."
+    ),
     default_model_name=DEFAULT_MODEL_NAME,
     transcribe=transcribe,
 )

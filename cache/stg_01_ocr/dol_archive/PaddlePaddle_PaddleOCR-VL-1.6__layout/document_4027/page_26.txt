@@ -1,0 +1,15 @@
+Section 9.03 The said Welfare Fund shall be administered pursuant to an Agreement and Declaration of Trust administered jointly by representatives of the NECA Chapter and the IBEW Unions. If any Employer fails to make contributions to said Welfare Fund as provided in this Agreement no later than the 20th day following the end of each calendar month, he shall be subject to having this Agreement terminated upon seventy-two hours notice in writing being served by the Union; provided the individual Employer fails to show satisfactory proof that the required payments have been paid to the Line Construction Benefit Fund. In addition, if suit is instituted to collect any delinquent payment, the Employer shall also be liable for such interest, damages, fees and costs as are provided for by law.
+
+***From 2/29/2016 to 3/1/2020 All LINECO increases mandated by LINECO Trustees during the term of the Agreement shall be figured from the total package wage of the Journeyman Lineman. The contribution amount will be used for all employees covered by this Agreement.
+
+(Note: The total package rate will be calculated based on the Journeyman Lineman rate and that difference will be deducted from all classifications.)
+
+***Effective 1/2/17 the LINECO contribution shall be $5.50
+
+HEALTH REIMBURSEMENT ACCOUNT (HRA)
+
+Section 9.04 Each Employer agrees to pay into the Line Construction Benefit Fund (LINECO)/Health Reimbursement Account (HRA) three percent (3%) of the gross labor payroll paid to all employees covered by this Agreement. The contributions of the employers shall be used to provide retirement benefits to eligible employees and/or their dependents in such a form and amount as the trust Agreement and plan document may determine and to provide funds for the organization and administration expenses of the plan.
+
+Section 9.05 The Employer agrees to be bound by the terms and conditions of the Trust documents and by the actions of the trustees, excluding any action prohibited by law or which diverts from the purposes for which the Trust was created and to make available to the LINECO/HRA trustees such information and records as will enable the trustees to perform their functions.
+
+Section 9.06 The said LINECO/HRA shall be administered pursuant to the Agreement and Declaration of Trust administered jointly by a Representative of the NECA Chapter and IBEW Local 51. If any Employer fails to make contributions to said Welfare Fund as provided in this Agreement no later than the \(20^{th}\) day following the end of each month, he shall be subject to having this Agreement

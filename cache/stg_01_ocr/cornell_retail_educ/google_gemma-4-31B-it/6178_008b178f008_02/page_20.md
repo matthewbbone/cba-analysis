@@ -1,0 +1,32 @@
+Birthday is celebrated only on January 15, the actual anniversary of
+Dr. King's birth. It is a paid holiday for those permanent full-time
+employees regularly scheduled to work that day.
+
+4. Employees required to work on any of the holidays listed in
+paragraph 1 (also December 28, 1981 and December 30, 1981 during the 1981-82
+academic year) shall be paid at the rate of time and one-half for all hours
+worked on those days in addition to their straight-time pay.
+
+5. Employees required to work on any of the other University
+holidays, as scheduled in each area, will receive an equal amount of
+compensatory time off within ten (10) days preceding or succeeding the
+holiday, or at the option of the Employer shall receive straight-time
+pay for the hours worked in addition to their straight-time holiday pay.
+
+6. Any employee whose regular day off falls on a holiday shall
+receive an equal amount of compensatory time off within ten (10) days
+preceding or succeeding the holiday or at the option of the Employer
+shall receive an additional day's straight-time pay therefor.
+
+7. If a University holiday falls during the employee's vacation
+period, the employee is paid for the holiday and not for a vacation day.
+With the supervisor's prior approval, another vacation day is scheduled
+or added on to the vacation period.
+
+8. In order to be entitled to holiday pay, an employee must work
+his/her regularly scheduled workday preceding and following the holiday
+except when an employee is absent because of illness or injury, and
+receives sick leave pay for the day[s] involved. The supervisor may
+require that the illness or injury is certified by a physician's note.
+
+-18-

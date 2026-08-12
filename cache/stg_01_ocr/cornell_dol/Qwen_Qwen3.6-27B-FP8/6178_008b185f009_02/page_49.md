@@ -1,0 +1,36 @@
+The user wants the text from the image transcribed exactly.
+
+1.  **Transcribe Header:** "12-5 Schedule of Payments and Payment Practices:"
+2.  **Transcribe Section 12-5-1:** "12-5-1 Number of Payments: Teachers may select one of the following options."
+3.  **Transcribe Subsection a:** "a. Their annual salary will be payable in 26 equal installments."
+4.  **Transcribe Paragraph under a:** "Their annual salary will be payable in 20 equal installments of 1/26 the annual salary each and one final payment to balance the contract."
+5.  **Transcribe Subsection b:** "b. Their annual salary will be payable in 21 equal installments."
+6.  **Transcribe Section 12-5-2:** "12-5-2 Selection: Such selection must be made in writing before August 15 of any school year and shall remain in force year after year unless changed in writing by the teacher. New teachers shall select their options at the time of signing their contract."
+7.  **Transcribe Section 12-5-3:** "12-5-3 Paydays: All salary payments to 38, 40 and 42 week teaching staff members shall begin the second Friday after they report for their duties and will be paid bi-weekly afterwards. All teachers on more than 38 week assignments will be paid at regular bi-weekly intervals to coincide with the regular payroll dates."
+8.  **Transcribe Section 12-5-4:** "12-5-4 Effect of Holidays and Recesses: When the date for regular salary payment occurs on a holiday or recess, salary checks shall be paid on the school day nearest to the date for regular salary payment."
+9.  **Transcribe Section 12-5-5:** "12-5-5 Payment Location: Salary checks shall be sent to the building in which the teacher works. Itinerant teachers may arrange to have their checks delivered to a school which is convenient to them. Substitute teachers shall have their checks mailed to them in time so that they may receive their checks on the same day as other staff members."
+10. **Transcribe Final Paragraph:** "Beginning January 1, 1979, teachers may choose to have their checks deposited directly to their financial institution, provided 20 percent of the unit apply for this option by December 1, 1978, and computer capability is available."
+11. **Transcribe Page Number:** "38"
+</think>
+
+12-5 Schedule of Payments and Payment Practices:
+
+12-5-1 Number of Payments: Teachers may select one of the following options.
+
+a. Their annual salary will be payable in 26 equal installments.
+
+Their annual salary will be payable in 20 equal installments of 1/26 the annual salary each and one final payment to balance the contract.
+
+b. Their annual salary will be payable in 21 equal installments.
+
+12-5-2 Selection: Such selection must be made in writing before August 15 of any school year and shall remain in force year after year unless changed in writing by the teacher. New teachers shall select their options at the time of signing their contract.
+
+12-5-3 Paydays: All salary payments to 38, 40 and 42 week teaching staff members shall begin the second Friday after they report for their duties and will be paid bi-weekly afterwards. All teachers on more than 38 week assignments will be paid at regular bi-weekly intervals to coincide with the regular payroll dates.
+
+12-5-4 Effect of Holidays and Recesses: When the date for regular salary payment occurs on a holiday or recess, salary checks shall be paid on the school day nearest to the date for regular salary payment.
+
+12-5-5 Payment Location: Salary checks shall be sent to the building in which the teacher works. Itinerant teachers may arrange to have their checks delivered to a school which is convenient to them. Substitute teachers shall have their checks mailed to them in time so that they may receive their checks on the same day as other staff members.
+
+Beginning January 1, 1979, teachers may choose to have their checks deposited directly to their financial institution, provided 20 percent of the unit apply for this option by December 1, 1978, and computer capability is available.
+
+38

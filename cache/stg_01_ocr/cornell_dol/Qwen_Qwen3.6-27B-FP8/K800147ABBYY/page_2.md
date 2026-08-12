@@ -1,0 +1,33 @@
+The user wants the text from the image transcribed exactly.
+
+1.  **Identify the text blocks:**
+    *   "AGREEMENT"
+    *   "BETWEEN"
+    *   "COMMONWEALTH OF PENNSYLVANIA"
+    *   "AND"
+    *   "DISTRICT 1199P, SERVICE EMPLOYEES INTERNATIONAL UNION, AFL-CIO, CLC"
+    *   "July 1, 2003 to June 30, 2007"
+
+2.  **Transcribe:**
+    AGREEMENT
+    BETWEEN
+    COMMONWEALTH OF PENNSYLVANIA
+    AND
+    DISTRICT 1199P, SERVICE EMPLOYEES
+    INTERNATIONAL UNION, AFL-CIO, CLC
+
+    July 1, 2003 to June 30, 2007
+</think>
+
+AGREEMENT
+
+BETWEEN
+
+COMMONWEALTH OF PENNSYLVANIA
+
+AND
+
+DISTRICT 1199P, SERVICE EMPLOYEES
+INTERNATIONAL UNION, AFL-CIO, CLC
+
+July 1, 2003 to June 30, 2007

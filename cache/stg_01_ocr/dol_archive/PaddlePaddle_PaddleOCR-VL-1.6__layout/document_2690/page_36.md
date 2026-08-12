@@ -1,0 +1,13 @@
+b. Disciplinary action up to termination may take effect immediately upon notice to the unit member. Termination may take effect five days after notice to the unit member and United Academics, during which time the unit member may be suspended without pay, at the discretion of the University.
+
+11.3.2 Disciplinary action shall proceed according to the process set forth herein in cases of academic incompetence involving demonstrated inability to perform assigned professional responsibilities in an adequate manner.
+
+a. The University shall provide the written findings of the investigation and the proposed disciplinary action to the unit member, United Academics, and the MAU disciplinary committee, a standing committee composed of three (3) unit members appointed by United Academics.
+
+b. Within ten (10) days of receipt of the findings, the MAU disciplinary committee shall conduct a due process hearing on the record at which the unit member, with assistance from a designated United Academics representative or other counsel, shall be provided the opportunity to respond to the findings and a University representative may respond. The hearing shall be closed to all except the parties (i.e., the committee, the unit member, a United Academics representative, and administration representatives), unless otherwise agreed to by the parties.
+
+c. Within ten (10) days of the conclusion of the hearing, the MAU disciplinary committee shall provide its recommendation and the reasons therefore on the proposed disciplinary action to the dean or director, the unit member and United Academics. Normally the dean or director will accept the recommendation and proceed accordingly except in compelling circumstances wherein the dean or director believes that the best interests of the University would not be served in accepting the recommendation. If the dean or director intends to take an action other than that recommended by the committee, a meeting of the dean or director and the committee shall be convened prior to step d. below to discuss the matter.
+
+d. The University shall provide the unit member and United Academics written notice of disciplinary action. The notice shall be provided in advance of a meeting with the unit member. The notice shall include notice that the unit member may have the right to challenge the disciplinary action as provided in Article 7. If the unit member does not attend the meeting, the notice shall be mailed to the unit member's last known address, with a copy to United Academics.
+
+e. Disciplinary actions taken pursuant to Article 11.3.2 shall be considered substantive academic judgments and shall not be subject to the grievance or arbitration process. However, an allegation that the disciplinary action

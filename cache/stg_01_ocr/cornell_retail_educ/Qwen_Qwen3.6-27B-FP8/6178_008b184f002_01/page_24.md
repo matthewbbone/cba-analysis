@@ -1,0 +1,34 @@
+The user wants the text from the image transcribed verbatim.
+
+1.  **Transcribe the first paragraph:** "Board of Personnel Practices. The examinations shall consist of a written section which shall have a weight of 40%. No person shall be allowed to take the oral section of the examination unless he has passed the written part. The oral interview shall have a weight of 60%. The Board of Personnel Practices conducting the oral interview shall include professional educators not regularly employed by the Board of Education."
+2.  **Transcribe section 16-2:** "16-2. The positions of Superintendent of Schools, First Assistant Superintendent of Schools and Assistant Superintendent of Schools are not within the scope of this promotional policy."
+3.  **Transcribe section 16-3:** "16-3. Positions covered by this policy are as follows: Director, High School Principal, Assistant Director, Grammar School Principal, High School Vice Principal, Supervisor, Primary Principal, Grammar School Assistant Principal, and Assistant Supervisor."
+4.  **Transcribe section 16-4:** "16-4. It is agreed that, in administering this policy: Vacancies to be filled shall be publicized in all schools within ten (10) school days after an opening occurs."
+5.  **Transcribe section 16-5:** "16-5. All publicity and notices of such vacancies and positions shall set forth qualifications for and duties of the position."
+6.  **Transcribe section 16-6:** "16-6. Promotional examinations shall be held within sixty (60) days following said announcement, Any necessary extension of this period shall be made by mutual agreement between the Office of the Superintendent of Schools and the Association."
+7.  **Transcribe section 16-7:** "16-7. Vacancies arising may be filled on a temporary basis until they can be filled in accordance with the provisions of Section 4, 5 and 6 of this Article."
+8.  **Transcribe section 16-8:** "16-8. All vacancies and positions shall be filled without regard to race, age, creed, color, religion, nationality, sex, or marital status."
+9.  **Transcribe page number:** "18"
+</think>
+
+Board of Personnel Practices. The examinations shall consist of a written section which shall have a weight of 40%. No person shall be allowed to take the oral section of the examination unless he has passed the written part. The oral interview shall have a weight of 60%. The Board of Personnel Practices conducting the oral interview shall include professional educators not regularly employed by the Board of Education.
+
+16-2. The positions of Superintendent of Schools, First Assistant Superintendent of Schools and Assistant Superintendent of Schools are not within the scope of this promotional policy.
+
+16-3. Positions covered by this policy are as follows:
+
+Director, High School Principal, Assistant Director, Grammar School Principal, High School Vice Principal, Supervisor, Primary Principal, Grammar School Assistant Principal, and Assistant Supervisor.
+
+16-4. It is agreed that, in administering this policy:
+
+Vacancies to be filled shall be publicized in all schools within ten (10) school days after an opening occurs.
+
+16-5. All publicity and notices of such vacancies and positions shall set forth qualifications for and duties of the position.
+
+16-6. Promotional examinations shall be held within sixty (60) days following said announcement, Any necessary extension of this period shall be made by mutual agreement between the Office of the Superintendent of Schools and the Association.
+
+16-7. Vacancies arising may be filled on a temporary basis until they can be filled in accordance with the provisions of Section 4, 5 and 6 of this Article.
+
+16-8. All vacancies and positions shall be filled without regard to race, age, creed, color, religion, nationality, sex, or marital status.
+
+18

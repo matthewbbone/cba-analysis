@@ -56,6 +56,28 @@ class OcrDiscoveryTests(unittest.TestCase):
             output_root / "source_a" / "org_model" / "doc_1",
         )
 
+    def test_discovers_a_selected_list_of_document_ids(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir) / "cache"
+            output_root = root / "stg_01_ocr"
+            source_dir = root / "source_a"
+            source_dir.mkdir(parents=True)
+            for document_id in ("doc_1", "doc_2", "doc_3"):
+                (source_dir / f"{document_id}.pdf").write_bytes(b"%PDF")
+
+            documents = discover_documents(
+                root,
+                output_root,
+                model_name="org/model",
+                source_filter="source_a",
+                document_id_filter=["doc_3", "doc_1"],
+            )
+
+        self.assertEqual(
+            [document.document_id for document in documents],
+            ["doc_1", "doc_3"],
+        )
+
     def test_stage_output_defaults_to_cache_dir_and_stage_name(self) -> None:
         with patch.dict("os.environ", {"CACHE_DIR": "/tmp/cba-cache"}):
             self.assertEqual(default_stage_output_root(), Path("/tmp/cba-cache/stg_01_ocr"))

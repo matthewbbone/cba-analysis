@@ -1,0 +1,37 @@
+full time capacity for three (3) consecutive months or more during the sick leave year, shall be paid, on a pro rata basis from their employment anniversary date for sick leave for which they were eligible during the said sick leave year, but which they did not use. Such unused sick leave must be paid within thirty (30) days after the anniversary date of the sick leave year.
+
+31.03 All regular full time employees hired on or after June 16, 1991 and on or before June 18, 1994, shall be entitled to receive ten (10) days for each sick leave year of their employment.
+
+31.04 All regular full time employees hired on or after June 19, 1994 shall after completing three (3) consecutive months of full time employment with the employer be eligible to receive, one (1) day paid sick leave (eight (8) hours per day pay) for each full month of employment to a maximum of four (4) days in the first sick leave year of their employment, thereafter, they shall receive six (6) days sick leave (eight (8) hours pay per day), in the second sick leave year of their employment and eight (8) days sick leave (eight (8) hours pay per day) in the third sick leave year of their employment. After the completion of three (3) years employment ten (10) days sick leave (eight (8) hours pay per day) in each sick leave year.
+
+31.05 At the end of each sick leave year, full time employees shall be paid for any sick days which were earned and not taken, provided they are in the employ of the Employer in a full time capacity on the last day of each sick leave year. Such unused sick leave must be paid within thirty (30) days after the completion of the sick leave year.
+
+31.06 Regular part time employees hired on or before June 18, 1994 shall receive twenty (20) hours paid sick leave in each sick leave year.
+
+Part time employees, after two (2) years of service shall be paid for unused sick days at the end of each sick leave year, on the basis of four (4) hours straight time pay for each unused day. Such payment shall be made on a pro rata basis the first time that a part time employee becomes eligible.
+
+31.07 Part time employees hired after June 19, 1994 and prior to September 24, 2006 shall receive five (5) sick days to a maximum of twenty (20) hours.
+
+Unused sick days will be paid after three (3) years of employment.
+
+31.08 Regular part time employees hired on or after September 24, 2006 shall receive paid sick leave commencing with the first scheduled day's absence due to illness on the following basis:
+
+After one (1) year of continuous service four (4) hours sick leave
+
+pay for each four (4) months of employment to a maximum of three (3) days, twelve (12) hours.
+
+After two (2) years employment four (4) hours sick leave pay for each four (4) months of employment to a maximum of three (3) days twelve (12) hours.
+
+After three (3) years employment four (4) hours sick leave pay for each three (3) months of employment to a maximum of four (4) days sixteen (16) hours.
+
+After four (4) years employment four (4) hours sick leave pay to a maximum of five (5) days twenty (20) hours per year.
+
+Pay for unused sick days shall be after the completion of three (3) years of employment.
+
+31.09 A part time employee who has completed at the time of reclassification three (3) months service and who is promoted to a full time position shall be eligible for full time sick leave benefits immediately upon the promotion. Such employee shall receive no payment for unused sick leave earned as a part time employee.
+
+31.10 Any employee covered by the Agreement who falsifies sick leave or who knowingly tries to collect sick leave under false pretenses, shall be liable to instant dismissal.
+
+31.11 In order to be eligible for sick leave, all employees must notify the Employer of their inability to report to work no later than two (2) hours prior to their scheduled starting time on the first (1st) day of absence, if able, and as often as reasonably possible thereafter if such illness extends beyond one (1) day.
+
+31.12 In the event of permanent layoff of an employee, full time or part time, they shall receive payment for fifty percent (50%) of unused sick days, provided that said employee was otherwise eligible to receive pay for unused sick days.

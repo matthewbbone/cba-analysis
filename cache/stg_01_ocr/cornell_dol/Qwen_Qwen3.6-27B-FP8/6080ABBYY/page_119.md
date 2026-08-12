@@ -1,0 +1,145 @@
+The user wants the text from the image transcribed verbatim.
+
+1.  **Identify the structure:** The document is a table with headers "NO.", "POSITION", and steps 1 through 17. There are section headers like "MAIL CENTER", "MATERIALS MANAGEMENT AND FUEL SERVICES", etc.
+2.  **Transcribe headers:**
+    *   "MAIL CENTER"
+    *   "(Each step represents a six-month increment except step 17. Step 17 occurs one full year after step 16.)"
+    *   "NO. POSITION STEP 1 STEP 2 ... STEP 17"
+3.  **Transcribe rows:** Go row by row, transcribing the ID, Position name, and the dollar amounts for each step.
+    *   J02879 Lead Mail Center Coordinator** ... $18.11 ...
+    *   J01063 Mail Center Coordinator ... $15.73 ...
+    *   "MATERIALS MANAGEMENT AND FUEL SERVICES"
+    *   J01033 Materials Management Clerk ...
+    *   J01034 Senior Fuel Services Clerk ...
+    *   "REAL ESTATE"
+    *   J01070 Real Estate Technical Assistant ...
+    *   "RECORDS"
+    *   J01054 Records Clerk ...
+    *   J01053 Senior Records Clerk ...
+    *   "SHAREOWNER SERVICES"
+    *   J01004 Shareowner Services Representative ...
+    *   "MISCELLANEOUS"
+    *   J01069 Administrative Services Clerk ...
+    *   J01065 Clerk ...
+    *   J01068 Corporate Receptionist ...
+    *   J01023 Document Management Technician ...
+    *   J01060 Graphics Technician I ...
+    *   J01059 Graphics Technician II ...
+    *   J03634 Lead Graphics Technician** ...
+    *   J01067 Stenographer-Receptionist ...
+    *   J01064 Word Processor-Operator ...
+    *   "**Supervisory position"
+    *   "CLERICAL 05/28/06 - 05/26/07"
+4.  **Formatting:** Use spaces or tabs to align columns as best as possible in plain text, or just list the values sequentially. The prompt asks for Markdown tables for visible tables. This entire page is essentially one large table. I will transcribe it as text blocks to preserve the layout as much as possible, or use a markdown table if it fits well. Given the width, a single markdown table might be too wide, but the prompt asks for "Markdown tables for visible tables". I will transcribe the text line by line to preserve the visual structure, as converting this wide, sparse data into a single markdown table might be messy, but I will try to keep the alignment. Actually, the prompt says "Preserve reading order... Use Markdown tables for visible tables." This is a single table. I will transcribe it as text to ensure accuracy and readability, mimicking the layout.
+
+Let's transcribe line by line.
+
+Header:
+MAIL CENTER
+(Each step represents a six-month increment except step 17. Step 17 occurs one full year after step 16.)
+NO. POSITION STEP 1 STEP 2 STEP 3 STEP 4 STEP 5 STEP 6 STEP 7 STEP 8 STEP 9 STEP 10 STEP 11 STEP 12 STEP 13 STEP 14 STEP 15 STEP 16 STEP 17
+
+Row 1:
+J02879 Lead Mail Center Coordinator** .... $18.11 $18.88 $19.37 $20.11 $20.64 $21.38 $21.90 $22.39 $23.15 $23.66 $24.40 $25.16
+
+Row 2:
+J01063 Mail Center Coordinator ......... $15.73 $16.30 $16.85 $17.39 $17.95 $18.44 $19.01 $19.53 $20.11 $20.62 $21.26 $21.81
+
+Section:
+MATERIALS MANAGEMENT AND FUEL SERVICES
+
+Row 3:
+J01033 Materials Management Clerk ....... $13.64 $14.15 $14.72 $15.27 $15.84 $16.41 $17.00 $17.59 $18.19 $18.79 $19.36 $19.94 $20.08 $20.22
+
+Row 4:
+J01034 Senior Fuel Services Clerk ....... $16.82 $17.33 $17.90 $18.42 $18.84 $19.30 $19.73 $20.20 $20.58 $21.02 $21.42 $22.08 $22.56
+
+Section:
+REAL ESTATE
+
+Row 5:
+J01070 Real Estate Technical Assistant .... $19.61 $20.11 $20.59 $21.05 $21.53 $22.02 $22.47 $22.95 $23.42 $23.88 $24.35 $24.83 $25.32
+
+Section:
+RECORDS
+
+Row 6:
+J01054 Records Clerk ................... $13.22 $13.78 $14.30 $14.85 $15.23 $15.63 $16.00 $16.36 $16.80 $17.19 $17.70 $18.20 $18.77 $19.33
+
+Row 7:
+J01053 Senior Records Clerk ............ $18.26 $18.81 $19.36 $19.91 $20.31 $20.70 $21.07 $21.48 $21.85 $22.25 $22.65 $23.36 $23.58
+
+Section:
+SHAREOWNER SERVICES
+
+Row 8:
+J01004 Shareowner Services Representative $15.05 $15.63 $16.14 $16.68 $17.15 $17.57 $18.03 $18.47 $18.95 $19.39 $19.91 $20.51 $21.09 $21.28
+
+Section:
+MISCELLANEOUS
+
+Row 9:
+J01069 Administrative Services Clerk ..... $13.22 $13.78 $14.30 $14.85 $15.23 $15.63 $16.00 $16.36 $16.80 $17.19 $17.70 $18.20 $18.77 $19.33
+
+Row 10:
+J01065 Clerk ......................... $13.22 $13.78 $14.30 $14.85 $15.23 $15.63 $16.00 $16.36 $16.80 $17.19 $17.70 $18.20 $18.77 $19.33
+
+Row 11:
+J01068 Corporate Receptionist ............ $13.22 $13.78 $14.30 $14.85 $15.23 $15.63 $16.00 $16.36 $16.80 $17.19 $17.70 $18.20 $18.77 $19.33
+
+Row 12:
+J01023 Document Management Technician . $18.57 $19.12 $19.68 $20.21 $20.62 $21.07 $21.54 $22.05 $22.47 $23.15 $23.38
+
+Row 13:
+J01060 Graphics Technician I ............. $16.42 $16.97 $17.53 $18.07 $18.65 $19.13 $19.71 $20.23 $20.77 $21.33 $21.99 $22.43
+
+Row 14:
+J01059 Graphics Technician II ............ $15.05 $15.63 $16.14 $16.68 $17.22 $17.76 $18.32 $18.82 $19.37 $19.91 $20.51 $21.09 $21.22 $21.28
+
+Row 15:
+J03634 Lead Graphics Technician** ....... $19.39 $20.11 $20.63 $21.10 $21.60 $22.09 $22.59 $23.07 $23.56 $24.31 $24.54
+
+Row 16:
+J01067 Stenographer-Receptionist ......... $13.65 $14.19 $14.73 $15.28 $15.70 $16.10 $16.52 $16.92 $17.29 $17.71 $18.24 $18.78 $19.22 $19.68
+
+Row 17:
+J01064 Word Processor-Operator ......... $13.22 $13.78 $14.30 $14.85 $15.23 $15.63 $16.00 $16.36 $16.80 $17.19 $17.70 $18.20 $18.77 $19.33
+
+Footer:
+**Supervisory position
+CLERICAL 05/28/06 - 05/26/07
+</think>
+
+MAIL CENTER
+(Each step represents a six-month increment except step 17. Step 17 occurs one full year after step 16.)
+NO. POSITION STEP 1 STEP 2 STEP 3 STEP 4 STEP 5 STEP 6 STEP 7 STEP 8 STEP 9 STEP 10 STEP 11 STEP 12 STEP 13 STEP 14 STEP 15 STEP 16 STEP 17
+J02879 Lead Mail Center Coordinator** .... $18.11 $18.88 $19.37 $20.11 $20.64 $21.38 $21.90 $22.39 $23.15 $23.66 $24.40 $25.16
+J01063 Mail Center Coordinator ......... $15.73 $16.30 $16.85 $17.39 $17.95 $18.44 $19.01 $19.53 $20.11 $20.62 $21.26 $21.81
+
+MATERIALS MANAGEMENT AND FUEL SERVICES
+J01033 Materials Management Clerk ....... $13.64 $14.15 $14.72 $15.27 $15.84 $16.41 $17.00 $17.59 $18.19 $18.79 $19.36 $19.94 $20.08 $20.22
+J01034 Senior Fuel Services Clerk ....... $16.82 $17.33 $17.90 $18.42 $18.84 $19.30 $19.73 $20.20 $20.58 $21.02 $21.42 $22.08 $22.56
+
+REAL ESTATE
+J01070 Real Estate Technical Assistant .... $19.61 $20.11 $20.59 $21.05 $21.53 $22.02 $22.47 $22.95 $23.42 $23.88 $24.35 $24.83 $25.32
+
+RECORDS
+J01054 Records Clerk ................... $13.22 $13.78 $14.30 $14.85 $15.23 $15.63 $16.00 $16.36 $16.80 $17.19 $17.70 $18.20 $18.77 $19.33
+J01053 Senior Records Clerk ............ $18.26 $18.81 $19.36 $19.91 $20.31 $20.70 $21.07 $21.48 $21.85 $22.25 $22.65 $23.36 $23.58
+
+SHAREOWNER SERVICES
+J01004 Shareowner Services Representative $15.05 $15.63 $16.14 $16.68 $17.15 $17.57 $18.03 $18.47 $18.95 $19.39 $19.91 $20.51 $21.09 $21.28
+
+MISCELLANEOUS
+J01069 Administrative Services Clerk ..... $13.22 $13.78 $14.30 $14.85 $15.23 $15.63 $16.00 $16.36 $16.80 $17.19 $17.70 $18.20 $18.77 $19.33
+J01065 Clerk ......................... $13.22 $13.78 $14.30 $14.85 $15.23 $15.63 $16.00 $16.36 $16.80 $17.19 $17.70 $18.20 $18.77 $19.33
+J01068 Corporate Receptionist ............ $13.22 $13.78 $14.30 $14.85 $15.23 $15.63 $16.00 $16.36 $16.80 $17.19 $17.70 $18.20 $18.77 $19.33
+J01023 Document Management Technician . $18.57 $19.12 $19.68 $20.21 $20.62 $21.07 $21.54 $22.05 $22.47 $23.15 $23.38
+J01060 Graphics Technician I ............. $16.42 $16.97 $17.53 $18.07 $18.65 $19.13 $19.71 $20.23 $20.77 $21.33 $21.99 $22.43
+J01059 Graphics Technician II ............ $15.05 $15.63 $16.14 $16.68 $17.22 $17.76 $18.32 $18.82 $19.37 $19.91 $20.51 $21.09 $21.22 $21.28
+J03634 Lead Graphics Technician** ....... $19.39 $20.11 $20.63 $21.10 $21.60 $22.09 $22.59 $23.07 $23.56 $24.31 $24.54
+J01067 Stenographer-Receptionist ......... $13.65 $14.19 $14.73 $15.28 $15.70 $16.10 $16.52 $16.92 $17.29 $17.71 $18.24 $18.78 $19.22 $19.68
+J01064 Word Processor-Operator ......... $13.22 $13.78 $14.30 $14.85 $15.23 $15.63 $16.00 $16.36 $16.80 $17.19 $17.70 $18.20 $18.77 $19.33
+
+**Supervisory position
+CLERICAL 05/28/06 - 05/26/07

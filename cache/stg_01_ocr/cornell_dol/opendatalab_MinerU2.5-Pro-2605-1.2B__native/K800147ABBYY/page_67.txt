@@ -1,0 +1,23 @@
+STEP 3. An appeal from a deadlocked decision at Step 2 may be initiated by the Union, by written notice of the intent to proceed to arbitration. This notice must be sent within fifteen (15) working days after the deadlocked decision from Step 2 to the Office of Administration (Bureau of Labor Relations), and the affected Employer (Division of Labor Relations) when the appeal is filed.
+
+Arbitration
+
+The impartial arbitrator is to be selected by agreement between the respective Co-Chairpersons of the Joint Pennsylvania State Committee within fifteen (15) working days after the notice has been given. If the parties fail to agree on an impartial arbitrator, either party may request the Bureau of Mediation to submit a list of seven (7) possible arbitrators to the respective Co-Chairpersons.
+
+The Co-Chairpersons shall, within fifteen (15) working days of the receipt of said list, select the arbitrator by alternately striking one name from the list until one name remains. The Employer Chairperson shall strike the first name.
+
+Each case shall be considered on its merits and the collective bargaining agreement shall constitute the basis upon which the decision shall be rendered.
+
+The arbitrator shall neither add to, subtract from, nor modify the provisions of the Agreement.
+
+The arbitrator shall be confined to the precise issue submitted for arbitration and shall have no authority to determine any other issues not so submitted.
+
+A decision of the Step 2 Joint State Committee or by the arbitrator shall be final and binding on both parties. The arbitrator shall be required to issue a decision within thirty (30) days after the close of the hearing.
+
+Time Limits
+
+All of the time limits contained in this section may be modified by mutual agreement. The granting of any modification at any step shall not be deemed to establish a precedent.
+
+Costs
+
+Each party shall bear the costs of preparing and presenting its own case. All fees and expenses of the arbitrator shall be divided equally between the parties, except where one of the parties to this Agreement requests a postponement of a previously scheduled arbitration hearing which results in a postponement charge. The postponing party shall pay such charge unless such postponement results in a settlement of the grievance, in which event the postponement charge shall be divided by the parties.

@@ -1,0 +1,35 @@
+SCHEDULE G
+
+PRIOR SERVICE — LONGEVITY
+
+The annual salary of any teacher who, at the time of the teacher's most recent employment in this system, had previous satisfactory experience as a certified teacher shall be increased within the salary guide in Schedule A as follows: Two hundred ($200) dollars per year for each year of prior experience up to but not exceeding five (5) years of prior service.
+
+Upon completion of 16 years of service in the Jersey City School System—$500.
+
+Upon completion of 20 years of service in the Jersey City School System—$500.
+
+Upon completion of 25 years of service in the Jersey City School System—$500.
+
+Upon completion of 30 years of service in the Jersey City School System—$500.
+
+This payment is in addition to the scheduled salary guide.
+
+
+SCHEDULE H
+
+Pre-Vocational Shop and Related-Work Teachers.. $ 200.
+Teacher in Charge (Annex) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 300.
+Dean of Students . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 350.
+Home Instruction Teachers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 350.
+Hospital Class Teachers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 450.
+Cardiac Class Teachers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 450.
+Remedial Arithmetic . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 550.
+Lip Reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 650.
+Neurologically Impaired . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 650.
+Remedial Reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 650.
+Socially and Emotionally Maladjusted . . . . . . . . . . . . . . . . . . . . . . . . . 650.
+Speech Correction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 650.
+Student Personnel Service . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 650.
+Teachers of the Deaf . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 650.
+Teachers of Sight Conservation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 650.
+Teachers of Mentally Handicapped, Educable & Trainable .

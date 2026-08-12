@@ -1,0 +1,55 @@
+The user wants the text from the image transcribed verbatim.
+
+1.  **Identify the sections:**
+    *   Item 4 (continuation)
+    *   Item i
+    *   Item j
+    *   Item k (with sub-items 1-5)
+    *   Item l
+    *   Item m (with sub-item 1)
+    *   Footer: "Tentative Agreement" and "Page 65 of 77"
+
+2.  **Transcribe text:**
+    *   "4. For the funeral of a deceased unit member, the dean or director, or designee, determines the number of unit members who may attend. Sick leave is permitted, and the attendance must be reported as sick leave."
+    *   "i. Sick leave may be taken as terminal leave only upon approval of the dean or director, or designee. Terminal leave is defined as leave taken during pay periods immediately prior to an identified termination date."
+    *   "j. Sick leave is paid at the unit member's regular rate of pay effective for the time period for which leave is taken. Full payment for accumulated unused sick leave is made to the unit member's estate in the event of the death of a unit member while employed by the University."
+    *   "k. Paid sick leave is discontinued immediately:"
+    *   "1. Upon unit member's return to work status; or"
+    *   "2. Upon determination by the unit member's dean or director, or designee, with professional medical advice that the unit member is able to return to work; or"
+    *   "3. Upon refusal or failure by the unit member to submit clear evidence of a qualifying event on request; or"
+    *   "4. When the unit member is eligible and qualified for long term disability benefits provided in Article 16.1 or disability retirement under the applicable State Retirement System or Social Security; or"
+    *   "5. Upon exhaustion of sick leave."
+    *   "l. Sick leave requests which are not covered in this Agreement, or requests for special consideration, are to be submitted through administrative channels to the regional personnel office. The human resources office, after evaluation, shall forward its recommendations to the appropriate chancellor, or designee, for final determination. Copies of requests, recommendations and final determinations shall be provided to the statewide office of human resources."
+    *   "m. To qualify for sick leave benefits, the unit member is required to make proper notification as follows:"
+    *   "1. The unit member who is absent because of illness must notify or if unable, have another notify his/her dean or director, or designee, within the first hour of the normally scheduled work day. The dean or director, or designee, may exercise discretion to accept other evidence in lieu of either or both of these requirements. If"
+    *   Footer: "Tentative Agreement Page 65 of 77"
+
+3.  **Final Review:** Check against the image for typos and formatting. The transcription looks accurate.
+</think>
+
+4. For the funeral of a deceased unit member, the dean or director, or designee, determines the number of unit members who may attend. Sick leave is permitted, and the attendance must be reported as sick leave.
+
+i. Sick leave may be taken as terminal leave only upon approval of the dean or director, or designee. Terminal leave is defined as leave taken during pay periods immediately prior to an identified termination date.
+
+j. Sick leave is paid at the unit member's regular rate of pay effective for the time period for which leave is taken. Full payment for accumulated unused sick leave is made to the unit member's estate in the event of the death of a unit member while employed by the University.
+
+k. Paid sick leave is discontinued immediately:
+
+1. Upon unit member's return to work status; or
+
+2. Upon determination by the unit member's dean or director, or designee, with professional medical advice that the unit member is able to return to work; or
+
+3. Upon refusal or failure by the unit member to submit clear evidence of a qualifying event on request; or
+
+4. When the unit member is eligible and qualified for long term disability benefits provided in Article 16.1 or disability retirement under the applicable State Retirement System or Social Security; or
+
+5. Upon exhaustion of sick leave.
+
+l. Sick leave requests which are not covered in this Agreement, or requests for special consideration, are to be submitted through administrative channels to the regional personnel office. The human resources office, after evaluation, shall forward its recommendations to the appropriate chancellor, or designee, for final determination. Copies of requests, recommendations and final determinations shall be provided to the statewide office of human resources.
+
+m. To qualify for sick leave benefits, the unit member is required to make proper notification as follows:
+
+1. The unit member who is absent because of illness must notify or if unable, have another notify his/her dean or director, or designee, within the first hour of the normally scheduled work day. The dean or director, or designee, may exercise discretion to accept other evidence in lieu of either or both of these requirements. If
+
+Tentative Agreement
+Page 65 of 77

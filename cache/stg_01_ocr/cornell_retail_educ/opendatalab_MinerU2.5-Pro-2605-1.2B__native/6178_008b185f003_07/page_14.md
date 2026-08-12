@@ -1,0 +1,34 @@
+Supporting Services General Pay Schedule Effective July 1, 1993
+
+<fcel>Pay Grade<fcel>Pay Steps<lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<ucel><fcel>A<fcel>B<fcel>C<fcel>D<fcel>E<fcel>F<fcel>G<fcel>H<fcel>I<fcel>J<nl>
+<fcel>1<fcel>$ 6.89<fcel>$ 7.12<fcel>$ 7.40<fcel>$ 7.71<fcel>$ 7.99<fcel>$ 8.33<fcel>$ 8.66<fcel>$ 8.87<fcel>$ 9.05<fcel>$ 9.24<nl>
+<fcel>2<fcel>7.12<fcel>7.40<fcel>7.71<fcel>7.99<fcel>8.33<fcel>8.66<fcel>9.04<fcel>9.24<fcel>9.43<fcel>9.62<nl>
+<fcel>3<fcel>7.40<fcel>7.71<fcel>7.99<fcel>8.33<fcel>8.66<fcel>9.04<fcel>9.42<fcel>9.59<fcel>9.79<fcel>9.99<nl>
+<fcel>4<fcel>7.71<fcel>7.99<fcel>8.33<fcel>8.66<fcel>9.04<fcel>9.42<fcel>9.79<fcel>9.98<fcel>10.18<fcel>10.39<nl>
+<fcel>5<fcel>7.99<fcel>8.33<fcel>8.66<fcel>9.04<fcel>9.42<fcel>9.79<fcel>10.20<fcel>10.40<fcel>10.61<fcel>10.83<nl>
+<fcel>6<fcel>8.33<fcel>8.66<fcel>9.04<fcel>9.42<fcel>9.79<fcel>10.20<fcel>10.61<fcel>10.84<fcel>11.06<fcel>11.29<nl>
+<fcel>7<fcel>8.66<fcel>9.04<fcel>9.42<fcel>9.79<fcel>10.20<fcel>10.61<fcel>11.08<fcel>11.29<fcel>11.53<fcel>11.76<nl>
+<fcel>8<fcel>9.04<fcel>9.42<fcel>9.79<fcel>10.20<fcel>10.61<fcel>11.08<fcel>11.53<fcel>11.76<fcel>11.99<fcel>12.23<nl>
+<fcel>9<fcel>9.42<fcel>9.79<fcel>10.20<fcel>10.61<fcel>11.08<fcel>11.53<fcel>12.02<fcel>12.26<fcel>12.51<fcel>12.76<nl>
+<fcel>10<fcel>9.79<fcel>10.20<fcel>10.61<fcel>11.08<fcel>11.53<fcel>12.02<fcel>12.59<fcel>12.85<fcel>13.11<fcel>13.38<nl>
+<fcel>11<fcel>10.20<fcel>10.61<fcel>11.08<fcel>11.53<fcel>12.02<fcel>12.59<fcel>13.21<fcel>13.49<fcel>13.75<fcel>14.03<nl>
+<fcel>12<fcel>10.61<fcel>11.08<fcel>11.53<fcel>12.02<fcel>12.59<fcel>13.21<fcel>13.93<fcel>14.20<fcel>14.47<fcel>14.76<nl>
+<fcel>13<fcel>11.08<fcel>11.53<fcel>12.02<fcel>12.59<fcel>13.21<fcel>13.93<fcel>14.57<fcel>14.84<fcel>15.14<fcel>15.45<nl>
+<fcel>14<fcel>11.53<fcel>12.02<fcel>12.59<fcel>13.21<fcel>13.93<fcel>14.57<fcel>15.29<fcel>15.60<fcel>15.91<fcel>16.23<nl>
+<fcel>15<fcel>12.02<fcel>12.59<fcel>13.21<fcel>13.93<fcel>14.57<fcel>15.29<fcel>16.07<fcel>16.41<fcel>16.74<fcel>17.08<nl>
+<fcel>16<fcel>12.59<fcel>13.21<fcel>13.93<fcel>14.57<fcel>15.29<fcel>16.07<fcel>16.85<fcel>17.20<fcel>17.53<fcel>17.88<nl>
+<fcel>17<fcel>13.21<fcel>13.93<fcel>14.57<fcel>15.29<fcel>16.07<fcel>16.85<fcel>17.70<fcel>18.08<fcel>18.44<fcel>18.81<nl>
+<fcel>18<fcel>13.93<fcel>14.57<fcel>15.29<fcel>16.07<fcel>16.85<fcel>17.70<fcel>18.55<fcel>18.93<fcel>19.32<fcel>19.71<nl>
+<fcel>19<fcel>14.57<fcel>15.29<fcel>16.07<fcel>16.85<fcel>17.70<fcel>18.55<fcel>19.51<fcel>19.89<fcel>20.29<fcel>20.70<nl>
+<fcel>20<fcel>15.29<fcel>16.07<fcel>16.85<fcel>17.70<fcel>18.55<fcel>19.51<fcel>20.46<fcel>20.90<fcel>21.32<fcel>21.75<nl>
+<fcel>21<fcel>16.07<fcel>16.85<fcel>17.70<fcel>18.55<fcel>19.51<fcel>20.46<fcel>21.46<fcel>21.89<fcel>22.35<fcel>22.80<nl>
+<fcel>22<fcel>16.85<fcel>17.70<fcel>18.55<fcel>19.51<fcel>20.46<fcel>21.46<fcel>22.44<fcel>22.90<fcel>23.37<fcel>23.84<nl>
+<fcel>23<fcel>17.70<fcel>18.55<fcel>19.51<fcel>20.46<fcel>21.46<fcel>22.44<fcel>23.51<fcel>24.00<fcel>24.48<fcel>24.97<nl>
+<fcel>24<fcel>18.55<fcel>19.51<fcel>20.46<fcel>21.46<fcel>22.44<fcel>23.51<fcel>24.64<fcel>25.12<fcel>25.61<fcel>26.13<nl>
+<fcel>25<fcel>19.51<fcel>20.46<fcel>21.46<fcel>22.44<fcel>23.51<fcel>24.64<fcel>25.77<fcel>26.31<fcel>26.83<fcel>27.37<nl>
+<fcel>26<fcel>20.46<fcel>21.46<fcel>22.44<fcel>23.51<fcel>24.64<fcel>25.77<fcel>26.98<fcel>27.52<fcel>28.06<fcel>28.63<nl>
+<fcel>27<fcel>21.46<fcel>22.44<fcel>23.51<fcel>24.64<fcel>25.77<fcel>26.98<fcel>28.24<fcel>28.83<fcel>29.40<fcel>29.99<nl>
+<fcel>28<fcel>22.44<fcel>23.51<fcel>24.64<fcel>25.77<fcel>26.98<fcel>28.24<fcel>29.57<fcel>30.14<fcel>30.75<fcel>31.37<nl>
+<fcel>29<fcel>23.51<fcel>24.64<fcel>25.77<fcel>26.98<fcel>28.24<fcel>29.57<fcel>30.99<fcel>31.60<fcel>32.23<fcel>32.88<nl>
+<fcel>30<fcel>24.64<fcel>25.77<fcel>26.98<fcel>28.24<fcel>29.57<fcel>30.99<fcel>32.47<fcel>33.13<fcel>33.80<fcel>34.48<nl>

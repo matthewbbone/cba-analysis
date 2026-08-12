@@ -1,0 +1,21 @@
+A postponement charge resulting from a joint postponement request shall be shared equally by the parties.
+
+Either party desiring a record of the proceedings shall pay for the record and make a copy available without charge to the arbitrator.
+
+Section 3. An employee shall be permitted to have a representative of the Union present at each step of the grievance procedure, up to and including Step 2; subject, however, to Section 606, Article VI of the Public Employee Relations Act. Upon request by a Union representative, a Step 1 grievance meeting will be postponed or rescheduled, if necessary, if a Union Representative is temporarily unavailable to the employee. Where this occurs, the time limits for response to the grievance will be suspended during the postponement period.
+
+Delegates
+
+Employees selected by the Union to act as Union representatives shall be known as delegates. The Union shall furnish the Commonwealth with the names and work locations of grievance representatives and shall notify the Commonwealth of any changes.
+
+Lost Time
+
+A reasonable number of witnesses shall be permitted to attend Committee meetings without suffering the loss of any pay, when their presence is required because of the Commonwealth's refusal to accept the witnesses' written statement, as provided for in the attached Rules of Procedure (Appendix F). Grievants shall be treated in exactly the same manner as witnesses under this procedure.
+
+An employee who presents a grievance or sits on a Joint State Committee Panel, shall do so with pay, provided the Union has indicated their desire to have that person participate in the procedure. The number of employees so designated shall not be abused.
+
+State/Agency Wide Grievances
+
+The Union may present grievances concerning agency-wide actions or state-wide actions directly to Step 2 within fifteen (15) working days of the date of the occurrence giving rise to the dispute, or the date when the Union knew, or by reasonable diligence should have known, of its occurrence. However, the Union will meet with the official affected Employer or Office of Administration designee prior to any hearing on such grievances, in order to resolve any factual disputes relating to such Agency-wide or State-wide grievances.
+
+Section 4. The Joint Pennsylvania State Committee will function under the attached Rules of Procedure, which are contained in Appendix E.

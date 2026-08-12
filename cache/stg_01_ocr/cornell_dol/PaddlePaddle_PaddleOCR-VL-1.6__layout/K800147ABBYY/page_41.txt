@@ -1,0 +1,15 @@
+and will be maintained for at least six (6) months, the Trustees will evaluate whether employee cost sharing for employees hired before August 1, 2003, can be reduced or eliminated, provided that at no time shall any such reduction or elimination of cost sharing result in the reserve being reduced below the three (3) months of total projected claims and expenses. Should the Trustees, after evaluating the employee cost sharing, decide that contributions by employees hired before August 1, 2003 will be reduced or eliminated, the reserve will be reviewed on a six (6) month basis by the Fund's actuary. If the actuary certifies that the amount of the reserve has dropped below the three (3) month level, such contributions will resume immediately at the levels established in this Agreement, without any action on the part of the parties or the PEBTF Board of Trustees.
+
+c. Employees hired on or after August 1, 2003 - Employees will contribute one percent (1%) of their biweekly gross salary.
+
+(1) For the first six (6) months of employment, the employee will be offered single coverage in the least costly medical plan offered and available in his/her area, with no supplemental benefits. The employee may opt to purchase medical coverage for the employee's qualifying dependents in the same medical plan as the employee, and/or may opt to purchase a more costly plan in the area by paying the difference in cost between the least costly and the more costly plan, in addition to the one percent (1%) employee contribution.
+
+(2) After completing six (6) months of employment, the employee and his/her qualifying dependents will be eligible for coverage under the Fund’s supplemental benefits, and the employee will be permitted to cover his/her qualifying dependents under the least costly medical plan at no additional cost. If a more costly medical plan is selected, the employee will be required to pay the cost difference between the least costly and more costly plan, in addition to the one percent (1%) employee contribution.
+
+d. Only employees who elect to enroll for PEBTF coverage, including those who enroll only for supplemental benefits, are subject to the employee contributions in this Article. An employee who is only enrolled as a spouse of another PEBTF covered employee is not subject to any required employee contributions.
+
+e. Employee contributions under this Article will be paid to the Fund on a biweekly basis as soon as is practicable using the Employer's standard methods for transferring money. The parties intend that these contributions will be submitted in a more accelerated manner than the Employer contributions. Any employee contributions made pursuant to this Article for the first full pay period in July 2004 and thereafter will be made on a pre-tax basis.
+
+Section 4.
+
+a. Permanent employees who are granted sick leave without pay or parental leave without pay may continue to receive benefits as determined and extended by the Fund for up to six months. Permanent employees who are granted family care leave may continue to receive

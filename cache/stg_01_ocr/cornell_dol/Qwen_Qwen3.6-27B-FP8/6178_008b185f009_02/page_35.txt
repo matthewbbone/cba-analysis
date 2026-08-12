@@ -1,0 +1,68 @@
+The user wants the text from the image transcribed exactly.
+
+1.  **Identify the header:** "8-3-4 Continued"
+2.  **Transcribe the first paragraph:** "equal, among and between buildings, the teacher must designate which of their buildings is to be their assigned building for the school year by October 1 of the school year. This does not apply to part-time teachers even if the teacher possesses the right to retain a full-time position as outlined in 6-18."
+3.  **Identify the section header:** "8- 4 Involuntary Transfers:"
+4.  **Transcribe section 8-4-1:** "8-4-1 Definition: This is a transfer necessitated by reduction of staff whereby a teacher must be transferred to another position in another building. Such transfer out of the building shall be made on the basis of district-wide seniority except as outlined in 8-4-11 and 8-4-12. Such transfers occur after the shifting of assignments has been completed in the building."
+5.  **Transcribe section 8-4-2:** "8-4-2 Shifting Assignments: Shifting assignments within a building and/or department shall be made by the building principal following consultation with the RFT chief building representative and the parties involved before any vacancies are openly declared. Such intra-building distribution known as building settling shall be accomplished on a date set annually by the School Board upon recommendation of the Educational Policies Committee."
+6.  **Transcribe section 8-4-3:** "8-4-3 Names Placed in Pools: Teachers involved in involuntary transfers shall have their names placed in Transfer Pool 1. If the teacher involuntarily transferred does not secure a position during the period of this pool, the teacher's name is automatically placed in Transfer Pool 2. All transfers made during the period of Transfer Pool 2 shall be based on district wide seniority in the teacher's area of teaching."
+7.  **Transcribe section 8-4-4:** "8-4-4 No Bumping: No bumping (domino effect) shall be allowed on the part of any teacher. That is, no teacher may automatically elect to take the position of another teacher with similar licensure and area of teaching who may have less seniority in the district."
+8.  **Transcribe section 8-4-5:** "8-4-5 Transfers Prior to First Posting of Transfer Pool 1: Transfers may be made whenever there is a group of teachers from the same grade level, building, subject area, or department who mutually agree on building assignments, with the consent of the building principals and the personnel office prior to the first posting of Transfer Pool 1."
+9.  **Transcribe section 8-4-6:** "8-4-6 Postings: All district vacancies still unfilled after the shifting of assignments within a building shall be posted on the RFT bulletin boards in each building. The effective date of the first postings of the two transfer pools will be set annually by the School Board upon recommendation of the Educational Policies Committee."
+10. **Transcribe page number:** "24"
+</think>
+
+8-3-4 Continued
+equal, among and between buildings, the teacher must designate
+which of their buildings is to be their assigned building for
+the school year by October 1 of the school year. This does not
+apply to part-time teachers even if the teacher possesses the
+right to retain a full-time position as outlined in 6-18.
+
+8- 4 Involuntary Transfers:
+
+8-4-1 Definition: This is a transfer necessitated by reduction
+of staff whereby a teacher must be transferred to another posi-
+tion in another building. Such transfer out of the building
+shall be made on the basis of district-wide seniority except as
+outlined in 8-4-11 and 8-4-12. Such transfers occur after the
+shifting of assignments has been completed in the building.
+
+8-4-2 Shifting Assignments: Shifting assignments within a
+building and/or department shall be made by the building princ-
+ipal following consultation with the RFT chief building repre-
+sentative and the parties involved before any vacancies are
+openly declared. Such intra-building distribution known as
+building settling shall be accomplished on a date set annually
+by the School Board upon recommendation of the Educational
+Policies Committee.
+
+8-4-3 Names Placed in Pools: Teachers involved in involuntary
+transfers shall have their names placed in Transfer Pool 1. If
+the teacher involuntarily transferred does not secure a
+position during the period of this pool, the teacher's name is
+automatically placed in Transfer Pool 2. All transfers made
+during the period of Transfer Pool 2 shall be based on district
+wide seniority in the teacher's area of teaching.
+
+8-4-4 No Bumping: No bumping (domino effect) shall be allowed on
+the part of any teacher. That is, no teacher may automatically
+elect to take the position of another teacher with similar
+licensure and area of teaching who may have less seniority in
+the district.
+
+8-4-5 Transfers Prior to First Posting of Transfer Pool 1: Trans-
+fers may be made whenever there is a group of teachers from the
+same grade level, building, subject area, or department who
+mutually agree on building assignments, with the consent of the
+building principals and the personnel office prior to the first
+posting of Transfer Pool 1.
+
+8-4-6 Postings: All district vacancies still unfilled after the
+shifting of assignments within a building shall be posted on
+the RFT bulletin boards in each building. The effective date
+of the first postings of the two transfer pools will be set
+annually by the School Board upon recommendation of the Educa-
+tional Policies Committee.
+
+24

@@ -1,0 +1,34 @@
+AGREEMENT
+
+AGREEMENT
+
+between
+
+THE JERSEY CITY
+
+THE JERSEY CITY
+
+BOARD OF EDUCATION
+
+BOARD OF EDUCATION
+
+and
+
+THE JERSEY CITY
+
+THE JERSEY CITY
+EDUCATION ASSOCIATION
+
+EDUCATION ASSOCIATION
+
+covering the period
+
+SEPTEMBER 1, 1978
+
+to
+
+AUGUST 31, 1980
+
+Ratified by the Jersey City Board of Education
+88 Clifton Place
+Jersey City, N. J.

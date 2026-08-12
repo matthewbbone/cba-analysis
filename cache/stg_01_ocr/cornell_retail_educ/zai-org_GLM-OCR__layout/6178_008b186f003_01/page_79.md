@@ -1,0 +1,30 @@
+Special Duty 499
+Quartering or halving of the supplement shall be permitted
+Special Olympics/
+Handicap Coordinator 831
+Team Leader 420
+Vocal Music 442
+
+6. ELEMENTARY SCHOOL
+
+a. Gr. Level Chairperson/Indiv. $50.00 per full-time Graded Exper. (IGE)/Team Leader or half-time equiv. teacher in the grade level(s) or team
+
+b. Special Duty (Quartering or halving of the supplement shall be permitted)
+
+b. Special Duty 499 (Quartering or halving of the supplement shall be permitted)
+
+APPENDIX B-1
+
+SUPPLEMENT DESCRIPTIONS, ALLOCATIONS, AND LIMITATIONS
+
+A. Activities coordinator/intramural coordinator Middle School Only
+
+A. Activities coordinator/intramural coordinator Middle School Only
+
+QUALIFICATIONS:
+
+The activities coordinator must be a certified teacher in the middle school that has been appointed to a full-time or release-time instructional position by the School Board of Orange County. In consultation with the worksite supervisor and the Program Consultant for Extracurricular Activities shall coordinate all athletic and club activities in the middle school.
+
+DUTIES:
+
+The activities coordinator's primary duties shall include: (1) coordinating and scheduling of athletic facilities for athletic events, club activities, and special olympics; (2) arrange for sport officials; (3) arrange for transportation of sport teams; (4) coordinate the recording and maintenance of student eligibility records; (5) arrange for medical examinations for athletic participants; (6) assuring the proper insurance coverage is available for students; (7) attend all home athletic events; (8) prepare the athletic budget; (9) purchase equipment and supplies; (10) account for the distribution, sale, and collection of all tickets and ticket monies; (11) assure compensation for officials and transportation and for athletic teams; (12) represent the school at all district athletic meetings; (13) assist the principal in securing competent personnel for all activities; (14) act aa a liaison between the administration, coaches, and sponsors; (15) assist in supervision necessary for spectator control and secure proper supervision; (16) instruct all personnel in their responsibility and duties pertaining to their assignments; (17) other duties that may be assigned by the worksite supervisor.

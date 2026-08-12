@@ -1,0 +1,23 @@
+way implies agreement with the contents but does acknowledge receipt of the letter. The teacher will be given an opportunity to respond, as provided in Article XI.
+
+7. In unusual circumstances such as the extended illness of a teacher or the evaluator the time limits specified below for completing or responding to an Observation Report(s) and an Assessment Report may be extended. This shall not be construed as extending the time for notice of non-reappointment.
+
+D. Observations of a teacher's performance shall be made in accordance with the following provisions:
+
+1. Observation of a teacher's class by persons other than School Board members, or administrative/supervisory personnel, shall be allowed only after permission has been granted by the principal. The observation shall be scheduled at a mutually agreeable time between the observer and the teacher.
+
+2. A teacher shall be employed for at least sixteen (16) student contact days before any formal observation.
+
+3. If the performance of a teacher holding a continuing contract or a professional service contract of a continuing nature is deemed satisfactory by the principal, the teacher and principal may mutually agree to waive the necessity of a formal classroom observation. All major areas of responsibility on the teacher's Assessment Report relating to classroom performance shall be marked satisfactory.
+
+4. A teacher may request a change in the date or time of a formal observation. A teacher may request an additional observation, and this may be arranged by mutual agreement with the principal.
+
+5. Each formal observation of a teacher shall be followed by a conference held between the teacher and evaluator; this shall be held within ten (10) duty days of the formal observation, except by mutual agreement. Each teacher will be provided a completed copy of the Observation Report for each formal observation and will have ten (10) duty days to respond, in writing, to the Report. The written response shall be a part of the Observation Report. The Observation Report must be signed by the teacher; however, the signature does not necessarily imply agreement with the observation. The Observation Report(s) shall be utilized in preparing the final Assessment Report. Related observations, if completed within five (5) duty days, may be combined in one Observation Report.
+
+E. The assessment of a teacher's performance shall be made in accordance with the following provisions:
+
+1. Electronic monitoring for the purpose of assessment shall not be permitted.
+
+2. The completion of the Assessment Report must be preceded by at least one (1) classroom observation and completion of appropriate Observation Report(s) unless waived.
+
+3. Each teacher shall be provided a copy of his Assessment Report. A conference shall be held between the teacher and evaluator

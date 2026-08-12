@@ -1,0 +1,32 @@
+The user wants the text from the image transcribed exactly.
+
+1.  **Transcribe paragraph (c):**
+    "(c) A lead rate of 55¢ will be paid when two journeyman technicians in substation construction and maintenance, line, gas or line clearance are working as a crew absent an hourly supervisor. The salaried supervisor has sole discretion to designate the lead technician. This payment will not be made when two employees of different classifications are working together excluding those situations where a line technician and an electrician are working as a crew."
+
+2.  **Transcribe paragraph (5):**
+    "( 5) When a line clearance crew is sent out to work without a regular Foreman, the Company shall appoint a qualified employee to act as Foreman. The employee appointed to act as Foreman shall receive the rate of pay as outlined in paragraph (2) of this Article, if the crew consists of three (3) or more employees, including the acting Foreman when acting as Foreman for one (1) or more hours in any one (1) day."
+
+3.  **Transcribe paragraph (6):**
+    "( 6) When a substation crew of three (3) or more employees is sent to work as a crew without a regular substation crew Foreman, a Journeyman will be designated to act in the capacity of Foreman. The Journeyman so designated shall receive a rate of pay as outlined in paragraph (2) of this Article, when acting as Foreman for one (1) or more hours in any one (1) day."
+
+4.  **Transcribe paragraph (7):**
+    "( 7) When there are occasional needs which make it necessary to use qualified employees in higher-paid job classifications for varying periods of time, assignments to higher-paid job classes will be made: (a) when it becomes necessary to operate an older generating plant unit which may not be regularly operated, (b) when the proper complement of employees is needed on the coal crews for more than a five (5) day per week operation, for more than a one (1) shift coal operation at the Nelson Dewey Generating Station, or when it becomes necessary to coal-fire the boilers at the Blackhawk Generating Station, (c) when meter testing schedules are such that temporary additional help is needed for certain testing, (d) when additional truck driving help is needed for short periods in the Area Stores operations, (e) when an additional Offset Press Operator is needed in the Administrative Services section of the General Office, (f) when an Area Stores Material Handler performs Area Stores Truck - Crane Operator duties with the yard load lifter equipment, and (g) when an employee is substituting due to another employee being on a temporary project assignment. (See GOL dated 1-27-93 on this subject.) Substitutions for these exceptions shall be paid as outlined in paragraph (2) of this Article and the employee shall be credited with all hours toward the hours required for advancement to the next wage step in that classification."
+
+5.  **Transcribe paragraph (8):**
+    "( 8) When a position becomes vacant without at least thirty (30) days' notice, Management may fill such positions on a temporary substitute basis for a period of not to exceed sixty (60) days after the position is vacated."
+
+6.  **Transcribe page number:**
+    "36"
+</think>
+
+(c) A lead rate of 55¢ will be paid when two journeyman technicians in substation construction and maintenance, line, gas or line clearance are working as a crew absent an hourly supervisor. The salaried supervisor has sole discretion to designate the lead technician. This payment will not be made when two employees of different classifications are working together excluding those situations where a line technician and an electrician are working as a crew.
+
+( 5) When a line clearance crew is sent out to work without a regular Foreman, the Company shall appoint a qualified employee to act as Foreman. The employee appointed to act as Foreman shall receive the rate of pay as outlined in paragraph (2) of this Article, if the crew consists of three (3) or more employees, including the acting Foreman when acting as Foreman for one (1) or more hours in any one (1) day.
+
+( 6) When a substation crew of three (3) or more employees is sent to work as a crew without a regular substation crew Foreman, a Journeyman will be designated to act in the capacity of Foreman. The Journeyman so designated shall receive a rate of pay as outlined in paragraph (2) of this Article, when acting as Foreman for one (1) or more hours in any one (1) day.
+
+( 7) When there are occasional needs which make it necessary to use qualified employees in higher-paid job classifications for varying periods of time, assignments to higher-paid job classes will be made: (a) when it becomes necessary to operate an older generating plant unit which may not be regularly operated, (b) when the proper complement of employees is needed on the coal crews for more than a five (5) day per week operation, for more than a one (1) shift coal operation at the Nelson Dewey Generating Station, or when it becomes necessary to coal-fire the boilers at the Blackhawk Generating Station, (c) when meter testing schedules are such that temporary additional help is needed for certain testing, (d) when additional truck driving help is needed for short periods in the Area Stores operations, (e) when an additional Offset Press Operator is needed in the Administrative Services section of the General Office, (f) when an Area Stores Material Handler performs Area Stores Truck - Crane Operator duties with the yard load lifter equipment, and (g) when an employee is substituting due to another employee being on a temporary project assignment. (See GOL dated 1-27-93 on this subject.) Substitutions for these exceptions shall be paid as outlined in paragraph (2) of this Article and the employee shall be credited with all hours toward the hours required for advancement to the next wage step in that classification.
+
+( 8) When a position becomes vacant without at least thirty (30) days' notice, Management may fill such positions on a temporary substitute basis for a period of not to exceed sixty (60) days after the position is vacated.
+
+36

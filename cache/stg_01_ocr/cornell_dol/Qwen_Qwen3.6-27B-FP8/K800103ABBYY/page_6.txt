@@ -1,0 +1,48 @@
+B. Grievance - an alleged violation, misinterpretation, or misapplication of the terms of this Agreement.
+C. Employer - the Board of Education or its administrative officers.
+D. Days - working days.
+
+2.2 PROCEDURAL STEPS - Grievances shall be presented and adjusted in the following manner:
+
+A. Step 1 - An employee shall present the grievance orally to his/her immediate supervisor.
+
+B. Step 2 - Any grievance not resolved informally in Step 1 shall be submitted in writing to the immediate supervisor provided that such grievance is submitted within fifteen (15) days following knowledge of the act or condition which is the basis of the complaint. The immediate supervisor shall have five (5) days to give a written decision after receipt of the grievance.
+
+C. Step 3 - If the grievance is not settled in Step 2, the grievant may move it to Step 3 by written notice to the Superintendent of Schools or his/her designee within ten (10) days after receipt of the Step 2 decision. The Superintendent of Schools or his/her designee shall have ten (10) days to give a written decision after receipt of the grievance.
+
+D. Step 4 - If the grievance is not settled in Step 3, the grievant may move it to Step 4 by written notice to the President of the Board of Education within ten (10) days after receipt of the Step 3 decision. The Board shall have twenty (20) days to give a written decision after receipt of the grievance. If the Board chooses not to consider the grievance, they will notify the grievant within ten (10) days, and said grievance may be moved to Step 5 without comment or prejudice.
+
+E. Step 5 - Arbitration Procedure - Any grievance concerning the alleged violation, misinterpretation or misapplication of any provision of this Agreement that has been properly processed through level four of the grievance procedure as set forth above and has not been settled or waived may be appealed to arbitration by the Association by serving written notice on the Board within five (5) days after the Board's answer at level four of the said grievance procedure. If the Association fails to serve such notice of its intention to arbitrate within this time limitation, it shall be deemed to have waived the arbitration and the grievance shall be considered settled.
+
+Selection of Arbitrator - If the Association and the Board are unable to agree upon the selection of an arbitrator within seven (7) days after the Association's notice of appeal to arbitration, either party (upon written notice to the other party) may request the American Arbitration Association to furnish a list of not less than five (5) arbitrators, one (1) of whom shall be designated by the parties as the arbitrator of the grievance. Selection shall be made by the parties alternately striking any name from the list until only one (1) name remains. The final name remaining who is available to serve shall be the arbitrator of the grievance.
+
+Jurisdiction of Arbitrator - The jurisdiction and authority of the arbitrator of the grievance and his/her opinion and award shall be confined to the provision or provisions of this Agreement at issue between the Association and the Board. He/she shall have no authority to add to, alter, amend or modify any provision of this Agreement. The arbitrator's authority shall include the authority initially to determine any issue raised regarding his/her jurisdiction, subject only to judicial stay or intervention. The arbitrator shall not hear or decide more than one (1) grievance without the mutual consent of the Board and the Association. The award in writing of the arbitrator, except if set aside by a court of competent jurisdiction, shall be final and binding on the aggrieved employee or employees, the Association and the Board.
+
+2.3 ARBITRATION EXPENSES - The Association and the Board shall each bear its own expenses in these arbitration proceedings except that they shall share equally the fee and other expenses of the arbitrator in connection with the grievance submitted to him/her.
+
+-2-
+</think>
+
+B. Grievance - an alleged violation, misinterpretation, or misapplication of the terms of this Agreement.
+C. Employer - the Board of Education or its administrative officers.
+D. Days - working days.
+
+2.2 PROCEDURAL STEPS - Grievances shall be presented and adjusted in the following manner:
+
+A. Step 1 - An employee shall present the grievance orally to his/her immediate supervisor.
+
+B. Step 2 - Any grievance not resolved informally in Step 1 shall be submitted in writing to the immediate supervisor provided that such grievance is submitted within fifteen (15) days following knowledge of the act or condition which is the basis of the complaint. The immediate supervisor shall have five (5) days to give a written decision after receipt of the grievance.
+
+C. Step 3 - If the grievance is not settled in Step 2, the grievant may move it to Step 3 by written notice to the Superintendent of Schools or his/her designee within ten (10) days after receipt of the Step 2 decision. The Superintendent of Schools or his/her designee shall have ten (10) days to give a written decision after receipt of the grievance.
+
+D. Step 4 - If the grievance is not settled in Step 3, the grievant may move it to Step 4 by written notice to the President of the Board of Education within ten (10) days after receipt of the Step 3 decision. The Board shall have twenty (20) days to give a written decision after receipt of the grievance. If the Board chooses not to consider the grievance, they will notify the grievant within ten (10) days, and said grievance may be moved to Step 5 without comment or prejudice.
+
+E. Step 5 - Arbitration Procedure - Any grievance concerning the alleged violation, misinterpretation or misapplication of any provision of this Agreement that has been properly processed through level four of the grievance procedure as set forth above and has not been settled or waived may be appealed to arbitration by the Association by serving written notice on the Board within five (5) days after the Board's answer at level four of the said grievance procedure. If the Association fails to serve such notice of its intention to arbitrate within this time limitation, it shall be deemed to have waived the arbitration and the grievance shall be considered settled.
+
+Selection of Arbitrator - If the Association and the Board are unable to agree upon the selection of an arbitrator within seven (7) days after the Association's notice of appeal to arbitration, either party (upon written notice to the other party) may request the American Arbitration Association to furnish a list of not less than five (5) arbitrators, one (1) of whom shall be designated by the parties as the arbitrator of the grievance. Selection shall be made by the parties alternately striking any name from the list until only one (1) name remains. The final name remaining who is available to serve shall be the arbitrator of the grievance.
+
+Jurisdiction of Arbitrator - The jurisdiction and authority of the arbitrator of the grievance and his/her opinion and award shall be confined to the provision or provisions of this Agreement at issue between the Association and the Board. He/she shall have no authority to add to, alter, amend or modify any provision of this Agreement. The arbitrator's authority shall include the authority initially to determine any issue raised regarding his/her jurisdiction, subject only to judicial stay or intervention. The arbitrator shall not hear or decide more than one (1) grievance without the mutual consent of the Board and the Association. The award in writing of the arbitrator, except if set aside by a court of competent jurisdiction, shall be final and binding on the aggrieved employee or employees, the Association and the Board.
+
+2.3 ARBITRATION EXPENSES - The Association and the Board shall each bear its own expenses in these arbitration proceedings except that they shall share equally the fee and other expenses of the arbitrator in connection with the grievance submitted to him/her.
+
+-2-

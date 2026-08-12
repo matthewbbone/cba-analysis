@@ -1,0 +1,28 @@
+C. The Faculty Committee shall have the following functions:
+
+1. To meet with the principal at mutually agreeable times, within three (3) weeks of the request, to discuss problems and/or concerns of the faculty which may result in a smoother operation of the school.
+2. To discuss with the principal the allocation of funds for the purchase of instructional equipment, materials and supplies, and distribution of same, and to provide by February 1 a list of anticipated needs in the areas of instructional equipment, materials and supplies.
+3. To discuss school drives and the collection and expenditure of monies.
+
+1. To meet with the principal at mutually agreeable times, within three (3) weeks of the request, to discuss problems and/or concerns of the faculty which may result in a smoother operation of the school.
+
+2. To discuss with the principal the allocation of funds for the purchase of instructional equipment, materials and supplies, and distribution of same, and to provide by February 1 a list of anticipated needs in the areas of instructional equipment, materials and supplies.
+
+3. To discuss school drives and the collection and expenditure of monies.
+
+ARTICLE XXIV
+MANAGEMENT RIGHTS
+
+The Board, on its own behalf and on behalf of the District, hereby retains and reserves unto itself all powers, rights, authority, duties and responsibilities conferred upon and vested in it by the laws and the Constitution of the State of Florida and the United States except as modified by the specific terms and provisions of this Contract.
+
+ARTICLE XXV
+NO STRIKE CLAUSE
+
+The Association agrees to comply with statutory provisions prohibiting strikes by public employees. In the event of any such violation during the term of the Contract the Association shall endeavor to return the employees to work as quickly as possible by:
+
+A. Delivering immediately to the Board a copy of a notice addressed to all employees repudiating such acts of the employees and ordering them to cease such acts and to return to work.
+B. Taking such other action which it deems reasonable and appropriate to bring about compliance with the terms of this Contract.
+
+A. Delivering immediately to the Board a copy of a notice addressed to all employees repudiating such acts of the employees and ordering them to cease such acts and to return to work.
+
+B. Taking such other action which it deems reasonable and appropriate to bring about compliance with the terms of this Contract.

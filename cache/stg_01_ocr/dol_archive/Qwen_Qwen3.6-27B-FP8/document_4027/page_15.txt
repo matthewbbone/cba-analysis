@@ -1,0 +1,81 @@
+The user wants the text from the image transcribed exactly.
+
+1.  **Transcribe Section 3.17:** "Section 3.17 A representative of the Employer or of the Association, as the case may be, designated to the Union, in writing, shall be permitted to inspect the Referral Procedure records at any time during normal business hours."
+2.  **Transcribe Section 3.18:** "Section 3.18 A copy of the Referral Procedure set forth in this Agreement shall be posted on the bulletin board in the offices of the Local Union and in the offices of the Employers who are parties to this Agreement."
+3.  **Transcribe Section 3.19:** "Section 3.19 Apprentices shall be hired and transferred in accordance with the apprenticeship provisions of the Outside Area Training Agreement."
+4.  **Transcribe Article IV Header:** "ARTICLE IV CLASSIFICATIONS -- WAGE RATES AND PAYMENTS"
+5.  **Transcribe Section 4.01 and Table:**
+    *   Header: "Section 4.01 02/29/16 01/02/17"
+    *   Row 1: "General Lineman Foreman 53.14 52.95"
+    *   Row 2: "Line Crew Foreman 50.22 50.03"
+    *   Row 3: "Journeyman Lineman 47.16 46.97"
+    *   Row 4: "Substation Technician 47.16 46.97"
+    *   Row 5: "Journeyman Signal Technician 47.16 46.97"
+6.  **Transcribe Apprentice Section 1:**
+    *   "Apprentice:"
+    *   "Apprenticeship wages shall be divided into seven (7) 1000 hour periods:"
+    *   "1st period (60% of Lnm.Rate) 28.30 28.18"
+    *   "2nd period (65% of Lnm.Rate) 30.65 30.53"
+    *   "3rd period (70% of Lnm.Rate) 33.01 32.88"
+    *   "4th period (75% of Lnm.Rate) 35.37 35.23"
+    *   "5th period (80% of Lnm.Rate) 37.73 37.58"
+    *   "6th period (85% of Lnm.Rate) 40.09 39.92"
+    *   "7th period (90% of Lnm.Rate) 42.44 42.27"
+7.  **Transcribe Apprentice Section 2:**
+    *   "Apprentice:"
+    *   "Apprenticeship wages shall be divided into six (6) 1000 hour periods:"
+    *   "1st period (60% of Jnymn. Sig. Tech rate) 28.30 28.18"
+    *   "2nd period (65% of Jnymn. Sig. Tech rate) 30.65 30.53"
+    *   "3rd period (70% of Jnymn. Sig. Tech rate) 33.01 32.88"
+    *   "4th period (75% of Jnymn. Sig. Tech rate) 35.37 35.23"
+    *   "5th period (80% of Jnymn. Sig. Tech rate) 37.73 37.58"
+    *   "6th period (90% of Jnymn. Sig. Tech rate) 42.44 42.27"
+8.  **Transcribe Groundman Section:**
+    *   "Groundman-Equipment Operator, Class I 42.47 42.28"
+    *   "(all crawler type equipment larger than D-4, 15 ton crane or larger)"
+9.  **Transcribe Page Number:** "15"
+</think>
+
+Section 3.17 A representative of the Employer or of the Association, as the case may be, designated to the Union, in writing, shall be permitted to inspect the Referral Procedure records at any time during normal business hours.
+
+Section 3.18 A copy of the Referral Procedure set forth in this Agreement shall be posted on the bulletin board in the offices of the Local Union and in the offices of the Employers who are parties to this Agreement.
+
+Section 3.19 Apprentices shall be hired and transferred in accordance with the apprenticeship provisions of the Outside Area Training Agreement.
+
+ARTICLE IV
+CLASSIFICATIONS -- WAGE RATES AND PAYMENTS
+
+Section 4.01
+02/29/16 01/02/17
+General Lineman Foreman 53.14 52.95
+Line Crew Foreman 50.22 50.03
+Journeyman Lineman 47.16 46.97
+Substation Technician 47.16 46.97
+Journeyman Signal Technician 47.16 46.97
+
+Apprentice:
+Apprenticeship wages shall be divided
+into seven (7) 1000 hour periods:
+1st period (60% of Lnm.Rate) 28.30 28.18
+2nd period (65% of Lnm.Rate) 30.65 30.53
+3rd period (70% of Lnm.Rate) 33.01 32.88
+4th period (75% of Lnm.Rate) 35.37 35.23
+5th period (80% of Lnm.Rate) 37.73 37.58
+6th period (85% of Lnm.Rate) 40.09 39.92
+7th period (90% of Lnm.Rate) 42.44 42.27
+
+Apprentice:
+Apprenticeship wages shall be divided
+into six (6) 1000 hour periods:
+1st period (60% of Jnymn. Sig. Tech rate) 28.30 28.18
+2nd period (65% of Jnymn. Sig. Tech rate) 30.65 30.53
+3rd period (70% of Jnymn. Sig. Tech rate) 33.01 32.88
+4th period (75% of Jnymn. Sig. Tech rate) 35.37 35.23
+5th period (80% of Jnymn. Sig. Tech rate) 37.73 37.58
+6th period (90% of Jnymn. Sig. Tech rate) 42.44 42.27
+
+Groundman-Equipment Operator, Class I 42.47 42.28
+(all crawler type equipment larger than
+D-4, 15 ton crane or larger)
+
+15

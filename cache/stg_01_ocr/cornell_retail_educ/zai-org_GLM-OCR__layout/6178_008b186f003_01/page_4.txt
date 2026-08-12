@@ -1,0 +1,25 @@
+ARTICLE I
+
+RECOGNITION
+
+A. The Board hereby recognizes and acknowledges the Orange County Classroom Teachers Association, Inc., as the exclusive bargaining agent and agrees to negotiate with the Association's designated representative pursuant to the provisions of Part II, Chapter 447, Florida Statutes for all certified non-administrative personnel as defined herein, whether under contract or on Board-approved leave of absence.
+
+B. The Association acknowledges and recognizes the School Board of Orange County, Florida, as the duly elected representative of the people of Orange County, Florida, and agrees to negotiate with the Chief Executive Officer or his representative pursuant to the provisions of Part II, Chapter 447, Florida Statutes.
+
+C. The bargaining unit shall be defined as set forth by the Public Employee Relations Commission in Case Number 8H-RC-754-1039, Certificate Number 27, CERTIFICATION OF REPRESENTATION FOLLOWING ELECTION AND ORDER TO NEGOTIATE issued by the Florida Public Employees Relations Commission on the twenty-first day of May, 1975, to wit:
+
+1. INCLUDED: All certified non-administrative personnel including the following: teachers, teachers-county-wide, teachers-exceptional, teachers-gifted, speech therapists, teachers-specific learning disabilities, teachers-adult full-time, guidance personnel, occupational specialists, teachers-adult basic education, librarians/media specialists, deans, department chairpersons, and compensatory education teachers.
+
+2. EXCLUDED: All other positions of the Orange County Public Schools are excluded.
+
+3. This definition shall be subject to PERC clarification of job titles and new job titles within the bargaining unit.
+
+D. Unless otherwise specified, terms used in this Contract shall be as defined in the Glossary of Terms which is incorporated into, and hereby made a part of this Contract.
+
+E. Any official notice between the Association and the Board required under this Contract shall be made by U.S. Mail at the current address of the party to be notified or by hand delivery to a designated representative of the party. Any change of address shall be communicated in writing to the other party.
+
+ARTICLE II
+
+NEGOTIATIONS PROCEDURES
+
+A. Except as stated below, both parties may select up to two (2) articles for negotiations each year of this agreement. Any items previously imposed by the Board, the calendar, salary and fringe benefits shall be automatically reopened each year. The parties agree to exchange these proposals by April 15 and to enter into negotiations by May 1,

@@ -1,0 +1,37 @@
+EXTRA PAY SCHEDULE
+
+(Effective July 1, 2004 through June 30, 2007)
+
+Extra duty pay schedule will be increased by 4% for FY2005-2006 and 5% for FY 2006-2007.
+
+<fcel>Activity<lcel><fcel>1 - 5 yrs. Base<fcel>6 - 10 yrs. Level I<fcel>11 - 15 yrs. Level II<fcel>16-20 yrs. Level III<fcel>21 & over Level IV<nl>
+<fcel>CATEGORY I<lcel><ecel><ecel><ecel><ecel><ecel><nl>
+<fcel>Band<lcel><ecel><ecel><ecel><ecel><ecel><nl>
+<fcel>Band Director<fcel>HS-Varsity<fcel>$2,090<fcel>$2,270<fcel>$2,540<fcel>$2,850<fcel>$3,130<nl>
+<fcel>Basketball, Football, Wrestling<lcel><ecel><ecel><ecel><ecel><ecel><nl>
+<fcel>Head Coach<fcel>HS-Varsity<fcel>$2,090<fcel>$2,270<fcel>$2,540<fcel>$2,850<fcel>$3,130<nl>
+<fcel>Assistant Coach<fcel>HS-Varsity<fcel>$1,300<fcel>$1,390<fcel>$1,580<fcel>$1,740<fcel>$1,930<nl>
+<fcel>CATEGORY II<lcel><ecel><ecel><ecel><ecel><ecel><nl>
+<fcel>Band<lcel><ecel><ecel><ecel><ecel><ecel><nl>
+<fcel>Band Director<fcel>MS<fcel>$1,640<fcel>$1,770<fcel>$1,980<fcel>$2,200<fcel>$2,440<nl>
+<fcel>Baseball, Field Hockey, Soccer, Softball, Indoor Track, Volleyball, Lacrosse<lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>Head Coach<fcel>HS-Varsity<fcel>$1,640<fcel>$1,770<fcel>$1,980<fcel>$2,200<fcel>$2,440<nl>
+<fcel>Assistant Coach<fcel>HS-Varsity<fcel>$1,030<fcel>$1,120<fcel>$1,270<fcel>$1,410<fcel>$1,580<nl>
+<fcel>Dramatics<lcel><ecel><ecel><ecel><ecel><ecel><nl>
+<fcel>Director<fcel>HS<fcel>$1,640<fcel>$1,770<fcel>$1,980<fcel>$2,200<fcel>$2,440<nl>
+<fcel>S.I.T. Leaders<fcel>HS/MS/ES<fcel>$1,640<fcel>$1,770<fcel>$1,980<fcel>$2,200<fcel>$2,440<nl>
+<fcel>CATEGORY III<lcel><ecel><ecel><ecel><ecel><ecel><nl>
+<fcel>Cross Country & Tennis<lcel><ecel><ecel><ecel><ecel><ecel><nl>
+<fcel>Head Coach<fcel>HS-Varsity<fcel>$1,280<fcel>$1,390<fcel>$1,550<fcel>$1,730<fcel>$1,930<nl>
+<fcel>Golf<fcel>HS-Varsity<fcel>$1,280<fcel>$1,390<fcel>$1,550<fcel>$1,730<fcel>$1,930<nl>
+<fcel>CATEGORY IV<lcel><ecel><ecel><ecel><ecel><ecel><nl>
+<fcel>Cheerleaders (Per season)<lcel><ecel><ecel><ecel><ecel><ecel><nl>
+<fcel>Advisor<fcel>HS<fcel>$940<fcel>$1,000<fcel>$1,130<fcel>$1,260<fcel>$1,390<nl>
+<fcel>Assistant Advisor<fcel>HS<fcel>$560<fcel>$660<fcel>$720<fcel>$800<fcel>$890<nl>
+<fcel>Chorus<lcel><ecel><ecel><ecel><ecel><ecel><nl>
+<fcel>Director<fcel>HS<fcel>$940<fcel>$1,000<fcel>$1,130<fcel>$1,260<fcel>$1,390<nl>
+<fcel>Director (2)<fcel>MS<fcel>$940<fcel>$1,000<fcel>$1,130<fcel>$1,260<fcel>$1,390<nl>
+<fcel>Newspaper, Yearbook<lcel><ecel><ecel><ecel><ecel><ecel><nl>
+<fcel>Advisor<fcel>HS<fcel>$940<fcel>$1,000<fcel>$1,130<fcel>$1,260<fcel>$1,390<nl>
+<fcel>Advisor<fcel>MS<fcel>$940<fcel>$1,000<fcel>$1,130<fcel>$1,260<fcel>$1,390<nl>
+<fcel>Student Government Advisor<fcel>HS<fcel>$940<fcel>$1,000<fcel>$1,130<fcel>$1,260<fcel>$1,390<nl>

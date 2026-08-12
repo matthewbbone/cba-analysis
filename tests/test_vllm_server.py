@@ -77,6 +77,19 @@ class VllmServeCommandTests(unittest.TestCase):
 
         self.assertEqual(command[-len(extras):], extras)
 
+    def test_max_num_seqs_is_forwarded_as_typed_server_option(self) -> None:
+        command = vllm_server.build_serve_command(
+            executable="python",
+            model_name="Qwen/Qwen3.6-27B-FP8",
+            max_num_seqs=24,
+        )
+
+        option_index = command.index("--max-num-seqs")
+        self.assertEqual(
+            command[option_index : option_index + 2],
+            ["--max-num-seqs", "24"],
+        )
+
     def test_reserved_extra_serve_option_is_rejected(self) -> None:
         with self.assertRaisesRegex(ValueError, "--max-model-len"):
             vllm_server.validate_extra_serve_args(
@@ -91,12 +104,19 @@ class VllmServeCommandTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "--max-model-len"):
             vllm_server.validate_extra_serve_args(["--max_model_len=8192"])
 
+        with self.assertRaisesRegex(ValueError, "--max-num-seqs"):
+            vllm_server.validate_extra_serve_args(["--max_num_seqs=1024"])
+
     def test_server_rejects_reserved_extra_option_during_initialization(self) -> None:
         with self.assertRaisesRegex(ValueError, "--max-model-len"):
             vllm_server.VLLMServer(
                 "example/model",
                 extra_serve_args=["--max-model-len", "8192"],
             )
+
+    def test_server_rejects_invalid_max_num_seqs(self) -> None:
+        with self.assertRaisesRegex(ValueError, "max_num_seqs must be at least 1"):
+            vllm_server.VLLMServer("example/model", max_num_seqs=0)
 
 
 class VllmClientLifecycleTests(unittest.TestCase):

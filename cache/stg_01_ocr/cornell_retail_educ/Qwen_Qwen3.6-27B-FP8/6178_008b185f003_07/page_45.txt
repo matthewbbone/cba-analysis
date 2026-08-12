@@ -1,0 +1,38 @@
+The user wants the text from the image transcribed exactly.
+
+1.  **Transcribe Section D:** "D. In the filling of all vacancies other than those which arise under Section C above, the principal or other appropriate administrator will select among the three (3) most senior qualified applicants for the position."
+2.  **Transcribe Section E:** "E. Qualifications for all positions will be as determined by the Board."
+3.  **Transcribe Section F:** "F. For the purposes of filling vacancies, seniority shall be defined as length of continuous service with the Montgomery County Public Schools. Employment in a temporary position shall not be considered in determining seniority, except as provided in Article 3, Section C. 3."
+4.  **Transcribe Section G:**
+    *   "G. 1. Lateral transfers and promotions will not normally be approved for:"
+    *   "a) Personnel who are to be evaluated for permanent status in MCPS or current position."
+    *   "2. Lateral transfers will not normally be approved for personnel who have transferred once in the current fiscal year, unless the vacant position allows an increase in hours or months."
+5.  **Transcribe Section H:** "H. All persons who have applied for a specific vacancy will be notified if they are not selected and will be given the reason or reasons why they were not selected."
+6.  **Transcribe Section I:** "I. The provisions of this article may be suspended by agreement of the Board and the Union where considered desirable by the parties to rectify or correct a specific personnel matter."
+7.  **Transcribe Section J:** "J. During the life of the Agreement a committee composed of an equal number of representatives of MCPS and MCCSSE shall review the exceptions identified in Section C above and the procedures applicable to these exceptions."
+8.  **Transcribe Article 20 Header:** "Article 20 Rights Of The Council"
+9.  **Transcribe Section A:**
+    *   "A. 1. The MCCSSE as exclusive representative of supporting services employees has the right to present its views to the Board of Education, provided mutually acceptable agenda and time can be arranged."
+    *   "2. The Board of Education recognizes that the officers of MCCSSE, elected representatives, and stewards, not to exceed two (2) per school and not to exceed four (4) each in the Educational Services and Lincoln Centers, are authorized to act for MCCSSE. Council matters will be conducted at times least disruptive to school system business."
+    *   "3. MCCSSE agrees to supply the Board of Education in writing and maintain on a current basis the names of MCCSSE officers. Also, MCCSSE agrees to supply appropriate administrators with the names of representatives and stewards who are designated to act on behalf of MCCSSE."
+10. **Transcribe Page Number:** "42"
+</think>
+
+D. In the filling of all vacancies other than those which arise under Section C above, the principal or other appropriate administrator will select among the three (3) most senior qualified applicants for the position.
+E. Qualifications for all positions will be as determined by the Board.
+F. For the purposes of filling vacancies, seniority shall be defined as length of continuous service with the Montgomery County Public Schools. Employment in a temporary position shall not be considered in determining seniority, except as provided in Article 3, Section C. 3.
+G. 1. Lateral transfers and promotions will not normally be approved for:
+a) Personnel who are to be evaluated for permanent status in MCPS or current position.
+2. Lateral transfers will not normally be approved for personnel who have transferred once in the current fiscal year, unless the vacant position allows an increase in hours or months.
+H. All persons who have applied for a specific vacancy will be notified if they are not selected and will be given the reason or reasons why they were not selected.
+I. The provisions of this article may be suspended by agreement of the Board and the Union where considered desirable by the parties to rectify or correct a specific personnel matter.
+J. During the life of the Agreement a committee composed of an equal number of representatives of MCPS and MCCSSE shall review the exceptions identified in Section C above and the procedures applicable to these exceptions.
+
+Article 20
+Rights Of The Council
+
+A. 1. The MCCSSE as exclusive representative of supporting services employees has the right to present its views to the Board of Education, provided mutually acceptable agenda and time can be arranged.
+2. The Board of Education recognizes that the officers of MCCSSE, elected representatives, and stewards, not to exceed two (2) per school and not to exceed four (4) each in the Educational Services and Lincoln Centers, are authorized to act for MCCSSE. Council matters will be conducted at times least disruptive to school system business.
+3. MCCSSE agrees to supply the Board of Education in writing and maintain on a current basis the names of MCCSSE officers. Also, MCCSSE agrees to supply appropriate administrators with the names of representatives and stewards who are designated to act on behalf of MCCSSE.
+
+42

@@ -133,6 +133,102 @@ class MoveExtractionsTests(unittest.TestCase):
         self.assertNotIn("notes.json", dry_run_output)
         self.assertNotIn("layout.json", dry_run_output)
 
+    def test_cli_filters_extractions_and_ocr_independently_by_document_id(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            src_cache = root / "source_cache"
+            dst_cache = root / "destination_cache"
+            self._build_source_cache(src_cache)
+
+            with redirect_stdout(StringIO()):
+                move_extractions.main(
+                    [
+                        self.source,
+                        "--src-cache",
+                        str(src_cache),
+                        "--dst-cache",
+                        str(dst_cache),
+                        "--document-ids",
+                        "doc_a",
+                        "doc_c",
+                        "--document-id",
+                        "missing_doc",
+                    ]
+                )
+
+            extraction_root = dst_cache / "stg_02_extract" / self.source
+            extraction_files = {
+                path.relative_to(extraction_root)
+                for path in extraction_root.rglob("*")
+                if path.is_file()
+            }
+            ocr_root = dst_cache / "stg_01_ocr" / self.source
+            ocr_files = {
+                path.relative_to(ocr_root)
+                for path in ocr_root.rglob("*")
+                if path.is_file()
+            }
+
+        self.assertEqual(
+            extraction_files,
+            {
+                Path("extractor_a/doc_a/wage_tables.jsonl"),
+                Path("extractor_b/doc_a/wage_tables.jsonl"),
+            },
+        )
+        self.assertEqual(
+            ocr_files,
+            {
+                Path("ocr_one/doc_a/full.txt"),
+                Path("ocr_one/doc_a/page_1.txt"),
+                Path("ocr_one/doc_a/page_1.md"),
+                Path("ocr_one/doc_c/full.txt"),
+                Path("ocr_one/doc_c/page_1.txt"),
+                Path("ocr_two__layout/doc_a/full.txt"),
+                Path("ocr_two__layout/doc_a/page_1.txt"),
+                Path("ocr_two__layout/doc_a/page_1.md"),
+            },
+        )
+
+    def test_selected_ocr_is_copied_when_extraction_source_is_missing(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            src_cache = root / "source_cache"
+            dst_cache = root / "destination_cache"
+            self._write(
+                src_cache
+                / "stg_01_ocr"
+                / self.source
+                / "ocr_one"
+                / "doc_a"
+                / "full.txt"
+            )
+
+            with redirect_stdout(StringIO()):
+                move_extractions.main(
+                    [
+                        self.source,
+                        "--src-cache",
+                        str(src_cache),
+                        "--dst-cache",
+                        str(dst_cache),
+                        "--document-id",
+                        "doc_a",
+                    ]
+                )
+
+            copied = (
+                dst_cache
+                / "stg_01_ocr"
+                / self.source
+                / "ocr_one"
+                / "doc_a"
+                / "full.txt"
+            )
+            copied_exists = copied.is_file()
+
+        self.assertTrue(copied_exists)
+
 
 if __name__ == "__main__":
     unittest.main()

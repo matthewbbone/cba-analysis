@@ -1,0 +1,36 @@
+The user wants the text from the image transcribed verbatim.
+
+1.  **Transcribe the first paragraph:** "business of a nature that cannot be scheduled on any nonduty day. Personal leave will be granted only when the immediate supervisor determines that adequate provisions for continuing the school program can be made. In cases of emergency, the appropriate school official shall be notified prior to the start of the duty day to be taken off."
+2.  **Transcribe item 2:** "2. The rules regarding personal leave shall be as follows:"
+3.  **Transcribe sub-items a, b, c:**
+    *   "a) Requests for personal leave shall be made in writing."
+    *   "b) Leave immediately before or after a holiday, vacation, or staff development day may be requested for reason from the school principal or appropriate official."
+    *   "c) The personal leave shall not be cumulative. However, unused personal leave shall be transferred to accumulated sick leave at the end of the school year."
+4.  **Transcribe section R:** "R. General—Except in those cases where the superintendent has the right to grant the leave, the superintendent shall have the right to recommend to the Board of Education that a leave of absence be granted with loss of substitute pay, without pay, or with pay or to recommend that the leave be denied."
+5.  **Transcribe section S:** "S. Procedures for Short- and Long-Term Leave"
+6.  **Transcribe items 1-5 under section S:**
+    *   "1. When the leave is of short duration, and not longer than forty (40) consecutive duty days, a substitute may be employed and the position held for the return of the unit member. Use MCPS Form 430-1 for short-term leave."
+    *   "2. Unit members wishing leave in excess of forty (40) consecutive duty days for a period not to exceed eighteen (18) months must use MCPS Form 430-9 for long-term leave without salary. The unit member's position will not be held for their return."
+    *   "3. Unit members who are eligible for annual leave will be allowed to use any earned leave in their accounts after approval by the principal or appropriate official. The 40-day or 18-month period shall include the period of annual leave if used."
+    *   "4. Unit members must request these leaves in writing to the appropriate official at least thirty (30) duty days in advance of the intended leave."
+    *   "5. Unit members may elect to have continued participation in the MCPS Employee Benefit Plan by assuming the full cost of the premiums while on leave without pay. Contributions to the employee benefit plan will be payable monthly to the Board of Education in accordance with MCPS procedures. Failure to make payments in accordance with MCPS procedures will result in cancellation of benefits. Retirement contributions, if"
+7.  **Transcribe page number:** "34"
+</think>
+
+business of a nature that cannot be scheduled on any nonduty day. Personal leave will be granted only when the immediate supervisor determines that adequate provisions for continuing the school program can be made. In cases of emergency, the appropriate school official shall be notified prior to the start of the duty day to be taken off.
+
+2. The rules regarding personal leave shall be as follows:
+a) Requests for personal leave shall be made in writing.
+b) Leave immediately before or after a holiday, vacation, or staff development day may be requested for reason from the school principal or appropriate official.
+c) The personal leave shall not be cumulative. However, unused personal leave shall be transferred to accumulated sick leave at the end of the school year.
+
+R. General—Except in those cases where the superintendent has the right to grant the leave, the superintendent shall have the right to recommend to the Board of Education that a leave of absence be granted with loss of substitute pay, without pay, or with pay or to recommend that the leave be denied.
+
+S. Procedures for Short- and Long-Term Leave
+1. When the leave is of short duration, and not longer than forty (40) consecutive duty days, a substitute may be employed and the position held for the return of the unit member. Use MCPS Form 430-1 for short-term leave.
+2. Unit members wishing leave in excess of forty (40) consecutive duty days for a period not to exceed eighteen (18) months must use MCPS Form 430-9 for long-term leave without salary. The unit member's position will not be held for their return.
+3. Unit members who are eligible for annual leave will be allowed to use any earned leave in their accounts after approval by the principal or appropriate official. The 40-day or 18-month period shall include the period of annual leave if used.
+4. Unit members must request these leaves in writing to the appropriate official at least thirty (30) duty days in advance of the intended leave.
+5. Unit members may elect to have continued participation in the MCPS Employee Benefit Plan by assuming the full cost of the premiums while on leave without pay. Contributions to the employee benefit plan will be payable monthly to the Board of Education in accordance with MCPS procedures. Failure to make payments in accordance with MCPS procedures will result in cancellation of benefits. Retirement contributions, if
+
+34

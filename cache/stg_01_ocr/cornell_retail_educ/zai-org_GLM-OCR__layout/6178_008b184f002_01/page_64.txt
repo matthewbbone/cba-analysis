@@ -1,0 +1,23 @@
+JERSEY CITY BOARD OF EDUCATION OFFICERS — 1978-79
+
+Anthony M. Venutolo, M.A., President Joseph Scott, M.A., Vice-President
+
+Anthony M. Venutolo, M.A., President Joseph Scott, M.A., Vice-President
+
+MEMBERS
+
+Gladys C. Nunery, M.A.
+
+Santiago Bonilla
+
+Dominick Pugliese
+
+Robert C. Janiszewski, M.A.
+
+Thornton Smith, M.A.
+
+Pearl Gaither
+
+Joseph Kraus
+
+Michael Ross ..... Superintendent of Schools

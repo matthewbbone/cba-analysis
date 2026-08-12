@@ -1,0 +1,37 @@
+ARTICLE 18 Management Rights
+
+ARTICLE 18
+
+Management Rights
+
+18.1 Except as specifically limited by this Agreement or by law, the University reserves all rights and privileges heretofore exercised by the University or granted to it by law including the right to:
+
+a. enact policy or regulation for the governance of the University;
+
+b. appoint officers, administrators, supervisors, and other employees who are not unit members;
+
+c. establish policies and procedures in support of the educational, research, and service missions of the University;
+
+d. establish and direct programs of instruction at the University;
+
+e. declare and respond to financial exigency;
+
+f. administer the University;
+
+g. select, direct, set the number, assign, evaluate, tenure, and promote unit members;
+
+h. adopt and enforce work rules and regulations applicable to unit members;
+
+i. utilize technology in areas including, but not limited to, distance education;
+
+j. determine the organizational structure of the University;
+
+k. set performance and productivity standards;
+
+1. establish, modify, reduce, or eliminate academic positions, programs departments, colleges, schools, centers, or other units of the University;
+
+m. transfer unit members across academic programs, departments, colleges schools, centers, geographic locations, or other units of the University, and
+
+n. discipline unit members including, but not limited to, the right to reprimand, suspend, or discharge.
+
+18.2 The University's exercise or failure to exercise any right, prerogative, or function hereby reserved to it shall not be considered a waiver of the University's right to exercise such right, prerogative, or function or preclude it from exercising the same in some other way not in conflict with the express provisions of this Agreement.

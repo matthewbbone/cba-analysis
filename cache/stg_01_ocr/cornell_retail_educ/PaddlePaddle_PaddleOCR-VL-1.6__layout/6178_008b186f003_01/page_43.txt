@@ -1,0 +1,29 @@
+made to the teacher and will state the reasons.
+
+c. During the months of October and February, agents of the Board shall review reported class loads and shall investigate instances where such loads exceed adopted guidelines. Based upon their investigation, they shall take appropriate action in accordance with this section of the Contract. The results of said review and any actions taken shall be provided to the Association.
+
+4. The final decision on adjustment of class size for an individual teacher shall remain solely the prerogative of the deputy superintendent for instruction or his designee.
+
+P. Lunch Periods
+
+1. The teacher shall have a daily duty-free lunch period of at least twenty-five (25) minutes during scheduled days of instruction.
+
+2. On non-student contact days, teachers shall have a duty-free lunch time of one (1) hour and may, at their discretion, leave their worksite.
+
+3. On student contact days, in work locations where there is no lunchroom or in job assignments which permit flexible lunch scheduling, a teacher may be given approximately one (1) hour for lunch by mutual agreement with his immediate supervisor. If this occurs, the work day for the teacher may be proportionately extended to provide for equity with other teachers. This shall not be construed as a violation of Section A of this article.
+
+Q. Planning Time
+
+1. All teachers shall have daily assigned planning time during which they shall not be responsible for students, in accordance with the following:
+
+a. Secondary and adult vocational teachers shall have a daily planning period equal to a student academic period but not less than fifty (50) minutes.
+
+b. Planning time in the secondary schools shall be contiguous.
+
+c. Elementary teachers shall have at least three hundred (300) minutes per week for use as planning time which shall include times during the regular workday before and after the student day and times when elementary special area teachers are conducting the class. Each elementary teacher shall have a contiguous daily planning time equal to at least thirty (30) minutes. Elementary teachers shall not be required to remain in the classroom when an elementary special area teacher is conducting a class.
+
+d. Each high school teacher shall have his preparation period within the student day.
+
+2. While planning time is intended for purposes of preparation, nothing herein shall preclude a teacher from using planning time for conferences with parents, administrators, or other teachers, or giving special assistance to students.
+
+3. A teacher shall not be restricted to remain in a particular area of the school during his planning time.

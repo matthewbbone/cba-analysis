@@ -1,0 +1,29 @@
+4.9 TEACHER DRESS - The Board and the Association believe that while on duty during assigned duty hours, as specified in 4.1 above,the dress of teachers should be appropriate for the educational positions they hold.
+
+4.10 NON-TEACHING DUTIES
+
+A. The Board and Association recognize that a teacher's primary responsibility is to the students and the instructional program. Therefore, teachers will not be required to perform the following non-teaching duties:
+
+1. Keeping records for money collections and/or collecting money, unless such are for activities sponsored by the teacher or are considered a part of the instructional program.
+
+2. Bulk delivery of books to classrooms.
+
+3. Janitorial duties - Teachers shall not be required to perform duties normally performed by the custodial staff.
+
+B. The Board will continue its efforts to provide additional assistance in relieving teachers of the following duties not related to the instructional program:
+
+1. Filling out non-evaluative data on students' permanent record cards by teachers other than guidance counselors and therapists.
+
+2. Playground duty for elementary teachers.
+
+3. Cafeteria duty.
+
+4. Bus duty.
+
+4.11 SPECIAL CARE - Teachers shall not be required to provide services to students that may be considered nursing duties for which special training is necessary unless such is a condition of employment and the teacher has received the said training.
+
+4.12 FLOATING TEACHERS - Teachers who are required to travel from school to school during a given day as part of their assigned duties will be reimbursed for mileage traveled at the IRS approved rate.The time allotment for required travel will include sufficient time for safe travel.
+
+4.13 DEPARTMENT HEADS - Department heads will not be required to participate in the formal evaluation of unit members.
+
+4.14 SCHOOL DECISION MAKING - Teacher input will be sought and considered for decisions made on staffing, curriculum, class levels, daily schedules, teaching assignments, and teacher workload.

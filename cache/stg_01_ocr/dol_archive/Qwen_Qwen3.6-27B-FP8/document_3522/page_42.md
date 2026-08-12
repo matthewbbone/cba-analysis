@@ -1,0 +1,44 @@
+The user wants the text from the image transcribed verbatim.
+
+1.  **Identify the main heading:** "Section 12.6 – Grievance Procedures"
+2.  **Transcribe numbered list item 1:** "1. A grievance must be taken up with the Labor Relations Specialist (LRS) lowest level of Management within thirty (30) days after the occurrence of the matter generating the grievance, or within thirty (30) days after the grievant should have reasonably been aware of being aggrieved. However, the period of time in which a grievant could have been reasonably aware will not exceed twelve (12) months."
+3.  **Transcribe numbered list item 2:** "2. Mediation may be invoked during any step of the grievance process if mutually agreed by the Parties."
+4.  **Transcribe numbered list item 3:** "3. The following steps shall be used for resolving grievances (use grievance form in Appendix B):"
+5.  **Transcribe sub-item 3a:** "a. Step 1. The grievant will bring the complaint/grievance to the Labor Relations Specialist (LRS). The LRS will assist with completing the form and determining the Parties involved and the lowest level of resolution. The LRS will contact the appropriate Union official."
+6.  **Transcribe sub-item 3b:** "b. Step 2. The LRS, appropriate Supervisor, and Union official (if applicable) will have ten (10) days to resolve the grievance."
+7.  **Transcribe sub-item 3c:** "c. Step 3. If the grievance is not resolved in step 2, the grievance will be forwarded to the Chief of Staff who will then have seven (7) days to resolve the complaint with the appropriate Parties."
+8.  **Transcribe sub-item 3d:** "d. Step 4. If the grievance is not resolved using the steps above, then the grievance is eligible for review by The Adjutant General. If the grievant chooses to utilize the Adjutant General review, the Chief of Staff will forward the grievance within seven (7) days."
+9.  **Transcribe numbered list item 4:** "4. The Adjutant General Review:"
+10. **Transcribe sub-item 4a:** "a. The Adjutant General, or his designated representative, shall review all documentation and evidence and render a decision at the earliest practical date not to exceed 30 days after receipt of the materials provided by the grievant or their designated representative."
+11. **Transcribe sub-item 4b:** "b. The grievant may request a meeting with The Adjutant General or his designated representative to discuss the matters of said grievance. The acceptance of this meeting will be at the discretion of The Adjutant General. The Adjutant General's decision will be provided in writing, to the aggrieved party, the Union, and the grievant's representative (if one has been designated)."
+12. **Transcribe sub-item 4c:** "c. The grievant may proceed to the arbitration process if not satisfied with The Adjutant General's decision."
+13. **Transcribe footer:** "Agreement Between the Adjutant General of Michigan and the Laborers International Union of North America (LIUNA) September 2015 42"
+</think>
+
+Section 12.6 – Grievance Procedures
+
+1. A grievance must be taken up with the Labor Relations Specialist (LRS) lowest level of Management within thirty (30) days after the occurrence of the matter generating the grievance, or within thirty (30) days after the grievant should have reasonably been aware of being aggrieved. However, the period of time in which a grievant could have been reasonably aware will not exceed twelve (12) months.
+
+2. Mediation may be invoked during any step of the grievance process if mutually agreed by the Parties.
+
+3. The following steps shall be used for resolving grievances (use grievance form in Appendix B):
+
+a. Step 1. The grievant will bring the complaint/grievance to the Labor Relations Specialist (LRS). The LRS will assist with completing the form and determining the Parties involved and the lowest level of resolution. The LRS will contact the appropriate Union official.
+
+b. Step 2. The LRS, appropriate Supervisor, and Union official (if applicable) will have ten (10) days to resolve the grievance.
+
+c. Step 3. If the grievance is not resolved in step 2, the grievance will be forwarded to the Chief of Staff who will then have seven (7) days to resolve the complaint with the appropriate Parties.
+
+d. Step 4. If the grievance is not resolved using the steps above, then the grievance is eligible for review by The Adjutant General. If the grievant chooses to utilize the Adjutant General review, the Chief of Staff will forward the grievance within seven (7) days.
+
+4. The Adjutant General Review:
+
+a. The Adjutant General, or his designated representative, shall review all documentation and evidence and render a decision at the earliest practical date not to exceed 30 days after receipt of the materials provided by the grievant or their designated representative.
+
+b. The grievant may request a meeting with The Adjutant General or his designated representative to discuss the matters of said grievance. The acceptance of this meeting will be at the discretion of The Adjutant General. The Adjutant General's decision will be provided in writing, to the aggrieved party, the Union, and the grievant's representative (if one has been designated).
+
+c. The grievant may proceed to the arbitration process if not satisfied with The Adjutant General's decision.
+
+Agreement Between the Adjutant General of Michigan and the Laborers International Union of North America (LIUNA)
+September 2015
+42

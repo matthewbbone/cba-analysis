@@ -1,0 +1,37 @@
+ARTICLE 7 - VOLUNTARY ALLOTMENT OF UNION DUES
+
+Section 7.1 - The Union is Responsible For
+
+1. Obtaining and distributing standard form 1187, "Request for Payroll Deductions of Labor Organization Dues".
+
+2. Educating eligible Employee's during non-working hours as to the program for allotment of dues, its voluntary nature, and the availability and use of the SF 1187.
+
+3. Educating eligible Employee's during non-working hours as to the procedure to revoking the allotment of dues. New members shall have the option of dues revocation on the first annual anniversary date after the Employee's election to participate. After the first anniversary of the allotment, Employee's may only cancel allotments during the first full pay period in September of each year. Termination of dues withholding will become effective the first full pay period beginning on or after 1 September. It is the Employee's responsibility to ensure the written revocation is received in the appropriate payroll office not later than 1 September to be considered.
+
+4. Certification of SF 1187 completed by an eligible Employee as to the amount of the dues.
+
+5. Delivery of completed SF 1187 to the payroll office.
+
+6. Immediate notification to the payroll office when a member is expelled or suspended from the Union.
+
+1. Obtaining and distributing standard form 1187, "Request for Payroll Deductions of Labor Organization Dues".
+2. Educating eligible Employee's during non-working hours as to the program for allotment of dues, its voluntary nature, and the availability and use of the SF 1187.
+3. Educating eligible Employee's during non-working hours as to the procedure to revoking the allotment of dues. New members shall have the option of dues revocation on the first annual anniversary date after the Employee's election to participate. After the first anniversary of the allotment, Employee's may only cancel allotments during the first full pay period in September of each year. Termination of dues withholding will become effective the first full pay period beginning on or after 1 September. It is the Employee's responsibility to ensure the written revocation is received in the appropriate payroll office not later than 1 September to be considered.
+4. Certification of SF 1187 completed by an eligible Employee as to the amount of the dues.
+5. Delivery of completed SF 1187 to the payroll office.
+6. Immediate notification to the payroll office when a member is expelled or suspended from the Union.
+
+Section 7.2 - The Employer is Responsible For
+
+1. Ensuring that payroll deductions are accomplished beginning the second pay period after the properly completed and certified SF 1187 has been received by the payroll office. When an Employee's pay is insufficient to cover the allotment, no deduction will be made from future pay to cover past amounts.
+
+2. Making available and distributing SF 1188, "Revocation of Voluntary Authorization of Allotment of Compensation for Payment of Employee Organization Dues."
+
+3. Ensuring that the Union is notified by the Payroll section of any revocation within a ten work day period after receipt of a properly executed SF 1188.
+
+4. Any allotments for non-bargaining unit employees for supplemental pension plans or other benefits may not be processed via SF 1187. SF-50's reverting temporarily promoted LIUNA members from supervisory positions back to the bargaining unit will include a statement reinstating the Employee's Union dues withholding. Finance offices will verify membership status prior to the temporary promotion and will place them in their original status.
+
+1. Ensuring that payroll deductions are accomplished beginning the second pay period after the properly completed and certified SF 1187 has been received by the payroll office. When an Employee's pay is insufficient to cover the allotment, no deduction will be made from future pay to cover past amounts.
+2. Making available and distributing SF 1188, "Revocation of Voluntary Authorization of Allotment of Compensation for Payment of Employee Organization Dues."
+3. Ensuring that the Union is notified by the Payroll section of any revocation within a ten work day period after receipt of a properly executed SF 1188.
+4. Any allotments for non-bargaining unit employees for supplemental pension plans or other benefits may not be processed via SF 1187. SF-50's reverting temporarily promoted LIUNA members from supervisory positions back to the bargaining unit will include a statement reinstating the Employee's Union dues withholding. Finance offices will verify membership status prior to the temporary promotion and will place them in their original status.

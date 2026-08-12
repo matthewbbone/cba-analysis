@@ -1,0 +1,31 @@
+# UFCW
+**a VOICE for working America**
+
+# LOCAL 1500
+
+### THE WEINGARTEN DECISION:
+### - KNOW YOUR RIGHTS!
+
+In a court case known as *N.L.R.B. Vs. Weingarten*, the U.S. Supreme Court ruled you have the right to have your Union Representative present when you are interviewed by your employer, if you **reasonably** believe the interview may lead to disciplinary action.
+
+**YOUR RIGHTS UNDER WEINGARTEN ARE:**
+
+1. You have the right to request the presence of a Union Representative during any investigatory interview you reasonably believe might result in disciplinary action.
+
+2. You have the right **not** to be interviewed until your Union Representative is present.
+
+3. Your Union Representative may assist you during the interview to organize and explain your facts.
+
+**REMEMBER WEINGARTEN**
+**BEFORE YOU GIVE UP YOUR RIGHTS!**
+
+Fraternally,
+Bruce W. Both,
+President
+
+**MEMBERS CAN CALL**
+**LOCAL 1500**
+**REGARDING ANY MATTER**
+**24 HOURS A DAY**
+
+**800-522-0456**

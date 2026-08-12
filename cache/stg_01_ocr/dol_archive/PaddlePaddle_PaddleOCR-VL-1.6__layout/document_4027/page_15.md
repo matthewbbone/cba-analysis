@@ -1,0 +1,13 @@
+Section 3.17 A representative of the Employer or of the Association, as the case may be, designated to the Union, in writing, shall be permitted to inspect the Referral Procedure records at any time during normal business hours.
+
+Section 3.18 A copy of the Referral Procedure set forth in this Agreement shall be posted on the bulletin board in the offices of the Local Union and in the offices of the Employers who are parties to this Agreement.
+
+Section 3.19 Apprentices shall be hired and transferred in accordance with the apprenticeship provisions of the Outside Area Training Agreement.
+
+ARTICLE IV
+
+CLASSIFICATIONS -- WAGE RATES AND PAYMENTS
+
+<fcel>Section 4.01<fcel>02/29/16<fcel>01/02/17<nl><fcel>General Lineman Foreman<fcel>53.14<fcel>52.95<nl><fcel>Line Crew Foreman<fcel>50.22<fcel>50.03<nl><fcel>Journeyman Lineman<fcel>47.16<fcel>46.97<nl><fcel>Substation Technician<fcel>47.16<fcel>46.97<nl><fcel>Journeyman Signal Technician<fcel>47.16<fcel>46.97<nl><fcel>Apprentice:\nApprenticeship wages shall be divided into seven (7) 1000 hour periods:<lcel><lcel><nl><fcel>1st period (60% of Lnm.Rate)<fcel>28.30<fcel>28.18<nl><fcel>2nd period (65% of Lnm.Rate)<fcel>30.65<fcel>30.53<nl><fcel>3rd period (70% of Lnm.Rate)<fcel>33.01<fcel>32.88<nl><fcel>4th period (75% of Lnm.Rate)<fcel>35.37<fcel>35.23<nl><fcel>5th period (80% of Lnm.Rate)<fcel>37.73<fcel>37.58<nl><fcel>6th period (85% of Lnm.Rate)<fcel>40.09<fcel>39.92<nl><fcel>7th period (90% of Lnm.Rate)<fcel>42.44<fcel>42.27<nl><fcel>Apprentice:\nApprenticeship wages shall be divided into six (6) 1000 hour periods:<lcel><lcel><nl><fcel>1st period (60% of Jnymn. Sig. Tech rate)<fcel>28.30<fcel>28.18<nl><fcel>2nd period (65% of Jnymn. Sig. Tech rate)<fcel>30.65<fcel>30.53<nl><fcel>3rd period (70% of Jnymn. Sig. Tech rate)<fcel>33.01<fcel>32.88<nl><fcel>4th period (75% of Jnymn. Sig. Tech rate)<fcel>35.37<fcel>35.23<nl><fcel>5th period (80% of Jnymn. Sig. Tech rate)<fcel>37.73<fcel>37.58<nl><fcel>6th period (90% of Jnymn. Sig. Tech rate)<fcel>42.44<fcel>42.27<nl><fcel>Groundman-Equipment Operator, Class I\n(all crawler type equipment larger than D-4,15 ton crane or larger)<fcel>42.47<fcel>42.28<nl>
+
+<fcel>Apprenticeship wages shall be divided into seven (7) 1000 hour periods:<lcel><lcel><nl><fcel>\(^{{1}}st\) period (60% of Lnm.Rate)<fcel>28.30<fcel>28.18<nl><fcel>\(^{{2}}nd\) period (65% of Lnm.Rate)<fcel>30.65<fcel>30.53<nl><fcel>\(^{{3}}rd\) period (70% of Lnm.Rate)<fcel>33.01<fcel>32.88<nl><fcel>\(^{{4}th}\) period (75% of Lnm.Rate)<fcel>35.37<fcel>35.23<nl><fcel>\(^{{5}th}\) period (80% of Lnm.Rate)<fcel>37.73<fcel>37.58<nl><fcel>\(^{{6}th}\) period (85% of Lnm.Rate)<fcel>40.09<fcel>39.92<nl><fcel>\(^{{7}th}\) period (90% of Lnm.Rate)<fcel>42.44<fcel>42.27<nl>

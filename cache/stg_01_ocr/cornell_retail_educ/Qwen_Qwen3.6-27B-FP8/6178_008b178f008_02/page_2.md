@@ -1,0 +1,13 @@
+The user wants a verbatim transcription of the image content.
+
+1.  **Identify the main title:** "TABLE OF CONTENTS" centered at the top.
+2.  **Identify column headers:** "SUBJECT" on the left/center, "PAGE NO." on the right. There is also an implicit column for Article/Appendedix numbers on the far left.
+3.  **Transcribe line by line:** I need to capture the Roman numerals (or letters), dashes, subject titles, dots, and page numbers exactly as they appear.
+    *   Note: The word "Article" appears once before 'I'. Then just the numerals follow until Appendix A/B.
+4.  **Formatting:** Keep the layout roughly similar using spaces/tabs or markdown structure if appropriate, but plain text with spacing usually works best for these requests unless it's clearly a grid table. This looks like a list formatted to look like columns. I will use standard text spacing to mimic the visual alignment.
+5.  **Footer:** "[i]" at the bottom center.
+
+Let's transcribe row by row:
+- Header: TABLE OF CONTENTS
+- Subheaders: SUBJECT PAGE NO.
+- Row 1: Article I - Recognition .

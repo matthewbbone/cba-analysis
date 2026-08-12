@@ -1,0 +1,30 @@
+The user wants the text from the image transcribed verbatim.
+
+1.  **Transcribe the first paragraph:** "to the same catastrophic illness or injury. Annual, personal, sick (for employee's own serious health condition), sick family (for the serious health condition of a family member), holiday, compensatory, or unpaid leave may be used during the accumulation period. A separate accumulation period must be met for each catastrophic illness or injury and for each leave calendar year in which donated leave is used. Donated leave may not be applied to the required 20-workday accumulation period."
+2.  **Transcribe item e:** "e. All accrued leave must be used as follows before any donation may be received:"
+3.  **Transcribe sub-item (1):** "(1) For an employee's own catastrophic injury or illness, all accrued annual, sick, personal, holiday, and compensatory leave and all anticipated annual and sick leave for the current leave calendar year must be used."
+4.  **Transcribe sub-item (2):** "(2) For the catastrophic injury or illness of a family member, all accrued annual, personal, holiday, and compensatory leave and all anticipated annual leave for the current leave calendar year must be used. All five days of sick family leave and any additional sick family leave for which the employee is eligible must be used."
+5.  **Transcribe item f:** "f. Up to 12 weeks of donated leave per leave calendar year may be received for all conditions of the employee and family members cumulatively, but donations may not be received in more than two consecutive leave calendar years. Donated leave is added to the recipient's sick leave balance on a biweekly basis. Recipients do not repay the donor for donated leave. Leave usage is monitored closely to ensure that donated leave is used only for absences related to the catastrophic illness or injury."
+6.  **Transcribe item g:** "g. The recipient's entitlement to leave under the Family and Medical Leave Act will be reduced, where applicable, by donated leave that is used. Entitlements to sick leave without pay (for an employee's own illness) or family care leave without pay (for a family member's illness) will also be reduced."
+7.  **Transcribe item h:** "h. Donated leave may be used on an intermittent basis. However, each absence may be required to be medically documented as due to the same catastrophic illness or injury."
+8.  **Transcribe item i:** "i. An employee is not eligible to receive donations of leave if, during the previous six months, the employee has been placed on a written leave restriction, or has received a written reprimand or suspension related to attendance."
+9.  **Transcribe page number:** "81"
+</think>
+
+to the same catastrophic illness or injury. Annual, personal, sick (for employee's own serious health condition), sick family (for the serious health condition of a family member), holiday, compensatory, or unpaid leave may be used during the accumulation period. A separate accumulation period must be met for each catastrophic illness or injury and for each leave calendar year in which donated leave is used. Donated leave may not be applied to the required 20-workday accumulation period.
+
+e. All accrued leave must be used as follows before any donation may be received:
+
+(1) For an employee's own catastrophic injury or illness, all accrued annual, sick, personal, holiday, and compensatory leave and all anticipated annual and sick leave for the current leave calendar year must be used.
+
+(2) For the catastrophic injury or illness of a family member, all accrued annual, personal, holiday, and compensatory leave and all anticipated annual leave for the current leave calendar year must be used. All five days of sick family leave and any additional sick family leave for which the employee is eligible must be used.
+
+f. Up to 12 weeks of donated leave per leave calendar year may be received for all conditions of the employee and family members cumulatively, but donations may not be received in more than two consecutive leave calendar years. Donated leave is added to the recipient's sick leave balance on a biweekly basis. Recipients do not repay the donor for donated leave. Leave usage is monitored closely to ensure that donated leave is used only for absences related to the catastrophic illness or injury.
+
+g. The recipient's entitlement to leave under the Family and Medical Leave Act will be reduced, where applicable, by donated leave that is used. Entitlements to sick leave without pay (for an employee's own illness) or family care leave without pay (for a family member's illness) will also be reduced.
+
+h. Donated leave may be used on an intermittent basis. However, each absence may be required to be medically documented as due to the same catastrophic illness or injury.
+
+i. An employee is not eligible to receive donations of leave if, during the previous six months, the employee has been placed on a written leave restriction, or has received a written reprimand or suspension related to attendance.
+
+81

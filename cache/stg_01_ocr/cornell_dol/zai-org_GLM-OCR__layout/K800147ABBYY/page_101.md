@@ -1,0 +1,23 @@
+Section 5. - Default
+
+In the event either party in a dispute fails to appear before the Joint State Committee, or a panel thereof, without an authorized postponement, the Joint State Committee shall render a default decision in favor of the appearing party. If either party in a case which is scheduled to be heard at a particular meeting fails to appear at the time the case is called, that case will be placed at the end of the Docket and will be called again after all of the cases preceding it have been heard. At that time when the case is called for the second time, if the party again fails to appear, the Committee shall render a default decision in favor of the appearing party. However, in any such case, the Co-Chairperson of the group whose representative fails to appear may appoint a member of the Committee, or an alternate, to present the case. Only with the express consent of both CoChairpersons, shall the State Committee be required to meet on the day following the day of a scheduled meeting because of the failure of a party to appear on the date for which the hearing was scheduled.
+
+RULE 4
+
+OPERATION OF JOINT PENNSYLVANIA STATE COMMITTEE
+
+Section 1. - Rules
+
+The operation of the Joint State Committee shall be in accordance with these Rules of Procedure and such other rules as may from time to time be adopted by the Joint State Committee. Such other rules shall be established by a majority vote of the Joint State Committee provided; however, both the Union and the Commonwealth members of the Committee have equal voting power. Whenever an addition or amendment to these Rules of Procedure, or other rules duly adopted, is proposed, it shall be presented in writing to the Joint State Committee at a regularly scheduled meeting of the Committee and voted upon at the following meeting.
+
+Section 2. - Order of Cases
+
+Docketed discharge cases will be heard during the time period scheduled for the Joint State Committee for which it has been docketed. All other cases will be heard by the Joint State Committee in the order in which the Chairpersons mutually agree.
+
+Section 3. - Hearings
+
+In the hearing of a case, either party may present any evidence bearing on the facts of the particular case, and may present testimony of witnesses either in person or by written witness statements. However, these statements must contain the following statement:
+
+"THE FOLLOWING STATEMENT IS BEING GIVEN BY ME FREELY AND WITHOUT COERCION FOR OFFICIAL COMMONWEALTH BUSINESS AND WILL BE CONSIDERED FOR ALL PURPOSES, INCLUDING ACTIONS UNDER THE STATUTES OF THIS COMMONWEALTH, JUST AS THOUGH IT HAD BEEN SWORN OR AFFIRMED BEFORE A COURT OF LAW OR FORMAL ARBITRATION PANEL."
+
+"THE FOLLOWING STATEMENT IS BEING GIVEN BY ME FREELY AND WITHOUT COERCION FOR OFFICIAL COMMONWEALTH BUSINESS AND WILL BE CONSIDERED FOR ALL PURPOSES, INCLUDING ACTIONS UNDER THE STATUTES OF THIS COMMONWEALTH, JUST AS THOUGH IT HAD BEEN SWORN OR AFFIRMED BEFORE A COURT OF LAW OR FORMAL ARBITRATION PANEL."

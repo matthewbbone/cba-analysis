@@ -1,0 +1,42 @@
+The user wants the text from the image transcribed exactly.
+
+1.  **Identify the Header:** "ARTICLE 8 - HOURS OF WORK AND COMPENSATION"
+2.  **Identify the Sub-header:** "Section 8.1 - Basic Workweek and Workday"
+3.  **Transcribe Paragraph 1:** "1. The Employer will establish specific work schedules at each MIARNG Activity necessary to accomplish the Employer's mission IAW 5 CFR §550.103, 5 CFR Part 610 and 32 USC 709."
+4.  **Transcribe Paragraph 2:** "2. The Employer has the right to establish each Employee's workweek to ensure cost effective and timely compliance with operational requirements. Subject to these requirements, the Employer in establishing an Employee's work schedule shall take into consideration any personal hardship made known to the Employer by an Employee and shall make every reasonable effort to provide each Employee a work schedule fourteen (14) calendar days in advance of its effective date. Unless the mission requires otherwise, it is agreed that work schedules shall remain in effect for at least two pay periods."
+5.  **Transcribe Paragraph 3:** "3. Subject to mission requirements, Management approval, and based on input from the Partnership Council (where applicable), Employees may request one of the following work schedule options:"
+6.  **Transcribe List items a, b, c:**
+    *   "a. Regular Work Schedule (5/8's)"
+    *   "b. Compressed Work Schedule 1 (5/4/9)"
+    *   "c. Compressed Work Schedule 2 (4/10's)"
+7.  **Transcribe Paragraph 4:** "4. When an Employer knows in advance of an administrative workweek that the specific days and/or hours of a day actually required of an Employee in that administrative workweek will differ from those required in the current administrative workweek, he or she shall reschedule the Employee's regularly scheduled administrative workweek to correspond with those specific days and hours. The Employer shall inform the Employee of the change, and he or she shall record the change on the Employee's time card or other agency document for recording work."
+8.  **Transcribe Paragraph 5:** "5. If it is determined that the Employer should have scheduled a period of work as part of the Employee's regularly scheduled administrative workweek and failed to do so in accordance with paragraph four (4), the Employee shall be entitled to the payment of premium pay for that period of work as regularly scheduled work. In this regard, it must be determined that the Employer:"
+9.  **Transcribe List items a, b:**
+    *   "a. Had knowledge of the specific days and hours of the work requirement in advance of the administrative workweek, and"
+    *   "b. Had the opportunity to determine which Employee had to be scheduled, or rescheduled, to meet the specific days and hours of that work requirement."
+10. **Transcribe Footer:** "Agreement Between the Adjutant General of Michigan and the Laborers International Union of North America (LIUNA) September 2015 23"
+</think>
+
+ARTICLE 8 - HOURS OF WORK AND COMPENSATION
+Section 8.1 - Basic Workweek and Workday
+
+1. The Employer will establish specific work schedules at each MIARNG Activity necessary to accomplish the Employer's mission IAW 5 CFR §550.103, 5 CFR Part 610 and 32 USC 709.
+
+2. The Employer has the right to establish each Employee's workweek to ensure cost effective and timely compliance with operational requirements. Subject to these requirements, the Employer in establishing an Employee's work schedule shall take into consideration any personal hardship made known to the Employer by an Employee and shall make every reasonable effort to provide each Employee a work schedule fourteen (14) calendar days in advance of its effective date. Unless the mission requires otherwise, it is agreed that work schedules shall remain in effect for at least two pay periods.
+
+3. Subject to mission requirements, Management approval, and based on input from the Partnership Council (where applicable), Employees may request one of the following work schedule options:
+
+a. Regular Work Schedule (5/8's)
+b. Compressed Work Schedule 1 (5/4/9)
+c. Compressed Work Schedule 2 (4/10's)
+
+4. When an Employer knows in advance of an administrative workweek that the specific days and/or hours of a day actually required of an Employee in that administrative workweek will differ from those required in the current administrative workweek, he or she shall reschedule the Employee's regularly scheduled administrative workweek to correspond with those specific days and hours. The Employer shall inform the Employee of the change, and he or she shall record the change on the Employee's time card or other agency document for recording work.
+
+5. If it is determined that the Employer should have scheduled a period of work as part of the Employee's regularly scheduled administrative workweek and failed to do so in accordance with paragraph four (4), the Employee shall be entitled to the payment of premium pay for that period of work as regularly scheduled work. In this regard, it must be determined that the Employer:
+
+a. Had knowledge of the specific days and hours of the work requirement in advance of the administrative workweek, and
+b. Had the opportunity to determine which Employee had to be scheduled, or rescheduled, to meet the specific days and hours of that work requirement.
+
+Agreement Between the Adjutant General of Michigan and the Laborers International Union of North America (LIUNA)
+September 2015
+23

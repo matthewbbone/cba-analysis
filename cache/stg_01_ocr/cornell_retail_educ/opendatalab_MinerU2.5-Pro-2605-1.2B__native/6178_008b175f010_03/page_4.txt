@@ -1,0 +1,79 @@
+(6) After qualifying for his first three-week vacation, a full-time employee who has completed seven (7) years of continuous fulltime service prior to January 1 is eligible for a three-week vacation as of January 1.
+
+(7) A full-time employee will become eligible for a fourth week of vacation as of the fifteenth anniversary of his beginning date of continuous full-time service provided he has completed fifteen (15) years of continuous full-time service as of that date.
+
+(8) After qualifying for his first four-week vacation, a full-time employee who has completed fifteen (15) years of continuous full-time service prior to January 1 is eligible for a four-week vacation as of January 1.
+
+(9) A full-time employee will become eligible for a fifth week of vacation as of the twentieth anniversary of his beginning date of continuous full-time service provided he has completed twenty (20) years of continuous full-time service as of that date.
+
+(10) After qualifying for his first five-week vacation, a full-time employee who has completed twenty (20) years of continuous full-time service prior to January 1 is eligible for a five-week vacation as of January 1.
+
+If a full-time employee qualifies for a one (1), two (2), three (3), or four (4) week vacation as of January 1 and is due to complete the service necessary for an additional week of vacation later in the year, he may take his earned vacation early or wait and take his cumulative earned vacation later in the year after he has completed the necessary service for the additional week of vacation.
+
+Effective November 16, 1980, part-time employees who become full-time after that date, shall have all service from date of hire considered when calculating vacation eligibility.
+
+E. If a full-time employee, who has not taken the vacation which he has earned by reason of his service is terminated for any reason except dishonesty, he shall receive his vacation pay at the time of termination.
+
+F. When a holiday included in this Contract occurs during the calendar week of an employee's vacation, the employee, at his option, will be entitled to an extra day of vacation, or an extra day of pay in lieu thereof; however, the employee at the time he requests his vacation pay must inform Employer of his decision.
+
+G. Choice of vacation dates will be granted on the basis of seniority in the market.
+
+H. Employees shall be paid their vacation pay prior to their vacation period.
+
+I. Employees entitled to vacations will not be given pay in lieu thereof, unless mutually agreed to by the Employer, the employee and the Union.
+
+J. After one (1) year of employment, any leave of absence totaling ninety (90) days or less in any calendar year shall not affect vacation earned in that year; leaves totaling more than ninety (90) days but not over one hundred eighty (180) days shall reduce vacation and vacation pay by one-fourth (¼); leaves totaling more than one hundred eighty (180) days but not over two hundred seventy (270) days shall reduce vacation and vacation pay by one-half (½); leaves totaling more than two hundred seventy (270) days shall disqualify the employee for vacation for that year only.
+
+K. Should ownership change during the term of this Contract, the present Employer agrees to pay employees for that portion of vacation earned up to date change is made.
+
+ARTICLE VIII
+HOLIDAYS
+
+A. A full holiday shall be given to all full-time non-probationary employees covered by this Contract on the following days without reduction in pay:
+
+(1) New Year's Day, Fourth of July, Labor Day, Thanksgiving Day, Christmas Day and the employee's anniversary date.
+
+(2) After the completion of one (1) year of employment with Employer, employees shall be entitled to the following additional holidays in accordance with the provisions of this Article:
+
+Three (3) personal holidays shall be taken at a time mutually agreed upon between the Employer and the employee. The employee's birthday itself shall also be celebrated as a personal holiday.
+
+Holidays falling on Sunday shall be celebrated the following Monday. When an employee's birthday or anniversary date falls during a holiday week or during his vacation, another day off with pay will be given during the next succeeding non-holiday week.
+
+B. The following holidays shall be considered as paid holidays for all qualifying part-time employees.
+
+(1) New Year's Day
+
+(2) Fourth of July
+
+(3) Labor Day
+
+(4) Thanksgiving Day
+
+(5) Christmas Day
+
+(6) Employee's Birthday
+
+(7) Employee's Anniversary Date
+
+(8) Employee's Personal Day
+
+(9) Employee's Personal Day
+
+(10) Employee's Personal Day
+
+The following shall govern holiday pay allowance for the above enumerated recognized holidays not worked:
+
+Any employee who shall have received compensation for an average of over twelve (12) hours during the four (4) calendar weeks immediately preceding any such workweek in which the holiday falls, and who works during the workweek during which the holiday occurs shall receive as holiday pay that amount that equals the average of hours worked during such preceding four (4) calendar weeks, divided by five (5).
+
+When a part-time employee, who is otherwise eligible for holiday pay allowance under the conditions as prescribed above is scheduled to work on a recognized holiday and fails to report to work, or to work the hours as scheduled on a holiday, or to work the scheduled day before or day after the holiday, such employee shall not be eligible to receive any holiday pay allowance.
+
+C. An employee will not receive holiday or birthday pay if he is absent without excuse his last scheduled shift prior to the holiday or birthday or his first scheduled shift after the holiday or birthday or on his holiday or birthday, if so scheduled. An employee will not lose his holiday or birthday pay if absence is caused by proven illness, or if his absence has been mutually agreed to, provided he has worked any part of the holiday or birthday week. To qualify for holiday or birthday pay, the employee shall have been scheduled to work during the holiday or birthday week. The Union agrees that any employee, in order to be eligible for birthday pay, shall give written notice to the Head Meat Cutter during the second week prior to the date of his birthday.
+ARTICLE IX
+
+LEAVES OF ABSENCE
+
+A. In case of death of a member of the immediate family of any regular full-time employee, such employee shall be entitled to an excused absence for such time as the Employer deems reasonably necessary in connection therewith. Any of the first three (3) days' excused absence from his regularly scheduled work shall be paid at the employee's regular basic rate, but such hours and pay shall not be considered as hours worked for overtime purposes. No extra pay allowance shall be paid for multiple or simultaneous deaths occurring within any three-day period. No pay allowance shall be granted in any case where, because of distance, or other cause, the employee does not attend the funeral of the deceased.
+
+By immediate family is meant to include spouse, son, daughter, mother, father, sister, brother, mother-in-law, father-in-law, grandmother, grandfather and grandchildren.
+
+B. The Employer agrees to grant the necessary time off without discrimination or loss of seniority rights and without pay to not more than two (2) employees out of any one (1) store, and no more than five (5) employees from the Employer, designated by the Union to attend to Union business, provided the Employer is given at least one (1) week's notice, in writing, from the Union, specifying the length of time off, but in no case shall the length of time exceed one (1) year.

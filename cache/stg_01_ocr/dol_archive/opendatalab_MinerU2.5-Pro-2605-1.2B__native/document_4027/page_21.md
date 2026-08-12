@@ -1,0 +1,21 @@
+CHANGE OF HEADQUARTERS
+
+Section 5.12 (a) Employees or crews moved during a work week shall be transported to the new location by the Employer during working hours without loss of pay. This provision is not applicable when employees or crews are moved at the end of a work week.
+
+(b) It shall be the responsibility of the Employer to see that employees driving equipment to the new job headquarters, when moving during the work week, to have transportation back to the old headquarters, on Company time, if necessary, to pick up personal transportation.
+
+TOOLS FURNISHED
+
+Section 5.13 Employer agrees to furnish all tools and equipment required to perform the work covered by this Agreement safely and efficiently except pliers, hand connectors, climbers, body tools and safety belts which shall be furnished by the journeyman lineman; electricians will furnish the usual kit of tools required for their work.
+
+The Union will furnish a tool list to be completed by the employee and presented to the Employer prior to commencing work.
+
+The Employer shall provide a safe, locked place for employee's tools. If the tools are stolen from the locked enclosure, the Employer shall replace them, providing there are signs of forcible entry, and such theft is reported to police. The Employer will only replace tools that were stolen included on the employees tool list.
+
+REPORT TIME
+
+Section 5.14 When employees report at headquarters ready for work at 8:00 AM and cannot perform work because of inclement weather, material shortages or other reasons beyond their control, they shall receive three hours' reporting time provided they remain at headquarters during the three hour period unless released by foreman. If they are instructed by the foreman to report at 1:00 PM and are still unable to perform work for reasons mentioned above, they shall be paid another three hours' reporting time for the afternoon.
+
+PICKUP TRUCK
+
+Section 5.15 Foreman shall be allowed to drive a pick-up truck in connection with his regular duties as Foreman; however, he shall not haul men and/or materials except in emergencies or unless he has been designated a working foreman as outlined in Section 5.17.

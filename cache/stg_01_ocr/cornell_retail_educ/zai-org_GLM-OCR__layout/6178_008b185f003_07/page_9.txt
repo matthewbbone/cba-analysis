@@ -1,0 +1,15 @@
+Step Two—If the grievant is not satisfied with the disposition in Step One, he/ she may file his/her grievance in writing to the MCCSSE within five (5) duty days. The MCCSSE, within five (5) duty days from such filing, shall meet and counsel the grievant on the merits of the grievance and if the Union deems it to be meritorious, forward the grievance to the appropriate deputy superintendent or appropriate associate superintendent. If the grievance is referred within the time limits, the appropriate deputy superintendent or appropriate associate superintendent shall have five (5) duty days to respond to the grievant.
+
+Step Three
+
+1. If the grievant is not satisfied with the disposition in Step Two, he/she may again file his/her grievance in writing with the MCCSSE within five (5) duty days. Within five (5) duty days from such filing, the Union shall meet and counsel the grievant and if the Union deems it to be meritorious, forward the grievance to the Superintendent. If the grievance is referred within the time limits, the Superintendent shall have ten (10) duty days to respond to the grievant.
+
+2. A grievance may be filed for a group of unit members at Step Three if the president of MCCSSE and the director of association relations agree that the authority to resolve the grievance does not exist at Step One or Step Two.
+
+Step Four—Arbitration
+
+1. If the grievant is not satisfied with the disposition of the grievance made by the superintendent, he/she may again file it in writing with the MCCSSE WITHIN FIVE (5) duty days for that Union's decision on whether or not the grievance shall be submitted to arbitration.
+
+2. Arbitration may be initiated by the grieving party by serving notice upon the other party requesting arbitration within fifteen (15) duty days and setting forth the precise question it proposes to arbitrate, the section of the Agreement violated, and a description of the action taken that initiated the grievance. The receiving party will acknowledge his/her agreement with the submission to arbitration statement by affixing his/her signature to the submission form within five (5) duty days and returning the form to the grieving party. If the receiving party does not agree with the submission to arbitration statement, he/she will so indicate this disagreement, sign the form, and return it to the grieving party within five (5) duty days. If disagreement exists on the submission statement, the arbitrator must first frame the issue before proceeding with the merits of the case.
+
+3. The grieving party may submit the matter to arbitration within five (5) duty days of the return of the submission statement form.The superintendent and the president of MCCSSE will attempt to agree upon a mutually acceptable arbitrator and obtain a commitment from said arbitrator to

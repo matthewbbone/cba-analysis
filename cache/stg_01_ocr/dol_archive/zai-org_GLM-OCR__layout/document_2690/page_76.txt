@@ -1,0 +1,9 @@
+ARTICLE 22
+
+ARTICLE 22 Duration and Negotiation Procedure
+
+Duration and Negotiation Procedure
+
+This Agreement shall be effective as of January 1,2004,and shall remain in full force and effect to and including December 31,2006. No later than August 1,2006,either party may serve written notice on the other of its desire to terminate, modify, or amend this Agreement. Upon receipt of such notice, negotiations shall commence within sixty (60) calendar days, but in no event shall either party be required to commence negotiations prior to May 1,2006.
+
+The monetary terms of this Agreement are not effective until they have been approved by the legislature pursuant to AS 23.40.215.

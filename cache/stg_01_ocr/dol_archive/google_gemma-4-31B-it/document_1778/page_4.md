@@ -1,0 +1,29 @@
+3.04 The Union shall indemnify and save the Employer harmless against any and all claims, demands, suits or other forms of liability that shall arise out of or by reason of action taken or not taken by the Employer in reliance upon such authorization and a list furnished to the Employer by the Union setting forth the amount of the dues and initiation fees owing from each employee for the purposes of complying with the provisions of any check off authorization.
+
+3.05 The Employer agrees to deduct weekly from the wages of those employees who have given proper authorization, such amounts due the Teachers Federal Credit Union and remit same to said Credit Union on a weekly basis. The Employer's obligation to remit to the Teachers Federal Credit Union shall be limited to the amounts, which it actually deducts from the employees' wage.
+
+3.06 The Employer agrees to remit to the Union's Active Ballot Club, on a monthly basis, an agreed upon amount to be deducted from the wages of employees who are Union members and who have signed deduction authorization cards.
+
+ARTICLE 4 CONTINUANCE OF EMPLOYMENT
+
+4.01 All employees are to be continued in their present employment during the term of this Agreement subject to the terms and conditions of employment in this Agreement and the Schedule attached hereto and made part hereof.
+
+ARTICLE 5 EMPLOYER'S PREROGATIVES
+
+5.01 The Employer's prerogatives shall include the right of management of its business, and the hiring, direction and placement of employees and to promulgate reasonable rules relating to conduct of employees in the performance of their duties and to amend, modify, supplement the same from time to time, subject to the terms of this Agreement.
+
+5.02 The Employer's prerogatives shall include the right to fix the days and hours when its markets shall open and close, the days and hours when its employees shall start and stop work, the right to transfer employees from one market to another and to interchange employees within any department, and to choose and change the type of work to be performed by any employee and the right to discharge or discipline any employee for just cause, subject to the terms of this Agreement.
+
+5.03 Just cause shall include but not be limited to violations of Company rules, mishandling of Company funds or property, incompetence, disrespect to customers, dishonesty, drinking intoxicants during business hours, habitual absenteeism or lateness, insubordination, and falsification of employment application, or any of these shall be considered among, but not the only good causes for justifying the discharge of any employee, subject to the provisions herein.
+
+5.04 It is understood and agreed that each butcher department and grocery departments in the Employer's markets shall have separate and distinct identities apart from that the Employer's prerogatives to interchange employees and to change their line of work shall be restricted to, and within, said separate and distinct departments.
+
+5.05 The interchanging of employees within departments or from one market to another, as herein provided, shall not affect the seniority rights of any employee. The Employer does hereby agree to reimburse any regular full time employee for any unusual increases in carfares occasioned by said transfer from one market to another.
+
+5.06 Those full time employees who are transferred more than fifteen (15) miles from their assigned stores, in cases of temporary transfers, shall receive three ($3.00) dollars per day travel pay. Tolls paid in the case of temporary transfers shall be reimbursed regardless of mileage.
+
+5.07 Temporary transfers shall be limited to a period not to exceed thirty (30) days.
+
+5.08 In the event employees are transferred by reason of a store closing, promotion or a general layoff, these transfers shall not be considered under this provision.
+
+5.09 The Employer shall notify the Union and the employee in writing not less than one (1) week (Full Time Employees) and three (3) days (Part Time Employees) prior to their being transferred. The Union shall be notified as soon as possible in the case of an emergency transfer.

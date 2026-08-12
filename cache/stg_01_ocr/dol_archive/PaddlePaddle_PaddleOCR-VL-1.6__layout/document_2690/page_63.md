@@ -1,0 +1,13 @@
+a. Sick leave shall be taken for reasons of medical treatment or condition of the unit member, emergency care for immediate family members of the unit member, attendance at a funeral, childbirth by the unit member or the unit member's spouse, adoption of a child, or placement of a foster child with the unit member. Use of sick leave is subject to the conditions provided in Article 16.7(e).
+
+b. Regular full-time unit members accrue 4.62 hours of sick leave per 80 paid hours pay period. Full-time and part-time unit members shall accrue sick leave on an hour's paid basis. Unit members, excluding those on terminal leave, shall receive leave accrual on an hour's paid basis in the pay period encompassing the date of termination.
+
+c. After terminations resulting from program reduction or elimination, sick leave accumulations are lost except that accumulations are reinstated following re-employment for unit members who are rehired in a regular/term-funded position within thirty-six (36) months (3 years). At retirement, any unused sick leave hours may count toward retirement, as provided in the TRS statute.
+
+d. Sick leave does not accrue during sabbatical leave; unpaid hours; special assignments; temporary overload, summer, or additional assignment contracts; periods for which workers' compensation benefits are paid; periods of suspension or other disciplinary action as approved by the regional personnel office; or terminal leave which must be approved by the dean or director, or designee, and is defined as leave taken during pay periods immediately prior to an identified termination date. However, sick leave shall accrue when a unit member receives a contract extension beyond the nine-month base assignment at the same rate of pay and the same FTE as his/her base assignment. Provided the other requirements of Article 16.7 are met, unit members may use accrued sick leave during a summer or additional assignment. Sick leave shall accrue on an hour-paid basis when a continuing unit member returns to a new fiscal year contract.
+
+e. Conditions of use of sick leave are as follows:
+
+1. The guidelines for the Family Medical Leave Act of 1993 and the Alaska Maternity and Family Leave Act of 1992 pertain to unit members.
+
+2. The use of sick leave requires the approval of the dean or director, or designee. The dean or director, or designee, may request evidence of the illness, at their discretion. Sick leave shall not be used in advance of accrual. The qualifying event period in excess of a unit member's accrued sick leave shall be charged as leave without pay. Sick leave shall not be used during a holiday or a

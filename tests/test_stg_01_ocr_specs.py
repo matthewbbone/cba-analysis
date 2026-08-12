@@ -24,10 +24,12 @@ SHARED_FLAGS = {
     "--dpi",
     "--concurrency",
     "--max-tokens",
+    "--max-num-seqs",
     "--force",
     "--no-progress",
     "--source",
     "--document-id",
+    "--document-ids",
 }
 
 
@@ -104,6 +106,57 @@ class RunnerSpecTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(glmocr.parse_args(["--mode", "layout"]).output_variant, "layout")
         self.assertEqual(miner.parse_args(["--mode", "native"]).output_variant, "native")
 
+    def test_general_accepts_hugging_face_model_from_cli(self) -> None:
+        model_name = "example-org/arbitrary-vision-language-model"
+
+        by_model_name = general.parse_args(["--model-name", model_name])
+        by_hf_alias = general.parse_args(["--hf-model", model_name])
+
+        self.assertEqual(by_model_name.model_name, model_name)
+        self.assertEqual(by_hf_alias.model_name, model_name)
+        self.assertEqual(
+            common.model_output_directory_name(
+                by_hf_alias.model_name,
+                by_hf_alias.output_variant,
+            ),
+            "example-org_arbitrary-vision-language-model",
+        )
+
+    def test_all_runners_accept_one_or_more_document_ids(self) -> None:
+        for module in RUNNERS:
+            with self.subTest(module=module.__name__):
+                singular = module.parse_args(["--document-id", "doc_a"])
+                plural_and_repeated = module.parse_args(
+                    [
+                        "--document-ids",
+                        "doc_a",
+                        "doc_b",
+                        "--document-id",
+                        "doc_c",
+                    ]
+                )
+
+                self.assertEqual(singular.document_id, ["doc_a"])
+                self.assertEqual(
+                    plural_and_repeated.document_id,
+                    ["doc_a", "doc_b", "doc_c"],
+                )
+
+    def test_max_num_seqs_defaults_to_actual_request_limit(self) -> None:
+        for module in RUNNERS:
+            with self.subTest(module=module.__name__):
+                args = module.parse_args(["--max-inflight-requests", "17"])
+                self.assertEqual(args.max_num_seqs, 17)
+
+                overridden = module.parse_args(["--max-num-seqs", "64"])
+                self.assertEqual(overridden.max_num_seqs, 64)
+
+    def test_max_num_seqs_must_be_positive(self) -> None:
+        args = general.parse_args(["--max-num-seqs", "0"])
+
+        with self.assertRaisesRegex(ValueError, "--max-num-seqs must be at least 1"):
+            general.validate_args(args)
+
     def test_serve_arguments_are_unquoted_argv_values(self) -> None:
         for module in RUNNERS:
             args = module.parse_args([])
@@ -144,6 +197,19 @@ class RunnerSpecTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(request["temperature"], 0.0)
         self.assertIn("max_tokens", request)
         self.assertEqual(request["messages"][0]["role"], "system")
+
+    async def test_general_sends_cli_model_name_in_request(self) -> None:
+        client = RecordingClient()
+        model_name = "example-org/arbitrary-vision-language-model"
+
+        await general.transcribe(
+            make_context(general, client, ["--hf-model", model_name])
+        )
+
+        self.assertEqual(
+            client.chat.completions.calls[0]["model"],
+            model_name,
+        )
 
     async def test_paddle_request_shape(self) -> None:
         client = RecordingClient()

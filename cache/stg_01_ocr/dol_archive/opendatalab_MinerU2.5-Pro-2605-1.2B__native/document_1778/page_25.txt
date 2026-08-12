@@ -1,0 +1,55 @@
+<fcel>$ 9.20<fcel>$ 9.35<fcel>$ 9.55<fcel>$ 9.55<fcel>$ 9.75<fcel>$ 9.95<fcel>$10.10<nl>
+<fcel>$ 9.15<fcel>$ 9.30<fcel>$ 9.50<fcel>$ 9.50<fcel>$ 9.70<fcel>$ 9.90<fcel>$10.10<nl>
+<fcel>$ 8.85<fcel>$ 9.00<fcel>$ 9.20<fcel>$ 9.20<fcel>$ 9.40<fcel>$ 9.60<fcel>$ 9.75<nl>
+<fcel>$ 8.75<fcel>$ 8.90<fcel>$ 9.10<fcel>$ 9.10<fcel>$ 9.30<fcel>$ 9.50<fcel>$ 9.75<nl>
+<fcel>$ 8.65<fcel>$ 8.80<fcel>$ 9.00<fcel>$ 9.00<fcel>$ 9.20<fcel>$ 9.40<fcel>$ 9.50<nl>
+<fcel>$ 8.55<fcel>$ 8.70<fcel>$ 8.90<fcel>$ 9.00<fcel>$ 9.15<fcel>$ 9.35<fcel>$ 9.50<nl>
+<fcel>$ 8.50<fcel>$ 8.65<fcel>$ 8.85<fcel>$ 9.00<fcel>$ 9.15<fcel>$ 9.35<fcel>$ 9.50<nl>
+<fcel>$ 8.40<fcel>$ 8.55<fcel>$ 8.75<fcel>$ 9.00<fcel>$ 9.15<fcel>$ 9.30<fcel>$ 9.50<nl>
+<fcel>$ 8.35<fcel>$ 8.50<fcel>$ 8.70<fcel>$ 9.00<fcel>$ 9.15<fcel>$ 9.30<fcel>$ 9.50<nl>
+<fcel>$ 8.25<fcel>$ 8.40<fcel>$ 8.60<fcel>$ 9.00<fcel>$ 9.15<fcel>$ 9.30<fcel>$ 9.40<nl>
+<fcel>$ 8.20<fcel>$ 8.35<fcel>$ 8.55<fcel>$ 9.00<fcel>$ 9.15<fcel>$ 9.30<fcel>$ 9.40<nl>
+<fcel>$ 8.15<fcel>$ 8.30<fcel>$ 8.50<fcel>$ 9.00<fcel>$ 9.15<fcel>$ 9.30<fcel>$ 9.40<nl>
+<fcel>$ 8.10<fcel>$ 8.25<fcel>$ 8.45<fcel>$ 9.00<fcel>$ 9.15<fcel>$ 9.30<fcel>$ 9.40<nl>
+<fcel>$ 8.05<fcel>$ 8.25<fcel>$ 8.45<fcel>$ 9.00<fcel>$ 9.15<fcel>$ 9.30<fcel>$ 9.40<nl>
+<fcel>$ 8.00<fcel>$ 8.25<fcel>$ 8.45<fcel>$ 9.00<fcel>$ 9.15<fcel>$ 9.30<fcel>$ 9.40<nl>
+<fcel>$ 7.95<fcel>$ 8.25<fcel>$ 8.45<fcel>$ 9.00<fcel>$ 9.15<fcel>$ 9.30<fcel>$ 9.40<nl>
+<fcel>$ 7.75<fcel>$ 8.25<fcel>$ 8.45<fcel>$ 9.00<fcel>$ 9.15<fcel>$ 9.30<fcel>$ 9.40<nl>
+<fcel>$ 7.65<fcel>$ 8.25<fcel>$ 8.45<fcel>$ 9.00<fcel>$ 9.15<fcel>$ 9.30<fcel>$ 9.40<nl>
+<fcel>$ 7.50<fcel>$ 8.25<fcel>$ 8.45<fcel>$ 9.00<fcel>$ 9.00<fcel>$ 9.25<fcel>$ 9.35<nl>
+<fcel>$ 7.25<fcel>$ 8.25<fcel>$ 8.45<fcel>$ 9.00<fcel>$ 9.00<fcel>$ 9.25<fcel>$ 9.35<nl>
+
+(F) WEEKLY WAGE PROGRESSIONS FOR FULL TIME CLERKS HIRED ON OR AFTER DECEMBER 29, 2013:
+
+5/1/14
+
+After 60 days \$490.00
+
+And will receive an increase of an additional twenty (\$20) dollars per week semi-annually in accordance with the schedule of semi- annual wage increases.
+
+(1) Full time Clerks hired or appointed on or after December 29, 2013, shall not receive the general across the board wage increases. However, an employee who reaches the top of the progression scale during the term of the Agreement as a result of having been hired above the minimum or reclassified from part time to full time shall be eligible to receive the across the board increases December 29, 2013, September 28, 2014 and June 28, 2015 if applicable, provided that in no event shall such employee exceed the applicable top clerks' rate of pay.
+(2) All new Full Time Clerks hired at or above the minimum sixty (60) day rate, in any event, shall receive a minimum wage increase of Ten (\$10.00) Dollars after sixty (60) days employment and thereafter, Twenty (\$20) Dollars per week on a semi-annual basis in accordance with the schedule of semi-annual wage increases.
+
+(1) Full time Clerks hired or appointed on or after December 29, 2013, shall not receive the general across the board wage increases. However, an employee who reaches the top of the progression scale during the term of the Agreement as a result of having been hired above the minimum or reclassified from part time to full time shall be eligible to receive the across the board increases December 29, 2013, September 28, 2014 and June 28, 2015 if applicable, provided that in no event shall such employee exceed the applicable top clerks' rate of pay.
+
+(2) All new Full Time Clerks hired at or above the minimum sixty (60) day rate, in any event, shall receive a minimum wage increase of Ten (\$10.00) Dollars after sixty (60) days employment and thereafter, Twenty (\$20) Dollars per week on a semi-annual basis in accordance with the schedule of semi-annual wage increases.
+
+(G) HOURLY WAGE PROGRESSIONS FOR PART TIME CLERKS HIRED ON OR AFTER DECEMBER 29, 2013:
+
+NEW HIRES
+After 60 Days
+
+Effective 1/1/14
+\$ 8.25 per hr.
+
+Effective 1/1/15
+9.00 per hr.
+
+Effective 1/1/16
+\$9.25 per hr.
+
+And will receive an increase of an additional fifteen (15¢) cents per hour on a semi-annual basis in accordance with the schedule of semi-annual wage increases.
+
+(1) Part time Clerks and Porters hired on or after December 29, 2013 shall not receive the general across the board wage increases. However, an employee who reaches the top of the progression scale during the term of the Agreement as a result of having been hired above the minimum or reclassified from full time to part time, shall be eligible to receive the across the board increases on December 29, 2013, September 28, 2014, June 28, 2015 and December 27, 2015 if applicable, provided that in no event shall such employee exceed the top clerks' rate of pay.
+
+(2) All new Part Time Clerks and Porters hired at or above the minimum rate, in any event, shall receive a minimum wage increase of twenty five (25¢) cents per hour after sixty (60) days employment and,

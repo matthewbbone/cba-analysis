@@ -1,0 +1,51 @@
+The user wants the text from the image transcribed verbatim.
+
+1.  **Identify the sections:**
+    *   "Section 8.2 - Reporting For Duty"
+    *   Numbered list 1-6.
+    *   "Section 8.3 - Lunch Periods and Breaks"
+    *   Numbered list 1.
+    *   Footer text.
+
+2.  **Transcribe Section 8.2:**
+    *   "Section 8.2 - Reporting For Duty"
+    *   "1. Employees have a responsibility to report to work ready, willing, able, and in proper attire, promptly at the beginning of their scheduled work period."
+    *   "2. Except in the case of an emergency, Employees will notify their immediate Supervisor as soon as possible, but not later than two hours after beginning of the work shift, of the reason that prevented them, or will prevent them, from reporting to work on time. If the reason provided is illness of the Employee or qualified family member, Supervisors cannot request that an Employee elaborate on the specifics of the medical condition. If the Employee is incapacitated and/or physically unable to initiate contact him/herself, then Management may accept tardiness or absence notice from an Employee's next of kin."
+    *   "3. When an Employee cannot establish positive contact with their first level Supervisor, then Employees should attempt to make contact with their next level of Supervision, and continue to do so, until a Management representative is reached, in order to provide notice. Co-workers cannot be used to relay information concerning tardiness or absence."
+    *   "4. Tardiness and absence notices, regardless of the circumstances, should be provided verbally by the Employee him/herself directly to a Management official. However, Employees may use other modes of acceptable modern communication, such as voice mail, email, and/or text, as a secondary method of attempting to provide notice, or when all efforts to verbally contact a Management representative have been reasonably exhausted by the Employee."
+    *   "5. Tardiness and absences from duty of less than an hour may be excused when the reasons are justified to the Supervisor. Justifiable reasons are events which are beyond the Employee's control such as abnormal traffic congestion, severe weather, or any other type of event that cannot be predicted. However, the Employee's leave status will be determined by the Supervisor when tardiness or unexcused absences from work is less than an hour."
+    *   "6. The Employee will not be permitted or be required to work during any period for which leave is charged or unpaid breaks."
+
+3.  **Transcribe Section 8.3:**
+    *   "Section 8.3 - Lunch Periods and Breaks"
+    *   "1. The Parties agree to establish lunch periods at each facility based on local mission requirements. An unpaid lunch period may not exceed forty-five (45) minutes. A lunch period is a time during which an Employee is entirely free from their work responsibilities. During this time the Employee is considered to be off-duty. The Employee's choice to forego their lunch period shall not shorten their scheduled work day."
+
+4.  **Transcribe Footer:**
+    *   "Agreement Between the Adjutant General of Michigan and the Laborers International Union of North America (LIUNA)"
+    *   "September 2015"
+    *   "24"
+
+5.  **Final Review:** Compare transcription against the image to ensure accuracy, including punctuation and capitalization.
+</think>
+
+Section 8.2 - Reporting For Duty
+
+1. Employees have a responsibility to report to work ready, willing, able, and in proper attire, promptly at the beginning of their scheduled work period.
+
+2. Except in the case of an emergency, Employees will notify their immediate Supervisor as soon as possible, but not later than two hours after beginning of the work shift, of the reason that prevented them, or will prevent them, from reporting to work on time. If the reason provided is illness of the Employee or qualified family member, Supervisors cannot request that an Employee elaborate on the specifics of the medical condition. If the Employee is incapacitated and/or physically unable to initiate contact him/herself, then Management may accept tardiness or absence notice from an Employee's next of kin.
+
+3. When an Employee cannot establish positive contact with their first level Supervisor, then Employees should attempt to make contact with their next level of Supervision, and continue to do so, until a Management representative is reached, in order to provide notice. Co-workers cannot be used to relay information concerning tardiness or absence.
+
+4. Tardiness and absence notices, regardless of the circumstances, should be provided verbally by the Employee him/herself directly to a Management official. However, Employees may use other modes of acceptable modern communication, such as voice mail, email, and/or text, as a secondary method of attempting to provide notice, or when all efforts to verbally contact a Management representative have been reasonably exhausted by the Employee.
+
+5. Tardiness and absences from duty of less than an hour may be excused when the reasons are justified to the Supervisor. Justifiable reasons are events which are beyond the Employee's control such as abnormal traffic congestion, severe weather, or any other type of event that cannot be predicted. However, the Employee's leave status will be determined by the Supervisor when tardiness or unexcused absences from work is less than an hour.
+
+6. The Employee will not be permitted or be required to work during any period for which leave is charged or unpaid breaks.
+
+Section 8.3 - Lunch Periods and Breaks
+
+1. The Parties agree to establish lunch periods at each facility based on local mission requirements. An unpaid lunch period may not exceed forty-five (45) minutes. A lunch period is a time during which an Employee is entirely free from their work responsibilities. During this time the Employee is considered to be off-duty. The Employee's choice to forego their lunch period shall not shorten their scheduled work day.
+
+Agreement Between the Adjutant General of Michigan and the Laborers International Union of North America (LIUNA)
+September 2015
+24

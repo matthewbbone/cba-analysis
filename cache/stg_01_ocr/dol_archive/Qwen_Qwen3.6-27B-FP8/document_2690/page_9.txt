@@ -1,0 +1,45 @@
+The user wants the text from the image transcribed exactly.
+
+1.  **Identify the main title:** "ARTICLE 7 Resolution of Disputes"
+2.  **Identify section 7.0:** "7.0 Purpose" followed by the paragraph.
+3.  **Identify section 7.1:** "7.1 Definitions" followed by the list items a through f.
+4.  **Transcribe list item a:** Includes sub-items i, ii, and iii.
+5.  **Transcribe list item b:** "A 'complaint' is..."
+6.  **Transcribe list item c:** "A 'grievant' is..."
+7.  **Transcribe list item d:** "A 'complainant' is..."
+8.  **Transcribe list item e:** "A 'day' is..."
+9.  **Transcribe list item f:** "A 'filing' is..."
+10. **Transcribe footer:** "Tentative Agreement Page 9 of 77"
+
+Let's transcribe line by line.
+</think>
+
+ARTICLE 7
+*Resolution of Disputes*
+
+**7.0 Purpose**
+
+In the interest of promoting harmonious and cooperative relations between the University of Alaska and United Academics, the parties hereby agree to the following terms for the resolution of disputes.
+
+**7.1 Definitions**
+
+a. A "grievance" is:
+
+i. an allegation by a unit member or United Academics that there has been a specifically cited allegation of procedural errors or omissions made in reaching decisions involving academic judgment; or
+
+ii. an allegation by a unit member, United Academics, or the University that an express term of the Agreement has been violated, misinterpreted or improperly applied; or
+
+iii. an allegation by a unit member or United Academics that there has been a violation of Regents' Policy or University Regulation to the extent it concerns a term and condition of employment as defined in the Public Employment Relations Act.
+
+b. A "complaint" is an allegation by a unit member or United Academics involving substantive academic judgments.
+
+c. A "grievant" is the party alleging a grievance.
+
+d. A "complainant" is the party alleging a complaint.
+
+e. A "day" is a working day, Monday through Friday, at the unit from which the grievance or complaint arose, i.e., a day on which the University of Alaska Anchorage, University of Alaska Fairbanks, or University of Alaska Southeast, respectively, are open for business, even if classes are not scheduled.
+
+f. A "filing" is the receipt of a written grievance or complaint by personal delivery, certified mail or facsimile. If personal delivery is used, the administrator shall provide a written receipt. If certified mail is used, the return receipt shall establish the date of delivery. If facsimile is used, the
+
+Tentative Agreement
+Page 9 of 77

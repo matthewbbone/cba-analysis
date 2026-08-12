@@ -1,0 +1,38 @@
+EXTRA PAY SCHEDULE (Effective July 1,2004 through June 30,2007)
+
+Extra duty pay schedule will be increased by 4% for FY2005-2006 and 5% for FY 2006-2007.
+
+Extra duty pay schedule will be increased by 4% for FY2005-2006 and 5% for FY 2006-2007.
+
+| Activity |  | 1-5 yrs. Base | 6-10 yrs. Level I | 11-15 yrs. Level II | 16-20 yrs. Level III | 21&over Level IV |
+| --- | --- | --- | --- | --- | --- | --- |
+| CATEGORY I | CATEGORY I | CATEGORY I | CATEGORY I | CATEGORY I | CATEGORY I | CATEGORY I |
+| Band |  |  |  |  |  |  |
+| Band Director | HS-Varsity | $2,090 | $2,270 | $2,540 | $2,850 | $3,130 |
+| Basketball, Football, Wrestling | Basketball, Football, Wrestling | Basketball, Football, Wrestling | Basketball, Football, Wrestling | Basketball, Football, Wrestling | Basketball, Football, Wrestling | Basketball, Football, Wrestling |
+| Head Coach | HS-Varsity | $2,090 | $2,270 | $2,540 | $2,850 | $3,130 |
+| Assistant Coach | HS-Varsity | $1,300 | $1,390 | $1,580 | $1,740 | $1,930 |
+| CATEGORY II | CATEGORY II | CATEGORY II | CATEGORY II | CATEGORY II | CATEGORY II | CATEGORY II |
+| Band |  |  |  |  |  |  |
+| Band Director | MS | $1,640 | $1,770 | $1,980 | $2,200 | $2,440 |
+| Baseball, Field Hockey, Soccer, Softball, Indoor Track, Volleyball, Lacrosse | Baseball, Field Hockey, Soccer, Softball, Indoor Track, Volleyball, Lacrosse | Baseball, Field Hockey, Soccer, Softball, Indoor Track, Volleyball, Lacrosse | Baseball, Field Hockey, Soccer, Softball, Indoor Track, Volleyball, Lacrosse | Baseball, Field Hockey, Soccer, Softball, Indoor Track, Volleyball, Lacrosse | Baseball, Field Hockey, Soccer, Softball, Indoor Track, Volleyball, Lacrosse | Baseball, Field Hockey, Soccer, Softball, Indoor Track, Volleyball, Lacrosse |
+| Head Coach | HS-Varsity | $1,640 | $1,770 | $1,980 | $2,200 | $2,440 |
+| Assistant Coach | HS-Varsity | $1,030 | $1,120 | $1,270 | $1,410 | $1,580 |
+| Dramatics | Dramatics | Dramatics | Dramatics | Dramatics | Dramatics | Dramatics |
+| Director | HS | $1,640 | $1,770 | $1,980 | $2,200 | $2,440 |
+| S.I.T. Leaders | HS/MS/ES | $1,640 | $1,770 | $1,980 | $2,200 | $2,440 |
+| CATEGORY III | CATEGORY III | CATEGORY III | CATEGORY III | CATEGORY III | CATEGORY III | CATEGORY III |
+| Cross Country & Tennis | Cross Country & Tennis | Cross Country & Tennis | Cross Country & Tennis | Cross Country & Tennis | Cross Country & Tennis | Cross Country & Tennis |
+| Head Coach | HS-Varsity | $1,280 | $1,390 | $1,550 | $1,730 | $1,930 |
+| Golf | HS-Varsity | $1,280 | $1,390 | $1,550 | $1,730 | $1,930 |
+| CATEGORY IV | CATEGORY IV | CATEGORY IV | CATEGORY IV | CATEGORY IV | CATEGORY IV | CATEGORY IV |
+| Cheerleaders(Per season) | Cheerleaders(Per season) | Cheerleaders(Per season) | Cheerleaders(Per season) | Cheerleaders(Per season) | Cheerleaders(Per season) | Cheerleaders(Per season) |
+| Advisor | HS | $940 | $1,000 | $1,130 | $1,260 | $1,390 |
+| Assistant Advisor | HS | $560 | $660 | $720 | $800 | $890 |
+| Chorus | Chorus | Chorus | Chorus | Chorus | Chorus | Chorus |
+| Director | HS | $940 | $1,000 | $1,130 | $1,260 | $1,390 |
+| Director(2) | MS | $940 | $1,000 | $1,130 | $1,260 | $1,390 |
+| Newspaper,Yearbook | Newspaper,Yearbook | Newspaper,Yearbook | Newspaper,Yearbook | Newspaper,Yearbook | Newspaper,Yearbook | Newspaper,Yearbook |
+| Advisor | HS | $940 | $1,000 | $1,130 | $1,260 | $1,390 |
+| Advisor | MS | $940 | $1,000 | $1,130 | $1,260 | $1,390 |
+| Student Government Advisor | HS | $940 | $1,000 | $1,130 | $1,260 | $1,390 |

@@ -1,0 +1,54 @@
+The user wants the text from the image transcribed verbatim.
+
+1.  **Identify the sections:**
+    *   Top paragraph fragment.
+    *   "ARTICLE XII TEACHER DISCIPLINE AND DISMISSAL"
+    *   "A. General Provisions" with numbered list 1-8.
+    *   "B. Reprimands" with numbered list 1-2 and sub-point 'a'.
+    *   Page number "29".
+
+2.  **Transcribe text:**
+    *   "references. Upon request, the beginning teacher will be provided copies of any or all documents included in the portfolio."
+    *   "ARTICLE XII"
+    *   "TEACHER DISCIPLINE AND DISMISSAL"
+    *   "A. General Provisions"
+    *   "1. Any teacher may be suspended or dismissed at any time during the school year provided that the charges against him must be based on immorality, misconduct in office, incompetency, gross insubordination, willful neglect of duty, drunkenness, or conviction of any crime involving moral turpitude in accordance with Florida Statutes, Chapter 231.36."
+    *   "2. Discipline shall only be imposed for violation of an expressed rule, an expressed order, an expressed policy or a reasonable expectation of management which reasonably should have been known to the teacher. This shall not be construed so as to prohibit the principal from questioning a teacher and/or offering reasonable direction at the time of the occurrence of any incidents the result of which might later be dealt with in a disciplinary manner."
+    *   "3. Teachers shall not be required or permitted to discipline other teachers."
+    *   "4. Teachers shall be entitled to representation in any meeting with the administration when the employee reasonably feels that discipline may result."
+    *   "5. On matters that may result in discipline, the teacher may choose not to make a statement or explain his perception of the facts. This shall not be construed as an admission of guilt."
+    *   "6. The Superintendent may also suggest either independently or in consultation with the Association that the affected teacher enroll in the Employee Assistance Program."
+    *   "7. In the event the teacher cannot be reached during any period of time when the teacher is not required to be on duty, no disciplinary action shall be initiated until he is required to be on duty, or he has received actual notification or a reasonable attempt at notification of the proposed action has been made. Notice by certified mail at the last known address of the teacher shall be considered a reasonable attempt."
+    *   "8. When any State agency is contacted by the administration pursuant to this Article, the affected teacher and the Association shall be notified."
+    *   "B. Reprimands"
+    *   "1. Oral Reprimands"
+    *   "If after an investigation the decision to impose discipline is to issue an oral reprimand, the reprimand shall be given in private and shall be done in a formal discussion."
+    *   "2. Written Reprimands"
+    *   "a. Prior to imposing a written reprimand, a conference shall be held during which the teacher shall be informed of what the"
+    *   "29"
+
+3.  **Final Review:** Check against the image for typos and formatting. Looks accurate.
+</think>
+
+references. Upon request, the beginning teacher will be provided copies of any or all documents included in the portfolio.
+
+ARTICLE XII
+TEACHER DISCIPLINE AND DISMISSAL
+
+A. General Provisions
+1. Any teacher may be suspended or dismissed at any time during the school year provided that the charges against him must be based on immorality, misconduct in office, incompetency, gross insubordination, willful neglect of duty, drunkenness, or conviction of any crime involving moral turpitude in accordance with Florida Statutes, Chapter 231.36.
+2. Discipline shall only be imposed for violation of an expressed rule, an expressed order, an expressed policy or a reasonable expectation of management which reasonably should have been known to the teacher. This shall not be construed so as to prohibit the principal from questioning a teacher and/or offering reasonable direction at the time of the occurrence of any incidents the result of which might later be dealt with in a disciplinary manner.
+3. Teachers shall not be required or permitted to discipline other teachers.
+4. Teachers shall be entitled to representation in any meeting with the administration when the employee reasonably feels that discipline may result.
+5. On matters that may result in discipline, the teacher may choose not to make a statement or explain his perception of the facts. This shall not be construed as an admission of guilt.
+6. The Superintendent may also suggest either independently or in consultation with the Association that the affected teacher enroll in the Employee Assistance Program.
+7. In the event the teacher cannot be reached during any period of time when the teacher is not required to be on duty, no disciplinary action shall be initiated until he is required to be on duty, or he has received actual notification or a reasonable attempt at notification of the proposed action has been made. Notice by certified mail at the last known address of the teacher shall be considered a reasonable attempt.
+8. When any State agency is contacted by the administration pursuant to this Article, the affected teacher and the Association shall be notified.
+
+B. Reprimands
+1. Oral Reprimands
+If after an investigation the decision to impose discipline is to issue an oral reprimand, the reprimand shall be given in private and shall be done in a formal discussion.
+2. Written Reprimands
+a. Prior to imposing a written reprimand, a conference shall be held during which the teacher shall be informed of what the
+
+29

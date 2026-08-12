@@ -1,0 +1,33 @@
+The user wants the text from the image transcribed exactly.
+
+1.  **Identify the main heading:** "DIRECTORY"
+2.  **Identify the first block:**
+    *   "BOARD OF EDUCATION OF WICOMICO COUNTY"
+    *   "101 Long Avenue"
+    *   "P.O. Box 1538"
+    *   "Salisbury, Maryland 21802-1538"
+    *   "Telephone: 410-677-4400"
+    *   "FAX 410-543-4279"
+3.  **Identify the second block:**
+    *   "WICOMICO COUNTY EDUCATION ASSOCIATION"
+    *   "1302 Old Ocean City Road"
+    *   "Salisbury, Maryland 21804"
+    *   "Telephone: 410-749-2491"
+    *   "FAX 410-860-2706"
+4.  **Transcribe verbatim.**
+</think>
+
+DIRECTORY
+
+BOARD OF EDUCATION OF WICOMICO COUNTY
+101 Long Avenue
+P.O. Box 1538
+Salisbury, Maryland 21802-1538
+Telephone: 410-677-4400
+FAX 410-543-4279
+
+WICOMICO COUNTY EDUCATION ASSOCIATION
+1302 Old Ocean City Road
+Salisbury, Maryland 21804
+Telephone: 410-749-2491
+FAX 410-860-2706

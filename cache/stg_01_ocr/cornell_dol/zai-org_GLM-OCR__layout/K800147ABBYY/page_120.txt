@@ -1,0 +1,38 @@
+COMMONWEALTH OF PENNSYLVANIA EXECUTIVE OFFICES HARRISBURG
+
+NANCY DERING MARTIN DEPUTY SECRETARY FOR HUMAN RESOURCES AND MANAGEMENT
+
+May 26, 2004
+
+Mr. Thomas DeBruin, President District 1199p, SEIU 1500 N.2nd Street 2nd Floor Harrisburg, PA 17102
+
+RE: Use of Personal Leave
+
+Dear Mr. DeBruin:
+
+During the bargaining which led to the July 1, 2003 through June 30, 2007 collective bargaining agreement the parties agreed that personal leave may be utilized on a one day at a time basis or for periods of time less than one day. Requests to substantiate a need to utilize personal leave for personal emergencies will not be arbitrary or capricious.
+
+If you are in agreement with this understanding, please sign the enclosed copy and return it to the Bureau of Labor Relations.
+
+Sincerely,
+
+Sincerely,
+Mrs. Dennis Martin
+
+Nancy Dering Martin
+
+Deputy Secretary for Human Resources and Management
+
+Thomas De Bruin Date 5/28/04
+
+Thomas De Bruin
+
+copy: Secretary Robert S. Barnett
+
+Donald Adams
+
+Carol Scott
+
+HR Directors which employ 1199p-represented employees
+
+LRC which employ 1199p-represented employees

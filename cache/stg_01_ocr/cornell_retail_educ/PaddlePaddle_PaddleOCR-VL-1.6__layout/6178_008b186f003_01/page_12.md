@@ -1,0 +1,15 @@
+bargaining unit, provided that the Association shall not use the inter-school mail service to send out material derogatory to the Board, publications advocating legislative positions, other than mutually agreed upon positions, or campaign literature for candidates for public office. The Association may, however, send out one flyer on behalf of each candidate for Association office.
+
+4. The Association office shall be placed on an inter-school mailing service route for daily pickup and delivery of Association communications subject to the normal rules which apply to other work locations which shall include the provision for at least one (1) bulk mailing per week.
+
+D. Association Leave
+
+1. The Board agrees to release the duly elected president of the Association from his regular duties to serve as CTA president for the term of his presidency and to serve as fiscal agent for the payment of his salary, fringe benefits, and fixed charges, provided the Association reimburses the Board one hundred percent (100%) of any and all sums paid to or on behalf of said Association president. The Association president shall not earn sick leave or annual leave, nor be covered by the Board Workers' Compensation Insurance during said term. The Association president shall be given credit on the salary schedule for the year(s) served as president, and district-wide seniority shall accrue while serving as Association president. The Association president may transfer the unused sick leave days accrued as president. It shall be the Association president's responsibility to assist in securing the requested transfer of sick leave credit from the Association. One (1) day of sick leave may be transferred for each day accrued upon return to Orange County, up to a maximum of twelve (12) days per year.
+
+2. The Association shall be granted up to seventy-five (75) days of leave per fiscal year for use by its members. No one teacher may use more than five (5) of the above days per fiscal year. Additional leave shall be at the discretion of the Superintendent. If requested, the Association shall reimburse the Board for substitutes other than permanent substitutes, if said substitutes are required.
+
+3. The Association faculty representatives and the Association Board of Directors shall be allowed to leave school at the end of the student day for up to three (3) regularly scheduled meetings per month.
+
+E. Information
+
+1. The Association will continue to be provided with copies of the Board agenda packet on the Friday preceeding said Board meeting and packets upon publication and copies of all Board periodicals (i.e., Objectives, Orange Peal, etc.). The Association shall be provided with an official copy of School Board policies, including any policy revision adopted by the Board.

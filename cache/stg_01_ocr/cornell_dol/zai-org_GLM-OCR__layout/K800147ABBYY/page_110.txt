@@ -1,0 +1,19 @@
+2) Ensuring that appropriate records are maintained only by identified personnel and that strict confidentiality procedures are followed for the testing results.
+
+3) Ensuring that appropriate agency procedures are established for dealing with employees who test positive for drugs and/or alcohol.
+
+c. Agency Personnel Officer is to assist Institution/Boot Camp/Corrections Community Center Coordinators in ensuring that all personnel program activities affected by the program requirements have been modified to meet these requirements which impact upon the recruitment, hiring, orientation, testing, training, transactions, discipline, labor relations and record keeping activities of the agency.
+
+d. Selected Contractors are responsible for administering the drug and alcohol testing requirements, supervisory training, record keeping and reporting processes consistent with the signed contract and this policy.
+
+e. The Department of Corrections is responsible for developing and/or obtaining educational/procedural materials relating to this program and disseminating such materials to all affected employees.
+
+f. State Employees Assistance Program will coordinate the evaluation and referral of employees who have tested positive for controlled substances and/or alcohol with a substance abuse professional. SEAP will coordinate all aspects of evaluation, treatment and follow up and communicate appropriately with the employee, agency and contractor.
+
+4. PROCEDURES
+
+a. Institution/Boot Camp/Corrections Community Center Coordinators are to ensure that all supervisors who may be involved in a "reasonable suspicion" determination are identified and trained in accordance with these procedures.
+
+b. Reasonable Suspicion Testing for Observable Behavior.
+
+1) An agency supervisor/manager, who has been trained in accordance with the regulations, must require an employee to submit to a controlled substance and/or alcohol test when the supervisor has reasonable suspicion to believe the employee has violated the controlled substance and/or alcohol prohibitions. Upon determining that reasonable suspicion due to observable behavior exists, the agency supervisor/manager should have another supervisor/manager who has been trained in accordance with the regulations, witness the observations.

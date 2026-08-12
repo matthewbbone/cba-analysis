@@ -1,0 +1,110 @@
+The user wants the text from the image transcribed verbatim.
+
+1.  **Identify the header:**
+    *   "Appendix B"
+    *   "COMMONWEALTH OF PENNSYLVANIA"
+    *   "37½ HOUR STANDARD PAY SCHEDULE"
+    *   "EFFECTIVE JULY 1, 2005"
+    *   "SCHEDULE S"
+
+2.  **Transcribe the table:**
+    *   The table has columns for "PAY STEP" and "PAY RANGE 1" through "PAY RANGE 10".
+    *   Each "PAY STEP" row contains "Hourly", "Biweekly", and "Annual*" values.
+    *   I need to transcribe the numbers exactly as they appear, including commas and decimals.
+
+    *   **Row 11:**
+        *   Hourly: 11.48, 12.93, 14.61, 16.51, 18.82, 21.47, 24.52, 28.00, 31.91, 36.45
+        *   Biweekly: 861.00, 969.75, 1,095.75, 1,238.25, 1,411.50, 1,610.25, 1,839.00, 2,100.00, 2,393.25, 2,733.75
+        *   Annual*: 22,455, 25,291, 28,577, 32,294, 36,812, 41,995, 47,961, 54,768, 62,416, 71,296
+
+    *   **Row 12:**
+        *   Hourly: 11.71, 13.21, 14.91, 16.87, 19.22, 21.97, 25.07, 28.59, 32.64, 37.24
+        *   Biweekly: 878.25, 990.75, 1,118.25, 1,265.25, 1,441.50, 1,647.75, 1,880.25, 2,144.25, 2,448.00, 2,793.00
+        *   Annual*: 22,905, 25,839, 29,164, 32,998, 37,594, 42,973, 49,037, 55,922, 63,844, 72,841
+
+    *   **Row 13:**
+        *   Hourly: 11.97, 13.49, 15.22, 17.23, 19.67, 22.44, 25.62, 29.24, 33.38, 38.10
+        *   Biweekly: 897.75, 1,011.75, 1,141.50, 1,292.25, 1,475.25, 1,683.00, 1,921.50, 2,193.00, 2,503.50, 2,857.50
+        *   Annual*: 23,413, 26,386, 29,770, 33,702, 38,475, 43,893, 50,113, 57,193, 65,291, 74,524
+
+    *   **Row 14:**
+        *   Hourly: 12.18, 13.75, 15.55, 17.60, 20.12, 22.94, 26.18, 29.89, 34.10, 38.94
+        *   Biweekly: 913.50, 1,031.25, 1,166.25, 1,320.00, 1,509.00, 1,720.50, 1,963.50, 2,241.75, 2,557.50, 2,920.50
+        *   Annual*: 23,824, 26,895, 30,416, 34,426, 39,355, 44,871, 51,208, 58,465, 66,700, 76,167
+
+    *   **Row 15:**
+        *   Hourly: 12.44, 14.04, 15.85, 17.97, 20.54, 23.46, 26.78, 30.56, 34.87, 39.81
+        *   Biweekly: 933.00, 1,053.00, 1,188.75, 1,347.75, 1,540.50, 1,759.50, 2,008.50, 2,292.00, 2,615.25, 2,985.75
+        *   Annual*: 24,333, 27,462, 31,003, 35,149, 40,176, 45,888, 52,382, 59,775, 68,206, 77,868
+
+    *   **Row 16:**
+        *   Hourly: 12.71, 14.35, 16.18, 18.39, 21.00, 24.00, 27.37, 31.23, 35.64, 40.69
+        *   Biweekly: 953.25, 1,076.25, 1,213.50, 1,379.25, 1,575.00, 1,800.00, 2,052.75, 2,342.25, 2,673.00, 3,051.75
+        *   Annual*: 24,861, 28,069, 31,648, 35,971, 41,076, 46,944, 53,536, 61,086, 69,712, 79,590
+
+    *   **Row 17:**
+        *   Hourly: 12.93, 14.61, 16.51, 18.82, 21.47, 24.52, 28.00, 31.91, 36.45, 41.62
+        *   Biweekly: 969.75, 1,095.75, 1,238.25, 1,411.50, 1,610.25, 1,839.00, 2,100.00, 2,393.25, 2,733.75, 3,121.50
+        *   Annual*: 25,291, 28,577, 32,294, 36,812, 41,995, 47,961, 54,768, 62,416, 71,296, 81,409
+
+    *   **Row 18:**
+        *   Hourly: 13.21, 14.91, 16.87, 19.22, 21.97, 25.07, 28.59, 32.64, 37.24, 42.54
+        *   Biweekly: 990.75, 1,118.25, 1,265.25, 1,441.50, 1,647.75, 1,880.25, 2,144.25, 2,448.00, 2,793.00, 3,190.50
+        *   Annual*: 25,839, 29,164, 32,998, 37,594, 42,973, 49,037, 55,922, 63,844, 72,841, 83,208
+
+    *   **Row 19:**
+        *   Hourly: 13.49, 15.22, 17.23, 19.67, 22.44, 25.62, 29.24, 33.38, 38.10, 43.48
+        *   Biweekly: 1,011.75, 1,141.50, 1,292.25, 1,475.25, 1,683.00, 1,921.50, 2,193.00, 2,503.50, 2,857.50, 3,261.00
+        *   Annual*: 26,386, 29,770, 33,702, 38,475, 43,893, 50,113, 57,193, 65,291, 74,524, 85,047
+
+    *   **Row 20:**
+        *   Hourly: 13.75, 15.55, 17.60, 20.12, 22.94, 26.18, 29.89, 34.10, 38.94, 44.44
+        *   Biweekly: 1,031.25, 1,166.25, 1,320.00, 1,509.00, 1,720.50, 1,963.50, 2,241.75, 2,557.50, 2,920.50, 3,333.00
+        *   Annual*: 26,895, 30,416, 34,426, 39,355, 44,871, 51,208, 58,465, 66,700, 76,167, 86,925
+
+3.  **Transcribe footer:**
+    *   "* Approximate annual rate is derived by multiplying the biweekly rate by 26.08 and rounding to the nearest dollar."
+    *   "Page 2 of 4"
+</think>
+
+Appendix B
+COMMONWEALTH OF PENNSYLVANIA
+37½ HOUR STANDARD PAY SCHEDULE
+EFFECTIVE JULY 1, 2005
+SCHEDULE S
+
+| PAY STEP | PAY RANGE 1 | PAY RANGE 2 | PAY RANGE 3 | PAY RANGE 4 | PAY RANGE 5 | PAY RANGE 6 | PAY RANGE 7 | PAY RANGE 8 | PAY RANGE 9 | PAY RANGE 10 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 11 | Hourly 11.48 | Hourly 12.93 | Hourly 14.61 | Hourly 16.51 | Hourly 18.82 | Hourly 21.47 | Hourly 24.52 | Hourly 28.00 | Hourly 31.91 | Hourly 36.45 |
+| | Biweekly 861.00 | Biweekly 969.75 | Biweekly 1,095.75 | Biweekly 1,238.25 | Biweekly 1,411.50 | Biweekly 1,610.25 | Biweekly 1,839.00 | Biweekly 2,100.00 | Biweekly 2,393.25 | Biweekly 2,733.75 |
+| | Annual* 22,455 | Annual* 25,291 | Annual* 28,577 | Annual* 32,294 | Annual* 36,812 | Annual* 41,995 | Annual* 47,961 | Annual* 54,768 | Annual* 62,416 | Annual* 71,296 |
+| 12 | Hourly 11.71 | Hourly 13.21 | Hourly 14.91 | Hourly 16.87 | Hourly 19.22 | Hourly 21.97 | Hourly 25.07 | Hourly 28.59 | Hourly 32.64 | Hourly 37.24 |
+| | Biweekly 878.25 | Biweekly 990.75 | Biweekly 1,118.25 | Biweekly 1,265.25 | Biweekly 1,441.50 | Biweekly 1,647.75 | Biweekly 1,880.25 | Biweekly 2,144.25 | Biweekly 2,448.00 | Biweekly 2,793.00 |
+| | Annual* 22,905 | Annual* 25,839 | Annual* 29,164 | Annual* 32,998 | Annual* 37,594 | Annual* 42,973 | Annual* 49,037 | Annual* 55,922 | Annual* 63,844 | Annual* 72,841 |
+| 13 | Hourly 11.97 | Hourly 13.49 | Hourly 15.22 | Hourly 17.23 | Hourly 19.67 | Hourly 22.44 | Hourly 25.62 | Hourly 29.24 | Hourly 33.38 | Hourly 38.10 |
+| | Biweekly 897.75 | Biweekly 1,011.75 | Biweekly 1,141.50 | Biweekly 1,292.25 | Biweekly 1,475.25 | Biweekly 1,683.00 | Biweekly 1,921.50 | Biweekly 2,193.00 | Biweekly 2,503.50 | Biweekly 2,857.50 |
+| | Annual* 23,413 | Annual* 26,386 | Annual* 29,770 | Annual* 33,702 | Annual* 38,475 | Annual* 43,893 | Annual* 50,113 | Annual* 57,193 | Annual* 65,291 | Annual* 74,524 |
+| 14 | Hourly 12.18 | Hourly 13.75 | Hourly 15.55 | Hourly 17.60 | Hourly 20.12 | Hourly 22.94 | Hourly 26.18 | Hourly 29.89 | Hourly 34.10 | Hourly 38.94 |
+| | Biweekly 913.50 | Biweekly 1,031.25 | Biweekly 1,166.25 | Biweekly 1,320.00 | Biweekly 1,509.00 | Biweekly 1,720.50 | Biweekly 1,963.50 | Biweekly 2,241.75 | Biweekly 2,557.50 | Biweekly 2,920.50 |
+| | Annual* 23,824 | Annual* 26,895 | Annual* 30,416 | Annual* 34,426 | Annual* 39,355 | Annual* 44,871 | Annual* 51,208 | Annual* 58,465 | Annual* 66,700 | Annual* 76,167 |
+| 15 | Hourly 12.44 | Hourly 14.04 | Hourly 15.85 | Hourly 17.97 | Hourly 20.54 | Hourly 23.46 | Hourly 26.78 | Hourly 30.56 | Hourly 34.87 | Hourly 39.81 |
+| | Biweekly 933.00 | Biweekly 1,053.00 | Biweekly 1,188.75 | Biweekly 1,347.75 | Biweekly 1,540.50 | Biweekly 1,759.50 | Biweekly 2,008.50 | Biweekly 2,292.00 | Biweekly 2,615.25 | Biweekly 2,985.75 |
+| | Annual* 24,333 | Annual* 27,462 | Annual* 31,003 | Annual* 35,149 | Annual* 40,176 | Annual* 45,888 | Annual* 52,382 | Annual* 59,775 | Annual* 68,206 | Annual* 77,868 |
+| 16 | Hourly 12.71 | Hourly 14.35 | Hourly 16.18 | Hourly 18.39 | Hourly 21.00 | Hourly 24.00 | Hourly 27.37 | Hourly 31.23 | Hourly 35.64 | Hourly 40.69 |
+| | Biweekly 953.25 | Biweekly 1,076.25 | Biweekly 1,213.50 | Biweekly 1,379.25 | Biweekly 1,575.00 | Biweekly 1,800.00 | Biweekly 2,052.75 | Biweekly 2,342.25 | Biweekly 2,673.00 | Biweekly 3,051.75 |
+| | Annual* 24,861 | Annual* 28,069 | Annual* 31,648 | Annual* 35,971 | Annual* 41,076 | Annual* 46,944 | Annual* 53,536 | Annual* 61,086 | Annual* 69,712 | Annual* 79,590 |
+| 17 | Hourly 12.93 | Hourly 14.61 | Hourly 16.51 | Hourly 18.82 | Hourly 21.47 | Hourly 24.52 | Hourly 28.00 | Hourly 31.91 | Hourly 36.45 | Hourly 41.62 |
+| | Biweekly 969.75 | Biweekly 1,095.75 | Biweekly 1,238.25 | Biweekly 1,411.50 | Biweekly 1,610.25 | Biweekly 1,839.00 | Biweekly 2,100.00 | Biweekly 2,393.25 | Biweekly 2,733.75 | Biweekly 3,121.50 |
+| | Annual* 25,291 | Annual* 28,577 | Annual* 32,294 | Annual* 36,812 | Annual* 41,995 | Annual* 47,961 | Annual* 54,768 | Annual* 62,416 | Annual* 71,296 | Annual* 81,409 |
+| 18 | Hourly 13.21 | Hourly 14.91 | Hourly 16.87 | Hourly 19.22 | Hourly 21.97 | Hourly 25.07 | Hourly 28.59 | Hourly 32.64 | Hourly 37.24 | Hourly 42.54 |
+| | Biweekly 990.75 | Biweekly 1,118.25 | Biweekly 1,265.25 | Biweekly 1,441.50 | Biweekly 1,647.75 | Biweekly 1,880.25 | Biweekly 2,144.25 | Biweekly 2,448.00 | Biweekly 2,793.00 | Biweekly 3,190.50 |
+| | Annual* 25,839 | Annual* 29,164 | Annual* 32,998 | Annual* 37,594 | Annual* 42,973 | Annual* 49,037 | Annual* 55,922 | Annual* 63,844 | Annual* 72,841 | Annual* 83,208 |
+| 19 | Hourly 13.49 | Hourly 15.22 | Hourly 17.23 | Hourly 19.67 | Hourly 22.44 | Hourly 25.62 | Hourly 29.24 | Hourly 33.38 | Hourly 38.10 | Hourly 43.48 |
+| | Biweekly 1,011.75 | Biweekly 1,141.50 | Biweekly 1,292.25 | Biweekly 1,475.25 | Biweekly 1,683.00 | Biweekly 1,921.50 | Biweekly 2,193.00 | Biweekly 2,503.50 | Biweekly 2,857.50 | Biweekly 3,261.00 |
+| | Annual* 26,386 | Annual* 29,770 | Annual* 33,702 | Annual* 38,475 | Annual* 43,893 | Annual* 50,113 | Annual* 57,193 | Annual* 65,291 | Annual* 74,524 | Annual* 85,047 |
+| 20 | Hourly 13.75 | Hourly 15.55 | Hourly 17.60 | Hourly 20.12 | Hourly 22.94 | Hourly 26.18 | Hourly 29.89 | Hourly 34.10 | Hourly 38.94 | Hourly 44.44 |
+| | Biweekly 1,031.25 | Biweekly 1,166.25 | Biweekly 1,320.00 | Biweekly 1,509.00 | Biweekly 1,720.50 | Biweekly 1,963.50 | Biweekly 2,241.75 | Biweekly 2,557.50 | Biweekly 2,920.50 | Biweekly 3,333.00 |
+| | Annual* 26,895 | Annual* 30,416 | Annual* 34,426 | Annual* 39,355 | Annual* 44,871 | Annual* 51,208 | Annual* 58,465 | Annual* 66,700 | Annual* 76,167 | Annual* 86,925 |
+
+* Approximate annual rate is derived by multiplying the biweekly rate by 26.08 and rounding to the nearest dollar.
+Page 2 of 4
