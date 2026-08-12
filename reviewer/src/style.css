@@ -36,6 +36,45 @@ body {
   flex-wrap: wrap;
 }
 
+.tabs {
+  align-self: stretch;
+  display: flex;
+  gap: 2px;
+  margin: -8px 2px;
+}
+
+.tab {
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  padding: 10px 12px 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tab:hover {
+  color: var(--text);
+  background: #f8fafc;
+}
+
+.tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.tab-controls {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1 1 auto;
+}
+
+[hidden] {
+  display: none !important;
+}
+
 .brand {
   font-weight: 700;
   font-size: 15px;
@@ -107,7 +146,7 @@ body {
   display: inline-block;
 }
 
-#workspace {
+.workspace {
   flex: 1 1 auto;
   display: flex;
   min-height: 0;
@@ -120,12 +159,14 @@ body {
   flex-direction: column;
 }
 
-#pdf-pane {
+#pdf-pane,
+.pdf-pane {
   flex: 0 0 50%;
   background: #333;
 }
 
-#pdf-frame {
+#pdf-frame,
+#comparison-pdf-frame {
   width: 100%;
   height: 100%;
   border: 0;
@@ -139,13 +180,15 @@ body {
   color: #cbd5e1;
 }
 
-#divider {
+#divider,
+.divider {
   flex: 0 0 6px;
   cursor: col-resize;
   background: var(--border);
 }
 
-#divider:hover {
+#divider:hover,
+.divider:hover {
   background: var(--accent);
 }
 
@@ -259,4 +302,159 @@ mark.hl:hover {
 mark.hl.active {
   background: color-mix(in srgb, var(--hl) 55%, transparent);
   outline: 2px solid var(--hl);
+}
+
+.comparison-meta {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.comparison-progress {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.distance-field {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.secondary-button {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.secondary-button:hover:not(:disabled) {
+  background: #eef2f7;
+}
+
+#comparison-review-pane {
+  flex: 1 1 50%;
+  background: var(--bg);
+}
+
+.comparison-message {
+  flex: 0 0 auto;
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--border);
+  background: #fbfcfe;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.ocr-columns {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.ocr-card {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.ocr-card header {
+  flex: 0 0 auto;
+  padding: 9px 11px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.ocr-alias {
+  border-radius: 10px;
+  background: #e7f5ff;
+  color: #1864ab;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+.ocr-text {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  margin: 0;
+  padding: 13px 14px;
+  color: #263238;
+  font-family: "SF Mono", ui-monospace, Menlo, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.comparison-actions {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  padding: 10px;
+  border-top: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.comparison-actions button {
+  position: relative;
+  border: 1px solid #b8c2cc;
+  border-radius: 7px;
+  background: #fff;
+  color: var(--text);
+  padding: 9px 25px 9px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.comparison-actions button:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: #eaf4ff;
+}
+
+.comparison-actions button:disabled,
+.secondary-button:disabled,
+.distance-field select:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.comparison-actions button span {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .brand {
+    width: 100%;
+  }
+
+  .tabs {
+    margin-top: -4px;
+  }
+
+  .tab-controls {
+    min-width: 100%;
+  }
+
+  .comparison-actions {
+    grid-template-columns: 1fr 1fr;
+  }
 }
