@@ -1,7 +1,12 @@
 # CBA Extraction Reviewer
 
-A lightweight TypeScript (Vite) UI for reviewing how langextract wage-table
-extractions relate to the original source PDFs.
+A lightweight TypeScript (Vite) UI with two review modes:
+
+- **Extraction review** compares langextract wage-table extractions to the
+  original source PDFs and grounded OCR spans.
+- **OCR comparison** samples a random Cornell DOL PDF page that has text from
+  at least two OCR models and asks whether OCR A is better, OCR B is better,
+  both are good and tied, or both are bad.
 
 - **Left pane** — the original PDF (native browser viewer).
 - **Right pane** — the langextract-style reviewer: the OCR `full.txt` with every
@@ -18,6 +23,7 @@ It reads directly from the repo `cache/` (nothing is copied):
 | Source PDFs     | `cache/<source>/<document_id>.pdf`                                    |
 | OCR text        | `cache/stg_01_ocr/<source>/<model>/<document_id>/full.txt`           |
 | Extractions     | `cache/stg_02_extract/<source>/<model>/<document_id>/*.jsonl`        |
+| OCR judgments   | `cache/reviewer/ocr_comparisons.jsonl`                             |
 
 `<source>` is one of `cornell_dol`, `cornell_retail_educ`, `dol_archive`.
 The document list is driven by every `*.jsonl` found under `stg_02_extract`.
@@ -43,6 +49,14 @@ Opens at http://localhost:5178.
   view and the detail card updates.
 - Click any highlight in the text to jump to that extraction.
 - Drag the divider between panes to resize.
+- In **OCR comparison**, use the four result buttons (or keys `1`–`4`). Each
+  result is appended to `cache/reviewer/ocr_comparisons.jsonl`, and the next
+  random, not-yet-reviewed model pair is loaded automatically.
+- Comparisons are blinded in the UI as **OCR A** and **OCR B**; model identifiers
+  are retained only in the saved judgment record for later analysis.
+- The **Minimum text difference** filter uses whitespace-normalized Levenshtein
+  distance divided by the longer OCR length. The default 5% cutoff therefore
+  behaves consistently for both short and long pages.
 
 ## Legend
 

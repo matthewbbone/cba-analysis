@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CBA Extraction Reviewer</title>
+  </head>
+  <body>
+    <header id="topbar">
+      <div class="brand">CBA Extraction Reviewer</div>
+      <nav class="tabs" aria-label="Reviewer mode">
+        <button id="extraction-tab" class="tab active" type="button">Extraction review</button>
+        <button id="comparison-tab" class="tab" type="button">OCR comparison</button>
+      </nav>
+      <div id="extraction-controls" class="tab-controls">
+        <label class="field">
+          Document
+          <select id="doc-select"></select>
+        </label>
+        <label class="field">
+          Model
+          <select id="model-select"></select>
+        </label>
+        <div class="nav">
+          <button id="prev" title="Previous extraction (←)">◀</button>
+          <span id="counter">0 / 0</span>
+          <button id="next" title="Next extraction (→)">▶</button>
+        </div>
+        <div id="legend" class="legend"></div>
+      </div>
+      <div id="comparison-controls" class="tab-controls" hidden>
+        <span id="comparison-meta" class="comparison-meta">Loading a random page…</span>
+        <span id="comparison-progress" class="comparison-progress"></span>
+        <label class="field distance-field">
+          Minimum text difference
+          <select id="distance-filter">
+            <option value="0">Any</option>
+            <option value="0.02">2%</option>
+            <option value="0.05" selected>5%</option>
+            <option value="0.10">10%</option>
+            <option value="0.20">20%</option>
+            <option value="0.30">30%</option>
+          </select>
+        </label>
+        <button id="new-comparison" class="secondary-button" type="button">New random pair</button>
+      </div>
+    </header>
+    <main id="workspace" class="workspace">
+      <section id="pdf-pane" class="pane">
+        <iframe id="pdf-frame" title="Source PDF"></iframe>
+        <div id="pdf-empty" class="empty">No PDF found for this document.</div>
+      </section>
+      <div id="divider" title="Drag to resize"></div>
+      <section id="review-pane" class="pane">
+        <div id="detail" class="detail"></div>
+        <div id="text-view" class="text-view"></div>
+      </section>
+    </main>
+    <main id="comparison-workspace" class="workspace" hidden>
+      <section id="comparison-pdf-pane" class="pane pdf-pane">
+        <iframe id="comparison-pdf-frame" title="PDF page being compared"></iframe>
+      </section>
+      <div id="comparison-divider" class="divider" title="Drag to resize"></div>
+      <section id="comparison-review-pane" class="pane">
+        <div id="comparison-message" class="comparison-message" role="status">
+          Choose the result that best describes the two OCR transcriptions.
+        </div>
+        <div class="ocr-columns">
+          <article class="ocr-card">
+            <header>
+              <span class="ocr-alias">OCR A</span>
+            </header>
+            <pre id="left-text" class="ocr-text"></pre>
+          </article>
+          <article class="ocr-card">
+            <header>
+              <span class="ocr-alias">OCR B</span>
+            </header>
+            <pre id="right-text" class="ocr-text"></pre>
+          </article>
+        </div>
+        <div id="comparison-actions" class="comparison-actions" aria-label="OCR comparison result">
+          <button type="button" data-choice="left_better"><strong>OCR A is better</strong><span>1</span></button>
+          <button type="button" data-choice="right_better"><strong>OCR B is better</strong><span>2</span></button>
+          <button type="button" data-choice="both_good"><strong>Both good · tied</strong><span>3</span></button>
+          <button type="button" data-choice="both_bad"><strong>Both are bad</strong><span>4</span></button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
