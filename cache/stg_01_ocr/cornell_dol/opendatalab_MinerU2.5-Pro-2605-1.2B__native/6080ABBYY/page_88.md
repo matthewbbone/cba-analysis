@@ -1,0 +1,36 @@
+ARTICLE XXXVI—WAGE SCHEDULE FOR PHYSICAL POSITIONS
+
+11/27/05-05/27/06
+
+ENGINEERING
+
+<ecel><lcel><fcel>STEP<fcel>STEP<fcel>STEP<fcel>STEP<fcel>STEP<fcel>STEP<fcel>STEP<fcel>STEP<nl>
+<fcel>NO.<fcel>POSITION<fcel>1<fcel>2<fcel>3<fcel>4<fcel>5<fcel>6<fcel>7<fcel>8<nl>
+<fcel>J01245<fcel>Engineering Technician....N<fcel>$26.82<fcel>$27.35<fcel>$27.81<fcel>$28.29<fcel>$28.87<ecel><ecel><ecel><nl>
+<fcel>J01246-J01249<fcel>Engineering Technician Apprentice....(See Apprentice Schedule)<lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>J01244<fcel>Lead Engineering Technician**....N<fcel>$26.67<fcel>$27.58<fcel>$28.48<fcel>$29.33<fcel>$30.32<ecel><ecel><ecel><nl>
+<fcel>GARAGE<lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>J01115<fcel>Garage Mechanic....N<fcel>$26.56<fcel>$26.95<fcel>$27.36<ecel><fcel>$27.70<ecel><ecel><ecel><nl>
+<fcel>J01116<fcel>Garage Mechanic (Evening)....N<fcel>$26.56<fcel>$26.95<fcel>$27.36<ecel><fcel>$27.70<ecel><ecel><ecel><nl>
+<fcel>J01120-J01123<fcel>Garage Mechanic Apprentice....(See Apprentice Schedule)<lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>J01117<fcel>Garage Mechanic Helper....N<fcel>$18.49<fcel>$19.16<fcel>$19.85<fcel>$20.55<fcel>$20.89<fcel>$21.42<ecel><fcel>$22.01<nl>
+<fcel>J01119<fcel>Garage Mechanic Helper (Evening)....N<fcel>$18.49<fcel>$19.16<fcel>$19.85<fcel>$20.55<fcel>$20.89<fcel>$21.42<ecel><fcel>$22.01<nl>
+<fcel>J01112<fcel>Garage Mechanic II....N<fcel>$23.09<fcel>$23.43<fcel>$23.77<ecel><fcel>$24.10<ecel><ecel><ecel><nl>
+<fcel>J01118<fcel>Garage Parts Storekeeper....N<fcel>$22.75<fcel>$23.31<fcel>$23.85<fcel>$24.42<fcel>$24.73<fcel>$25.28<ecel><fcel>$25.69<nl>
+<fcel>J01113<fcel>Master Garage Mechanic**....N<fcel>$28.44<fcel>$28.71<fcel>$28.99<ecel><fcel>$29.60<ecel><ecel><ecel><nl>
+<fcel>J01114<fcel>Master Garage Mechanic (Evening)**....N<fcel>$28.44<fcel>$28.71<fcel>$28.99<ecel><fcel>$29.60<ecel><ecel><ecel><nl>
+<fcel>GAS AND WATER<lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>J01239<fcel>Chief Corrosion Technician**....N<fcel>$28.91<fcel>$29.22<fcel>$29.82<ecel><fcel>$30.12<ecel><ecel><ecel><nl>
+<fcel>J01240<fcel>Chief Corrosion Technician - Welding** (1)....N<fcel>$29.43<fcel>$29.74<fcel>$30.34<ecel><fcel>$30.64<ecel><ecel><ecel><nl>
+<fcel>J01228<fcel>Chief Gas Technician (Large Crew)**....N<fcel>$29.38<fcel>$29.67<fcel>$30.29<ecel><fcel>$30.60<ecel><ecel><ecel><nl>
+<fcel>J01229<fcel>Chief Gas Technician (Large Crew) - Welding** (2)....N<fcel>$29.90<fcel>$30.19<fcel>$30.81<ecel><fcel>$31.12<ecel><ecel><ecel><nl>
+
+"Supervisory position
+
+[1] Rate established above rate for J01239 by amount of welding premium.
+
+[2] Rate established above rate for J01228 by amount of welding premium.
+
+**Supervisory position
+[1] Rate established above rate for J01239 by amount of welding premium.
+[2] Rate established above rate for J01228 by amount of welding premium.

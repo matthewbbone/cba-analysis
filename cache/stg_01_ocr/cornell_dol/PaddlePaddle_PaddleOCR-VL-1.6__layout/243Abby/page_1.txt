@@ -1,0 +1,9 @@
+Teamsters Local Union No. 592
+
+Teamsters Local Union No. 822
+
+MEMORANDA OF UNDERSTANDING
+
+When using contract haulers, the Company agrees that its employees will first bid on available runs in the Company's normal delivery area and contract haulers may be assigned those runs that remain. Should it be necessary to assign contract haulers to a route selected by an eligible employee, the employee shall be paid the difference between the route he selected and the route he ran; if any, so that he is paid as if he ran the route selected. It is understood by the parties that Company employees may not be eligible for some runs, because the Company's need to have its own employees perform certain tasks such as making store deliveries.
+
+No memorandums will be posted at company facilities that relate to hours, wages, and working conditions without the approval of Dan Nix or Larry Coley. If the memorandum is approved for posting by above-mentioned management, the Local Union business representative for said facility shall be sent a copy of the memorandum.

@@ -1,0 +1,30 @@
+SUBSTATION CONSTRUCTION & MAINTENANCE
+
+<ecel><lcel><fcel>STEP1<fcel>STEP2<fcel>STEP3<fcel>STEP4<fcel>STEP5<fcel>STEP6<fcel>STEP7<fcel>STEP8<nl>
+<fcel>NO.<fcel>POSITION<ucel><ucel><ucel><ucel><ucel><ucel><ucel><ucel><nl>
+<fcel>J01213<fcel>Chief Concrete Technician**<fcel>N<fcel>$24.63<fcel>$25.17<fcel>$25.71<fcel>$26.19<fcel>$26.73<fcel>$26.96<ecel><nl>
+<fcel>J01206<fcel>Chief Electrician**<fcel>N<fcel>$31.58<fcel>$32.01<ecel><fcel>$32.46<ecel><ecel><ecel><nl>
+<fcel>J01205<fcel>Electric Equipment Maintenance Specialist**<fcel>N<fcel>$31.36<fcel>$31.76<fcel>$32.19<ecel><fcel>$32.48<ecel><ecel><nl>
+<fcel>J01207<fcel>Electrician<fcel>N<fcel>$28.90<fcel>$29.35<ecel><fcel>$29.83<ecel><ecel><ecel><nl>
+<fcel>J01208-J01211<fcel>Electrician Apprentice (See Apprentice Schedule)<lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>J01212<fcel>Electrician's Helper<fcel>N<fcel>$19.61<fcel>$20.14<fcel>$20.68<fcel>$21.18<fcel>$21.54<fcel>$21.89<ecel><nl>
+<fcel>J01214<fcel>Filtering Equipment Operator<fcel>N<fcel>$22.12<fcel>$22.63<fcel>$23.17<fcel>$23.72<fcel>$23.98<fcel>$24.53<ecel><nl>
+<fcel>J01215<fcel>Heavy Trailer-Truck Driver<fcel>N<fcel>$22.89<fcel>$23.40<fcel>$23.95<fcel>$24.48<fcel>$24.82<fcel>$25.32<ecel><nl>
+<fcel>J01216<fcel>Truck-Crane Operator (Heavy Duty)<fcel>N<fcel>$22.89<fcel>$23.40<fcel>$23.95<fcel>$24.48<fcel>$24.82<fcel>$25.32<ecel><nl>
+<fcel>SUBSTATION OPERATION<lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>J01218<fcel>Chief Water Works Operator<fcel>N/S<fcel>$25.96<fcel>$26.49<fcel>$26.99<fcel>$27.55<fcel>$27.93<fcel>$28.31<ecel><nl>
+<fcel>J01221<fcel>Dispatcher<fcel>N/S<fcel>$22.39<fcel>$22.92<fcel>$23.46<fcel>$23.97<fcel>$24.29<fcel>$24.55<ecel><nl>
+<fcel>J01217<fcel>Dispatcher & Substation Maintenance Inspector<fcel>N/S<fcel>$23.30<fcel>$23.65<fcel>$24.39<fcel>$24.89<fcel>$25.25<fcel>$25.45<ecel><nl>
+<fcel>J01225<fcel>Distribution Center Dispatcher<fcel>S<fcel>$22.39<fcel>$22.92<fcel>$23.46<fcel>$23.97<fcel>$24.29<fcel>$24.55<ecel><nl>
+<fcel>J01223<fcel>Maintenance & Relief Substation Operator (Ripon)<fcel>N/S<fcel>$23.30<fcel>$23.85<fcel>$24.39<fcel>$24.89<fcel>$25.25<fcel>$25.45<ecel><nl>
+<fcel>J01226<fcel>Substation & Combustion Turbine MaintenanceInspector & Operator<fcel>N/S<fcel>$23.53<fcel>$24.12<fcel>$24.63<fcel>$25.17<fcel>$25.52<fcel>$25.72<ecel><nl>
+<fcel>J01222<fcel>Substation & Water Works Operator (Ripon)<fcel>N/S<fcel>$22.39<fcel>$22.92<fcel>$23.46<fcel>$23.97<fcel>$24.29<fcel>$24.55<ecel><nl>
+<fcel>J01219<fcel>Substation Maintenance Inspector & Relief Dispatcher<fcel>N/S<fcel>$23.30<fcel>$23.85<fcel>$24.39<fcel>$24.89<fcel>$25.25<fcel>$25.45<ecel><nl>
+<fcel>J01224<fcel>Tool and Equipment Coordinator<fcel>N<fcel>$22.19<fcel>$22.64<fcel>$23.09<fcel>$23.55<fcel>$24.04<fcel>$24.50<ecel><nl>
+
+(Each step represents a six-month increment)
+
+**Supervisory position
+
+Note: Employees on the Union payroll as of June 1, 1982 who fill start/entry level physical positions are exempt from the first three (3) steps
+Employees on the Union payroll as of June 1, 1987 who fill physical positions other than start/entry level or journeyman positions are exempt from the first three (3) steps.

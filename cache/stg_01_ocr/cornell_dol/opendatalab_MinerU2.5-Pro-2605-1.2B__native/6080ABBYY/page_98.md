@@ -1,0 +1,22 @@
+MAIL SERVICES
+
+<ecel><lcel><fcel>STEP1<fcel>STEP2<fcel>STEP3<fcel>STEP4<fcel>STEP5<fcel>STEP6<fcel>STEP7<fcel>STEP8<nl>
+<fcel>NO.<fcel>POSITION<ucel><ucel><ucel><ucel><ucel><ucel><ucel><ucel><nl>
+<fcel>J01100<fcel>Automated Mail Processor<fcel>N<fcel>$15.59<fcel>$16.64<fcel>$17.61<fcel>$18.56<fcel>$19.50<fcel>$19.92<fcel>$20.54<nl>
+<fcel>J01099<fcel>Lead Automated Mail Processor**<fcel>N<fcel>$18.22<fcel>$19.28<fcel>$20.28<fcel>$21.23<fcel>$22.12<fcel>$23.02<fcel>$23.70<nl>
+<fcel>J01092<fcel>Courier Driver*<fcel>N<fcel>$20.23<fcel>$20.92<fcel>$21.54<fcel>$22.23<fcel>$22.50<fcel>$22.94<ecel><nl>
+<fcel>J01093<fcel>Relief Courier Driver*<fcel>N<fcel>$20.23<fcel>$20.92<fcel>$21.54<fcel>$22.23<fcel>$22.50<fcel>$22.94<ecel><nl>
+<fcel>PRINTING SERVICES<lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>J01097<fcel>Bindery Operator<fcel>N<fcel>$13.70<fcel>$14.49<fcel>$15.26<fcel>$16.02<fcel>$16.80<fcel>$17.57<fcel>$18.34<nl>
+<fcel>J01094<fcel>Lead Offset Press Operator**<fcel>N<fcel>$18.22<fcel>$19.05<fcel>$19.88<fcel>$20.71<fcel>$21.54<fcel>$22.36<fcel>$23.19<nl>
+<fcel>J01095<fcel>Offset Press Operator I<fcel>N<fcel>$16.51<fcel>$17.34<fcel>$18.18<fcel>$19.02<fcel>$19.83<fcel>$20.67<fcel>$21.51<nl>
+<fcel>J01096<fcel>Offset Press Operator II<fcel>N<fcel>$15.59<fcel>$16.64<fcel>$17.61<fcel>$18.56<fcel>$19.50<fcel>$19.92<fcel>$20.54<nl>
+<fcel>TELECOMMUNICATIONS<lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>J01091<fcel>Telecommunications Technician<fcel>N<fcel>$25.77<fcel>$26.30<fcel>$26.88<fcel>$27.41<fcel>$27.97<fcel>$28.52<ecel><nl>
+
+(Each step represents a six-month increment)
+
+*Starting or entry level position **Supervisory position
+
+Note: Employees on the Union payroll as of June 1, 1982 who fill start/entry level physical positions are exempt from the first three (3) steps.
+Employees on the Union payroll as of June 1, 1987 who fill physical positions other than start/entry level or journeymen positions are exempt from the first three (3) steps.

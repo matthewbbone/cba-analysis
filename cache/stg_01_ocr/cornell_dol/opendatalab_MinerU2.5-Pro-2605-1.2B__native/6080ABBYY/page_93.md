@@ -1,0 +1,36 @@
+MISCELLANEOUS
+
+<ecel><lcel><fcel>STEP<fcel>STEP<fcel>STEP<fcel>STEP<fcel>STEP<fcel>STEP<fcel>STEP<fcel>STEP<nl>
+<fcel>NO.<fcel>POSITION<fcel>1<fcel>2<fcel>3<fcel>4<fcel>5<fcel>6<fcel>7<fcel>8<nl>
+<fcel>J01250<fcel>Building Custodian I* N<fcel>$15.84<fcel>$16.55<fcel>$17.19<fcel>$17.85<fcel>$18.06<fcel>$18.44<ecel><fcel>$18.68<nl>
+<fcel>J01251<fcel>Building Custodian II* N<fcel>$14.05<fcel>$14.74<fcel>$15.39<fcel>$16.09<fcel>$16.25<fcel>$16.55<ecel><fcel>$16.92<nl>
+<fcel>J01259<fcel>Customer Field Representative N<fcel>$20.33<fcel>$20.87<fcel>$21.41<fcel>$21.96<fcel>$22.35<fcel>$22.65<ecel><fcel>$22.92<nl>
+<fcel>J01257<fcel>Laborer* N<fcel>$15.49<fcel>$16.18<fcel>$16.83<fcel>$17.49<fcel>$17.88<fcel>$18.34<ecel><fcel>$18.68<nl>
+<fcel>J01256<fcel>Laborer Semi-Skilled* N<fcel>$16.32<fcel>$17.01<fcel>$17.69<fcel>$18.34<fcel>$18.75<fcel>$19.19<ecel><fcel>$19.58<nl>
+<fcel>J01260<fcel>Meter Reader N<fcel>$16.01<fcel>$17.01<fcel>$17.99<fcel>$18.44<fcel>$18.77<fcel>$19.03<ecel><fcel>$19.26<nl>
+<fcel>J01258<fcel>Senior Customer Field Representative** N<fcel>$22.96<fcel>$23.38<fcel>$23.79<fcel>$24.20<fcel>$24.60<fcel>$25.01<ecel><fcel>$25.43<nl>
+<fcel>J01253<fcel>Utility Laborer N<fcel>$16.32<fcel>$17.01<fcel>$17.69<fcel>$18.34<fcel>$18.75<fcel>$19.19<fcel>$19.58<fcel>$20.16<nl>
+<fcel>J01252<fcel>Utility Operator N<fcel>$19.28<fcel>$20.03<fcel>$20.77<fcel>$21.53<fcel>$22.27<fcel>$23.02<fcel>$23.77<fcel>$24.53<nl>
+<fcel>J01254<fcel>Utility Worker "A" N<fcel>$18.78<fcel>$19.53<fcel>$20.28<fcel>$21.03<fcel>$21.79<fcel>$22.36<fcel>$23.14<fcel>$23.88<nl>
+<fcel>J01255<fcel>Utility Worker "B" N<fcel>$16.32<fcel>$17.01<fcel>$17.69<fcel>$18.34<fcel>$18.75<fcel>$19.19<fcel>$19.58<fcel>$20.16<nl>
+<fcel>PLANT POSITIONS - FUELS<lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>J01273<fcel>Equipment Operator - Fuels N/S<fcel>$24.97<fcel>$25.59<fcel>$26.16<fcel>$26.69<fcel>$27.08<fcel>$27.49<ecel><fcel>$27.91<nl>
+<fcel>J03663<fcel>Lead Ash Site Operator** N/S<fcel>$27.36<fcel>$28.00<fcel>$28.55<fcel>$29.16<fcel>$29.50<fcel>$29.95<ecel><fcel>$30.40<nl>
+<fcel>J01271<fcel>Lead Equipment Operator - Fuels** N/S<fcel>$27.36<fcel>$28.00<fcel>$28.55<fcel>$29.16<fcel>$29.50<fcel>$29.95<ecel><fcel>$30.40<nl>
+<fcel>J01272<fcel>Relief Equipment Operator - Fuels N/S<fcel>$25.51<fcel>$26.12<fcel>$26.74<fcel>$27.29<fcel>$27.68<fcel>$28.10<ecel><fcel>$28.53<nl>
+<fcel>OPERATING<lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>J01267<fcel>Combustion Turbine Technician N<fcel>$27.70<fcel>$28.18<fcel>$28.62<fcel>$29.09<fcel>$29.54<fcel>$30.03<ecel><fcel>$30.80<nl>
+<fcel>J01270<fcel>Equipment Operator - Operations S<fcel>$24.97<fcel>$25.59<fcel>$26.16<fcel>$26.69<fcel>$27.08<fcel>$27.49<ecel><fcel>$27.91<nl>
+<fcel>J01266<fcel>Master Combustion Turbine Technician** N<fcel>$31.59<fcel>$32.02<fcel>$32.44<ecel><fcel>$32.85<ecel><ecel><ecel><nl>
+<fcel>J02846<fcel>Master Unit Operator - (Small Steam Plant)** S<fcel>$30.95<fcel>$31.38<fcel>$31.79<ecel><fcel>$32.20<ecel><ecel><ecel><nl>
+<fcel>J02847<fcel>Master Unit Operator - (Small Steam Plant - Licensed)** S<fcel>$31.52<fcel>$31.94<fcel>$32.36<ecel><fcel>$32.78<ecel><ecel><ecel><nl>
+<fcel>J01268<fcel>Plant Equipment Operator S<fcel>$26.89<fcel>$27.43<fcel>$28.05<fcel>$28.60<fcel>$29.19<fcel>$29.41<ecel><fcel>$29.93<nl>
+<fcel>J01269<fcel>Plant Equipment Operator - (Licensed) (5) S<fcel>$27.41<fcel>$27.95<fcel>$28.57<fcel>$29.12<fcel>$29.71<fcel>$29.93<ecel><fcel>$30.45<nl>
+
+(Each step represents a six-month increment)
+
+*Starting or entry level position
+
+**Supervisory position
+
+(5) Rate established above the rate for J01268 by \$0.52 premium amount.

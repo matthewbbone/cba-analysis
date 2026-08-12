@@ -1,0 +1,41 @@
+GAS AND WATER (cont.)
+
+<ecel><lcel><fcel>STEP<fcel>STEP<fcel>STEP<fcel>STEP<fcel>STEP<fcel>STEP<fcel>STEP<fcel>STEP<nl>
+<fcel>NO.<fcel>POSITION<fcel>1<fcel>2<fcel>3<fcel>4<fcel>5<fcel>6<fcel>7<fcel>8<nl>
+<fcel>J01230<fcel>Chief Gas Technician (Small Crew)**<fcel>N<fcel>$29.86<fcel>$30.18<fcel>$30.80<ecel><fcel>$31.11<ecel><ecel><nl>
+<fcel>J01231<fcel>Chief Gas Technician (Small Crew) - Welding** (3)<fcel>N<fcel>$30.38<fcel>$30.70<fcel>$31.32<ecel><fcel>$31.63<ecel><ecel><nl>
+<fcel>J01238<fcel>Gas Technician<fcel>N<fcel>$26.61<fcel>$26.88<fcel>$27.44<ecel><fcel>$27.71<ecel><ecel><nl>
+<fcel>J01237<fcel>Gas Technician - Welding<fcel>N<fcel>$27.76<fcel>$28.34<fcel>$28.61<ecel><fcel>$28.90<ecel><ecel><nl>
+<fcel>J01241-J01243<fcel>Gas Technician Apprentice<fcel>(See Apprentice Schededule)<lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>J01236<fcel>Lead Regulation Technician**<fcel>N<fcel>$29.03<fcel>$29.34<fcel>$29.94<ecel><fcel>$30.24<ecel><ecel><nl>
+<fcel>J01232<fcel>Regulation Technician<fcel>N<fcel>$26.87<fcel>$27.45<fcel>$27.72<ecel><fcel>$28.28<ecel><ecel><nl>
+<fcel>J01233-J01235<fcel>Regulation Technician Apprentice<fcel>(See Apprentice Schedule)<lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>LINE AND RELATED<lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>J01149<fcel>Chief Line Clearance Technician**<fcel>N<fcel>$28.61<fcel>$28.95<fcel>$29.39<ecel><fcel>$29.90<ecel><ecel><nl>
+<fcel>J01129<fcel>Chief Line Technician (Small Crew)**<fcel>N<ecel><ecel><ecel><fcel>$32.61<ecel><ecel><ecel><nl>
+<fcel>J01141<fcel>Heavy-Duty Earth Borer Operator<fcel>N<fcel>$23.49<fcel>$24.07<fcel>$24.63<fcel>$25.21<fcel>$25.47<fcel>$26.01<ecel><nl>
+<fcel>J01154<fcel>Infrared Technician<fcel>N<fcel>$26.17<fcel>$26.75<fcel>$27.36<fcel>$27.88<fcel>$28.46<fcel>$29.06<ecel><nl>
+<fcel>J03783<fcel>Lead Line Technician<fcel>N<fcel>$32.60<fcel>$33.25<ecel><fcel>$33.67<ecel><ecel><ecel><nl>
+<fcel>J01135-J01138<fcel>Line Apprentice<fcel>(See Apprentice Schedule)<lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>J01151-J01152<fcel>Line Clearance Apprentice<fcel>(See Apprentice Schedule)<lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>J02849<fcel>Line Clearance Specialist<fcel>N<fcel>$29.18<fcel>$29.52<fcel>$29.94<ecel><fcel>$30.50<ecel><ecel><nl>
+<fcel>J01150<fcel>Line Clearance Technician<fcel>N<fcel>$25.47<fcel>$25.68<fcel>$26.31<ecel><fcel>$26.82<ecel><ecel><nl>
+<fcel>J01153<fcel>Line Clearance Truck Operator<fcel>N<fcel>$20.72<fcel>$21.31<fcel>$21.85<fcel>$22.43<fcel>$22.63<fcel>$23.09<ecel><nl>
+<fcel>J01130<fcel>Line Crew Leader**<fcel>N<fcel>$31.09<fcel>$31.44<ecel><fcel>$31.83<ecel><ecel><ecel><nl>
+<fcel>J01139<fcel>Line Equipment Operator<fcel>N<fcel>$22.93<fcel>$23.47<fcel>$24.04<fcel>$24.60<fcel>$24.93<fcel>$25.26<ecel><nl>
+
+(Each step represents a six-month increment)
+
+"Supervisory position
+
+(3) Rate established above rate for J01230 by amount of welding premium.
+
+**Supervisory position
+(3) Rate established above rate for J01230 by amount of welding premium.
+
+Note: Employees on the Union payroll as of June 1, 1982 who fill start/entry level physical positions are exempt from the first three (3) steps.
+
+Employees on the Union payroll as of June 1, 1987 who fill physical positions other than start/entry level or journeyman positions are exempt from the first three (3) steps.
+
+Note: Employees on the Union payroll as of June 1, 1962 who fill start/entry level physical positions are exempt from the first three (3) steps.
+Employees on the Union payroll as of June 1, 1987 who fill physical positions other than start/entry level or journeyman positions are exempt from the first three (3) steps.

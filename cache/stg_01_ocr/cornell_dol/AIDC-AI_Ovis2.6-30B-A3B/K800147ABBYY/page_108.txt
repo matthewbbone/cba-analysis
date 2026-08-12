@@ -1,0 +1,83 @@
+<think>
+The user now needs to transcribe the content of a PDF page into Markdown format, preserving the original structure. First, examine the structure of the page:
+
+First, section h: Refusal to submit to testing. Then section i: Positive Test, which includes 1) Screening test cut off levels and 2) Confirmatory test cut off levels. Below that are two footnotes marked with * and **, followed by section j.
+
+Now, process each part step by step:
+
+**h. Refusal to submit to testing.**  
+An employee who (a) refuses or fails to provide adequate urine for controlled substances testing without a valid medical explanation after the employee has received notice of the requirement for urine testing; or (b) refuses or fails to provide adequate breath for testing without a valid medical explanation after the employee has received notice of the requirement for breath testing; (c) engages in conduct that clearly obstructs the testing process.
+
+**i. Positive Test:**  
+1) Screening test cut off levels:  
+*a) Marijuana 50 ng/ml  
+*b) Cocaine 300 ng/ml  
+*c) Opiates 300 ng/ml  
+*d) Phencyclidine 25 ng/ml  
+*e) Amphetamines 1,000 ng/ml  
+**f) Barbiturates 300 ng/ml  
+**g) Benzodiazepine 300 ng/ml  
+**h) Quaaludes (Methaqualine) 300 ng/ml  
+
+2) Confirmatory test cut off levels:  
+*a) Marijuana 15 ng/ml  
+*b) Cocaine 150 ng/ml  
+*c) Opiates 300 ng/ml  
+*d) Phencyclidine 25 ng/ml  
+*e) Amphetamines 500 ng/ml  
+**f) Barbiturates 200 ng/ml  
+**g) Benzodiazepine 200 ng/ml  
+**h) Quaaludes (Methaqualine) 200 ng/ml  
+
+Then comes the footnote marked with *:  
+* These cutoff levels are established consistent with the Mandatory Guidelines for Federal Drug Testing Programs and are subject to change by the Department of Health and Human Services (DHHS). When advances in technology or other considerations warrant identification of these substances in other concentrations and the Department of Health and Human Services (DHHS) changes the Mandatory Guidelines for Federal Drug Testing Programs, the Drug Testing thresholds enumerated above will be changed as of the same effective date.
+
+Next is the footnote marked with **:  
+** These cutoff levels are established with acceptable certified laboratory testing standards and are subject to change when advances in technology or other considerations warrant identification of these substances in other concentrations and the certified laboratory standards are changed.
+
+**j. The selected contractor must use a Department of Health and Human Services certified laboratory.**
+
+Finally, the page number is 108, but the user requested to exclude page numbers, so it should not be included.
+
+Now, organize all of this content using Markdown formatting, paying attention to list structures and table formatting. However, since the data here is presented in a list format, it should be preserved accordingly.
+
+Now, check each section for accuracy:
+
+- Section h: Correctly formatted.
+- Section i: Subsections 1 and 2, with corresponding items listed correctly.
+- Footnotes marked with * and **: Correctly formatted.
+- Section j: Correctly formatted.
+
+Now, compile everything into a single block of text.
+</think>
+
+h. Refusal to submit to testing. An employee who (a) refuses or fails to provide adequate urine for controlled substances testing without a valid medical explanation after the employee has received notice of the requirement for urine testing; or (b) refuses or fails to provide adequate breath for testing without a valid medical explanation after the employee has received notice of the requirement for breath testing; (c) engages in conduct that clearly obstructs the testing process.
+
+i. Positive Test:  
+1) Screening test cut off levels:  
+*a) Marijuana 50 ng/ml  
+*b) Cocaine 300 ng/ml  
+*c) Opiates 300 ng/ml  
+*d) Phencyclidine 25 ng/ml  
+*e) Amphetamines 1,000 ng/ml  
+**f) Barbiturates 300 ng/ml  
+**g) Benzodiazepine 300 ng/ml  
+**h) Quaaludes (Methaqualine) 300 ng/ml  
+
+2) Confirmatory test cut off levels:  
+*a) Marijuana 15 ng/ml  
+*b) Cocaine 150 ng/ml  
+*c) Opiates 300 ng/ml  
+*d) Phencyclidine 25 ng/ml  
+*e) Amphetamines 500 ng/ml  
+**f) Barbiturates 200 ng/ml  
+**g) Benzodiazepine 200 ng/ml  
+**h) Quaaludes (Methaqualine) 200 ng/ml  
+
+* These cutoff levels are established consistent with the Mandatory Guidelines for Federal Drug Testing Programs and are subject to change by the Department of Health and Human Services (DHHS). When advances in technology or other considerations warrant identification of these substances in other concentrations and the Department of Health and Human Services (DHHS) changes the Mandatory Guidelines for Federal Drug Testing Programs, the Drug Testing thresholds enumerated above will be changed as of the same effective date.  
+
+** These cutoff levels are established with acceptable certified laboratory testing standards and are subject to change when advances in technology or other considerations warrant identification of these substances in other concentrations and the certified laboratory standards are changed.  
+
+j. The selected contractor must use a Department of Health and Human Services certified laboratory.  
+
+108

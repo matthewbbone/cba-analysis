@@ -1,0 +1,17 @@
+7-1-4 Continued
+
+2. During building settling by mutual agreement with the building principal.
+
+3. If no teacher remains on unrequested leave (layoff) in that teaching area. For special education contract vacancies, see provisions in Section 6-10-5.
+
+The right to change teaching areas, described in the preceding paragraph, shall hold provided the teacher is licensed in the alternate area, notifies the District 281 Personnel Office with a specified time of receipt of such notice, and has taught in the alternate area of license within the last five (5) years or has taken at least six (6) quarter credits of course work in this area within the last five (5) years.
+
+If the teacher has not, within the last five (5) years, taught or taken course work in the alternate teaching area, the teacher must satisfy this requirement by signing a written statement that provides that the teacher agrees to undertake six (6) quarter hours of graduate or undergraduate course work in the alternate area, to be completed within one school year. The teacher may plan the course work, but prior approval based on appropriateness must be obtained from the Director of Elementary or Secondary Education.
+
+7-1-5 Effect of Provisional License: No teacher shall be entitled to exercise seniority rights in a teaching area for which the teacher holds only a provisional license, except as provided for in Minnesota Statute 125.12, Subd. 6b (c).
+
+7-1-6 Minority Representation: To achieve minority representation on the District 281 staff, 7-1-3-2 does not apply to teachers who are members of racial ethnic minority groups, as defined by EEOC ruling, unless the minority proportion of the bargaining unit equals or exceeds the minority proportion of the population in the Twin City metropolitan area. This section shall apply only to minority employees hired prior to July 1, 1979. Minority employees hired on or after July 1, 1979, shall retain exactly the same seniority rights as all other members of the bargaining unit as specified in 7-1-3-2.
+
+7-1-7 Special Groups:
+
+7-1-7-1 Science Teachers: The reduction of staff in all areas of science shall be based upon the teacher's seniority date, using the list entitled "TOTAL SCIENCE". It is understood by the Federation and District 281 that if after the conclusion of Transfer Pool 1 there exists an imbalance between science positions and teachers licensed to fill these positions, the district has the right to do the following:

@@ -1,0 +1,138 @@
+<think>
+The user now needs to transcribe the content of a PDF page into Markdown format, preserving the original structure. First, examine the table headers: Page, Article, Paragraph. Then process each section one by one.
+
+First, the first row: REDUCING FORCES corresponds to Page 13-16, Article IV, and Paragraph is empty? No, check the original layout. The columns in the original table are Page, Article, Paragraph. Therefore, each entry should be aligned accordingly.
+
+Now, process line by line:
+
+REDUCING FORCES → Page 13-16, Article IV, Paragraph (empty?)
+
+REPORTING TO WORK  
+Clerical → Page 37, Article XXX, Paragraph 2  
+Physical → Page 40, Article XXXI, Paragraph 2a  
+
+REST PERIOD  
+Option of vacation or OOA → Page 29, Article XXIII, Paragraph 4b  
+Qualification → Page 28, Article XXIII, Paragraph 1  
+Starts when → Page 29, Article XXIII, Paragraph 4a  
+Working into → Page 28, Article XXIII, Paragraph 2,3  
+
+RETURN TO WORK AFTER INJURY → Page 18-19, Article IX, Paragraph (empty?)  
+
+RIGHTS OF COMPANY → Page 7, Article I, Paragraph 1  
+
+RIGHTS OF EMPLOYEE → Page 7, Article I, Paragraph 3  
+
+SAFETY → Page 24, Article XVI, Paragraph (empty?)  
+
+SALARIED EMPLOYEES (HOURLY WORK) → Page 8, Article I, Paragraph (B)  
+
+SCHEDULING EVENING OR NIGHT MAINTENANCE CREW → Page 47-48, Article XXXI, Paragraph 13,14  
+
+SENIORITY  
+Accumulation → Page 11, Article III, Paragraph 4  
+Acquisition of new property → Page 12-13, Article III, Paragraph 12  
+Demotion → Page 7, Article I, Paragraph 2a  
+Determination → Page 13, Article III, Paragraph 13  
+Eliminated seniority group → Page 11, Article III, Paragraph 7b  
+Employee outside bargaining unit → Page 12, Article III, Paragraph 10  
+Job vacancy - same classification → Page 7, Article I, Paragraph 2b  
+Job elimination or bumping → Page 12, Article III, Paragraph 8,9  
+Lists → Page 11, Article III, Paragraph 2  
+Merging of seniority groups → Page 12, Article III, Paragraph 11  
+Probationary period (new employee) → Page 11, Article III, Paragraph 5  
+Promotion → Page 7, Article I, Paragraph 2a  
+Rules → Page 11, Article III, Paragraph 1  
+Seniority groups → Page 11, Article III, Paragraph 3  
+Special temporary employee → Page 11, Article III, Paragraph 6  
+Temporary employee → Page 11, Article III, Paragraph 6  
+Transfer → Page 11, Article III, Paragraph 7a  
+Vacation scheduling → Page 25, Article XX, Paragraph 2  
+Veterans → Page 13, Article III, Paragraph 14  
+
+Then check the alignment of each column to ensure that the Page, Article, and Paragraph values correspond correctly. Now organize this into a Markdown table, with headers Page, Article, Paragraph, followed by rows of data.
+
+Note that some entries may have multiple paragraphs, such as "Working into" which has Paragraph 2,3, and "Job elimination or bumping" which has 8,9. These should be preserved exactly as they appear.
+
+Now construct the table:
+
+| Section | Page | Article | Paragraph |
+| --- | --- | --- | --- |
+| REDUCING FORCES | 13-16 | IV |  |
+| REPORTING TO WORK |  |  |  |
+| Clerical | 37 | XXX | 2 |
+| Physical | 40 | XXXI | 2a |
+| REST PERIOD |  |  |  |
+| Option of vacation or OOA | 29 | XXIII | 4b |
+| Qualification | 28 | XXIII | 1 |
+| Starts when | 29 | XXIII | 4a |
+| Working into | 28 | XXIII | 2,3 |
+| RETURN TO WORK AFTER INJURY | 18-19 | IX |  |
+| RIGHTS OF COMPANY | 7 | I | 1 |
+| RIGHTS OF EMPLOYEE | 7 | I | 3 |
+| SAFETY | 24 | XVI |  |
+| SALARIED EMPLOYEES (HOURLY WORK) | 8 | I | (B) |
+| SCHEDULING EVENING OR NIGHT MAINTENANCE CREW | 47-48 | XXXI | 13,14 |
+| SENIORITY |  |  |  |
+| Accumulation | 11 | III | 4 |
+| Acquisition of new property | 12-13 | III | 12 |
+| Demotion | 7 | I | 2a |
+| Determination | 13 | III | 13 |
+| Eliminated seniority group | 11 | III | 7b |
+| Employee outside bargaining unit | 12 | III | 10 |
+| Job vacancy - same classification | 7 | I | 2b |
+| Job elimination or bumping | 12 | III | 8,9 |
+| Lists | 11 | III | 2 |
+| Merging of seniority groups | 12 | III | 11 |
+| Probationary period (new employee) | 11 | III | 5 |
+| Promotion | 7 | I | 2a |
+| Rules | 11 | III | 1 |
+| Seniority groups | 11 | III | 3 |
+| Special temporary employee | 11 | III | 6 |
+| Temporary employee | 11 | III | 6 |
+| Transfer | 11 | III | 7a |
+| Vacation scheduling | 25 | XX | 2 |
+| Veterans | 13 | III | 14 |
+
+Finally, confirm that the page number at the bottom is 130, but since the user requested to exclude page numbers, it should not be included. Ensure that all content is accurately transcribed without omissions.
+</think>
+
+| Section | Page | Article | Paragraph |
+| --- | --- | --- | --- |
+| REDUCING FORCES | 13-16 | IV |  |
+| REPORTING TO WORK |  |  |  |
+| Clerical | 37 | XXX | 2 |
+| Physical | 40 | XXXI | 2a |
+| REST PERIOD |  |  |  |
+| Option of vacation or OOA | 29 | XXIII | 4b |
+| Qualification | 28 | XXIII | 1 |
+| Starts when | 29 | XXIII | 4a |
+| Working into | 28 | XXIII | 2,3 |
+| RETURN TO WORK AFTER INJURY | 18-19 | IX |  |
+| RIGHTS OF COMPANY | 7 | I | 1 |
+| RIGHTS OF EMPLOYEE | 7 | I | 3 |
+| SAFETY | 24 | XVI |  |
+| SALARIED EMPLOYEES (HOURLY WORK) | 8 | I | (B) |
+| SCHEDULING EVENING OR NIGHT MAINTENANCE CREW | 47-48 | XXXI | 13,14 |
+| SENIORITY |  |  |  |
+| Accumulation | 11 | III | 4 |
+| Acquisition of new property | 12-13 | III | 12 |
+| Demotion | 7 | I | 2a |
+| Determination | 13 | III | 13 |
+| Eliminated seniority group | 11 | III | 7b |
+| Employee outside bargaining unit | 12 | III | 10 |
+| Job vacancy - same classification | 7 | I | 2b |
+| Job elimination or bumping | 12 | III | 8,9 |
+| Lists | 11 | III | 2 |
+| Merging of seniority groups | 12 | III | 11 |
+| Probationary period (new employee) | 11 | III | 5 |
+| Promotion | 7 | I | 2a |
+| Rules | 11 | III | 1 |
+| Seniority groups | 11 | III | 3 |
+| Special temporary employee | 11 | III | 6 |
+| Temporary employee | 11 | III | 6 |
+| Transfer | 11 | III | 7a |
+| Vacation scheduling | 25 | XX | 2 |
+| Veterans | 13 | III | 14 |
+
+130

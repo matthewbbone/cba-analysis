@@ -1,0 +1,28 @@
+MAINTENANCE (CONT.)
+
+<fcel>NO.<fcel>POSITION<ecel><fcel>STEP1<fcel>STEP2<fcel>STEP3<fcel>STEP4<fcel>STEP5<fcel>STEP6<fcel>STEP7<fcel>STEP8<nl>
+<fcel>J01326<fcel>Maintenance Technician - Mechanical - Welding (Night)<fcel>N<fcel>$28.02<fcel>$28.38<fcel>$28.83<ecel><fcel>$29.21<ecel><ecel><ecel><nl>
+<fcel>J01306<fcel>Maintenance Technician - Mechanical/Combustion Turbine Technician<fcel>N<fcel>$26.92<fcel>$27.40<fcel>$27.88<fcel>$28.33<fcel>$28.80<fcel>$29.26<ecel><fcel>$29.71<nl>
+<fcel>J01291<fcel>Master Maintenance Electrician**<fcel>N<fcel>$30.74<fcel>$31.08<fcel>$31.62<ecel><fcel>$32.01<ecel><ecel><ecel><nl>
+<fcel>J01295<fcel>Master Maintenance Electrician (Evening)**<fcel>N<fcel>$30.74<fcel>$31.08<fcel>$31.62<ecel><fcel>$32.01<ecel><ecel><ecel><nl>
+<fcel>J01288<fcel>Master Maintenance Instrument and Control**<fcel>N<fcel>$30.74<fcel>$31.08<fcel>$31.62<ecel><fcel>$32.01<ecel><ecel><ecel><nl>
+<fcel>J01287<fcel>Master Maintenance Instrument and Control (ND/RR)**<fcel>N<fcel>$30.74<fcel>$31.08<fcel>$31.62<ecel><fcel>$32.01<ecel><ecel><ecel><nl>
+<fcel>J01294<fcel>Master Maintenance Technician (Rock River)**<fcel>N<fcel>$31.16<fcel>$31.51<fcel>$32.06<ecel><fcel>$32.46<ecel><ecel><ecel><nl>
+<fcel>J01292<fcel>Master Maintenance Technician - Electrical**<fcel>N<fcel>$31.16<fcel>$31.51<fcel>$32.06<ecel><fcel>$32.46<ecel><ecel><ecel><nl>
+<fcel>J01296<fcel>Master Maintenance Technician - Electrical (Evening Crew)**<fcel>N<fcel>$31.16<fcel>$31.51<fcel>$32.06<ecel><fcel>$32.46<ecel><ecel><ecel><nl>
+<fcel>J01286<fcel>Master Maintenance Technician - Mechanical (Large Crew)**<fcel>N<fcel>$30.92<fcel>$31.35<fcel>$31.76<ecel><fcel>$32.17<ecel><ecel><ecel><nl>
+<fcel>J01299<fcel>Master Maintenance Technician - Mechanical (Large Crew) (Evening)**<fcel>N<fcel>$30.92<fcel>$31.35<fcel>$31.76<ecel><fcel>$32.17<ecel><ecel><ecel><nl>
+<fcel>J01301<fcel>Master Maintenance Technician - Mechanical (Large Crew) (Night)**<fcel>N<fcel>$30.92<fcel>$31.35<fcel>$31.76<ecel><fcel>$32.17<ecel><ecel><ecel><nl>
+<fcel>J01285<fcel>Master Maintenance Technician - Mechanical (Large Crew) - Welding**<fcel>N<fcel>$31.39<fcel>$31.77<fcel>$32.29<ecel><fcel>$32.72<ecel><ecel><ecel><nl>
+<fcel>J01298<fcel>Master Maintenance Technician - Mechanical (Large Crew) - Welding (Evening)**<fcel>N<fcel>$31.39<fcel>$31.77<fcel>$32.29<ecel><fcel>$32.72<ecel><ecel><ecel><nl>
+<fcel>J01300<fcel>Master Maintenance Technician - Mechanical (Large Crew) - Welding (Night)**<fcel>N<fcel>$31.39<fcel>$31.77<fcel>$32.29<ecel><fcel>$32.72<ecel><ecel><ecel><nl>
+<fcel>J01290<fcel>Master Maintenance Technician - Mechanical (Small Crew)**<fcel>N<fcel>$29.75<fcel>$30.16<fcel>$30.48<ecel><fcel>$31.24<ecel><ecel><ecel><nl>
+<fcel>J01303<fcel>Master Maintenance Technician - Mechanical (Small Crew) (Evening)**<fcel>N<fcel>$29.75<fcel>$30.16<fcel>$30.48<ecel><fcel>$31.24<ecel><ecel><ecel><nl>
+<fcel>J01305<fcel>Master Maintenance Technician - Mechanical (Small Crew) (Night)**<fcel>N<fcel>$29.75<fcel>$30.16<fcel>$30.48<ecel><fcel>$31.24<ecel><ecel><ecel><nl>
+<fcel>J01289<fcel>Master Maintenance Technician - Mechanical (Small Crew) - Welding**<fcel>N<fcel>$30.35<fcel>$30.79<fcel>$31.09<ecel><fcel>$31.81<ecel><ecel><ecel><nl>
+<fcel>J01302<fcel>Master Maintenance Technician - Mechanical (Small Crew) - Welding (Evening)**<fcel>N<fcel>$30.35<fcel>$30.79<fcel>$31.09<ecel><fcel>$31.81<ecel><ecel><ecel><nl>
+<fcel>J01304<fcel>Master Maintenance Technician - Mechanical (Small Crew) - Welding (Night)**<fcel>N<fcel>$30.35<fcel>$30.79<fcel>$31.09<ecel><fcel>$31.81<ecel><ecel><ecel><nl>
+
+(Each step represents a six-month increment)
+
+**Supervisory position

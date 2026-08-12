@@ -1,0 +1,9 @@
+ARTICLE V – DISTRICT-WIDE ACTIVITIES*
+
+ARTICLE V – DISTRICT-WIDE ACTIVITIES*
+
+<ecel><fcel>Ratio<lcel><lcel><lcel><nl><ecel><fcel>1985-86<fcel>1986-87<fcel>1985-86<fcel>1986<nl><fcel>Curriculum Writing (per hour)<fcel>.0006<fcel>.0006<fcel>20.40<fcel>21.30<nl><fcel>Detention<fcel>.0225<fcel>.0225<fcel>765<fcel>780<nl><fcel>Driver Training Instruction(per hour)\nDriver Education at night school\n(same as summer school)<fcel>.00038<fcel>.00038<fcel>12.90<fcel>13.50<nl><fcel>Motorcycle Training Instruction\n(per hour)<fcel>.00042<fcel>.00042<fcel>14.30<fcel>14.90<nl><fcel>Secondary Department Chairperson<ecel><ecel><ecel><ecel><nl><fcel>2.0 - 3.4 teachers - 2 days released time<fcel>.0075<fcel>.0075<fcel>255<fcel>265<nl><fcel>3.5 - 9.4 teachers - 4 days released time<fcel>.0149<fcel>.0149<fcel>505<fcel>530<nl><fcel>9.5 - 14 teachers - 6 days released time<fcel>.018<fcel>.018<fcel>610<fcel>640<nl><fcel>Over 14 teachers - 8 days released time<fcel>.0225<fcel>.0225<fcel>765<fcel>78<nl><fcel>Released time subject to professional leave quotas<ecel><ecel><ecel><ecel><nl><fcel>Supervision of Student Teachers<ecel><ecel><ecel><ecel><nl><fcel>4-6 weeks<fcel>.0017<fcel>.0017<fcel>55<fcel>60<nl><fcel>7-23 weeks<fcel>.0035<fcel>.0035<fcel>120<fcel>125<nl><fcel>Swimming Pool Coordinator, Building<fcel>.09<fcel>.09<fcel>3,060<fcel>3,200<nl><fcel>Swimming Pool Director, Summer<fcel>.03<fcel>.03<fcel>1,020<fcel>1,065<nl>
+
+\(^{*}\)The experience factor described in l-2 does not apply to these activities.
+
+\(^{*}\)The experience factor described in l-2 does not apply to these activities.

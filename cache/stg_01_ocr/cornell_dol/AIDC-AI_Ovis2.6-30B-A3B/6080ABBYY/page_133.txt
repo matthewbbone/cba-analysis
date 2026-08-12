@@ -1,0 +1,133 @@
+<think>
+The user now needs to transcribe the content of a PDF page into Markdown format, preserving the original structure. First, examine the table headers: PAY DAY, Page 20, Article XII, Paragraph. Then proceed line by line.
+
+First, the section titled **PAY DAY**, followed by **PAY** with its sub-items:
+
+- Holiday → Page 48-49, Article XXXII, Paragraph 2  
+- Holiday during vacation → Page 27, Article XX, Paragraph 14  
+- In lieu of vacation → Page 26-27, Article XX, Paragraphs 11-13  
+- OI partially disabled employees → Page 32-33, Article XXVII, Paragraphs 2,3  
+- Temporary substitutes → Page 35, Article XXXIX, Paragraph 2  
+- Vacation → Page 26, Article XX, Paragraph 9  
+
+Next is **POSITION**:
+
+- Abolishing → Page 17, Article VI, Paragraph 8  
+- Apprentice → Page 17, Article VI, Paragraph 5  
+- Establish → Page 17, Article VI, Paragraph 8  
+- Not filled → Page 17, Article VI, Paragraph 4  
+- Return to former → Page 17, Article VI, Paragraph 3  
+
+Then **POSTING**:
+
+- Abolished position → Page 17, Article VI, Paragraph 8  
+- And physical disability → Page 17, Article VI, Paragraph 7  
+- For vacancies and new positions → Pages 16-18, Article VI  
+- Non-rotating shift positions → Page 17, Article VI, Paragraph 9  
+- Of entry-level jobs → Page 17, Article VI, Paragraph 2  
+- Same job classification → Page 7, Article I, Paragraph 2b  
+- Special temporary consideration → Page 7, Article I, Paragraph 2c  
+
+**PREMIUM PAY**:
+
+- Certified Welding Program → Page 51, Article XXXIII, Paragraph 11a  
+- Chief corrosion technicians and chief gas technicians → Page 51, Article XXXIII, Paragraph 11b  
+- Evening and night maintenance crew → Pages 50-51, Article XXXIII, Paragraph 10  
+- Shift workers → Pages 49-50, Article XXXIII, Paragraphs 2,5,7,8  
+- Sunday → Page 50, Article XXXIII, Paragraphs 5,6  
+
+**PROBATIONARY PERIOD**: Page 8, Article I, Paragraph 6  
+
+**PROMOTIONS**:
+
+- Basis → Page 7, Article I, Paragraph 1  
+- Hearings on → Page 7, Article I, Paragraph 3  
+- Selection for apprentices → Page 8, Article I, Paragraph 4  
+- Trial period → Page 34, Article XXVIII, Paragraph 2a  
+- Qualifications → Page 7, Article I, Paragraph 2  
+- Wage rate → Pages 33-34, Article XXVIII, Paragraphs 1,4  
+
+**RECALL TO WORK**: Page 16, Article V  
+
+Finally, the page number at the bottom is **129**.
+
+Now organize all this information into a Markdown table, ensuring that each row corresponds correctly. Note that some entries may span multiple lines, such as "In lieu of vacation" which spans pages 26-27, and "Trial period" under PROMOTIONS which is on page 34.
+
+Here is the final structured table:
+
+| Section | Subsection | Page | Article | Paragraph |
+| --- | --- | --- | --- | --- |
+| PAY DAY |  | 20 | XII |  |
+| PAY | Holiday | 48-49 | XXXII | 2 |
+|  | Holiday during vacation | 27 | XX | 14 |
+|  | In lieu of vacation | 26-27 | XX | 11-13 |
+|  | OI partially disabled employees | 32-33 | XXVII | 2,3 |
+|  | Temporary substitutes | 35 | XXXIX | 2 |
+|  | Vacation | 26 | XX | 9 |
+| POSITION | Abolishing | 17 | VI | 8 |
+|  | Apprentice | 17 | VI | 5 |
+|  | Establish | 17 | VI | 8 |
+|  | Not filled | 17 | VI | 4 |
+|  | Return to former | 17 | VI | 3 |
+| POSTING | Abolished position | 17 | VI | 8 |
+|  | And physical disability | 17 | VI | 7 |
+|  | For vacancies and new positions | 16-18 | VI |  |
+|  | Non-rotating shift positions | 17 | VI | 9 |
+|  | Of entry-level jobs | 17 | VI | 2 |
+|  | Same job classification | 7 | I | 2b |
+|  | Special temporary consideration | 7 | I | 2c |
+| PREMIUM PAY | Certified Welding Program | 51 | XXXIII | 11a |
+|  | Chief corrosion technicians and chief gas technicians | 51 | XXXIII | 11b |
+|  | Evening and night maintenance crew | 50-51 | XXXIII | 10 |
+|  | Shift workers | 49-50 | XXXIII | 2,5,7,8 |
+|  | Sunday | 50 | XXXIII | 5,6 |
+| PROBATIONARY PERIOD |  | 8 | I | 6 |
+| PROMOTIONS | Basis | 7 | I | 1 |
+|  | Hearings on | 7 | I | 3 |
+|  | Selection for apprentices | 8 | I | 4 |
+|  | Trial period | 34 | XXVIII | 2a |
+|  | Qualifications | 7 | I | 2 |
+|  | Wage rate | 33-34 | XXVIII | 1,4 |
+| RECALL TO WORK |  | 16 | V |  |
+
+At the bottom of the page is the number **129**.
+
+Ensure that every item is accurately transcribed, including page ranges, article numbers, and paragraph references. Now verify each entry one by one to ensure nothing is missing.
+</think>
+
+| Section | Subsection | Page | Article | Paragraph |
+| --- | --- | --- | --- | --- |
+| PAY DAY |  | 20 | XII |  |
+| PAY | Holiday | 48-49 | XXXII | 2 |
+|  | Holiday during vacation | 27 | XX | 14 |
+|  | In lieu of vacation | 26-27 | XX | 11-13 |
+|  | OI partially disabled employees | 32-33 | XXVII | 2,3 |
+|  | Temporary substitutes | 35 | XXXIX | 2 |
+|  | Vacation | 26 | XX | 9 |
+| POSITION | Abolishing | 17 | VI | 8 |
+|  | Apprentice | 17 | VI | 5 |
+|  | Establish | 17 | VI | 8 |
+|  | Not filled | 17 | VI | 4 |
+|  | Return to former | 17 | VI | 3 |
+| POSTING | Abolished position | 17 | VI | 8 |
+|  | And physical disability | 17 | VI | 7 |
+|  | For vacancies and new positions | 16-18 | VI |  |
+|  | Non-rotating shift positions | 17 | VI | 9 |
+|  | Of entry-level jobs | 17 | VI | 2 |
+|  | Same job classification | 7 | I | 2b |
+|  | Special temporary consideration | 7 | I | 2c |
+| PREMIUM PAY | Certified Welding Program | 51 | XXXIII | 11a |
+|  | Chief corrosion technicians and chief gas technicians | 51 | XXXIII | 11b |
+|  | Evening and night maintenance crew | 50-51 | XXXIII | 10 |
+|  | Shift workers | 49-50 | XXXIII | 2,5,7,8 |
+|  | Sunday | 50 | XXXIII | 5,6 |
+| PROBATIONARY PERIOD |  | 8 | I | 6 |
+| PROMOTIONS | Basis | 7 | I | 1 |
+|  | Hearings on | 7 | I | 3 |
+|  | Selection for apprentices | 8 | I | 4 |
+|  | Trial period | 34 | XXVIII | 2a |
+|  | Qualifications | 7 | I | 2 |
+|  | Wage rate | 33-34 | XXVIII | 1,4 |
+| RECALL TO WORK |  | 16 | V |  |
+
+129

@@ -1,0 +1,27 @@
+ARTICLE XXXVII—WAGE SCHEDULE FOR CLERICAL POSITIONS
+
+11/28/04-11/26/05
+
+Field Clerical Positions
+
+08
+
+<fcel>ACCOUNTING AND CUSTOMER RELATIONS<lcel><fcel>(Each step represents a six-month increment except step 17. Step 17 occurs one full year after step 16.)<lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<ucel><xcel><fcel>STEP 1<fcel>STEP 2<fcel>STEP 3<fcel>STEP 4<fcel>STEP 5<fcel>STEP 6<fcel>STEP 7<fcel>STEP 8<fcel>STEP 9<fcel>STEP 10<fcel>STEP 11<fcel>STEP 12<fcel>STEP 13<fcel>STEP 14<fcel>STEP 15<fcel>STEP 16<fcel>STEP 17<nl>
+<fcel>NO.<fcel>POSITION<ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><nl>
+<fcel>J01072<fcel>Customer Service Representative<fcel>$12.83<fcel>$13.36<fcel>$13.88<fcel>$14.41<fcel>$14.76<fcel>$15.19<fcel>$15.59<fcel>$15.97<fcel>$16.41<fcel>$16.80<ecel><fcel>$17.29<ecel><fcel>$17.84<ecel><fcel>$18.18<fcel>$18.56<nl>
+<fcel>J01071<fcel>Senior Customer Service Representative**<fcel>$19.93<fcel>$20.41<fcel>$20.92<fcel>$21.47<fcel>$21.82<fcel>$22.19<fcel>$22.58<fcel>$22.97<fcel>$23.30<fcel>$23.70<fcel>$24.08<fcel>$24.44<ecel><fcel>$24.81<ecel><ecel><ecel><nl>
+<fcel>ENGINEERING<lcel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><nl>
+<fcel>J01073<fcel>Area Operations Representative<fcel>$12.83<fcel>$13.36<fcel>$13.88<fcel>$14.41<fcel>$14.76<fcel>$15.19<fcel>$15.59<fcel>$15.97<fcel>$16.41<fcel>$16.80<ecel><fcel>$17.29<ecel><fcel>$17.84<ecel><fcel>$18.18<fcel>$18.56<nl>
+<fcel>J01080<fcel>Assistant Project Designer<fcel>$15.15<fcel>$15.60<fcel>$16.02<fcel>$16.46<fcel>$16.90<fcel>$17.32<fcel>$17.76<fcel>$18.21<fcel>$18.65<fcel>$19.06<ecel><fcel>$19.53<ecel><fcel>$19.95<ecel><fcel>$20.37<fcel>$20.80<nl>
+<fcel>J01081<fcel>Map Drafter I<fcel>$15.15<fcel>$15.67<fcel>$16.18<fcel>$16.67<fcel>$17.06<fcel>$17.46<fcel>$17.84<fcel>$18.19<fcel>$18.59<fcel>$18.99<fcel>$19.37<fcel>$19.76<ecel><fcel>$20.37<ecel><fcel>$20.80<ecel><nl>
+<fcel>J01082<fcel>Map Drafter II*<fcel>$11.13<fcel>$11.67<fcel>$12.17<fcel>$12.71<fcel>$13.14<fcel>$13.58<fcel>$14.08<fcel>$14.53<fcel>$15.01<fcel>$15.49<fcel>$15.94<ecel><fcel>$16.42<ecel><fcel>$16.90<ecel><fcel>$18.12<nl>
+<fcel>J01083<fcel>Technical Assistant<fcel>$19.94<fcel>$20.42<fcel>$20.94<fcel>$21.48<fcel>$21.89<fcel>$22.30<fcel>$22.70<fcel>$23.14<fcel>$23.55<fcel>$23.96<fcel>$24.41<fcel>$24.81<ecel><fcel>$25.18<ecel><ecel><ecel><nl>
+<fcel>STORES<lcel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><nl>
+<fcel>J01075<fcel>Area Stores Clerk<fcel>$15.89<fcel>$16.41<fcel>$16.90<fcel>$17.41<fcel>$17.84<fcel>$18.24<fcel>$18.66<fcel>$19.05<fcel>$19.53<fcel>$19.90<fcel>$20.32<ecel><fcel>$20.88<ecel><fcel>$21.32<ecel><ecel><nl>
+<fcel>J01074<fcel>Senior Area Stores Clerk<fcel>$20.68<fcel>$21.17<fcel>$21.68<fcel>$22.19<fcel>$22.60<fcel>$23.00<fcel>$23.41<fcel>$23.82<fcel>$24.22<fcel>$24.63<fcel>$25.09<fcel>$25.47<ecel><fcel>$25.82<ecel><ecel><ecel><nl>
+<fcel>J01077<fcel>Sourcing Buyer Assistant<fcel>$15.89<fcel>$16.41<fcel>$16.90<fcel>$17.41<fcel>$17.84<fcel>$18.24<fcel>$18.66<fcel>$19.05<fcel>$19.53<fcel>$19.90<fcel>$20.32<ecel><fcel>$20.88<ecel><fcel>$21.28<ecel><ecel><nl>
+<fcel>J01078<fcel>Sourcing Inventory Assistant<fcel>$15.89<fcel>$16.41<fcel>$16.90<fcel>$17.41<fcel>$17.84<fcel>$18.24<fcel>$18.66<fcel>$19.05<fcel>$19.53<fcel>$19.90<fcel>$20.32<ecel><fcel>$20.88<ecel><fcel>$21.28<ecel><ecel><nl>
+<fcel>GENERAL<lcel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><ecel><nl>
+<fcel>J01084<fcel>Clerk<fcel>$11.98<fcel>$12.46<fcel>$12.99<fcel>$13.53<fcel>$13.91<fcel>$14.26<fcel>$14.65<fcel>$15.05<fcel>$15.38<fcel>$15.80<ecel><fcel>$16.25<ecel><fcel>$16.76<ecel><fcel>$17.26<fcel>$17.75<nl>
+<fcel>J01086<fcel>Clerk-Stenographer<fcel>$12.39<fcel>$12.88<fcel>$13.39<fcel>$13.91<fcel>$14.26<fcel>$14.61<fcel>$15.00<fcel>$15.34<fcel>$15.75<fcel>$16.12<ecel><fcel>$16.59<ecel><fcel>$17.07<ecel><fcel>$17.60<fcel>$18.12<nl>

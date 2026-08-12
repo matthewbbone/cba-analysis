@@ -1,0 +1,28 @@
+<ecel><ecel><fcel>Ratio<lcel><lcel><lcel><nl>
+<ucel><ucel><fcel>1985-86<fcel>1986-87<fcel>1985-86<fcel>1986-87<nl>
+<fcel>2-2-2-6<fcel>Asst. Choir Dir.<fcel>.017<fcel>.017<fcel>580<fcel>605<nl>
+
+2-2-3 Publications
+
+<fcel>2-2-3-1<fcel>Annual<lcel><lcel><lcel><nl>
+<ecel><fcel>Editorial Adviser .067<fcel>.08<fcel>2,280<fcel>2,845<nl>
+<ecel><fcel>This person will be in charge of the overall production of the annual.<ecel><ecel><ecel><nl>
+<ecel><fcel>Business Adviser .02<fcel>.02<fcel>680<fcel>710<nl>
+<fcel>2-2-3-2<fcel>Newspaper .067<fcel>.08<fcel>2,280<fcel>2,845<nl>
+<ecel><fcel>This person will have charge of the publishing of the school newspaper.<ecel><ecel><ecel><nl>
+
+<fcel>2-2-3-3<fcel>Duplicating School Programs*<fcel>52-313<fcel>52-311<nl>
+
+2-3 Other
+
+<fcel>2-3-1<fcel>Advisors- danceline, cheerleaders<fcel>.032<fcel>.045<fcel>1,090<fcel>1,600<nl>
+<fcel>2-3-2<fcel>Flagtwirlers<fcel>.01<fcel>.01<fcel>340<fcel>355<nl>
+<fcel>2-3-3<fcel>Chess 12 weeks<fcel>.0115<fcel>.0115<fcel>390<fcel>410<nl>
+<ucel><fcel>24 weeks<fcel>.023<fcel>.023<fcel>780<fcel>815<nl>
+<fcel>2-3-4<fcel>Concessions (Chairperson)*This person will be in complete charge of buying and setting up concessions for football and basketball and will also be in charge of hiring teachers and student helpers.<lcel><lcel><fcel>219<fcel>249<nl>
+<ecel><fcel>Helpers--Chairperson, football per session<lcel><lcel><fcel>16<fcel>17<nl>
+<ecel><fcel>Others, football per session<lcel><lcel><fcel>14<fcel>15<nl>
+<ecel><fcel>Chairperson, basketball per session<lcel><lcel><fcel>12<fcel>13<nl>
+<ecel><fcel>Others, basketball per session<lcel><lcel><fcel>12<fcel>13<nl>
+
+*The experience factor described in 1-2 does not apply to these activitie

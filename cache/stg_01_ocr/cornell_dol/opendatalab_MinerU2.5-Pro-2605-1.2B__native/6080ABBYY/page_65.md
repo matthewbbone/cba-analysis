@@ -1,0 +1,32 @@
+General Office - Physical Positions
+
+9
+
+BUILDING
+
+(Each step represents a six-month increment)
+
+<ecel><lcel><fcel>STEP1<fcel>STEP2<fcel>STEP3<fcel>STEP4<fcel>STEP5<fcel>STEP6<fcel>STEP7<fcel>STEP8<nl>
+<fcel>NO.<fcel>POSITION<ucel><ucel><ucel><ucel><ucel><ucel><ucel><ucel><nl>
+<fcel>J01127<fcel>General Office Materials Handler*<fcel>N<fcel>$16.22<fcel>$16.72<fcel>$17.24<fcel>$17.73<fcel>$18.01<fcel>$18.32<ecel><nl>
+<fcel>J01126<fcel>General Office Services Worker*<fcel>N<fcel>$16.22<fcel>$16.72<fcel>$17.24<fcel>$17.73<fcel>$18.01<fcel>$18.32<ecel><nl>
+<fcel>ENGINEERING<lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>J01109<fcel>Electrical Protective Equipment Technician**<fcel>N<fcel>$24.46<fcel>$24.95<fcel>$25.46<fcel>$26.00<fcel>$26.45<fcel>$26.93<ecel><nl>
+<fcel>J01108<fcel>Electrical Protective Equipment Tester<fcel>N<fcel>$23.95<fcel>$24.47<fcel>$24.96<fcel>$25.47<fcel>$25.99<fcel>$26.43<ecel><nl>
+<fcel>J01106<fcel>Electrical Technician<fcel>N<fcel>$28.92<fcel>$29.44<fcel>$29.93<fcel>$30.45<fcel>$30.77<fcel>$31.21<ecel><nl>
+<fcel>J02848<fcel>Lead Relay and Electrical Technician<fcel>N<fcel>$30.52<fcel>$31.08<fcel>$31.60<fcel>$32.13<fcel>$32.48<fcel>$32.94<ecel><nl>
+<fcel>J01105<fcel>Meter Laboratory Technician<fcel>N<fcel>$26.68<fcel>$27.18<fcel>$27.73<fcel>$28.23<fcel>$28.63<fcel>$28.90<ecel><nl>
+<fcel>J01107<fcel>Relay Technician<fcel>N<fcel>$28.30<fcel>$28.83<fcel>$29.36<fcel>$29.85<fcel>$30.26<fcel>$30.75<ecel><nl>
+<fcel>J01101<fcel>Surveyor I**<fcel>N<fcel>$26.23<fcel>$26.74<fcel>$27.22<fcel>$27.77<fcel>$28.34<fcel>$28.77<ecel><nl>
+<fcel>J01102<fcel>Surveyor II<fcel>N<fcel>$22.06<fcel>$22.57<fcel>$23.10<fcel>$23.62<fcel>$24.04<fcel>$24.35<ecel><nl>
+<fcel>J01103<fcel>Surveyor Aid I<fcel>N<fcel>$18.97<fcel>$19.47<fcel>$20.00<fcel>$20.48<fcel>$20.88<fcel>$21.22<ecel><nl>
+<fcel>J01104<fcel>Surveyor Aid II<fcel>N<fcel>$16.53<fcel>$17.06<fcel>$17.55<fcel>$18.06<fcel>$18.35<fcel>$18.72<ecel><nl>
+<fcel>FORMS - SHIPPING AND RECEIVING<lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>J01098<fcel>Forms Shipping and Receiving Worker<fcel>N<fcel>$16.22<fcel>$16.56<fcel>$16.91<fcel>$17.25<fcel>$17.59<fcel>$17.93<fcel>$18.27<nl>
+<fcel>LOAD DISPATCHING<lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>J01110<fcel>Load Dispatcher<fcel>S<fcel>$29.82<fcel>$30.33<fcel>$30.84<fcel>$31.35<fcel>$31.59<fcel>$31.97<ecel><nl>
+<fcel>J01111<fcel>SOC Control Technician<fcel>N/S<fcel>$26.30<fcel>$26.79<fcel>$27.32<fcel>$27.84<fcel>$28.27<fcel>$28.63<ecel><nl>
+
+*Starting or entry level position
+
+**Supervisory position

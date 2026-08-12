@@ -1,0 +1,19 @@
+days immediately before and after said holiday, or, has what the Management considers a reasonable cause for not working. Regular part-time employees who work less than 50% of full-time are not eligible for any holiday pay. Part-time employees who work 50% or more of full-time but less than full-time will receive prorated holiday pay to the nearest hour at the basic straight time rate. The two (2) completed pay periods of work (or fraction thereof for new employees), immediately prior to the holiday are to be used to determine the amount of holiday pay. Holidays worked by an employee will be further compensated as follows:
+
+(a) Two (2) times the regular rate for all work done on the holiday (or day celebrated as such).
+
+(b) When December 24 and December 31 falls on a Sunday, an employee may receive pay in lieu of the holiday or schedule a day off the same as scheduling a single day of vacation.
+
+(c) When a holiday falls on a Sunday, shift workers and coal yard employees who work Sunday and are off on Monday shall have the option to designate which day shall be the holiday.
+
+(d) Shift employees when working a ten (10) or twelve (12) hour shift will receive holiday pay for these hours.
+
+(3) Shift personnel and coal yard employees shall have the option, of selecting either Sunday or Monday as the holiday when the celebrated holiday is a Monday, provided that the system and generating station requirements do not require unit operation, and the shift personnel are scheduled to work Sunday.
+
+ARTICLE XXXIII. PREMIUM PAY
+
+(1) Shift positions shall be defined as any position where one (1) employee relieves another employee to carry on the same work, whether for two (2) or three (3) "tricks" or shifts per day or whether for five (5), six (6) or seven (7) days per week. Two (2) shifts or "tricks" shall cover sixteen (16) consecutive hours of eight (8) hours per shift or "trick". Three (3) shifts or "tricks" shall cover twenty-four (24) consecutive hours of eight (8) hours per shift or "trick".
+
+(2) In addition to the employee's regular wage rate, a shift premium shall be paid for work performed in the shift job classifications marked "S" under the wage schedule. The shift premium shall also be paid for the Master Garage Mechanic (Evening), Garage Mechanic (Evening) and Garage Mechanic Helper (Evening). This shift premium shall be sixty-six cents (66¢) per hour for the evening shift and seventy-eight cents (78¢) per hour for the night shift.
+
+For the day shift, no shift premium shall be paid.

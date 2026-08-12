@@ -1,0 +1,31 @@
+ENGINEERING
+
+(Each step represents a six-month increment except step 17. Step 17 occurs one full year after step 16.)
+
+<ecel><lcel><fcel>STEP 1<fcel>STEP 2<fcel>STEP 3<fcel>STEP 4<fcel>STEP 5<fcel>STEP 6<fcel>STEP 7<fcel>STEP 8<fcel>STEP 9<fcel>STEP 10<fcel>STEP 11<fcel>STEP 12<fcel>STEP 13<fcel>STEP 14<fcel>STEP 15<fcel>STEP 16<fcel>STEP 17<nl>
+<fcel>NO.<fcel>POSITION<ucel><ucel><ucel><ucel><ucel><ucel><ucel><ucel><ucel><ucel><ucel><ucel><ucel><ucel><ucel><ucel><ucel><nl>
+<fcel>J01042<fcel>CADD Technical Support Specialist (Civil)<fcel>$23.40<fcel>$23.93<fcel>$24.47<fcel>$24.98<fcel>$25.38<fcel>$25.88<fcel>$26.27<fcel>$26.69<fcel>$27.08<fcel>$27.59<fcel>$28.01<fcel>$28.45<ecel><fcel>$28.71<ecel><ecel><ecel><nl>
+<fcel>J01041<fcel>CADD Technical Support Specialist (Electric)<fcel>$23.40<fcel>$23.93<fcel>$24.47<fcel>$24.98<fcel>$25.38<fcel>$25.88<fcel>$26.27<fcel>$26.69<fcel>$27.08<fcel>$27.59<fcel>$28.01<fcel>$28.45<ecel><fcel>$28.71<ecel><ecel><ecel><nl>
+<fcel>J01037<fcel>CADD Technician I (Civil)<fcel>$22.89<fcel>$23.42<fcel>$23.94<fcel>$24.49<fcel>$24.90<fcel>$25.36<fcel>$25.77<fcel>$26.23<fcel>$26.61<fcel>$27.04<fcel>$27.47<fcel>$27.94<ecel><fcel>$28.20<ecel><ecel><ecel><nl>
+<fcel>J01036<fcel>CADD Technician I (Electric)<fcel>$22.89<fcel>$23.42<fcel>$23.94<fcel>$24.49<fcel>$24.90<fcel>$25.36<fcel>$25.77<fcel>$26.23<fcel>$26.61<fcel>$27.04<fcel>$27.47<fcel>$27.94<ecel><fcel>$28.20<ecel><ecel><ecel><nl>
+<fcel>J01039<fcel>CADD Technician II (Civil)<fcel>$20.71<fcel>$21.25<fcel>$21.77<fcel>$22.29<fcel>$22.72<fcel>$23.16<fcel>$23.59<fcel>$24.02<fcel>$24.41<fcel>$24.83<fcel>$25.24<fcel>$25.67<ecel><fcel>$26.07<ecel><ecel><ecel><nl>
+<fcel>J01038<fcel>CADD Technician II (Electric)<fcel>$20.71<fcel>$21.25<fcel>$21.77<fcel>$22.29<fcel>$22.72<fcel>$23.16<fcel>$23.59<fcel>$24.02<fcel>$24.41<fcel>$24.83<fcel>$25.24<fcel>$25.67<ecel><fcel>$26.07<ecel><ecel><ecel><nl>
+<fcel>J01040<fcel>CADD Technician III<fcel>$16.02<fcel>$16.55<fcel>$17.08<fcel>$17.61<fcel>$18.03<fcel>$18.42<fcel>$18.78<fcel>$19.26<fcel>$19.66<fcel>$20.06<fcel>$20.45<ecel><fcel>$21.07<ecel><fcel>$21.52<ecel><ecel><nl>
+<fcel>J01035<fcel>Drafter III<fcel>$16.02<fcel>$16.55<fcel>$17.08<fcel>$17.61<fcel>$18.03<fcel>$18.42<fcel>$18.78<fcel>$19.26<fcel>$19.66<fcel>$20.06<fcel>$20.45<ecel><fcel>$21.07<ecel><fcel>$21.52<ecel><ecel><nl>
+<fcel>J01044<fcel>Electric Systems Clerk<fcel>$15.90<fcel>$16.38<fcel>$16.86<fcel>$17.35<fcel>$17.82<fcel>$18.31<fcel>$18.78<fcel>$19.27<fcel>$19.75<fcel>$20.23<fcel>$20.69<ecel><fcel>$21.17<ecel><fcel>$21.69<ecel><ecel><nl>
+<fcel>J01043<fcel>Engineering Records Clerk<fcel>$15.54<fcel>$16.03<fcel>$16.60<fcel>$17.12<fcel>$17.51<fcel>$17.93<fcel>$18.39<fcel>$18.77<fcel>$19.20<fcel>$19.62<fcel>$20.06<ecel><fcel>$20.66<ecel><fcel>$21.24<ecel><ecel><nl>
+<fcel>J01052<fcel>Geographic Information System and Dispatch Technician<fcel>$20.59<fcel>$21.08<fcel>$21.62<fcel>$22.18<fcel>$22.60<fcel>$23.02<fcel>$23.44<fcel>$23.89<fcel>$24.32<fcel>$24.74<fcel>$25.20<fcel>$25.62<ecel><fcel>$26.00<ecel><ecel><ecel><nl>
+<fcel>J01051<fcel>Geographic Information System Representative<fcel>$15.54<fcel>$16.03<fcel>$16.60<fcel>$17.12<fcel>$17.51<fcel>$17.93<fcel>$18.39<fcel>$18.77<fcel>$19.20<fcel>$19.62<fcel>$20.06<ecel><fcel>$20.66<ecel><fcel>$21.24<ecel><ecel><nl>
+<fcel>J02497<fcel>Geographic Information System Technician<fcel>$20.59<fcel>$21.08<fcel>$21.62<fcel>$22.18<fcel>$22.60<fcel>$23.02<fcel>$23.44<fcel>$23.89<fcel>$24.32<fcel>$24.74<fcel>$25.20<fcel>$25.62<ecel><fcel>$26.00<ecel><ecel><ecel><nl>
+<fcel>J02499<fcel>Lead Geographic Information System Technician** S<fcel>$22.59<fcel>$23.07<fcel>$23.59<fcel>$24.17<fcel>$24.59<fcel>$25.01<fcel>$25.43<fcel>$25.90<fcel>$26.30<fcel>$26.74<fcel>$27.18<fcel>$27.59<ecel><fcel>$27.97<ecel><ecel><ecel><nl>
+<fcel>J01047<fcel>System Protection Technician<fcel>$21.35<fcel>$21.86<fcel>$22.38<fcel>$22.91<fcel>$23.33<fcel>$23.75<fcel>$24.17<fcel>$24.59<fcel>$25.01<fcel>$25.43<fcel>$25.91<fcel>$26.30<ecel><fcel>$26.56<ecel><ecel><ecel><nl>
+<fcel>J01046<fcel>Technical Assistant<fcel>$20.59<fcel>$21.08<fcel>$21.62<fcel>$22.18<fcel>$22.60<fcel>$23.02<fcel>$23.44<fcel>$23.89<fcel>$24.32<fcel>$24.74<fcel>$25.20<fcel>$25.62<ecel><fcel>$26.00<ecel><ecel><ecel><nl>
+<fcel>J01045<fcel>Transmission Technician<fcel>$22.59<fcel>$23.08<fcel>$23.62<fcel>$24.14<fcel>$24.59<fcel>$24.97<fcel>$25.40<fcel>$25.78<fcel>$26.21<fcel>$26.67<fcel>$27.07<fcel>$27.49<ecel><fcel>$27.85<ecel><ecel><ecel><nl>
+<fcel>HELP DESK<lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><lcel><nl>
+<fcel>J01016<fcel>Client Service Specialist I<fcel>$20.40<fcel>$20.95<fcel>$21.41<fcel>$21.88<fcel>$22.35<fcel>$22.85<fcel>$23.30<fcel>$23.80<fcel>$24.27<fcel>$24.76<ecel><fcel>$25.33<ecel><ecel><ecel><ecel><ecel><nl>
+<fcel>J01017<fcel>Client Service Specialist II<fcel>$18.60<fcel>$19.11<fcel>$19.61<fcel>$20.10<fcel>$20.56<fcel>$21.00<fcel>$21.43<fcel>$21.89<fcel>$22.32<fcel>$22.78<fcel>$23.26<ecel><fcel>$23.72<ecel><fcel>$24.16<ecel><ecel><nl>
+<fcel>J01019<fcel>Relief Client Service Specialist<fcel>$20.40<fcel>$20.95<fcel>$21.41<fcel>$21.88<fcel>$22.35<fcel>$22.85<fcel>$23.30<fcel>$23.80<fcel>$24.27<fcel>$24.76<ecel><fcel>$25.33<ecel><ecel><ecel><ecel><ecel><nl>
+
+**Supervisory Position
+
+Note: Employees on the Union Payroll as of June 1, 1987 are exempt from the first three steps of a clerical position.
