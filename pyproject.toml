@@ -6,8 +6,19 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "langextract",
+    "openai",
+    "pillow",
+    "pymupdf",
+    "python-dotenv",
+    "tqdm",
     "vllm>=0.26.0",
 ]
 
 [tool.uv.sources]
 langextract = { git = "https://github.com/matthewbbone/langextract", branch = "feat/chunk-offset" }
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
