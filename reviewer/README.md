@@ -58,6 +58,22 @@ Opens at http://localhost:5178.
   distance divided by the longer OCR length. The default 5% cutoff therefore
   behaves consistently for both short and long pages.
 
+## Rank OCR models
+
+From the repository root, fit a regularized Bradley-Terry-style ranking from
+the saved judgments:
+
+```bash
+python pipeline/utils/rank_ocr_models.py
+```
+
+The script prints a ranking and writes
+`cache/reviewer/ocr_model_rankings.json`. Decisive reviews are ordinary
+pairwise wins. A good or bad tie both pulls the two model strengths together
+and moves both models above or below a shared neutral-quality baseline, so the
+two kinds of ties do not collapse to the same outcome. Use
+`--tie-quality-weight` to adjust the balance between those two signals.
+
 ## Legend
 
 Highlight color = langextract `alignment_status` (grounding):
