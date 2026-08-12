@@ -47,6 +47,7 @@ interface DocInfo {
 }
 
 interface OcrPage {
+  source: string;
   documentId: string;
   pageNumber: number;
   models: string[];
@@ -83,9 +84,15 @@ function countLines(file: string): number {
   }
 }
 
-function sampleKey(documentId: string, pageNumber: number, modelA: string, modelB: string): string {
+function sampleKey(
+  source: string,
+  documentId: string,
+  pageNumber: number,
+  modelA: string,
+  modelB: string,
+): string {
   const models = [modelA, modelB].sort();
-  return `${documentId}\u0000${pageNumber}\u0000${models[0]}\u0000${models[1]}`;
+  return `${source}\u0000${documentId}\u0000${pageNumber}\u0000${models[0]}\u0000${models[1]}`;
 }
 
 /** Collapse layout-only whitespace differences before measuring OCR content. */
@@ -141,25 +148,26 @@ function meetsNormalizedEditDistance(a: string, b: string, minimum: number): boo
   return !levenshteinWithin(normalizedA, normalizedB, requiredDistance - 1);
 }
 
-/** Find Cornell DOL PDF pages with output from at least two distinct OCR models. */
+/** Find PDF pages from every review source with at least two OCR outputs. */
 function discoverOcrPages(): OcrPage[] {
   const pages = new Map<string, OcrPage>();
-  const source = "cornell_dol";
-  for (const model of listDirs(join(STG01, source))) {
-    const modelDir = join(STG01, source, model);
-    for (const documentId of listDirs(modelDir)) {
-      if (!findPdf(source, documentId)) continue;
-      const documentDir = join(modelDir, documentId);
-      for (const filename of readdirSync(documentDir)) {
-        const match = /^page_(\d+)\.txt$/.exec(filename);
-        if (!match) continue;
-        const pageNumber = Number(match[1]);
-        const text = readOcrPage(model, documentId, pageNumber);
-        if (!text) continue;
-        const key = `${documentId}\u0000${pageNumber}`;
-        const page = pages.get(key) ?? { documentId, pageNumber, models: [] };
-        page.models.push(model);
-        pages.set(key, page);
+  for (const source of KNOWN_SOURCES) {
+    for (const model of listDirs(join(STG01, source))) {
+      const modelDir = join(STG01, source, model);
+      for (const documentId of listDirs(modelDir)) {
+        if (!findPdf(source, documentId)) continue;
+        const documentDir = join(modelDir, documentId);
+        for (const filename of readdirSync(documentDir)) {
+          const match = /^page_(\d+)\.txt$/.exec(filename);
+          if (!match) continue;
+          const pageNumber = Number(match[1]);
+          const text = readOcrPage(source, model, documentId, pageNumber);
+          if (!text) continue;
+          const key = `${source}\u0000${documentId}\u0000${pageNumber}`;
+          const page = pages.get(key) ?? { source, documentId, pageNumber, models: [] };
+          page.models.push(model);
+          pages.set(key, page);
+        }
       }
     }
   }
@@ -180,7 +188,13 @@ function allOcrPairs(): OcrPair[] {
           ...page,
           leftModel,
           rightModel,
-          sampleKey: sampleKey(page.documentId, page.pageNumber, leftModel, rightModel),
+          sampleKey: sampleKey(
+            page.source,
+            page.documentId,
+            page.pageNumber,
+            leftModel,
+            rightModel,
+          ),
         });
       }
     }
@@ -195,7 +209,27 @@ function reviewedOcrPairs(): Set<string> {
     if (!line.trim()) continue;
     try {
       const row = JSON.parse(line);
-      if (typeof row.sample_key === "string") reviewed.add(row.sample_key);
+      // Reconstruct the source-aware key so judgments saved by older versions
+      // (whose sample_key omitted the source) remain marked as reviewed.
+      if (
+        typeof row.source === "string" &&
+        typeof row.document_id === "string" &&
+        typeof row.page_number === "number" &&
+        typeof row.left_model === "string" &&
+        typeof row.right_model === "string"
+      ) {
+        reviewed.add(
+          sampleKey(
+            row.source,
+            row.document_id,
+            row.page_number,
+            row.left_model,
+            row.right_model,
+          ),
+        );
+      } else if (typeof row.sample_key === "string") {
+        reviewed.add(row.sample_key);
+      }
     } catch {
       // A partial/malformed line should not make the rest of the review file unusable.
     }
@@ -203,11 +237,11 @@ function reviewedOcrPairs(): Set<string> {
   return reviewed;
 }
 
-function readOcrPage(model: string, documentId: string, pageNumber: number): string {
-  const key = `${model}\u0000${documentId}\u0000${pageNumber}`;
+function readOcrPage(source: string, model: string, documentId: string, pageNumber: number): string {
+  const key = `${source}\u0000${model}\u0000${documentId}\u0000${pageNumber}`;
   const cached = ocrTextCache.get(key);
   if (cached !== undefined) return cached;
-  const path = join(STG01, "cornell_dol", model, documentId, `page_${pageNumber}.txt`);
+  const path = join(STG01, source, model, documentId, `page_${pageNumber}.txt`);
   const text = stripThinkBlocks(readFileSync(path, "utf-8")).trim();
   ocrTextCache.set(key, text);
   return text;
@@ -227,30 +261,47 @@ function pairMeetsDistance(pair: OcrPair, minimum: number): boolean {
   const cached = distanceEligibilityCache.get(cacheKey);
   if (cached !== undefined) return cached;
   const eligible = meetsNormalizedEditDistance(
-    readOcrPage(pair.leftModel, pair.documentId, pair.pageNumber),
-    readOcrPage(pair.rightModel, pair.documentId, pair.pageNumber),
+    readOcrPage(pair.source, pair.leftModel, pair.documentId, pair.pageNumber),
+    readOcrPage(pair.source, pair.rightModel, pair.documentId, pair.pageNumber),
     minimum,
   );
   distanceEligibilityCache.set(cacheKey, eligible);
   return eligible;
 }
 
+/** Pick sources in random order before pages, preventing a large collection
+ *  from dominating the review stream merely because it contains more pages. */
+function randomPairAcrossSources(pairs: OcrPair[], minimum: number): OcrPair | undefined {
+  for (const source of shuffled(KNOWN_SOURCES)) {
+    const pair = shuffled(pairs.filter((candidate) => candidate.source === source))
+      .find((candidate) => pairMeetsDistance(candidate, minimum));
+    if (pair) return pair;
+  }
+  return undefined;
+}
+
 function randomOcrComparison(minimumNormalizedEditDistance: number) {
   const pairs = allOcrPairs();
   const reviewed = reviewedOcrPairs();
   const unreviewed = pairs.filter((pair) => !reviewed.has(pair.sampleKey));
-  let pair = shuffled(unreviewed).find((candidate) => pairMeetsDistance(candidate, minimumNormalizedEditDistance));
+  let pair = randomPairAcrossSources(unreviewed, minimumNormalizedEditDistance);
   const exhausted = !pair;
-  if (!pair) pair = shuffled(pairs).find((candidate) => pairMeetsDistance(candidate, minimumNormalizedEditDistance));
+  if (!pair) pair = randomPairAcrossSources(pairs, minimumNormalizedEditDistance);
   if (!pair) return null;
   return {
     sampleId: pair.sampleKey,
-    source: "cornell_dol",
+    source: pair.source,
     documentId: pair.documentId,
     pageNumber: pair.pageNumber,
-    pdfUrl: `/api/pdf?source=cornell_dol&doc=${encodeURIComponent(pair.documentId)}`,
-    left: { model: pair.leftModel, text: readOcrPage(pair.leftModel, pair.documentId, pair.pageNumber) },
-    right: { model: pair.rightModel, text: readOcrPage(pair.rightModel, pair.documentId, pair.pageNumber) },
+    pdfUrl: `/api/pdf?source=${encodeURIComponent(pair.source)}&doc=${encodeURIComponent(pair.documentId)}`,
+    left: {
+      model: pair.leftModel,
+      text: readOcrPage(pair.source, pair.leftModel, pair.documentId, pair.pageNumber),
+    },
+    right: {
+      model: pair.rightModel,
+      text: readOcrPage(pair.source, pair.rightModel, pair.documentId, pair.pageNumber),
+    },
     minimumNormalizedEditDistance,
     progress: {
       reviewed: pairs.filter((candidate) => reviewed.has(candidate.sampleKey)).length,
@@ -262,6 +313,7 @@ function randomOcrComparison(minimumNormalizedEditDistance: number) {
 
 function saveOcrComparison(body: Record<string, unknown>): void {
   const sampleId = body.sampleId;
+  const source = body.source;
   const documentId = body.documentId;
   const pageNumber = body.pageNumber;
   const leftModel = body.leftModel;
@@ -272,6 +324,8 @@ function saveOcrComparison(body: Record<string, unknown>): void {
   const minimumNormalizedEditDistance = body.minimumNormalizedEditDistance ?? 0.05;
   if (
     typeof sampleId !== "string" ||
+    typeof source !== "string" ||
+    !KNOWN_SOURCES.includes(source) ||
     typeof documentId !== "string" ||
     typeof pageNumber !== "number" ||
     !Number.isInteger(pageNumber) ||
@@ -283,7 +337,7 @@ function saveOcrComparison(body: Record<string, unknown>): void {
     !Number.isFinite(minimumNormalizedEditDistance) ||
     minimumNormalizedEditDistance < 0 ||
     minimumNormalizedEditDistance > 1 ||
-    sampleId !== sampleKey(documentId, pageNumber, leftModel, rightModel)
+    sampleId !== sampleKey(source, documentId, pageNumber, leftModel, rightModel)
   ) {
     throw new Error("Invalid OCR comparison review");
   }
@@ -299,7 +353,7 @@ function saveOcrComparison(body: Record<string, unknown>): void {
       review_id: randomUUID(),
       reviewed_at: new Date().toISOString(),
       sample_key: sampleId,
-      source: "cornell_dol",
+      source,
       document_id: documentId,
       page_number: pageNumber,
       left_model: leftModel,

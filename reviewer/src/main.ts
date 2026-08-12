@@ -298,7 +298,8 @@ async function loadComparison(): Promise<void> {
     const payload = await res.json();
     if (!res.ok) throw new Error(payload.error ?? `Request failed (${res.status})`);
     comparison = payload as OcrComparisonPayload;
-    comparisonMeta.textContent = `${comparison.documentId} · PDF page ${comparison.pageNumber}`;
+    comparisonMeta.textContent =
+      `${comparison.source} · ${comparison.documentId} · PDF page ${comparison.pageNumber}`;
     const progress = comparison.progress;
     const candidateTotal = progress.candidateTotal ?? progress.total;
     comparisonProgress.textContent = progress.exhausted
@@ -334,6 +335,7 @@ async function saveComparison(choice: ComparisonChoice): Promise<void> {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         sampleId: reviewed.sampleId,
+        source: reviewed.source,
         documentId: reviewed.documentId,
         pageNumber: reviewed.pageNumber,
         leftModel: reviewed.left.model,

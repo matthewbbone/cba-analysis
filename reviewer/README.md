@@ -4,9 +4,10 @@ A lightweight TypeScript (Vite) UI with two review modes:
 
 - **Extraction review** compares langextract wage-table extractions to the
   original source PDFs and grounded OCR spans.
-- **OCR comparison** samples a random Cornell DOL PDF page that has text from
-  at least two OCR models and asks whether OCR A is better, OCR B is better,
-  both are good and tied, or both are bad.
+- **OCR comparison** samples a random PDF page from `cornell_dol`,
+  `cornell_retail_educ`, or `dol_archive` that has text from at least two OCR
+  models and asks whether OCR A is better, OCR B is better, both are good and
+  tied, or both are bad.
 
 - **Left pane** — the original PDF (native browser viewer).
 - **Right pane** — the langextract-style reviewer: the OCR `full.txt` with every
@@ -54,6 +55,8 @@ Opens at http://localhost:5178.
   random, not-yet-reviewed model pair is loaded automatically.
 - Comparisons are blinded in the UI as **OCR A** and **OCR B**; model identifiers
   are retained only in the saved judgment record for later analysis.
+- Sources are randomized before pages are sampled, giving each collection an
+  equal opportunity to appear even when their page counts differ substantially.
 - The **Minimum text difference** filter uses whitespace-normalized Levenshtein
   distance divided by the longer OCR length. The default 5% cutoff therefore
   behaves consistently for both short and long pages.
