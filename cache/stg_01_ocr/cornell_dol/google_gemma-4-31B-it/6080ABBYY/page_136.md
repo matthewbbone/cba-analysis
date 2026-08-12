@@ -1,0 +1,47 @@
+| | Page | Article | Paragraph |
+| :--- | :---: | :---: | :---: |
+| **TRAVEL** | 22-24 | XV | |
+| Job-site reporting allowances | 23 | XV | 2 |
+| Job-site reporting beyond 25 miles | 23 | XV | 3,4 |
+| Job-site reporting, lodging and meals | 22-23 | XV | 1,3 |
+| Job-site reporting - use of company vehicle | 24 | XV | 4 |
+| | | | |
+| **TRIAL PERIOD** | 8 | I | 6 |
+| Extension | 51 | XXXV | 2 |
+| Length | 34 | XXVIII | 2 |
+| Return during | 34 | XXVIII | 2 |
+| Return to former position and posting | 17 | VI | 3 |
+| | | | |
+| **UNION BUSINESS** | 18 | VII | |
+| Notifying company | 18 | VII | 1 |
+| Return to work after leave | 18 | VII | 2 |
+| | | | |
+| **UNION MEMBERSHIP AND DUES** | 8-10 | II | |
+| Authorization for check off of dues | 10 | II | 9 |
+| Cadets | 9 | II | 3 |
+| Conditions | 8 | II | 1 |
+| Dues deduction | 9-10 | II | 4-7 |
+| Length of time required to join | 8-9 | II | 2 |
+| | | | |
+| **VACATION** | 25-28 | XX | |
+| And call-back | 27-28 | XX | 17 |
+| And holiday | 27 | XX | 14 |
+| Carry over | 28 | XX | 18 |
+| Entitlement | 25 | XX | 4 |
+| Half-day | 26 | XX | 10 |
+| Non-accumulation | 28 | XX | 19 |
+| Pay | 26 | XX | 9,11 |
+| Part-time employees | 26 | XX | 6 |
+| Prorated | 27 | XX | 12 |
+| Reduction | 26 | XX | 8 |
+| Retirement | 27 | XX | 15 |
+| Scheduling | 25-26 | XX | 1,2,5,10 |
+| Sickness | 27 | XX | 16a-b |
+| Temporary employees | 26 | XX | 7 |
+| Terminations | 26-27 | XX | 11-13 |
+| Year earned | 25 | XX | 3,4 |
+| | | | |
+| **WAGES** | | | |
+| Bargaining of | 8 | I | 5 |
+| | | | |
+| **WEATHER** | 28 | XXII | |

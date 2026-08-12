@@ -1,0 +1,42 @@
+COMMONWEALTH OF PENNSYLVANIA
+EXECUTIVE OFFICES
+HARRISBURG
+
+NANCY DERING MARTIN,
+DEPUTY SECRETARY FOR
+HUMAN RESOURCES AND MANAGEMENT
+
+May 26, 2004
+
+Mr. Thomas DeBruin, President
+District 1199p, SEIU
+1500 N. 2nd Street
+2nd Floor
+Harrisburg, PA 17102
+
+RE: Public Health Program Program Representatives
+
+Dear Mr. DeBruin:
+
+During the negotiations for the July 1, 2003 through June 30, 2007 collective bargaining agreement the parties agreed that effective July 1, 2003 each Public Health Program Representative will be granted a one time two step in range salary adjustment. Public Health Program Representatives who are at or above the maximum of the pay range on July 1, 2003 will receive the annual amount of a four and one-half percent (4.5%) in the form of a one time cash payment rounded to the nearest dollar.
+
+If you concur with this agreement, please sign the enclosed copy and return it to the Bureau of Labor Relations.
+
+Sincerely,
+
+[Signature]
+
+Nancy Dering Martin
+Deputy Secretary for Human Resources and Management
+
+[Signature]
+Thomas DeBruin
+5/28/04
+Date
+
+copy: Secretary Barnett
+Donald Adams
+Ralph Winters
+Gregg Matthews
+Carol Scott
+Nancy Sutch

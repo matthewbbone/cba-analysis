@@ -1,0 +1,14 @@
+h. Does the job share negatively impact the Company's ability to effectively run the business?
+
+Management will retain the authority to approve or reject a job sharing request. The cost center manager will have final authority to approve and to dissolve job sharing arrangements. It should be understood that job sharing is the sharing of one full time authorized budgeted position.
+
+4. **Request Rejected**
+If after reviewing the job sharing request, it is determined that a position cannot be shared or that the needs of the business cannot be met in a job sharing format, the employee will be notified by the supervisor.
+
+5. **Request Approved**
+If it is determined that the job in question is appropriate to be shared and that the needs of the business can be met effectively with a shared job format, the job sharing arrangement should be reviewed with the appropriate Employee Services Administrator in Employee Relations. The purpose of the review is to ensure a complete understanding and consistent application of the job sharing policy and agreement.
+
+To fill the other half of the job sharing position, the supervisor will complete the Hourly Position Requisition form (WPL 5128-C) and the Position Requisition Supplemental Information form. The other half of the job sharing position will be filled through the normal posting process.
+
+6. **Job Sharing Agreement**
+A job sharing agreement will be completed by the supervisor and signed by the job sharing partners and the cost center manager. The agreement will be reviewed in detail with each job sharer. A copy of the agreement form is attached.

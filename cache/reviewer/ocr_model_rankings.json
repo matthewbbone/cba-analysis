@@ -1,0 +1,99 @@
+{
+  "method": "regularized_bradley_terry_with_valued_ties",
+  "generated_at": "2026-08-12T21:28:57.492819+00:00",
+  "judgment_count": 40,
+  "model_count": 5,
+  "choice_counts": {
+    "both_bad": 1,
+    "both_good": 13,
+    "left_better": 18,
+    "right_better": 8
+  },
+  "tie_quality_weight": 0.5,
+  "l2": 0.5,
+  "iterations": 5,
+  "score_definition": "Estimated percentage chance of beating a fixed neutral-quality baseline; higher is better and 50 is neutral.",
+  "rankings": [
+    {
+      "model": "Qwen_Qwen3.6-27B-FP8",
+      "score": 76.13431013366444,
+      "score_ci_95": [
+        47.03401531888467,
+        91.97454259607998
+      ],
+      "log_strength": 1.1600571620856144,
+      "strength": 3.1901156245668774,
+      "decisive_wins": 7,
+      "decisive_losses": 2,
+      "both_good": 8,
+      "both_bad": 1,
+      "total_comparisons": 18,
+      "rank": 1
+    },
+    {
+      "model": "PaddlePaddle_PaddleOCR-VL-1.6__layout",
+      "score": 72.79088737174904,
+      "score_ci_95": [
+        40.716008730873185,
+        91.24398056839172
+      ],
+      "log_strength": 0.9840388336110955,
+      "strength": 2.675239298181703,
+      "decisive_wins": 6,
+      "decisive_losses": 3,
+      "both_good": 4,
+      "both_bad": 0,
+      "total_comparisons": 13,
+      "rank": 2
+    },
+    {
+      "model": "zai-org_GLM-OCR__layout",
+      "score": 68.20548697922419,
+      "score_ci_95": [
+        38.056167447716724,
+        88.22204658353692
+      ],
+      "log_strength": 0.7632312874721868,
+      "strength": 2.1451967807984973,
+      "decisive_wins": 6,
+      "decisive_losses": 4,
+      "both_good": 7,
+      "both_bad": 1,
+      "total_comparisons": 18,
+      "rank": 3
+    },
+    {
+      "model": "AIDC-AI_Ovis2.6-30B-A3B",
+      "score": 61.101622905087815,
+      "score_ci_95": [
+        26.878437359364476,
+        87.03402722533576
+      ],
+      "log_strength": 0.45158589745390243,
+      "strength": 1.5708013410430886,
+      "decisive_wins": 2,
+      "decisive_losses": 3,
+      "both_good": 4,
+      "both_bad": 0,
+      "total_comparisons": 9,
+      "rank": 4
+    },
+    {
+      "model": "opendatalab_MinerU2.5-Pro-2605-1.2B__native",
+      "score": 51.072120079395454,
+      "score_ci_95": [
+        23.274350843434725,
+        78.22227651707273
+      ],
+      "log_strength": 0.0428913774656658,
+      "strength": 1.0438245058291993,
+      "decisive_wins": 5,
+      "decisive_losses": 14,
+      "both_good": 3,
+      "both_bad": 0,
+      "total_comparisons": 22,
+      "rank": 5
+    }
+  ],
+  "source_path": "/home/scro4406/cba-analysis/cache/reviewer/ocr_comparisons.jsonl"
+}

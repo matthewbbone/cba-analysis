@@ -1,0 +1,21 @@
+9.5 FRINGE BENEFITS-The Board will make no contributions toward retirement or insurance programs during the term of an unpaid leave; however, the teacher shall be afforded the opportunity to continue payments toward those programs. State contributions to the State Retirement System shall be governed by the regulations then in effect. No sick leave shall be accumulated or paid during the term of an unpaid leave; however, previously accumulated sick leave shall be restored upon the teacher's return to active service.
+
+# ARTICLE 10
+# Leaves of Absence
+
+10.1 FURTHER STUDY AND EDUCATION-Leave for further study may be granted a teacher who holds at least a Standard Professional Certificate and has taught in Wicomico County for two (2) years, has earned tenure status, and wishes to be absent from school for a maximum of two (2) years. The teacher may make application to the Board of Education for a leave. The Board of Education reserves the right to limit the number of teachers who will be excused for study in any one (1) year. Those who are excused for study must request reinstatement by March 1 of the school year preceding the one in which they wish to return to school. Service credit for each approved year, maximum of two (2) will be given on the appropriate salary schedule when the teacher returns. Upon the teacher's return, he/she will be assigned to the same position he/she held at the time said leave commenced, if available. If the same position is not available, the teacher will be assigned to a position for which he/she is qualified.
+
+10.2 EMERGENCY/PERSONAL/BUSINESS LEAVE-Up to four (4) days' leave without salary deduction shall be granted by the building principal upon written notification by the Unit 1 member that such leave is necessary to take care of emergency or personal business matters which cannot be handled outside of duty hours. The written request notice shall be provided at least two (2) working days prior to the time of the leave except when unusual emergency matters preclude doing so. The Unit 1 Member may be required to state a specific reason for requesting such leave only when there is reasonable cause to believe that the benefit is being abused.
+
+Any emergency/personal business leave unused at the end of each school year will accumulate as sick leave upon the employee's return to work at the beginning of the next school year.
+
+10.3 JURY DUTY
+Teachers will be released for jury duty without loss of pay. Upon notice to the teacher, the Board may petition the court to excuse the teacher if such leave would result in a protracted absence.
+
+10.4 BEREAVEMENT LEAVE-Upon the death of a child, parent, stepparent, brother, sister, husband, wife, mother-in-law, father-in-law, or any one who has lived regularly in the household of a Unit 1 member, such Unit 1 member will be allowed four (4) consecutive work days including the day of the funeral without loss of salary. Up to two (2) consecutive work days including the day of the funeral will be allowed for the death of a grandparent, grandparent-in-law, grandchild, sister-in-law, or brother-in-law. Up to one (1) day's absence will be allowed for the death of an uncle, aunt, niece, nephew or first cousins. Up to one day's absence will be allowed for the death of any one who has lived regularly in the household of any of the above mentioned relatives.
+
+10.5 MILITARY SERVICE
+
+A. Leave of up to five (5) years shall be granted teachers, without pay, for military service. All teachers shall receive full service credit on the appropriate salary schedule for military service upon their return to the Wicomico County school system. Upon the teacher's return, he/she shall be assigned to a position equivalent to that held when leave commenced.
+
+B. All employees who are members of the military or naval establishments of the United States or of the State of Maryland shall be granted leave on those days during which they shall be engaged in any military or naval duty to which they shall be ordered by proper authority, not to exceed fifteen (15) calendar days in any year without loss of pay for the working days included in such leave. The

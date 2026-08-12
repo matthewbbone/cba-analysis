@@ -1,0 +1,52 @@
+Ratio
+1985-86 1986-87 1985-86 1986-87
+
+3-1-13 Other (continued)
+
+2. Equipment Manager --To
+be responsible for care,
+storage, issuing and
+inventorying of all
+athletic equipment within
+the junior high school
+building.
+
+1. Mens equipment .031 .031 1,055 1,100
+2. Womens equipment .031 .031 1,055 1,100
+3. Football equipment .022 .022 750 780
+
+3. Golf, Archery, Tennis, Bowling
+(15 participants for
+12 sessions) .0085 .0085 290 300
+
+4. Head Weight Instructor .06 .06 2,040 2,130
+
+3- 2 Fine Arts
+
+3-2-1 Auxiliary Services (per session)*
+($2,500 budgeted per year per school) 13 14
+
+3-2-2 Chess & Computer:
+24 weeks .023 .23 780 815
+12 weeks .0115 .0115 390 410
+
+3-2-3 Debate (9th Grade inter-
+school competition) .021 .021 715 745
+
+3-2-4 Magazine .0033- .0033- 110- 115-
+.023 .023 780 820
+
+3-2-5 Music This payment is for
+all concerts, contests, and extra
+groups held during the entire
+school year. Amounts are maxi-
+mum for one person in that
+assignment.
+1. Band .016 .016 545 570
+2. Orchestra .014 .014 475 495
+3. Vocal .0125 .0125 425 445
+
+3-2-6 Newspaper
+(six or more issues) .023 .023 780 815
+
+61

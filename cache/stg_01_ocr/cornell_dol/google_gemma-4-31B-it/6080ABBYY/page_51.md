@@ -1,0 +1,15 @@
+(10) Employees shall not be required to take time off for overtime worked or to be worked.
+
+(11) Except for shift workers and coal yard employees, Sunday shall not be scheduled as a part of the standard week and shall be the last day of the work week.
+
+(12) While the regular hours for non-shift generating station employees [except those employed on the "evening or night maintenance crew" as described in paragraph (13) of this Article] are between 6:00 A.M. and 6:00 P.M., the Management may, under the following conditions, make temporary changes in the regular daily schedules for workers in the major generating stations only. This may not be used to eliminate short daily overtime period, but only when the planned work requires sixteen (16) or more hours' work per day until the job is completed. The Management may not change the regular scheduled days of work during the week for such employees, only the hours within the calendar day.
+
+(a) Where major planned overhaul requires a working schedule of more than one (1) "trick" per day provided the Company gives the employees affected at least one (1) week's advance notice.
+
+(b) Where major emergency repair work requires a change in schedules provided the Company gives the employees affected at least forty-eight (48) hours' advance notice.
+
+(13) (a) The Management may schedule an "evening maintenance crew" at the Columbia, Edgewater and Rock River Generating Stations. The starting time for such a crew will coincide with the end of the working period established for the "day crew". The hours shall be consecutive except for time off for a meal. The meal period shall be thirty (30) minutes or one (1) hour. The length of the meal period shall be as the majority of the employees affected may determine.
+
+(b) The Management may schedule a "night maintenance crew" at the Columbia and Edgewater Generating Stations. The starting time for such a crew will coincide with the end of the working period established for the "evening crew". The hours shall be consecutive except for time off for a meal. The meal period shall be thirty (30) minutes or one (1) hour. The length of the meal period shall be as the majority of the employees affected may determine.
+
+(14) (a) Employees assigned to the day, evening and night maintenance crews (as referenced in paragraph (12) and (13) above), may have their schedules changed for purposes of training, job selection and Journeyman testing provided they are notified of the schedule change by Friday of the preceding week with at least 48 hours notice.

@@ -1,0 +1,26 @@
+COMMONWEALTH OF PENNSYLVANIA
+EXECUTIVE OFFICES
+HARRISBURG
+
+NANCY DENING MARTIN
+DEPUTY SECRETARY FOR
+HUMAN RESOURCES AND MANAGEMENT
+
+May 26, 2004
+
+Thomas DeBruin, President
+District 1199P, SEIU
+1500 North Second Street
+Harrisburg, PA 17102
+
+RE: Recruitment and Retention
+
+Dear Mr. DeBruin:
+
+The Commonwealth of Pennsylvania and District 1199P SEIU, AFL-CIO, CLC (the Union) recognize that employee recruitment and/or retention issues, including the effects of mandatory overtime (particularly in the nursing profession) may arise, or become aggravated, during the term of the collective bargaining agreement meeting. This recognition reflects the past experiences of the parties and the long-standing nurse recruitment, retention and mobility issues.
+
+District 1199P/SEIU authorizes the Commonwealth of Pennsylvania (through the Office of Administration) to utilize any of the following concepts to deal with such a recruitment and retention problem causing serious staffing issues in bargaining unit jobs: one-time hiring bonuses; pay range adjustments and/or pay-step increases. In addition, the parties may mutually agree to the utilization of similar concepts.
+
+When the Office of Administration determines that one or more of these concepts needs to be utilized, to respond to a state-wide departmental, and/or work location-specific recruitment or retention problem, the Union shall be given notice of this determination. This notice shall be provided at least thirty calendar days in advance of the anticipated implementation date. If the Union requests a meet and discuss meeting regarding the Commonwealth's intent, such meeting shall be expeditiously arranged. Similarly, the Union may request, and the Commonwealth shall honor, bargaining on the impact of the Commonwealth's decision. (Note: Any such impact bargaining shall not prohibit the Commonwealth from acting within the scope of this of this Understanding to implement concepts to deal with the recruitment and/or retention issues).
+
+A meet and discuss meeting between the parties to discuss nurse recruitment and retention issues shall occur within 180 days of the signing of the Agreement. Thereafter, the Union shall not make such a request more than once each fiscal year. Such requests shall be made in writing to the Deputy Secretary for Human Resources and Management, Office of Administration. Upon receipt of such a request, the Deputy Secretary for Human Resources and

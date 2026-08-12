@@ -1,0 +1,32 @@
+Section 3. Employees who are required to remain on duty during meal periods shall be compensated for this period at the appropriate rate of pay.
+
+ARTICLE 7
+HOLIDAYS
+
+Section 1. The following days shall be recognized as holidays:
+
+| Major | Minor |
+| :--- | :--- |
+| 1. New Year's Day | 7. Martin Luther King Jr's Birthday |
+| 2. Memorial Day | 8. Presidents' Day |
+| 3. Independence Day | 9. Columbus Day |
+| 4. Labor Day | 10. Veterans' Day |
+| 5. Thanksgiving Day | |
+| 6. Christmas Day | |
+
+Monday shall be recognized as a holiday for all holidays occurring on a Sunday and Friday for all holidays occurring on a Saturday for those employees on a normal Monday through Friday work week. For other than these employees, the holiday shall be deemed to fall on the day on which the holiday occurs.
+
+Section 2. At Scotland School for Veterans' Children, Scranton State School for the Deaf, and Thaddeus Stevens College of Technology the following days shall be recognized as holidays:
+
+1. New Year's Day
+2. Memorial Day
+3. Independence Day
+4. Labor Day
+5. Thanksgiving Day
+6. Christmas Day
+
+The remaining four holidays shall be scheduled by the administration of these institutions during the time on the academic schedule when the institution is not at full operation.
+
+The matter of rescheduling the remaining four holidays shall be resolved on a meet and discuss basis between Scotland School for Veterans' Children, Scranton State School for the Deaf, and Thaddeus Stevens College of Technology.
+
+An employee shall earn a minor holiday provided the employee was in an active pay status on the last half of the employee's scheduled work day immediately prior and the first half of the employee's scheduled work day immediately subsequent to the actual day the minor holiday is celebrated as provided in Section 1. If a minor holiday occurs while employees are on leave without pay under Article 14, Section 3, they shall be paid for the minor holiday provided they were in active pay status the last half of their scheduled work day immediately prior and the first half of their scheduled work day immediately subsequent to the leave without pay. An employee who
