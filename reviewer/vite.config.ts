@@ -12,6 +12,7 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { Connect, Plugin } from "vite";
 import { defineConfig } from "vite";
+import { modelMatchupWeight, weightedOrder } from "./src/ocrSampling";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const CACHE_ROOT = resolve(__dirname, "..", "cache");
@@ -57,6 +58,17 @@ interface OcrPair extends OcrPage {
   leftModel: string;
   rightModel: string;
   sampleKey: string;
+}
+
+interface OcrMatchup {
+  modelA: string;
+  modelB: string;
+  pairs: OcrPair[];
+}
+
+interface OcrReviewHistory {
+  reviewedPairs: Set<string>;
+  comparisonCounts: Map<string, number>;
 }
 
 const OCR_CHOICES = new Set(["left_better", "right_better", "both_good", "both_bad"]);
@@ -202,13 +214,33 @@ function allOcrPairs(): OcrPair[] {
   return pairs;
 }
 
-function reviewedOcrPairs(): Set<string> {
-  const reviewed = new Set<string>();
-  if (!existsSync(OCR_COMPARISON_FILE)) return reviewed;
+function ocrReviewHistory(): OcrReviewHistory {
+  const reviewedPairs = new Set<string>();
+  const comparisonCounts = new Map<string, number>();
+  if (!existsSync(OCR_COMPARISON_FILE)) return { reviewedPairs, comparisonCounts };
   for (const line of readFileSync(OCR_COMPARISON_FILE, "utf-8").split("\n")) {
     if (!line.trim()) continue;
     try {
       const row = JSON.parse(line);
+      const hasValidJudgment =
+        typeof row.left_model === "string" &&
+        row.left_model.length > 0 &&
+        typeof row.right_model === "string" &&
+        row.right_model.length > 0 &&
+        row.left_model !== row.right_model &&
+        typeof row.choice === "string" &&
+        OCR_CHOICES.has(row.choice);
+      if (hasValidJudgment) {
+        comparisonCounts.set(
+          row.left_model,
+          (comparisonCounts.get(row.left_model) ?? 0) + 1,
+        );
+        comparisonCounts.set(
+          row.right_model,
+          (comparisonCounts.get(row.right_model) ?? 0) + 1,
+        );
+      }
+
       // Reconstruct the source-aware key so judgments saved by older versions
       // (whose sample_key omitted the source) remain marked as reviewed.
       if (
@@ -218,7 +250,7 @@ function reviewedOcrPairs(): Set<string> {
         typeof row.left_model === "string" &&
         typeof row.right_model === "string"
       ) {
-        reviewed.add(
+        reviewedPairs.add(
           sampleKey(
             row.source,
             row.document_id,
@@ -228,13 +260,13 @@ function reviewedOcrPairs(): Set<string> {
           ),
         );
       } else if (typeof row.sample_key === "string") {
-        reviewed.add(row.sample_key);
+        reviewedPairs.add(row.sample_key);
       }
     } catch {
       // A partial/malformed line should not make the rest of the review file unusable.
     }
   }
-  return reviewed;
+  return { reviewedPairs, comparisonCounts };
 }
 
 function readOcrPage(source: string, model: string, documentId: string, pageNumber: number): string {
@@ -269,24 +301,66 @@ function pairMeetsDistance(pair: OcrPair, minimum: number): boolean {
   return eligible;
 }
 
-/** Pick sources in random order before pages, preventing a large collection
- *  from dominating the review stream merely because it contains more pages. */
-function randomPairAcrossSources(pairs: OcrPair[], minimum: number): OcrPair | undefined {
+function matchupKey(modelA: string, modelB: string): string {
+  return [modelA, modelB].sort().join("\u0000");
+}
+
+/**
+ * Pick sources in random order before model matchups, preventing a large
+ * collection from dominating merely because it contains more pages. Within a
+ * source, under-compared models receive more weight; a page is then sampled
+ * uniformly from the selected unordered matchup.
+ */
+function preferredPairAcrossSources(
+  pairs: OcrPair[],
+  minimum: number,
+  comparisonCounts: ReadonlyMap<string, number>,
+): OcrPair | undefined {
   for (const source of shuffled(KNOWN_SOURCES)) {
-    const pair = shuffled(pairs.filter((candidate) => candidate.source === source))
-      .find((candidate) => pairMeetsDistance(candidate, minimum));
-    if (pair) return pair;
+    const matchups = new Map<string, OcrMatchup>();
+    for (const pair of pairs) {
+      if (pair.source !== source) continue;
+      const [modelA, modelB] = [pair.leftModel, pair.rightModel].sort();
+      const key = matchupKey(modelA, modelB);
+      const matchup = matchups.get(key) ?? { modelA, modelB, pairs: [] };
+      matchup.pairs.push(pair);
+      matchups.set(key, matchup);
+    }
+
+    const orderedMatchups = weightedOrder(
+      [...matchups.values()],
+      (matchup) => modelMatchupWeight(
+        matchup.modelA,
+        matchup.modelB,
+        comparisonCounts,
+      ),
+    );
+    for (const matchup of orderedMatchups) {
+      const pair = shuffled(matchup.pairs)
+        .find((candidate) => pairMeetsDistance(candidate, minimum));
+      if (pair) return pair;
+    }
   }
   return undefined;
 }
 
 function randomOcrComparison(minimumNormalizedEditDistance: number) {
   const pairs = allOcrPairs();
-  const reviewed = reviewedOcrPairs();
-  const unreviewed = pairs.filter((pair) => !reviewed.has(pair.sampleKey));
-  let pair = randomPairAcrossSources(unreviewed, minimumNormalizedEditDistance);
+  const history = ocrReviewHistory();
+  const unreviewed = pairs.filter((pair) => !history.reviewedPairs.has(pair.sampleKey));
+  let pair = preferredPairAcrossSources(
+    unreviewed,
+    minimumNormalizedEditDistance,
+    history.comparisonCounts,
+  );
   const exhausted = !pair;
-  if (!pair) pair = randomPairAcrossSources(pairs, minimumNormalizedEditDistance);
+  if (!pair) {
+    pair = preferredPairAcrossSources(
+      pairs,
+      minimumNormalizedEditDistance,
+      history.comparisonCounts,
+    );
+  }
   if (!pair) return null;
   return {
     sampleId: pair.sampleKey,
@@ -304,7 +378,7 @@ function randomOcrComparison(minimumNormalizedEditDistance: number) {
     },
     minimumNormalizedEditDistance,
     progress: {
-      reviewed: pairs.filter((candidate) => reviewed.has(candidate.sampleKey)).length,
+      reviewed: pairs.filter((candidate) => history.reviewedPairs.has(candidate.sampleKey)).length,
       candidateTotal: pairs.length,
       exhausted,
     },

@@ -52,11 +52,14 @@ Opens at http://localhost:5178.
 - Drag the divider between panes to resize.
 - In **OCR comparison**, use the four result buttons (or keys `1`–`4`). Each
   result is appended to `cache/reviewer/ocr_comparisons.jsonl`, and the next
-  random, not-yet-reviewed model pair is loaded automatically.
+  weighted-random, not-yet-reviewed model pair is loaded automatically.
 - Comparisons are blinded in the UI as **OCR A** and **OCR B**; model identifiers
   are retained only in the saved judgment record for later analysis.
 - Sources are randomized before pages are sampled, giving each collection an
   equal opportunity to appear even when their page counts differ substantially.
+- Within a source, model matchups containing models with fewer saved comparisons
+  receive more weight. Every eligible matchup retains a positive probability,
+  and the page is chosen randomly only after the model matchup is selected.
 - The **Minimum text difference** filter uses whitespace-normalized Levenshtein
   distance divided by the longer OCR length. The default 5% cutoff therefore
   behaves consistently for both short and long pages.
