@@ -4,7 +4,8 @@ from tempfile import TemporaryDirectory
 import unittest
 from unittest.mock import patch
 
-from pipeline.stg_01_ocr.general.runner import (
+from pipeline.stg_01_ocr import common
+from pipeline.stg_01_ocr.common import (
     DocumentJob,
     PageJob,
     PageResult,
@@ -18,9 +19,11 @@ from pipeline.stg_01_ocr.general.runner import (
     path_safe_model_name,
     resolve_project_path,
     process_page_job,
-    render_page_to_data_url_isolated,
     run_page_queue,
+    write_page_markdown,
 )
+from pipeline.stg_01_ocr.general import runner as general
+from pipeline.stg_01_ocr.render import render_page_isolated
 
 
 class OcrDiscoveryTests(unittest.TestCase):
@@ -96,16 +99,50 @@ class OcrDiscoveryTests(unittest.TestCase):
             stderr="*** stack smashing detected ***: terminated\n",
         )
 
-        with patch("pipeline.stg_01_ocr.runner.subprocess.run", return_value=completed):
+        with patch("pipeline.stg_01_ocr.render.subprocess.run", return_value=completed):
             with self.assertRaisesRegex(RuntimeError, "stack smashing"):
-                render_page_to_data_url_isolated(Path("doc.pdf"), 1, 200)
+                render_page_isolated(Path("doc.pdf"), 1, 200)
 
 
 class OcrQueueTests(unittest.IsolatedAsyncioTestCase):
+    async def test_async_client_is_closed_on_the_operation_event_loop(self) -> None:
+        events = []
+
+        class FakeClient:
+            async def close(self) -> None:
+                events.append(("close", asyncio.get_running_loop()))
+
+        async def operation() -> str:
+            events.append(("operation", asyncio.get_running_loop()))
+            return "done"
+
+        result = await common._run_with_client_cleanup(operation(), FakeClient())
+
+        self.assertEqual(result, "done")
+        self.assertEqual([event[0] for event in events], ["operation", "close"])
+        self.assertIs(events[0][1], events[1][1])
+
+    async def test_async_client_is_closed_when_the_operation_fails(self) -> None:
+        closed = False
+
+        class FakeClient:
+            async def close(self) -> None:
+                nonlocal closed
+                closed = True
+
+        async def operation() -> None:
+            raise RuntimeError("queue failed")
+
+        with self.assertRaisesRegex(RuntimeError, "queue failed"):
+            await common._run_with_client_cleanup(operation(), FakeClient())
+
+        self.assertTrue(closed)
+
     async def test_process_page_job_skips_existing_output_without_client(self) -> None:
         with TemporaryDirectory() as tmp_dir:
             output_path = Path(tmp_dir) / "page_1.txt"
             output_path.write_text("already done\n", encoding="utf-8")
+            output_path.with_suffix(".md").write_text("already done\n", encoding="utf-8")
             job = PageJob(
                 source="source",
                 document_id="doc",
@@ -116,11 +153,12 @@ class OcrQueueTests(unittest.IsolatedAsyncioTestCase):
 
             result = await process_page_job(
                 job=job,
+                spec=general.SPEC,
                 client=None,
-                model_name="model",
-                dpi=200,
-                max_tokens=1024,
-                force=False,
+                model_name=general.DEFAULT_MODEL_NAME,
+                args=(args := general.parse_args([])),
+                request_limiter=common.RequestLimiter(args.max_inflight_requests),
+                repetition_policy=general.SPEC.repetition_policy(args),
             )
 
         self.assertEqual(result.status, "skipped")
@@ -142,7 +180,12 @@ class OcrQueueTests(unittest.IsolatedAsyncioTestCase):
                 if job.page_number == 1:
                     job.output_path.parent.mkdir(parents=True, exist_ok=True)
                     job.output_path.write_text("page one\n", encoding="utf-8")
-                    return PageResult(job=job, status="completed")
+                    return PageResult(
+                        job=job,
+                        status="completed",
+                        expanded_merged_cells=True,
+                        repetition_trimmed=True,
+                    )
                 if job.page_number == 2:
                     return PageResult(job=job, status="skipped")
                 raise RuntimeError("bad page")
@@ -152,8 +195,16 @@ class OcrQueueTests(unittest.IsolatedAsyncioTestCase):
 
         self.assertEqual(state.completed_pages, {1, 2})
         self.assertEqual(state.skipped_pages, {2})
+        self.assertEqual(state.expanded_merged_cell_pages, {1})
+        self.assertEqual(state.repetition_trimmed_pages, {1})
         self.assertEqual(set(state.failed_pages), {3})
         self.assertFalse(state.is_complete)
+
+    def test_raw_writer_preserves_legacy_trailing_whitespace_contract(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            path = Path(tmp_dir) / "page_1.txt"
+            common.write_page_text(path, "model text  \n\n")
+            self.assertEqual(path.read_bytes(), b"model text\n")
 
     async def test_queue_then_combines_complete_document_pages(self) -> None:
         with TemporaryDirectory() as tmp_dir:
@@ -172,6 +223,7 @@ class OcrQueueTests(unittest.IsolatedAsyncioTestCase):
                 else:
                     text = "text for page 2\n<THINK>\nmultiline\nnote\n</THINK>\nvisible page 2\n"
                 job.output_path.write_text(text, encoding="utf-8")
+                write_page_markdown(job.markdown_path, text, raw_output=False)
                 return PageResult(job=job, status="completed")
 
             await run_page_queue(jobs, states, concurrency=2, processor=processor)
@@ -209,7 +261,7 @@ class OcrQueueTests(unittest.IsolatedAsyncioTestCase):
                 return PageResult(job=job, status="completed")
 
             with patch(
-                "pipeline.stg_01_ocr.runner.make_progress_callback",
+                "pipeline.stg_01_ocr.common.make_progress_callback",
                 return_value=ProgressReporter(
                     callback=progress_callback,
                     close=close_progress,

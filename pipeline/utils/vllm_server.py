@@ -1,4 +1,3 @@
-import asyncio
 import atexit
 import json
 import os
@@ -7,6 +6,7 @@ import re
 import signal
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 try:
@@ -47,6 +47,24 @@ OVIS26_VISUAL_TOKENS = [
     "<ovis_video_end>",
 ]
 
+RESERVED_SERVE_OPTIONS = frozenset(
+    {
+        "--attention-backend",
+        "--chat-template",
+        "--distributed-executor-backend",
+        "--dtype",
+        "--gpu-memory-utilization",
+        "--language-model-only",
+        "--max-model-len",
+        "--mm-encoder-attn-backend",
+        "--nnodes",
+        "--port",
+        "--tensor-parallel-size",
+        "--tokenizer",
+        "--trust-remote-code",
+    }
+)
+
 
 def model_attention_args(model_name: str) -> list[str]:
     if model_name in OVIS26_MODEL_NAMES:
@@ -57,6 +75,72 @@ def model_attention_args(model_name: str) -> list[str]:
             "TRITON_ATTN",
         ]
     return []
+
+
+def validate_extra_serve_args(extra_serve_args: list[str] | None) -> None:
+    if extra_serve_args is None:
+        return
+
+    for argument in extra_serve_args:
+        if not isinstance(argument, str):
+            raise TypeError("extra_serve_args must contain only strings")
+        option = argument.partition("=")[0]
+        if option.startswith("--"):
+            # vLLM's FlexibleArgumentParser accepts underscores and hyphens
+            # interchangeably for long options.
+            option = option.replace("_", "-")
+        if option in RESERVED_SERVE_OPTIONS:
+            raise ValueError(
+                f"extra_serve_args cannot override reserved option {option!r}; "
+                "configure it through the corresponding VLLMServer argument instead"
+            )
+
+
+def build_serve_command(
+    executable: str,
+    model_name: str,
+    port: int = 8123,
+    max_model_len: int = 32768,
+    num_gpus: int = 1,
+    gpu_memory_utilization: float | None = None,
+    language_only: bool = False,
+    tokenizer_dir: Path | None = None,
+    chat_template: Path | None = None,
+    extra_serve_args: list[str] | None = None,
+) -> list[str]:
+    """Build the argv for a vLLM OpenAI-compatible server process."""
+    validate_extra_serve_args(extra_serve_args)
+
+    command = [
+        executable,
+        "-u",
+        "-m",
+        "vllm.entrypoints.cli.main",
+        "serve",
+        model_name,
+        "--port",
+        str(port),
+        "--dtype",
+        "bfloat16",
+        "--max-model-len",
+        str(max_model_len),
+        "--trust-remote-code",
+    ]
+    if tokenizer_dir is not None:
+        command.extend(["--tokenizer", str(tokenizer_dir)])
+    if chat_template is not None:
+        command.extend(["--chat-template", str(chat_template)])
+    command.extend(model_attention_args(model_name))
+    if language_only:
+        command.append("--language-model-only")
+    if gpu_memory_utilization is not None:
+        command.extend(["--gpu-memory-utilization", str(gpu_memory_utilization)])
+    command.extend(["--tensor-parallel-size", str(num_gpus)])
+    if num_gpus > 1:
+        command.extend(["--distributed-executor-backend", "mp", "--nnodes", "1"])
+    if extra_serve_args:
+        command.extend(extra_serve_args)
+    return command
 
 
 def venv_bin_dir(venv_path: str) -> Path:
@@ -307,17 +391,20 @@ class VLLMServer:
         num_gpus: int = 1,
         gpu_memory_utilization: float | None = None,
         language_only: bool = False,
+        extra_serve_args: list[str] | None = None,
     ):
         if num_gpus < 1:
             raise ValueError("num_gpus must be at least 1")
         if gpu_memory_utilization is not None and not 0 < gpu_memory_utilization <= 1:
             raise ValueError("gpu_memory_utilization must be greater than 0 and at most 1")
+        validate_extra_serve_args(extra_serve_args)
         
         self.model_name = model_name
         self.port = port
         self.max_model_len = max_model_len
         self.num_gpus = num_gpus
         self.gpu_memory_utilization = gpu_memory_utilization
+        self.extra_serve_args = list(extra_serve_args or [])
         self.server = None
         self.client = None
         self.log_file = None
@@ -327,7 +414,7 @@ class VLLMServer:
         self.cache_dir = Path(os.environ.get("CACHE_DIR", "cache"))
         atexit.register(self.close)
         
-    async def _wait(self, timeout=3600):
+    def _wait(self, timeout=3600):
         """
         Poll the server until it responds to health checks.
 
@@ -337,29 +424,41 @@ class VLLMServer:
         Raises:
             RuntimeError: If the server doesn't start within the timeout period
         """
-        start = dt.datetime.now().timestamp()
-        while True:
-            try:
-                # Try to list models - if this succeeds, server is ready
-                await self.client.models.list()
-                break
-            except Exception as e:
-                if self.server is not None and self.server.poll() is not None:
-                    exit_code = self.server.returncode
-                    log_hint = ""
-                    if self.log_path is not None:
-                        log_hint = f"; see log {self.log_path.resolve()}"
-                    self.close()
-                    raise RuntimeError(
-                        "VLLM server exited before it became ready "
-                        f"(exit_code={exit_code}){log_hint}"
-                    ) from e
-                if dt.datetime.now().timestamp() - start > timeout:
-                    self.close()
-                    raise RuntimeError(
-                        f"VLLM server did not start within {timeout/60:.1f} minutes"
-                    ) from e
-                await asyncio.sleep(1)
+        from openai import OpenAI
+
+        # Keep readiness traffic on a disposable transport.  ``start`` is a
+        # synchronous API; the inference client belongs exclusively to the
+        # caller's later event loop.  Reusing one async HTTP transport across
+        # those loops leaves its keep-alive connection bound to a closed loop
+        # and surfaces as an opaque ``APIConnectionError``.
+        with OpenAI(
+            api_key="EMPTY",
+            base_url=f"http://localhost:{self.port}/v1",
+            max_retries=0,
+        ) as readiness_client:
+            start = dt.datetime.now().timestamp()
+            while True:
+                try:
+                    # Try to list models - if this succeeds, server is ready
+                    readiness_client.models.list()
+                    break
+                except Exception as e:
+                    if self.server is not None and self.server.poll() is not None:
+                        exit_code = self.server.returncode
+                        log_hint = ""
+                        if self.log_path is not None:
+                            log_hint = f"; see log {self.log_path.resolve()}"
+                        self.close()
+                        raise RuntimeError(
+                            "VLLM server exited before it became ready "
+                            f"(exit_code={exit_code}){log_hint}"
+                        ) from e
+                    if dt.datetime.now().timestamp() - start > timeout:
+                        self.close()
+                        raise RuntimeError(
+                            f"VLLM server did not start within {timeout/60:.1f} minutes"
+                        ) from e
+                    time.sleep(1)
         
     def start(self):
         from openai import AsyncOpenAI
@@ -370,38 +469,30 @@ class VLLMServer:
         executable = python_executable()
         validate_vllm_cuda_runtime(executable)
 
-        # Launch the packaged vLLM CLI through the configured project venv.
-        cmd = [
-            executable,
-            "-u",
-            "-m",
-            "vllm.entrypoints.cli.main",
-            "serve",
-            self.model_name,
-            "--port", str(self.port),
-            "--dtype", "bfloat16",
-            "--max-model-len", str(self.max_model_len),
-            "--trust-remote-code",
-        ]
         tokenizer_dir = ensure_ovis26_tokenizer(self.model_name, self.cache_dir)
+        chat_template = None
         if tokenizer_dir is not None:
-            cmd.extend(["--tokenizer", str(tokenizer_dir)])
             # save_pretrained writes the chat template to a standalone
             # chat_template.jinja rather than tokenizer_config.json, and vLLM
             # does not read the standalone file from a --tokenizer directory.
             # Without it the OpenAI chat endpoint rejects every request with
             # "default chat template is no longer allowed".
-            chat_template = tokenizer_dir / "chat_template.jinja"
-            if chat_template.exists():
-                cmd.extend(["--chat-template", str(chat_template)])
-        cmd.extend(model_attention_args(self.model_name))
-        if self.language_only:
-            cmd.extend(["--language-model-only"])
-        if self.gpu_memory_utilization is not None:
-            cmd.extend(["--gpu-memory-utilization", str(self.gpu_memory_utilization)])
-        cmd.extend(["--tensor-parallel-size", str(self.num_gpus)])
-        if self.num_gpus > 1:
-            cmd.extend(["--distributed-executor-backend", "mp", "--nnodes", "1"])
+            candidate = tokenizer_dir / "chat_template.jinja"
+            if candidate.exists():
+                chat_template = candidate
+        # Launch the packaged vLLM CLI through the configured project venv.
+        cmd = build_serve_command(
+            executable=executable,
+            model_name=self.model_name,
+            port=self.port,
+            max_model_len=self.max_model_len,
+            num_gpus=self.num_gpus,
+            gpu_memory_utilization=self.gpu_memory_utilization,
+            language_only=self.language_only,
+            tokenizer_dir=tokenizer_dir,
+            chat_template=chat_template,
+            extra_serve_args=self.extra_serve_args,
+        )
         
         env = os.environ.copy()
         env["PYTHONUNBUFFERED"] = "1"
@@ -429,6 +520,7 @@ class VLLMServer:
             f"max_model_len={self.max_model_len}\n"
             f"num_gpus={self.num_gpus}\n"
             f"gpu_memory_utilization={self.gpu_memory_utilization}\n"
+            f"extra_serve_args={self.extra_serve_args!r}\n"
             f"CUDA_VISIBLE_DEVICES={env.get('CUDA_VISIBLE_DEVICES')}\n"
             f"torch_cuda_device_count={torch_cuda_count}\n"
             f"python={executable}\n"
@@ -445,19 +537,28 @@ class VLLMServer:
             start_new_session=True,
         )
         
-        self.client = AsyncOpenAI(
-            api_key="EMPTY",
-            base_url=f"http://localhost:{self.port}/v1",
-        )
-        
         print("Started VLLM server with model:", self.model_name)
         print("VLLM log file:", self.log_path.resolve())
         # Block until the OpenAI-compatible API is responsive before returning to
         # callers that will immediately start making OCR requests.
-        asyncio.run(self._wait())
+        self._wait()
+        # Create the inference client only after the readiness loop has closed.
+        # Its transport will therefore first be used by the caller's event loop.
+        self.client = AsyncOpenAI(
+            api_key="EMPTY",
+            base_url=f"http://localhost:{self.port}/v1",
+        )
         print(f"VLLM server is ready at http://localhost:{self.port}/v1")
         
     def close(self):
+        had_resources = (
+            self.server is not None
+            or self.client is not None
+            or (self.log_file is not None and not self.log_file.closed)
+        )
+        if not had_resources:
+            return
+
         if self.server is not None:
             # vLLM spawns EngineCore and worker children; launching the parent in a
             # fresh session lets us terminate the whole process group reliably.
@@ -477,7 +578,10 @@ class VLLMServer:
                     self.server.wait(timeout=5)
 
             self.server = None
-            self.client = None
+
+        # Async inference clients are closed by their owning event loop.  At
+        # this synchronous process-cleanup boundary, only release our reference.
+        self.client = None
 
         if self.log_file is not None and not self.log_file.closed:
             self.log_file.close()
