@@ -22,6 +22,11 @@ const OCR_COMPARISON_FILE = process.env.OCR_COMPARISON_FILE
   ? resolve(process.env.OCR_COMPARISON_FILE)
   : join(CACHE_ROOT, "reviewer", "ocr_comparisons.jsonl");
 const KNOWN_SOURCES = ["cornell_dol", "cornell_retail_educ", "dol_archive"];
+const OCR_COMPARISON_MODELS = new Set([
+  "Qwen_Qwen3.6-27B-FP8",
+  "AIDC-AI_Ovis2.6-30B-A3B",
+  "google_gemma-4-31B-it",
+]);
 
 // Mirrors pipeline/stg_02_extract/runner.py strip_think_blocks: spans are
 // computed against the think-stripped text, so we must serve the same text.
@@ -164,7 +169,9 @@ function meetsNormalizedEditDistance(a: string, b: string, minimum: number): boo
 function discoverOcrPages(): OcrPage[] {
   const pages = new Map<string, OcrPage>();
   for (const source of KNOWN_SOURCES) {
-    for (const model of listDirs(join(STG01, source))) {
+    const comparisonModels = listDirs(join(STG01, source))
+      .filter((model) => OCR_COMPARISON_MODELS.has(model));
+    for (const model of comparisonModels) {
       const modelDir = join(STG01, source, model);
       for (const documentId of listDirs(modelDir)) {
         if (!findPdf(source, documentId)) continue;

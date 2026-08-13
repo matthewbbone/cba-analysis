@@ -60,6 +60,8 @@ Opens at http://localhost:5178.
 - Within a source, model matchups containing models with fewer saved comparisons
   receive more weight. Every eligible matchup retains a positive probability,
   and the page is chosen randomly only after the model matchup is selected.
+- Model pairs are limited to Qwen 3.6 27B, Ovis 2.6 30B, and Gemma 4 31B so
+  reviews focus on identifying the best of the current leading OCR models.
 - The **Minimum text difference** filter uses whitespace-normalized Levenshtein
   distance divided by the longer OCR length. The default 5% cutoff therefore
   behaves consistently for both short and long pages.
