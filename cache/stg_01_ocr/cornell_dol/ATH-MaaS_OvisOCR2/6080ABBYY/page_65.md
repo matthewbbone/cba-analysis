@@ -1,0 +1,40 @@
+General Office - Physical Positions
+
+BUILDING
+
+| NO. | POSITION | (Each step represents a six-month increment) | (Each step represents a six-month increment) | (Each step represents a six-month increment) | (Each step represents a six-month increment) | (Each step represents a six-month increment) | (Each step represents a six-month increment) | (Each step represents a six-month increment) | (Each step represents a six-month increment) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| NO. | POSITION | STEP 1 | STEP 2 | STEP 3 | STEP 4 | STEP 5 | STEP 6 | STEP 7 | STEP 8 |
+| J01127 | General Office Materials Handler* | N | $16.22 | $16.72 | $17.24 | $17.73 | $18.01 | $18.32 | $18.61 |
+| J01126 | General Office Services Worker* | N | $16.22 | $16.72 | $17.24 | $17.73 | $18.01 | $18.32 | $18.61 |
+
+ENGINEERING
+
+| J01109 | Electrical Protective Equipment Technician** | N | $24.46 | $24.95 | $25.46 | $26.00 | $26.45 | $26.93 | $27.14 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| J01108 | Electrical Protective Equipment Tester | N | $23.95 | $24.47 | $24.96 | $25.47 | $25.99 | $26.43 | $26.67 |
+| J01106 | Electrical Technician | N | $28.92 | $29.44 | $29.93 | $30.45 | $30.77 | $31.21 | $31.59 |
+| J02848 | Lead Relay and Electrical Technician | N | $30.52 | $31.08 | $31.60 | $32.13 | $32.48 | $32.94 | $33.34 |
+| J01105 | Meter Laboratory Technician | N | $26.68 | $27.18 | $27.73 | $28.23 | $28.63 | $28.90 | $29.42 |
+| J01107 | Relay Technician | N | $28.30 | $28.83 | $29.36 | $29.85 | $30.26 | $30.75 | $31.15 |
+| J01101 | Surveyor I** | N | $26.23 | $26.74 | $27.22 | $27.77 | $28.34 | $28.77 | $29.24 |
+| J01102 | Surveyor II | N | $22.06 | $22.57 | $23.10 | $23.62 | $24.04 | $24.35 | $24.62 |
+| J01103 | Surveyor Aid I | N | $18.97 | $19.47 | $20.00 | $20.48 | $20.88 | $21.22 | $21.43 |
+| J01104 | Surveyor Aid II | N | $16.53 | $17.06 | $17.55 | $18.06 | $18.35 | $18.72 | $18.87 |
+
+FORMS - SHIPPING AND RECEIVING
+
+| J01098 | Forms Shipping and Receiving Worker | N | $16.22 | $16.56 | $16.91 | $17.25 | $17.59 | $17.93 | $18.27 | $18.61 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+LOAD DISPATCHING
+
+| J01110 | Load Dispatcher | S | $29.82 | $30.33 | $30.84 | $31.35 | $31.59 | $31.97 | $32.45 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| J01111 | SOC Control Technician | N/S | $26.30 | $26.79 | $27.32 | $27.84 | $28.27 | $28.63 | $29.00 |
+
+*Starting or entry level position
+
+**Supervisory position
+
+01151201 05/19/09 14/27/04

@@ -1,0 +1,29 @@
+AGREEMENT
+
+BETWEEN
+
+DAN'S SUPREME
+
+SUPERMARKETS INC.
+
+and
+
+UFCW
+
+a VOICE for working America
+
+LOCAL 1500
+
+INTERNATIONAL UNION, AFL-CIO, CLC
+
+US DOI
+
+RECEIVED
+
+OCT 2 6 2015
+
+CLM 0000
+
+Effective Date: December 29, 2013
+
+Expiration Date: March 26, 2016

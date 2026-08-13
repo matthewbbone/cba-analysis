@@ -1,0 +1,23 @@
+additional payment to maintenance employees will apply only when the required work to be performed is related to the reasons for the delayed opening or early closing.
+
+H. Ten-month food service employees, educational assistants, media assistants, and office employees will be notified by the closing of the school year of their next year's starting date and assignment, subject to the right of MCPS to make changes in such assignments whenever circumstances require, especially in the case of educational assistants.
+
+I. The duties or work required of a unit member will not be increased unreasonably above those normally required because of staff shortages or schedule reductions.
+
+J. MCPS will provide reasonable and customary work breaks for full-time central, area, and school-based unit members unless such breaks are not feasible.
+
+K. Secretaries shall be compensated for time spent outside their normal work hours calling teacher substitutes.
+
+## Article 14 Prohibition of Volunteer Work
+
+Except in emergency situations and except for the type and amount of work which by past practice has been performed by volunteers, no bargaining unit work shall be performed by anyone other than an employee in the unit. Volunteers will not be used to take over the duties of any unit member. MCPS shall provide the Union annually a report on the status of the volunteer program to be submitted by the coordinator of volunteers.
+
+## Article 15 Reduction In Force
+
+A. Authority—The Board of Education of Montgomery County retains the right to reduce its force, and its decisions on such reduction are not subject to the grievance procedure.
+
+B. Notice—No reduction in force shall be implemented without fifteen (15) duty days notice to the employee and twenty-five (25) duty days notice to MCCSSE, during which MCPS shall consult with MCCSSE on the reduction in force.
+
+C. Definition—Reduction in force shall mean an action resulting in a unit member being terminated from Montgomery County Public Schools for reasons other than disciplinary.
+
+37

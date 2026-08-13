@@ -1,0 +1,19 @@
+for which they are certified (night, summer, etc.) before additional employees are hired. Such consideration first shall be given to those assigned to the worksite for the coming school year. In adult vocational centers, if a course is continued during the summer session, the teaching position(s) shall first be offered to the teacher(s) who taught that course during the regular school year and who wishes to teach the summer session. Nothing herein shall prohibit mutually acceptable agreements between teachers and a worksite supervisor to divide the work assignments in an equitable manner.
+
+5. A teacher shall apply for summer school employment on the "Application for Extended Employment" form.
+
+6. On or before the close of the summer session connected with the 1986-87 school year, required student records and preparation of student-related reports shall, to the extent feasible, be kept through an automated system modeled after the system in existence for the regular school year. The Forms Management Committee will continue to monitor procedures for the summer session.
+
+7. Each high school with a summer academic program will be allocated a minimum of one half-time media specialist for the summer session.
+
+M. Nothing herein contained shall be construed to prohibit the Board from offering an extended contract to an individual teacher provided, however, that no teacher shall be required to accept an extension except as may be provided elsewhere in this Contract. Employees shall be reimbursed for any extensions at their daily rate of pay except as may be provided elsewhere in this Contract.
+
+N. Guidance counselors and media specialists shall be notified by May 1 of the availability of five-day contract extensions for the period following post-planning. By the end of post-planning, these teachers shall be notified of the availability of five-day contract extensions for the period preceding pre-planning.
+
+O. The Board may require an extension of up to three (3) days, contiguous to pre-planning, for ten (10) month employees to conduct preliminary screening of students as required by the PREP law (Florida Statute). Teachers shall be reimbursed at their daily rate of pay for the upcoming school year. Teachers will be notified of the dates of said contract extension no later than the last day of post-planning.
+
+P. The Board may require up to two (2) days of district-wide orientation for teachers new to the district or returning after a break in service of five (5) or more years. The orientation session shall precede preschool planning by no more than one (1) week. Teachers required to attend shall receive a stipend of fifty dollars ($50) per day for attendance.
+
+The Association will be provided a mutually agreeable place on the general agenda for discussion of matters not related to negotiations. The CTA may, at its option, conduct a voluntary Association
+
+43

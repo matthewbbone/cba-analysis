@@ -1,0 +1,17 @@
+not to exceed two years. Such leave may be renewed or extended by written mutual consent of the Union and the Employer.
+
+Section 3. Members of the Union in official attendance at the Union's annual Delegate Assembly, District 1199P Nurse Council and up to three meetings per calendar year of the Professional Health Care Employees Bargaining Unit shall be granted up to four weeks' leave without pay where such time is necessary to attend such conventions. Employees may use accrued annual or personal leave for this purpose in lieu of leave without pay. The Employer will try to arrange leave for all employees requesting leave to attend these conventions, but the number of such leaves granted is subject to the Employer's responsibility to maintain efficient operations and if all requests cannot be granted, as many as possible will be approved with preference given to requests from Union Officers or elected worksite representatives and delegates.
+
+Requests for such leave will be forwarded to the Bureau of Labor Relations, Office of Administration, by the Union with a copy to the Agency Labor Relations Coordinator not less than three weeks prior to the date of the convention. Each request will contain the name, classification, department and work location of the Union member, in addition to the name of the convention.
+
+Section 4. After completing one year of service, an employee may be granted a leave of absence without pay at the sole discretion of the Employer for educational purposes. Such leave shall not exceed 18 months and shall not be granted more than once every four years.
+
+Section 5. After completing six months of service, employees shall be granted, upon written request, extended leave without pay for illness for a period of at least two consecutive weeks, but not more than six months. If the illness or disability is due to a serious health condition as defined by the Family and Medical Leave Act, leave shall be granted for less than two consecutive weeks. The request, which shall be submitted in advance of the leave if circumstances permit, shall include proof of illness or disability in the form of a doctor's certificate and shall state a prognosis and expected date of return.
+
+If requested and properly documented as medically necessary, leave under this Section shall be approved on an intermittent or reduced-time basis.
+
+After the employee has used an aggregate of six months of leave without pay under this section, the Employer is not required to grant subsequent leave without pay for this purpose unless six (6) months in an active pay status have elapsed from the termination of the last date of approved leave under this section. This section shall not apply to a work-related injury.
+
+Section 6. Upon written request of the employee, an extension of up to an additional six months of leave without pay for illness shall be granted provided the employee provides proof of continuing illness or disability in the form of a doctor's certificate which shall state a prognosis and expected date of return. The extension shall be without benefits. Upon certification from the employee's doctor that the employee is able to return to work, the employee shall be offered a position in the same classification and seniority unit for which a vacancy exists and to which there are no seniority claims and which the agency intends to fill. If such a position is not available, the
+
+27

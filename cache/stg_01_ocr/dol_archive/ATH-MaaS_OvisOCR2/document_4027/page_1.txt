@@ -1,0 +1,22 @@
+Agreement No. 6-51-A
+
+EFFECTIVE DATES:
+02/29/16-03/01/20
+
+AGREEMENT BETWEEN AMERICAN LINE BUILDERS CHAPTER, NECA, AND LOCAL UNION NO. 51 IBEW, COVERING UTILITY AND COMMERCIAL OUTSIDE POWER WORK, INCLUDING HIGH VOLTAGE PIPE TYPE CABLE INSTALLATIONS AND ELECTRICAL UNDERGROUND CONSTRUCTION
+
+## FIRST CLAUSE
+
+Agreement by and between the American Line Builders Chapter, NECA, and Local Union No. 51, IBEW. It shall apply to all firms who sign a Letter of Assent to be bound by the terms of this Agreement. As used hereinafter in this Agreement, the term "Chapter" shall mean the American Line Builders Chapter, NECA, and the term "Union" shall mean Local Union No. 51, IBEW. The term "Employer" shall mean an individual firm who has been recognized by an assent to this Agreement.
+
+## PURPOSE
+
+The intent of this Agreement is to establish uniform conditions of employment of electrical workers for the purpose of performing line construction, reconstruction, maintenance line work, substation, cable work and electrical underground construction or other electrical work coming properly under the jurisdiction of the outside branch of the trade.
+
+(Electrical underground construction shall include excavations, laying of conduits, ducts, cables and bases for street lights, transmission towers and transformers and excavations for manholes or hand holes.)
+
+## BASIC PRINCIPLES
+
+The electrical Contractor and the Union have a common and sympathetic interest in the electrical industry. Therefore, a working system and harmonious relations are necessary to improve the relationship between the Contractors, the Union and the Public. Progress in industry demands a mutuality of confidence between the Contractor and the Union. All will benefit by continuous peace and by adjusting any differences by rational, common sense methods. Now therefore, in consideration of the mutual promises and agreements herein contained, the parties hereto agree as follows:
+
+1

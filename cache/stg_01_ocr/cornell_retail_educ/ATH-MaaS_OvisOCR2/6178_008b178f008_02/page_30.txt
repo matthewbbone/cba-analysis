@@ -1,0 +1,17 @@
+Upon request, the Employer will furnish a probationary employee with a statement that the employee is still employed in his/her probationary period and is not entitled to receive jury duty pay from the Employer if required to perform jury service prior to completion of the probationary period.
+
+## ARTICLE XXIII - SEVERANCE PAY
+
+1. In the event of severance of employment by reason of layoff, all permanent full-time and part-time employees shall be paid a severance allowance of one-half ( $\frac{1}{2}$) of a week's pay for each full year of service with the Employer up to a maximum of thirteen (13) weeks.
+
+2. If an employee who has been paid severance pay is recalled, the employee shall be considered a new employee for purposes of this Article and entitlement to future severance pay shall be based on the service accrued after the date of recall.
+
+3. Severance pay shall be paid in a separate check which does not contain compensation for any other purpose.
+
+## ARTICLE XXIV - DISCIPLINE, SUSPENSION, DISCHARGE
+
+1. The Employer has the right to discharge, suspend or discipline any employee for just cause.
+
+2. If the Association or the employee desires to contest a discharge or suspension, it must give written notice thereof to the Employer within eight (8) working days from the date the employee was notified of the
+
+28

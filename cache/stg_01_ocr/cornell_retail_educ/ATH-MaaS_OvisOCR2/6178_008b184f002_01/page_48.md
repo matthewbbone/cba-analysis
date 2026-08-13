@@ -1,0 +1,15 @@
+use clinic. The clinic would provide mental-health services to carry out the recommendations of psychologists and psychiatrists. The clinic would also make preventive diagnoses in the area of drug abuse. The committee shall consist of three members appointed by the Board and two by the Association.
+
+40-4. The joint SPECIAL EDUCATION COMMITTEE consisting of three (3) representatives of the Board and three (3) members of the Association shall continue to evaluate the existing special education program and to make recommendations for implementation of further special education programs to the Board.
+
+40-5. IN-SERVICE TRAINING—To encourage members of the Professional Staff in the Jersey City Public Schools to improve their professional skills, the Board agrees to provide in-service courses each year, the nature and content of such courses to be decided by the Board and association representatives, To plan and implement such in-service training, a committee shall be established with five members-three to be named by the Association and two to be named by the Board.
+
+40-6. The SUPERINTENDENT'S COMMITTEE ON FEDERAL FUND PROJECTS—This committee shall develop projects to be undertaken with federal funds. The superintendent shall appoint those teachers selected by the Association.
+
+40-7. The joint SCHOOL PARKING FACILITIES COMMITTEE consisting of two (2) representatives from the Board and two (2) members from the Association shall investigate the availability of space and the feasibility of utilizing such space at each school site for the purpose of parking facilities for members of this bargaining unit. This committee shall submit a written report with recommendation within the 1978-80 school years.
+
+40.8. The joint COMMITTEE ON TEACHER EVALUATION shall continue to meet to prepare joint recommendations as to policy regulating the supervision and evaluation of teachers.
+
+40-9. The joint COMMITTEE ON NON-TEACHING DUTIES shall continue to study the
+
+42

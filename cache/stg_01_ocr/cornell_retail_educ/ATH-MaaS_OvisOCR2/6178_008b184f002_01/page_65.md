@@ -1,0 +1,44 @@
+## INDEX
+
+Absence ..... 34  
+Academic Freedom ..... 33  
+Adoption of Child ..... 37  
+Assaults ..... 25  
+Association Rights ..... 10  
+Athletic Awards Committee ..... 43  
+Attendance Office, Salaries ..... 49-50  
+Bi-Lingual Teachers ..... 43  
+Board of Personnel Practices ..... 13  
+Board Responsibilities ..... 9  
+Breakfast Program ..... 43  
+Bureau of Pupil Personnel Services ..... 44  
+Central Registers ..... 44  
+Certification of Teachers ..... 43  
+Class Size ..... 24  
+Coaches ..... 28  
+Coaches, Salary ..... 53-54  
+Coaches, Service Increment ..... 54  
+Committees ..... 41  
+Court Actions ..... 26  
+Deduction from Salary ..... 7  
+Driver Education ..... 43  
+Extra Compensation Positions ..... 31  
+Federal Funds Committee ..... 42  
+Fully Bargained Provisions ..... 45  
+Grievance Procedure ..... 2  
+Hazardous Conditions ..... 26  
+Health Insurance ..... 29  
+Hours of Employment ..... 26  
+Instructional Committee ..... 41  
+JCEA Directors ..... 12  
+Learning Centers (mobile) ..... 31  
+Leave ..... 33  
+Leave, Other ..... 34  
+Legal Services ..... 25  
+Lesson Plans ..... 23  
+Life Insurance ..... 29  
+Longevity ..... 52  
+Lunch Period ..... 24  
+Maternity Leave ..... 36
+
+59

@@ -1,0 +1,21 @@
+Section 9. EMPLOYEES PROMOTED OUT OF BARGAINING UNIT. (a) Employees promoted out of the bargaining unit shall be subject to a probationary period of six (6) calendar months.
+
+(b) An employee demoted prior to expiration of six-month trial period may be returned to his former position at which time other employees advanced by reason of the original promotion will be correspondingly demoted.
+
+(c) Non-union personnel returning to bargaining unit after six (6) calendar months must take up clerk classification for six (6) months prior to qualifying (i.e., being permitted to bid for) following "key" positions: Head meat cutter, First grocery clerk, First produce clerk, Night shift head, Head cashier, First meat cutter, Dairy dept. head.
+
+(d) Where a nonunion employee returns to the bargaining unit he shall be, for a period of nine (9) months, the first to be layed off in the store to which he is assigned.
+
+### ARTICLE V. WORKING CONDITIONS
+
+Section 1. The Employer agrees that all employees must take their regular scheduled lunch and supper periods except in the case of emergency.
+
+Section 2. Employees will be given reasonable relief periods during the day.
+
+Section 3. (a) The Company agrees that all full time employees shall be guaranteed at least seven (7) hours work per day when such employees are ordered to report for work. This clause does not apply to the employees' scheduled time off day.
+
+(b) If ordered to report for work, a part time employee who is available for and remains at work will receive eight (8) hours work on Friday, six (6) hours work on Saturday and four (4) hours work on all other days.
+
+Section 4. (a) In the event an employee is required to work in more than one store in the same day, he or she shall
+
+7

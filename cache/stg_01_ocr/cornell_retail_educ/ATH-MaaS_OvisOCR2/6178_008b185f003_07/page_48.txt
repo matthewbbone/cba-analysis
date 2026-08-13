@@ -1,0 +1,25 @@
+17. Appropriate MCCSSE representatives may process official grievances in a manner least disruptive to school system business only after receiving approval from the appropriate administrator to leave his/her job or assignment. MCCSSE officials and representatives may not conduct Council business on work time.
+
+18. The Council agrees that it will represent all employees fairly within the terms of this Agreement.
+
+19. A computer run of all unit members will be supplied annually to the MCCSSE headquarters. This run will include:
+
+a) The name of the unit member
+
+b) The school or office to which he is assigned
+
+c) The job classification to which he is assigned.
+
+### B. Agency Shop
+
+1. Unit members shall have the option of joining MCCSSE or have imposed, as a condition of employment, a service fee by the MCCSSE each month in an amount equal to the regular monthly membership dues required of the MCCSSE members. This agency shop provision only applies to unit members described as full-time in Article 3, Section B.3. No unit member who works less than twenty (20) hours per week will be required to pay such fee. This provision is for the term of this Agreement and applies only to those unit members employed on or after July 1, 1978.
+
+2. Service fees uniformly required as a condition of employment shall be authorized for payroll deduction or paid directly to MCCSSE by the employee. Any employee who elects to pay directly shall be deemed to meet the conditions of this article so long as he or she is not more than sixty (60) days in arrears of payment of such fees.
+
+3. If any provision of this article is or becomes invalid under federal or state law, said provision shall be invalid or modified to comply with the requirements of said federal or state law.
+
+4. MCCSSE shall indemnify and save the Board harmless against any and all claims, demands, suits, or any other forms of liability that shall rise out of or by reason of action taken or not taken by the Board for the purposes of complying with Article 20.
+
+5. This agency shop provision shall not be applicable to any employee who is a member of a religious organization, the established tenets or teaching of which oppose its members joining or financially supporting any collective bargaining organization, and who shall pay an amount of money equivalent to the MCCSSE's regular monthly membership dues to a
+
+45

@@ -1,0 +1,15 @@
+This information shall be furnished by the twentieth (20th) day of the month following the month in which either they were employed and/or there was any change in employment status. Such reports of information shall be made each and every month. Should there be no change in employment status, the report shall so state.
+
+2. The University will furnish to the Association a complete list of the names of all members of the bargaining unit, including their job titles, job codes, grades, salaries, dates of hire, work locations and home addresses as shown in the Employer's records, and their Social Security numbers, on or before May 30th of each year.
+
+3. The University will furnish to the Association, on an annual basis, a list of employees in order of date of hire.
+
+## ARTICLE IX - COPIES OF UNIVERSITY RULES
+
+Copies of any changes in University-wide rules, regulations, and policies as contained in the Personnel Manual which relate to terms and conditions of employment shall be sent to the Association at the same time they are distributed. Whenever practicable to do so, the University shall notify the Association in advance of such changes.
+
+## ARTICLE X - BULLETIN BOARDS
+
+The University shall provide six 24 inch by 36 inch bulletin boards in reasonably accessible places for Association notices relating to meetings, dues, entertainment and general union activities. The bulletin boards shall be placed in the following locations: Dental School, GBA,
+
+8

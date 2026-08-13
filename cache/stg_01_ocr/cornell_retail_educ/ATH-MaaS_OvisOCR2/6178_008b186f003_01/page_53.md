@@ -1,0 +1,23 @@
+### 6. Effective Date
+
+a. The effective date of health insurance for a teacher beginning during pre-planning and receiving a paycheck on September 22, shall be October 1.
+
+b. The effective date for teachers beginning after pre-planning, subject to policy limitations, shall be the first duty day of the month which follows the receipt of a pay check on the 22nd of the previous month.
+
+7. Health insurance comparable to that provided for active employees shall be made available, subject to normal limits imposed on such benefit plans, to individuals who have completed retirement. The cost of the premium shall be borne by the retired teacher. The Insurance Committee shall develop procedures under which retiring teachers may elect to forego terminal pay as specified in Section I in exchange for an equal application of such monies toward a health insurance premium. This option shall be implemented by April 1, 1987.
+
+8. The parties agree that a voluntary Health Maintenance Organization plan or plans shall be made available, as required by Federal law, in lieu of group medical insurance. The plan or plans shall be negotiated with the Association prior to its implementation.
+
+### 9. Alternative to Health Insurance
+
+The Board agrees to provide, at no cost to the teachers, the following voluntary alternative to health insurance. The alternative, if chosen by the teacher, will replace the current health insurance program as defined in Section A above.
+
+a. A two hundred and twenty-five dollar ($225) per day in-hospital indemnification plan and an additional ten thousand dollar ($10,000) term life insurance policy, and ten thousand dollars ($10,000) accidental death and dismemberment coverage, and the PSC and mail order prescription plans outlined above.
+
+b. Eligibility for an alternative to health insurance shall be dependent upon having group health insurance coverage from another source.
+
+c. A teacher may re-enroll in the health insurance program defined in Section A above, without restrictions. Re-enrollment shall be subject to the normal waiting period for new teachers unless unusual circumstances arise which would result in the teacher having no group health insurance coverage.
+
+10. When the current health insurance benefit program is to be rebid, the Association shall have an opportunity to review the specifications prior to its being released for bid. The Fringe Benefits Committee shall participate in the development of specifications prior to submission and review of the bids prior to the time of award.
+
+50

@@ -1,0 +1,23 @@
+b. If the affected employee is unable under Section a. above to bump within the classification the employee shall bump laterally or down within the seniority unit as defined in Section 1a(1) into any other classification previously held within the bargaining unit using the seniority procedure specified in a. above.
+
+c. If the affected employee is unable to bump into any position as provided in subsections a. and b. above, the employee shall be furloughed.
+
+d. If an employee refuses to exercise rights under this Section, the employee shall forfeit all further bumping rights under this Section, recall rights under Section 7 of this Article to positions in all classifications except the one from which the employee was furloughed, and placement rights under Section 11 of this Article.
+
+e. Where practicable, the Employer will notify the Union one month in advance of any impending furlough.
+
+f. An employee in a Community Health District who is subject to reassignment to a different state health center as a result of a reduction of the work force and who refuses such assignment will be furloughed.
+
+Section 6. Before any furlough is implemented in a classification in the classified service in a seniority unit, all emergency employees will be separated before any temporary employees; temporary employees will be separated before any provisional employees; and all provisional employees will be separated before any probationary employees or any regular status members of the classified service are furloughed.
+
+Section 7. Recall: The Employer shall establish a recall list by classification by seniority unit for those employees furloughed under Section 5 of this Article in the inverse order of seniority.
+
+a. Employees on such recall lists shall have rights to a position in a classification within the seniority unit from which they were furloughed provided they have the requisite seniority and skill and ability.
+
+b. Such recall lists will remain in effect for a furloughed employee for a period of three years after the effective date of the furlough.
+
+c. In the event any employee on a recall list refuses an offer of employment in the classification from which the employee was initially furloughed the employee shall forfeit all recall rights.
+
+d. During the period that employees are on a recall list, they shall keep the Employer informed of any changes in address. The Employer shall not be held liable if an employee is not offered recall because of failure to notify the Employer of a change of address. An employee who is not offered recall because of failure to notify the Employer of a change of address and who subsequently informs the Employer of the current address shall be returned to the recall list and
+
+53

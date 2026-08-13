@@ -1,0 +1,15 @@
+(b) It is recognized that there is occasional need for employees to substitute in the absence of the Foreman on the mechanical or electrical maintenance crews. An employee assigned to substitute will be given at least 48 hours notice to change from days, evenings or nights and at least eight (8) hours shall elapse before the employee returns to work.
+
+(15) (a) When an employee has been scheduled for overtime work which is not an extension to his/her normal scheduled work day, ten (10) hours' notice shall be given to cancel such scheduled overtime. If less than ten (10) hours' notice is given to the employee, he/she will receive two (2) hours' pay at his/her straight time hourly rate. If the employee is not notified of the cancellation of overtime and reports for work, then the employee will receive two (2) hours of pay at the appropriate overtime rate.
+
+(b) When scheduled overtime is an extension of the normal scheduled work day, four (4) hours' notice shall be given to cancel such overtime. If four (4) hours notice is not given the employee will receive the lesser (1) two (2) hours paid at 1-1/2 times the employees regular wage rate or (2) the actual scheduled overtime hours paid at 1-1/2 times the employees regular wage rate. This provision does not apply if the cancellation is due to acts beyond the Company's control.
+
+### ARTICLE XXXII. HOLIDAYS AND HOLIDAY PAY
+
+(1) (a) Holidays, for the purpose of this Agreement, shall be New Year's Day, Good Friday, Memorial Day, 4th of July, Labor Day, Thanksgiving Day, the Friday following Thanksgiving, December 24, Christmas Day and New Year's Eve Day, or the days celebrated as such, and shall not be included in the regular hours of employment. Effective June 1, 1993, if a holiday as described in this paragraph fails on a Saturday and is observed on that Saturday, an employee may receive pay in lieu of the holiday or schedule an extra day off using the same guidelines for scheduling one day of vacation.
+
+(b) In addition to the holidays listed in paragraph (1) (a) above, employees shall be granted a flexible holiday. The Company will guarantee time off at the option of the employee with 48 hours' advance notice, and insofar as the needs of service will permit. The employee election shall not pyramid premium pay. In the event the employee does not schedule a flexible holiday, the Company will provide up to eight (8) hours pay at the straight time hourly rate.
+
+(2) Each regular full-time employee as well as temporary full-time employees will be paid eight (8) hours at the basic straight time rate for each of the legal holidays (or day celebrated as such) listed in this Article regardless of the day of the week on which they fall and whether or not the day is worked provided the employee works all of the regularly scheduled work
+
+48
