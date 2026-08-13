@@ -122,6 +122,51 @@ class RunnerSpecTests(unittest.IsolatedAsyncioTestCase):
             "example-org_arbitrary-vision-language-model",
         )
 
+    def test_general_ovisocr2_profile_defaults_are_model_specific(self) -> None:
+        generic = general.parse_args([])
+        ovisocr2 = general.parse_args(
+            ["--model-name", general.OVISOCR2_MODEL_NAME]
+        )
+
+        self.assertEqual(generic.model_name, general.DEFAULT_MODEL_NAME)
+        self.assertEqual(generic.max_tokens, 8192)
+        self.assertIsNone(generic.gpu_memory_utilization)
+        self.assertEqual(general.SPEC.serve_arguments(generic), [])
+        self.assertEqual(ovisocr2.max_tokens, 16384)
+        self.assertEqual(ovisocr2.gpu_memory_utilization, 0.8)
+        self.assertEqual(ovisocr2.num_gpus, 1)
+        self.assertEqual(
+            general.SPEC.serve_arguments(ovisocr2),
+            ["--gdn-prefill-backend", "triton"],
+        )
+
+    def test_general_ovisocr2_profile_respects_resource_overrides(self) -> None:
+        args = general.parse_args(
+            [
+                "--model-name",
+                general.OVISOCR2_MODEL_NAME,
+                "--max-tokens",
+                "4096",
+                "--gpu-memory-utilization",
+                "0.6",
+                "--num-gpus",
+                "2",
+            ]
+        )
+
+        self.assertEqual(args.max_tokens, 4096)
+        self.assertEqual(args.gpu_memory_utilization, 0.6)
+        self.assertEqual(args.num_gpus, 2)
+
+    def test_general_nearby_model_name_does_not_activate_ovisocr2_profile(self) -> None:
+        args = general.parse_args(
+            ["--model-name", f"{general.OVISOCR2_MODEL_NAME}-quantized"]
+        )
+
+        self.assertEqual(args.max_tokens, 8192)
+        self.assertIsNone(args.gpu_memory_utilization)
+        self.assertEqual(general.SPEC.serve_arguments(args), [])
+
     def test_all_runners_accept_one_or_more_document_ids(self) -> None:
         for module in RUNNERS:
             with self.subTest(module=module.__name__):
@@ -210,6 +255,133 @@ class RunnerSpecTests(unittest.IsolatedAsyncioTestCase):
             client.chat.completions.calls[0]["model"],
             model_name,
         )
+
+    async def test_general_ovisocr2_request_matches_documented_workflow(self) -> None:
+        client = RecordingClient()
+        context = make_context(
+            general,
+            client,
+            ["--model-name", general.OVISOCR2_MODEL_NAME],
+        )
+
+        await general.transcribe(context)
+
+        request = client.chat.completions.calls[0]
+        self.assertEqual(request["model"], general.OVISOCR2_MODEL_NAME)
+        self.assertEqual(request["temperature"], 0.0)
+        self.assertEqual(request["max_tokens"], 16384)
+        self.assertEqual(
+            request["messages"],
+            [
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": "data:image/png;base64,encoded-without-decoding"
+                            },
+                        },
+                        {"type": "text", "text": general.OVISOCR2_PROMPT},
+                    ],
+                }
+            ],
+        )
+        self.assertEqual(
+            request["extra_body"],
+            {
+                "add_generation_prompt": True,
+                "chat_template_kwargs": {"enable_thinking": False},
+                "mm_processor_kwargs": {
+                    "images_kwargs": {
+                        "min_pixels": 448**2,
+                        "max_pixels": 2880**2,
+                    }
+                },
+            },
+        )
+        self.assertNotIn("add_generation_prompt", request)
+
+    def test_general_ovisocr2_prompt_matches_model_card(self) -> None:
+        self.assertEqual(
+            general.OVISOCR2_PROMPT,
+            "\nExtract all readable content from the image in natural human "
+            "reading order and output the result as a single Markdown document. "
+            "For charts or images, represent them using an HTML image tag: "
+            '<img src="images/bbox_{left}_{top}_{right}_{bottom}.jpg" />, where '
+            "left, top, right, bottom are bounding box coordinates scaled to "
+            "[0, 1000). Format formulas as LaTeX. Format tables as HTML: "
+            "<table>...</table>. Transcribe all other text as standard Markdown.\n"
+            "Preserve the original text without translation or paraphrasing.",
+        )
+
+    def test_general_ovisocr2_postprocessor_filters_standalone_image_blocks(self) -> None:
+        args = general.parse_args(
+            ["--model-name", general.OVISOCR2_MODEL_NAME]
+        )
+        raw_text = (
+            "  Intro\n\n"
+            '  <img src="images/bbox_1_2_3_4.jpg" />  \n\n'
+            'Keep inline <img src="images/bbox_5_6_7_8.jpg" /> reference.  '
+        )
+
+        output = general.postprocess_comparison_text(raw_text, args)
+
+        self.assertEqual(
+            str(output),
+            'Intro\n\nKeep inline <img src="images/bbox_5_6_7_8.jpg" /> reference.',
+        )
+        self.assertFalse(output.repetition_trimmed)
+
+    def test_general_ovisocr2_postprocessor_cleans_documented_repeat_tail(self) -> None:
+        args = general.parse_args(
+            ["--model-name", general.OVISOCR2_MODEL_NAME]
+        )
+        prefix = "a" * 7900
+        raw_text = prefix + "wxyz" * 25
+
+        output = general.postprocess_comparison_text(raw_text, args)
+
+        self.assertEqual(str(output), prefix + "wxyz")
+        self.assertTrue(output.repetition_trimmed)
+
+    def test_general_ovisocr2_repeat_cleanup_honours_minimum_text_length(self) -> None:
+        args = general.parse_args(
+            ["--model-name", general.OVISOCR2_MODEL_NAME]
+        )
+        raw_text = "a" * 7899 + "wxyz" * 25
+
+        output = general.postprocess_comparison_text(raw_text, args)
+
+        self.assertEqual(str(output), raw_text)
+        self.assertFalse(output.repetition_trimmed)
+
+    def test_general_postprocessor_leaves_other_models_verbatim(self) -> None:
+        args = general.parse_args([])
+        raw_text = (
+            '  Text\n\n<img src="images/bbox_1_2_3_4.jpg" />\n\n'
+            + "wxyz" * 2000
+            + "  "
+        )
+
+        self.assertEqual(
+            general.postprocess_comparison_text(raw_text, args),
+            raw_text,
+        )
+
+    def test_general_ovisocr2_html_tables_follow_shared_markdown_policy(self) -> None:
+        args = general.parse_args(
+            ["--model-name", general.OVISOCR2_MODEL_NAME]
+        )
+        html = "<table><tr><th>Name</th></tr><tr><td>Alice</td></tr></table>"
+        output = general.postprocess_comparison_text(html, args)
+
+        converted = common.normalize_page_markdown(str(output), raw_output=False)
+        native = common.normalize_page_markdown(str(output), raw_output=True)
+
+        self.assertIn("| Name |", converted.text)
+        self.assertNotIn("<table>", converted.text)
+        self.assertEqual(native.text, html)
 
     async def test_paddle_request_shape(self) -> None:
         client = RecordingClient()

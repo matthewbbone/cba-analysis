@@ -210,6 +210,10 @@ def _no_validation(args: argparse.Namespace) -> None:
     del args
 
 
+def _no_argument_resolution(args: argparse.Namespace) -> None:
+    del args
+
+
 def _no_serve_arguments(args: argparse.Namespace) -> list[str]:
     del args
     return []
@@ -218,6 +222,14 @@ def _no_serve_arguments(args: argparse.Namespace) -> list[str]:
 def _no_layout_preparation(args: argparse.Namespace) -> bool:
     del args
     return False
+
+
+def _identity_comparison_text(
+    text: Transcription,
+    args: argparse.Namespace,
+) -> str:
+    del args
+    return str(text)
 
 
 Transcriber = Callable[[PageContext], Awaitable[str]]
@@ -241,6 +253,12 @@ class RunnerSpec:
     region_prompt: Callable[[str], str] | None = None
     repetition_policy: Callable[[argparse.Namespace], RepetitionPolicy] = default_policy
     needs_shared_layout: Callable[[argparse.Namespace], bool] = _no_layout_preparation
+    # Keep extension hooks last so the positional shape of older RunnerSpec
+    # construction remains backwards-compatible.
+    resolve_arguments: Callable[[argparse.Namespace], None] = _no_argument_resolution
+    postprocess_comparison_text: Callable[
+        [Transcription, argparse.Namespace], str
+    ] = _identity_comparison_text
 
 
 Processor = Callable[[PageJob], Awaitable[PageResult]]
@@ -401,6 +419,22 @@ def write_page_markdown(output_path: Path, raw_text: str, *, raw_output: bool) -
     return expanded
 
 
+def _postprocess_comparison_text(
+    spec: RunnerSpec,
+    text: Transcription,
+    args: argparse.Namespace,
+) -> tuple[str, bool]:
+    """Return runner-specific comparison text and whether it was trimmed.
+
+    The postprocessor's string value is intentionally the only part consumed
+    for markdown.  Its optional ``raw_text`` audit view is ignored: callers
+    retain the original model response or on-disk raw page independently.
+    """
+
+    processed = spec.postprocess_comparison_text(text, args)
+    return str(processed), bool(getattr(processed, "repetition_trimmed", False))
+
+
 async def process_page_job(
     *,
     job: PageJob,
@@ -426,16 +460,22 @@ async def process_page_job(
 
     if raw_exists and not args.force and not retry_pending:
         raw_text = await asyncio.to_thread(job.output_path.read_text, encoding="utf-8")
+        comparison_text, repetition_trimmed = _postprocess_comparison_text(
+            spec,
+            Transcription(raw_text),
+            args,
+        )
         expanded = await asyncio.to_thread(
             write_page_markdown,
             job.markdown_path,
-            raw_text,
+            comparison_text,
             raw_output=args.raw_output,
         )
         return PageResult(
             job=job,
             status="backfilled",
             expanded_merged_cells=expanded,
+            repetition_trimmed=repetition_trimmed,
         )
 
     if args.backfill_markdown:
@@ -466,7 +506,16 @@ async def process_page_job(
     )
     text = await spec.transcribe(context)
     raw_text = getattr(text, "raw_text", str(text))
-    comparison_text = str(text)
+    transcription = Transcription(
+        str(text),
+        raw_text=raw_text,
+        repetition_trimmed=bool(getattr(text, "repetition_trimmed", False)),
+    )
+    comparison_text, postprocess_trimmed = _postprocess_comparison_text(
+        spec,
+        transcription,
+        args,
+    )
     await asyncio.to_thread(_write_verbatim_page, job.output_path, raw_text)
     expanded = await asyncio.to_thread(
         write_page_markdown,
@@ -479,7 +528,10 @@ async def process_page_job(
         job=job,
         status="completed",
         expanded_merged_cells=expanded,
-        repetition_trimmed=bool(getattr(text, "repetition_trimmed", False)),
+        repetition_trimmed=(
+            transcription.repetition_trimmed
+            or postprocess_trimmed
+        ),
     )
 
 
@@ -796,6 +848,11 @@ async def request_chat_completion(
             f"OCR output was rejected ({last_rejection_reason}) " + message
         )
     assert last_match is not None
+    if (
+        not context.repetition_policy.trim_on_exhaustion
+        and not context.repetition_policy.fail_on_repetition
+    ):
+        return Transcription(last_text)
     trimmed = apply_repetition_disposition(
         last_text,
         last_match,
@@ -902,6 +959,7 @@ def parse_args(
         # otherwise fail startup when the inferred sequence count exceeds the
         # available state-cache blocks.
         args.max_num_seqs = args.max_inflight_requests
+    spec.resolve_arguments(args)
     return args
 
 

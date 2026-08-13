@@ -60,8 +60,10 @@ Opens at http://localhost:5178.
 - Within a source, model matchups containing models with fewer saved comparisons
   receive more weight. Every eligible matchup retains a positive probability,
   and the page is chosen randomly only after the model matchup is selected.
-- Model pairs are limited to Qwen 3.6 27B, Ovis 2.6 30B, and Gemma 4 31B so
-  reviews focus on identifying the best of the current leading OCR models.
+- Model pairs are limited to Qwen 3.6 27B, Ovis 2.6 30B, OvisOCR2, and Gemma 4
+  31B so reviews focus on identifying the best of the current leading OCR
+  models. A model becomes eligible page-by-page as its `page_N.txt` outputs are
+  added to the stage-01 cache.
 - The **Minimum text difference** filter uses whitespace-normalized Levenshtein
   distance divided by the longer OCR length. The default 5% cutoff therefore
   behaves consistently for both short and long pages.
@@ -73,6 +75,7 @@ the saved judgments:
 
 ```bash
 python pipeline/utils/rank_ocr_models.py
+python pipeline/utils/rank_ocr_models.py --top-ocr-models
 ```
 
 The script prints a ranking and writes
@@ -81,6 +84,12 @@ pairwise wins. A good or bad tie both pulls the two model strengths together
 and moves both models above or below a shared neutral-quality baseline, so the
 two kinds of ties do not collapse to the same outcome. Use
 `--tie-quality-weight` to adjust the balance between those two signals.
+`--top-ocr-models` refits the statistics using only head-to-head reviews among
+Qwen 3.6 27B, Ovis 2.6 30B, OvisOCR2, and Gemma 4 31B; comparisons involving
+other models are excluded entirely. Every model in the cohort must have at
+least one saved comparison. The former `--top-3-general-vlms` and
+`--general-vlms-only` spellings remain accepted as compatibility aliases for
+this current four-model cohort.
 
 ## Legend
 

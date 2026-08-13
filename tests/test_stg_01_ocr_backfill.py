@@ -1,5 +1,6 @@
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
@@ -58,6 +59,53 @@ class BackfillTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(result.status, "backfilled")
         self.assertEqual(self.transcribe_calls, 0)
         self.assertEqual(markdown, "before\n\nafter\n")
+
+    async def test_backfill_applies_comparison_postprocessor_without_rewriting_raw(
+        self,
+    ) -> None:
+        seen: list[str] = []
+
+        def postprocess(text: str, args) -> str:
+            seen.append(text)
+            return common.Transcription(
+                text.replace("[remove]", "cleaned"),
+                raw_text="postprocessor audit text must be ignored",
+                repetition_trimmed=True,
+            )
+
+        spec = common.RunnerSpec(
+            name="postprocessed",
+            description="postprocessed",
+            default_model_name="fake/model",
+            transcribe=self.spec.transcribe,
+            postprocess_comparison_text=postprocess,
+        )
+        with TemporaryDirectory() as tmp_dir:
+            job = self._job(Path(tmp_dir))
+            job.output_path.parent.mkdir(parents=True)
+            raw_text = "verbatim [remove] raw response\n"
+            job.output_path.write_text(raw_text, encoding="utf-8")
+            args = common.parse_args(spec, [])
+
+            result = await common.process_page_job(
+                job=job,
+                spec=spec,
+                client=None,
+                model_name=args.model_name,
+                args=args,
+                request_limiter=common.RequestLimiter(args.max_inflight_requests),
+                repetition_policy=spec.repetition_policy(args),
+            )
+
+            self.assertEqual(job.output_path.read_text(encoding="utf-8"), raw_text)
+            self.assertEqual(
+                job.markdown_path.read_text(encoding="utf-8"),
+                "verbatim cleaned raw response\n",
+            )
+
+        self.assertEqual(seen, [raw_text])
+        self.assertEqual(result.status, "backfilled")
+        self.assertTrue(result.repetition_trimmed)
 
     async def test_page_with_both_artifacts_is_skipped(self) -> None:
         with TemporaryDirectory() as tmp_dir:
@@ -221,6 +269,204 @@ class BackfillTests(unittest.IsolatedAsyncioTestCase):
             )
             self.assertTrue(result.repetition_trimmed)
 
+    async def test_fresh_ocr_postprocessor_preserves_transcriber_audit_text(
+        self,
+    ) -> None:
+        seen: list[str] = []
+
+        async def transcribe(context: common.PageContext) -> str:
+            return common.Transcription(
+                "comparison [remove] text",
+                raw_text="verbatim model response",
+            )
+
+        def postprocess(text: str, args) -> str:
+            seen.append(text)
+            return common.Transcription(
+                text.replace("[remove] ", ""),
+                raw_text="postprocessor audit text must be ignored",
+                repetition_trimmed=True,
+            )
+
+        spec = common.RunnerSpec(
+            name="postprocessed",
+            description="postprocessed",
+            default_model_name="fake/model",
+            transcribe=transcribe,
+            postprocess_comparison_text=postprocess,
+        )
+        with TemporaryDirectory() as tmp_dir:
+            job = self._job(Path(tmp_dir))
+            args = common.parse_args(spec, [])
+            with patch(
+                "pipeline.stg_01_ocr.common.render_page_isolated",
+                return_value=RenderedPage("unused"),
+            ):
+                result = await common.process_page_job(
+                    job=job,
+                    spec=spec,
+                    client=object(),
+                    model_name=args.model_name,
+                    args=args,
+                    request_limiter=common.RequestLimiter(
+                        args.max_inflight_requests
+                    ),
+                    repetition_policy=spec.repetition_policy(args),
+                )
+
+            self.assertEqual(
+                job.output_path.read_text(encoding="utf-8"),
+                "verbatim model response\n",
+            )
+            self.assertEqual(
+                job.markdown_path.read_text(encoding="utf-8"),
+                "comparison text\n",
+            )
+
+        self.assertEqual(seen, ["comparison [remove] text"])
+        self.assertTrue(result.repetition_trimmed)
+
+    async def test_ovisocr2_fresh_and_backfill_share_official_cleanup(self) -> None:
+        raw = (
+            "Heading\n\n"
+            '<img src="images/bbox_1_2_3_4.jpg" />\n\n'
+            + "a" * 7_900
+            + "wxyz" * 25
+        )
+
+        class Completions:
+            def __init__(self) -> None:
+                self.calls = 0
+
+            async def create(self, **kwargs):
+                del kwargs
+                self.calls += 1
+                return SimpleNamespace(
+                    choices=[
+                        SimpleNamespace(
+                            message=SimpleNamespace(content=raw),
+                            finish_reason="stop",
+                        )
+                    ]
+                )
+
+        completions = Completions()
+        client = SimpleNamespace(
+            chat=SimpleNamespace(completions=completions)
+        )
+        args = general.parse_args(
+            ["--model-name", general.OVISOCR2_MODEL_NAME]
+        )
+        with TemporaryDirectory() as tmp_dir:
+            job = self._job(Path(tmp_dir))
+            with patch(
+                "pipeline.stg_01_ocr.common.render_page_isolated",
+                return_value=RenderedPage("unused"),
+            ):
+                fresh = await common.process_page_job(
+                    job=job,
+                    spec=general.SPEC,
+                    client=client,
+                    model_name=args.model_name,
+                    args=args,
+                    request_limiter=common.RequestLimiter(
+                        args.max_inflight_requests
+                    ),
+                    repetition_policy=general.SPEC.repetition_policy(args),
+                )
+
+            verbatim = job.output_path.read_text(encoding="utf-8")
+            fresh_markdown = job.markdown_path.read_text(encoding="utf-8")
+            job.markdown_path.unlink()
+            backfilled = await common.process_page_job(
+                job=job,
+                spec=general.SPEC,
+                client=None,
+                model_name=args.model_name,
+                args=args,
+                request_limiter=common.RequestLimiter(
+                    args.max_inflight_requests
+                ),
+                repetition_policy=general.SPEC.repetition_policy(args),
+            )
+            backfilled_markdown = job.markdown_path.read_text(encoding="utf-8")
+
+        # The official cleaner accepts a smaller repeated tail than the shared
+        # retry detector's stop-finish gate, so no sampling retry is needed.
+        self.assertEqual(completions.calls, 1)
+        self.assertEqual(verbatim, raw + "\n")
+        self.assertNotIn("images/bbox_", fresh_markdown)
+        self.assertTrue(fresh_markdown.endswith("wxyz\n"))
+        self.assertEqual(backfilled_markdown, fresh_markdown)
+        self.assertTrue(fresh.repetition_trimmed)
+        self.assertTrue(backfilled.repetition_trimmed)
+
+    async def test_ovisocr2_long_repeat_unit_backfills_identically(self) -> None:
+        unit = "".join(chr(0x400 + index) for index in range(250))
+        raw = "P" * 5_000 + unit * 12
+
+        class Completions:
+            def __init__(self) -> None:
+                self.calls = 0
+
+            async def create(self, **kwargs):
+                del kwargs
+                self.calls += 1
+                return SimpleNamespace(
+                    choices=[
+                        SimpleNamespace(
+                            message=SimpleNamespace(content=raw),
+                            finish_reason="stop",
+                        )
+                    ]
+                )
+
+        completions = Completions()
+        client = SimpleNamespace(
+            chat=SimpleNamespace(completions=completions)
+        )
+        args = general.parse_args(
+            ["--model-name", general.OVISOCR2_MODEL_NAME]
+        )
+        with TemporaryDirectory() as tmp_dir:
+            job = self._job(Path(tmp_dir))
+            with patch(
+                "pipeline.stg_01_ocr.common.render_page_isolated",
+                return_value=RenderedPage("unused"),
+            ):
+                fresh = await common.process_page_job(
+                    job=job,
+                    spec=general.SPEC,
+                    client=client,
+                    model_name=args.model_name,
+                    args=args,
+                    request_limiter=common.RequestLimiter(
+                        args.max_inflight_requests
+                    ),
+                    repetition_policy=general.SPEC.repetition_policy(args),
+                )
+
+            fresh_markdown = job.markdown_path.read_text(encoding="utf-8")
+            job.markdown_path.unlink()
+            backfilled = await common.process_page_job(
+                job=job,
+                spec=general.SPEC,
+                client=None,
+                model_name=args.model_name,
+                args=args,
+                request_limiter=common.RequestLimiter(
+                    args.max_inflight_requests
+                ),
+                repetition_policy=general.SPEC.repetition_policy(args),
+            )
+            backfilled_markdown = job.markdown_path.read_text(encoding="utf-8")
+
+        self.assertEqual(completions.calls, 3)
+        self.assertEqual(fresh_markdown, raw + "\n")
+        self.assertEqual(backfilled_markdown, fresh_markdown)
+        self.assertFalse(fresh.repetition_trimmed)
+        self.assertFalse(backfilled.repetition_trimmed)
+
     async def test_backfill_only_missing_raw_fails_without_model(self) -> None:
         with TemporaryDirectory() as tmp_dir:
             job = self._job(Path(tmp_dir))
@@ -244,6 +490,35 @@ class BackfillTests(unittest.IsolatedAsyncioTestCase):
                     general.parse_args(["--backfill-markdown"]),
                 )
             )
+
+    def test_argument_resolver_runs_after_common_defaults(self) -> None:
+        seen: list[tuple[str, int, int]] = []
+
+        def resolve(args) -> None:
+            seen.append(
+                (
+                    args.output_variant,
+                    args.max_inflight_requests,
+                    args.max_num_seqs,
+                )
+            )
+            if args.max_tokens is None:
+                args.max_tokens = 16384
+
+        spec = common.RunnerSpec(
+            name="resolved",
+            description="resolved",
+            default_model_name="fake/model",
+            transcribe=self.spec.transcribe,
+            default_max_tokens=None,
+            resolve_arguments=resolve,
+        )
+
+        args = common.parse_args(spec, ["--concurrency", "3"])
+        common.validate_args(spec, args)
+
+        self.assertEqual(seen, [("", 3, 3)])
+        self.assertEqual(args.max_tokens, 16384)
 
     def test_full_text_is_assembled_from_page_markdown(self) -> None:
         with TemporaryDirectory() as tmp_dir:

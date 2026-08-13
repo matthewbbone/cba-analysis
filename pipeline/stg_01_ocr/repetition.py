@@ -99,6 +99,10 @@ class RepetitionPolicy:
     fail_on_repetition: bool = False
     reject_length_finish: bool = False
     output_rejection_reason: Callable[[str, object | None], str | None] | None = None
+    # Some model authors provide their own deterministic final cleanup.  These
+    # policies still use the shared detector to drive retries, but leave the
+    # exhausted response intact for the runner-specific postprocessor.
+    trim_on_exhaustion: bool = True
 
     def __post_init__(self) -> None:
         attempts = tuple(self.attempts)
@@ -110,6 +114,8 @@ class RepetitionPolicy:
             self.output_rejection_reason
         ):
             raise TypeError("output_rejection_reason must be callable")
+        if not isinstance(self.trim_on_exhaustion, bool):
+            raise TypeError("trim_on_exhaustion must be a bool")
         object.__setattr__(self, "attempts", attempts)
 
     @property

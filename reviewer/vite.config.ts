@@ -25,6 +25,7 @@ const KNOWN_SOURCES = ["cornell_dol", "cornell_retail_educ", "dol_archive"];
 const OCR_COMPARISON_MODELS = new Set([
   "Qwen_Qwen3.6-27B-FP8",
   "AIDC-AI_Ovis2.6-30B-A3B",
+  "ATH-MaaS_OvisOCR2",
   "google_gemma-4-31B-it",
 ]);
 

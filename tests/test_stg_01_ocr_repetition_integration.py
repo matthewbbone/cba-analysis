@@ -6,7 +6,11 @@ import warnings
 from pipeline.stg_01_ocr import common
 from pipeline.stg_01_ocr.general import runner as general
 from pipeline.stg_01_ocr.render import RenderedPage
-from pipeline.stg_01_ocr.repetition import GenerationLengthError, detect_degeneration
+from pipeline.stg_01_ocr.repetition import (
+    GenerationLengthError,
+    RepetitionError,
+    detect_degeneration,
+)
 from pipeline.stg_01_ocr.specialized import miner
 
 
@@ -96,6 +100,58 @@ class RepetitionIntegrationTests(unittest.IsolatedAsyncioTestCase):
         self.assertFalse(output.repetition_trimmed)
         self.assertEqual(seen, [])
         self.assertNotIn("extra_body", completions.calls[0])
+
+    async def test_ovisocr2_retries_then_defers_to_documented_cleanup(self) -> None:
+        unit = "".join(chr(0x400 + index) for index in range(250))
+        raw = "P" * 5_000 + unit * 12
+        self.assertIsNotNone(detect_degeneration(raw, finish_reason="stop"))
+        completions = DegenerateCompletions(raw, finish_reason="stop")
+        args = general.parse_args(
+            ["--model-name", general.OVISOCR2_MODEL_NAME]
+        )
+        context = self.make_context(args, completions)
+
+        output = await common.request_chat_completion(
+            context,
+            {
+                "model": args.model_name,
+                "messages": [],
+                "temperature": 0,
+                "max_tokens": args.max_tokens,
+            },
+            timeout=600,
+        )
+
+        self.assertEqual(len(completions.calls), 3)
+        self.assertEqual(str(output), raw)
+        self.assertEqual(output.raw_text, raw)
+        self.assertFalse(output.repetition_trimmed)
+
+    async def test_ovisocr2_fail_on_repetition_still_raises(self) -> None:
+        raw = "valid prefix\n" + "repeated OCR cycle 12345 " * 20
+        completions = DegenerateCompletions(raw, finish_reason="stop")
+        args = general.parse_args(
+            [
+                "--model-name",
+                general.OVISOCR2_MODEL_NAME,
+                "--fail-on-repetition",
+            ]
+        )
+        context = self.make_context(args, completions)
+
+        with self.assertRaises(RepetitionError):
+            await common.request_chat_completion(
+                context,
+                {
+                    "model": args.model_name,
+                    "messages": [],
+                    "temperature": 0,
+                    "max_tokens": args.max_tokens,
+                },
+                timeout=600,
+            )
+
+        self.assertEqual(len(completions.calls), 3)
 
     async def test_miner_retries_non_periodic_length_output_then_raises(self) -> None:
         raw = " ".join(

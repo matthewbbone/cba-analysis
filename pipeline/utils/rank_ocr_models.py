@@ -16,6 +16,7 @@ finite for small or perfectly separated review sets.
 Run from anywhere in the repository::
 
     python pipeline/utils/rank_ocr_models.py
+    python pipeline/utils/rank_ocr_models.py --top-ocr-models
 
 By default the script reads ``cache/reviewer/ocr_comparisons.jsonl``, prints a
 ranking, and writes ``cache/reviewer/ocr_model_rankings.json``.
@@ -30,13 +31,24 @@ from datetime import UTC, datetime
 import json
 import math
 from pathlib import Path
-from typing import Any, Iterable, Sequence
+from typing import AbstractSet, Any, Iterable, Sequence
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_INPUT = PROJECT_ROOT / "cache" / "reviewer" / "ocr_comparisons.jsonl"
 DEFAULT_OUTPUT = PROJECT_ROOT / "cache" / "reviewer" / "ocr_model_rankings.json"
 VALID_CHOICES = {"left_better", "right_better", "both_good", "both_bad"}
+TOP_OCR_MODELS = frozenset(
+    {
+        "AIDC-AI_Ovis2.6-30B-A3B",
+        "ATH-MaaS_OvisOCR2",
+        "Qwen_Qwen3.6-27B-FP8",
+        "google_gemma-4-31B-it",
+    }
+)
+# Backwards-compatible import alias.  The named comparison cohort now contains
+# four models and includes the specialized OvisOCR2 checkpoint.
+TOP_3_GENERAL_VLM_MODELS = TOP_OCR_MODELS
 
 
 @dataclass(frozen=True)
@@ -91,6 +103,19 @@ def load_judgments(path: Path) -> list[Judgment]:
     if not judgments:
         raise ValueError(f"{path}: no OCR comparison judgments found")
     return judgments
+
+
+def judgments_within_models(
+    judgments: Iterable[Judgment],
+    models: AbstractSet[str],
+) -> list[Judgment]:
+    """Keep head-to-head judgments whose two participants are in ``models``."""
+
+    return [
+        judgment
+        for judgment in judgments
+        if judgment.left_model in models and judgment.right_model in models
+    ]
 
 
 def _make_observations(
@@ -373,7 +398,23 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         default=0.5,
         help="L2 regularization strength for sparse comparisons (default: 0.5)",
     )
-    return parser.parse_args(argv)
+    parser.add_argument(
+        "--top-ocr-models",
+        "--top-4-ocr-models",
+        "--top-3-general-vlms",
+        "--general-vlms-only",
+        dest="top_ocr_models",
+        action="store_true",
+        help=(
+            "fit and report only head-to-head comparisons among Qwen 3.6 27B, "
+            "Ovis 2.6 30B, OvisOCR2, and Gemma 4 31B"
+        ),
+    )
+    args = parser.parse_args(argv)
+    # Preserve the previous parsed Namespace attribute for callers that used it
+    # directly; all CLI aliases select the current four-model cohort.
+    args.top_3_general_vlms = args.top_ocr_models
+    return args
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -381,12 +422,36 @@ def main(argv: Sequence[str] | None = None) -> int:
     input_path = args.input.expanduser().resolve()
     output_path = args.output.expanduser().resolve()
     judgments = load_judgments(input_path)
+    source_judgment_count = len(judgments)
+    if args.top_ocr_models:
+        judgments = judgments_within_models(judgments, TOP_OCR_MODELS)
+        if not judgments:
+            models = ", ".join(sorted(TOP_OCR_MODELS))
+            raise ValueError(
+                "no head-to-head judgments found among the top OCR models: "
+                f"{models}"
+            )
+        observed_models = {
+            model
+            for judgment in judgments
+            for model in (judgment.left_model, judgment.right_model)
+        }
+        missing_models = TOP_OCR_MODELS - observed_models
+        if missing_models:
+            raise ValueError(
+                "no head-to-head judgments found for top OCR model(s): "
+                f"{', '.join(sorted(missing_models))}"
+            )
     output = build_ranking(
         judgments,
         tie_quality_weight=args.tie_quality_weight,
         l2=args.l2,
     )
     output["source_path"] = str(input_path)
+    if args.top_ocr_models:
+        output["model_scope"] = "top_ocr_models"
+        output["included_models"] = sorted(TOP_OCR_MODELS)
+        output["source_judgment_count"] = source_judgment_count
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", encoding="utf-8") as output_file:
