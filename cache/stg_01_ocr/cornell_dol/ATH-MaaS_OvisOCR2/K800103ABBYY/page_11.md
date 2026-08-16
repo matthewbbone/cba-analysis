@@ -2,7 +2,7 @@
 
 ### 4.10 NON-TEACHING DUTIES
 
-A. The Board and Association recognize that a teacher’s primary responsibility is to the students and the instructional program. Therefore, teachers will not be required to perform the following non-teaching duties:
+A. The Board and Association recognize that a teacher's primary responsibility is to the students and the instructional program. Therefore, teachers will not be required to perform the following non-teaching duties:
 
 1. Keeping records for money collections and/or collecting money, unless such are for activities sponsored by the teacher or are considered a part of the instructional program.
 

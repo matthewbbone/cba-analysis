@@ -15,7 +15,6 @@ ARTICLE XVI - DURATION AND EFFECT ..... 45
 16-4 Finality ..... 46  
 16-5 Term and Reopening Negotiations ..... 46  
 ARTICLE XVII - COLLECTIVE BARGAINING CONTRACT ..... 47  
-  
 APPENDIX A:  
 1985-86 Salary Schedule ..... 48  
 1986-87 Salary Schedule ..... 49  
@@ -46,6 +45,5 @@ Parent-Child Center Teachers ..... 72-73
 APPENDIX H:  
 Adult Basic/Continuing Education (AD/CE) Teachers ..... 74-75  
 APPENDIX I:  
-Calendar for 1985-86 ..... 76
-
+Calendar for 1985-86 ..... 76  
 vii

@@ -1,0 +1,13 @@
+provision_type: wage_table
+prompt: |-
+  Extract every distinct complete base-wage schedule table from the collective bargaining agreement.
+
+  A base-wage schedule is a table-like block whose primary purpose is to state regular base pay by job classification, occupation, salary step or lane, experience level, education level, or pay grade. Pay cells may be hourly, daily, weekly, monthly, or annual rates and may use currency symbols, decimals, comma-grouped values, or bare numbers when the surrounding rows and headers clearly identify them as pay rates.
+
+  Return the complete contiguous verbatim table: its title or heading, effective-date or rate headers, row and column labels, every pay row and value, and notes immediately attached to and needed to interpret the schedule. Include a continuation across a page break when it belongs to the same table. Emit one extraction per complete table. Do not emit a title alone, a header without pay amounts, a single row, a partial page fragment, or a list of classifications without their rates. Never summarize, normalize, transpose, calculate, or reconstruct values, and never stitch together noncontiguous passages.
+
+  Exclude narrative wage clauses that do not contain a table-like schedule. Exclude percentage-only increase rules, longevity clauses, stipends, extra-duty pay, differentials, allowances, reimbursements, dues, leave, holidays, insurance, benefits, and other non-base-pay tables unless they are inseparable notes within a qualifying base-wage schedule.
+N_EXTRACTION_PASSES: 5
+LANGEXTRACT_MAX_WORKERS: 10
+LANGEXTRACT_BATCH_LENGTH: 10
+MAX_CHAR_BUFFER: 10000

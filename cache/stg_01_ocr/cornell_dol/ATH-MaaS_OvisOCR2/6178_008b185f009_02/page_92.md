@@ -9,6 +9,8 @@ October 8, 1985
 
 This report is authorized by law 29 U.S.C. 2. Your voluntary cooperation is needed to make the results of this survey comprehensive, accurate, and timely.
 
+RECEIVED
+
 Form Approved
 
 O.M.B. No. 047-R0003

@@ -9,10 +9,10 @@ GAS AND WATER (cont.)
 | J01231 | Chief Gas Technician (Small Crew) - Welding** (3) | N | $28.52 | $28.82 | $29.40 | $29.69 |  |  |  |
 | J01238 | Gas Technician | N | $24.95 | $25.20 | $25.72 | $25.98 |  |  |  |
 | J01237 | Gas Technician - Welding | N | $26.02 | $26.57 | $26.83 | $27.10 |  |  |  |
-| J01241-J01243 | Gas Technician Apprentice |  | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) |  |
+| J01241-J01243 | Gas Technician Apprentice |  | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) |  |  |  |
 | J01236 | Lead Regulation Technician** | N | $27.22 | $27.51 | $28.07 | $28.35 |  |  |  |
 | J01232 | Regulation Technician | N | $25.19 | $25.73 | $25.99 | $26.52 |  |  |  |
-| J01233-J01235 | Regulation Technician Apprentice |  | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) |  |
+| J01233-J01235 | Regulation Technician Apprentice |  | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) |  |  |  |
 
 LINE AND RELATED
 

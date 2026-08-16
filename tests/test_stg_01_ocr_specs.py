@@ -2,8 +2,10 @@ import asyncio
 from contextlib import redirect_stderr
 from io import StringIO
 from pathlib import Path
+from tempfile import TemporaryDirectory
 from types import SimpleNamespace
 import unittest
+from unittest.mock import AsyncMock, patch
 import warnings
 
 from pipeline.stg_01_ocr import common
@@ -19,6 +21,7 @@ SHARED_FLAGS = {
     "--model-name",
     "--port",
     "--num-gpus",
+    "--device",
     "--max-model-len",
     "--gpu-memory-utilization",
     "--dpi",
@@ -121,6 +124,107 @@ class RunnerSpecTests(unittest.IsolatedAsyncioTestCase):
             ),
             "example-org_arbitrary-vision-language-model",
         )
+
+    def test_all_runners_accept_a_cuda_device_selection(self) -> None:
+        for module in RUNNERS:
+            with self.subTest(module=module.__name__):
+                default_args = module.parse_args([])
+                selected_args = module.parse_args(["--device", "02"])
+
+                module.validate_args(default_args)
+                module.validate_args(selected_args)
+
+                self.assertIsNone(default_args.device)
+                self.assertEqual(selected_args.device, "2")
+
+        tensor_parallel_args = general.parse_args(
+            ["--device", "1,3", "--num-gpus", "2"]
+        )
+        general.validate_args(tensor_parallel_args)
+        self.assertEqual(tensor_parallel_args.device, "1,3")
+
+    def test_device_selection_must_match_num_gpus(self) -> None:
+        args = general.parse_args(["--device", "1,3"])
+
+        with self.assertRaisesRegex(ValueError, "selects 2 GPU"):
+            general.validate_args(args)
+
+    def test_device_selection_rejects_invalid_ids(self) -> None:
+        for device in ("", "-1", "gpu1", "1,,2", "1,1"):
+            with self.subTest(device=device):
+                args = general.parse_args(["--device", device])
+                with self.assertRaises(ValueError):
+                    general.validate_args(args)
+
+    def test_device_and_layout_device_are_independent(self) -> None:
+        args = paddleocr.parse_args(
+            ["--device", "2", "--layout-device", "cuda:0"]
+        )
+
+        paddleocr.validate_args(args)
+
+        self.assertEqual(args.device, "2")
+        self.assertEqual(args.layout_device, "cuda:0")
+
+    def test_stage_1_forwards_device_to_vllm_server(self) -> None:
+        captured_server_kwargs: list[dict[str, object]] = []
+
+        class FakeClient:
+            def with_options(self, **kwargs):
+                del kwargs
+                return self
+
+            async def close(self) -> None:
+                return None
+
+        class FakeServer:
+            def __init__(self, **kwargs):
+                captured_server_kwargs.append(kwargs)
+                self.client = FakeClient()
+
+            def start(self) -> None:
+                return None
+
+            def close(self) -> None:
+                return None
+
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            document = common.DocumentJob(
+                source="source",
+                document_id="doc",
+                pdf_path=root / "doc.pdf",
+                output_dir=root / "output" / "doc",
+            )
+            page_job = common.PageJob(
+                source="source",
+                document_id="doc",
+                pdf_path=document.pdf_path,
+                page_number=1,
+                output_path=document.output_dir / "page_1.txt",
+            )
+            state = common.DocumentState(
+                source="source",
+                document_id="doc",
+                output_dir=document.output_dir,
+                total_pages=1,
+            )
+            states = {("source", "doc"): state}
+
+            with (
+                patch.object(common, "discover_documents", return_value=[document]),
+                patch.object(common, "build_page_jobs", return_value=([page_job], states)),
+                patch.object(
+                    common,
+                    "run_ocr_queue",
+                    new=AsyncMock(return_value=states),
+                ),
+                patch.object(common, "report_documents"),
+                patch("pipeline.utils.vllm_server.VLLMServer", FakeServer),
+            ):
+                common.main(general.SPEC, ["--device", "2"])
+
+        self.assertEqual(captured_server_kwargs[0]["device"], "2")
 
     def test_general_ovisocr2_profile_defaults_are_model_specific(self) -> None:
         generic = general.parse_args([])

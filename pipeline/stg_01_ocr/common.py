@@ -41,6 +41,7 @@ from pipeline.stg_01_ocr.repetition import (
     default_policy,
     detect_degeneration,
 )
+from pipeline.utils.gpu import validate_cuda_device_selection
 from pipeline.utils.paths import (
     PROJECT_ROOT,
     default_cache_dir,
@@ -879,6 +880,15 @@ def build_parser(spec: RunnerSpec) -> argparse.ArgumentParser:
     )
     parser.add_argument("--port", type=int, default=8123)
     parser.add_argument("--num-gpus", type=int, default=1)
+    parser.add_argument(
+        "--device",
+        metavar="GPU_IDS",
+        help=(
+            "Comma-separated physical CUDA GPU IDs to expose to the vLLM "
+            "server (for example 1 or 1,3). The number of IDs must match "
+            "--num-gpus. Overrides CUDA_VISIBLE_DEVICES for the server process."
+        ),
+    )
     parser.add_argument("--max-model-len", type=int, default=spec.default_max_model_len)
     parser.add_argument(
         "--gpu-memory-utilization",
@@ -968,6 +978,7 @@ def validate_args(spec: RunnerSpec, args: argparse.Namespace) -> None:
         raise ValueError("--concurrency must be at least 1")
     if args.num_gpus < 1:
         raise ValueError("--num-gpus must be at least 1")
+    args.device = validate_cuda_device_selection(args.device, args.num_gpus)
     if args.max_model_len < 1:
         raise ValueError("--max-model-len must be at least 1")
     if args.dpi < 1:
@@ -1189,6 +1200,7 @@ def main(spec: RunnerSpec, argv: Sequence[str] | None = None) -> None:
                 port=args.port,
                 max_model_len=args.max_model_len,
                 num_gpus=args.num_gpus,
+                device=args.device,
                 gpu_memory_utilization=args.gpu_memory_utilization,
                 max_num_seqs=args.max_num_seqs,
                 extra_serve_args=spec.serve_arguments(args),

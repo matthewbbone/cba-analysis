@@ -1,12 +1,12 @@
 from __future__ import annotations
 
 import argparse
+from collections.abc import Sequence
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 import json
 from pathlib import Path
 import random
-import re
 import sys
 from typing import Callable
 
@@ -14,6 +14,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 if __package__ is None or __package__ == "":
     sys.path.insert(0, str(PROJECT_ROOT))
 
+from pipeline.utils.gpu import validate_cuda_device_selection
 from pipeline.utils.paths import (
     PROJECT_ROOT,
     default_cache_dir,
@@ -28,12 +29,9 @@ except ModuleNotFoundError:
 
 load_dotenv(PROJECT_ROOT / ".env")
 
-from pipeline.stg_02_extract import validate
-from pipeline.stg_02_extract.structures import (
-    WAGE_TABLE_DIMENSIONS,
-    WAGE_TABLE_EXTRACTION_CLASS,
-    WAGE_TABLE_TASK,
-    synthetic_wage_table_examples,
+from pipeline.stg_02_extract.structure_provision import (
+    ProvisionSpec,
+    load_provision,
 )
 from pipeline.utils.vllm_server import VLLMServer
 
@@ -41,15 +39,14 @@ from pipeline.utils.vllm_server import VLLMServer
 # Must be an instruction-tuned model: langextract talks to vLLM's chat
 # endpoint, and base models have no chat template (vLLM rejects with 400).
 DEFAULT_MODEL_NAME = "google/gemma-4-31B-it"
-DEFAULT_OCR_MODEL_NAME = "AIDC-AI/Ovis2.6-30B-A3B"
+DEFAULT_OCR_MODEL_NAME = "ATH-MaaS/OvisOCR2"
+REASONING_PARSER_MODEL_MARKERS = (
+    ("gemma-4", "gemma4"),
+    ("gemma4", "gemma4"),
+    ("qwen3", "qwen3"),
+)
 INPUT_STAGE_NAME = "stg_01_ocr"
 STAGE_NAME = "stg_02_extract"
-OUTPUT_FILENAME = "wage_tables.jsonl"
-DEFAULT_EXTRACTION_PASSES = 5
-DEFAULT_LANGEXTRACT_MAX_WORKERS = 10
-DEFAULT_LANGEXTRACT_BATCH_LENGTH = 10
-THINK_BLOCK_PATTERN = re.compile(r"<think\b[^>]*>.*?</think>", re.IGNORECASE | re.DOTALL)
-MAX_CHAR_BUFFER = 10_000
 
 
 @dataclass(frozen=True)
@@ -58,6 +55,7 @@ class ExtractionJob:
     document_id: str
     ocr_model_name: str
     model_name: str
+    provision_type: str
     input_path: Path
     output_path: Path
 
@@ -67,7 +65,6 @@ class ExtractionResult:
     job: ExtractionJob
     status: str
     extraction_count: int = 0
-    dropped_count: int = 0
     error: str | None = None
 
 
@@ -90,8 +87,33 @@ def default_output_root() -> Path:
     return default_cache_dir() / STAGE_NAME
 
 
-def strip_think_blocks(text: str) -> str:
-    return THINK_BLOCK_PATTERN.sub("", text)
+def reasoning_serve_args(
+    model_name: str,
+    reasoning_parser: str | None,
+) -> list[str]:
+    """Enable native thinking and configure a known structured-output parser."""
+
+    if reasoning_parser is None:
+        normalized_model_name = model_name.casefold()
+        reasoning_parser = next(
+            (
+                parser_name
+                for marker, parser_name in REASONING_PARSER_MODEL_MARKERS
+                if marker in normalized_model_name
+            ),
+            None,
+        )
+
+    args = [
+        "--default-chat-template-kwargs",
+        json.dumps({
+            "enable_thinking": True,
+            "preserve_thinking": False,
+        }, separators=(",", ":")),
+    ]
+    if reasoning_parser is not None:
+        args.extend(["--reasoning-parser", reasoning_parser])
+    return args
 
 
 def discover_full_texts(
@@ -99,13 +121,20 @@ def discover_full_texts(
     output_root: Path,
     ocr_model_name: str,
     model_name: str,
+    provision_type: str,
     source_filter: str | None = None,
-    document_id_filter: str | None = None,
+    document_id_filter: str | Sequence[str] | None = None,
 ) -> list[ExtractionJob]:
     input_root = input_root.expanduser()
     output_root = output_root.expanduser()
     ocr_model_path_name = path_safe_model_name(ocr_model_name)
     model_output_name = path_safe_model_name(model_name)
+    if document_id_filter is None:
+        document_ids = None
+    elif isinstance(document_id_filter, str):
+        document_ids = frozenset((document_id_filter,))
+    else:
+        document_ids = frozenset(document_id_filter)
     jobs: list[ExtractionJob] = []
 
     if not input_root.exists():
@@ -125,7 +154,7 @@ def discover_full_texts(
             if document_dir.name.startswith("."):
                 continue
             document_id = document_dir.name
-            if document_id_filter and document_id != document_id_filter:
+            if document_ids is not None and document_id not in document_ids:
                 continue
 
             input_path = document_dir / "full.txt"
@@ -137,7 +166,7 @@ def discover_full_texts(
                 / source_dir.name
                 / model_output_name
                 / document_id
-                / OUTPUT_FILENAME
+                / f"{provision_type}.jsonl"
             )
             jobs.append(
                 ExtractionJob(
@@ -145,6 +174,7 @@ def discover_full_texts(
                     document_id=document_id,
                     ocr_model_name=ocr_model_name,
                     model_name=model_name,
+                    provision_type=provision_type,
                     input_path=input_path,
                     output_path=output_path,
                 )
@@ -170,24 +200,8 @@ def extraction_grounding_status(extraction) -> str:
     return getattr(status, "value", str(status))
 
 
-def normalize_dimensions(attributes: dict[str, object] | None) -> list[str]:
-    if not attributes:
-        return []
-
-    raw_dimensions = attributes.get("dimensions", [])
-    if isinstance(raw_dimensions, str):
-        candidates = [value.strip().lower() for value in raw_dimensions.split(",")]
-    elif isinstance(raw_dimensions, list):
-        candidates = [str(value).strip().lower() for value in raw_dimensions]
-    else:
-        candidates = []
-
-    candidate_set = set(candidates)
-    return [dimension for dimension in WAGE_TABLE_DIMENSIONS if dimension in candidate_set]
-
-
-# Non-exact grounding often anchors only a matched prefix (e.g. a table title)
-# while extraction_text holds the full table, leaving span_start/span_end
+# Non-exact grounding often anchors only a matched prefix while extraction_text
+# holds the full provision, leaving span_start/span_end
 # covering far fewer characters than the text. Recompute the span when the
 # recorded length disagrees with the text length by more than this tolerance.
 SPAN_LENGTH_TOLERANCE = 50
@@ -202,7 +216,7 @@ def reconcile_span(
 ) -> tuple[int, int, bool]:
     """Return (span_start, span_end, span_reliable), fixing corrupted spans.
 
-    On non-exact grounding, langextract may anchor only a prefix of the table,
+    On non-exact grounding, langextract may anchor only a prefix of the text,
     so the recorded span is much shorter than extraction_text. When that
     happens, re-locate the full text in the source; if found, use those
     offsets; otherwise flag the span as unreliable.
@@ -222,7 +236,7 @@ def extraction_to_record(
     job: ExtractionJob,
     source_text: str | None = None,
 ) -> dict[str, object] | None:
-    if getattr(extraction, "extraction_class", None) != WAGE_TABLE_EXTRACTION_CLASS:
+    if getattr(extraction, "extraction_class", None) != job.provision_type:
         return None
 
     span_start, span_end = extraction_char_span(extraction)
@@ -234,17 +248,18 @@ def extraction_to_record(
     span_start, span_end, span_reliable = reconcile_span(
         span_start, span_end, grounding_status, extraction_text, source_text
     )
+    attributes = getattr(extraction, "attributes", None)
+    raw_context = attributes.get("context") if isinstance(attributes, dict) else None
+    context = raw_context.strip() if isinstance(raw_context, str) else None
 
     return {
         "source": job.source,
         "document_id": job.document_id,
         "ocr_model_name": job.ocr_model_name,
         "model_name": job.model_name,
-        "extraction_class": WAGE_TABLE_EXTRACTION_CLASS,
+        "extraction_class": job.provision_type,
         "extraction_text": extraction_text,
-        "attributes": {
-            "dimensions": normalize_dimensions(getattr(extraction, "attributes", None)),
-        },
+        "attributes": {"context": context or None},
         "span_start": span_start,
         "span_end": span_end,
         "span_reliable": span_reliable,
@@ -260,12 +275,9 @@ def write_jsonl(output_path: Path, records: list[dict[str, object]]) -> None:
 
 
 def make_langextract_extractor(
+    provision: ProvisionSpec,
     model_name: str,
     port: int,
-    max_char_buffer: int,
-    extraction_passes: int,
-    langextract_max_workers: int,
-    langextract_batch_length: int,
 ) -> Extractor:
     import langextract as lx
     from langextract.factory import ModelConfig
@@ -276,21 +288,35 @@ def make_langextract_extractor(
         provider_kwargs={
             "api_key": "EMPTY",
             "base_url": f"http://localhost:{port}/v1",
+            # LangExtract's OpenAI provider owns its own request pool, so this
+            # must be configured both here and on lx.extract below.
+            "max_workers": provision.langextract_max_workers,
         },
     )
-    examples = synthetic_wage_table_examples()
+    output_schema = lx.schema.extractions_schema(
+        lx.schema.extraction_item_schema(
+            provision.provision_type,
+            attributes={
+                "context": {
+                    "anyOf": [
+                        {"type": "string"},
+                        {"type": "null"},
+                    ]
+                }
+            },
+        )
+    )
 
     def extractor(text: str, job: ExtractionJob) -> list[dict[str, object]]:
         annotated_document = lx.extract(
             text_or_documents=text,
-            prompt_description=WAGE_TABLE_TASK.prompt,
-            examples=examples,
+            prompt_description=provision.prompt_description,
             config=config,
-            temperature=0,
-            extraction_passes=extraction_passes,
-            max_workers=langextract_max_workers,
-            batch_length=langextract_batch_length,
-            max_char_buffer=max_char_buffer,
+            output_schema=output_schema,
+            extraction_passes=provision.extraction_passes,
+            max_workers=provision.langextract_max_workers,
+            batch_length=provision.langextract_batch_length,
+            max_char_buffer=provision.max_char_buffer,
             show_progress=False,
         )
         records: list[dict[str, object]] = []
@@ -303,59 +329,21 @@ def make_langextract_extractor(
     return extractor
 
 
-def apply_validation(
-    records: list[dict[str, object]],
-    validate_enabled: bool,
-    verify_client: object | None,
-    verify_model_name: str | None,
-) -> tuple[list[dict[str, object]], int]:
-    """Filter records that are not base wage tables.
-
-    Returns (kept_records, dropped_count). Deterministic rejection runs first;
-    the optional LLM verification runs only on records that survive it.
-    """
-    if not validate_enabled and verify_client is None:
-        return records, 0
-
-    kept: list[dict[str, object]] = []
-    dropped = 0
-    for record in records:
-        text = str(record.get("extraction_text", ""))
-        if validate_enabled and validate.rejection_reason(text) is not None:
-            dropped += 1
-            continue
-        if verify_client is not None and not validate.verify_is_base_wage_table(
-            text, verify_client, verify_model_name
-        ):
-            dropped += 1
-            continue
-        kept.append(record)
-    return kept, dropped
-
-
 def process_extraction_job(
     job: ExtractionJob,
     extractor: Extractor,
     force: bool,
-    validate_enabled: bool = True,
-    verify_client: object | None = None,
-    verify_model_name: str | None = None,
 ) -> ExtractionResult:
     if job.output_path.exists() and not force:
         return ExtractionResult(job=job, status="skipped")
 
     text = job.input_path.read_text(encoding="utf-8")
-    text = strip_think_blocks(text)
     records = extractor(text, job)
-    records, dropped = apply_validation(
-        records, validate_enabled, verify_client, verify_model_name
-    )
     write_jsonl(job.output_path, records)
     return ExtractionResult(
         job=job,
         status="completed",
         extraction_count=len(records),
-        dropped_count=dropped,
     )
 
 
@@ -395,8 +383,7 @@ def run_extraction_queue(
                 else:
                     print(
                         f"wrote {result.job.source}/{result.job.document_id} "
-                        f"({result.extraction_count} wage tables, "
-                        f"{result.dropped_count} filtered)"
+                        f"({result.extraction_count} extractions)"
                     )
     finally:
         if progress_reporter is not None:
@@ -417,23 +404,20 @@ def make_progress_reporter(jobs: list[ExtractionJob]) -> ProgressReporter:
 
     progress = tqdm(
         total=len(jobs),
-        desc="Wage table docs",
+        desc="Provision docs",
         unit="doc",
         dynamic_ncols=True,
     )
     counts = {"completed": 0, "skipped": 0, "failed": 0}
-    table_count = 0
-    dropped_count = 0
+    extraction_count = 0
 
     def callback(result: ExtractionResult) -> None:
-        nonlocal table_count, dropped_count
+        nonlocal extraction_count
         counts[result.status] = counts.get(result.status, 0) + 1
-        table_count += result.extraction_count
-        dropped_count += result.dropped_count
+        extraction_count += result.extraction_count
         progress.update(1)
         progress.set_postfix(
-            extracted=table_count,
-            filtered=dropped_count,
+            extracted=extraction_count,
             skipped=counts["skipped"],
             failed=counts["failed"],
             refresh=True,
@@ -447,7 +431,13 @@ def make_progress_reporter(jobs: list[ExtractionJob]) -> ProgressReporter:
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Extract wage schedule tables from OCR text.")
+    parser = argparse.ArgumentParser(description="Extract provisions from OCR text.")
+    parser.add_argument(
+        "--provision",
+        required=True,
+        metavar="NAME",
+        help="Load the bundled provisions/NAME.yaml definition.",
+    )
     parser.add_argument("--input-root", type=Path, default=default_input_root())
     parser.add_argument("--output-root", type=Path, default=default_output_root())
     parser.add_argument("--model-name", default=DEFAULT_MODEL_NAME)
@@ -460,8 +450,26 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         ),
     )
     parser.add_argument("--port", type=int, default=8123)
+    parser.add_argument(
+        "--reasoning-parser",
+        metavar="NAME",
+        help=(
+            "vLLM parser for separating model reasoning from the final JSON. "
+            "Automatically selected for Gemma 4 and Qwen 3 model names; set "
+            "this when another reasoning model requires its own parser."
+        ),
+    )
     parser.add_argument("--num-gpus", type=int, default=1)
-    parser.add_argument("--max-model-len", type=int, default=19296)
+    parser.add_argument(
+        "--device",
+        metavar="GPU_IDS",
+        help=(
+            "Comma-separated physical CUDA GPU IDs to expose to the vLLM "
+            "server (for example 1 or 1,3). The number of IDs must match "
+            "--num-gpus. Overrides CUDA_VISIBLE_DEVICES for the server process."
+        ),
+    )
+    parser.add_argument("--max-model-len", type=int, default=14000)
     parser.add_argument(
         "--gpu-memory-utilization",
         type=float,
@@ -470,38 +478,23 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
             "Defaults to vLLM's own setting."
         ),
     )
-    parser.add_argument("--max-char-buffer", type=int, default=MAX_CHAR_BUFFER)
-    parser.add_argument("--extraction-passes", type=int, default=DEFAULT_EXTRACTION_PASSES)
-    parser.add_argument(
-        "--langextract-max-workers",
-        type=int,
-        default=DEFAULT_LANGEXTRACT_MAX_WORKERS,
-    )
-    parser.add_argument(
-        "--langextract-batch-length",
-        type=int,
-        default=DEFAULT_LANGEXTRACT_BATCH_LENGTH,
-    )
+    parser.add_argument("--max-num-seqs", type=int, default=32)
     parser.add_argument("--concurrency", type=int, default=1)
-    parser.add_argument(
-        "--validate",
-        action=argparse.BooleanOptionalAction,
-        default=True,
-        help="Apply the deterministic filter that drops non-wage-table spans.",
-    )
-    parser.add_argument(
-        "--verify-llm",
-        action=argparse.BooleanOptionalAction,
-        default=True,
-        help=(
-            "Run a per-span LLM check that drops supplemental/stipend, "
-            "longevity, and percentage/differential pay tables."
-        ),
-    )
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--no-progress", action="store_true")
     parser.add_argument("--source")
-    parser.add_argument("--document-id")
+    parser.add_argument(
+        "--document-id",
+        "--document-ids",
+        dest="document_id",
+        metavar="DOCUMENT_ID",
+        nargs="+",
+        action="extend",
+        help=(
+            "process only these document IDs; accepts one or more values and "
+            "may be repeated"
+        ),
+    )
     parser.add_argument(
         "--sample",
         type=int,
@@ -523,18 +516,15 @@ def validate_args(args: argparse.Namespace) -> None:
         raise ValueError("--concurrency must be at least 1")
     if args.num_gpus < 1:
         raise ValueError("--num-gpus must be at least 1")
+    args.device = validate_cuda_device_selection(args.device, args.num_gpus)
     if args.max_model_len < 1:
         raise ValueError("--max-model-len must be at least 1")
+    if args.reasoning_parser is not None:
+        args.reasoning_parser = args.reasoning_parser.strip()
+        if not args.reasoning_parser:
+            raise ValueError("--reasoning-parser must not be empty")
     if args.gpu_memory_utilization is not None and not 0 < args.gpu_memory_utilization <= 1:
         raise ValueError("--gpu-memory-utilization must be greater than 0 and at most 1")
-    if args.max_char_buffer < 1:
-        raise ValueError("--max-char-buffer must be at least 1")
-    if args.extraction_passes < 1:
-        raise ValueError("--extraction-passes must be at least 1")
-    if args.langextract_max_workers < 1:
-        raise ValueError("--langextract-max-workers must be at least 1")
-    if args.langextract_batch_length < 1:
-        raise ValueError("--langextract-batch-length must be at least 1")
     if args.sample is not None and args.sample < 1:
         raise ValueError("--sample must be at least 1")
 
@@ -544,10 +534,9 @@ def report_results(results: list[ExtractionResult]) -> None:
     skipped = sum(1 for result in results if result.status == "skipped")
     failed = [result for result in results if result.status == "failed"]
     extracted = sum(result.extraction_count for result in results)
-    dropped = sum(result.dropped_count for result in results)
     print(
         f"complete: {completed} documents, {skipped} skipped, "
-        f"{len(failed)} failed, {extracted} wage tables, {dropped} filtered"
+        f"{len(failed)} failed, {extracted} extractions"
     )
     for result in failed:
         print(f"failed {result.job.source}/{result.job.document_id}: {result.error}")
@@ -556,6 +545,7 @@ def report_results(results: list[ExtractionResult]) -> None:
 def main(argv: list[str] | None = None) -> None:
     args = parse_args(argv)
     validate_args(args)
+    provision = load_provision(args.provision)
     ocr_model_name = args.ocr_model_name or args.model_name
 
     jobs = discover_full_texts(
@@ -563,6 +553,7 @@ def main(argv: list[str] | None = None) -> None:
         output_root=args.output_root,
         ocr_model_name=ocr_model_name,
         model_name=args.model_name,
+        provision_type=provision.provision_type,
         source_filter=args.source,
         document_id_filter=args.document_id,
     )
@@ -601,30 +592,26 @@ def main(argv: list[str] | None = None) -> None:
             port=args.port,
             max_model_len=args.max_model_len,
             num_gpus=args.num_gpus,
+            device=args.device,
             gpu_memory_utilization=args.gpu_memory_utilization,
+            extra_serve_args=reasoning_serve_args(
+                args.model_name,
+                args.reasoning_parser,
+            ),
+            max_num_seqs=args.max_num_seqs
         )
         server.start()
         extractor = make_langextract_extractor(
+            provision=provision,
             model_name=args.model_name,
             port=args.port,
-            max_char_buffer=args.max_char_buffer,
-            extraction_passes=args.extraction_passes,
-            langextract_max_workers=args.langextract_max_workers,
-            langextract_batch_length=args.langextract_batch_length,
         )
-
-        verify_client = None
-        if args.verify_llm:
-            verify_client = validate.make_verify_client(args.port)
 
         def processor(job: ExtractionJob) -> ExtractionResult:
             return process_extraction_job(
                 job=job,
                 extractor=extractor,
                 force=args.force,
-                validate_enabled=args.validate,
-                verify_client=verify_client,
-                verify_model_name=args.model_name,
             )
 
         results = run_extraction_queue(

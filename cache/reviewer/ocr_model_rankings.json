@@ -1,13 +1,13 @@
 {
   "method": "regularized_bradley_terry_with_valued_ties",
-  "generated_at": "2026-08-13T02:13:07.784972+00:00",
-  "judgment_count": 125,
-  "model_count": 3,
+  "generated_at": "2026-08-13T18:15:50.318539+00:00",
+  "judgment_count": 150,
+  "model_count": 4,
   "choice_counts": {
     "both_bad": 4,
-    "both_good": 80,
-    "left_better": 21,
-    "right_better": 20
+    "both_good": 98,
+    "left_better": 23,
+    "right_better": 25
   },
   "tie_quality_weight": 0.5,
   "l2": 0.5,
@@ -15,60 +15,77 @@
   "score_definition": "Estimated percentage chance of beating a fixed neutral-quality baseline; higher is better and 50 is neutral.",
   "rankings": [
     {
-      "model": "AIDC-AI_Ovis2.6-30B-A3B",
-      "score": 89.9507109140472,
+      "model": "ATH-MaaS_OvisOCR2",
+      "score": 93.41401599361441,
       "score_ci_95": [
-        78.883213797899,
-        95.54521063268145
+        81.76438632602799,
+        97.81984178693729
       ],
-      "log_strength": 2.1917599695141607,
-      "strength": 8.950952663883752,
-      "decisive_wins": 21,
-      "decisive_losses": 11,
-      "both_good": 55,
-      "both_bad": 4,
-      "total_comparisons": 91,
+      "log_strength": 2.6520976426226515,
+      "strength": 14.18375992153077,
+      "decisive_wins": 7,
+      "decisive_losses": 0,
+      "both_good": 15,
+      "both_bad": 0,
+      "total_comparisons": 22,
       "rank": 1
     },
     {
-      "model": "Qwen_Qwen3.6-27B-FP8",
-      "score": 87.42635762695545,
+      "model": "AIDC-AI_Ovis2.6-30B-A3B",
+      "score": 89.09815219019835,
       "score_ci_95": [
-        74.53719611913792,
-        94.29082073325354
+        78.7104956576578,
+        94.75515362109725
       ],
-      "log_strength": 1.9391940641008096,
-      "strength": 6.953144922777564,
-      "decisive_wins": 8,
-      "decisive_losses": 13,
-      "both_good": 65,
-      "both_bad": 1,
-      "total_comparisons": 87,
+      "log_strength": 2.100806296953066,
+      "strength": 8.172756925673813,
+      "decisive_wins": 21,
+      "decisive_losses": 14,
+      "both_good": 61,
+      "both_bad": 4,
+      "total_comparisons": 100,
       "rank": 2
     },
     {
-      "model": "google_gemma-4-31B-it",
-      "score": 86.59283797198093,
+      "model": "Qwen_Qwen3.6-27B-FP8",
+      "score": 86.97940711540915,
       "score_ci_95": [
-        72.61082539616925,
-        94.02451319474923
+        75.36338356257679,
+        93.58475747016105
       ],
-      "log_strength": 1.8654280658699094,
-      "strength": 6.45870004338085,
-      "decisive_wins": 12,
-      "decisive_losses": 17,
-      "both_good": 40,
-      "both_bad": 3,
-      "total_comparisons": 72,
+      "log_strength": 1.8991392186192946,
+      "strength": 6.680141825058088,
+      "decisive_wins": 8,
+      "decisive_losses": 15,
+      "both_good": 77,
+      "both_bad": 1,
+      "total_comparisons": 101,
       "rank": 3
+    },
+    {
+      "model": "google_gemma-4-31B-it",
+      "score": 85.57614797161685,
+      "score_ci_95": [
+        72.39099530869707,
+        93.06751461436167
+      ],
+      "log_strength": 1.780523371988003,
+      "strength": 5.9329607516231295,
+      "decisive_wins": 12,
+      "decisive_losses": 19,
+      "both_good": 43,
+      "both_bad": 3,
+      "total_comparisons": 77,
+      "rank": 4
     }
   ],
   "source_path": "/home/scro4406/cba-analysis/cache/reviewer/ocr_comparisons.jsonl",
-  "model_scope": "top_3_general_vlms",
+  "model_scope": "top_ocr_models",
   "included_models": [
     "AIDC-AI_Ovis2.6-30B-A3B",
+    "ATH-MaaS_OvisOCR2",
     "Qwen_Qwen3.6-27B-FP8",
     "google_gemma-4-31B-it"
   ],
-  "source_judgment_count": 207
+  "source_judgment_count": 232
 }

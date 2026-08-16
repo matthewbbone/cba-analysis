@@ -1,6 +1,6 @@
 # EQUAL EMPLOYMENT OPPORTUNITY
 
-It shall be the objective of the Company and Local Union 965, 1.B.E.W., to provide equal opportunity in employment and promotion to all persons covered by the terms of this Agreement without regard to race, religion, color, sex, age, national origin, ancestry, handicap, disabled and Vietnam - era veteran status, marital status, sexual orientation or arrest record.
+It shall be the objective of the Company and Local Union 965:1.B.E.W., to provide equal opportunity in employment and promotion to all persons covered by the terms of this Agreement without regard to race, religion, color, sex, age, national origin, ancestry, handicap, disabled and Vietnam - era veteran status, marital status, sexual orientation or arrest record.
 
 ## LABOR MANAGEMENT COUNCIL
 

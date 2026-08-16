@@ -8,7 +8,7 @@ ARTICLE XXXVI—WAGE SCHEDULE FOR PHYSICAL POSITIONS
 
 ENGINEERING
 
-|  |  |  |  | (Each step represents a six-month increment) | (Each step represents a six-month increment) | (Each step represents a six-month increment) | (Each step represents a six-month increment) | (Each step represents a six-month increment) |  |
+|  |  | [Each step represents a six-month increment] | [Each step represents a six-month increment] | [Each step represents a six-month increment] | [Each step represents a six-month increment] | [Each step represents a six-month increment] | [Each step represents a six-month increment] | [Each step represents a six-month increment] | [Each step represents a six-month increment] |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | NO. | POSITION | STEP 1 | STEP 2 | STEP 3 | STEP 4 | STEP 5 | STEP 6 | STEP 7 | STEP 8 |
 | J01245 | Engineering Technician | N | $27.71 | $28.25 | $28.73 | $29.22 | $29.82 |  |  |

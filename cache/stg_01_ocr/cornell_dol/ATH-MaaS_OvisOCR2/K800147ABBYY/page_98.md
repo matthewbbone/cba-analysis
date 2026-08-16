@@ -1,8 +1,6 @@
 ## APPENDIX D
 
-## Class Series
-
-## Furlough
+## Class Series Furlough
 
 | Class Code | Class Code | Title | Pay Range |
 | --- | --- | --- | --- |

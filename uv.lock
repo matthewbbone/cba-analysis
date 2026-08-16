@@ -288,6 +288,7 @@ dependencies = [
     { name = "pillow" },
     { name = "pymupdf" },
     { name = "python-dotenv" },
+    { name = "pyyaml" },
     { name = "tqdm" },
     { name = "vllm" },
 ]
@@ -304,6 +305,7 @@ requires-dist = [
     { name = "pillow" },
     { name = "pymupdf" },
     { name = "python-dotenv" },
+    { name = "pyyaml" },
     { name = "tqdm" },
     { name = "vllm", specifier = ">=0.26.0" },
 ]

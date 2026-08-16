@@ -6,6 +6,10 @@ import unittest
 from unittest.mock import patch
 
 from pipeline.utils import vllm_server
+from pipeline.utils.gpu import (
+    normalize_cuda_device_ids,
+    validate_cuda_device_selection,
+)
 
 
 class VllmServeCommandTests(unittest.TestCase):
@@ -245,6 +249,84 @@ class VllmCudaRuntimeTests(unittest.TestCase):
 
 
 class VllmGpuVisibilityTests(unittest.TestCase):
+    def test_normalizes_cuda_device_ids(self) -> None:
+        self.assertIsNone(normalize_cuda_device_ids(None))
+        self.assertEqual(normalize_cuda_device_ids("02"), "2")
+        self.assertEqual(normalize_cuda_device_ids(" 1, 03 "), "1,3")
+
+    def test_rejects_invalid_cuda_device_ids(self) -> None:
+        for device in ("", "-1", "gpu1", "1,,2", "1,01"):
+            with self.subTest(device=device), self.assertRaises(ValueError):
+                normalize_cuda_device_ids(device)
+
+    def test_requires_one_selected_device_per_requested_gpu(self) -> None:
+        self.assertEqual(validate_cuda_device_selection("1,3", 2), "1,3")
+        with self.assertRaisesRegex(ValueError, "selects 2 GPU"):
+            validate_cuda_device_selection("1,3", 1)
+
+    def test_explicit_device_overrides_child_visibility_only(self) -> None:
+        captured: dict[str, dict[str, str]] = {}
+        process = SimpleNamespace(poll=lambda: 0)
+
+        def validate_visibility(
+            executable: str,
+            num_gpus: int,
+            env: dict[str, str],
+        ) -> int:
+            del executable, num_gpus
+            captured["validation_env"] = dict(env)
+            return 1
+
+        def start_process(command, **kwargs):
+            del command
+            captured["process_env"] = dict(kwargs["env"])
+            return process
+
+        with TemporaryDirectory() as tmp_dir, patch.dict(
+            os.environ,
+            {
+                "LOG_DIR": tmp_dir,
+                "CACHE_DIR": tmp_dir,
+                "CUDA_VISIBLE_DEVICES": "0,1",
+            },
+        ), patch.object(
+            vllm_server.VLLMServer,
+            "_wait",
+        ), patch(
+            "openai.AsyncOpenAI",
+            return_value=object(),
+        ), patch.object(
+            vllm_server,
+            "python_executable",
+            return_value="python",
+        ), patch.object(
+            vllm_server,
+            "validate_vllm_cuda_runtime",
+        ), patch.object(
+            vllm_server,
+            "ensure_ovis26_tokenizer",
+            return_value=None,
+        ), patch.object(
+            vllm_server,
+            "package_library_paths",
+            return_value=[],
+        ), patch.object(
+            vllm_server,
+            "validate_gpu_visibility",
+            side_effect=validate_visibility,
+        ), patch.object(
+            vllm_server.subprocess,
+            "Popen",
+            side_effect=start_process,
+        ):
+            server = vllm_server.VLLMServer("example/model", device="3")
+            server.start()
+            self.assertEqual(os.environ["CUDA_VISIBLE_DEVICES"], "0,1")
+            server.close()
+
+        self.assertEqual(captured["validation_env"]["CUDA_VISIBLE_DEVICES"], "3")
+        self.assertEqual(captured["process_env"]["CUDA_VISIBLE_DEVICES"], "3")
+
     def test_project_dotenv_overrides_cuda_visible_devices(self) -> None:
         with TemporaryDirectory() as tmp_dir:
             dotenv_path = Path(tmp_dir) / ".env"

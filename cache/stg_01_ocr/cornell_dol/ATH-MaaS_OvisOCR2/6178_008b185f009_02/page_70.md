@@ -17,7 +17,7 @@ ARTICLE III -- JUNIOR HIGH SCHOOL ACTIVITIES
 | 3-1-1 | Basketball (Mens/Womens) |  |  |  |  |
 | 3-1-1 | 1. Head (interscholastic) | .06 | .06 | 2,040 | 2,130 |
 | 3-1-1 | 2. Head Intramural/First Assistant | .05 | .05 | 1,700 | 1,780 |
-| 3-1-1 | 3. 7th & 8th (Maximum of 4 for total of mens and womens | .05 | .05 | 1,700 | 1,780 |
+| 3-1-1 | 3. 7th & 8th (Maximum of 4 for total of mens and womens) | .05 | .05 | 1,700 | 1,780 |
 | 3-1-2 | Cross Country (Mens/Womens) | .05 | .05 | 1,700 | 1,780 |
 | 3-1-2 | If mens/womens combined | .06 | .06 | 2,040 | 2,130 |
 | 3-1-3 | Football (Mens) |  |  |  |  |

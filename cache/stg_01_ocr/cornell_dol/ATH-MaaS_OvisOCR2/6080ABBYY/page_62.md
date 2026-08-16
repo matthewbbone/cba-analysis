@@ -26,18 +26,18 @@ MAINTENANCE
 | J01316 | Maintenance Electrician | N | $27.59 | $27.94 | $28.50 | $28.89 |
 | --- | --- | --- | --- | --- | --- | --- |
 | J01315 | Maintenance Electrician (Evening) | N | $27.59 | $27.94 | $28.50 | $28.89 |
-| J01341-J01344 | Maintenance Electrician Apprentice |  | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) |
+| J01341-J01344 | Maintenance Electrician Apprentice |  | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) |  |
 | J01321 | Maintenance Instrument and Control | N | $27.59 | $27.94 | $28.50 | $28.89 |
-| J01345-J01348 | Maintenance Instrument and Control Apprentice |  | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) |
+| J01345-J01348 | Maintenance Instrument and Control Apprentice |  | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) |  |
 | J01322 | Maintenance Instrument and Control (Nelson Dewey/Rock River) | N | $27.59 | $27.94 | $28.50 | $28.89 |
-| J01349-J01350 | Maintenance Instrument and Control (RR/ND) Apprentice - 1st & 2nd Yr |  | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) |
-| J02843 | Maintenance Instrument and Control (RR/ND) Apprentice - 3rd Year |  | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) |
+| J01349-J01350 | Maintenance Instrument and Control (RR/ND) Apprentice - 1st & 2nd Yr |  | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) |  |
+| J02843 | Maintenance Instrument and Control (RR/ND) Apprentice - 3rd Year |  | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) |  |
 | J01317 | Maintenance Technician - Electrical | N | $28.15 | $28.51 | $29.06 | $29.48 |
-| J01351-J01354 | Maintenance Technician - Electrical Apprentice |  | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) |
+| J01351-J01354 | Maintenance Technician - Electrical Apprentice |  | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) |  |
 | J01323 | Maintenance Technician - Electrical (Columbia/Hydros) | N | $28.15 | $28.51 | $29.06 | $29.48 |
 | J01318 | Maintenance Technician - Electrical (Evening Crew) | N | $28.15 | $28.51 | $29.06 | $29.48 |
 | J01313 | Maintenance Technician - Mechanical | N | $26.68 | $27.03 | $27.44 | $27.77 |
-| J01308-J01311 | Maintenance Technician - Mechanical Apprentice |  | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) |
+| J01308-J01311 | Maintenance Technician - Mechanical Apprentice |  | (See Apprentice Schedule) | (See Apprentice Schedule) | (See Apprentice Schedule) |  |
 | J01325 | Maintenance Technician - Mechanical (Evening) | N | $26.68 | $27.03 | $27.44 | $27.77 |
 | J01327 | Maintenance Technician - Mechanical (Night) | N | $26.68 | $27.03 | $27.44 | $27.77 |
 | J01312 | Maintenance Technician - Mechanical - Welding | N | $27.14 | $27.49 | $27.92 | $28.29 |

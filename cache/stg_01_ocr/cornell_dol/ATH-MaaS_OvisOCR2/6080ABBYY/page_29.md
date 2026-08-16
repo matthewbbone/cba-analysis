@@ -2,7 +2,7 @@ have a Journeyman or a Third Year or Fourth Year Apprentice assisting each Journ
 
 ## ARTICLE XX. VACATIONS
 
-(1) The Manager at District, Generating Station Manager and Area or General Office Department Head is responsible for properly scheduling the annual vacations of employees reporting to the Department Head or Manager in accordance with the following provision:
+(1) The Manager at District, Generating Station Manager, and Area or General Office Department Head is responsible for properly scheduling the annual vacations of employees reporting to the Department. Head or Manager in accordance with the following provision:
 
 (2) Prior to April 1 of each calendar year, employees entitled to vacations will be consulted and from such consultation a working schedule for vacation periods shall be established. Employees will be eligible to schedule, in rotating sequence, the first (1st) and second (2nd) weeks of their vacation and then the balance of the third (3rd), fourth (4th) and fifth (5th) weeks. The Company in determining the vacation schedule will respect the wishes of employees as to the time of taking their vacation insolar as the needs of service will permit. If the vacation schedule for an employee's working group within the seniority group should conflict, seniority shall prevail. At no time, due to position, will seniority have to be sacrificed in preparing vacation schedules.
 

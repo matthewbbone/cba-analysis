@@ -9,6 +9,8 @@ import sys
 import time
 from pathlib import Path
 
+from pipeline.utils.gpu import validate_cuda_device_selection
+
 try:
     from dotenv import dotenv_values, load_dotenv
 except ModuleNotFoundError:
@@ -397,6 +399,7 @@ class VLLMServer:
         language_only: bool = False,
         extra_serve_args: list[str] | None = None,
         max_num_seqs: int | None = None,
+        device: str | int | None = None,
     ):
         if num_gpus < 1:
             raise ValueError("num_gpus must be at least 1")
@@ -412,6 +415,7 @@ class VLLMServer:
         self.num_gpus = num_gpus
         self.gpu_memory_utilization = gpu_memory_utilization
         self.max_num_seqs = max_num_seqs
+        self.device = validate_cuda_device_selection(device, num_gpus)
         self.extra_serve_args = list(extra_serve_args or [])
         self.server = None
         self.client = None
@@ -504,6 +508,8 @@ class VLLMServer:
         )
         
         env = os.environ.copy()
+        if self.device is not None:
+            env["CUDA_VISIBLE_DEVICES"] = self.device
         env["PYTHONUNBUFFERED"] = "1"
         venv_path = os.environ.get("UV_PROJECT_ENVIRONMENT")
         if venv_path:
@@ -528,6 +534,7 @@ class VLLMServer:
             f"port={self.port}\n"
             f"max_model_len={self.max_model_len}\n"
             f"num_gpus={self.num_gpus}\n"
+            f"device={self.device}\n"
             f"gpu_memory_utilization={self.gpu_memory_utilization}\n"
             f"max_num_seqs={self.max_num_seqs}\n"
             f"extra_serve_args={self.extra_serve_args!r}\n"
