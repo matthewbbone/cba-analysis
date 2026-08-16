@@ -1,0 +1,9 @@
+The parties agreed to use the jointly developed process for the use of outside consultants in situations where in-house efforts concerning reduction of job EMSDs are not successful. The consultant's reports will be made available to both the Joint Ergonomics Technician Team and the co-chairs of the NJC.
+
+Based on the results of the job analysis program, each facility shall implement feasible measures to control EMSD risk factors. The Joint Ergonomics Technician Team, in conjunction with input from the workers, engineering, supervision, skilled trades and others, as appropriate, will make recommendations for corrective actions in accordance with the current ergonomics process. Once it is determined through the agreed upon ergonomics process that a job requires correction, recommendations for corrective action will be developed using the results of the jointly agreed upon analysis tools. GM Ergonomics Machinery and Equipment Guidelines may be referenced for information regarding areas for potential improvement. These guidelines will undergo revisions as deemed appropriate by the Company with input from the UAW. A good-faith effort will be made to accomplish correction of identified EMSD hazards at a particular job or work station within six (6) months, after the Joint Ergonomics Technician Team determines that corrective action is required. The parties acknowledge that there may be times when it may take longer than six (6) months to make the proper correction, and those reasons need to be documented. The corrective action will include any combination of the following:
+
+Engineering controls such as design, selection, location and orientation of tools, parts and equipment will be used.
+
+Administrative controls (e.g., job enlargement, job rotation, and appropriate job assignment)
+
+293

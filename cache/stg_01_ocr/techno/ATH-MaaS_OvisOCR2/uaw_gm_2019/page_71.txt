@@ -1,0 +1,9 @@
+Department on forms provided by the Corporation on which they may state their qualifications and experience. Thereafter, as openings occur, selection for the promotion will be from among such applicants and applicants for that classification that have filed pursuant to sub-Paragraph (2) below, who have applied at least one (1) week in advance of the opening in question, and where ability, merit and capacity are equal, the applicant with the longest seniority will be given preference.
+
+[See Par. (120)]
+
+[See Doc. 69]
+
+(63)(a)(2) Employees who desire advancement within the plant to higher paid classifications in another department or to higher paid classifications where the employee is working outside an established scope of selection that is broader than a department may make application to their supervisor or the Personnel Department on forms provided by the Corporation on which they may state their qualifications and experience. Thereafter, as openings occur, such applicants will be considered in the selection process for that promotion provided they have so applied at least one (1) week in advance of the opening in question. Each employee may have two (2) such applications on file. An employee who has been transferred and established seniority under this Paragraph (63) (a) (2) will not be eligible to reapply for consideration for another such promotion until six (6) months have elapsed from the effective date of transfer. An employee who has been offered a transfer and refused the transfer under this Paragraph (63)(a)(2) will have such application for transfer cancelled and thereafter, for a period of six (6) months from the date of such refusal, may be entitled to only one (1) valid application for transfer under these provisions. Such transfer or offer of transfer to employees working outside a scope of selection shall be without prejudice to the establishment or identification of such scope.
+
+48

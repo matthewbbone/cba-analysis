@@ -1,0 +1,11 @@
+## Article 4
+
+afforded the right to leave his/her work area for a reasonable period of time to investigate, present and process grievances and to represent a fellow employee concerning grievances or discipline so long as such activity does not interrupt the Employer's operations. This shall include the steward's right to represent an employee in connection with any grievance concerning safety issues. The Employer will make a reasonable effort to insure that its operations are not interrupted by the steward's engaging in such activity. The Employer shall not use interruption of its operation as a subterfuge for denying such right to the steward.
+
+Where mutually agreed to by the Local Union and Employer, stewards may investigate off the property or other than during their regular schedule, without loss of time or pay. Stewards will be paid for time spent in meetings under this Article which occur during the steward's regular working hours. Stewards shall also be paid for time spent in meetings which occur outside his or her working hours, or on days off, by mutual consent. Such time spent during the Job Steward's or the designated alternate's regular working hours shall be considered working hours in computing daily and/or weekly overtime if within the regular schedule of the Job Steward or the designated alternate.
+
+The Employer recognizes the employee's right to be given requested representation by a Steward, or the designated alternate, at such time as the employee reasonably contemplates disciplinary action. The Employer also recognizes the steward's right to be given requested representation by another Steward, or the designated alternate, at such time as the Steward reasonably contemplates disciplinary action. When requested by the Union or the employee, there shall be a steward present whenever the Employer meets with an employee concerning grievances or discipline or investigatory interviews. In such cases, the meeting shall not be continued until the steward or alternate steward is present.
+
+If an employee does not wish to have a Union Steward in any meeting where the employee has a right to Union representation under this Article, the employee shall sign a waiver of Union representation, a copy of which shall be furnished to the Union upon its request.
+
+14

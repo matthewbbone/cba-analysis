@@ -1,0 +1,27 @@
+Customer Markets Addendum
+
+AMC Compensation Plan
+
+| First Month on WS 3 | - | 100% |
+| --- | --- | --- |
+| Second Month on WS 3 | - | 75% |
+| Third Month on WS 3 | - | 25% |
+| Fourth Month on WS 3 | - | 0% |
+
+### IV. Program Tracking
+
+Results will be accumulated from the first day worked in the month to the last day worked in the month.
+
+### V. Administrative Provisions
+
+The Company reserves the right to establish and revise procedures and policies, to add or delete product and service offerings, and to change product values in accordance with business needs. Before establishing or revising procedures and policies the Company will meet with the Union at the Executive Level to communicate changes prior to implementation. Any Plan change or revision that puts the base amount and/or target amount in jeopardy will first be negotiated with the Union at the Executive Level.
+
+Management will have the responsibility to adjust objectives to ensure equitable treatment of all parties. Management will also notify plan participants prior to implementation of changes or revisions to the Plan.
+
+The Plan will be administered by the Compensation and Tracking Group within the AMC's sales support organization.
+
+### A. Review and Adjustments
+
+Achievement reviews will be conducted quarterly by the AMC's AVP-Sales. The AVP-Sales and Vice President/General Manager will review an individual's objective assignment for each Plan participant below 75% year-to-date attainment and above 150% year-to-date attainment. The Compensation and Tracking Group may modify objectives as business needs dictate.
+
+350

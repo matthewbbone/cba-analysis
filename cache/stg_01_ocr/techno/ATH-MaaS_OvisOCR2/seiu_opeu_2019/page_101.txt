@@ -1,0 +1,15 @@
+represented marine employees of Oregon State University’s College of Oceanography, applies to a classified employee working in a classification within OSU’s sailing compliment.
+
+The Union further acknowledges that the drug and alcohol testing requirements contained in this policy have been established as the result of federal mandates. If the federal regulation (46 CFR Parts 4, 5, and 16) or the Coast Guard regulations affecting this policy are changed, either party may initiate bargaining of the sections of the policy affected by the regulation changes.
+
+## ARTICLE 56: EDUCATION, TRAINING AND DEVELOPMENT
+
+Section 1. Each university shall make available educational and developmental opportunities to support the training and professional development for all employees at least once per year. Such opportunities may include but not be limited to: on-the-job training, developmental work assignments, participation in mentoring programs, appointment to committees, cross-training, education stipends and participation in professional conferences, institutes, workshops, and online training. Assistance to the employee may include registration or tuition fees, educational leave with pay, travel and per diem at prevailing rates. A denial of an employee’s written request to access these opportunities shall be in writing, listing the reasons for denial.
+
+Section 2. The Employer will provide normal promotional path and career development counseling for bargaining unit employees. Counseling may include review of the minimum qualifications necessary for potential classifications. Bargaining unit employees are encouraged to contact their appropriate university’s Human Resources Office to secure promotional path counseling within their university. The Union will notify bargaining unit employees of the career counseling services.
+
+Section 3. At each university, two (2) university employee Union representatives and two (2) Employer representatives will meet, if requested by either party, to discuss application of this Article.
+
+Section 4. Each university shall encourage its employees to avail themselves of educational opportunities presented by the institution for which they work. Subject to the operating requirements of the university, each university shall make reasonable efforts to provide release time so as to allow employees to attend courses of their choice. Such release time shall be charged against the employee's accrued and unused vacation leave, compensatory time off or leave without pay at the employee's option; provided, that the Employer may, in its discretion, grant such time off with pay without any charges to vacation or compensatory time accounts. When an employee has been granted release time to attend a course(s) which management determines is directly related to the employee's ability to perform duties of the employee's current position, the university shall grant such time without charges against accrued leave. Prior to enrollment, the employer and employee will identify written terms for the appropriate use of leave, leave without pay, or work time for the duration of the course.
+
+96

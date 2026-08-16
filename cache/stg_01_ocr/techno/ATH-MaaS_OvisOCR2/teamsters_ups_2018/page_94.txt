@@ -1,0 +1,11 @@
+## Article 26
+
+drivers in the center. If sufficient volunteers cannot be obtained to cover the over sixty (60) work hours, the Company will first force seasonal package car drivers, non-seniority package car drivers, part-time cover driver classifications and, then Article 22.4(b) drivers. Seniority package car drivers will only be forced after exhausting the seasonal, non-probationary drivers force process, part-time cover driver classifications and Article 22.4(b) drivers. No regular package car driver red circled under Article 22.4(b) will be forced to work on a day off and exceed sixty (60) hours unless he has a full eight (8) hours of duty available. Any regular or Article 22.4 package car driver who volunteers or is forced to work over sixty (60) hours in a week pursuant to this paragraph will be compensated at double-time for those hours. This paragraph supersedes any provision in any Supplement, Rider or Addendum which addresses this subject. This Section is not intended to give the Company the right to force seniority package car drivers to work on a weekend unless permitted by the applicable Supplement, Rider or Addendum.
+
+### Section 6. Removal of Loads from Rails
+
+In order to enhance employees’ opportunities to obtain a full-time job and improve the Company’s ability to reduce time-in-transit and improve service, the following provisions will apply:
+
+1. The Company commits that the number of new drivers needed to remove loads from the rail shall be, at least, two thousand (2000), over the life of the current contract. The Company shall be required to train or hire, at least two hundred (200) drivers by December 31, 2019 and twenty-five percent (25%) of the remaining needed drivers each calendar year thereafter. As long as the Company satisfies these hiring/training obligations, it shall have the right to cover these runs with substitute means of transportation. The Employer shall provide the Union a report identifying the loads covered by this Section. The Company shall meet with the Union to resolve any issues which may arise if circumstances beyond the Company's control preclude the Company from training or hiring needed drivers in any area. The Company shall train or hire a sufficient number of drivers to cover these runs by the end of the current labor agreement.
+
+84

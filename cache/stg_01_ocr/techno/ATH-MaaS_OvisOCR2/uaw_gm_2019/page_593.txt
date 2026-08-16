@@ -1,0 +1,9 @@
+ADAPT PROGRAM
+
+Furthermore, it is understood that although the ADAPT Program is a voluntary Program, each UAW represented employee with a restriction written by the plant medical department will view a video presentation describing the ADAPT Program. At the conclusion of the ADAPT video, the employee may complete an ADAPT Program entry form or waive the right to participate in the ADAPT Program. Employees electing to complete the ADAPT Program entry form will be directed to ADAPT for entrance into the program. Employees will remain in their current status until such time that the employee has been processed through the Program, placed on disability leave or deemed as “No Job Available Within Restriction” (NJAWR) signed jointly by the local ADAPT Representatives.
+
+The process will be administered at the plant level in accordance with existing National Guidelines.
+
+The parties acknowledged that the proper implementation of the ADAPT Program has successfully provided the mechanism for thousands of UAW-GM employees with restrictions or disabilities an opportunity to be either retained at work or return to work on meaningful jobs. It was agreed that emphasis must be placed on Step 3 (Conduct Job Search) of the 6 Step ADAPT process focusing on job modifications. Upon findings that reasonable accommodation cannot be made to the employee's normal job (pursuant with the Local Seniority Agreement) or modification to that job will cause an undue hardship to the Company, local Management will provide in writing a statement of unreasonable accommodation or a statement of undue hardship for the employee's ADAPT file. The National Parties will develop a formal process to review these written statements. It was reaffirmed that members of the local ADAPT Committee (consisting of Key 4
+
+570

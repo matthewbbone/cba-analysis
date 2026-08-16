@@ -1,0 +1,9 @@
+(40) Dues deductions shall be remitted to the designated financial officer of the Local Union once each month as soon as available but no later than 10 days after the regular deduction date. Any deductions made from subsequent payrolls or from Regular Benefits paid during payroll periods that end in the calendar month shall be included with the remittance for the following month. Local Management shall furnish the designated financial officer of the Local Union, monthly, with the names, social security numbers, department numbers and clock numbers of those for whom deductions have been made, the amounts of the deductions and the amounts deducted, by employee and in total, respectively, for initiation fees, regular monthly dues, and S.U.B. dues. Regular monthly dues and S.U.B. dues shall be identified as to the period to which such deductions apply. This information should be furnished along with the dues remittance. The designated financial officer will be advised of the order in which the names will be listed and of any future changes in the order of the listing as far in advance as possible. The foregoing notwithstanding, deductions made on a declining balance basis, deductions of a past dues or initiation fee liability from a Regular Benefit and deductions from pay for a liability incurred more than six (6) months prior to the actual deduction date will not be identified to a specific deduction month.
+
+[See Par. (4d), (4n)]
+
+[See Doc. 18,19]
+
+(4p) Any dispute which may arise as to whether or not an employee properly executed or properly revoked an Authorization for Check-Off of Dues form, shall be reviewed with the employee by a representative of the Local Union and a representative of Local Management. Should this review not dispose of the matter, the dispute may be referred to the Umpire, whose decision shall be final and binding on the employee, the Union and the
+
+10

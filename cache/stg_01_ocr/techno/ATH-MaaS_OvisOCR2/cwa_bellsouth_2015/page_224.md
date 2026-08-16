@@ -1,0 +1,33 @@
+Article
+
+| CONDITION | WEEKS OF ELIGIBILITY | WEEKS OF ELIGIBILITY |
+| --- | --- | --- |
+| • Regular full-time and regular part-time employees with at least 6 months of service but less than 5 years of service, who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 2 WEEKS* | 2 WEEKS* |
+|  | *An employee who has six months or more service but less than one year of service, at the time of entering the PARTNERSHIP Job Bank (PJB), and is receiving one week of termination pay will be eligible for two weeks in the PJB. One of the weeks in the PJB with pay (receipt of term pay) and one week without pay. | *An employee who has six months or more service but less than one year of service, at the time of entering the PARTNERSHIP Job Bank (PJB), and is receiving one week of termination pay will be eligible for two weeks in the PJB. One of the weeks in the PJB with pay (receipt of term pay) and one week without pay. |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | YEARS SVC. | WEEKS ELIG. |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 5-6 | 4 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 7 | 5 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 8 | 6 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 9 | 7 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 10 | 8 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 11 | 10 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 12 | 12 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 13 | 14 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 14 | 16 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 15 | 18 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 16 | 20 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 17 | 22 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 18 | 24 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 19 | 26 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 20 | 28 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 21 | 30 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 22 | 32 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 23 | 34 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 24 | 35 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 25 | 36 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 26 | 37 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 27 | 38 |
+| • Regular full-time and regular part-time employees with 5 or more years of service who are to be laid off under the provisions of Article 7.<br>• Permanently medically restricted employee as identified in Article 8.05A. | 28 | 39 |
+| 29+ | 52 |  |
+
+216

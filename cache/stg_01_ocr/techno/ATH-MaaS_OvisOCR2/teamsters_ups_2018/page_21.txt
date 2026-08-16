@@ -1,0 +1,11 @@
+Article 3
+
+unit work until bargaining unit employees are available. The Employer shall make every reasonable effort to maintain a sufficient workforce to staff its operations with bargaining unit employees. The Employer also agrees that supervisors or other employees of the Employer who are not members of the bargaining unit shall not perform bargaining unit work in preparing the work areas before the start of the Employer's hub, preload or reload operation, nor shall the Employer send any bargaining unit employee home and then have such employee's work performed by a supervisor or other employees of the Employer who are not a member of the bargaining unit.
+
+(b) When additional employees are necessary to complete the Employer’s operations on any shift or within any classification, the supervisor shall exhaust all established local practices to first use bargaining unit employees including where applicable, double shifting, early call-in, and overtime.
+
+(c) If there is no established local practice, the following shall apply with regard to inside work. Within each building, each operation will maintain appropriate list(s), by seniority, of those part-time employees requesting coverage work. It will be the employees' responsibility to sign up on the appropriate list. The Company shall post such lists and employees who are interested in adding their names to the lists shall do so on the first working day of each month. It will be the employee's responsibility to make sure his/her contact information is correct. Employees who are unavailable to work on three (3) separate occasions within a calendar month shall have their names removed from the coverage list. Those employees shall be eligible to re-sign the list the following month. When coverage work is available, the Company will use the appropriate list to fill the required positions, and such employees will work as assigned. The employee must be qualified for the available work and double shift employees shall have seniority among themselves. No employee is allowed to work more than two (2) shifts in any twenty-four (24) hour period. Local call verification practices and procedures shall remain in place.
+
+Nothing contained in this Section shall change existing practices or procedures covering full-time work.
+
+11

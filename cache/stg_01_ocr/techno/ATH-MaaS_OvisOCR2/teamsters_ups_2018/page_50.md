@@ -1,0 +1,23 @@
+## Article 15
+
+shall include continuation of health coverage as provided by US-ERRA, and pension contributions for the employee's period of service, as provided by USERRA. Employees shall be subject to all obligations contained in USERRA which must be satisfied for the employees to be covered by the statute.
+
+The Employer, in its discretion, may make additional payments or award additional benefits to employees on leave for service in the uniformed services in excess of the requirements outlined in the USERRA.
+
+## Section 2. Vacation Restoration
+
+Employees on USERRA-approved military leave shall continue to accrue vacation to be used upon return as set forth below. To be eligible for accrual, employees must be (i) employed by UPS for at least one (1) year, (ii) be a member of the uniformed services at time of callup, and (iii) be called into active duty (other than for training) for a period of service exceeding thirty (30) days pursuant to any provision of law because of a war or national emergency declared by the President of the United States or Congress. An eligible employee returning to work as per USERRA shall be entitled to annual vacation for the remainder of that contractual vacation period based on the number of weeks to which he/she is entitled for years of service and the quarter in the current contractual vacation period in which the employee returns from eligible military leave, as follows:
+
+| No. Wks | Q1 | Q2 | Q3 | Q4 |
+| --- | --- | --- | --- | --- |
+| 6 | 6 | 4 | 3 | 1 |
+| 5 | 5 | 3 | 2 | 1 |
+| 4 | 4 | 3 | 2 | 1 |
+| 3 | 3 | 2 | 1 | 1 |
+| 2 | 2 | 1 | 1 | 1 |
+
+In no event shall the employee have less than one (1) week of vacation available upon his/her return.
+
+For the next contractual vacation period, the employee shall be credited with the vacation he would have accrued while he was on military leave. In no event shall the employee have less than he is
+
+-40-

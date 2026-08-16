@@ -1,0 +1,27 @@
+## Article 43
+
+It is the intent of the parties to make the driver whole for all justified delay time, such as waiting for late loads, unscheduled on property work, accident delay or on road equipment breakdown. Any disputes will be referred to the Joint Premium Service Review Committee.
+
+(8) Solo Driving
+
+There shall be no solo driving permitted in sleeper cab operations, except in cases of emergency. In case of emergency where one (1) driver is used to complete a sleeper cab trip, the driver so used shall receive the full mileage rate of pay per unit mile traveled in addition to all other compensation provided for herein. In cases of emergency solo driving of such length that a rest period is necessary, the driver, in addition, shall be provided the cost of lodging for such rest period.
+
+(9) Layover Pay
+
+In the event a driver is required to take a rest period during any one (1) round trip away from his home center, the driver shall be compensated at his regular hourly rate of pay for all hours after the first eight (8) hours of the layover.
+
+(10) Mileage Determination
+
+Sleeper drivers shall be paid for the scheduled miles that they drive, on a point-to-point basis over the routes driven. The method of measurement for mileage under this provision will be Microsoft Streets and Trips mapping or similar successor software.
+
+(11) All employees entering after August 1, 2018, a job classification paid on a mileage rate, who have not yet completed a full-time progression, shall be paid a progression rate equal to the following:
+
+|  | Single | Double | Triple |
+| --- | --- | --- | --- |
+| Start | .5816 | .5939 | .6062 |
+| Twelve (12) Months | .6203 | .6335 | .6466 |
+| Twenty-Four (24) Months | .6591 | .6731 | .6871 |
+| Thirty-Six (36) Months | .6979 | .7127 | .7275 |
+| Forty-Eight (48) Months | TOP RATE | TOP RATE | TOP RATE |
+
+-176-

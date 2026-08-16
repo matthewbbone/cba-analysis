@@ -1,0 +1,9 @@
+3) Employees who do not desire overtime must notify their supervisors in writing. This notification will be indicated by an asterisk on the report and will remain in effect until canceled in writing. The initial notification and the subsequent cancellation must be received at least one week prior to the posting of the overtime report.
+
+4) For situations where there are not enough qualified volunteers, the general manager or their designee and the Local President will meet to discuss alternatives before forcing overtime.
+
+2. Non-scheduled, non-connecting overtime will be offered to available qualified employees in the work unit, excluding those who do not desire overtime, in the inverse order of overtime hours worked during the previous period. In work units where a stand-by technician has been designated as described in 4.06B8, the stand-by technician(s) will be contacted prior to any other employees on the overtime list.
+
+3. When an employee declines, after being offered a non-scheduled, non-connecting overtime assignment, the next qualified employee on the overtime report, omitting those who do not desire overtime, will be contacted. This procedure will be followed until someone accepts or all available qualified employees in the unit have been contacted and offered the assignment. Should all available qualified employees in the unit decline, the overtime will be assigned to the employee lowest in seniority and qualified, including those who do not desire overtime, unless the employee has a valid personal reason for not accepting the assignment or unless the employee has already worked 12 hours of overtime in the current week. Network Operations employees will be assigned no more than 10 hours of overtime in a calendar week during 4 months in a calendar year or no more than 12 hours in a
+
+51

@@ -1,0 +1,20 @@
+Article
+
+exchange/WRA and in either a Company or Union facility. Should the availability of a mediator unnecessarily delay the processing of the grievance, either party may request that the mediation step be bypassed and the grievance be scheduled for arbitration.
+
+3. Spokespersons for the mediation hearing will normally be as follows:
+
+|  | 2nd Step | 3rd Step |
+| --- | --- | --- |
+| CWA | Local President/designee | CWA Staff Rep |
+| Company | Management designee | Director/designee with primary LR responsibility |
+
+An attorney will not be used by either party at the mediation hearing. The number of employees who will suffer no loss in pay under 21.03 of the Agreement will be no more than 2. Should additional employees be necessary for the complete discovery of facts at the hearing, the parties will agree in advance to the number of additional employees who will attend the conference and suffer no loss in pay under 21.03.
+
+4. The mediation hearing will normally be attended by the grievant, the Local President/designee, the grievant's supervisor and the Director/designee. Attendance at the mediation hearing will be limited to those people actually involved.
+
+5. All written material that is presented to the mediator will be returned to the party presenting the material at the termination of the mediation hearing. The mediator may, however, retain one copy of the written grievance, to be used solely for purposes of statistical analysis.
+
+6. Proceedings before the mediator will be informal in nature. The presentation of evidence is not limited to that which has been presented in the grievance proceedings;
+
+204

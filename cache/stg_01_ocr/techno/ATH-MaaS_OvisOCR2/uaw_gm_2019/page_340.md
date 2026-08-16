@@ -1,0 +1,9 @@
+### XX. PLANNED MAINTENANCE
+
+The NJC will jointly identify health and safety requirements to be integrated into Planned, Predictive and Preventative Maintenance activities. These requirements will include both those that are regulated by government agencies and those established in UAW-GM programs. The LJHSC will also review Planned, Predictive, and Preventative Maintenance activities to assure local regulations and/or practices currently in effect are included. Safety related information such as established safety instructions and safe operating procedures for high risk task, shall be included in the Planned Maintenance Program (e.g., MAXIMO).
+
+### XXI. WORKING ALONE
+
+The parties have discussed the Company's policy regarding the assignment of employees to tasks in isolated locations or confined entry spaces. The Company explained that anytime an employee is assigned to work alone in an isolated area, the Company has instructed Plant Leadership to ensure an appropriate level of personal surveillance. (See jointly agreed to letter from Manufacturing Managers Council dated February 18, 2003.) Additionally, when work assignments have been identified as high risk to an employee, a Safe Operating Procedure will be created and which may include air sampling and ventilation when necessary, communications systems, personal surveillance arrangements and, as required, adequate support personnel. When an employee brings to Management's attention a situation where they are reasonably concerned that their safety is jeopardized because they are working alone, Management will provide a copy of an applicable written Safe Operating Procedure or Safety Instruction to the employee detailing precautions to take to perform the task safely prior to starting work. This will not change or restrict
+
+317

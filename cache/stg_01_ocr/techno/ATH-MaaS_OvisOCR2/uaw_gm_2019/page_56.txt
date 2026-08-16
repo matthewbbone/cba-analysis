@@ -1,0 +1,9 @@
+(1) When a grievance arises involving the above, it shall be reduced to writing on forms provided by the Corporation, signed by the Chairperson of the Shop Committee or the Shop Committeeperson involved, and referred to the Shop Committee at Step Two of the grievance procedure. The grievance may then be processed in the grievance procedure through Step Four under the terms of the National Agreement, unless the Director of the GM Department of the International Union elects otherwise as provided in Paragraph (42a) (2) below.
+
+(2) Within thirty (30) days of the date of Notice of Appeal to the Umpire, written notice will be given to advise the Director of Labor Relations of the Corporation of any case which the Director of the General Motors Department of the International Union has elected to refer back to the Appeal Committee. Thereafter, the bargaining procedure provided in Paragraph (117) may then be applicable.
+
+### Step Four. Appeal to Impartial Umpire
+
+(43) In the event of failure to adjust the case at this point, it may be appealed to the impartial Umpire, providing it is the type of case on which the Umpire is authorized to rule. Notice of appeal of such cases to the Umpire by the Union shall be given by the Regional Director to the Plant Management of the Plant in which the case arose, with copies to the Industrial Relations Staff of the Corporation in Detroit and to the International Union Office at Detroit; in cases appealed to the Umpire by the Corporation, notice of such appeal will be given by the Corporation to the International Union Office in Detroit. Cases not appealed to the Umpire within twenty-one days from the date of a final decision given after review in an Appeal Committee meeting shall be considered settled on the basis of the decisions so given; provided, however, that within
+
+33

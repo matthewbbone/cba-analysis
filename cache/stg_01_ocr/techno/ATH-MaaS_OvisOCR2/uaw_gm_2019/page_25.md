@@ -1,0 +1,9 @@
+engineering department shops in the bargaining units covered hereby, except employees of sales, accounting, personnel and industrial relations departments, superintendents and assistant superintendents, general supervisors, supervisors and assistant supervisors, and all other persons working in a supervisory capacity including those having the right to hire or discharge and those whose duties include recommendations as to hiring or discharging (but not leaders), and those employees whose work is of a confidential nature, time study persons, plant protection employees (but not to include employees assigned to maintenance patrol or fire patrol duties), all clerical employees, chief engineers and shift operating engineers in power plants, designing (drawing board), production, estimating and planning engineers, draftspersons and detailers, physicists, chemists, metallurgists, artists, designer-artists and clay plaster modelers, timekeepers, technical school students, and those technical or professional employees who are receiving training, kitchen and cafeteria help.
+
+## Union Security and Check-Off of Union Membership Dues
+
+(4) An employee who is a member of the Union at the time this Agreement becomes effective shall continue membership in the Union for the duration of this Agreement to the extent of paying an initiation fee and the membership dues uniformly required as a condition of acquiring or retaining membership in the Union.
+
+(4a) An employee who is not a member of the Union at the time this Agreement becomes effective shall become a member of the Union within ten (10) days after the thirtieth (30th) day following the effective date of this Agreement or within ten (10) days after the thirtieth (30th) day following employment, whichever is later, and shall remain a member of the Union, to the
+
+2

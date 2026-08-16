@@ -1,0 +1,9 @@
+OUTSOURCING MORATORIUM
+
+e. It is understood that sourcing decisions made prior to the effective date of the 2019 Agreement will remain as decided
+
+During these negotiations, the parties discussed the Company's concern regarding certain infrequent circumstances as outlined in the Sourcing Criteria paragraph contained within Document 16 attached to this agreement, that may arise with respect to current and next generation work that could potentially create a financial burden on the Company if it did not have the flexibility to adjust the sourcing pattern of any Moratorium protected work. In understanding the Company's concern, the Union agrees that in the event that the Company considers outsourcing of current generation work, the Company will review the reasons with both the Local and International Union in advance and will consider any suggestions that are made relative to how resourcing might be avoided. If resourcing remains the necessary action, the Company will identify replacement work in order to comply with the spirit and intent of the Moratorium. The replacement work will consist of no less than 1.5X the impacted manpower unless mutually agreed otherwise. The Company will make every effort to place the replacement work first in the plant currently performing the work to be resourced, next to other plants in that Area Hire (if any) and finally, to any other UAW-GM location. This sequence will also apply to situations covered by the next paragraph.
+
+The Parties also discussed the occasional need to adjust existing sourcing patterns when protected UAW-built programs experience the process of change from current generation to next generation. These pattern changes can be the result of many different factors, including but not limited to; engineering change, type of materials
+
+567

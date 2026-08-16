@@ -1,0 +1,31 @@
+Article 8
+
+## Section 7.
+
+Deadlocked cases referred from the National Grievance Committee to binding arbitration pursuant to this Article, will be governed by the following procedures:
+
+1. The arbitration process will be administered by the offices of the American Arbitration Association, as follows:
+
+Somerset, NJ
+
+Eastern, Central and Southern
+
+Fresno, CA
+
+Western
+
+2. The current arbitrators will continue to serve, except as changed pursuant to paragraphs 4 and 7 below. Cases will be assigned to arbitrators on a rotating alphabetical basis within each Region based upon the order in which it was docketed at the National Grievance Committee.
+
+3. The panels will consist of the following number of arbitrators who hear American Arbitration Association administered cases in each Region of the IBT:
+
+| Eastern | 9 |
+| --- | --- |
+| Central | 3 |
+| Southern | 3 |
+| Western | 5 |
+
+4. Either party shall have the right, with written notice by December 1 of any year, to require an exchange of lists of two (2) times the number of arbitrators to be assigned to each regional panel by January 1, and on January 15 will alternatively strike from the lists until the correct number of arbitrators is left for each panel. Unless the parties mutually agree otherwise, any arbitrator proposed by the Employer or Union must be a member of the National Academy of Arbitrators and reside within the geographical area covered by the panel. This provision can only be invoked by each party two (2) times during the life of this Agreement.
+
+5. Each arbitrator shall offer one or more potential hearing date(s) within six (6) months of the assignment of the case by the AAA or within six (6) months of a cancellation by either party as outlined
+
+-27-

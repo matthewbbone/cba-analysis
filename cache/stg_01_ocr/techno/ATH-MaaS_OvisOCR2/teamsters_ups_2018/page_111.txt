@@ -1,0 +1,11 @@
+Article 34
+
+(upon becoming a participant, service credit will accrue beginning with the very first hour of service that had been performed when the participant began working in Covered Employment). Employees already participants in the CS Plan at the date this plan is established will be immediately eligible to participate in the UPS/IBT Plan. No benefits are payable unless the participant has at least 5 years of vesting credit or has reached Normal Retirement Age while an employee. One year of vesting credit is earned for each calendar year in which the participant works 750 or more hours. The Employer will grant vesting credit for those employees employed by the Employer before the effective date of the UPS/IBT Plan based on the employment records of the Employer or records of the CS Plan.
+
+(4) Full-time employees will receive one (1) year of Credited Service for each 1801 paid hours in Covered Employment in a calendar year beginning on or after January 1, 2008. Employees will receive partial years of Credited Service in monthly increments (i.e., one month if employee worked 150 or more hours in Covered Employment in that month). For purposes of earning service credit for the service pensions only, full-time employees will receive one week of service credit if he has one hour of service in Covered Employment. For service pensions only, if an employee has 0-19 weeks of service credit, he shall not receive any service credit for that calendar year. If he has 20-39 weeks of service credit, the amount of credit for that year will be equal to a fraction the numerator of which is the number of weeks of credit and the denominator is 40. If the employee has 40 weeks of service credit for that calendar year, he shall receive one year of service credit.
+
+(5) The Employer will be responsible for funding the UPS/IBT Plan as required by applicable law.
+
+(6) In addition to the normal benefit provided in paragraph (2) above, there shall be a service benefit payable after twenty (20), twenty-five (25), thirty (30) and thirty-five (35) years of full-time service. There is a twenty (20) year benefit for anyone who has reached age 50 and the amount will vary based on the person's age. There is a twenty-five (25) year service retirement benefit for anyone who has twenty-five years of service regardless of
+
+101

@@ -1,0 +1,22 @@
+## Article 41
+
+They will be paid no less than what they are entitled to in accordance with Article 41, Section 2 below.
+
+## Section 2. Full-time Wage Progression
+
+(a) Notwithstanding any provision in any Supplements, Riders or Addendum the progressions set forth in Sections 2(c) and 3 below will be controlling with regard to any employee entering a full-time job after August 1, 2018 covered by those Sections.
+
+(b) No employee shall be required to complete a full-time progression more than one (1) time even if he or she transfers between full-time jobs except as set forth in this paragraph. The sole exception is when an employee is awarded a package car or feeder driver job and has not previously held a full-time job which includes driving duties. In such event, the employee will have a break-in rate equal to the employee's current wage rate until six (6) months from the date the employee entered the job. The employee will then go to the prevailing top rate. A part-time air driver who has completed the Article 40 progression, bids a full-time inside job and then a driver job within two (2) years shall have the same break-in period.
+
+(c) The progression for employees entering a package car driving, feeder or other full-time job (other than an air driver, Article 43 jobs or a job covered by Sections 3, 4 or 6 below) after August 1, 2018 shall be as follows:
+
+| Start | 21.00 |
+| --- | --- |
+| Twelve (12) months | 23.00 |
+| Twenty-four (24) months | 24.00 |
+| Thirty-six (36) months | 28.75 |
+| Forty-eight (48) months | Top Rate |
+
+Part-time employees on the payroll as of July 31, 2018 who subsequently are promoted to full-time employment under this paragraph will be red circled until such time as the calculated progression rate exceeds that rate. The transfer date will become his/her full-time start date for purposes of applying the above progression.
+
+-168-

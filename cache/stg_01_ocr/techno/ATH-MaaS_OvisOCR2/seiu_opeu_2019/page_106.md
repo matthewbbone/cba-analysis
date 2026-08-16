@@ -1,0 +1,23 @@
+| Standards |  |  |
+| --- | --- | --- |
+| Deficient | BPI 0% |  |
+
+*Control Point is set at 52% above the low rate of the competency zone. See Appendix H for compensation schedules for Information Technology classifications.
+
+Section 2. Cash Award Program. Supervisors may provide cash awards up to 7.25%, at their discretion at any time(s) during the performance cycle, to recognize completion of projects, achievements of higher competency levels, or other significant events worthy of monetary recognition.
+
+Section 3. Performance Evaluations. An Information Technology employee who receives a performance rating of “Does Not Meet Standards (Deficient)” may file a grievance under Article 49 – Position Descriptions and Performance Evaluations, Section 4. If an IT employee’s supervisor has not completed the employee’s performance evaluation by thirty (30) calendar days after the employee’s salary eligibility date, upon request by the employee, the University Human Resources office will notify the supervisor in writing that the performance evaluation is overdue, with a copy of the notification to the affected employee. If the supervisor has not completed the performance evaluation by ninety (90) calendar days after the employee’s eligibility date, the employee will be given a base pay increase based on a “Meets Standards” rating under Section 1 of this Article, retroactive to the employee’s salary eligibility date.
+
+Section 4(A). Appeal Process. Reclassification requests are subject to the procedures outlined in Article 48- Reclassification Upward-Reclassification Downward.
+
+(B) Movement to a lower competency level for reasons related to poor performance shall be subject to provisions in Article 17 - Discipline and Discharge.
+
+(C) Movement to a lower competency level for reasons unrelated to poor performance shall be subject to provisions in Article 18 - Grievance and Arbitration Procedure.
+
+(D) Competency Level Review. If an employee who is above the control point for their classification and competency level requests to be moved to a higher competency level and such request is denied, the issue of the employee's competency level shall be subject to the provisions in Article 18 Grievance and Arbitration Procedure. However, if such a grievance is appealed through arbitration the employee may not grieve their competency level again until two (2) years after the date the first grievance was filed, unless the employee changes classifications.
+
+Section 5(A). Placement upon Reclassification, Promotion or Demotion. IT employees receiving promotion/reclassification upward shall be placed at least at the starting pay rate of the appropriate competency level for the new classification or shall receive at minimum a five percent (5%) increase above their prior base pay rate, whichever is greater.
+
+(B) An IT employee receiving a promotion to a higher classification shall receive a base pay increase of at least five percent (5%) effective six months following said promotion.
+
+101

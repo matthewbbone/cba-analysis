@@ -1,0 +1,9 @@
+WORK ASSIGNMENTS - SKILLED TRADES
+
+Operations as necessary. Within the other Engineering operations, the classifications are defined by local agreements and will remain unchanged by this document.
+
+The parties clearly recognize the complexity and magnitude of the process necessary to restructure the manufacturing skilled trades workforce. To facilitate this transition, the National Parties agree that each manufacturing location will form multi-functional skilled trades teams for maintenance that are consistent with Doc. No. 40 of the GM-UAW National Agreement. These teams will have members from different skilled trades backgrounds that will perform work across what had previously been existing lines of demarcation, provided they have completed the necessary cross training to enable them to safely perform overlapping work assignments. Skilled team leaders and members may continue to undergo the cross training necessary to enable them to safely perform all overlapping work assignments within their individual capability, with no lines of demarcation, and develop into a highly flexible and more capable skilled workforce. It is recognized that much of the initial training will be acquired through “on the job” training. In addition, all other appropriate related training will be provided. The objective is to create an organization of skilled team leaders and team members who come from various skilled trades backgrounds and are developed into a truly multi-skilled working group.
+
+It will be the responsibility of the local parties to identify and maintain the specific training plans for their sites, subject to the approval of the GM-UAW Skilled Trades and Apprentice Committee. Furthermore, the parties agree that in the event that future skilled maintenance employees are not available from existing GM-UAW skilled trades resources, the parties will acquire or train individuals to meet Management's future staffing
+
+550
