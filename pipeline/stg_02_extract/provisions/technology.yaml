@@ -3,6 +3,10 @@ prompt: |-
   Extract New Technology or Automation clauses from this collective bargaining agreement text.
 
   New Technology or Automation Clause: A Standard Clause that can be incorporated into a collective bargaining agreement (CBA) to memorialize the parties' agreement regarding the scope of the employer's right to introduce new technology or work processes, including labor-saving automation, during the CBA's term. This clause is based on the National Labor Relations Act (NLRA) but also may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector employers. It provides alternative approaches for setting out the employer's authority to implement technological changes, with one formulation affirming a broad and general right to implement new technology or automation and the other promoting a cooperative process that includes union input. It also addresses key considerations regarding the employer's effects bargaining obligations, employee training on new equipment, and procedures for negotiating wage rates for job classifications created or significantly revised in response to technological changes. This clause includes comprehensive drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged to adapt this model clause to suit their specific operational needs.
+
+  Guidelines:
+  1. Only extract text that clearly defines a legal right, permission, obligation, or prohibtion
+  2. Only extract text that explicitly mentions technology, automation, or related terms
 N_EXTRACTION_PASSES: 3
 LANGEXTRACT_MAX_WORKERS: 10
 LANGEXTRACT_BATCH_LENGTH: 10
