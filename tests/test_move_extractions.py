@@ -6,7 +6,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
 
-from pipeline.stg_02_extract import move_extractions
+from pipeline.utils import move_extractions
 
 
 class MoveExtractionsTests(unittest.TestCase):
@@ -50,6 +50,15 @@ class MoveExtractionsTests(unittest.TestCase):
         self._write(ocr_root / "ocr_one" / "doc_c" / "full.txt")
         self._write(ocr_root / "ocr_one" / "doc_c" / "page_1.txt")
 
+        # Stage 03 is keyed by the classification model, which need not match
+        # the extraction model that produced its input.
+        classify_root = src_cache / "stg_03_classify" / self.source
+        self._write(classify_root / "classifier_a" / "doc_a" / "wage_tables.jsonl")
+        self._write(classify_root / "classifier_a" / "doc_b" / "wage_tables.jsonl")
+        self._write(classify_root / "classifier_b" / "doc_a" / "wage_tables.jsonl")
+        # doc_c has classifications but no stage-02 extraction and must not move.
+        self._write(classify_root / "classifier_a" / "doc_c" / "wage_tables.jsonl")
+
         # Shared detector caches are not OCR model-output directories.
         self._write(
             ocr_root
@@ -70,6 +79,14 @@ class MoveExtractionsTests(unittest.TestCase):
         move_extractions.move_grounding(
             self.source,
             "stg_01_ocr",
+            document_dirs,
+            src_cache,
+            dst_cache,
+            dry_run,
+        )
+        move_extractions.move_classifications(
+            self.source,
+            "stg_03_classify",
             document_dirs,
             src_cache,
             dst_cache,
@@ -189,6 +206,92 @@ class MoveExtractionsTests(unittest.TestCase):
                 Path("ocr_two__layout/doc_a/page_1.md"),
             },
         )
+
+    def test_moves_classifications_for_each_model_arm_of_extracted_documents(
+        self,
+    ) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            src_cache = root / "source_cache"
+            dst_cache = root / "destination_cache"
+            self._build_source_cache(src_cache)
+
+            with redirect_stdout(StringIO()):
+                self._move_all(src_cache, dst_cache, dry_run=False)
+
+            classify_root = dst_cache / "stg_03_classify" / self.source
+            classify_files = {
+                path.relative_to(classify_root)
+                for path in classify_root.rglob("*")
+                if path.is_file()
+            }
+
+        self.assertEqual(
+            classify_files,
+            {
+                Path("classifier_a/doc_a/wage_tables.jsonl"),
+                Path("classifier_a/doc_b/wage_tables.jsonl"),
+                Path("classifier_b/doc_a/wage_tables.jsonl"),
+            },
+        )
+
+    def test_cli_filters_classifications_by_document_id(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            src_cache = root / "source_cache"
+            dst_cache = root / "destination_cache"
+            self._build_source_cache(src_cache)
+
+            with redirect_stdout(StringIO()):
+                move_extractions.main(
+                    [
+                        self.source,
+                        "--src-cache",
+                        str(src_cache),
+                        "--dst-cache",
+                        str(dst_cache),
+                        "--document-id",
+                        "doc_b",
+                    ]
+                )
+
+            classify_root = dst_cache / "stg_03_classify" / self.source
+            classify_files = {
+                path.relative_to(classify_root)
+                for path in classify_root.rglob("*")
+                if path.is_file()
+            }
+
+        self.assertEqual(
+            classify_files, {Path("classifier_a/doc_b/wage_tables.jsonl")}
+        )
+
+    def test_cli_no_classify_skips_stage_03(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            src_cache = root / "source_cache"
+            dst_cache = root / "destination_cache"
+            self._build_source_cache(src_cache)
+
+            with redirect_stdout(StringIO()):
+                move_extractions.main(
+                    [
+                        self.source,
+                        "--src-cache",
+                        str(src_cache),
+                        "--dst-cache",
+                        str(dst_cache),
+                        "--no-classify",
+                    ]
+                )
+
+            classify_exists = (dst_cache / "stg_03_classify").exists()
+            extraction_exists = (
+                dst_cache / "stg_02_extract" / self.source
+            ).is_dir()
+
+        self.assertFalse(classify_exists)
+        self.assertTrue(extraction_exists)
 
     def test_selected_ocr_is_copied_when_extraction_source_is_missing(self) -> None:
         with TemporaryDirectory() as tmp_dir:

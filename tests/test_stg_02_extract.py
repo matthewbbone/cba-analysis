@@ -16,7 +16,7 @@ class Stage02ProvisionTests(unittest.TestCase):
     def _definition() -> dict[str, object]:
         return {
             "provision_type": "safety_rule",
-            "prompt": "Extract mandatory workplace safety rules.",
+            "extraction_prompt": "Extract mandatory workplace safety rules.",
             "N_EXTRACTION_PASSES": 2,
             "LANGEXTRACT_MAX_WORKERS": 3,
             "LANGEXTRACT_BATCH_LENGTH": 4,
@@ -38,9 +38,11 @@ class Stage02ProvisionTests(unittest.TestCase):
                 return load_provision(name)
 
     def test_loads_bundled_prompt_only_configs(self) -> None:
-        for name, prompt_fragment in (
-            ("wage_table", "base-wage"),
-            ("technology", "new technology"),
+        # Passes and buffer size are tuned per provision, so assert each config's
+        # own values rather than one shared number.
+        for name, prompt_fragment, passes, char_buffer in (
+            ("wage_table", "base-wage", 5, 10_000),
+            ("technology", "new technology", 3, 5_000),
         ):
             with self.subTest(name=name):
                 provision = load_provision(name)
@@ -53,10 +55,10 @@ class Stage02ProvisionTests(unittest.TestCase):
                 )
                 self.assertIn("context", provision.prompt_description)
                 self.assertIn("null", provision.prompt_description)
-                self.assertEqual(provision.extraction_passes, 5)
+                self.assertEqual(provision.extraction_passes, passes)
                 self.assertEqual(provision.langextract_max_workers, 10)
                 self.assertEqual(provision.langextract_batch_length, 10)
-                self.assertEqual(provision.max_char_buffer, 10_000)
+                self.assertEqual(provision.max_char_buffer, char_buffer)
 
     def test_loads_all_configured_values(self) -> None:
         provision = self._load_temp(self._definition())
@@ -115,8 +117,8 @@ class Stage02ProvisionTests(unittest.TestCase):
 
     def test_rejects_blank_or_wrong_typed_text_fields(self) -> None:
         invalid_values = (
-            ("blank prompt", "prompt", "   "),
-            ("non-string prompt", "prompt", ["safety rules"]),
+            ("blank prompt", "extraction_prompt", "   "),
+            ("non-string prompt", "extraction_prompt", ["safety rules"]),
             ("non-string provision type", "provision_type", 1),
         )
         for label, key, value in invalid_values:

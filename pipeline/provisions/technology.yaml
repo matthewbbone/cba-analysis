@@ -1,0 +1,121 @@
+provision_type: technology
+extraction_prompt: |-
+  Extract New Technology or Automation clauses from this collective bargaining agreement text.
+
+  New Technology or Automation Clause: A Standard Clause that can be incorporated into a collective 
+  bargaining agreement (CBA) to memorialize the parties' agreement regarding the scope of the 
+  employer's right to introduce new technology or work processes, including labor-saving automation, 
+  during the CBA's term. This clause is based on the National Labor Relations Act (NLRA) but also 
+  may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector 
+  employers. It provides alternative approaches for setting out the employer's authority to implement 
+  technological changes, with one formulation affirming a broad and general right to implement new 
+  technology or automation and the other promoting a cooperative process that includes union input. 
+  It also addresses key considerations regarding the employer's effects bargaining obligations, 
+  employee training on new equipment, and procedures for negotiating wage rates for job classifications 
+  created or significantly revised in response to technological changes. This clause includes comprehensive 
+  drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged 
+  to adapt this model clause to suit their specific operational needs.
+
+  Only extract text that:
+  1. Clearly defines a legal right, permission, obligation, or prohibtion
+  2. Explicitly mentions a response to the introduction of new technology, automation, or labor-saving work 
+     processes
+subtype_taxonomy:
+  preemptive_rights:
+    description:  |- 
+      provisions focused on establishing respective rights and roles regarding the decision to adopt and 
+      implement new technology
+    subtypes:
+      labor_management_cooperation:
+        description: |-
+          stipulate a union’s “pledge to cooperate” along with management’s promise to make efforts to 
+          mitigate the negative impact of technological changes on the workforce
+      labor_management_committee: 
+        description: |-
+          Technological change committees often include equal representation from the union and employer, 
+          with variations on employee representative selection procedures.
+      research_studies_planning:
+        description: |-
+          Provisions stipulating research and studies on the impact of technology on the workplace
+      notification_right:
+        description: |-
+          the right to advanced notification about any proposed technological changes in the workplace
+      negotiation_right:
+        description: |-
+          asserts the union's right to negotiate with management regarding the effects of the new 
+          technology on jobs as well as the strategy  for introducing the new technology before 
+          implementation of the technology.
+      participation_right:
+        description: |-
+          asserts the union’s right to engage in the strategic decision-making surrounding the 
+          adoption of new technologies
+      technology_restriction:
+        description: |-
+          establish limitations on management’s right to introduce new technology
+  implementation:
+    description:  |-
+      provisions designed to mitigate the introduction of new technology in the workplace
+    subtypes:
+      job_displacement:
+        description: |-
+          outline processes to address job loss due to technological changes in the workplace
+      job_protection_transfers:
+        description: |-
+          protect existing employees, especially employees with seniority, from job loss due to new technologies
+      wage_benefit_protection:
+        description: |-
+          These ‘compensation protection’ clauses attempt to maintain wage levels and/or work hours
+      job_restructuring_productivity:
+        description: |-
+          focus on changes in working conditions associated with new technologies, such as changes in workload, 
+          tasks, responsibilities, work schedules, or pace of work
+      union_jurisdiction:
+        description: |-
+          set out to protect or expand the bargaining unit during job restructuring associated with new technologies 
+          in the workplace
+      workforce_training:
+        description: |-
+          training provisions cover a variety of topics ranging from simple requirements that employers 
+          provide training for new technology to comprehensive training programs for new technologies
+      technology_transition_plan:
+        description: |-
+          Technology transition plans, developed either in anticipation of the introduction of new technology 
+          or for a specific planned technological innovation, often outline the process for introducing 
+          technological change in the workplace including advanced notification, displacement mitigation 
+          strategies, and compensation plans
+  workforce_management:
+    description:  |-
+       provisions related to the use of technology in workforce management
+    subtypes:
+      monitoring_surveillance:
+        description: |-
+          contract provisions that ensure employee and union rights to know about the use of these technologies 
+          in the workplace and that limit employers’ use of monitoring and surveillance technologies
+      internet_usage:
+        description: |-
+          guidelines for union and member use of social media in order to avoid negative consequences for social 
+          media activities
+      scheduling:
+        description: |-
+          provisions to protect workers from npredictable, unstable, and rigid scheduling practices by employers 
+          combined with algorithmic computer scheduling systems
+      telework:
+        description: |-
+          provisions outlining parameters for telecommuting
+      maintaining_safety:
+        description: |-
+          Clauses that outline the employers’ responsibility to protect workers and ensure a safe workplace often 
+          stipulate requirements for: regulatory compliance, proper maintenance of equipment and technologies to 
+          ensure safety, employee notification of health concerns associated with technology, and employee training 
+          on new technology to ensure safety for employees
+      technology_safety_review:
+        description: |-
+          require the employer to study the impact of new technologies on employee health and safety
+      technology_hazard_protection:
+        description: |-
+          Worker protection provisions often detail issues related to specific technologies and set guidelines to 
+          protect worker safety and health
+N_EXTRACTION_PASSES: 3
+LANGEXTRACT_MAX_WORKERS: 10
+LANGEXTRACT_BATCH_LENGTH: 10
+MAX_CHAR_BUFFER: 5000

@@ -6,7 +6,9 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "langextract",
+    "matplotlib>=3.11.1",
     "openai",
+    "pandas>=3.0.5",
     "pillow",
     "pymupdf",
     "python-dotenv",
