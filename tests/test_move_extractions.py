@@ -19,36 +19,11 @@ class MoveExtractionsTests(unittest.TestCase):
 
     def _build_source_cache(self, src_cache: Path) -> None:
         extraction_root = src_cache / "stg_02_extract" / self.source
-        # doc_a deliberately appears under two extraction models. Its OCR
-        # artifacts must still be selected and copied only once per OCR arm.
+        # doc_a deliberately appears under two extraction models; its
+        # document ID must only be selected once for downstream stages.
         self._write(extraction_root / "extractor_a" / "doc_a" / "wage_tables.jsonl")
         self._write(extraction_root / "extractor_b" / "doc_a" / "wage_tables.jsonl")
         self._write(extraction_root / "extractor_b" / "doc_b" / "wage_tables.jsonl")
-
-        ocr_root = src_cache / "stg_01_ocr" / self.source
-        self._write(ocr_root / "ocr_one" / "doc_a" / "full.txt")
-        self._write(ocr_root / "ocr_one" / "doc_a" / "page_1.txt")
-        self._write(ocr_root / "ocr_one" / "doc_a" / "page_1.md")
-        self._write(ocr_root / "ocr_one" / "doc_b" / "full.txt")
-        self._write(ocr_root / "ocr_one" / "doc_b" / "page_2.txt")
-
-        # Output variants are separate OCR arms and must be retained exactly
-        # as named in the stage-01 tree.
-        self._write(ocr_root / "ocr_two__layout" / "doc_a" / "full.txt")
-        self._write(ocr_root / "ocr_two__layout" / "doc_a" / "page_1.txt")
-        self._write(ocr_root / "ocr_two__layout" / "doc_a" / "page_1.md")
-
-        # These are deliberately not final OCR page artifacts.
-        self._write(ocr_root / "ocr_one" / "doc_a" / "page_2.retry")
-        self._write(ocr_root / "ocr_one" / "doc_a" / "full.previous.txt")
-        self._write(ocr_root / "ocr_one" / "doc_a" / "full.previous.1.txt")
-        self._write(ocr_root / "ocr_one" / "doc_a" / "page_x.txt")
-        self._write(ocr_root / "ocr_one" / "doc_a" / "notes.json")
-        self._write(ocr_root / "ocr_one" / "doc_a" / "nested" / "page_3.txt")
-
-        # doc_c has OCR output but no stage-02 extraction and must not move.
-        self._write(ocr_root / "ocr_one" / "doc_c" / "full.txt")
-        self._write(ocr_root / "ocr_one" / "doc_c" / "page_1.txt")
 
         # Stage 03 is keyed by the classification model, which need not match
         # the extraction model that produced its input.
@@ -59,27 +34,16 @@ class MoveExtractionsTests(unittest.TestCase):
         # doc_c has classifications but no stage-02 extraction and must not move.
         self._write(classify_root / "classifier_a" / "doc_c" / "wage_tables.jsonl")
 
-        # Shared detector caches are not OCR model-output directories.
-        self._write(
-            ocr_root
-            / "_layout"
-            / "PaddlePaddle_PP-DocLayoutV3_safetensors"
-            / "doc_a"
-            / "layout.json"
-        )
+        # OCR text is never copied, whatever it contains.
+        ocr_root = src_cache / "stg_01_ocr" / self.source
+        self._write(ocr_root / "ocr_one" / "doc_a" / "full.txt")
+        self._write(ocr_root / "ocr_one" / "doc_a" / "page_1.txt")
+        self._write(ocr_root / "ocr_one" / "doc_b" / "full.txt")
 
     def _move_all(self, src_cache: Path, dst_cache: Path, *, dry_run: bool) -> None:
         document_dirs = move_extractions.move_source(
             self.source,
             "stg_02_extract",
-            src_cache,
-            dst_cache,
-            dry_run,
-        )
-        move_extractions.move_grounding(
-            self.source,
-            "stg_01_ocr",
-            document_dirs,
             src_cache,
             dst_cache,
             dry_run,
@@ -91,37 +55,6 @@ class MoveExtractionsTests(unittest.TestCase):
             src_cache,
             dst_cache,
             dry_run,
-        )
-
-    def test_moves_final_ocr_artifacts_for_each_matching_model_and_variant(self) -> None:
-        with TemporaryDirectory() as tmp_dir:
-            root = Path(tmp_dir)
-            src_cache = root / "source_cache"
-            dst_cache = root / "destination_cache"
-            self._build_source_cache(src_cache)
-
-            with redirect_stdout(StringIO()):
-                self._move_all(src_cache, dst_cache, dry_run=False)
-
-            copied_root = dst_cache / "stg_01_ocr" / self.source
-            copied_files = {
-                path.relative_to(copied_root)
-                for path in copied_root.rglob("*")
-                if path.is_file()
-            }
-
-        self.assertEqual(
-            copied_files,
-            {
-                Path("ocr_one/doc_a/full.txt"),
-                Path("ocr_one/doc_a/page_1.txt"),
-                Path("ocr_one/doc_a/page_1.md"),
-                Path("ocr_one/doc_b/full.txt"),
-                Path("ocr_one/doc_b/page_2.txt"),
-                Path("ocr_two__layout/doc_a/full.txt"),
-                Path("ocr_two__layout/doc_a/page_1.txt"),
-                Path("ocr_two__layout/doc_a/page_1.md"),
-            },
         )
 
     def test_dry_run_deduplicates_stage_02_documents_and_writes_nothing(self) -> None:
@@ -139,73 +72,16 @@ class MoveExtractionsTests(unittest.TestCase):
 
             self.assertFalse(dst_cache.exists())
 
-        self.assertEqual(dry_run_output.count("ocr_one/doc_a/full.txt"), 1)
-        self.assertEqual(dry_run_output.count("ocr_two__layout/doc_a/full.txt"), 1)
-        self.assertIn("ocr_one/doc_a/page_1.txt", dry_run_output)
-        self.assertIn("ocr_one/doc_a/page_1.md", dry_run_output)
+        self.assertEqual(
+            dry_run_output.count("classifier_a/doc_a/wage_tables.jsonl"), 1
+        )
+        self.assertEqual(
+            dry_run_output.count("classifier_b/doc_a/wage_tables.jsonl"), 1
+        )
+        self.assertIn("extractor_a/doc_a/wage_tables.jsonl", dry_run_output)
         self.assertNotIn("doc_c", dry_run_output)
-        self.assertNotIn("page_2.retry", dry_run_output)
-        self.assertNotIn("full.previous", dry_run_output)
-        self.assertNotIn("page_x.txt", dry_run_output)
-        self.assertNotIn("notes.json", dry_run_output)
-        self.assertNotIn("layout.json", dry_run_output)
-
-    def test_cli_filters_extractions_and_ocr_independently_by_document_id(self) -> None:
-        with TemporaryDirectory() as tmp_dir:
-            root = Path(tmp_dir)
-            src_cache = root / "source_cache"
-            dst_cache = root / "destination_cache"
-            self._build_source_cache(src_cache)
-
-            with redirect_stdout(StringIO()):
-                move_extractions.main(
-                    [
-                        self.source,
-                        "--src-cache",
-                        str(src_cache),
-                        "--dst-cache",
-                        str(dst_cache),
-                        "--document-ids",
-                        "doc_a",
-                        "doc_c",
-                        "--document-id",
-                        "missing_doc",
-                    ]
-                )
-
-            extraction_root = dst_cache / "stg_02_extract" / self.source
-            extraction_files = {
-                path.relative_to(extraction_root)
-                for path in extraction_root.rglob("*")
-                if path.is_file()
-            }
-            ocr_root = dst_cache / "stg_01_ocr" / self.source
-            ocr_files = {
-                path.relative_to(ocr_root)
-                for path in ocr_root.rglob("*")
-                if path.is_file()
-            }
-
-        self.assertEqual(
-            extraction_files,
-            {
-                Path("extractor_a/doc_a/wage_tables.jsonl"),
-                Path("extractor_b/doc_a/wage_tables.jsonl"),
-            },
-        )
-        self.assertEqual(
-            ocr_files,
-            {
-                Path("ocr_one/doc_a/full.txt"),
-                Path("ocr_one/doc_a/page_1.txt"),
-                Path("ocr_one/doc_a/page_1.md"),
-                Path("ocr_one/doc_c/full.txt"),
-                Path("ocr_one/doc_c/page_1.txt"),
-                Path("ocr_two__layout/doc_a/full.txt"),
-                Path("ocr_two__layout/doc_a/page_1.txt"),
-                Path("ocr_two__layout/doc_a/page_1.md"),
-            },
-        )
+        self.assertNotIn("ocr_one", dry_run_output)
+        self.assertNotIn("full.txt", dry_run_output)
 
     def test_moves_classifications_for_each_model_arm_of_extracted_documents(
         self,
@@ -293,19 +169,12 @@ class MoveExtractionsTests(unittest.TestCase):
         self.assertFalse(classify_exists)
         self.assertTrue(extraction_exists)
 
-    def test_selected_ocr_is_copied_when_extraction_source_is_missing(self) -> None:
+    def test_cli_never_copies_ocr_text(self) -> None:
         with TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)
             src_cache = root / "source_cache"
             dst_cache = root / "destination_cache"
-            self._write(
-                src_cache
-                / "stg_01_ocr"
-                / self.source
-                / "ocr_one"
-                / "doc_a"
-                / "full.txt"
-            )
+            self._build_source_cache(src_cache)
 
             with redirect_stdout(StringIO()):
                 move_extractions.main(
@@ -315,22 +184,16 @@ class MoveExtractionsTests(unittest.TestCase):
                         str(src_cache),
                         "--dst-cache",
                         str(dst_cache),
-                        "--document-id",
-                        "doc_a",
                     ]
                 )
 
-            copied = (
-                dst_cache
-                / "stg_01_ocr"
-                / self.source
-                / "ocr_one"
-                / "doc_a"
-                / "full.txt"
-            )
-            copied_exists = copied.is_file()
+            ocr_exists = (dst_cache / "stg_01_ocr").exists()
+            extraction_exists = (
+                dst_cache / "stg_02_extract" / self.source
+            ).is_dir()
 
-        self.assertTrue(copied_exists)
+        self.assertFalse(ocr_exists)
+        self.assertTrue(extraction_exists)
 
 
 if __name__ == "__main__":

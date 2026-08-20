@@ -3,7 +3,6 @@ from __future__ import annotations
 import argparse
 from collections.abc import Sequence
 from pathlib import Path
-import re
 import shutil
 import sys
 
@@ -22,11 +21,7 @@ except ModuleNotFoundError:
 load_dotenv(PROJECT_ROOT / ".env")
 
 STAGE_NAME = "stg_02_extract"
-INPUT_STAGE_NAME = "stg_01_ocr"
 CLASSIFY_STAGE_NAME = "stg_03_classify"
-OCR_FULL_FILENAME = "full.txt"
-OCR_PAGE_PATTERN = re.compile(r"^page_([1-9]\d*)\.(txt|md)$")
-SHARED_LAYOUT_DIR = "_layout"
 KNOWN_SOURCES = ("dol_archive", "cornell_dol", "cornell_retail_educ")
 
 
@@ -114,91 +109,6 @@ def _extracted_document_ids(doc_rel_dirs: Sequence[Path]) -> list[str]:
     )
 
 
-def _ocr_artifacts(document_dir: Path) -> list[Path]:
-    """Return final full/page artifacts, excluding retries and backups."""
-
-    if not document_dir.is_dir():
-        return []
-    return sorted(
-        path
-        for path in document_dir.iterdir()
-        if path.is_file()
-        and (
-            path.name == OCR_FULL_FILENAME
-            or OCR_PAGE_PATTERN.fullmatch(path.name) is not None
-        )
-    )
-
-
-def move_ocr_artifacts(
-    source: str,
-    input_stage: str,
-    doc_rel_dirs: Sequence[Path],
-    src_cache: Path,
-    dst_cache: Path,
-    dry_run: bool,
-    document_ids: Sequence[str] | None = None,
-) -> None:
-    src_stage_dir = src_cache / input_stage / source
-    dst_stage_dir = dst_cache / input_stage / source
-    selected_document_ids = (
-        _extracted_document_ids(doc_rel_dirs)
-        if document_ids is None
-        else sorted(set(document_ids))
-    )
-
-    print(
-        "copying OCR full/page artifact file(s) for "
-        f"{len(selected_document_ids)} selected document(s)"
-    )
-    print(f"  from {src_stage_dir}")
-    print(f"    to {dst_stage_dir}")
-
-    if not src_stage_dir.is_dir():
-        print(f"  [warn] OCR source not found: {src_stage_dir}")
-        return
-
-    model_dirs = sorted(
-        path
-        for path in src_stage_dir.iterdir()
-        if path.is_dir()
-        and path.name != SHARED_LAYOUT_DIR
-        and not path.name.startswith(".")
-    )
-    copied = 0
-    matched_documents: set[str] = set()
-    matched_model_documents = 0
-    for model_dir in model_dirs:
-        for document_id in selected_document_ids:
-            document_dir = model_dir / document_id
-            artifacts = _ocr_artifacts(document_dir)
-            if not artifacts:
-                continue
-            matched_documents.add(document_id)
-            matched_model_documents += 1
-            for artifact in artifacts:
-                rel = artifact.relative_to(src_stage_dir)
-                if dry_run:
-                    print(f"  [dry-run] {rel}")
-                else:
-                    _copy_file(artifact, dst_stage_dir / rel)
-                copied += 1
-
-    for document_id in sorted(set(selected_document_ids) - matched_documents):
-        print(
-            "  [warn] no OCR full/page artifacts for selected document: "
-            f"{document_id}"
-        )
-
-    if dry_run:
-        return
-
-    print(
-        f"done: copied {copied} OCR artifact file(s) from "
-        f"{matched_model_documents} model/document output(s) to {dst_stage_dir}"
-    )
-
-
 def _classification_artifacts(document_dir: Path) -> list[Path]:
     """Return every classification output file for one document."""
 
@@ -277,34 +187,14 @@ def move_classifications(
     )
 
 
-def move_grounding(
-    source: str,
-    input_stage: str,
-    doc_rel_dirs: list[Path],
-    src_cache: Path,
-    dst_cache: Path,
-    dry_run: bool,
-) -> None:
-    """Backward-compatible name for copying the matching OCR artifacts."""
-
-    move_ocr_artifacts(
-        source,
-        input_stage,
-        doc_rel_dirs,
-        src_cache,
-        dst_cache,
-        dry_run,
-    )
-
-
 def main(argv: Sequence[str] | None = None) -> None:
     parser = argparse.ArgumentParser(
         description=(
-            "Copy stg_02_extract extractions, the matching OCR full/page "
-            "artifacts for every OCR model, and the matching stg_03_classify "
+            "Copy stg_02_extract extractions and the matching stg_03_classify "
             "outputs for every classification model, for one source from the "
             "external CACHE_DIR into the working-directory cache/, preserving "
-            "the stage/source directory layout."
+            "the stage/source directory layout.  OCR text from stg_01_ocr is "
+            "never copied."
         )
     )
     parser.add_argument(
@@ -329,29 +219,11 @@ def main(argv: Sequence[str] | None = None) -> None:
         help=f"stage folder under the cache (default: {STAGE_NAME})",
     )
     parser.add_argument(
-        "--input-stage",
-        default=INPUT_STAGE_NAME,
-        help=(
-            "input stage folder holding OCR full/page artifacts "
-            f"(default: {INPUT_STAGE_NAME})"
-        ),
-    )
-    parser.add_argument(
         "--classify-stage",
         default=CLASSIFY_STAGE_NAME,
         help=(
             "stage folder holding classification outputs "
             f"(default: {CLASSIFY_STAGE_NAME})"
-        ),
-    )
-    parser.add_argument(
-        "--no-ocr",
-        "--no-grounding",
-        dest="no_ocr",
-        action="store_true",
-        help=(
-            "do not copy matching OCR full/page artifacts "
-            "(--no-grounding is retained as an alias)"
         ),
     )
     parser.add_argument(
@@ -399,17 +271,6 @@ def main(argv: Sequence[str] | None = None) -> None:
         args.dry_run,
         document_ids=args.document_ids,
     )
-
-    if not args.no_ocr:
-        move_ocr_artifacts(
-            args.source,
-            args.input_stage,
-            doc_rel_dirs,
-            src_cache,
-            dst_cache,
-            args.dry_run,
-            document_ids=args.document_ids,
-        )
 
     if not args.no_classify:
         move_classifications(
