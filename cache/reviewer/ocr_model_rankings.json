@@ -1,13 +1,13 @@
 {
   "method": "regularized_bradley_terry_with_valued_ties",
-  "generated_at": "2026-08-13T18:15:50.318539+00:00",
-  "judgment_count": 150,
-  "model_count": 4,
+  "generated_at": "2026-08-20T22:26:40.511535+00:00",
+  "judgment_count": 232,
+  "model_count": 7,
   "choice_counts": {
-    "both_bad": 4,
-    "both_good": 98,
-    "left_better": 23,
-    "right_better": 25
+    "both_bad": 8,
+    "both_good": 125,
+    "left_better": 53,
+    "right_better": 46
   },
   "tie_quality_weight": 0.5,
   "l2": 0.5,
@@ -16,13 +16,13 @@
   "rankings": [
     {
       "model": "ATH-MaaS_OvisOCR2",
-      "score": 93.41401599361441,
+      "score": 92.99606245218364,
       "score_ci_95": [
-        81.76438632602799,
-        97.81984178693729
+        81.54310096377515,
+        97.5552495231939
       ],
-      "log_strength": 2.6520976426226515,
-      "strength": 14.18375992153077,
+      "log_strength": 2.5860846552945342,
+      "strength": 13.277682991501994,
       "decisive_wins": 7,
       "decisive_losses": 0,
       "both_good": 15,
@@ -32,60 +32,100 @@
     },
     {
       "model": "AIDC-AI_Ovis2.6-30B-A3B",
-      "score": 89.09815219019835,
+      "score": 87.68841822403438,
       "score_ci_95": [
-        78.7104956576578,
-        94.75515362109725
+        78.50371203144122,
+        93.28448424726213
       ],
-      "log_strength": 2.100806296953066,
-      "strength": 8.172756925673813,
-      "decisive_wins": 21,
-      "decisive_losses": 14,
-      "both_good": 61,
+      "log_strength": 1.9632494022118665,
+      "strength": 7.122433154382948,
+      "decisive_wins": 27,
+      "decisive_losses": 18,
+      "both_good": 70,
       "both_bad": 4,
-      "total_comparisons": 100,
+      "total_comparisons": 119,
       "rank": 2
     },
     {
       "model": "Qwen_Qwen3.6-27B-FP8",
-      "score": 86.97940711540915,
+      "score": 86.76848922445598,
       "score_ci_95": [
-        75.36338356257679,
-        93.58475747016105
+        77.34755186859847,
+        92.64397170508958
       ],
-      "log_strength": 1.8991392186192946,
-      "strength": 6.680141825058088,
-      "decisive_wins": 8,
-      "decisive_losses": 15,
-      "both_good": 77,
-      "both_bad": 1,
-      "total_comparisons": 101,
+      "log_strength": 1.8806423636177647,
+      "strength": 6.557715947662711,
+      "decisive_wins": 21,
+      "decisive_losses": 17,
+      "both_good": 90,
+      "both_bad": 2,
+      "total_comparisons": 130,
       "rank": 3
     },
     {
       "model": "google_gemma-4-31B-it",
-      "score": 85.57614797161685,
+      "score": 84.0738670284808,
       "score_ci_95": [
-        72.39099530869707,
-        93.06751461436167
+        72.53331211643281,
+        91.34413431188663
       ],
-      "log_strength": 1.780523371988003,
-      "strength": 5.9329607516231295,
-      "decisive_wins": 12,
-      "decisive_losses": 19,
-      "both_good": 43,
-      "both_bad": 3,
-      "total_comparisons": 77,
+      "log_strength": 1.663734438675226,
+      "strength": 5.278988137222678,
+      "decisive_wins": 20,
+      "decisive_losses": 23,
+      "both_good": 46,
+      "both_bad": 4,
+      "total_comparisons": 93,
       "rank": 4
+    },
+    {
+      "model": "PaddlePaddle_PaddleOCR-VL-1.6__layout",
+      "score": 79.21836120688467,
+      "score_ci_95": [
+        59.77464483393183,
+        90.72232480698999
+      ],
+      "log_strength": 1.338138258848667,
+      "strength": 3.811940049363605,
+      "decisive_wins": 8,
+      "decisive_losses": 8,
+      "both_good": 10,
+      "both_bad": 2,
+      "total_comparisons": 28,
+      "rank": 5
+    },
+    {
+      "model": "zai-org_GLM-OCR__layout",
+      "score": 77.47083450675491,
+      "score_ci_95": [
+        59.171381812910475,
+        89.08182888732793
+      ],
+      "log_strength": 1.235090822629237,
+      "strength": 3.4386908174642787,
+      "decisive_wins": 8,
+      "decisive_losses": 11,
+      "both_good": 15,
+      "both_bad": 3,
+      "total_comparisons": 37,
+      "rank": 6
+    },
+    {
+      "model": "opendatalab_MinerU2.5-Pro-2605-1.2B__native",
+      "score": 65.17610939594226,
+      "score_ci_95": [
+        43.116423401709746,
+        82.21059779653781
+      ],
+      "log_strength": 0.626789318626666,
+      "strength": 1.8715918372528944,
+      "decisive_wins": 8,
+      "decisive_losses": 22,
+      "both_good": 4,
+      "both_bad": 1,
+      "total_comparisons": 35,
+      "rank": 7
     }
   ],
-  "source_path": "/home/scro4406/cba-analysis/cache/reviewer/ocr_comparisons.jsonl",
-  "model_scope": "top_ocr_models",
-  "included_models": [
-    "AIDC-AI_Ovis2.6-30B-A3B",
-    "ATH-MaaS_OvisOCR2",
-    "Qwen_Qwen3.6-27B-FP8",
-    "google_gemma-4-31B-it"
-  ],
-  "source_judgment_count": 232
+  "source_path": "/home/scro4406/cba-analysis/cache/reviewer/ocr_comparisons.jsonl"
 }
