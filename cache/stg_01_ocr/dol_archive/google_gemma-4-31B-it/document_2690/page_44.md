@@ -1,6 +1,0 @@
-commitments, provided that the overall teaching, research, and service needs of the unit, as determined by the administrator, are met.
-
-13.3.8 United Academics recognizes the University's need for flexibility in determining unit members' workloads as the needs of the University change. When the need arises, an appropriate administrator may revise a unit member's workload. When possible, there will be consultation with the department head/chair and the unit member before a unit member's workload is revised. When a workload is revised, the appropriate administrator shall provide a copy of the revised workload to the unit member as soon as practicable and the unit member's salary shall not be reduced during the remainder of the unit member's contract period.
-
-Tentative Agreement
-Page 44 of 77

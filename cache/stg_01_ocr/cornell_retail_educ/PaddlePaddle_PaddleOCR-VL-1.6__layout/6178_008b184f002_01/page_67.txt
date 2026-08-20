@@ -1,9 +1,0 @@
-Teacher Meetings .....17
-Teacher Notification .....27
-Teacher Rights .....9
-Teacher Safety .....25
-Teacher Salary .....47
-Teaching Conditions .....22
-Teaching Load .....22
-Transfers, Involuntary .....20
-Transfers, Voluntary .....19

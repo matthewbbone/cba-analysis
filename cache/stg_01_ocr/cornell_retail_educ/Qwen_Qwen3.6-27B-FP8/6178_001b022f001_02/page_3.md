@@ -1,6 +1,0 @@
-The user wants the text from the image transcribed exactly.
-
-1.  **Analyze the image:** The image is completely blank. There is no text, no tables, and no content whatsoever.
-2.  **Transcribe:** Since there is no text, the output should be empty.
-</think>
-

@@ -1,3 +1,0 @@
-\(\underline{\text{Section 6.}}\) Time and Place
-
-The JPSC shall meet on a quarterly basis, unless otherwise mutually agreed.
