@@ -1,426 +1,327 @@
 # CBA Analysis Pipeline
 
-This repository processes collective bargaining agreement PDFs into structured
-provision categories, category summaries, and pairwise generosity rankings.
+This repository turns scanned collective bargaining agreement (CBA) PDFs into
+structured, queryable data: OCR text, grounded provision extractions, and a
+classification of each provision by taxonomy subtype and beneficiary (worker /
+employer / unclear). Analysis utilities then link that data to CBA metadata and
+render figures.
 
-The current workflow is model-scoped: LLM-derived outputs are written under a
-model slug such as `gpt_5_4_nano`, derived from `gpt-5.4-nano`.
+**Everything runs on locally-served, open-weight models via
+[vLLM](https://github.com/vllm-project/vllm)** — there is no dependency on a
+hosted LLM API. Each stage launches its own vLLM server subprocess and talks to
+it over the OpenAI-compatible client, purely as a local wire protocol.
 
-## Pipeline Overview
+## Pipeline stages
 
-### 01 OCR
+Data flows through three cache-backed stages, each keyed by
+`{source}/{model_slug}/{document_id}/...`. `{source}` is a subdirectory of PDFs
+(e.g. `dol_archive`, `cornell_dol`, `cornell_retail_educ`); `{model_slug}` is a
+filesystem-safe rendering of the HuggingFace model ID that produced the stage's
+output (`path_safe_model_name()` in `pipeline/utils/paths.py`, `/` → `_`).
 
-Script:
+### Stage 1 — OCR (`pipeline/stg_01_ocr/`)
 
-```bash
-uv run pipeline/01_ocr/runner.py
-```
+Turns each source PDF into page-level markdown/text. Two families of runner:
 
-Input:
-
-```text
-cache/{SOURCE}/*.pdf
-```
-
-Output:
-
-```text
-cache/01_ocr_output/{SOURCE}/{document_id}/{document_id}_res.json
-cache/01_ocr_output/{SOURCE}/{document_id}/{document_id}_res.md
-```
-
-This step uses `PaddleOCRVL` with `mlx-vlm-server`. It preserves text, headers,
-and tables. OCR labels such as footers, footnotes, page numbers, images, and
-aside text are ignored.
-
-### 02 Segment
-
-Script:
+- **General** (`general/runner.py`) — any HuggingFace vision-language model
+  served through vLLM, one full-page transcription call per page. Default
+  `AIDC-AI/Ovis2.6-30B-A3B`, with a special-cased profile for
+  `ATH-MaaS/OvisOCR2` (prompt, token limits, and repeat-cleanup tuned for it).
+- **Specialized** (`specialized/{glmocr,miner,paddleocr}.py`) — one runner per
+  specific checkpoint (`zai-org/GLM-OCR`, `opendatalab/MinerU2.5-Pro-2605-1.2B`,
+  `PaddlePaddle/PaddleOCR-VL-1.6`), each supporting `--mode single|layout`
+  (MinerU also supports `native`, using its own layout tokens instead of the
+  shared detector). `layout` mode pre-segments the page with a shared
+  PP-DocLayoutV3 detector (`layout.py`) and OCRs each region separately before
+  reassembling reading order.
 
 ```bash
-uv run pipeline/02_segment/runner.py
+uv run python pipeline/stg_01_ocr/general/runner.py \
+  --source dol_archive --model-name ATH-MaaS/OvisOCR2 \
+  --device 0 --port 8123 --concurrency 16
+
+uv run python -m pipeline.stg_01_ocr.specialized.miner --mode layout --source dol_archive
 ```
 
-Input:
+Key flags: `--source`, `--document-id`/`--document-ids` (repeatable),
+`--sample`/`--seed`, `--model-name`/`--hf-model`, `--port`, `--num-gpus`,
+`--device`, `--max-model-len`, `--gpu-memory-utilization`, `--dpi` (default
+200), `--concurrency`, `--force`, `--repetition-retries` (default 2).
 
-```text
-cache/01_ocr_output/{SOURCE}/*/*.json
-```
+Output: `{cache}/stg_01_ocr/{source}/{model_slug}/{document_id}/page_N.txt`
+(raw), `page_N.md` (normalized markdown), `full.txt` (whole document,
+`--- Page N ---` separated). The shared layout cache lives at
+`{cache}/stg_01_ocr/{source}/_layout/{layout_model_slug}/{document_id}/layout.json`.
 
-Output:
+### Stage 2 — Extract (`pipeline/stg_02_extract/`)
 
-```text
-cache/02_segment_output/{SOURCE}/{document_id}/{document_id}_res.json
-cache/02_segment_output/{SOURCE}/{document_id}/{document_id}_res.md
-```
-
-This step normalizes OCR blocks into section chunks with:
-
-```text
-page_num
-type
-content
-```
-
-Tables are retained as `type: "table"`. Headers are merged when OCR splits a
-two-line header into adjacent header blocks.
-
-### 03 Provision Filtering
-
-Script:
+Extracts grounded provision spans from each `full.txt` using
+[`langextract`](https://github.com/matthewbbone/langextract) (a fork, pinned in
+`pyproject.toml` via `feat/chunk-offset`), configured to call the local vLLM
+OpenAI-compatible endpoint rather than a hosted API. `langextract` chunks the
+document text and returns extraction spans reconciled against the source
+(`grounding_status`, `span_reliable`).
 
 ```bash
-uv run pipeline/03_provisions/runner.py
+uv run python pipeline/stg_02_extract/runner.py \
+  --provision technology --source dol_archive \
+  --model-name google/gemma-4-31B-it --ocr-model-name ATH-MaaS/OvisOCR2
 ```
 
-Input:
+`--provision NAME` (required) loads `pipeline/provisions/NAME.yaml` — see
+[Provision taxonomy config](#provision-taxonomy-config-pipelineprovisions) below.
+Other key flags: `--ocr-model-name` (selects which stage-1 output to read,
+default `ATH-MaaS/OvisOCR2`), `--model-name` (default `google/gemma-4-31B-it`),
+`--source`, `--document-id`/`--document-ids`, `--sample`/`--seed`, `--force`,
+`--concurrency` (documents in parallel).
 
-```text
-cache/02_segment_output/{SOURCE}/*/*.json
+Output JSONL, one record per extraction, at
+`{cache}/stg_02_extract/{source}/{model_slug}/{document_id}/{provision_type}.jsonl`:
+
+```
+source, document_id, ocr_model_name, model_name, extraction_class,
+extraction_text, attributes: {context}, span_start, span_end,
+span_reliable, grounding_status
 ```
 
-Output:
+### Stage 3 — Classify (`pipeline/stg_03_classify/`)
 
-```text
-cache/03_provisions_output/{model_slug}/{SOURCE}/{document_id}_res.json
-```
-
-This is a chunk-level filtering step. It does not extract spans. Every input
-chunk is preserved and annotated with:
-
-```text
-is_provision
-subject
-beneficiary
-provision_filter_usage
-provision_filter_error
-```
-
-`subject` and `beneficiary` are one of `Worker`, `Firm`, `Union`, `Manager`, or
-`null`. If an LLM call fails for a chunk, the chunk is retained with
-`is_provision: false` and `provision_filter_error`.
-
-### 04 Classification
-
-Script:
+Classifies each stage-2 extraction along two dimensions: **beneficiary**
+(`worker` / `employer` / `unclear` — which party receives a substantive
+benefit) and **subtype**, walked as a taxonomy cascade with guided-decoding
+JSON-schema calls: one call settles beneficiary + the top-level subtype, and
+one further call per level narrows into the previous level's children. A
+reserved `"other"` label is injected as a choice at every level (never declared
+in the YAML) and is terminal — choosing it stops the cascade, leaving deeper
+`subtype_N` fields `None`.
 
 ```bash
-uv run pipeline/04_classification/runner.py
+uv run python pipeline/stg_03_classify/runner.py \
+  --provision technology --taxonomy-depth 2 --source dol_archive \
+  --model-name Qwen/Qwen3.8-27B-FP8 --extract-model-name google/gemma-4-31B-it
 ```
 
-Input:
+`--taxonomy-depth` (default 1) sets how many cascade levels to run; it cannot
+exceed the provision's declared taxonomy depth. `--extract-model-name` selects
+which stage-2 output to read. A provision with no `subtype_taxonomy` (see
+`wage_table.yaml` below) cannot be classified and this stage will refuse to run
+against it.
 
-```text
-cache/03_provisions_output/{model_slug}/{SOURCE}/*.json
+Output JSONL at
+`{cache}/stg_03_classify/{source}/{model_slug}/{document_id}/{provision_type}.jsonl`:
+
+```
+source, document_id, extract_model_name, model_name, extraction_class,
+extraction_text, span_start, span_end, beneficiary, taxonomy_depth,
+subtype_1, subtype_2, ..., subtype_<taxonomy_depth>
 ```
 
-Output:
+### Orchestration
 
-```text
-cache/04_classification_output/{model_slug}/{SOURCE}/{document_id}_res.json
-```
-
-This step classifies only chunks where `is_provision` is true. It classifies the
-full chunk `content` against categories in:
-
-```text
-references/provision_taxonomy.json
-```
-
-Each chunk receives:
-
-```text
-category
-classification_usage
-```
-
-Non-provision chunks are preserved with:
-
-```text
-category: null
-classification_usage: null
-```
-
-### 05 Summarize
-
-Script:
+`parallel_runs.bash` runs stage 1 across three sources simultaneously, one GPU
+and CPU set each, all via `general/runner.py` with `ATH-MaaS/OvisOCR2`:
 
 ```bash
-uv run pipeline/05_summarize/runner.py
+bash parallel_runs.bash   # cornell_dol on GPU 0, cornell_retail_educ on GPU 1, dol_archive on GPU 2
 ```
 
-Input:
+## Provision taxonomy config (`pipeline/provisions/`)
 
-```text
-cache/04_classification_output/{model_slug}/{SOURCE}/*.json
-```
+Each provision type is declared in one YAML file, loaded and validated by
+`pipeline/stg_02_extract/structure_provision.py` (`load_provision`). A config
+carries both the stage-2 extraction prompt and, optionally, the stage-3
+classification taxonomy (`subtype_taxonomy`): a tree of `{label: {description,
+subtypes}}`, where labels must be unique snake_case across the whole tree, each
+level needs at least two labels, and `"other"` is reserved (declaring it raises
+a validation error — stage 3 injects it automatically).
 
-Output:
+Two provision types currently exist:
 
-```text
-cache/05_summarize_output/{model_slug}/{SOURCE}/{document_id}_res.json
-```
+- **`technology.yaml`** — new-technology/automation clauses. Level-1 subtypes:
+  `preemptive_rights`, `implementation`, `workforce_management`, each with its
+  own 6–7 level-2 children (e.g. `preemptive_rights` → `notification_right`,
+  `negotiation_right`, `participation_right`, `technology_restriction`, ...).
+- **`wage_table.yaml`** — wage-table extraction only; **declares no
+  `subtype_taxonomy`**, so it can be extracted (stage 2) but not classified
+  (stage 3 refuses to run against it).
 
-This step groups classified chunk text by category and summarizes each category
-within a document. The saved JSON contains:
+## Analysis utilities (`pipeline/utils/`)
 
-```text
-sections
-category_summaries
-```
+### `link_classifications.py`
 
-Each `category_summaries` entry includes:
-
-```text
-category
-provision_count
-summary
-summarization_usage
-provisions_input_chars
-summary_output_chars
-compression_ratio
-chars_reduced
-```
-
-Categories with no provisions are included with an empty summary and no usage
-metadata.
-
-### 06 Generosity Comparisons
-
-Script:
+Reads every classified `{document_id}/{provision_type}.jsonl` under a stage-3
+directory and joins it to the CBA metadata list
+(`meta_data/CBAList_with_statefips.dta`, keyed by
+`document_id == "document_" + cbafile`). Writes two CSVs to `figures/`.
 
 ```bash
-uv run pipeline/06_generosity/runner.py
+uv run python pipeline/utils/link_classifications.py \
+  --provision-type technology --source dol_archive --level 2
 ```
 
-Input:
+The **document table** (`{provision}_{source}_l{level}_documents.csv`) is one
+row per classified document, including zero-provision documents, with:
 
-```text
-cache/05_summarize_output/{model_slug}/*/*.json
-```
+- `has_<subtype>` / `n_<subtype>` — whether/how many provisions of each
+  subtype the document carries (a document counts once per subtype however
+  many such provisions it holds).
+- `n_beneficiary_<label>` / `pct_beneficiary_<label>` for
+  `label in (employer, worker, unclear)` — that document's own count/share of
+  provisions naming each beneficiary. `pct_beneficiary_*` is `NaN` (not zero)
+  for a document with no provisions, since the share is undefined there.
+- CBA metadata: `employername`, `union`, `expire_year`, `expire_period` (5-year
+  bucket of contract expiration), `naics`/`sector_label`, `wrkrs`, `ownership`.
 
-Output:
+The **provision table** (`{provision}_{source}_l{level}_provisions.csv`) is one
+row per classified provision, joined to the same metadata (`--include-text`
+keeps the quoted extraction text).
 
-```text
-cache/06_generosity_output/{model_slug}/bradley_terry_results.json
-```
+Key flags: `--source`, `--model-name`, `--provision-type`, `--level`
+(taxonomy depth to analyse), `--cache-dir` (default from `CACHE_DIR`),
+`--metadata`, `--output-dir` (default `figures/`), `--include-text`, `--dry-run`.
 
-This step samples random document pairs without duplicate unordered pairs. For
-each pair and taxonomy category, it compares category summaries in both
-directions and stores:
+### `plot_classifications.py`
 
-```text
-score = 1   contract_1 is more generous
-score = -1  contract_2 is more generous
-score = 0   tie or inconsistent directional comparison
-```
-
-The runner preserves raw comparison records, including both directional LLM
-calls and usage/cost metadata.
-
-## ELO-Style Ranking Calculator
-
-Script:
+Reads the document CSV `link_classifications.py` wrote and renders figures —
+must be run with the same `--provision-type`/`--source`/`--level` the CSV was
+built with.
 
 ```bash
-uv run pipeline/06_generosity/elo_calculator.py --method davidson
-uv run pipeline/06_generosity/elo_calculator.py --method bradley-terry
+uv run python pipeline/utils/plot_classifications.py \
+  --provision-type technology --source dol_archive --level 2 --no-industry-adjusted
 ```
 
-The calculator reads saved comparisons from `06_generosity/runner.py` and fits
-rankings without making LLM calls.
+For each of two statistics — **subtype prevalence** (% of CBAs carrying a
+subtype; a CBA can carry several, so shares overlap) and **beneficiary share**
+(each CBA's own % of provisions naming a beneficiary, averaged across CBAs; a
+provision names exactly one beneficiary, so shares within a group sum to
+~100%) — it writes three figures: overall, by contract-expiration cohort, and
+by NAICS industry.
 
-Methods:
-
-- `bradley-terry`: original Bradley-Terry fit; ties are skipped.
-- `davidson`: Davidson tied-comparison model; ties are included.
-
-Default input:
-
-```text
-cache/06_generosity_output/{model_slug}/bradley_terry_results.json
 ```
-
-Default outputs:
-
-```text
-cache/06_generosity_output/{model_slug}/bradley-terry_rankings.json
-cache/06_generosity_output/{model_slug}/davidson_rankings.json
+{prefix}_subtype_share.png              {prefix}_beneficiary_share.png
+{prefix}_share_by_period.png            {prefix}_beneficiary_share_by_period.png
+{prefix}_share_by_sector.png            {prefix}_beneficiary_share_by_sector.png
 ```
+(`{prefix} = {provision_type}_{source}_l{level}`)
 
-Optional CLI arguments:
+The two by-cohort figures draw each series **twice**: a solid line for the raw
+cohort average, and (unless `--no-industry-adjusted`) a **dotted
+industry-composition-adjusted index** — the statistic computed separately
+within each NAICS stratum, then averaged across strata with equal weights,
+using only strata present in every plotted cohort. This isolates a genuine
+within-industry trend from a shift in the corpus's industry mix over time.
+CBAs with no NAICS code (roughly half the corpus) are kept as their own
+stratum rather than dropped, since that missingness is itself strongly
+time-trended; both industry figures also show them as their own "No NAICS
+code" row (`--hide-no-naics` to omit it).
+
+Key flags: `--input-dir`/`--output-dir`, `--source`, `--level`,
+`--provision-type`, `--min-group-docs` (default 10, drops sparse cohorts),
+`--min-sector-docs` (default 5, pools sparse industries into "Other sectors"),
+`--min-cbas` (default 0, drops sparse subtype series), `--min-cell-docs`
+(default 1, per-cohort inclusion threshold for the adjusted index),
+`--no-industry-adjusted`, `--hide-no-naics`, `--dpi`, `--dry-run`.
+
+### `move_extractions.py`
+
+Copies stage-2 (and matching stage-3) outputs for one source from the external
+`CACHE_DIR` into the repo-local `cache/`, preserving layout. Never copies
+stage-1 OCR text.
 
 ```bash
---method bradley-terry|davidson
---model-name gpt-5.4-nano
---input path/to/comparisons.json
---output path/to/rankings.json
+uv run python pipeline/utils/move_extractions.py dol_archive
+uv run python pipeline/utils/move_extractions.py dol_archive --document-id document_123 --dry-run
 ```
 
-## LLM Utilities
+### `rank_ocr_models.py`
 
-Shared LLM request and accounting code lives in:
-
-```text
-pipeline/utils/llm.py
-```
-
-It provides:
-
-- `model_slug(model_name)`
-- `LLMClient`
-- `LLMClientPool`
-- JSON-schema chat requests
-- usage and cost extraction
-- OpenAI/OpenRouter-style routing
-
-Current configured pricing models:
-
-```text
-gpt-5.5
-gpt-5.4
-gpt-5.4-mini
-gpt-5.4-nano
-```
-
-Pipeline runners currently use:
-
-```text
-MODEL_NAME = "gpt-5.4-nano"
-```
-
-## Common Review Scripts
-
-### Cost Summary
+Fits a regularized Bradley-Terry-style ranking from the reviewer app's pairwise
+OCR judgments (`cache/reviewer/ocr_comparisons.jsonl`), treating `both_good`/
+`both_bad` verdicts as fractional ties.
 
 ```bash
-uv run review/openai_cost_summary.py
+uv run python pipeline/utils/rank_ocr_models.py
+uv run python pipeline/utils/rank_ocr_models.py --top-ocr-models
 ```
 
-Summarizes token usage and estimated cost for `gpt_5_4_nano` outputs across:
+Writes `cache/reviewer/ocr_model_rankings.json` and prints a ranking table.
 
-```text
-03_provisions
-04_classification
-05_summarize
-06_generosity
-```
+### Shared, non-CLI modules
 
-### Summarization Review
+- `paths.py` — `default_cache_dir()`, `path_safe_model_name()`.
+- `gpu.py` — CUDA device-string parsing/validation shared by every runner CLI.
+- `vllm_server.py` — the `VLLMServer` class every stage runner uses to launch
+  and manage its local vLLM subprocess; not invoked directly.
+
+## The reviewer app (`reviewer/`)
+
+A small TypeScript + Vite single-page app for manually reviewing pipeline
+output against source PDFs — reads directly from the repo-local `cache/`
+(no copying).
 
 ```bash
-uv run review/summarization_review.py {source} {document_id} {category}
+cd reviewer
+npm install
+npm run dev   # http://localhost:5178
 ```
 
-Prints the grouped provision text used in the summarization prompt and the saved
-summary for one document/category.
+Two modes: **extraction review** (source PDF alongside stage-1 OCR text with
+stage-2 extraction spans highlighted by grounding status) and **OCR
+comparison** (side-by-side output from two of four OCR models on a sampled
+page, with a `left_better`/`right_better`/`both_good`/`both_bad` judgment
+appended to `cache/reviewer/ocr_comparisons.jsonl` for `rank_ocr_models.py`).
 
-Example:
+## Data layout
+
+- **Cache root**: `CACHE_DIR` in `.env` (default `cache` if unset) resolves via
+  `default_cache_dir()` in `pipeline/utils/paths.py`. In this deployment it
+  points to an external volume outside the repo, where the full pipeline
+  output actually lives; the repo-local `cache/` is a smaller working copy
+  (source PDFs, `move_extractions.py` output, and `cache/reviewer/`) that the
+  reviewer app and test fixtures use directly.
+- **`meta_data/CBAList_with_statefips.dta`** — the DOL CBA metadata list
+  consumed by `link_classifications.py`, keyed by `cbafile`. Its `naics`/
+  `wrkrs`/`ownership` columns needed a left-shift repair for rows with missing
+  values (`repair_trailing_columns`), already handled in `load_metadata`.
+- **`figures/`** — output of `link_classifications.py` (CSVs) and
+  `plot_classifications.py` (PNGs); gitignored.
+- **`logs/`** — created on demand by `parallel_runs.bash` (`logs/parallel/`)
+  and `VLLMServer`; gitignored.
+
+## Testing
 
 ```bash
-uv run review/summarization_review.py cornell_retail_educ 6178_008b186f003_01 Healthcare
+uv run pytest -q                              # whole suite
+uv run pytest tests/test_stg_03_classify.py   # one file
 ```
 
-The script resolves both `{document_id}.json` and `{document_id}_res.json`.
+Tests are `unittest.TestCase`-style classes run under pytest, building fake
+cache trees in temporary directories and mocking out `VLLMServer` — no real
+GPU, vLLM server, or network call runs in the suite. `pyproject.toml` sets
+`pythonpath = ["."]` so tests import `pipeline.*` directly.
 
-### Summarization Reduction Summary
+Known drift: `tests/test_stg_02_extract.py` has 5 failing tests asserting a
+stale `--default-chat-template-kwargs` value that hasn't been updated to match
+a recent `preserve_thinking` addition in `pipeline/stg_02_extract/runner.py`.
 
-```bash
-uv run review/summarization_reduction_summary.py
-```
+## Environment
 
-Reports how much category summarization compresses the grouped chunk text.
+`pyproject.toml` pins `requires-python = ">=3.13"` and `vllm>=0.26.0`,
+`langextract` (from the `matthewbbone/langextract@feat/chunk-offset` fork),
+`matplotlib`, `pandas`, `pymupdf`, `pyyaml`, `python-dotenv`. Managed with
+[`uv`](https://docs.astral.sh/uv/); `uv run <script>` picks up the project
+environment automatically.
 
-### Classification Category Coverage
+A repo-root `.env` (gitignored) configures, per-deployment: `CACHE_DIR`,
+`LOG_DIR`, CUDA/GPU visibility, and HF/API tokens. The `openai` package is used
+only as a client against each stage's local vLLM server — no hosted API is
+called anywhere in the pipeline.
 
-```bash
-uv run review/classification_category_coverage.py
-```
+## Legacy / inactive
 
-Reports category coverage across classified chunks:
-
-- average within-document percent of CBA text by category
-- pooled text percent by category
-- number and percent of CBAs containing each category
-
-### Generosity Scatter
-
-```bash
-uv run review/generosity_scatter.py --method davidson
-uv run review/generosity_scatter.py --method bradley-terry
-```
-
-Fits rankings via `pipeline/06_generosity/elo_calculator.py`, z-normalizes
-category log-strength scores within category, computes document composites as
-the mean of category z-scores, and writes:
-
-```text
-figures/generosity_scatter.png
-```
-
-It also prints the correlation between per-document category-score variance and
-document composite score.
-
-### Healthcare Pilot Correlation
-
-```bash
-uv run review/healthcare_pilot_correlation.py --method davidson
-```
-
-Compares three healthcare generosity score sources:
-
-- `Claude Pilot`: `references/pilot_healthcare_scores.csv`
-- `Codex Pilot`: `references/doc_scalar_elo_rank.csv`
-- `ELO Generosity`: fitted Healthcare ranking from saved pairwise comparisons
-
-The figure is written to:
-
-```text
-figures/healthcare_pilot_correlation.png
-```
-
-The ELO score is z-normalized before plotting and correlation calculations.
-
-### Category Header Wordclouds
-
-```bash
-uv run review/category_header_wordclouds.py
-```
-
-Builds category-specific wordclouds from section titles associated with
-classified text chunks. Outputs are written under:
-
-```text
-figures/
-```
-
-## Configuration Notes
-
-Most pipeline runner scripts currently set these values inside `main()`:
-
-```python
-SOURCE = "cornell_dol"
-MODEL_NAME = "gpt-5.4-nano"
-N_WORKERS = ...
-```
-
-Change `SOURCE` to process a different source directory. Change `MODEL_NAME` to
-write/read a different model-scoped cache directory.
-
-Common sources used in this project:
-
-```text
-cornell_dol
-cornell_retail_educ
-dol_archive
-```
-
-## Current Caveats
-
-- `03_provisions` reviews every segmented chunk, including tables.
-- `04_classification` only classifies chunks marked `is_provision`.
-- The old span-level `extracted_provisions` schema is no longer supported.
-- Pairwise generosity comparisons depend on sampled document pairs and can vary
-  with `N` and `RANDOM_SEED` in `pipeline/06_generosity/runner.py`.
-- PaddleOCR may miss or misclassify some article headers, especially where
-  multi-line headers are close together.
+- `main.py` is an explicit placeholder, not part of the pipeline.
+- `review/` is currently empty (distinct from `reviewer/`, the active web app).
+- `references/provision_taxonomy.json` is a flat, coarser category list from an
+  earlier iteration of this project; it is not read by any current code — the
+  live taxonomy lives in `pipeline/provisions/*.yaml`.
