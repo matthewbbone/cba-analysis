@@ -1,327 +1,356 @@
-# CBA Analysis Pipeline
+# Collective Bargaining Agreement Analysis
 
-This repository turns scanned collective bargaining agreement (CBA) PDFs into
-structured, queryable data: OCR text, grounded provision extractions, and a
-classification of each provision by taxonomy subtype and beneficiary (worker /
-employer / unclear). Analysis utilities then link that data to CBA metadata and
-render figures.
+This repository converts scanned collective bargaining agreements (CBAs) into
+analysis-ready data. It uses local vision-language and language models to:
 
-**Everything runs on locally-served, open-weight models via
-[vLLM](https://github.com/vllm-project/vllm)** — there is no dependency on a
-hosted LLM API. Each stage launches its own vLLM server subprocess and talks to
-it over the OpenAI-compatible client, purely as a local wire protocol.
+1. transcribe each PDF;
+2. locate and quote provisions of interest;
+3. classify those provisions by economic content and beneficiary; and
+4. join the results to contract metadata and produce descriptive figures.
 
-## Pipeline stages
+The current application studies how CBAs govern technological change. The same
+pipeline can support other provisions by adding a YAML specification.
 
-Data flows through three cache-backed stages, each keyed by
-`{source}/{model_slug}/{document_id}/...`. `{source}` is a subdirectory of PDFs
-(e.g. `dol_archive`, `cornell_dol`, `cornell_retail_educ`); `{model_slug}` is a
-filesystem-safe rendering of the HuggingFace model ID that produced the stage's
-output (`path_safe_model_name()` in `pipeline/utils/paths.py`, `/` → `_`).
+All models run locally through [vLLM](https://github.com/vllm-project/vllm).
+The pipeline does not send contract text to a hosted LLM API.
 
-### Stage 1 — OCR (`pipeline/stg_01_ocr/`)
+## What is the empirical object?
 
-Turns each source PDF into page-level markdown/text. Two families of runner:
+The pipeline produces two analysis tables:
 
-- **General** (`general/runner.py`) — any HuggingFace vision-language model
-  served through vLLM, one full-page transcription call per page. Default
-  `AIDC-AI/Ovis2.6-30B-A3B`, with a special-cased profile for
-  `ATH-MaaS/OvisOCR2` (prompt, token limits, and repeat-cleanup tuned for it).
-- **Specialized** (`specialized/{glmocr,miner,paddleocr}.py`) — one runner per
-  specific checkpoint (`zai-org/GLM-OCR`, `opendatalab/MinerU2.5-Pro-2605-1.2B`,
-  `PaddlePaddle/PaddleOCR-VL-1.6`), each supporting `--mode single|layout`
-  (MinerU also supports `native`, using its own layout tokens instead of the
-  shared detector). `layout` mode pre-segments the page with a shared
-  PP-DocLayoutV3 detector (`layout.py`) and OCRs each region separately before
-  reassembling reading order.
+| Table | Unit of observation | Typical use |
+| --- | --- | --- |
+| Document table | One CBA, including CBAs with no extracted provision | Estimate provision prevalence across contracts |
+| Provision table | One extracted provision | Study provision content, subtype, and beneficiary |
+
+For the technology taxonomy, each provision receives:
+
+- a hierarchical subtype, such as `preemptive_rights` or `implementation`,
+  with a more detailed subtype at level 2; and
+- a beneficiary: `worker`, `employer`, or `unclear`, interpreted as the party
+  receiving the substantive benefit from the provision.
+
+The main document-level measures are:
+
+- **Subtype prevalence:** the percentage of CBAs containing at least one
+  provision of a given subtype. Categories can overlap because one CBA can
+  contain several provision types.
+- **Beneficiary share:** within each CBA, the percentage of its extracted
+  provisions assigned to each beneficiary, averaged across CBAs. These shares
+  sum to approximately 100% within a group.
+
+A CBA with no extracted provisions has zero subtype indicators but undefined
+beneficiary shares (`NaN`). This distinction matters when constructing samples
+or regression outcomes.
+
+## Pipeline at a glance
+
+```text
+scanned CBA PDFs
+      |
+      v
+Stage 1: OCR                 page text + complete document text
+      |
+      v
+Stage 2: extraction          grounded quotations of relevant provisions
+      |
+      v
+Stage 3: classification      subtype + beneficiary labels
+      |
+      v
+metadata link                document- and provision-level CSVs
+      |
+      v
+plots                        overall, cohort, and industry summaries
+```
+
+Intermediate results are cached by source, model, and document. A different
+model therefore creates a distinct set of artifacts rather than overwriting an
+earlier run.
+
+## Quick start
+
+### 1. Install the environment
+
+The project requires Python 3.13+, [`uv`](https://docs.astral.sh/uv/), a
+CUDA-capable machine, and enough GPU memory for the selected checkpoints.
 
 ```bash
+uv sync
+```
+
+Optionally create a repo-root `.env` file. The most important setting is:
+
+```dotenv
+CACHE_DIR=/path/to/pipeline/cache
+```
+
+If it is omitted, the pipeline uses the repo-local `cache/` directory. Model
+weights are downloaded from Hugging Face on first use, so any required access
+token must also be available in the environment.
+
+### 2. Run one contract through the pipeline
+
+Place PDFs under `cache/<source>/`. The PDF stem is its `document_id`; for
+example, `cache/dol_archive/document_10.pdf` has ID `document_10`.
+
+```bash
+# OCR
 uv run python pipeline/stg_01_ocr/general/runner.py \
-  --source dol_archive --model-name ATH-MaaS/OvisOCR2 \
-  --device 0 --port 8123 --concurrency 16
+  --source dol_archive \
+  --document-id document_10 \
+  --model-name ATH-MaaS/OvisOCR2 \
+  --device 0 --port 8123
 
-uv run python -m pipeline.stg_01_ocr.specialized.miner --mode layout --source dol_archive
-```
-
-Key flags: `--source`, `--document-id`/`--document-ids` (repeatable),
-`--sample`/`--seed`, `--model-name`/`--hf-model`, `--port`, `--num-gpus`,
-`--device`, `--max-model-len`, `--gpu-memory-utilization`, `--dpi` (default
-200), `--concurrency`, `--force`, `--repetition-retries` (default 2).
-
-Output: `{cache}/stg_01_ocr/{source}/{model_slug}/{document_id}/page_N.txt`
-(raw), `page_N.md` (normalized markdown), `full.txt` (whole document,
-`--- Page N ---` separated). The shared layout cache lives at
-`{cache}/stg_01_ocr/{source}/_layout/{layout_model_slug}/{document_id}/layout.json`.
-
-### Stage 2 — Extract (`pipeline/stg_02_extract/`)
-
-Extracts grounded provision spans from each `full.txt` using
-[`langextract`](https://github.com/matthewbbone/langextract) (a fork, pinned in
-`pyproject.toml` via `feat/chunk-offset`), configured to call the local vLLM
-OpenAI-compatible endpoint rather than a hosted API. `langextract` chunks the
-document text and returns extraction spans reconciled against the source
-(`grounding_status`, `span_reliable`).
-
-```bash
+# Extract technology provisions
 uv run python pipeline/stg_02_extract/runner.py \
-  --provision technology --source dol_archive \
-  --model-name google/gemma-4-31B-it --ocr-model-name ATH-MaaS/OvisOCR2
-```
+  --source dol_archive \
+  --document-id document_10 \
+  --provision technology \
+  --ocr-model-name ATH-MaaS/OvisOCR2 \
+  --model-name google/gemma-4-31B-it \
+  --device 0 --port 8123
 
-`--provision NAME` (required) loads `pipeline/provisions/NAME.yaml` — see
-[Provision taxonomy config](#provision-taxonomy-config-pipelineprovisions) below.
-Other key flags: `--ocr-model-name` (selects which stage-1 output to read,
-default `ATH-MaaS/OvisOCR2`), `--model-name` (default `google/gemma-4-31B-it`),
-`--source`, `--document-id`/`--document-ids`, `--sample`/`--seed`, `--force`,
-`--concurrency` (documents in parallel).
-
-Output JSONL, one record per extraction, at
-`{cache}/stg_02_extract/{source}/{model_slug}/{document_id}/{provision_type}.jsonl`:
-
-```
-source, document_id, ocr_model_name, model_name, extraction_class,
-extraction_text, attributes: {context}, span_start, span_end,
-span_reliable, grounding_status
-```
-
-### Stage 3 — Classify (`pipeline/stg_03_classify/`)
-
-Classifies each stage-2 extraction along two dimensions: **beneficiary**
-(`worker` / `employer` / `unclear` — which party receives a substantive
-benefit) and **subtype**, walked as a taxonomy cascade with guided-decoding
-JSON-schema calls: one call settles beneficiary + the top-level subtype, and
-one further call per level narrows into the previous level's children. A
-reserved `"other"` label is injected as a choice at every level (never declared
-in the YAML) and is terminal — choosing it stops the cascade, leaving deeper
-`subtype_N` fields `None`.
-
-```bash
+# Classify at the most detailed available taxonomy level
 uv run python pipeline/stg_03_classify/runner.py \
-  --provision technology --taxonomy-depth 2 --source dol_archive \
-  --model-name Qwen/Qwen3.8-27B-FP8 --extract-model-name google/gemma-4-31B-it
+  --source dol_archive \
+  --document-id document_10 \
+  --provision technology \
+  --taxonomy-depth 2 \
+  --extract-model-name google/gemma-4-31B-it \
+  --model-name Qwen/Qwen3.8-27B-FP8 \
+  --device 0 --port 8123
 ```
 
-`--taxonomy-depth` (default 1) sets how many cascade levels to run; it cannot
-exceed the provision's declared taxonomy depth. `--extract-model-name` selects
-which stage-2 output to read. A provision with no `subtype_taxonomy` (see
-`wage_table.yaml` below) cannot be classified and this stage will refuse to run
-against it.
+Each command starts and stops its own local vLLM server. Use a different port
+for each simultaneous process.
 
-Output JSONL at
-`{cache}/stg_03_classify/{source}/{model_slug}/{document_id}/{provision_type}.jsonl`:
+### 3. Build analysis files and figures
 
-```
-source, document_id, extract_model_name, model_name, extraction_class,
-extraction_text, span_start, span_end, beneficiary, taxonomy_depth,
-subtype_1, subtype_2, ..., subtype_<taxonomy_depth>
-```
-
-### Orchestration
-
-`parallel_runs.bash` runs stage 1 across three sources simultaneously, one GPU
-and CPU set each, all via `general/runner.py` with `ATH-MaaS/OvisOCR2`:
-
-```bash
-bash parallel_runs.bash   # cornell_dol on GPU 0, cornell_retail_educ on GPU 1, dol_archive on GPU 2
-```
-
-## Provision taxonomy config (`pipeline/provisions/`)
-
-Each provision type is declared in one YAML file, loaded and validated by
-`pipeline/stg_02_extract/structure_provision.py` (`load_provision`). A config
-carries both the stage-2 extraction prompt and, optionally, the stage-3
-classification taxonomy (`subtype_taxonomy`): a tree of `{label: {description,
-subtypes}}`, where labels must be unique snake_case across the whole tree, each
-level needs at least two labels, and `"other"` is reserved (declaring it raises
-a validation error — stage 3 injects it automatically).
-
-Two provision types currently exist:
-
-- **`technology.yaml`** — new-technology/automation clauses. Level-1 subtypes:
-  `preemptive_rights`, `implementation`, `workforce_management`, each with its
-  own 6–7 level-2 children (e.g. `preemptive_rights` → `notification_right`,
-  `negotiation_right`, `participation_right`, `technology_restriction`, ...).
-- **`wage_table.yaml`** — wage-table extraction only; **declares no
-  `subtype_taxonomy`**, so it can be extracted (stage 2) but not classified
-  (stage 3 refuses to run against it).
-
-## Analysis utilities (`pipeline/utils/`)
-
-### `link_classifications.py`
-
-Reads every classified `{document_id}/{provision_type}.jsonl` under a stage-3
-directory and joins it to the CBA metadata list
-(`meta_data/CBAList_with_statefips.dta`, keyed by
-`document_id == "document_" + cbafile`). Writes two CSVs to `figures/`.
+The metadata join currently supports `dol_archive`, whose document IDs map to
+`meta_data/CBAList_with_statefips.dta`.
 
 ```bash
 uv run python pipeline/utils/link_classifications.py \
-  --provision-type technology --source dol_archive --level 2
-```
+  --provision-type technology \
+  --source dol_archive \
+  --level 2
 
-The **document table** (`{provision}_{source}_l{level}_documents.csv`) is one
-row per classified document, including zero-provision documents, with:
-
-- `has_<subtype>` / `n_<subtype>` — whether/how many provisions of each
-  subtype the document carries (a document counts once per subtype however
-  many such provisions it holds).
-- `n_beneficiary_<label>` / `pct_beneficiary_<label>` for
-  `label in (employer, worker, unclear)` — that document's own count/share of
-  provisions naming each beneficiary. `pct_beneficiary_*` is `NaN` (not zero)
-  for a document with no provisions, since the share is undefined there.
-- CBA metadata: `employername`, `union`, `expire_year`, `expire_period` (5-year
-  bucket of contract expiration), `naics`/`sector_label`, `wrkrs`, `ownership`.
-
-The **provision table** (`{provision}_{source}_l{level}_provisions.csv`) is one
-row per classified provision, joined to the same metadata (`--include-text`
-keeps the quoted extraction text).
-
-Key flags: `--source`, `--model-name`, `--provision-type`, `--level`
-(taxonomy depth to analyse), `--cache-dir` (default from `CACHE_DIR`),
-`--metadata`, `--output-dir` (default `figures/`), `--include-text`, `--dry-run`.
-
-### `plot_classifications.py`
-
-Reads the document CSV `link_classifications.py` wrote and renders figures —
-must be run with the same `--provision-type`/`--source`/`--level` the CSV was
-built with.
-
-```bash
 uv run python pipeline/utils/plot_classifications.py \
-  --provision-type technology --source dol_archive --level 2 --no-industry-adjusted
+  --provision-type technology \
+  --source dol_archive \
+  --level 2
 ```
 
-For each of two statistics — **subtype prevalence** (% of CBAs carrying a
-subtype; a CBA can carry several, so shares overlap) and **beneficiary share**
-(each CBA's own % of provisions naming a beneficiary, averaged across CBAs; a
-provision names exactly one beneficiary, so shares within a group sum to
-~100%) — it writes three figures: overall, by contract-expiration cohort, and
-by NAICS industry.
+This writes CSVs and PNGs to `figures/`. Pass `--dry-run` to either utility to
+inspect its intended inputs and outputs before writing files.
 
+## Outputs and variables
+
+All paths below are relative to `CACHE_DIR`. Model names are made filesystem
+safe by replacing `/` with `_`.
+
+### Stage 1: OCR
+
+```text
+stg_01_ocr/<source>/<ocr_model>/<document_id>/
+  page_1.txt        raw model response
+  page_1.md         normalized page transcription
+  ...
+  full.txt          pages combined with page markers
 ```
-{prefix}_subtype_share.png              {prefix}_beneficiary_share.png
-{prefix}_share_by_period.png            {prefix}_beneficiary_share_by_period.png
-{prefix}_share_by_sector.png            {prefix}_beneficiary_share_by_sector.png
+
+The general runner works with Hugging Face vision-language models served by
+vLLM. Specialized runners are also available for GLM-OCR, MinerU, and
+PaddleOCR-VL under `pipeline/stg_01_ocr/specialized/`. Their `layout` modes
+first detect page regions and then transcribe them in reading order.
+
+Useful controls include `--sample`, `--seed`, repeatable `--document-id`,
+`--document-ids`, `--dpi`, `--concurrency`, and `--force`. Run a script with
+`--help` for its complete interface.
+
+### Stage 2: grounded extraction
+
+```text
+stg_02_extract/<source>/<extract_model>/<document_id>/<provision>.jsonl
 ```
-(`{prefix} = {provision_type}_{source}_l{level}`)
 
-The two by-cohort figures draw each series **twice**: a solid line for the raw
-cohort average, and (unless `--no-industry-adjusted`) a **dotted
-industry-composition-adjusted index** — the statistic computed separately
-within each NAICS stratum, then averaged across strata with equal weights,
-using only strata present in every plotted cohort. This isolates a genuine
-within-industry trend from a shift in the corpus's industry mix over time.
-CBAs with no NAICS code (roughly half the corpus) are kept as their own
-stratum rather than dropped, since that missingness is itself strongly
-time-trended; both industry figures also show them as their own "No NAICS
-code" row (`--hide-no-naics` to omit it).
+Each JSONL row is a quoted provision with fields including:
 
-Key flags: `--input-dir`/`--output-dir`, `--source`, `--level`,
-`--provision-type`, `--min-group-docs` (default 10, drops sparse cohorts),
-`--min-sector-docs` (default 5, pools sparse industries into "Other sectors"),
-`--min-cbas` (default 0, drops sparse subtype series), `--min-cell-docs`
-(default 1, per-cohort inclusion threshold for the adjusted index),
-`--no-industry-adjusted`, `--hide-no-naics`, `--dpi`, `--dry-run`.
+| Field | Meaning |
+| --- | --- |
+| `extraction_text` | Text identified as a relevant provision |
+| `context` | Model-produced contextual attribute |
+| `span_start`, `span_end` | Character offsets in the OCR document |
+| `span_reliable` | Whether the offsets can be treated as reliable |
+| `grounding_status` | Result of reconciling the quotation to source text |
+| `document_id`, `source` | Contract identifiers |
+| `ocr_model_name`, `model_name` | Provenance for the OCR and extraction models |
 
-### `move_extractions.py`
+Extraction uses `langextract` to chunk long contracts and reconcile returned
+text with the OCR source. Researchers auditing results should use the span and
+grounding fields rather than treating every quotation as equally reliable.
 
-Copies stage-2 (and matching stage-3) outputs for one source from the external
-`CACHE_DIR` into the repo-local `cache/`, preserving layout. Never copies
-stage-1 OCR text.
+### Stage 3: classification
+
+```text
+stg_03_classify/<source>/<classify_model>/<document_id>/<provision>.jsonl
+```
+
+Each extraction retains its quoted text and offsets and gains `beneficiary`,
+`subtype_1`, `subtype_2`, and model-provenance fields. Classification proceeds
+down the taxonomy one level at a time. The pipeline adds a terminal `other`
+category at every level; if selected, deeper subtype fields remain null.
+
+`--taxonomy-depth` cannot exceed the depth declared by the provision. A
+provision without a taxonomy can be extracted but not classified.
+
+### Linked analysis data
+
+`link_classifications.py` creates:
+
+```text
+figures/<provision>_<source>_l<level>_documents.csv
+figures/<provision>_<source>_l<level>_provisions.csv
+```
+
+The document table includes:
+
+- `has_<subtype>` and `n_<subtype>`;
+- `n_beneficiary_<label>` and `pct_beneficiary_<label>`;
+- employer, union, expiration year and five-year expiration cohort;
+- NAICS code and sector label; and
+- employment (`wrkrs`) and ownership metadata.
+
+The provision table contains one row per classified provision joined to the
+same contract metadata. Add `--include-text` if the analysis file should retain
+the extracted quotation.
+
+## Figures and interpretation
+
+For both subtype prevalence and beneficiary share, the plotting utility
+produces an overall figure and breakdowns by expiration cohort and industry.
+
+By default, cohort plots contain:
+
+- a solid line showing the raw cohort mean; and
+- a dotted industry-composition-adjusted index.
+
+The adjusted series computes the outcome within each NAICS stratum and then
+averages strata with equal weights, restricting attention to strata observed
+in every plotted cohort. Missing NAICS values form their own stratum because
+missingness is strongly time-patterned in this corpus. Use
+`--no-industry-adjusted` to omit the index or `--hide-no-naics` to omit the
+missing-NAICS row from industry plots.
+
+Important interpretation limits:
+
+- These outputs are descriptive. Industry adjustment does not identify a
+  causal effect of time, technology, or contract institutions.
+- Contract expiration is not necessarily the date a clause was negotiated or
+  first introduced.
+- OCR, extraction, and classification errors are generated measurements and
+  may be correlated with document age, scan quality, industry, or contract
+  complexity.
+- Document-level prevalence weights every CBA equally. It is not employment
+  weighted unless the researcher explicitly uses `wrkrs`.
+- Results depend on the provision definition, taxonomy, model checkpoints, and
+  decoding settings. Preserve these as part of the empirical specification.
+
+Useful plotting thresholds include `--min-group-docs` (default 10),
+`--min-sector-docs` (default 5), `--min-cbas`, and `--min-cell-docs`. These can
+change the plotted sample and should be reported with results.
+
+## Defining an outcome taxonomy
+
+Provision definitions live in `pipeline/provisions/*.yaml` and contain:
+
+1. the extraction definition and prompt; and
+2. optionally, a hierarchical `subtype_taxonomy` used by stage 3.
+
+The included specifications are:
+
+- `technology.yaml`: technology and automation clauses, with two taxonomy
+  levels. The first level is `preemptive_rights`, `implementation`, or
+  `workforce_management`.
+- `wage_table.yaml`: wage-table extraction only; it has no classification
+  taxonomy.
+
+Taxonomy labels must be unique snake_case names. Each nonterminal level must
+have at least two choices. Do not declare `other`, which is reserved and added
+by the classifier.
+
+When adding a new economic concept, treat the YAML as part of the measurement
+design: define inclusions and exclusions clearly, keep categories mutually
+interpretable, and validate the resulting labels on a human-coded sample.
+
+## Human review and OCR comparison
+
+The `reviewer/` directory contains a Vite app that displays source PDFs beside
+OCR and extraction output:
 
 ```bash
-uv run python pipeline/utils/move_extractions.py dol_archive
-uv run python pipeline/utils/move_extractions.py dol_archive --document-id document_123 --dry-run
+cd reviewer
+npm install
+npm run dev
 ```
 
-### `rank_ocr_models.py`
+Open `http://localhost:5178`. Extraction review highlights spans by grounding
+status. OCR comparison records pairwise judgments in
+`cache/reviewer/ocr_comparisons.jsonl`.
 
-Fits a regularized Bradley-Terry-style ranking from the reviewer app's pairwise
-OCR judgments (`cache/reviewer/ocr_comparisons.jsonl`), treating `both_good`/
-`both_bad` verdicts as fractional ties.
+Rank reviewed OCR models with:
 
 ```bash
 uv run python pipeline/utils/rank_ocr_models.py
 uv run python pipeline/utils/rank_ocr_models.py --top-ocr-models
 ```
 
-Writes `cache/reviewer/ocr_model_rankings.json` and prints a ranking table.
+The ranking is a regularized Bradley-Terry-style summary; `both_good` and
+`both_bad` judgments enter as fractional ties.
 
-### Shared, non-CLI modules
+## Reproducibility and validation
 
-- `paths.py` — `default_cache_dir()`, `path_safe_model_name()`.
-- `gpu.py` — CUDA device-string parsing/validation shared by every runner CLI.
-- `vllm_server.py` — the `VLLMServer` class every stage runner uses to launch
-  and manage its local vLLM subprocess; not invoked directly.
+Before using generated variables in empirical work:
 
-## The reviewer app (`reviewer/`)
+1. sample contracts across years, industries, and scan-quality strata;
+2. audit OCR against the PDF;
+3. audit extracted text using grounding status and source offsets;
+4. compare classifications with blinded human labels; and
+5. report precision, recall, and disagreement by economically relevant strata.
 
-A small TypeScript + Vite single-page app for manually reviewing pipeline
-output against source PDFs — reads directly from the repo-local `cache/`
-(no copying).
+The cache path records the model identity, but a full replication archive
+should also retain the Git commit, `uv.lock`, provision YAML, CLI arguments,
+random seed, and model revision.
 
-```bash
-cd reviewer
-npm install
-npm run dev   # http://localhost:5178
-```
-
-Two modes: **extraction review** (source PDF alongside stage-1 OCR text with
-stage-2 extraction spans highlighted by grounding status) and **OCR
-comparison** (side-by-side output from two of four OCR models on a sampled
-page, with a `left_better`/`right_better`/`both_good`/`both_bad` judgment
-appended to `cache/reviewer/ocr_comparisons.jsonl` for `rank_ocr_models.py`).
-
-## Data layout
-
-- **Cache root**: `CACHE_DIR` in `.env` (default `cache` if unset) resolves via
-  `default_cache_dir()` in `pipeline/utils/paths.py`. In this deployment it
-  points to an external volume outside the repo, where the full pipeline
-  output actually lives; the repo-local `cache/` is a smaller working copy
-  (source PDFs, `move_extractions.py` output, and `cache/reviewer/`) that the
-  reviewer app and test fixtures use directly.
-- **`meta_data/CBAList_with_statefips.dta`** — the DOL CBA metadata list
-  consumed by `link_classifications.py`, keyed by `cbafile`. Its `naics`/
-  `wrkrs`/`ownership` columns needed a left-shift repair for rows with missing
-  values (`repair_trailing_columns`), already handled in `load_metadata`.
-- **`figures/`** — output of `link_classifications.py` (CSVs) and
-  `plot_classifications.py` (PNGs); gitignored.
-- **`logs/`** — created on demand by `parallel_runs.bash` (`logs/parallel/`)
-  and `VLLMServer`; gitignored.
-
-## Testing
+Run the test suite with:
 
 ```bash
-uv run pytest -q                              # whole suite
-uv run pytest tests/test_stg_03_classify.py   # one file
+uv run pytest -q
 ```
 
-Tests are `unittest.TestCase`-style classes run under pytest, building fake
-cache trees in temporary directories and mocking out `VLLMServer` — no real
-GPU, vLLM server, or network call runs in the suite. `pyproject.toml` sets
-`pythonpath = ["."]` so tests import `pipeline.*` directly.
+Tests use temporary cache trees and mocked model servers, so they require no
+GPU or network access. At present, five stage-2 tests are known to assert an
+older chat-template setting and may fail until their expectations are updated.
 
-Known drift: `tests/test_stg_02_extract.py` has 5 failing tests asserting a
-stale `--default-chat-template-kwargs` value that hasn't been updated to match
-a recent `preserve_thinking` addition in `pipeline/stg_02_extract/runner.py`.
+## Repository map
 
-## Environment
+```text
+pipeline/stg_01_ocr/          PDF transcription
+pipeline/stg_02_extract/      grounded provision extraction
+pipeline/stg_03_classify/     hierarchical classification
+pipeline/provisions/          measurement definitions and taxonomies
+pipeline/utils/               metadata linking, plots, paths, model ranking
+reviewer/                     browser-based human review tool
+meta_data/                    CBA metadata used by the analysis join
+cache/                        local inputs, cached artifacts, review data
+figures/                      generated analysis tables and plots (gitignored)
+tests/                        unit and integration tests with mocked inference
+```
 
-`pyproject.toml` pins `requires-python = ">=3.13"` and `vllm>=0.26.0`,
-`langextract` (from the `matthewbbone/langextract@feat/chunk-offset` fork),
-`matplotlib`, `pandas`, `pymupdf`, `pyyaml`, `python-dotenv`. Managed with
-[`uv`](https://docs.astral.sh/uv/); `uv run <script>` picks up the project
-environment automatically.
-
-A repo-root `.env` (gitignored) configures, per-deployment: `CACHE_DIR`,
-`LOG_DIR`, CUDA/GPU visibility, and HF/API tokens. The `openai` package is used
-only as a client against each stage's local vLLM server — no hosted API is
-called anywhere in the pipeline.
-
-## Legacy / inactive
-
-- `main.py` is an explicit placeholder, not part of the pipeline.
-- `review/` is currently empty (distinct from `reviewer/`, the active web app).
-- `references/provision_taxonomy.json` is a flat, coarser category list from an
-  earlier iteration of this project; it is not read by any current code — the
-  live taxonomy lives in `pipeline/provisions/*.yaml`.
+`parallel_runs.bash` launches OCR for the three configured sources across
+three GPUs. `pipeline/utils/move_extractions.py` copies selected stage-2 and
+stage-3 outputs from an external `CACHE_DIR` into the repo-local cache for
+review; it never copies OCR text. `main.py` and
+`references/provision_taxonomy.json` are legacy placeholders and are not used
+by the active pipeline.
