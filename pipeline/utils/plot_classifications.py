@@ -803,6 +803,17 @@ def _sector_caption_tail(min_docs: int, unknown_docs: int, show_unknown: bool) -
     return tail + f" {unknown_docs} CBAs carry no NAICS code and are excluded."
 
 
+def _no_naics_count(documents: pd.DataFrame) -> int:
+    """CBAs with no NAICS code, counted on the frame the figure actually plots.
+
+    The by-sector figures use different denominators -- every classified CBA for
+    the subtype figure, only provision-carrying ones for the beneficiary figure --
+    so each has to count its own, or the caption contradicts the row label.
+    """
+
+    return int((documents["sector_label"] == UNKNOWN_SECTOR).sum())
+
+
 def plot_by_sector(
     documents: pd.DataFrame,
     subtypes,
@@ -1027,7 +1038,7 @@ def plot_beneficiary_by_sector(
     if grouped is None:
         print("  [warn] no documents carry a NAICS sector; skipping figure")
         return None
-    known, doc_counts = grouped
+    known, _ = grouped
 
     means, totals = beneficiary_group_means(known, "sector_group", beneficiaries)
     if means.empty:
@@ -1075,7 +1086,7 @@ def plot_beneficiary_by_sector(
     caption = BENEFICIARY_MEAN_CAPTION
     caption += " Only CBAs with at least one provision in the sector are averaged."
     caption += _sector_caption_tail(
-        min_docs, int(doc_counts.get(UNKNOWN_SECTOR, 0)), show_unknown
+        min_docs, _no_naics_count(_with_a_provision(documents)), show_unknown
     )
     _caption(fig, ax, caption)
     return fig
