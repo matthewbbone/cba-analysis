@@ -6,26 +6,29 @@ interface Extraction {
   span_start: number;
   span_end: number;
   grounding_status: string;
-  attributes?: { dimensions?: string[] };
-  document_id?: string;
+  span_reliable?: boolean;
+  attributes?: { context?: string | null };
 }
 
-interface DocInfo {
+interface ExtractionComparisonPayload {
+  sampleId: string;
   source: string;
-  model: string;
   documentId: string;
-  extractionFile: string;
-  extractionCount: number;
-  hasPdf: boolean;
-}
-
-interface DocumentPayload {
-  source: string;
-  model: string;
-  documentId: string;
+  provision: string;
+  ocrModel: string;
   text: string;
-  extractions: Extraction[];
   pdfUrl: string | null;
+  left: { model: string; extractions: Extraction[] };
+  right: { model: string; extractions: Extraction[] };
+  progress: { reviewed: number; candidateTotal?: number; exhausted: boolean };
+}
+
+type Side = "left" | "right";
+
+/** One navigable entry: an extraction plus which model produced it. */
+interface SideExtraction {
+  side: Side;
+  extraction: Extraction;
 }
 
 type ComparisonChoice = "left_better" | "right_better" | "both_good" | "both_bad";
@@ -42,8 +45,22 @@ interface OcrComparisonPayload {
   progress: { reviewed: number; candidateTotal?: number; total?: number; exhausted: boolean };
 }
 
-// Color encodes grounding status — the key review signal: how tightly the
-// model's extraction is anchored to the source OCR text.
+// Highlight color encodes *which model* found the span — the review question
+// here is where the two models agree and where only one of them fired.
+const SIDE_COLORS: Record<"left" | "both" | "right", string> = {
+  left: "#1971c2",
+  both: "#7048e8",
+  right: "#f08c00",
+};
+const SIDE_LABELS: Record<"left" | "both" | "right", string> = {
+  left: "Extraction A only",
+  both: "Both models",
+  right: "Extraction B only",
+};
+const ALIASES: Record<Side, string> = { left: "Extraction A", right: "Extraction B" };
+
+// Grounding status survives as a per-extraction badge in the detail card: it
+// says how tightly a model's text is anchored to the source OCR.
 const STATUS_COLORS: Record<string, string> = {
   match_exact: "#2f9e44",
   match_lesser: "#f08c00",
@@ -67,19 +84,15 @@ function statusColor(status: string): string {
   return STATUS_COLORS[status] ?? STATUS_COLORS.unknown;
 }
 
-/** One entry per (source, document). The same document is often extracted by
- *  several models; those variants hang off `models` so the model dropdown can
- *  switch between them without changing which document is shown. */
-interface DocGroup {
-  source: string;
-  documentId: string;
-  hasPdf: boolean;
-  models: DocInfo[]; // sorted by model name
-}
-
 const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
-const docSelect = $<HTMLSelectElement>("doc-select");
-const modelSelect = $<HTMLSelectElement>("model-select");
+const provisionSelect = $<HTMLSelectElement>("provision-select");
+const extractionMeta = $("extraction-meta");
+const extractionProgress = $("extraction-progress");
+const extractionMessage = $("extraction-message");
+const newExtractionBtn = $<HTMLButtonElement>("new-extraction");
+const extractionActionButtons = [
+  ...document.querySelectorAll<HTMLButtonElement>("#extraction-actions button[data-choice]"),
+];
 const prevBtn = $<HTMLButtonElement>("prev");
 const nextBtn = $<HTMLButtonElement>("next");
 const counter = $("counter");
@@ -108,31 +121,15 @@ const comparisonActionButtons = [
   ...document.querySelectorAll<HTMLButtonElement>("#comparison-actions button[data-choice]"),
 ];
 
-let groups: DocGroup[] = [];
-let current: DocumentPayload | null = null;
+let current: ExtractionComparisonPayload | null = null;
+/** Both models' extractions merged into one document-order navigation list. */
+let items: SideExtraction[] = [];
 let active = -1;
+let extractionLoading = false;
 let activeTab: "extraction" | "comparison" = "extraction";
 let comparison: OcrComparisonPayload | null = null;
 let comparisonLoading = false;
 
-/** Collapse the flat /api/documents list into one entry per document. */
-function buildGroups(docs: DocInfo[]): DocGroup[] {
-  const byKey = new Map<string, DocGroup>();
-  for (const d of docs) {
-    const key = `${d.source}\u0000${d.documentId}`;
-    let group = byKey.get(key);
-    if (!group) {
-      group = { source: d.source, documentId: d.documentId, hasPdf: d.hasPdf, models: [] };
-      byKey.set(key, group);
-    }
-    group.hasPdf ||= d.hasPdf;
-    group.models.push(d);
-  }
-  const result = [...byKey.values()];
-  for (const g of result) g.models.sort((a, b) => a.model.localeCompare(b.model));
-  result.sort((a, b) => a.source.localeCompare(b.source) || a.documentId.localeCompare(b.documentId));
-  return result;
-}
 
 function escapeHtml(s: string): string {
   return s
@@ -141,11 +138,36 @@ function escapeHtml(s: string): string {
     .replace(/>/g, "&gt;");
 }
 
-/** Interval-flatten the extraction spans and render the OCR text with
- *  color-coded highlights. Handles overlaps by segmenting on every boundary. */
-function renderText(text: string, extractions: Extraction[]): void {
-  const spans = extractions
-    .map((e, i) => ({ i, start: e.span_start, end: e.span_end, status: e.grounding_status }))
+function overlaps(a: Extraction, b: Extraction): boolean {
+  return a.span_start < b.span_end && b.span_start < a.span_end;
+}
+
+/** Merge both models' extractions into one document-order list. Index into this
+ *  list is the identity used by the highlights, the counter, and the detail card. */
+function mergeItems(payload: ExtractionComparisonPayload): SideExtraction[] {
+  const merged: SideExtraction[] = [
+    ...payload.left.extractions.map((extraction) => ({ side: "left" as Side, extraction })),
+    ...payload.right.extractions.map((extraction) => ({ side: "right" as Side, extraction })),
+  ];
+  return merged.sort(
+    (a, b) =>
+      a.extraction.span_start - b.extraction.span_start ||
+      a.extraction.span_end - b.extraction.span_end ||
+      a.side.localeCompare(b.side),
+  );
+}
+
+/** Interval-flatten both models' spans over the one shared full.txt and render
+ *  it with color-coded highlights. Handles overlaps by segmenting on every
+ *  boundary, so a stretch both models claimed gets its own "both" segment. */
+function renderOverlay(text: string, entries: SideExtraction[]): void {
+  const spans = entries
+    .map((item, i) => ({
+      i,
+      side: item.side,
+      start: item.extraction.span_start,
+      end: item.extraction.span_end,
+    }))
     .filter((s) => Number.isFinite(s.start) && Number.isFinite(s.end) && s.end > s.start);
 
   const bounds = new Set<number>([0, text.length]);
@@ -166,12 +188,14 @@ function renderText(text: string, extractions: Extraction[]): void {
       parts.push(chunk);
       continue;
     }
-    // Primary color = the most recently started (innermost) extraction.
+    const sides = new Set(covering.map((s) => s.side));
+    const bucket = sides.size > 1 ? "both" : covering[0].side;
+    // Primary = the most recently started (innermost) extraction.
     const primary = covering.reduce((p, c) => (c.start >= p.start ? c : p));
     const ids = covering.map((c) => c.i).join(",");
     parts.push(
       `<mark class="hl" data-ext="${ids}" data-primary="${primary.i}" ` +
-        `style="--hl:${statusColor(primary.status)}">${chunk}</mark>`,
+        `style="--hl:${SIDE_COLORS[bucket]}">${chunk}</mark>`,
     );
   }
   textView.innerHTML = parts.join("");
@@ -184,52 +208,87 @@ function renderText(text: string, extractions: Extraction[]): void {
   });
 }
 
-function buildLegend(extractions: Extraction[]): void {
-  const counts = new Map<string, number>();
-  for (const e of extractions) counts.set(e.grounding_status, (counts.get(e.grounding_status) ?? 0) + 1);
-  const items = [...counts.entries()].sort((a, b) => b[1] - a[1]);
-  legend.innerHTML = items
+function buildLegend(payload: ExtractionComparisonPayload): void {
+  const counts = { left: 0, both: 0, right: 0 };
+  for (const e of payload.left.extractions) {
+    if (payload.right.extractions.some((other) => overlaps(e, other))) counts.both++;
+    else counts.left++;
+  }
+  for (const e of payload.right.extractions) {
+    if (!payload.left.extractions.some((other) => overlaps(e, other))) counts.right++;
+  }
+  legend.innerHTML = (["left", "both", "right"] as const)
     .map(
-      ([status, n]) =>
-        `<span class="legend-item"><span class="swatch" style="background:${statusColor(status)}"></span>` +
-        `${STATUS_LABELS[status] ?? status} (${n})</span>`,
+      (bucket) =>
+        `<span class="legend-item"><span class="swatch" style="background:${SIDE_COLORS[bucket]}"></span>` +
+        `${SIDE_LABELS[bucket]} (${counts[bucket]})</span>`,
     )
     .join("");
 }
 
+function renderExtractionColumn(side: Side, entry: Extraction | null, isActive: boolean): string {
+  const alias = ALIASES[side];
+  if (!entry) {
+    return `
+      <div class="detail-col">
+        <div class="detail-label">${alias}</div>
+        <div class="detail-empty">No overlapping extraction from ${alias}.</div>
+      </div>`;
+  }
+  const context = entry.attributes?.context;
+  // A span the pipeline could not re-anchor may highlight only a prefix of the
+  // extracted text, so the reviewer should not read the highlight as ground truth.
+  const unreliable =
+    entry.span_reliable === false ? `<span class="badge warn">Span unreliable</span>` : "";
+  return `
+    <div class="detail-col${isActive ? " active" : ""}">
+      <div class="detail-head">
+        <span class="badge alias" style="background:${SIDE_COLORS[side]}">${alias}</span>
+        <span class="badge status" style="background:${statusColor(entry.grounding_status)}">
+          ${STATUS_LABELS[entry.grounding_status] ?? entry.grounding_status}</span>
+        ${unreliable}
+        <span class="offsets">chars ${entry.span_start}–${entry.span_end}</span>
+      </div>
+      <div class="detail-label">Extracted text</div>
+      <pre class="detail-text">${escapeHtml(entry.extraction_text)}</pre>
+      <div class="detail-label">Context</div>
+      <div class="detail-context${context ? "" : " empty"}">${
+        context ? escapeHtml(context) : "No context recorded."
+      }</div>
+    </div>`;
+}
+
+/** Show the selected extraction beside whatever the other model found at the
+ *  same place — the direct A-vs-B question this tab exists to answer. */
 function renderDetail(): void {
-  if (!current || active < 0 || active >= current.extractions.length) {
+  if (!current || active < 0 || active >= items.length) {
     detail.innerHTML = `<div class="detail-empty">Select a highlight, or use ◀ ▶ to step through
-      ${current ? current.extractions.length : 0} extraction(s).</div>`;
+      ${items.length} extraction(s).</div>`;
     return;
   }
-  const e = current.extractions[active];
-  const sourceSlice = current.text.slice(e.span_start, e.span_end);
-  const dims = e.attributes?.dimensions ?? [];
-  detail.innerHTML = `
-    <div class="detail-head">
-      <span class="badge class">${escapeHtml(e.extraction_class)}</span>
-      <span class="badge status" style="background:${statusColor(e.grounding_status)}">
-        ${STATUS_LABELS[e.grounding_status] ?? e.grounding_status}</span>
-      ${dims.map((d) => `<span class="badge dim">${escapeHtml(d)}</span>`).join("")}
-      <span class="offsets">chars ${e.span_start}–${e.span_end}</span>
-    </div>
-    <div class="detail-cols">
-      <div class="detail-col">
-        <div class="detail-label">Extracted text (model output)</div>
-        <pre class="detail-text">${escapeHtml(e.extraction_text)}</pre>
-      </div>
-      <div class="detail-col">
-        <div class="detail-label">Grounded source span (highlighted in OCR)</div>
-        <pre class="detail-text src">${escapeHtml(sourceSlice)}</pre>
-      </div>
-    </div>`;
+  const { side, extraction } = items[active];
+  const other: Side = side === "left" ? "right" : "left";
+  const counterpart =
+    current[other].extractions.find((candidate) => overlaps(extraction, candidate)) ?? null;
+  const columns: Record<Side, string> = {
+    left: renderExtractionColumn(
+      "left",
+      side === "left" ? extraction : counterpart,
+      side === "left",
+    ),
+    right: renderExtractionColumn(
+      "right",
+      side === "right" ? extraction : counterpart,
+      side === "right",
+    ),
+  };
+  detail.innerHTML = `<div class="detail-cols">${columns.left}${columns.right}</div>`;
 }
 
 function select(index: number): void {
   if (!current) return;
   active = index;
-  counter.textContent = `${index + 1} / ${current.extractions.length}`;
+  counter.textContent = `${index + 1} / ${items.length}`;
   textView.querySelectorAll<HTMLElement>("mark.hl.active").forEach((el) => el.classList.remove("active"));
   let first: HTMLElement | null = null;
   textView.querySelectorAll<HTMLElement>("mark.hl").forEach((el) => {
@@ -243,36 +302,104 @@ function select(index: number): void {
   renderDetail();
 }
 
-/** `keepIndex` holds the extraction cursor steady when swapping models on the
- *  same document, so you can flip between models at the same position. */
-async function loadDocument(doc: DocInfo, keepIndex = -1): Promise<void> {
-  const params = new URLSearchParams({
-    source: doc.source,
-    model: doc.model,
-    doc: doc.documentId,
-    file: doc.extractionFile,
+function setExtractionActionsDisabled(disabled: boolean): void {
+  extractionActionButtons.forEach((button) => {
+    button.disabled = disabled;
   });
-  const res = await fetch(`/api/document?${params}`);
-  current = await res.json();
-  if (!current) return;
+}
 
-  if (current.pdfUrl) {
-    pdfFrame.src = current.pdfUrl;
-    pdfFrame.style.display = "block";
-    pdfEmpty.style.display = "none";
-  } else {
-    pdfFrame.removeAttribute("src");
-    pdfFrame.style.display = "none";
-    pdfEmpty.style.display = "flex";
-  }
-
-  buildLegend(current.extractions);
-  renderText(current.text, current.extractions);
+async function loadExtractionComparison(): Promise<void> {
+  if (extractionLoading) return;
+  extractionLoading = true;
+  current = null;
+  items = [];
   active = -1;
-  counter.textContent = `0 / ${current.extractions.length}`;
-  renderDetail();
-  if (current.extractions.length > 0) {
-    select(Math.min(Math.max(keepIndex, 0), current.extractions.length - 1));
+  setExtractionActionsDisabled(true);
+  newExtractionBtn.disabled = true;
+  provisionSelect.disabled = true;
+  extractionMessage.textContent = "Loading a random document…";
+  textView.innerHTML = "";
+  legend.innerHTML = "";
+  counter.textContent = "0 / 0";
+  try {
+    const provision = provisionSelect.value;
+    const res = await fetch(`/api/extraction-comparison?provision=${encodeURIComponent(provision)}`);
+    const payload = await res.json();
+    if (!res.ok) throw new Error(payload.error ?? `Request failed (${res.status})`);
+    current = payload as ExtractionComparisonPayload;
+    items = mergeItems(current);
+
+    if (current.pdfUrl) {
+      pdfFrame.src = current.pdfUrl;
+      pdfFrame.style.display = "block";
+      pdfEmpty.style.display = "none";
+    } else {
+      pdfFrame.removeAttribute("src");
+      pdfFrame.style.display = "none";
+      pdfEmpty.style.display = "flex";
+    }
+
+    extractionMeta.textContent = `${current.source} · ${current.documentId} · ${current.provision}`;
+    const progress = current.progress;
+    extractionProgress.textContent = progress.exhausted
+      ? "No unreviewed pairs · sampling reviewed pairs again"
+      : `${progress.reviewed} reviewed overall` +
+        (progress.candidateTotal === undefined ? "" : ` · ${progress.candidateTotal} possible pairs`);
+
+    buildLegend(current);
+    renderOverlay(current.text, items);
+    renderDetail();
+    if (items.length > 0) select(0);
+    extractionMessage.textContent =
+      `${current.left.extractions.length} extraction(s) from Extraction A, ` +
+      `${current.right.extractions.length} from Extraction B. ` +
+      "Step through them, then choose one result.";
+    setExtractionActionsDisabled(false);
+  } catch (err) {
+    extractionMeta.textContent = "Extraction comparison unavailable";
+    extractionProgress.textContent = "";
+    extractionMessage.textContent = `Could not load an extraction comparison. ${String(err)}`;
+    renderDetail();
+  } finally {
+    extractionLoading = false;
+    newExtractionBtn.disabled = false;
+    provisionSelect.disabled = false;
+  }
+}
+
+async function saveExtractionComparison(choice: ComparisonChoice): Promise<void> {
+  if (!current || extractionLoading) return;
+  const reviewed = current;
+  extractionLoading = true;
+  setExtractionActionsDisabled(true);
+  newExtractionBtn.disabled = true;
+  provisionSelect.disabled = true;
+  extractionMessage.textContent = "Saving review…";
+  try {
+    const res = await fetch("/api/extraction-comparison/review", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        sampleId: reviewed.sampleId,
+        source: reviewed.source,
+        documentId: reviewed.documentId,
+        provision: reviewed.provision,
+        leftModel: reviewed.left.model,
+        rightModel: reviewed.right.model,
+        choice,
+      }),
+    });
+    const payload = await res.json();
+    if (!res.ok) throw new Error(payload.error ?? `Save failed (${res.status})`);
+    extractionMessage.textContent = "Review saved. Loading another random pair…";
+    extractionLoading = false;
+    await loadExtractionComparison();
+  } catch (err) {
+    extractionMessage.textContent = String(err);
+    extractionLoading = false;
+    setExtractionActionsDisabled(false);
+    newExtractionBtn.disabled = false;
+    provisionSelect.disabled = false;
   }
 }
 
@@ -370,71 +497,54 @@ function showTab(tab: "extraction" | "comparison"): void {
   comparisonControls.hidden = showExtraction;
   extractionWorkspace.hidden = !showExtraction;
   comparisonWorkspace.hidden = showExtraction;
+  if (showExtraction && !current) void loadExtractionComparison();
   if (!showExtraction && !comparison) void loadComparison();
 }
 
 function step(delta: number): void {
-  if (!current || current.extractions.length === 0) return;
-  const n = current.extractions.length;
+  if (items.length === 0) return;
+  const n = items.length;
   const next = active < 0 ? 0 : (active + delta + n) % n;
   select(next);
 }
 
-function labelForGroup(g: DocGroup): string {
-  const models = g.models.length > 1 ? ` — ${g.models.length} models` : "";
-  return `${g.source} / ${g.documentId}${models}${g.hasPdf ? "" : " (no PDF)"}`;
-}
-
-function labelForModel(d: DocInfo): string {
-  return `${d.model} — ${d.extractionCount} extraction(s)`;
-}
-
-/** Repopulate the model dropdown for a document and load its first model. */
-function selectGroup(group: DocGroup): void {
-  modelSelect.innerHTML = group.models
-    .map((d, i) => `<option value="${i}">${escapeHtml(labelForModel(d))}</option>`)
-    .join("");
-  modelSelect.value = "0";
-  modelSelect.disabled = group.models.length <= 1;
-  void loadDocument(group.models[0]);
-}
+const CHOICE_BY_KEY: Partial<Record<string, ComparisonChoice>> = {
+  "1": "left_better",
+  "2": "right_better",
+  "3": "both_good",
+  "4": "both_bad",
+};
 
 async function init(): Promise<void> {
-  const res = await fetch("/api/documents");
+  const res = await fetch("/api/extraction-provisions");
   const data = await res.json();
-  groups = buildGroups(data.documents ?? []);
-  if (groups.length === 0) {
-    detail.innerHTML = `<div class="detail-empty">No extractions found under cache/stg_02_extract.</div>`;
-    return;
-  }
-  docSelect.innerHTML = groups
-    .map((g, i) => `<option value="${i}">${escapeHtml(labelForGroup(g))}</option>`)
+  const provisions: string[] = data.provisions ?? [];
+  provisionSelect.innerHTML = provisions
+    .map((p) => `<option value="${escapeHtml(p)}">${escapeHtml(p)}</option>`)
     .join("");
-  docSelect.addEventListener("change", () => selectGroup(groups[Number(docSelect.value)]));
-  modelSelect.addEventListener("change", () => {
-    const group = groups[Number(docSelect.value)];
-    void loadDocument(group.models[Number(modelSelect.value)], active);
-  });
+  provisionSelect.disabled = provisions.length <= 1;
+
   prevBtn.addEventListener("click", () => step(-1));
   nextBtn.addEventListener("click", () => step(1));
   document.addEventListener("keydown", (e) => {
     if (e.target instanceof HTMLSelectElement || e.target instanceof HTMLButtonElement) return;
-    if (activeTab === "extraction") {
-      if (e.key === "ArrowLeft") step(-1);
-      if (e.key === "ArrowRight") step(1);
-      return;
-    }
-    const choiceByKey: Partial<Record<string, ComparisonChoice>> = {
-      "1": "left_better",
-      "2": "right_better",
-      "3": "both_good",
-      "4": "both_bad",
-    };
-    const choice = choiceByKey[e.key];
-    if (choice) void saveComparison(choice);
+    if (activeTab === "extraction" && e.key === "ArrowLeft") return step(-1);
+    if (activeTab === "extraction" && e.key === "ArrowRight") return step(1);
+    const choice = CHOICE_BY_KEY[e.key];
+    if (!choice) return;
+    if (activeTab === "extraction") void saveExtractionComparison(choice);
+    else void saveComparison(choice);
   });
   extractionTab.addEventListener("click", () => showTab("extraction"));
   comparisonTab.addEventListener("click", () => showTab("comparison"));
+  newExtractionBtn.addEventListener("click", () => void loadExtractionComparison());
+  provisionSelect.addEventListener("change", () => void loadExtractionComparison());
+  extractionActionButtons.forEach((button) => {
+    button.addEventListener(
+      "click",
+      () => void saveExtractionComparison(button.dataset.choice as ComparisonChoice),
+    );
+  });
   newComparisonBtn.addEventListener("click", () => void loadComparison());
   distanceFilter?.addEventListener("change", () => void loadComparison());
   comparisonActionButtons.forEach((button) => {
@@ -442,7 +552,14 @@ async function init(): Promise<void> {
   });
   setupDivider("divider", "workspace", "pdf-pane");
   setupDivider("comparison-divider", "comparison-workspace", "comparison-pdf-pane");
-  selectGroup(groups[0]);
+
+  if (provisions.length === 0) {
+    extractionMeta.textContent = "No extractions found";
+    extractionMessage.textContent = "No *.jsonl extractions found under cache/stg_02_extract.";
+    setExtractionActionsDisabled(true);
+    return;
+  }
+  void loadExtractionComparison();
 }
 
 function setupDivider(dividerId: string, workspaceId: string, pdfPaneId: string): void {

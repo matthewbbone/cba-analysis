@@ -1,0 +1,52 @@
+{
+  "method": "regularized_bradley_terry_with_valued_ties",
+  "generated_at": "2026-08-17T19:41:33.637038+00:00",
+  "judgment_count": 12,
+  "model_count": 2,
+  "choice_counts": {
+    "both_bad": 1,
+    "both_good": 0,
+    "left_better": 5,
+    "right_better": 6
+  },
+  "tie_quality_weight": 0.5,
+  "l2": 0.5,
+  "iterations": 5,
+  "score_definition": "Estimated percentage chance of beating a fixed neutral-quality baseline; higher is better and 50 is neutral.",
+  "rankings": [
+    {
+      "model": "google_gemma-4-31B-it",
+      "score": 54.81833629422993,
+      "score_ci_95": [
+        14.773941760621668,
+        89.464667033197
+      ],
+      "log_strength": 0.19333340759043835,
+      "strength": 1.2132872452686858,
+      "decisive_wins": 8,
+      "decisive_losses": 3,
+      "both_good": 0,
+      "both_bad": 1,
+      "total_comparisons": 12,
+      "rank": 1
+    },
+    {
+      "model": "Qwen_Qwen3.8-27B-FP8",
+      "score": 34.5236717969478,
+      "score_ci_95": [
+        6.994198445277615,
+        78.70935034834326
+      ],
+      "log_strength": -0.6400434480463267,
+      "strength": 0.5272695147150673,
+      "decisive_wins": 3,
+      "decisive_losses": 8,
+      "both_good": 0,
+      "both_bad": 1,
+      "total_comparisons": 12,
+      "rank": 2
+    }
+  ],
+  "stage": "extraction",
+  "source_path": "/Users/matthewbone/Documents/Coding/VSCode/cba-analysis/cache/reviewer/extraction_comparisons.jsonl"
+}

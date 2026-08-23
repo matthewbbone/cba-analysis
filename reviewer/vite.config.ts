@@ -21,6 +21,9 @@ const STG02 = join(CACHE_ROOT, "stg_02_extract");
 const OCR_COMPARISON_FILE = process.env.OCR_COMPARISON_FILE
   ? resolve(process.env.OCR_COMPARISON_FILE)
   : join(CACHE_ROOT, "reviewer", "ocr_comparisons.jsonl");
+const EXTRACTION_COMPARISON_FILE = process.env.EXTRACTION_COMPARISON_FILE
+  ? resolve(process.env.EXTRACTION_COMPARISON_FILE)
+  : join(CACHE_ROOT, "reviewer", "extraction_comparisons.jsonl");
 const KNOWN_SOURCES = ["cornell_dol", "cornell_retail_educ", "dol_archive"];
 const OCR_COMPARISON_MODELS = new Set([
   "Qwen_Qwen3.6-27B-FP8",
@@ -44,13 +47,46 @@ function listDirs(path: string): string[] {
     .sort();
 }
 
-interface DocInfo {
+/** One row of cache/stg_02_extract/<source>/<model>/<doc>/<provision>.jsonl. */
+interface ExtractionRecord {
   source: string;
-  model: string;
+  document_id: string;
+  ocr_model_name: string;
+  model_name: string;
+  extraction_class: string;
+  extraction_text: string;
+  attributes?: { context?: string | null };
+  span_start: number;
+  span_end: number;
+  span_reliable?: boolean;
+  grounding_status: string;
+}
+
+/** A (source, document, provision) that at least two extraction models ran on,
+ *  all agreeing on the OCR model whose full.txt their spans index into. */
+interface ExtractionCandidate {
+  source: string;
   documentId: string;
-  extractionFile: string; // filename of the jsonl (e.g. wage_tables.jsonl)
-  extractionCount: number;
-  hasPdf: boolean;
+  provision: string;
+  ocrModelDir: string;
+  models: string[]; // extraction model directory names, sorted
+}
+
+interface ExtractionPair extends ExtractionCandidate {
+  leftModel: string;
+  rightModel: string;
+  sampleKey: string;
+}
+
+interface ExtractionMatchup {
+  modelA: string;
+  modelB: string;
+  pairs: ExtractionPair[];
+}
+
+interface ReviewHistory {
+  reviewedPairs: Set<string>;
+  comparisonCounts: Map<string, number>;
 }
 
 interface OcrPage {
@@ -72,13 +108,9 @@ interface OcrMatchup {
   pairs: OcrPair[];
 }
 
-interface OcrReviewHistory {
-  reviewedPairs: Set<string>;
-  comparisonCounts: Map<string, number>;
-}
-
-const OCR_CHOICES = new Set(["left_better", "right_better", "both_good", "both_bad"]);
+const REVIEW_CHOICES = new Set(["left_better", "right_better", "both_good", "both_bad"]);
 const ocrTextCache = new Map<string, string>();
+const fullTextCache = new Map<string, string>();
 const distanceEligibilityCache = new Map<string, boolean>();
 
 /** Resolve cache/<source>/<documentId>.pdf, tolerant of case differences. */
@@ -90,16 +122,6 @@ function findPdf(source: string, documentId: string): string | null {
   const lower = `${documentId}.pdf`.toLowerCase();
   const match = readdirSync(sourceDir).find((f) => f.toLowerCase() === lower);
   return match ? join(sourceDir, match) : null;
-}
-
-function countLines(file: string): number {
-  try {
-    return readFileSync(file, "utf-8")
-      .split("\n")
-      .filter((l) => l.trim().length > 0).length;
-  } catch {
-    return 0;
-  }
 }
 
 function sampleKey(
@@ -222,7 +244,7 @@ function allOcrPairs(): OcrPair[] {
   return pairs;
 }
 
-function ocrReviewHistory(): OcrReviewHistory {
+function ocrReviewHistory(): ReviewHistory {
   const reviewedPairs = new Set<string>();
   const comparisonCounts = new Map<string, number>();
   if (!existsSync(OCR_COMPARISON_FILE)) return { reviewedPairs, comparisonCounts };
@@ -237,7 +259,7 @@ function ocrReviewHistory(): OcrReviewHistory {
         row.right_model.length > 0 &&
         row.left_model !== row.right_model &&
         typeof row.choice === "string" &&
-        OCR_CHOICES.has(row.choice);
+        REVIEW_CHOICES.has(row.choice);
       if (hasValidJudgment) {
         comparisonCounts.set(
           row.left_model,
@@ -414,7 +436,7 @@ function saveOcrComparison(body: Record<string, unknown>): void {
     typeof leftModel !== "string" ||
     typeof rightModel !== "string" ||
     typeof choice !== "string" ||
-    !OCR_CHOICES.has(choice) ||
+    !REVIEW_CHOICES.has(choice) ||
     typeof minimumNormalizedEditDistance !== "number" ||
     !Number.isFinite(minimumNormalizedEditDistance) ||
     minimumNormalizedEditDistance < 0 ||
@@ -448,53 +470,295 @@ function saveOcrComparison(body: Record<string, unknown>): void {
   );
 }
 
-/** Walk stg_02_extract for every document that has a *.jsonl extraction file. */
-function discoverDocuments(): DocInfo[] {
-  const docs: DocInfo[] = [];
+/** Every provision type that has been extracted for at least one document. */
+function listProvisionTypes(): string[] {
+  const provisions = new Set<string>();
   for (const source of listDirs(STG02)) {
-    const sourceDir = join(STG02, source);
-    for (const model of listDirs(sourceDir)) {
-      const modelDir = join(sourceDir, model);
+    for (const model of listDirs(join(STG02, source))) {
+      const modelDir = join(STG02, source, model);
       for (const documentId of listDirs(modelDir)) {
-        const docDir = join(modelDir, documentId);
-        const jsonls = readdirSync(docDir).filter((f) => f.endsWith(".jsonl"));
-        if (jsonls.length === 0) continue;
-        const extractionFile = jsonls[0];
-        docs.push({
-          source,
-          model,
-          documentId,
-          extractionFile,
-          extractionCount: countLines(join(docDir, extractionFile)),
-          hasPdf: findPdf(source, documentId) !== null,
+        for (const filename of readdirSync(join(modelDir, documentId))) {
+          if (filename.endsWith(".jsonl")) provisions.add(filename.slice(0, -".jsonl".length));
+        }
+      }
+    }
+  }
+  return [...provisions].sort();
+}
+
+function extractionPath(source: string, model: string, documentId: string, provision: string): string {
+  return join(STG02, source, model, documentId, `${provision}.jsonl`);
+}
+
+function readExtractionRecords(
+  source: string,
+  model: string,
+  documentId: string,
+  provision: string,
+): ExtractionRecord[] {
+  const path = extractionPath(source, model, documentId, provision);
+  if (!existsSync(path)) return [];
+  return readFileSync(path, "utf-8")
+    .split("\n")
+    .filter((line) => line.trim().length > 0)
+    .map((line) => JSON.parse(line) as ExtractionRecord);
+}
+
+/** Mirrors pipeline/utils/paths.py path_safe_model_name: records store the OCR
+ *  model as "ATH-MaaS/OvisOCR2" while the cache directory is "ATH-MaaS_OvisOCR2". */
+function pathSafeModelName(modelName: string): string {
+  return modelName.replace(/[/\\]/g, "_");
+}
+
+/** Read the OCR full.txt an extraction's spans were computed against.
+ *
+ *  Deliberately NOT think-stripped: pipeline/stg_02_extract/runner.py reads
+ *  full.txt raw, so span offsets index the raw text. (Think blocks are removed
+ *  upstream in stg_01_ocr, so there is nothing left to strip anyway.) */
+function readFullText(source: string, ocrModelDir: string, documentId: string): string | null {
+  const key = `${source}\u0000${ocrModelDir}\u0000${documentId}`;
+  const cached = fullTextCache.get(key);
+  if (cached !== undefined) return cached;
+  const path = join(STG01, source, ocrModelDir, documentId, "full.txt");
+  if (!existsSync(path)) return null;
+  const text = readFileSync(path, "utf-8");
+  fullTextCache.set(key, text);
+  return text;
+}
+
+function extractionSampleKey(
+  source: string,
+  documentId: string,
+  provision: string,
+  modelA: string,
+  modelB: string,
+): string {
+  const models = [modelA, modelB].sort();
+  return `${source}\u0000${documentId}\u0000${provision}\u0000${models[0]}\u0000${models[1]}`;
+}
+
+/** Documents that at least two extraction models processed for this provision.
+ *
+ *  Both models' spans must index the same text, so a candidate only survives
+ *  when every model that produced records agrees on the OCR model. An empty
+ *  jsonl names no OCR model, so it stays compatible with whatever the other
+ *  side used — a model finding nothing is itself worth comparing. */
+function discoverExtractionCandidates(provision: string): ExtractionCandidate[] {
+  const byDocument = new Map<string, { source: string; documentId: string; models: string[] }>();
+  for (const source of listDirs(STG02)) {
+    for (const model of listDirs(join(STG02, source))) {
+      for (const documentId of listDirs(join(STG02, source, model))) {
+        if (!existsSync(extractionPath(source, model, documentId, provision))) continue;
+        const key = `${source}\u0000${documentId}`;
+        const entry = byDocument.get(key) ?? { source, documentId, models: [] };
+        entry.models.push(model);
+        byDocument.set(key, entry);
+      }
+    }
+  }
+
+  const candidates: ExtractionCandidate[] = [];
+  for (const { source, documentId, models } of byDocument.values()) {
+    if (models.length < 2) continue;
+    const ocrModels = new Map<string, string | null>();
+    for (const model of models) {
+      const records = readExtractionRecords(source, model, documentId, provision);
+      ocrModels.set(model, records[0]?.ocr_model_name ?? null);
+    }
+    const named = [...new Set([...ocrModels.values()].filter((name): name is string => name !== null))];
+    if (named.length !== 1) continue; // all empty, or models disagree on the OCR text
+    const ocrModelDir = pathSafeModelName(named[0]);
+    if (readFullText(source, ocrModelDir, documentId) === null) continue;
+    const compatible = models.filter((model) => (ocrModels.get(model) ?? named[0]) === named[0]).sort();
+    if (compatible.length < 2) continue;
+    candidates.push({ source, documentId, provision, ocrModelDir, models: compatible });
+  }
+  return candidates;
+}
+
+function allExtractionPairs(provision: string): ExtractionPair[] {
+  const pairs: ExtractionPair[] = [];
+  for (const candidate of discoverExtractionCandidates(provision)) {
+    const counts = new Map(
+      candidate.models.map((model) => [
+        model,
+        readExtractionRecords(candidate.source, model, candidate.documentId, provision).length,
+      ]),
+    );
+    for (let i = 0; i < candidate.models.length - 1; i++) {
+      for (let j = i + 1; j < candidate.models.length; j++) {
+        const modelA = candidate.models[i];
+        const modelB = candidate.models[j];
+        // Nothing to judge when neither model extracted anything.
+        if ((counts.get(modelA) ?? 0) === 0 && (counts.get(modelB) ?? 0) === 0) continue;
+        const [leftModel, rightModel] = Math.random() < 0.5 ? [modelA, modelB] : [modelB, modelA];
+        pairs.push({
+          ...candidate,
+          leftModel,
+          rightModel,
+          sampleKey: extractionSampleKey(
+            candidate.source,
+            candidate.documentId,
+            provision,
+            leftModel,
+            rightModel,
+          ),
         });
       }
     }
   }
-  return docs;
+  return pairs;
 }
 
-function readExtractions(source: string, model: string, documentId: string, file: string) {
-  const path = join(STG02, source, model, documentId, file);
-  if (!existsSync(path)) return [];
-  return readFileSync(path, "utf-8")
-    .split("\n")
-    .filter((l) => l.trim().length > 0)
-    .map((l) => JSON.parse(l));
-}
-
-/** Resolve the OCR full.txt for a document.
- *
- *  Deliberately ignores the extraction model: stg_02_extract is keyed by the
- *  *extraction* model (which varies), while stg_01_ocr is keyed by the *OCR*
- *  model (a single one for the whole cache). Scanning the OCR model dirs keeps
- *  the two independent, so extracting with a new model doesn't 404 here. */
-function readText(source: string, documentId: string): string | null {
-  for (const ocrModel of listDirs(join(STG01, source))) {
-    const path = join(STG01, source, ocrModel, documentId, "full.txt");
-    if (existsSync(path)) return stripThinkBlocks(readFileSync(path, "utf-8"));
+function extractionReviewHistory(): ReviewHistory {
+  const reviewedPairs = new Set<string>();
+  const comparisonCounts = new Map<string, number>();
+  if (!existsSync(EXTRACTION_COMPARISON_FILE)) return { reviewedPairs, comparisonCounts };
+  for (const line of readFileSync(EXTRACTION_COMPARISON_FILE, "utf-8").split("\n")) {
+    if (!line.trim()) continue;
+    try {
+      const row = JSON.parse(line);
+      if (
+        typeof row.left_model !== "string" ||
+        typeof row.right_model !== "string" ||
+        row.left_model === row.right_model ||
+        typeof row.source !== "string" ||
+        typeof row.document_id !== "string" ||
+        typeof row.provision_type !== "string"
+      ) {
+        continue;
+      }
+      if (typeof row.choice === "string" && REVIEW_CHOICES.has(row.choice)) {
+        comparisonCounts.set(row.left_model, (comparisonCounts.get(row.left_model) ?? 0) + 1);
+        comparisonCounts.set(row.right_model, (comparisonCounts.get(row.right_model) ?? 0) + 1);
+      }
+      reviewedPairs.add(
+        extractionSampleKey(
+          row.source,
+          row.document_id,
+          row.provision_type,
+          row.left_model,
+          row.right_model,
+        ),
+      );
+    } catch {
+      // A partial/malformed line should not make the rest of the review file unusable.
+    }
   }
-  return null;
+  return { reviewedPairs, comparisonCounts };
+}
+
+/** Randomize sources first so a large collection cannot dominate, then favour
+ *  matchups whose models have the fewest saved judgments. Mirrors the OCR
+ *  sampler, minus its edit-distance eligibility filter. */
+function preferredExtractionPair(
+  pairs: ExtractionPair[],
+  comparisonCounts: ReadonlyMap<string, number>,
+): ExtractionPair | undefined {
+  for (const source of shuffled([...new Set(pairs.map((pair) => pair.source))])) {
+    const matchups = new Map<string, ExtractionMatchup>();
+    for (const pair of pairs) {
+      if (pair.source !== source) continue;
+      const [modelA, modelB] = [pair.leftModel, pair.rightModel].sort();
+      const key = matchupKey(modelA, modelB);
+      const matchup = matchups.get(key) ?? { modelA, modelB, pairs: [] };
+      matchup.pairs.push(pair);
+      matchups.set(key, matchup);
+    }
+    const orderedMatchups = weightedOrder(
+      [...matchups.values()],
+      (matchup) => modelMatchupWeight(matchup.modelA, matchup.modelB, comparisonCounts),
+    );
+    for (const matchup of orderedMatchups) {
+      const [pair] = shuffled(matchup.pairs);
+      if (pair) return pair;
+    }
+  }
+  return undefined;
+}
+
+function randomExtractionComparison(provision: string) {
+  const pairs = allExtractionPairs(provision);
+  const history = extractionReviewHistory();
+  const unreviewed = pairs.filter((pair) => !history.reviewedPairs.has(pair.sampleKey));
+  let pair = preferredExtractionPair(unreviewed, history.comparisonCounts);
+  const exhausted = !pair;
+  if (!pair) pair = preferredExtractionPair(pairs, history.comparisonCounts);
+  if (!pair) return null;
+
+  const text = readFullText(pair.source, pair.ocrModelDir, pair.documentId);
+  if (text === null) return null;
+  const pdf = findPdf(pair.source, pair.documentId);
+  const side = (model: string) => ({
+    model,
+    extractions: readExtractionRecords(pair!.source, model, pair!.documentId, provision),
+  });
+  return {
+    sampleId: pair.sampleKey,
+    source: pair.source,
+    documentId: pair.documentId,
+    provision,
+    ocrModel: pair.ocrModelDir,
+    text,
+    pdfUrl: pdf
+      ? `/api/pdf?source=${encodeURIComponent(pair.source)}&doc=${encodeURIComponent(pair.documentId)}`
+      : null,
+    left: side(pair.leftModel),
+    right: side(pair.rightModel),
+    progress: {
+      reviewed: pairs.filter((candidate) => history.reviewedPairs.has(candidate.sampleKey)).length,
+      candidateTotal: pairs.length,
+      exhausted,
+    },
+  };
+}
+
+function saveExtractionComparison(body: Record<string, unknown>): void {
+  const sampleId = body.sampleId;
+  const source = body.source;
+  const documentId = body.documentId;
+  const provision = body.provision;
+  const leftModel = body.leftModel;
+  const rightModel = body.rightModel;
+  const choice = body.choice;
+  if (
+    typeof sampleId !== "string" ||
+    typeof source !== "string" ||
+    typeof documentId !== "string" ||
+    typeof provision !== "string" ||
+    typeof leftModel !== "string" ||
+    typeof rightModel !== "string" ||
+    leftModel === rightModel ||
+    typeof choice !== "string" ||
+    !REVIEW_CHOICES.has(choice) ||
+    sampleId !== extractionSampleKey(source, documentId, provision, leftModel, rightModel)
+  ) {
+    throw new Error("Invalid extraction comparison review");
+  }
+
+  const pair = allExtractionPairs(provision).find((candidate) => candidate.sampleKey === sampleId);
+  if (!pair) throw new Error("Extraction comparison sample no longer exists");
+
+  const preferredModel =
+    choice === "left_better" ? leftModel : choice === "right_better" ? rightModel : null;
+  mkdirSync(dirname(EXTRACTION_COMPARISON_FILE), { recursive: true });
+  appendFileSync(
+    EXTRACTION_COMPARISON_FILE,
+    `${JSON.stringify({
+      review_id: randomUUID(),
+      reviewed_at: new Date().toISOString(),
+      sample_key: sampleId,
+      source,
+      document_id: documentId,
+      provision_type: provision,
+      ocr_model_name: pair.ocrModelDir,
+      left_model: leftModel,
+      right_model: rightModel,
+      choice,
+      preferred_model: preferredModel,
+    })}\n`,
+    "utf-8",
+  );
 }
 
 function sendJson(res: Parameters<Connect.NextHandleFunction>[1], data: unknown, code = 200) {
@@ -503,14 +767,58 @@ function sendJson(res: Parameters<Connect.NextHandleFunction>[1], data: unknown,
   res.end(JSON.stringify(data));
 }
 
+type ApiRequest = Parameters<Connect.NextHandleFunction>[0];
+type ApiResponse = Parameters<Connect.NextHandleFunction>[1];
+
+/** Slurp a bounded JSON request body and hand it to a save function, replying
+ *  201 on success and 400 with the thrown message on any validation failure. */
+function saveFromJsonBody(
+  req: ApiRequest,
+  res: ApiResponse,
+  save: (body: Record<string, unknown>) => void,
+): void {
+  let raw = "";
+  req.setEncoding("utf-8");
+  req.on("data", (chunk) => {
+    raw += chunk;
+    if (raw.length > 65_536) req.destroy(new Error("Request body too large"));
+  });
+  req.on("end", () => {
+    try {
+      save(JSON.parse(raw));
+      sendJson(res, { saved: true }, 201);
+    } catch (err) {
+      sendJson(res, { error: String(err) }, 400);
+    }
+  });
+}
+
 const apiHandler: Connect.NextHandleFunction = (req, res, next) => {
   const url = new URL(req.url ?? "", "http://localhost");
   const q = url.searchParams;
   const path = url.pathname; // relative to /api
 
   try {
-    if (path === "/documents") {
-      return sendJson(res, { documents: discoverDocuments(), sources: KNOWN_SOURCES });
+    if (path === "/extraction-provisions") {
+      return sendJson(res, { provisions: listProvisionTypes() });
+    }
+
+    if (path === "/extraction-comparison" && req.method === "GET") {
+      const provision = q.get("provision");
+      if (!provision) return sendJson(res, { error: "provision is required" }, 400);
+      const comparison = randomExtractionComparison(provision);
+      if (!comparison) {
+        return sendJson(
+          res,
+          { error: `No document has ${provision} extractions from two models` },
+          404,
+        );
+      }
+      return sendJson(res, comparison);
+    }
+
+    if (path === "/extraction-comparison/review" && req.method === "POST") {
+      return saveFromJsonBody(req, res, saveExtractionComparison);
     }
 
     if (path === "/ocr-comparison" && req.method === "GET") {
@@ -530,40 +838,7 @@ const apiHandler: Connect.NextHandleFunction = (req, res, next) => {
     }
 
     if (path === "/ocr-comparison/review" && req.method === "POST") {
-      let raw = "";
-      req.setEncoding("utf-8");
-      req.on("data", (chunk) => {
-        raw += chunk;
-        if (raw.length > 65_536) req.destroy(new Error("Request body too large"));
-      });
-      req.on("end", () => {
-        try {
-          saveOcrComparison(JSON.parse(raw));
-          sendJson(res, { saved: true }, 201);
-        } catch (err) {
-          sendJson(res, { error: String(err) }, 400);
-        }
-      });
-      return;
-    }
-
-    if (path === "/document") {
-      const source = q.get("source")!;
-      const model = q.get("model")!;
-      const doc = q.get("doc")!;
-      const file = q.get("file") ?? "wage_tables.jsonl";
-      const text = readText(source, doc);
-      if (text === null) return sendJson(res, { error: "OCR text not found" }, 404);
-      const extractions = readExtractions(source, model, doc, file);
-      const pdf = findPdf(source, doc);
-      return sendJson(res, {
-        source,
-        model,
-        documentId: doc,
-        text,
-        extractions,
-        pdfUrl: pdf ? `/api/pdf?source=${encodeURIComponent(source)}&doc=${encodeURIComponent(doc)}` : null,
-      });
+      return saveFromJsonBody(req, res, saveOcrComparison);
     }
 
     if (path === "/pdf") {

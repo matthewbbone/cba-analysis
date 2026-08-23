@@ -6,6 +6,8 @@ from pathlib import Path
 import pytest
 
 from pipeline.utils.rank_ocr_models import (
+    DEFAULT_STAGE,
+    STAGES,
     TOP_OCR_MODELS,
     TOP_3_GENERAL_VLM_MODELS,
     Judgment,
@@ -171,6 +173,91 @@ def test_main_can_rank_only_top_ocr_models(tmp_path: Path) -> None:
     }
     assert {row["model"] for row in output["rankings"]} == TOP_OCR_MODELS
     assert {row["total_comparisons"] for row in output["rankings"]} == {2}
+
+
+def test_stage_defaults_to_ocr_and_names_its_own_files() -> None:
+    assert DEFAULT_STAGE == "ocr"
+    assert parse_args([]).stage == "ocr"
+    assert parse_args(["--stage", "extraction"]).stage == "extraction"
+    # ``--input``/``--output`` stay unset so ``main`` can fall back to the stage.
+    assert parse_args([]).input is None
+    assert parse_args([]).output is None
+    assert STAGES["ocr"].input_path.name == "ocr_comparisons.jsonl"
+    assert STAGES["ocr"].output_path.name == "ocr_model_rankings.json"
+    assert STAGES["extraction"].input_path.name == "extraction_comparisons.jsonl"
+    assert STAGES["extraction"].output_path.name == "extraction_model_rankings.json"
+
+
+def test_main_ranks_extraction_comparisons(tmp_path: Path) -> None:
+    input_path = tmp_path / "extraction_comparisons.jsonl"
+    output_path = tmp_path / "rankings.json"
+    records = [
+        {
+            "provision_type": "technology",
+            "ocr_model_name": "ATH-MaaS_OvisOCR2",
+            "left_model": "extract-a",
+            "right_model": "extract-b",
+            "choice": "left_better",
+        },
+        {
+            "provision_type": "technology",
+            "ocr_model_name": "ATH-MaaS_OvisOCR2",
+            "left_model": "extract-a",
+            "right_model": "extract-b",
+            "choice": "both_bad",
+        },
+    ]
+    input_path.write_text(
+        "\n".join(json.dumps(record) for record in records) + "\n",
+        encoding="utf-8",
+    )
+
+    assert main(
+        [
+            "--stage",
+            "extraction",
+            "--input",
+            str(input_path),
+            "--output",
+            str(output_path),
+        ]
+    ) == 0
+
+    output = json.loads(output_path.read_text(encoding="utf-8"))
+    assert output["stage"] == "extraction"
+    assert output["judgment_count"] == 2
+    by_model = {row["model"]: row for row in output["rankings"]}
+    assert by_model["extract-a"]["score"] > by_model["extract-b"]["score"]
+    assert by_model["extract-a"]["both_bad"] == 1
+
+
+def test_extraction_stage_rejects_the_top_ocr_model_cohort(tmp_path: Path) -> None:
+    input_path = tmp_path / "extraction_comparisons.jsonl"
+    input_path.write_text(
+        json.dumps({"left_model": "a", "right_model": "b", "choice": "left_better"}),
+        encoding="utf-8",
+    )
+
+    with pytest.raises(ValueError, match="not available for --stage extraction"):
+        main(
+            [
+                "--stage",
+                "extraction",
+                "--input",
+                str(input_path),
+                "--output",
+                str(tmp_path / "rankings.json"),
+                "--top-ocr-models",
+            ]
+        )
+
+
+def test_load_judgments_names_the_stage_when_a_file_is_empty(tmp_path: Path) -> None:
+    input_path = tmp_path / "comparisons.jsonl"
+    input_path.write_text("\n", encoding="utf-8")
+
+    with pytest.raises(ValueError, match="no extraction comparison judgments found"):
+        load_judgments(input_path, "extraction")
 
 
 def test_main_reports_when_top_ocr_models_have_no_head_to_head_judgments(

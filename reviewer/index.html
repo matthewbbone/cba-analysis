@@ -9,24 +9,23 @@
     <header id="topbar">
       <div class="brand">CBA Extraction Reviewer</div>
       <nav class="tabs" aria-label="Reviewer mode">
-        <button id="extraction-tab" class="tab active" type="button">Extraction review</button>
+        <button id="extraction-tab" class="tab active" type="button">Extraction comparison</button>
         <button id="comparison-tab" class="tab" type="button">OCR comparison</button>
       </nav>
       <div id="extraction-controls" class="tab-controls">
         <label class="field">
-          Document
-          <select id="doc-select"></select>
+          Provision
+          <select id="provision-select"></select>
         </label>
-        <label class="field">
-          Model
-          <select id="model-select"></select>
-        </label>
+        <span id="extraction-meta" class="comparison-meta">Loading a random document…</span>
+        <span id="extraction-progress" class="comparison-progress"></span>
         <div class="nav">
           <button id="prev" title="Previous extraction (←)">◀</button>
           <span id="counter">0 / 0</span>
           <button id="next" title="Next extraction (→)">▶</button>
         </div>
         <div id="legend" class="legend"></div>
+        <button id="new-extraction" class="secondary-button" type="button">New random pair</button>
       </div>
       <div id="comparison-controls" class="tab-controls" hidden>
         <span id="comparison-meta" class="comparison-meta">Loading a random page…</span>
@@ -52,8 +51,17 @@
       </section>
       <div id="divider" title="Drag to resize"></div>
       <section id="review-pane" class="pane">
+        <div id="extraction-message" class="comparison-message" role="status">
+          Compare both models' extractions against the source, then choose one result.
+        </div>
         <div id="detail" class="detail"></div>
         <div id="text-view" class="text-view"></div>
+        <div id="extraction-actions" class="comparison-actions" aria-label="Extraction comparison result">
+          <button type="button" data-choice="left_better"><strong>Extraction A is better</strong><span>1</span></button>
+          <button type="button" data-choice="right_better"><strong>Extraction B is better</strong><span>2</span></button>
+          <button type="button" data-choice="both_good"><strong>Both good · tied</strong><span>3</span></button>
+          <button type="button" data-choice="both_bad"><strong>Both are bad</strong><span>4</span></button>
+        </div>
       </section>
     </main>
     <main id="comparison-workspace" class="workspace" hidden>

@@ -248,12 +248,56 @@ body {
   gap: 12px;
 }
 
+/* The selected side is outlined so it stays obvious which model you stepped
+   onto and which column is merely the other model's overlapping extraction. */
+.detail-col {
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+
+.detail-col.active {
+  border-color: var(--border);
+  background: #fff;
+}
+
+.badge.alias {
+  background: var(--muted);
+}
+
+.badge.warn {
+  background: #e8590c;
+}
+
+.detail-context {
+  padding: 8px 10px;
+  background: #fffaf0;
+  border: 1px solid #f0e0c0;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.5;
+  max-height: 140px;
+  overflow: auto;
+}
+
+.detail-context.empty {
+  background: #fff;
+  border-color: var(--border);
+  color: var(--muted);
+  font-style: italic;
+}
+
 .detail-label {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--muted);
   margin-bottom: 4px;
+}
+
+.detail-text + .detail-label {
+  margin-top: 10px;
 }
 
 .detail-text {

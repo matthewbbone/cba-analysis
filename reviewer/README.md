@@ -1,19 +1,26 @@
 # CBA Extraction Reviewer
 
-A lightweight TypeScript (Vite) UI with two review modes:
+A lightweight TypeScript (Vite) UI with two pair-wise review modes:
 
-- **Extraction review** compares langextract wage-table extractions to the
-  original source PDFs and grounded OCR spans.
+- **Extraction comparison** samples a random document that two *extraction*
+  models both processed for the selected provision type, and asks whether
+  Extraction A is better, Extraction B is better, both are good and tied, or
+  both are bad.
 - **OCR comparison** samples a random PDF page from `cornell_dol`,
   `cornell_retail_educ`, or `dol_archive` that has text from at least two OCR
-  models and asks whether OCR A is better, OCR B is better, both are good and
-  tied, or both are bad.
+  models and asks the same four-way question about the transcriptions.
+
+In **Extraction comparison**:
 
 - **Left pane** — the original PDF (native browser viewer).
-- **Right pane** — the langextract-style reviewer: the OCR `full.txt` with every
-  extraction span highlighted inline, color-coded by grounding status, plus a
-  detail card comparing the model's extracted text against the grounded source
-  span it was aligned to.
+- **Right pane** — one shared OCR `full.txt` with *both* models' spans
+  highlighted inline, color-coded by which model produced them, above a detail
+  card that puts the two models side by side: extracted text, the extraction's
+  `attributes.context`, its grounding status, and its character offsets.
+
+Both models' spans are overlaid on a single copy of `full.txt` because the pair
+is only sampled when both models recorded the same `ocr_model_name`, so their
+offsets index the same text.
 
 ## Data it reads
 
@@ -21,17 +28,25 @@ It reads directly from the repo `cache/` (nothing is copied):
 
 | What            | Path                                                                  |
 | --------------- | --------------------------------------------------------------------- |
-| Source PDFs     | `cache/<source>/<document_id>.pdf`                                    |
-| OCR text        | `cache/stg_01_ocr/<source>/<model>/<document_id>/full.txt`           |
-| Extractions     | `cache/stg_02_extract/<source>/<model>/<document_id>/*.jsonl`        |
-| OCR judgments   | `cache/reviewer/ocr_comparisons.jsonl`                             |
+| Source PDFs            | `cache/<source>/<document_id>.pdf`                                        |
+| OCR text               | `cache/stg_01_ocr/<source>/<ocr_model>/<document_id>/full.txt`            |
+| OCR pages              | `cache/stg_01_ocr/<source>/<ocr_model>/<document_id>/page_N.txt`          |
+| Extractions            | `cache/stg_02_extract/<source>/<model>/<document_id>/<provision>.jsonl`   |
+| OCR judgments          | `cache/reviewer/ocr_comparisons.jsonl`                                    |
+| Extraction judgments   | `cache/reviewer/extraction_comparisons.jsonl`                             |
 
-`<source>` is one of `cornell_dol`, `cornell_retail_educ`, `dol_archive`.
-The document list is driven by every `*.jsonl` found under `stg_02_extract`.
+`<source>` is one of `cornell_dol`, `cornell_retail_educ`, `dol_archive`. The
+provision dropdown is driven by every distinct `<provision>.jsonl` basename
+found under `stg_02_extract`.
 
-Spans are stored against the **think-stripped** OCR text (matching
-`pipeline/stg_02_extract/runner.py`), so the server strips `<think>…</think>`
-blocks before serving the text to keep highlights aligned.
+Extraction spans are offsets into the **raw** `full.txt`, matching
+`pipeline/stg_02_extract/runner.py`, which reads the file verbatim. `<think>…
+</think>` blocks are already removed upstream in `stg_01_ocr`, so `full.txt` is
+served unmodified. (The per-page OCR text used by the OCR comparison tab is
+still think-stripped defensively.)
+
+Set `EXTRACTION_COMPARISON_FILE` or `OCR_COMPARISON_FILE` to write judgments
+somewhere other than `cache/reviewer/`.
 
 ## Run
 
@@ -45,11 +60,18 @@ Opens at http://localhost:5178.
 
 ## Controls
 
-- Pick a document from the top dropdown.
-- `◀` / `▶` (or `←` / `→`) step through extractions; the highlight scrolls into
-  view and the detail card updates.
+- Pick a provision type from the top dropdown; changing it samples a new pair.
+- `◀` / `▶` (or `←` / `→`) step through *both* models' extractions merged into
+  document order; the highlight scrolls into view and the detail card updates.
 - Click any highlight in the text to jump to that extraction.
 - Drag the divider between panes to resize.
+- In **Extraction comparison**, use the four result buttons (or keys `1`–`4`).
+  Each result is appended to `cache/reviewer/extraction_comparisons.jsonl` and
+  the next weighted-random, not-yet-reviewed model pair is loaded automatically.
+  Comparisons are blinded as **Extraction A** and **Extraction B**.
+- A pair is only offered when both models recorded the same `ocr_model_name`,
+  and at least one of them extracted something. A model that found nothing while
+  the other found several is a legitimate — and informative — comparison.
 - In **OCR comparison**, use the four result buttons (or keys `1`–`4`). Each
   result is appended to `cache/reviewer/ocr_comparisons.jsonl`, and the next
   weighted-random, not-yet-reviewed model pair is loaded automatically.
@@ -68,7 +90,7 @@ Opens at http://localhost:5178.
   distance divided by the longer OCR length. The default 5% cutoff therefore
   behaves consistently for both short and long pages.
 
-## Rank OCR models
+## Rank models
 
 From the repository root, fit a regularized Bradley-Terry-style ranking from
 the saved judgments:
@@ -76,26 +98,53 @@ the saved judgments:
 ```bash
 python pipeline/utils/rank_ocr_models.py
 python pipeline/utils/rank_ocr_models.py --top-ocr-models
+python pipeline/utils/rank_ocr_models.py --stage extraction
 ```
 
-The script prints a ranking and writes
-`cache/reviewer/ocr_model_rankings.json`. Decisive reviews are ordinary
-pairwise wins. A good or bad tie both pulls the two model strengths together
-and moves both models above or below a shared neutral-quality baseline, so the
-two kinds of ties do not collapse to the same outcome. Use
+`--stage` selects which review set to fit. Both stages save the same
+`left_model`/`right_model`/`choice` record shape, so they share one model:
+
+| `--stage` | Reads | Writes |
+| --- | --- | --- |
+| `ocr` (default) | `cache/reviewer/ocr_comparisons.jsonl` | `cache/reviewer/ocr_model_rankings.json` |
+| `extraction` | `cache/reviewer/extraction_comparisons.jsonl` | `cache/reviewer/extraction_model_rankings.json` |
+
+`--input` and `--output` override the selected stage's paths.
+
+The script prints a ranking and writes the JSON above. Decisive reviews are
+ordinary pairwise wins. A good or bad tie both pulls the two model strengths
+together and moves both models above or below a shared neutral-quality
+baseline, so the two kinds of ties do not collapse to the same outcome. Use
 `--tie-quality-weight` to adjust the balance between those two signals.
 `--top-ocr-models` refits the statistics using only head-to-head reviews among
 Qwen 3.6 27B, Ovis 2.6 30B, OvisOCR2, and Gemma 4 31B; comparisons involving
 other models are excluded entirely. Every model in the cohort must have at
-least one saved comparison. The former `--top-3-general-vlms` and
-`--general-vlms-only` spellings remain accepted as compatibility aliases for
-this current four-model cohort.
+least one saved comparison. That cohort is defined for `--stage ocr` only, so
+the flag is rejected for `--stage extraction` — narrow that stage with
+`--input` instead. The former `--top-3-general-vlms` and `--general-vlms-only`
+spellings remain accepted as compatibility aliases for this current
+four-model cohort.
 
 ## Legend
 
-Highlight color = langextract `alignment_status` (grounding):
+In **Extraction comparison**, highlight color = which model claimed the span:
+
+- **Extraction A only** (blue) — only the left model extracted this text.
+- **Both models** (purple) — the two models' spans overlap here.
+- **Extraction B only** (orange) — only the right model extracted this text.
+
+Overlapping spans are segmented on every boundary, so where one model extracted
+a longer passage than the other, the shared part renders purple and the excess
+renders in that model's own color.
+
+The detail card additionally badges each extraction with its langextract
+`alignment_status` (grounding):
 
 - **Exact match** — span matches the extracted text exactly.
 - **Partial** — grounded span is a subset of the extracted text.
 - **Span >** — grounded span is larger than the extracted text.
 - **Fuzzy / No grounding** — approximate or missing alignment (worth reviewing).
+
+A **Span unreliable** badge means `span_reliable` is false: the pipeline could
+not re-anchor the full extracted text in the source, so the highlight may cover
+only a prefix of what the model actually returned.

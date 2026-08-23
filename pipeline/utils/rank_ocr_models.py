@@ -1,4 +1,13 @@
-"""Rank OCR models from the reviewer's pairwise comparison judgments.
+"""Rank models from the reviewer's pairwise comparison judgments.
+
+``--stage`` selects which review set to fit.  Both stages share the reviewer's
+``left_model``/``right_model``/``choice`` record shape, so they use the same
+model:
+
+* ``ocr`` reads ``cache/reviewer/ocr_comparisons.jsonl`` and writes
+  ``cache/reviewer/ocr_model_rankings.json``; and
+* ``extraction`` reads ``cache/reviewer/extraction_comparisons.jsonl`` and
+  writes ``cache/reviewer/extraction_model_rankings.json``.
 
 The fitted model is a Bradley-Terry-style logistic model.  Decisive judgments
 are ordinary pairwise wins.  A ``both_good`` or ``both_bad`` judgment has two
@@ -17,9 +26,10 @@ Run from anywhere in the repository::
 
     python pipeline/utils/rank_ocr_models.py
     python pipeline/utils/rank_ocr_models.py --top-ocr-models
+    python pipeline/utils/rank_ocr_models.py --stage extraction
 
-By default the script reads ``cache/reviewer/ocr_comparisons.jsonl``, prints a
-ranking, and writes ``cache/reviewer/ocr_model_rankings.json``.
+The stage defaults to ``ocr``, and ``--input``/``--output`` override that
+stage's paths.
 """
 
 from __future__ import annotations
@@ -35,8 +45,7 @@ from typing import AbstractSet, Any, Iterable, Sequence
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_INPUT = PROJECT_ROOT / "cache" / "reviewer" / "ocr_comparisons.jsonl"
-DEFAULT_OUTPUT = PROJECT_ROOT / "cache" / "reviewer" / "ocr_model_rankings.json"
+REVIEWER_CACHE = PROJECT_ROOT / "cache" / "reviewer"
 VALID_CHOICES = {"left_better", "right_better", "both_good", "both_bad"}
 TOP_OCR_MODELS = frozenset(
     {
@@ -52,8 +61,44 @@ TOP_3_GENERAL_VLM_MODELS = TOP_OCR_MODELS
 
 
 @dataclass(frozen=True)
+class Stage:
+    """One reviewer comparison set and where its ranking is written."""
+
+    name: str
+    label: str
+    input_path: Path
+    output_path: Path
+    # The named subset selected by ``--top-ocr-models``; stages without a named
+    # cohort reject that flag.
+    cohort: frozenset[str] | None = None
+    cohort_scope: str | None = None
+
+
+STAGES = {
+    "ocr": Stage(
+        name="ocr",
+        label="OCR",
+        input_path=REVIEWER_CACHE / "ocr_comparisons.jsonl",
+        output_path=REVIEWER_CACHE / "ocr_model_rankings.json",
+        cohort=TOP_OCR_MODELS,
+        cohort_scope="top_ocr_models",
+    ),
+    "extraction": Stage(
+        name="extraction",
+        label="extraction",
+        input_path=REVIEWER_CACHE / "extraction_comparisons.jsonl",
+        output_path=REVIEWER_CACHE / "extraction_model_rankings.json",
+    ),
+}
+DEFAULT_STAGE = "ocr"
+# Backwards-compatible aliases for the original OCR-only defaults.
+DEFAULT_INPUT = STAGES[DEFAULT_STAGE].input_path
+DEFAULT_OUTPUT = STAGES[DEFAULT_STAGE].output_path
+
+
+@dataclass(frozen=True)
 class Judgment:
-    """A validated OCR comparison used by the ranking model."""
+    """A validated pairwise comparison used by the ranking model."""
 
     left_model: str
     right_model: str
@@ -69,7 +114,7 @@ class LogisticObservation:
     weight: float
 
 
-def load_judgments(path: Path) -> list[Judgment]:
+def load_judgments(path: Path, label: str = "comparison") -> list[Judgment]:
     """Load and validate reviewer JSONL records."""
 
     judgments: list[Judgment] = []
@@ -101,7 +146,7 @@ def load_judgments(path: Path) -> list[Judgment]:
             judgments.append(Judgment(left_model, right_model, choice))
 
     if not judgments:
-        raise ValueError(f"{path}: no OCR comparison judgments found")
+        raise ValueError(f"{path}: no {label} comparison judgments found")
     return judgments
 
 
@@ -356,6 +401,11 @@ def build_ranking(
 
 def print_ranking(output: dict[str, Any]) -> None:
     rows = output["rankings"]
+    stage_name = output.get("stage")
+    if stage_name:
+        stage = STAGES.get(stage_name)
+        label = stage.label if stage else stage_name
+        print(f"{label} model ranking from {output['judgment_count']} judgments\n")
     model_width = max(len("model"), *(len(row["model"]) for row in rows))
     header = (
         f"{'rank':>4}  {'score':>7}  {'W':>3}  {'L':>3}  "
@@ -373,18 +423,27 @@ def print_ranking(output: dict[str, Any]) -> None:
 
 
 def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(
+        description=__doc__,
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
+    parser.add_argument(
+        "--stage",
+        choices=sorted(STAGES),
+        default=DEFAULT_STAGE,
+        help=f"which reviewer comparison set to rank (default: {DEFAULT_STAGE})",
+    )
     parser.add_argument(
         "--input",
         type=Path,
-        default=DEFAULT_INPUT,
-        help=f"reviewer JSONL input (default: {DEFAULT_INPUT.relative_to(PROJECT_ROOT)})",
+        default=None,
+        help="reviewer JSONL input (default: the selected stage's comparisons file)",
     )
     parser.add_argument(
         "--output",
         type=Path,
-        default=DEFAULT_OUTPUT,
-        help=f"ranking JSON output (default: {DEFAULT_OUTPUT.relative_to(PROJECT_ROOT)})",
+        default=None,
+        help="ranking JSON output (default: the selected stage's rankings file)",
     )
     parser.add_argument(
         "--tie-quality-weight",
@@ -407,7 +466,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         action="store_true",
         help=(
             "fit and report only head-to-head comparisons among Qwen 3.6 27B, "
-            "Ovis 2.6 30B, OvisOCR2, and Gemma 4 31B"
+            "Ovis 2.6 30B, OvisOCR2, and Gemma 4 31B (--stage ocr only)"
         ),
     )
     args = parser.parse_args(argv)
@@ -419,14 +478,21 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
 
 def main(argv: Sequence[str] | None = None) -> int:
     args = parse_args(argv)
-    input_path = args.input.expanduser().resolve()
-    output_path = args.output.expanduser().resolve()
-    judgments = load_judgments(input_path)
+    stage = STAGES[args.stage]
+    if args.top_ocr_models and stage.cohort is None:
+        raise ValueError(
+            f"--top-ocr-models is not available for --stage {stage.name}; "
+            "restrict the cohort with --input instead"
+        )
+    input_path = (args.input or stage.input_path).expanduser().resolve()
+    output_path = (args.output or stage.output_path).expanduser().resolve()
+    judgments = load_judgments(input_path, stage.label)
     source_judgment_count = len(judgments)
     if args.top_ocr_models:
-        judgments = judgments_within_models(judgments, TOP_OCR_MODELS)
+        cohort = stage.cohort
+        judgments = judgments_within_models(judgments, cohort)
         if not judgments:
-            models = ", ".join(sorted(TOP_OCR_MODELS))
+            models = ", ".join(sorted(cohort))
             raise ValueError(
                 "no head-to-head judgments found among the top OCR models: "
                 f"{models}"
@@ -436,7 +502,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             for judgment in judgments
             for model in (judgment.left_model, judgment.right_model)
         }
-        missing_models = TOP_OCR_MODELS - observed_models
+        missing_models = cohort - observed_models
         if missing_models:
             raise ValueError(
                 "no head-to-head judgments found for top OCR model(s): "
@@ -447,10 +513,11 @@ def main(argv: Sequence[str] | None = None) -> int:
         tie_quality_weight=args.tie_quality_weight,
         l2=args.l2,
     )
+    output["stage"] = stage.name
     output["source_path"] = str(input_path)
     if args.top_ocr_models:
-        output["model_scope"] = "top_ocr_models"
-        output["included_models"] = sorted(TOP_OCR_MODELS)
+        output["model_scope"] = stage.cohort_scope
+        output["included_models"] = sorted(stage.cohort)
         output["source_judgment_count"] = source_judgment_count
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
