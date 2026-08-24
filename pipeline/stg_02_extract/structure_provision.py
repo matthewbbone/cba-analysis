@@ -195,16 +195,18 @@ def labels_at_level(
     return labels
 
 
-def _prompt_description(prompt: str, provision_type: str) -> str:
+
+def _prompt_description(clause_type: str, clause_description: str) -> str:
     return (
-        f"{prompt.strip()}\n\n"
-        f'Use "{provision_type}" as extraction_class for every extraction. '
-        "For each extraction, return attributes with exactly one key named "
-        "context. Set context to a concise, faithful description of any "
-        "information elsewhere in the current text chunk that is relevant to "
-        "understanding the extracted text. Use only information from the current "
-        "chunk, and set context to null when the chunk contains no relevant "
-        "context."
+        f'You are a legal expert reviewing contract text and extracting {clause_type} clauses.\n\n'
+        f'Only extract text that both:\n'
+        f'  1. Clearly defines a legal right, permission, obligation, or prohibition and\n'
+        f'  2. Has a clear benefciary or responsible party\n\n'
+        f'The extraction_class for every extraction is "{clause_type}".\n'
+        f'For each extraction, return attributes with exactly one key named "context" '
+        f'that is a concise, faithful description of any information elsewhere in the '
+        f'current text chunk that is relevant to understanding the extracted text.\n\n'
+        f'{clause_type} Description: {clause_description}'
     )
 
 
