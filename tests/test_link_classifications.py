@@ -16,9 +16,57 @@ MODEL_NAME = "Qwen/Qwen3.8-27B-FP8"
 MODEL_DIR = "Qwen_Qwen3.8-27B-FP8"
 PROVISION_TYPE = "technology"
 
+METADATA_SOURCE = "DoL"
 METADATA_HEADER = (
-    "employername,cbafile,location,union,expirationdate,naics,wrkrs,type,expire_year\n"
+    "cba_id,source,filename,employer,union,state_abbrev,state_name,state_fips,"
+    "sector,naics,naics_description,effective_date,expiration_date,n_workers,"
+    "multi_state,metadata_source,also_in_dol,also_in_cornell,"
+    "mistral_contract_year,mistral_naics,mistral_n_occupations,mistral_mean_wage,"
+    "mistral_median_wage,mistral_step_up\n"
 )
+
+
+def _metadata_row(
+    stem: str,
+    *,
+    source: str = METADATA_SOURCE,
+    employer: str = "One Co",
+    naics: str = "311111",
+    effective_date: str = "2003-01-01",
+    expiration_date: str = "2007-09-30",
+    n_workers: str = "608.0",
+    ownership: str = "Private",
+) -> str:
+    """One harmonized metadata row, keyed by the filename stem like the real file."""
+
+    return ",".join(
+        [
+            f"{source}_{stem}",
+            source,
+            f"{stem}.pdf",
+            employer,
+            "IBEW",
+            "IL",
+            "Illinois",
+            "17",
+            ownership,
+            naics,
+            "",
+            effective_date,
+            expiration_date,
+            n_workers,
+            "0",
+            "DoL_CBAList",
+            "1",
+            "0",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+        ]
+    ) + "\n"
 
 
 def _record(
@@ -52,45 +100,6 @@ def _record(
     )
 
 
-class RepairTrailingColumnsTests(unittest.TestCase):
-    def test_complete_row_is_unchanged(self) -> None:
-        self.assertEqual(
-            link_classifications.repair_trailing_columns("484230", "608", "PRIVATE"),
-            ("484230", "608", "PRIVATE"),
-        )
-
-    def test_missing_naics_and_workers_shifts_ownership_left(self) -> None:
-        self.assertEqual(
-            link_classifications.repair_trailing_columns("PRIVATE", "", ""),
-            ("", "", "PRIVATE"),
-        )
-
-    def test_missing_workers_shifts_ownership_into_workers(self) -> None:
-        self.assertEqual(
-            link_classifications.repair_trailing_columns("484230", "PRIVATE", ""),
-            ("484230", "", "PRIVATE"),
-        )
-
-    def test_lone_six_digit_value_is_a_naics_code(self) -> None:
-        self.assertEqual(
-            link_classifications.repair_trailing_columns("445110", "PUBLIC", ""),
-            ("445110", "", "PUBLIC"),
-        )
-
-    def test_lone_short_value_is_a_worker_count(self) -> None:
-        # A worker count can look like a two-digit NAICS prefix; only a full
-        # six-digit code is treated as an industry code.
-        self.assertEqual(
-            link_classifications.repair_trailing_columns("48", "PRIVATE", ""),
-            ("", "48", "PRIVATE"),
-        )
-
-    def test_all_blank_row_does_not_raise(self) -> None:
-        self.assertEqual(
-            link_classifications.repair_trailing_columns("", "", ""), ("", "", "")
-        )
-
-
 class SectorLabelTests(unittest.TestCase):
     def test_manufacturing_prefixes_share_one_sector(self) -> None:
         labels = {
@@ -114,53 +123,116 @@ class LoadMetadataTests(unittest.TestCase):
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(text, encoding="utf-8")
 
-    def _load(self, rows: str) -> pd.DataFrame:
+    def _load(self, rows: str, source: str | None = SOURCE) -> pd.DataFrame:
         with TemporaryDirectory() as tmp_dir:
             path = Path(tmp_dir) / "meta.csv"
             self._write(path, METADATA_HEADER + rows)
             with redirect_stdout(StringIO()):
-                return link_classifications.load_metadata(path)
+                return link_classifications.load_metadata(path, source)
 
-    def test_every_shift_pattern_recovers_ownership(self) -> None:
+    def test_document_id_is_the_filename_stem(self) -> None:
         frame = self._load(
-            "Complete Co,1,IL,IBEW,\"Sep 30, 2026\",484230,608,PRIVATE,2026\n"
-            "No Naics Co,2,NV,IBEW,\"Mar 31, 2019\",48,PRIVATE,,2019\n"
-            "No Naics No Wrkrs Co,3,PA,IBEW,\"Dec 31, 2022\",PUBLIC,,,2022\n"
+            _metadata_row("document_7") + _metadata_row("8113ABBYY")
         )
-        self.assertEqual(list(frame["ownership"]), ["PRIVATE", "PRIVATE", "PUBLIC"])
-        self.assertEqual(list(frame["naics"]), ["484230", "", ""])
-        self.assertEqual(list(frame["wrkrs"]), ["608", "48", ""])
+        self.assertEqual(list(frame["document_id"]), ["document_7", "8113ABBYY"])
 
-    def test_document_id_has_no_float_suffix(self) -> None:
-        frame = self._load("Seven Co,7,IL,IBEW,\"Sep 30, 2026\",484230,608,PRIVATE,2026\n")
-        self.assertEqual(list(frame["document_id"]), ["document_7"])
+    def test_source_folder_selects_one_archive(self) -> None:
+        rows = _metadata_row("shared") + _metadata_row(
+            "shared", source="Cornell_DoL", employer="Cornell Co"
+        )
+        frame = self._load(rows, "cornell_dol")
+        self.assertEqual(list(frame["employer"]), ["Cornell Co"])
+        self.assertEqual(list(frame["document_id"]), ["shared"])
 
-    def test_out_of_range_expire_year_becomes_unknown(self) -> None:
+    def test_unknown_source_falls_back_to_every_row_with_a_warning(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            path = Path(tmp_dir) / "meta.csv"
+            self._write(path, METADATA_HEADER + _metadata_row("document_7"))
+            output = StringIO()
+            with redirect_stdout(output):
+                frame = link_classifications.load_metadata(path, "no_such_archive")
+
+        self.assertEqual(len(frame), 1)
+        self.assertIn("no metadata row carries source", output.getvalue())
+
+    def test_ownership_carries_the_private_public_split(self) -> None:
         frame = self._load(
-            "Sentinel Co,1,IL,IBEW,\"Sep 30, 1800\",484230,608,PRIVATE,1800\n"
-            "Real Co,2,IL,IBEW,\"Sep 30, 2007\",484230,608,PRIVATE,2007\n"
+            _metadata_row("document_1")
+            + _metadata_row("document_2", ownership="Public")
+        )
+        self.assertEqual(list(frame["ownership"]), ["Private", "Public"])
+
+    def test_counts_and_codes_become_numbers(self) -> None:
+        frame = self._load(_metadata_row("document_1", n_workers="608.0"))
+        self.assertEqual(frame["n_workers"].iloc[0], 608)
+        self.assertEqual(frame["n_workers"].dtype, "Int64")
+
+    def test_state_fips_keeps_its_leading_zero(self) -> None:
+        frame = self._load(
+            _metadata_row("document_1").replace(",IL,Illinois,17,", ",AL,Alabama,01,")
+        )
+        self.assertEqual(frame["state_fips"].iloc[0], "01")
+
+    def test_provenance_flags_become_booleans(self) -> None:
+        frame = self._load(_metadata_row("document_1"))
+        self.assertTrue(bool(frame["also_in_dol"].iloc[0]))
+        self.assertFalse(bool(frame["also_in_cornell"].iloc[0]))
+        self.assertFalse(bool(frame["multi_state"].iloc[0]))
+
+    def test_out_of_range_expiration_becomes_unknown(self) -> None:
+        frame = self._load(
+            _metadata_row("document_1", expiration_date="1800-01-01")
+            + _metadata_row("document_2", expiration_date="2007-09-30")
         )
         self.assertTrue(pd.isna(frame["expire_year"].iloc[0]))
         self.assertEqual(frame["expire_period"].iloc[0], "")
         self.assertEqual(frame["expire_period"].iloc[1], "2005-2009")
 
-    def test_duplicate_cbafile_rows_collapse_with_a_warning(self) -> None:
+    def test_contract_year_prefers_the_effective_date(self) -> None:
+        frame = self._load(
+            _metadata_row(
+                "document_1", effective_date="2003-06-01", expiration_date="2007-09-30"
+            )
+        )
+        self.assertEqual(frame["effective_year"].iloc[0], 2003)
+        self.assertEqual(frame["contract_period"].iloc[0], "2000-2004")
+        self.assertEqual(frame["expire_period"].iloc[0], "2005-2009")
+
+    def test_contract_year_falls_back_to_the_expiration(self) -> None:
+        """The Cornell rows carry no expiration; the DOL rows can lack an effective date."""
+
+        frame = self._load(
+            _metadata_row("document_1", effective_date="", expiration_date="2007-09-30")
+        )
+        self.assertTrue(pd.isna(frame["effective_year"].iloc[0]))
+        self.assertEqual(frame["contract_year"].iloc[0], 2007)
+        self.assertEqual(frame["contract_period"].iloc[0], "2005-2009")
+
+    def test_duplicate_stems_collapse_with_a_warning(self) -> None:
         with TemporaryDirectory() as tmp_dir:
             path = Path(tmp_dir) / "meta.csv"
             self._write(
                 path,
                 METADATA_HEADER
-                + "First Co,7,IL,IBEW,\"Sep 30, 2026\",484230,608,PRIVATE,2026\n"
-                + "Second Co,7,NY,IBEW,\"Sep 30, 2024\",445110,10,PUBLIC,2024\n",
+                + _metadata_row("document_7", employer="First Co")
+                + _metadata_row("document_7", employer="Second Co"),
             )
             output = StringIO()
             with redirect_stdout(output):
-                frame = link_classifications.load_metadata(path)
+                frame = link_classifications.load_metadata(path, SOURCE)
 
         self.assertEqual(len(frame), 1)
-        self.assertEqual(frame["employername"].iloc[0], "First Co")
+        self.assertEqual(frame["employer"].iloc[0], "First Co")
         self.assertIn("duplicate metadata document ID", output.getvalue())
         self.assertIn("document_7", output.getvalue())
+
+    def test_a_list_without_the_harmonized_columns_is_rejected(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            path = Path(tmp_dir) / "meta.csv"
+            self._write(path, "employername,cbafile\nOne Co,1\n")
+            with self.assertRaises(SystemExit) as caught:
+                link_classifications.load_metadata(path, SOURCE)
+        self.assertIn("harmonized_cba_metadata.csv", str(caught.exception))
 
 
 class BuildTablesTests(unittest.TestCase):
@@ -214,8 +286,16 @@ class BuildTablesTests(unittest.TestCase):
         self._write(
             path,
             METADATA_HEADER
-            + "One Co,1,IL,IBEW,\"Sep 30, 2007\",311111,608,PRIVATE,2007\n"
-            + "Three Co,3,NY,IBEW,\"Sep 30, 2019\",PUBLIC,,,2019\n",
+            + _metadata_row("document_1", employer="One Co")
+            + _metadata_row(
+                "document_3",
+                employer="Three Co",
+                naics="",
+                effective_date="2015-01-01",
+                expiration_date="2019-09-30",
+                n_workers="",
+                ownership="Public",
+            ),
         )
 
     def _tables(self, tmp_dir: Path):
@@ -228,7 +308,7 @@ class BuildTablesTests(unittest.TestCase):
         )
         provisions, _ = link_classifications.select_level(provisions, 1)
         with redirect_stdout(StringIO()):
-            metadata = link_classifications.load_metadata(metadata_path)
+            metadata = link_classifications.load_metadata(metadata_path, self.source)
         documents = link_classifications.build_document_table(
             link_classifications.discover_document_ids(classify_dir),
             provisions,
@@ -294,10 +374,13 @@ class BuildTablesTests(unittest.TestCase):
             documents, _, _ = self._tables(Path(tmp_dir))
 
         row = documents[documents["document_id"] == "document_1"].iloc[0]
-        self.assertEqual(row["employername"], "One Co")
+        self.assertEqual(row["employer"], "One Co")
+        self.assertEqual(row["cba_id"], "DoL_document_1")
         self.assertEqual(row["sector_label"], "Manufacturing")
         self.assertEqual(row["expire_period"], "2005-2009")
-        self.assertEqual(row["ownership"], "PRIVATE")
+        self.assertEqual(row["contract_period"], "2000-2004")
+        self.assertEqual(row["ownership"], "Private")
+        self.assertEqual(row["n_workers"], 608)
 
     def test_malformed_json_names_the_file_and_line(self) -> None:
         with TemporaryDirectory() as tmp_dir:
@@ -318,7 +401,7 @@ class MainTests(BuildTablesTests):
             self.source,
             "--model-name",
             MODEL_NAME,
-            "--provision-type",
+            "--clause-type",
             PROVISION_TYPE,
             "--cache-dir",
             str(tmp_dir / "cache"),

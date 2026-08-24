@@ -1,5 +1,5 @@
-provision_type: wage_table
-extraction_prompt: |-
+clause_type: wage_table
+clause_description: |-
   Extract every distinct complete base-wage schedule table from the collective bargaining agreement.
 
   A base-wage schedule is a table-like block whose primary purpose is to state regular base pay by job classification, occupation, salary step or lane, experience level, education level, or pay grade. Pay cells may be hourly, daily, weekly, monthly, or annual rates and may use currency symbols, decimals, comma-grouped values, or bare numbers when the surrounding rows and headers clearly identify them as pay rates.

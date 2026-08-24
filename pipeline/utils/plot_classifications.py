@@ -122,17 +122,19 @@ TEXT_PRIMARY = "#0b0b0b"
 TEXT_SECONDARY = "#52514e"
 GRID_COLOR = "#d8d7d2"
 
-# Expiration is the only date the CBA list carries, so cohorts are contracts
-# expiring in a window, not contracts signed in one.
+# Cohorts are contracts expiring in a window, not contracts signed in one.  The
+# harmonized metadata does carry an effective date, but only for part of the DOL
+# list and none of it before harmonization, so expiration stays the cohort here;
+# the document table's `contract_period` is the effective-date alternative.
 PERIOD_AXIS_LABEL = "Contract expiration cohort"
 PERIOD_CAPTION = (
-    "Cohorts are contract expiration dates; the CBA list carries no effective "
-    "date, so a contract expiring 2008 was typically signed 2003-2005."
+    "Cohorts are contract expiration dates, so a contract expiring 2008 was "
+    "typically signed 2003-2005."
 )
 
 
 def subtype_style(
-    subtypes: Sequence[str], provision_type: str
+    subtypes: Sequence[str], clause_type: str
 ) -> tuple[dict[str, str], dict[str, str], dict[str, str]]:
     """Return stable colors, markers and display labels, shared across figures."""
 
@@ -152,7 +154,7 @@ def subtype_style(
 
     colors[NONE_KEY] = NONE_COLOR
     markers[NONE_KEY] = NONE_MARKER
-    labels[NONE_KEY] = f"No {provision_type} provisions"
+    labels[NONE_KEY] = f"No {clause_type} provisions"
     return colors, markers, labels
 
 
@@ -456,7 +458,7 @@ def plot_overall(
     subtypes,
     colors,
     labels,
-    provision_type: str,
+    clause_type: str,
 ) -> "matplotlib.figure.Figure":
     shares, counts = overall_shares(documents, subtypes)
     shares = shares.sort_values(ascending=True)
@@ -481,7 +483,7 @@ def plot_overall(
     ax.set_xlim(0, min(100, max(shares.max() * 1.32, 5)))
     ax.set_xlabel("% of classified CBAs", color=TEXT_SECONDARY, fontsize=9)
     ax.set_title(
-        f"Share of CBAs with each {provision_type} provision subtype",
+        f"Share of CBAs with each {clause_type} provision subtype",
         loc="left",
         color=TEXT_PRIMARY,
     )
@@ -494,6 +496,46 @@ def plot_overall(
         "sum to 100%.",
     )
     return fig
+
+
+def _pool_non_spanning(
+    frame: pd.DataFrame,
+    group: str,
+    groups: Sequence[str],
+    min_cell_docs: int,
+    industry: str = "sector_group",
+    protect: Sequence[str] = (UNKNOWN_SECTOR,),
+) -> tuple[pd.DataFrame, list[str]]:
+    """Fold industries that miss a plotted cohort into the pooled remainder.
+
+    ``composition_adjusted`` can only use strata present in every cohort, and on
+    its own it drops the rest -- discarding those CBAs from the index rather
+    than counting them anywhere coarser.  Folding them into the remainder keeps
+    them in the sample at a coarser grain, which is the same trade the remainder
+    bucket already makes for the sectors too small to name, and it is what keeps
+    the index estimable when the thinnest cohort holds only a handful of CBAs.
+
+    ``protect`` is never folded: the no-NAICS bucket is not an industry, so
+    pooling it into the remainder would make the remainder mean something else.
+    Returns the reframed rows and the folded names, so the caller can name them.
+    """
+
+    sizes = frame.groupby([industry, group]).size()
+    strata = list(dict.fromkeys(frame[industry]))
+    folded = sorted(
+        stratum
+        for stratum in strata
+        if stratum not in protect
+        and stratum != OTHER_SECTOR_LABEL
+        and any(int(sizes.get((stratum, name), 0)) < min_cell_docs for name in groups)
+    )
+    if not folded:
+        return frame, []
+    frame = frame.copy()
+    frame[industry] = frame[industry].where(
+        ~frame[industry].isin(folded), OTHER_SECTOR_LABEL
+    )
+    return frame, folded
 
 
 def _adjusted_overlay(
@@ -521,6 +563,9 @@ def _adjusted_overlay(
         return None, " No CBA carries a sector, so no industry-adjusted index is shown."
     pooled, _ = grouped
     pooled = pooled[pooled["expire_period"].isin(list(kept))]
+    pooled, folded = _pool_non_spanning(
+        pooled, "expire_period", list(kept), min_cell_docs
+    )
 
     adjusted, counts, used, dropped = composition_adjusted(
         pooled,
@@ -565,6 +610,14 @@ def _adjusted_overlay(
         f"stratum equally, so a shift in the mix of strata cannot move it. CBAs "
         f"behind it per cohort: {per_cohort}."
     )
+    if folded:
+        fragment += (
+            f" {len(folded)} "
+            f"{'industry missing a cohort was' if len(folded) == 1 else 'industries missing a cohort were'}"
+            " folded into "
+            f"{OTHER_SECTOR_LABEL.lower()} rather than dropped from the index: "
+            f"{', '.join(folded)}."
+        )
     if dropped:
         fragment += (
             f" Strata excluded for not spanning every cohort: "
@@ -580,7 +633,7 @@ def plot_by_period(
     markers,
     labels,
     min_docs: int,
-    provision_type: str,
+    clause_type: str,
     industry_adjusted: bool = True,
     min_sector_docs: int = DEFAULT_MIN_SECTOR_DOCS,
     min_cell_docs: int = 1,
@@ -645,7 +698,7 @@ def plot_by_period(
     ax.set_ylabel("% of CBAs in cohort", color=TEXT_SECONDARY, fontsize=9)
     extra = _style_legend_handles() if industry_adjusted else []
     ax.set_title(
-        f"Share of CBAs with each {provision_type} subtype, by expiration cohort",
+        f"Share of CBAs with each {clause_type} subtype, by expiration cohort",
         loc="left",
         color=TEXT_PRIMARY,
         pad=_title_pad(len(keys) + len(extra), ncol=4),
@@ -820,7 +873,7 @@ def plot_by_sector(
     colors,
     labels,
     min_docs: int,
-    provision_type: str,
+    clause_type: str,
     show_unknown: bool = True,
 ) -> "matplotlib.figure.Figure | None":
     grouped = _grouped_by_sector(documents, min_docs, keep_unknown=show_unknown)
@@ -861,7 +914,7 @@ def plot_by_sector(
     ax.set_xlabel("% of CBAs in industry", color=TEXT_SECONDARY, fontsize=9)
     ax.set_ylabel("NAICS sector", color=TEXT_SECONDARY, fontsize=9)
     ax.set_title(
-        f"Share of CBAs with each {provision_type} subtype, by industry",
+        f"Share of CBAs with each {clause_type} subtype, by industry",
         loc="left",
         color=TEXT_PRIMARY,
         pad=_title_pad(len(keys), ncol=4),
@@ -894,7 +947,7 @@ def plot_beneficiary_overall(
     beneficiaries: Sequence[str],
     colors,
     labels,
-    provision_type: str,
+    clause_type: str,
 ) -> "matplotlib.figure.Figure":
     means, n = beneficiary_overall_means(documents, beneficiaries)
     means = means.sort_values(ascending=True)
@@ -921,7 +974,7 @@ def plot_beneficiary_overall(
         "Mean within-CBA share of provisions", color=TEXT_SECONDARY, fontsize=9
     )
     ax.set_title(
-        f"Average beneficiary of {provision_type} provisions",
+        f"Average beneficiary of {clause_type} provisions",
         loc="left",
         color=TEXT_PRIMARY,
     )
@@ -929,7 +982,7 @@ def plot_beneficiary_overall(
     _caption(
         fig,
         ax,
-        f"{n} classified CBAs with at least one {provision_type} provision. "
+        f"{n} classified CBAs with at least one {clause_type} provision. "
         + BENEFICIARY_MEAN_CAPTION,
     )
     return fig
@@ -942,7 +995,7 @@ def plot_beneficiary_by_period(
     markers,
     labels,
     min_docs: int,
-    provision_type: str,
+    clause_type: str,
     industry_adjusted: bool = True,
     min_sector_docs: int = DEFAULT_MIN_SECTOR_DOCS,
     min_cell_docs: int = 1,
@@ -1009,7 +1062,7 @@ def plot_beneficiary_by_period(
     ax.set_ylabel("Mean within-CBA share", color=TEXT_SECONDARY, fontsize=9)
     extra = _style_legend_handles() if industry_adjusted else []
     ax.set_title(
-        f"Average beneficiary of {provision_type} provisions, by expiration cohort",
+        f"Average beneficiary of {clause_type} provisions, by expiration cohort",
         loc="left",
         color=TEXT_PRIMARY,
         pad=_title_pad(len(beneficiaries) + len(extra), ncol=3),
@@ -1031,7 +1084,7 @@ def plot_beneficiary_by_sector(
     colors,
     labels,
     min_docs: int,
-    provision_type: str,
+    clause_type: str,
     show_unknown: bool = True,
 ) -> "matplotlib.figure.Figure | None":
     grouped = _grouped_by_sector(documents, min_docs, keep_unknown=show_unknown)
@@ -1075,7 +1128,7 @@ def plot_beneficiary_by_sector(
     ax.set_xlabel("Mean within-CBA share", color=TEXT_SECONDARY, fontsize=9)
     ax.set_ylabel("NAICS sector", color=TEXT_SECONDARY, fontsize=9)
     ax.set_title(
-        f"Average beneficiary of {provision_type} provisions, by industry",
+        f"Average beneficiary of {clause_type} provisions, by industry",
         loc="left",
         color=TEXT_PRIMARY,
         pad=_title_pad(len(beneficiaries), ncol=3),
@@ -1121,7 +1174,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         ),
     )
     parser.add_argument(
-        "--provision-type",
+        "--clause-type",
         default=DEFAULT_PROVISION_TYPE,
         help=f"provision type to plot (default: {DEFAULT_PROVISION_TYPE})",
     )
@@ -1203,9 +1256,9 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
 def main(argv: Sequence[str] | None = None) -> int:
     args = parse_args(argv)
 
-    spec = load_provision(args.provision_type)
+    spec = load_provision(args.clause_type)
     if not spec.subtype_taxonomy:
-        raise SystemExit(f"provision {args.provision_type} declares no subtypes")
+        raise SystemExit(f"provision {args.clause_type} declares no subtypes")
     if args.level < 1:
         raise SystemExit("--level must be at least 1")
     if args.min_cbas < 0:
@@ -1213,7 +1266,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     available = taxonomy_depth(spec.subtype_taxonomy)
     if args.level > available:
         raise SystemExit(
-            f"--level {args.level} exceeds the {args.provision_type} taxonomy, "
+            f"--level {args.level} exceeds the {args.clause_type} taxonomy, "
             f"which declares {available} level(s)"
         )
     # Must match the --level the document table was built with: stage 3 offers
@@ -1221,7 +1274,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     declared = list(labels_at_level(spec.subtype_taxonomy, args.level))
     subtypes = [*declared, RESERVED_SUBTYPE_LABEL]
 
-    prefix = table_prefix(args.provision_type, args.source, args.level)
+    prefix = table_prefix(args.clause_type, args.source, args.level)
     documents_path = args.input_dir / f"{prefix}_documents.csv"
     if not documents_path.is_file():
         raise SystemExit(
@@ -1243,13 +1296,13 @@ def main(argv: Sequence[str] | None = None) -> int:
     without_any = int((documents["n_provisions"] == 0).sum())
     print(
         f"read {len(documents)} document(s) from {documents_path}; "
-        f"{without_any} carry no {args.provision_type} provision"
+        f"{without_any} carry no {args.clause_type} provision"
     )
 
     # Style the full label set before filtering, so a subtype keeps the same
     # colour and marker whatever --min-cbas is set to and figures stay
     # comparable across runs.
-    colors, markers, labels = subtype_style(subtypes, args.provision_type)
+    colors, markers, labels = subtype_style(subtypes, args.clause_type)
 
     if args.min_cbas > 0:
         subtypes, dropped = frequent_subtypes(documents, subtypes, args.min_cbas)
@@ -1271,7 +1324,7 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     figures = {
         f"{prefix}_subtype_share.png": plot_overall(
-            documents, subtypes, colors, labels, args.provision_type
+            documents, subtypes, colors, labels, args.clause_type
         ),
         f"{prefix}_share_by_period.png": plot_by_period(
             documents,
@@ -1280,7 +1333,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             markers,
             labels,
             args.min_group_docs,
-            args.provision_type,
+            args.clause_type,
             industry_adjusted=args.industry_adjusted,
             min_sector_docs=args.min_sector_docs,
             min_cell_docs=args.min_cell_docs,
@@ -1291,7 +1344,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             colors,
             labels,
             args.min_sector_docs,
-            args.provision_type,
+            args.clause_type,
             show_unknown=args.show_unknown,
         ),
     }
@@ -1299,7 +1352,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     if all(f"pct_beneficiary_{b}" in documents.columns for b in BENEFICIARY_LABELS):
         b_colors, b_markers, b_labels = beneficiary_style(BENEFICIARY_LABELS)
         figures[f"{prefix}_beneficiary_share.png"] = plot_beneficiary_overall(
-            documents, BENEFICIARY_LABELS, b_colors, b_labels, args.provision_type
+            documents, BENEFICIARY_LABELS, b_colors, b_labels, args.clause_type
         )
         figures[f"{prefix}_beneficiary_share_by_period.png"] = plot_beneficiary_by_period(
             documents,
@@ -1308,7 +1361,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             b_markers,
             b_labels,
             args.min_group_docs,
-            args.provision_type,
+            args.clause_type,
             industry_adjusted=args.industry_adjusted,
             min_sector_docs=args.min_sector_docs,
             min_cell_docs=args.min_cell_docs,
@@ -1319,7 +1372,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             b_colors,
             b_labels,
             args.min_sector_docs,
-            args.provision_type,
+            args.clause_type,
             show_unknown=args.show_unknown,
         )
     else:

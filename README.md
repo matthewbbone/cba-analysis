@@ -28,7 +28,8 @@ For the technology taxonomy, each provision receives:
 - a hierarchical subtype, such as `preemptive_rights` or `implementation`,
   with a more detailed subtype at level 2; and
 - a beneficiary: `worker`, `employer`, or `unclear`, interpreted as the party
-  receiving the substantive benefit from the provision.
+  receiving the substantive benefit from the provision. Stage 2 assigns this
+  alongside the extraction itself; stage 3 carries it through unchanged.
 
 The main document-level measures are:
 
@@ -52,10 +53,11 @@ scanned CBA PDFs
 Stage 1: OCR                 page text + complete document text
       |
       v
-Stage 2: extraction          grounded quotations of relevant provisions
+Stage 2: extraction          grounded quotations of relevant provisions,
+                             each with a beneficiary
       |
       v
-Stage 3: classification      subtype + beneficiary labels
+Stage 3: classification      hierarchical subtype labels
       |
       v
 metadata link                document- and provision-level CSVs
@@ -127,17 +129,20 @@ for each simultaneous process.
 
 ### 3. Build analysis files and figures
 
-The metadata join currently supports `dol_archive`, whose document IDs map to
-`meta_data/CBAList_with_statefips.dta`.
+The metadata join reads `meta_data/harmonized_cba_metadata.csv`, which covers
+all three archives. `--source` names the cache folder and selects the archive
+to join against (`dol_archive` -> `DoL`, `cornell_dol` -> `Cornell_DoL`,
+`cornell_retail_educ` -> `Cornell_RetailEd`); within an archive a document
+matches the row whose `filename` stem is its document ID.
 
 ```bash
 uv run python pipeline/utils/link_classifications.py \
-  --provision-type technology \
+  --clause-type technology \
   --source dol_archive \
   --level 2
 
 uv run python pipeline/utils/plot_classifications.py \
-  --provision-type technology \
+  --clause-type technology \
   --source dol_archive \
   --level 2
 ```
@@ -218,9 +223,14 @@ The document table includes:
 
 - `has_<subtype>` and `n_<subtype>`;
 - `n_beneficiary_<label>` and `pct_beneficiary_<label>`;
-- employer, union, expiration year and five-year expiration cohort;
-- NAICS code and sector label; and
-- employment (`wrkrs`) and ownership metadata.
+- employer, union, state, and NAICS code with its sector label;
+- effective and expiration year, each with a five-year cohort, plus
+  `contract_year`/`contract_period` -- the effective year where there is one,
+  falling back to the expiration year. Only the DOL rows carry an expiration,
+  so `contract_period` is the cohort to group on across archives;
+- employment (`n_workers`) and ownership metadata; and
+- the `mistral_*` per-contract extractions (NAICS, occupation count, mean and
+  median wage, step-up), which the DOL rows alone carry.
 
 The provision table contains one row per classified provision joined to the
 same contract metadata. Add `--include-text` if the analysis file should retain
@@ -237,11 +247,21 @@ By default, cohort plots contain:
 - a dotted industry-composition-adjusted index.
 
 The adjusted series computes the outcome within each NAICS stratum and then
-averages strata with equal weights, restricting attention to strata observed
-in every plotted cohort. Missing NAICS values form their own stratum because
-missingness is strongly time-patterned in this corpus. Use
-`--no-industry-adjusted` to omit the index or `--hide-no-naics` to omit the
+averages strata with equal weights, restricting attention to strata observed in
+every plotted cohort. A sector absent from one cohort is folded into `Other
+sectors` rather than dropped, so its CBAs stay in the index at a coarser grain
+and the index survives a thin end cohort; every figure's caption names the
+strata used and the sectors folded. Missing NAICS values form their own stratum,
+never folded into the remainder, because missingness is time-patterned in this
+corpus. Use `--no-industry-adjusted` to omit the index, `--min-sector-docs` to
+change how readily a sector is named, or `--hide-no-naics` to omit the
 missing-NAICS row from industry plots.
+
+Since the harmonized metadata resolves a NAICS code for many contracts the old
+DOL list left blank, the strata are finer than before and the no-NAICS stratum
+is much smaller. That makes the thinnest cohort the binding constraint on the
+index: raise `--min-group-docs` to drop a sparse end cohort and recover more
+named strata.
 
 Important interpretation limits:
 
@@ -265,8 +285,15 @@ change the plotted sample and should be reported with results.
 
 Provision definitions live in `pipeline/provisions/*.yaml` and contain:
 
-1. the extraction definition and prompt; and
-2. optionally, a hierarchical `subtype_taxonomy` used by stage 3.
+1. `clause_type`, the snake_case name of the clause class, which must match the
+   filename stem;
+2. `clause_description`, a short description of what the class covers; and
+3. optionally, a hierarchical `subtype_taxonomy` used by stage 3.
+
+The extraction prompt itself is not in the YAML. It is built around
+`clause_type` and `clause_description` by `_prompt_description` in
+`pipeline/stg_02_extract/structure_provision.py`, so every provision asks for
+the same attributes (`context` and `beneficiary`) in the same wording.
 
 The included specifications are:
 
@@ -330,8 +357,7 @@ uv run pytest -q
 ```
 
 Tests use temporary cache trees and mocked model servers, so they require no
-GPU or network access. At present, five stage-2 tests are known to assert an
-older chat-template setting and may fail until their expectations are updated.
+GPU or network access.
 
 ## Repository map
 

@@ -123,7 +123,7 @@ class MinCbasCliTests(unittest.TestCase):
         return [
             "--source",
             SOURCE,
-            "--provision-type",
+            "--clause-type",
             PROVISION_TYPE,
             "--level",
             "2",
@@ -215,9 +215,9 @@ class MinCbasCliTests(unittest.TestCase):
             styled: list[Sequence[str]] = []
             original = plot_classifications.subtype_style
 
-            def spy(subtypes, provision_type):
+            def spy(subtypes, clause_type):
                 styled.append(list(subtypes))
-                return original(subtypes, provision_type)
+                return original(subtypes, clause_type)
 
             with patch.object(plot_classifications, "subtype_style", spy):
                 with redirect_stdout(StringIO()):
@@ -314,7 +314,7 @@ class BeneficiaryFigureTests(unittest.TestCase):
 
         figure = plot_classifications.plot_beneficiary_by_period(
             documents, ("employer", "worker", "unclear"), colors, markers, labels,
-            min_docs=1, provision_type=PROVISION_TYPE,
+            min_docs=1, clause_type=PROVISION_TYPE,
         )
 
         ax = figure.axes[0]
@@ -332,7 +332,7 @@ class BeneficiaryFigureTests(unittest.TestCase):
             with redirect_stdout(StringIO()):
                 figure = plot_classifications.plot_beneficiary_by_sector(
                     documents, ("employer", "worker", "unclear"), colors, labels,
-                    min_docs=1, provision_type=PROVISION_TYPE,
+                    min_docs=1, clause_type=PROVISION_TYPE,
                     show_unknown=show_unknown,
                 )
             return [t.get_text() for t in figure.axes[0].get_yticklabels()]
@@ -357,7 +357,7 @@ class BeneficiaryFigureTests(unittest.TestCase):
 
         figure = plot_classifications.plot_beneficiary_by_sector(
             documents, ("employer", "worker", "unclear"), colors, labels,
-            min_docs=10, provision_type=PROVISION_TYPE,
+            min_docs=10, clause_type=PROVISION_TYPE,
         )
 
         ax = figure.axes[0]
@@ -537,7 +537,7 @@ class AdjustedLineOnFiguresTests(unittest.TestCase):
             return plot_classifications.plot_beneficiary_by_period(
                 self._documents(), ("employer", "worker", "unclear"),
                 colors, markers, labels, min_docs=1,
-                provision_type=PROVISION_TYPE, **kwargs
+                clause_type=PROVISION_TYPE, **kwargs
             )
 
     def test_one_dotted_line_per_series_plus_two_style_legend_entries(self) -> None:
@@ -566,7 +566,7 @@ class AdjustedLineOnFiguresTests(unittest.TestCase):
         with redirect_stdout(StringIO()):
             figure = plot_classifications.plot_by_period(
                 self._documents(), subtypes, colors, markers, labels,
-                min_docs=1, provision_type=PROVISION_TYPE,
+                min_docs=1, clause_type=PROVISION_TYPE,
                 industry_adjusted=True, min_sector_docs=1,
             )
 
@@ -574,12 +574,93 @@ class AdjustedLineOnFiguresTests(unittest.TestCase):
         self.assertEqual(len(self._dotted(figure)), 2)
 
 
+class PoolNonSpanningTests(unittest.TestCase):
+    """The index needs strata present in every cohort; folding beats discarding."""
+
+    COHORTS = ["2000-2004", "2005-2009"]
+
+    @staticmethod
+    def _frame(rows) -> pd.DataFrame:
+        frame = pd.DataFrame(rows, columns=["sector_group", "expire_period"])
+        frame["document_id"] = [f"document_{i}" for i in range(len(frame))]
+        return frame
+
+    def _pool(self, rows, **kwargs):
+        return plot_classifications._pool_non_spanning(
+            self._frame(rows), "expire_period", self.COHORTS, 1, **kwargs
+        )
+
+    def test_a_stratum_missing_a_cohort_joins_the_remainder(self) -> None:
+        frame, folded = self._pool(
+            [("Manufacturing", c) for c in self.COHORTS]
+            + [("Retail trade", "2000-2004")]
+        )
+
+        self.assertEqual(folded, ["Retail trade"])
+        groups = set(frame["sector_group"])
+        self.assertEqual(
+            groups, {"Manufacturing", plot_classifications.OTHER_SECTOR_LABEL}
+        )
+        # Folded, not dropped: the row is still in the sample.
+        self.assertEqual(len(frame), 3)
+
+    def test_a_stratum_spanning_every_cohort_is_untouched(self) -> None:
+        rows = [(sector, c) for sector in ("Manufacturing", "Retail trade")
+                for c in self.COHORTS]
+        frame, folded = self._pool(rows)
+
+        self.assertEqual(folded, [])
+        self.assertEqual(set(frame["sector_group"]), {"Manufacturing", "Retail trade"})
+
+    def test_the_no_naics_bucket_is_never_folded(self) -> None:
+        """Pooling it in would make the remainder mean "no industry" as well."""
+
+        frame, folded = self._pool(
+            [("Manufacturing", c) for c in self.COHORTS]
+            + [(plot_classifications.UNKNOWN_SECTOR, "2000-2004")]
+        )
+
+        self.assertEqual(folded, [])
+        self.assertIn(plot_classifications.UNKNOWN_SECTOR, set(frame["sector_group"]))
+
+    def test_folding_keeps_the_index_estimable_where_it_would_collapse(self) -> None:
+        """One spanning sector plus thin ones: without folding there is no index."""
+
+        rows = (
+            [("Manufacturing", c) for c in self.COHORTS]
+            + [("Retail trade", "2000-2004"), ("Construction", "2005-2009")]
+        )
+        series = ["employer", "worker", "unclear"]
+
+        def adjust(frame):
+            frame = frame.copy()
+            frame["n_provisions"] = 1
+            frame["pct_beneficiary_employer"] = 50.0
+            frame["pct_beneficiary_worker"] = 50.0
+            frame["pct_beneficiary_unclear"] = 0.0
+            return plot_classifications.composition_adjusted(
+                frame, "expire_period", series,
+                plot_classifications._beneficiary_means_for,
+            )
+
+        _, _, used_raw, _ = adjust(self._frame(rows))
+        self.assertEqual(used_raw, ["Manufacturing"])
+
+        folded_frame, folded = self._pool(rows)
+        _, _, used, _ = adjust(folded_frame)
+        self.assertEqual(sorted(folded), ["Construction", "Retail trade"])
+        self.assertEqual(
+            sorted(used),
+            sorted(["Manufacturing", plot_classifications.OTHER_SECTOR_LABEL]),
+        )
+
+
 class BeneficiaryMainCliTests(unittest.TestCase):
     def _argv(self, tmp_dir: Path) -> list[str]:
         return [
             "--source",
             SOURCE,
-            "--provision-type",
+            "--clause-type",
             PROVISION_TYPE,
             "--level",
             "1",
@@ -627,7 +708,7 @@ class LevelSelectionTests(unittest.TestCase):
         return [
             "--source",
             SOURCE,
-            "--provision-type",
+            "--clause-type",
             PROVISION_TYPE,
             "--level",
             str(level),

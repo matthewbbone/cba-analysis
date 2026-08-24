@@ -15,8 +15,8 @@ class Stage02ProvisionTests(unittest.TestCase):
     @staticmethod
     def _definition() -> dict[str, object]:
         return {
-            "provision_type": "safety_rule",
-            "extraction_prompt": "Extract mandatory workplace safety rules.",
+            "clause_type": "safety_rule",
+            "clause_description": "Mandatory workplace safety rules.",
             "N_EXTRACTION_PASSES": 2,
             "LANGEXTRACT_MAX_WORKERS": 3,
             "LANGEXTRACT_BATCH_LENGTH": 4,
@@ -42,19 +42,21 @@ class Stage02ProvisionTests(unittest.TestCase):
         # own values rather than one shared number.
         for name, prompt_fragment, passes, char_buffer in (
             ("wage_table", "base-wage", 5, 10_000),
-            ("technology", "new technology", 3, 5_000),
+            ("technology", "new technology", 2, 5_000),
         ):
             with self.subTest(name=name):
                 provision = load_provision(name)
 
-                self.assertEqual(provision.provision_type, name)
+                self.assertEqual(provision.clause_type, name)
                 self.assertIn(prompt_fragment, provision.prompt_description.lower())
                 self.assertIn(
-                    f'Use "{name}" as extraction_class',
+                    f"extracting {name} class clauses",
                     provision.prompt_description,
                 )
                 self.assertIn("context", provision.prompt_description)
-                self.assertIn("null", provision.prompt_description)
+                # Every beneficiary the schema allows is described in the prompt.
+                for label in structure_provision.BENEFICIARY_OPTIONS:
+                    self.assertIn(f"- {label}:", provision.prompt_description)
                 self.assertEqual(provision.extraction_passes, passes)
                 self.assertEqual(provision.langextract_max_workers, 10)
                 self.assertEqual(provision.langextract_batch_length, 10)
@@ -63,10 +65,10 @@ class Stage02ProvisionTests(unittest.TestCase):
     def test_loads_all_configured_values(self) -> None:
         provision = self._load_temp(self._definition())
 
-        self.assertEqual(provision.provision_type, "safety_rule")
+        self.assertEqual(provision.clause_type, "safety_rule")
         self.assertTrue(
-            provision.prompt_description.startswith(
-                "Extract mandatory workplace safety rules."
+            provision.prompt_description.endswith(
+                "safety_rule Description: Mandatory workplace safety rules."
             )
         )
         self.assertEqual(provision.extraction_passes, 2)
@@ -78,7 +80,7 @@ class Stage02ProvisionTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             load_provision("../safety_rule")
 
-        definition = {**self._definition(), "provision_type": "different_rule"}
+        definition = {**self._definition(), "clause_type": "different_rule"}
         with self.assertRaises(ValueError):
             self._load_temp(definition)
 
@@ -94,7 +96,7 @@ class Stage02ProvisionTests(unittest.TestCase):
         with TemporaryDirectory() as tmp_dir:
             provisions_dir = Path(tmp_dir)
             (provisions_dir / "safety_rule.yaml").write_text(
-                "provision_type: [unterminated", encoding="utf-8"
+                "clause_type: [unterminated", encoding="utf-8"
             )
             with patch.object(structure_provision, "PROVISIONS_DIR", provisions_dir):
                 with self.assertRaisesRegex(ValueError, "invalid YAML"):
@@ -117,9 +119,9 @@ class Stage02ProvisionTests(unittest.TestCase):
 
     def test_rejects_blank_or_wrong_typed_text_fields(self) -> None:
         invalid_values = (
-            ("blank prompt", "extraction_prompt", "   "),
-            ("non-string prompt", "extraction_prompt", ["safety rules"]),
-            ("non-string provision type", "provision_type", 1),
+            ("blank description", "clause_description", "   "),
+            ("non-string description", "clause_description", ["safety rules"]),
+            ("non-string clause type", "clause_type", 1),
         )
         for label, key, value in invalid_values:
             with self.subTest(label=label):
@@ -161,13 +163,13 @@ class Stage02DiscoveryTests(unittest.TestCase):
                 output_root=output_root,
                 ocr_model_name="ocr/model",
                 model_name="extract/model",
-                provision_type="safety_rule",
+                clause_type="safety_rule",
                 source_filter="source_a",
             )
 
         self.assertEqual(len(jobs), 1)
         self.assertEqual(jobs[0].document_id, "doc_1")
-        self.assertEqual(jobs[0].provision_type, "safety_rule")
+        self.assertEqual(jobs[0].clause_type, "safety_rule")
         self.assertEqual(jobs[0].input_path, full_path)
         self.assertEqual(
             jobs[0].output_path,
@@ -196,7 +198,7 @@ class Stage02DiscoveryTests(unittest.TestCase):
                 output_root=output_root,
                 ocr_model_name="ATH-MaaS/OvisOCR2",
                 model_name="extract/model",
-                provision_type="safety_rule",
+                clause_type="safety_rule",
                 source_filter="source_a",
                 document_id_filter=["doc_3", "doc_1"],
             )
@@ -220,7 +222,7 @@ class Stage02ExtractionTests(unittest.TestCase):
                 document_id="doc",
                 ocr_model_name="ocr/model",
                 model_name="extract/model",
-                provision_type="safety_rule",
+                clause_type="safety_rule",
                 input_path=input_path,
                 output_path=output_path,
             )
@@ -236,7 +238,7 @@ class Stage02ExtractionTests(unittest.TestCase):
                         "document_id": job.document_id,
                         "ocr_model_name": job.ocr_model_name,
                         "model_name": job.model_name,
-                        "extraction_class": job.provision_type,
+                        "extraction_class": job.clause_type,
                         "extraction_text": "rule one",
                         "attributes": {"context": "Applies to operators."},
                         "span_start": 0,
@@ -248,7 +250,7 @@ class Stage02ExtractionTests(unittest.TestCase):
                         "document_id": job.document_id,
                         "ocr_model_name": job.ocr_model_name,
                         "model_name": job.model_name,
-                        "extraction_class": job.provision_type,
+                        "extraction_class": job.clause_type,
                         "extraction_text": "rule two",
                         "attributes": {"context": None},
                         "span_start": 9,
@@ -290,7 +292,7 @@ class Stage02ExtractionTests(unittest.TestCase):
                 document_id="doc",
                 ocr_model_name="ocr/model",
                 model_name="extract/model",
-                provision_type="safety_rule",
+                clause_type="safety_rule",
                 input_path=input_path,
                 output_path=output_path,
             )
@@ -312,7 +314,7 @@ class Stage02ExtractionTests(unittest.TestCase):
                     document_id=f"doc_{index}",
                     ocr_model_name="ocr/model",
                     model_name="extract/model",
-                    provision_type="safety_rule",
+                    clause_type="safety_rule",
                     input_path=root / f"doc_{index}.txt",
                     output_path=root / f"doc_{index}.jsonl",
                 )
@@ -343,7 +345,7 @@ class Stage02RecordTests(unittest.TestCase):
             document_id="doc",
             ocr_model_name="ocr/model",
             model_name="extract/model",
-            provision_type="safety_rule",
+            clause_type="safety_rule",
             input_path=Path("full.txt"),
             output_path=Path("safety_rule.jsonl"),
         )
@@ -352,7 +354,10 @@ class Stage02RecordTests(unittest.TestCase):
         extraction = SimpleNamespace(
             extraction_class="safety_rule",
             extraction_text="Safety rule text",
-            attributes={"context": "  Applies to night-shift employees.  "},
+            attributes={
+                "context": "  Applies to night-shift employees.  ",
+                "beneficiary": "worker",
+            },
             char_interval=SimpleNamespace(start_pos=5, end_pos=21),
             alignment_status=SimpleNamespace(value="match_exact"),
         )
@@ -364,18 +369,20 @@ class Stage02RecordTests(unittest.TestCase):
         self.assertEqual(record["extraction_text"], "Safety rule text")
         self.assertEqual(
             record["attributes"],
-            {"context": "Applies to night-shift employees."},
+            {"context": "Applies to night-shift employees.", "beneficiary": "worker"},
         )
         self.assertEqual(record["span_start"], 5)
         self.assertEqual(record["span_end"], 21)
 
-    def test_extraction_to_record_normalizes_invalid_context_to_null(self) -> None:
+    def test_extraction_to_record_normalizes_invalid_attributes(self) -> None:
         attributes_values = [
             None,
             {},
             {"context": None},
             {"context": "  "},
             {"context": 3},
+            {"context": None, "beneficiary": "workers"},
+            {"context": None, "beneficiary": 3},
         ]
 
         for attributes in attributes_values:
@@ -391,7 +398,10 @@ class Stage02RecordTests(unittest.TestCase):
                 record = runner.extraction_to_record(extraction, self._job())
 
                 self.assertIsNotNone(record)
-                self.assertEqual(record["attributes"], {"context": None})
+                self.assertEqual(
+                    record["attributes"],
+                    {"context": None, "beneficiary": "unclear"},
+                )
                 self.assertEqual(record["grounding_status"], "unknown")
 
     def test_extraction_to_record_drops_other_classes_and_ungrounded_text(self) -> None:
@@ -417,7 +427,7 @@ class Stage02RecordTests(unittest.TestCase):
 class Stage02LangExtractTests(unittest.TestCase):
     def test_factory_uses_explicit_schema_and_provision_parameters(self) -> None:
         provision = ProvisionSpec(
-            provision_type="safety_rule",
+            clause_type="safety_rule",
             prompt_description="configured prompt",
             extraction_passes=2,
             langextract_max_workers=3,
@@ -429,7 +439,7 @@ class Stage02LangExtractTests(unittest.TestCase):
             document_id="doc",
             ocr_model_name="ocr/model",
             model_name="extract/model",
-            provision_type="safety_rule",
+            clause_type="safety_rule",
             input_path=Path("full.txt"),
             output_path=Path("safety_rule.jsonl"),
         )
@@ -471,11 +481,15 @@ class Stage02LangExtractTests(unittest.TestCase):
         attributes_schema = extraction_item["properties"][
             "safety_rule_attributes"
         ]
-        self.assertEqual(attributes_schema["required"], ["context"])
+        self.assertEqual(attributes_schema["required"], ["context", "beneficiary"])
         self.assertFalse(attributes_schema["additionalProperties"])
         self.assertEqual(
             attributes_schema["properties"]["context"],
             {"anyOf": [{"type": "string"}, {"type": "null"}]},
+        )
+        self.assertEqual(
+            attributes_schema["properties"]["beneficiary"],
+            {"type": "string", "enum": ["worker", "employer", "unclear"]},
         )
 
 
@@ -485,7 +499,7 @@ class Stage02ReasoningServeArgsTests(unittest.TestCase):
             runner.reasoning_serve_args(runner.DEFAULT_MODEL_NAME, None),
             [
                 "--default-chat-template-kwargs",
-                '{"enable_thinking":true}',
+                '{"enable_thinking":true,"preserve_thinking":false}',
                 "--reasoning-parser",
                 "gemma4",
             ],
@@ -496,7 +510,7 @@ class Stage02ReasoningServeArgsTests(unittest.TestCase):
             runner.reasoning_serve_args("custom/model", "custom_parser"),
             [
                 "--default-chat-template-kwargs",
-                '{"enable_thinking":true}',
+                '{"enable_thinking":true,"preserve_thinking":false}',
                 "--reasoning-parser",
                 "custom_parser",
             ],
@@ -507,7 +521,7 @@ class Stage02ReasoningServeArgsTests(unittest.TestCase):
             runner.reasoning_serve_args("Qwen/Qwen3.6-35B-A3B-FP8", None),
             [
                 "--default-chat-template-kwargs",
-                '{"enable_thinking":true}',
+                '{"enable_thinking":true,"preserve_thinking":false}',
                 "--reasoning-parser",
                 "qwen3",
             ],
@@ -518,7 +532,7 @@ class Stage02ReasoningServeArgsTests(unittest.TestCase):
             runner.reasoning_serve_args("custom/model", None),
             [
                 "--default-chat-template-kwargs",
-                '{"enable_thinking":true}',
+                '{"enable_thinking":true,"preserve_thinking":false}',
             ],
         )
 
@@ -608,7 +622,7 @@ class Stage02CliTests(unittest.TestCase):
                         "document_id": job.document_id,
                         "ocr_model_name": job.ocr_model_name,
                         "model_name": job.model_name,
-                        "extraction_class": job.provision_type,
+                        "extraction_class": job.clause_type,
                         "extraction_text": "table",
                         "attributes": {"context": None},
                         "span_start": 0,
@@ -662,11 +676,11 @@ class Stage02CliTests(unittest.TestCase):
             server_kwargs[0]["extra_serve_args"],
             [
                 "--default-chat-template-kwargs",
-                '{"enable_thinking":true}',
+                '{"enable_thinking":true,"preserve_thinking":false}',
             ],
         )
         self.assertEqual(
-            extractor_kwargs[0]["provision"].provision_type, "wage_table"
+            extractor_kwargs[0]["provision"].clause_type, "wage_table"
         )
 
 
@@ -678,7 +692,7 @@ class Stage02SpanReconcileTests(unittest.TestCase):
             document_id="doc",
             ocr_model_name="ocr/model",
             model_name="extract/model",
-            provision_type="safety_rule",
+            clause_type="safety_rule",
             input_path=Path("full.txt"),
             output_path=Path("safety_rule.jsonl"),
         )

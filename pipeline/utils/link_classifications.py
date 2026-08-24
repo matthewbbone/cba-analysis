@@ -1,8 +1,15 @@
-"""Link stage-03 classifications to the DOL CBA metadata list.
+"""Link stage-03 classifications to the harmonized CBA metadata.
 
-Reads every ``<document_id>/<provision_type>.jsonl`` under a stage-03
-classification directory and joins it to ``meta_data/CBAList_with_statefips.dta``
-on ``document_id == f"document_{cbafile}"``, writing two CSV tables.
+Reads every ``<document_id>/<clause_type>.jsonl`` under a stage-03
+classification directory and joins it to
+``meta_data/harmonized_cba_metadata.csv``, writing two CSV tables.
+
+The harmonized list covers all three archives, so the join is keyed on the
+archive as well as the document: ``--source`` names a cache folder, which maps
+to a ``source`` value in the metadata (``dol_archive`` -> ``DoL``), and within
+that archive a document matches the row whose ``filename`` stem equals its
+document ID.  Filename stems collide across archives, which is why the source
+is part of the key rather than a column to check afterwards.
 
 The document table is the primary output: one row per classified document,
 including the documents where extraction found nothing.  Its ``has_<subtype>``
@@ -15,7 +22,7 @@ mean-of-shares figure averages across CBAs.
 Run from anywhere in the repository::
 
     uv run python pipeline/utils/link_classifications.py
-    uv run python pipeline/utils/link_classifications.py --provision-type technology
+    uv run python pipeline/utils/link_classifications.py --clause-type technology
 """
 
 from __future__ import annotations
@@ -24,7 +31,6 @@ import argparse
 from collections.abc import Mapping, Sequence
 import json
 from pathlib import Path
-import re
 import sys
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -57,18 +63,27 @@ CLASSIFY_STAGE_NAME = "stg_03_classify"
 DEFAULT_SOURCE = "dol_archive"
 DEFAULT_MODEL_NAME = "Qwen/Qwen3.8-27B-FP8"
 DEFAULT_PROVISION_TYPE = "technology"
-DEFAULT_METADATA = PROJECT_ROOT / "meta_data" / "CBAList_with_statefips.dta"
+DEFAULT_METADATA = PROJECT_ROOT / "meta_data" / "harmonized_cba_metadata.csv"
 DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "figures"
 
-# `expire_year` carries sentinels (1800) and stray typos (2373, 9211); anything
-# outside this window is treated as unknown rather than plotted.
-MIN_EXPIRE_YEAR = 1980
-MAX_EXPIRE_YEAR = 2035
+# Cache source folder -> the `source` value the harmonized metadata files its
+# rows under.  A cache folder outside this map is looked up verbatim.
+SOURCE_ALIASES: Mapping[str, str] = {
+    "dol_archive": "DoL",
+    "cornell_dol": "Cornell_DoL",
+    "cornell_retail_educ": "Cornell_RetailEd",
+}
+
+# The dates carry sentinels (an 1800 expiration on 32 DOL rows); anything
+# outside this window is treated as unknown rather than plotted.  The floor is
+# 1900 because the Cornell archives genuinely reach back to 1907.
+MIN_YEAR = 1900
+MAX_YEAR = 2035
 PERIOD_YEARS = 5
 
-# The metadata list carries a NAICS code but no industry name.  Two-digit
-# prefixes are the NAICS sector, and manufacturing, retail, and transportation
-# each span several prefixes.
+# The metadata list carries a NAICS code, and an industry name for the Cornell
+# rows only.  Two-digit prefixes are the NAICS sector, and manufacturing,
+# retail, and transportation each span several prefixes.
 NAICS_SECTORS: Mapping[str, str] = {
     "11": "Agriculture, forestry, fishing and hunting",
     "21": "Mining, quarrying, oil and gas",
@@ -97,20 +112,55 @@ NAICS_SECTORS: Mapping[str, str] = {
 }
 UNKNOWN_SECTOR = "Unknown"
 
+# Columns carried from the metadata onto both output tables, in output order.
 METADATA_COLUMNS = [
-    "cbafile",
-    "employername",
+    "cba_id",
+    "metadata_source",
+    "employer",
     "union",
-    "location",
-    "expirationdate",
-    "expire_year",
-    "expire_period",
+    "state_abbrev",
+    "state_name",
+    "state_fips",
+    "multi_state",
+    "ownership",
     "naics",
     "naics_sector",
+    "naics_description",
     "sector_label",
-    "wrkrs",
-    "ownership",
+    "n_workers",
+    "effective_date",
+    "expiration_date",
+    "effective_year",
+    "expire_year",
+    "expire_period",
+    "contract_year",
+    "contract_period",
+    "also_in_dol",
+    "also_in_cornell",
+    "mistral_naics",
+    "mistral_n_occupations",
+    "mistral_mean_wage",
+    "mistral_median_wage",
+    "mistral_step_up",
 ]
+
+# Counts and codes the harmonized CSV stores as text; `state_fips` is left out
+# on purpose, its leading zero ("01" for Alabama) being part of the code.
+INTEGER_METADATA_COLUMNS = (
+    "n_workers",
+    "mistral_naics",
+    "mistral_n_occupations",
+)
+FLOAT_METADATA_COLUMNS = (
+    "mistral_mean_wage",
+    "mistral_median_wage",
+)
+# 0/1 provenance flags, populated on every row.
+FLAG_METADATA_COLUMNS = (
+    "multi_state",
+    "also_in_dol",
+    "also_in_cornell",
+)
 PROVISION_COLUMNS = [
     "document_id",
     "source",
@@ -146,12 +196,12 @@ def discover_document_ids(classify_dir: Path) -> list[str]:
     )
 
 
-def load_classifications(classify_dir: Path, provision_type: str) -> pd.DataFrame:
+def load_classifications(classify_dir: Path, clause_type: str) -> pd.DataFrame:
     """Read every classification record under ``classify_dir``."""
 
     records: list[dict[str, object]] = []
     for document_id in discover_document_ids(classify_dir):
-        path = classify_dir / document_id / f"{provision_type}.jsonl"
+        path = classify_dir / document_id / f"{clause_type}.jsonl"
         if not path.is_file():
             continue
         with path.open("r", encoding="utf-8") as handle:
@@ -165,87 +215,105 @@ def load_classifications(classify_dir: Path, provision_type: str) -> pd.DataFram
     return pd.DataFrame.from_records(records)
 
 
-def repair_trailing_columns(
-    naics: str, wrkrs: str, type_: str
-) -> tuple[str, str, str]:
-    """Undo the left-shift in the metadata list's last three columns.
-
-    Missing values were dropped rather than blanked when the list was built, so
-    the present values are packed to the left: a row with no NAICS code reads
-    ``naics="PRIVATE"``, and one with no worker count reads ``wrkrs="PRIVATE"``.
-    Re-anchor on the trailing PRIVATE/PUBLIC token instead of trusting position.
-    """
-
-    values = [value.strip() for value in (naics, wrkrs, type_) if value.strip()]
-    ownership = values.pop() if values else ""
-    if len(values) == 2:
-        return values[0], values[1], ownership
-    if len(values) == 1:
-        # A lone survivor is ambiguous; only a full six-digit code is a NAICS.
-        if re.fullmatch(r"\d{6}", values[0]):
-            return values[0], "", ownership
-        return "", values[0], ownership
-    return "", "", ownership
-
-
-def sector_label(naics: str) -> str:
+def sector_label(naics: object) -> str:
     """Return the NAICS sector name for a code, or a readable placeholder."""
 
-    code = str(naics).strip()[:2]
+    code = "" if pd.isna(naics) else str(naics).strip()[:2]
     if not code:
         return UNKNOWN_SECTOR
     return NAICS_SECTORS.get(code, f"NAICS {code}")
 
 
-def _expire_period(year: float) -> str:
+def _period(year: float) -> str:
     if pd.isna(year):
         return ""
     start = int(year) // PERIOD_YEARS * PERIOD_YEARS
     return f"{start}-{start + PERIOD_YEARS - 1}"
 
 
-def load_metadata(path: Path) -> pd.DataFrame:
-    """Load the CBA list, repair the shifted columns, and key it by document ID."""
+def _year(dates: pd.Series) -> pd.Series:
+    """Return the year of each ISO date, blanking the out-of-window sentinels."""
+
+    year = pd.to_datetime(dates, errors="coerce", format="ISO8601").dt.year
+    return year.where(year.between(MIN_YEAR, MAX_YEAR)).astype("Float64")
+
+
+def metadata_source(source: str) -> str:
+    """Return the metadata `source` value a cache source folder files under."""
+
+    return SOURCE_ALIASES.get(source, source)
+
+
+def load_metadata(path: Path, source: str | None = None) -> pd.DataFrame:
+    """Load the harmonized CBA metadata and key it by document ID.
+
+    ``source`` is a cache source folder; when given, only that archive's rows
+    are kept.  Document IDs are the OCR-stage folder names, which are the
+    filename stems -- unique within an archive but not across them, so
+    restricting to one archive is what makes the key sound.
+    """
 
     if not path.is_file():
         raise SystemExit(f"metadata file not found: {path}")
-    # CSV support keeps the tests free of a Stata dependency.
-    frame = pd.read_csv(path, dtype=str) if path.suffix == ".csv" else pd.read_stata(path)
+    if path.suffix != ".csv":
+        # The harmonized list is a CSV.  The old Stata lists it replaced carry
+        # none of the columns below, so reading one would fail obscurely later.
+        raise SystemExit(f"metadata must be a CSV, got {path.suffix or 'no'} suffix: {path}")
+    frame = pd.read_csv(path, dtype=str)
 
-    # Normalise every non-numeric column to stripped text.  Stata writes missing
-    # strings as "", but read_csv yields NaN, and str(NaN) == "nan" would be
-    # mistaken for a real value by the shift repair below.
     for column in frame.columns:
-        if pd.api.types.is_numeric_dtype(frame[column]):
-            continue
-        values = frame[column]
+        frame[column] = frame[column].str.strip().replace("", pd.NA)
+
+    for column in ("cba_id", "source", "filename"):
+        if column not in frame.columns:
+            raise SystemExit(
+                f"{path} carries no {column!r} column; it does not look like "
+                "meta_data/harmonized_cba_metadata.csv"
+            )
+
+    if source is not None:
+        wanted = metadata_source(source)
+        selected = frame[frame["source"] == wanted]
+        if selected.empty:
+            print(
+                f"  [warn] no metadata row carries source {wanted!r}; joining "
+                f"against all {len(frame)} row(s), whose filename stems are not "
+                "unique across archives"
+            )
+        else:
+            frame = selected
+
+    named = frame["filename"].notna()
+    if not named.all():
+        print(f"  [warn] dropping {int((~named).sum())} metadata row(s) with no filename")
+    frame = frame[named].copy()
+    frame["document_id"] = frame["filename"].map(lambda name: Path(name).stem)
+
+    for column in INTEGER_METADATA_COLUMNS:
+        # Written as floats ("608.0", a NAICS of "332999.0"), so round-trip
+        # through a float before narrowing to a nullable integer.
         frame[column] = (
-            values.astype(object).where(values.notna(), "").astype(str).str.strip()
+            pd.to_numeric(frame.get(column), errors="coerce").round().astype("Int64")
         )
+    for column in FLOAT_METADATA_COLUMNS:
+        frame[column] = pd.to_numeric(frame.get(column), errors="coerce")
+    for column in FLAG_METADATA_COLUMNS:
+        flag = pd.to_numeric(frame.get(column), errors="coerce")
+        frame[column] = flag.eq(1).where(flag.notna()).astype("boolean")
 
-    repaired = frame.apply(
-        lambda row: repair_trailing_columns(
-            str(row.get("naics", "")),
-            str(row.get("wrkrs", "")),
-            str(row.get("type", "")),
-        ),
-        axis=1,
-        result_type="expand",
-    )
-    frame["naics"], frame["wrkrs"], frame["ownership"] = (
-        repaired[0],
-        repaired[1],
-        repaired[2],
-    )
-    frame = frame.drop(columns=["type"], errors="ignore")
+    # `ownership` keeps the old name for the Private/Public split: `sector` in
+    # the harmonized file means ownership, not the NAICS sector below it.
+    frame["ownership"] = frame.get("sector")
 
-    cbafile = pd.to_numeric(frame["cbafile"], errors="coerce")
-    frame["document_id"] = "document_" + cbafile.astype("Int64").astype(str)
-    frame = frame[cbafile.notna()]
+    frame["effective_year"] = _year(frame["effective_date"])
+    frame["expire_year"] = _year(frame["expiration_date"])
+    # Only the DOL rows carry an expiration, so the cohort variable to prefer
+    # across archives is the effective year -- itself only a year for the DOL
+    # rows, whose effective_date is January 1st of the extracted contract year.
+    frame["contract_year"] = frame["effective_year"].fillna(frame["expire_year"])
+    frame["expire_period"] = frame["expire_year"].map(_period)
+    frame["contract_period"] = frame["contract_year"].map(_period)
 
-    year = pd.to_numeric(frame["expire_year"], errors="coerce")
-    frame["expire_year"] = year.where(year.between(MIN_EXPIRE_YEAR, MAX_EXPIRE_YEAR))
-    frame["expire_period"] = frame["expire_year"].map(_expire_period)
     frame["naics_sector"] = frame["naics"].str[:2]
     frame["sector_label"] = frame["naics"].map(sector_label)
 
@@ -265,7 +333,7 @@ def _metadata_columns(metadata: pd.DataFrame) -> pd.DataFrame:
     return metadata[columns]
 
 
-def table_prefix(provision_type: str, source: str, level: int) -> str:
+def table_prefix(clause_type: str, source: str, level: int) -> str:
     """Filename stem for one provision type, source and taxonomy level.
 
     The level is part of the name so tables built at different levels sit side
@@ -273,7 +341,7 @@ def table_prefix(provision_type: str, source: str, level: int) -> str:
     key off different labels and are not interchangeable.
     """
 
-    return f"{provision_type}_{source}_l{level}"
+    return f"{clause_type}_{source}_l{level}"
 
 
 def select_level(provisions: pd.DataFrame, level: int) -> tuple[pd.DataFrame, int]:
@@ -323,7 +391,7 @@ def build_provision_table(
     frame = frame[columns]
 
     merged = frame.merge(_metadata_columns(metadata), on="document_id", how="left")
-    merged.insert(1, "meta_matched", merged["cbafile"].notna())
+    merged.insert(1, "meta_matched", merged["cba_id"].notna())
     return merged
 
 
@@ -349,7 +417,7 @@ def build_document_table(
 
     frame = pd.DataFrame({"document_id": list(document_ids)})
     merged = frame.merge(_metadata_columns(metadata), on="document_id", how="left")
-    merged.insert(1, "meta_matched", merged["cbafile"].notna())
+    merged.insert(1, "meta_matched", merged["cba_id"].notna())
 
     if provisions.empty:
         counts = pd.DataFrame(index=frame["document_id"], columns=list(subtypes))
@@ -437,7 +505,10 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     parser.add_argument(
         "--source",
         default=DEFAULT_SOURCE,
-        help=f"cache source folder (default: {DEFAULT_SOURCE})",
+        help=(
+            "cache source folder, which also selects the archive to join "
+            f"against in the metadata (default: {DEFAULT_SOURCE})"
+        ),
     )
     parser.add_argument(
         "--model-name",
@@ -445,7 +516,7 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         help=f"classification model (default: {DEFAULT_MODEL_NAME})",
     )
     parser.add_argument(
-        "--provision-type",
+        "--clause-type",
         default=DEFAULT_PROVISION_TYPE,
         help=f"provision type to link (default: {DEFAULT_PROVISION_TYPE})",
     )
@@ -492,15 +563,15 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
 def main(argv: Sequence[str] | None = None) -> int:
     args = parse_args(argv)
 
-    spec = load_provision(args.provision_type)
+    spec = load_provision(args.clause_type)
     if not spec.subtype_taxonomy:
-        raise SystemExit(f"provision {args.provision_type} declares no subtypes")
+        raise SystemExit(f"provision {args.clause_type} declares no subtypes")
     if args.level < 1:
         raise SystemExit("--level must be at least 1")
     available = taxonomy_depth(spec.subtype_taxonomy)
     if args.level > available:
         raise SystemExit(
-            f"--level {args.level} exceeds the {args.provision_type} taxonomy, "
+            f"--level {args.level} exceeds the {args.clause_type} taxonomy, "
             f"which declares {available} level(s)"
         )
     # "other" is offered at every level by stage 3, so it is a label that can
@@ -518,11 +589,12 @@ def main(argv: Sequence[str] | None = None) -> int:
         / path_safe_model_name(args.model_name)
     )
     print(f"reading {classify_dir}")
+    print(f"joining against metadata source {metadata_source(args.source)!r}")
 
     document_ids = discover_document_ids(classify_dir)
-    provisions = load_classifications(classify_dir, args.provision_type)
+    provisions = load_classifications(classify_dir, args.clause_type)
     provisions, unlabelled = select_level(provisions, args.level)
-    metadata = load_metadata(args.metadata.expanduser())
+    metadata = load_metadata(args.metadata.expanduser(), args.source)
 
     documents = build_document_table(
         document_ids, provisions, metadata, subtypes, BENEFICIARY_LABELS
@@ -532,7 +604,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     print()
     _print_summary(documents, provision_table, subtypes, unlabelled, BENEFICIARY_LABELS)
 
-    prefix = table_prefix(args.provision_type, args.source, args.level)
+    prefix = table_prefix(args.clause_type, args.source, args.level)
     outputs = {
         args.output_dir / f"{prefix}_documents.csv": documents,
         args.output_dir / f"{prefix}_provisions.csv": provision_table,

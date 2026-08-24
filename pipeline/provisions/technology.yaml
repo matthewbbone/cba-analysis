@@ -1,18 +1,5 @@
 clause_type: technology
-clause_description: |-
-  A Standard Clause that can be incorporated into a collective 
-  bargaining agreement (CBA) to memorialize the parties' agreement regarding the scope of the 
-  employer's right to introduce new technology or work processes, including labor-saving automation, 
-  during the CBA's term. This clause is based on the National Labor Relations Act (NLRA) but also 
-  may be used by private sector employers subject to the Railway Labor Act (RLA) or public sector 
-  employers. It provides alternative approaches for setting out the employer's authority to implement 
-  technological changes, with one formulation affirming a broad and general right to implement new 
-  technology or automation and the other promoting a cooperative process that includes union input. 
-  It also addresses key considerations regarding the employer's effects bargaining obligations, 
-  employee training on new equipment, and procedures for negotiating wage rates for job classifications 
-  created or significantly revised in response to technological changes. This clause includes comprehensive 
-  drafting notes that offer critical explanations and negotiation strategies. Employers are encouraged 
-  to adapt this model clause to suit their specific operational needs.
+clause_description: Clauses that address the introduction of new technology in the workplace.
 subtype_taxonomy:
   preemptive_rights:
     description:  |- 
@@ -90,7 +77,7 @@ subtype_taxonomy:
           media activities
       scheduling:
         description: |-
-          provisions to protect workers from npredictable, unstable, and rigid scheduling practices by employers 
+          provisions to protect workers from unpredictable, unstable, and rigid scheduling practices by employers 
           combined with algorithmic computer scheduling systems
       telework:
         description: |-
@@ -108,7 +95,7 @@ subtype_taxonomy:
         description: |-
           Worker protection provisions often detail issues related to specific technologies and set guidelines to 
           protect worker safety and health
-N_EXTRACTION_PASSES: 3
+N_EXTRACTION_PASSES: 2
 LANGEXTRACT_MAX_WORKERS: 10
 LANGEXTRACT_BATCH_LENGTH: 10
 MAX_CHAR_BUFFER: 5000

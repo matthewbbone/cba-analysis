@@ -49,7 +49,7 @@ def _nodes(taxonomy: dict[str, object]) -> dict[str, SubtypeNode]:
 
 def _spec(taxonomy: dict[str, object] | None = TAXONOMY) -> ProvisionSpec:
     return ProvisionSpec(
-        provision_type="technology",
+        clause_type="technology",
         prompt_description="Extract technology clauses.",
         extraction_passes=1,
         langextract_max_workers=1,
@@ -67,14 +67,16 @@ def _job(
         document_id="doc",
         extract_model_name="extract/model",
         model_name="classify/model",
-        provision_type="technology",
+        clause_type="technology",
         input_path=input_path,
         output_path=output_path,
         taxonomy_depth=taxonomy_depth,
     )
 
 
-def _extraction(text: str, context: str | None) -> dict[str, object]:
+def _extraction(
+    text: str, context: str | None, beneficiary: str = "worker"
+) -> dict[str, object]:
     return {
         "source": "source",
         "document_id": "doc",
@@ -82,7 +84,7 @@ def _extraction(text: str, context: str | None) -> dict[str, object]:
         "model_name": "extract/model",
         "extraction_class": "technology",
         "extraction_text": text,
-        "attributes": {"context": context},
+        "attributes": {"context": context, "beneficiary": beneficiary},
         "span_start": 10,
         "span_end": 10 + len(text),
         "span_reliable": True,
@@ -94,8 +96,8 @@ class Stage03SubtypeConfigTests(unittest.TestCase):
     @staticmethod
     def _definition(taxonomy: object) -> dict[str, object]:
         return {
-            "provision_type": "safety_rule",
-            "extraction_prompt": "Extract mandatory workplace safety rules.",
+            "clause_type": "safety_rule",
+            "clause_description": "Mandatory workplace safety rules.",
             "subtype_taxonomy": taxonomy,
             "N_EXTRACTION_PASSES": 2,
             "LANGEXTRACT_MAX_WORKERS": 3,
@@ -211,22 +213,18 @@ class Stage03SubtypeConfigTests(unittest.TestCase):
 
 
 class Stage03SchemaAndPromptTests(unittest.TestCase):
-    def test_schema_exposes_only_beneficiary_and_subtype_enums(self) -> None:
-        schema = runner.classification_schema(list(SUBTYPES))
+    def test_schema_exposes_only_the_subtype_enum(self) -> None:
+        schema = runner.subtype_schema(list(SUBTYPES))
 
-        self.assertEqual(sorted(schema["properties"]), ["beneficiary", "subtype"])
-        self.assertEqual(sorted(schema["required"]), ["beneficiary", "subtype"])
+        self.assertEqual(list(schema["properties"]), ["subtype"])
+        self.assertEqual(schema["required"], ["subtype"])
         self.assertFalse(schema["additionalProperties"])
-        self.assertEqual(
-            schema["properties"]["beneficiary"]["enum"],
-            ["worker", "employer", "unclear"],
-        )
         self.assertEqual(
             schema["properties"]["subtype"]["enum"],
             ["retraining", "reassignment"],
         )
 
-    def test_subtype_schema_drops_beneficiary_for_refinement_passes(self) -> None:
+    def test_subtype_schema_covers_refinement_passes_too(self) -> None:
         schema = runner.subtype_schema(["tuition_support", "on_the_job", "other"])
 
         self.assertEqual(list(schema["properties"]), ["subtype"])
@@ -250,7 +248,7 @@ class Stage03SchemaAndPromptTests(unittest.TestCase):
         taxonomy = _spec().subtype_taxonomy
         children = runner.level_options(taxonomy["retraining"].children)
         prompt = runner.build_refine_prompt(
-            provision_type="technology",
+            clause_type="technology",
             parent=taxonomy["retraining"],
             subtypes=children,
             extraction_text="  The Employer shall fund tuition.  ",
@@ -271,7 +269,7 @@ class Stage03SchemaAndPromptTests(unittest.TestCase):
         for context in (None, "", "   "):
             with self.subTest(context=context):
                 prompt = runner.build_refine_prompt(
-                    provision_type="technology",
+                    clause_type="technology",
                     parent=taxonomy["retraining"],
                     subtypes=runner.level_options(taxonomy["retraining"].children),
                     extraction_text="Clause text.",
@@ -282,14 +280,16 @@ class Stage03SchemaAndPromptTests(unittest.TestCase):
 
     def test_prompt_lists_every_option_and_includes_context(self) -> None:
         prompt = runner.build_user_prompt(
-            provision_type="technology",
+            clause_type="technology",
             subtypes=SUBTYPES,
             extraction_text="  The Employer shall train affected employees.  ",
             context="Applies to the maintenance unit.",
         )
 
-        for label in ("worker", "employer", "unclear", *SUBTYPES):
+        for label in SUBTYPES:
             self.assertIn(f"- {label}: ", prompt)
+        # Beneficiary is settled during extraction, so it is never asked here.
+        self.assertNotIn("beneficiary", prompt)
         self.assertIn("technology provision", prompt)
         self.assertIn("The Employer shall train affected employees.", prompt)
         self.assertIn("Applies to the maintenance unit.", prompt)
@@ -298,7 +298,7 @@ class Stage03SchemaAndPromptTests(unittest.TestCase):
         for context in (None, "", "   "):
             with self.subTest(context=context):
                 prompt = runner.build_user_prompt(
-                    provision_type="technology",
+                    clause_type="technology",
                     subtypes=SUBTYPES,
                     extraction_text="Clause text.",
                     context=context,
@@ -306,26 +306,22 @@ class Stage03SchemaAndPromptTests(unittest.TestCase):
 
                 self.assertNotIn("Context from elsewhere", prompt)
 
-    def test_parse_classification_rejects_out_of_enum_and_empty_responses(self) -> None:
+    def test_extraction_beneficiary_falls_back_for_unusable_values(self) -> None:
         self.assertEqual(
-            runner.parse_classification(
-                '{"beneficiary": "worker", "subtype": "retraining"}', list(SUBTYPES)
-            ),
-            {"beneficiary": "worker", "subtype": "retraining"},
+            runner.extraction_beneficiary(_extraction("t", None, "employer")),
+            "employer",
         )
-
-        invalid_responses = (
-            ("empty", ""),
-            ("none", None),
-            ("not an object", "[1, 2]"),
-            ("bad beneficiary", '{"beneficiary": "union", "subtype": "retraining"}'),
-            ("bad subtype", '{"beneficiary": "worker", "subtype": "tech_committee"}'),
-            ("missing subtype", '{"beneficiary": "worker"}'),
-        )
-        for label, content in invalid_responses:
+        # Records written before stage 2 assigned beneficiaries, and anything
+        # outside the shared vocabulary, fall back rather than raising.
+        for label, record in (
+            ("no attributes", {}),
+            ("attributes not a mapping", {"attributes": "worker"}),
+            ("absent", {"attributes": {"context": None}}),
+            ("out of enum", {"attributes": {"beneficiary": "workers"}}),
+            ("wrong type", {"attributes": {"beneficiary": 3}}),
+        ):
             with self.subTest(label=label):
-                with self.assertRaises(ValueError):
-                    runner.parse_classification(content, list(SUBTYPES))
+                self.assertEqual(runner.extraction_beneficiary(record), "unclear")
 
     def test_parse_subtype_ignores_beneficiary_and_rejects_bad_values(self) -> None:
         names = ["tuition_support", "on_the_job", "other"]
@@ -371,7 +367,7 @@ class Stage03DiscoveryTests(unittest.TestCase):
                 output_root=output_root,
                 extract_model_name="extract/model",
                 model_name="classify/model",
-                provision_type="technology",
+                clause_type="technology",
                 source_filter="source_a",
             )
 
@@ -404,7 +400,7 @@ class Stage03DiscoveryTests(unittest.TestCase):
                 output_root=root / "output",
                 extract_model_name="google/gemma-4-31B-it",
                 model_name="classify/model",
-                provision_type="technology",
+                clause_type="technology",
                 source_filter="source_a",
                 document_id_filter=["doc_3", "doc_1"],
             )
@@ -419,7 +415,7 @@ class Stage03DiscoveryTests(unittest.TestCase):
                 output_root=Path(tmp_dir) / "output",
                 extract_model_name="extract/model",
                 model_name="classify/model",
-                provision_type="technology",
+                clause_type="technology",
             )
 
         self.assertEqual(jobs, [])
@@ -431,7 +427,7 @@ class Stage03ClassificationTests(unittest.TestCase):
 
         def classifier(extraction_text: str, context: str | None) -> dict[str, str]:
             seen.append((extraction_text, context))
-            return {"beneficiary": "worker", "subtype_1": "retraining"}
+            return {"subtype_1": "retraining"}
 
         with TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)
@@ -490,12 +486,10 @@ class Stage03ClassificationTests(unittest.TestCase):
             # "reassignment" is a leaf, so its cascade stops before level 2.
             if extraction_text == "clause one":
                 return {
-                    "beneficiary": "worker",
                     "subtype_1": "retraining",
                     "subtype_2": "tuition_support",
                 }
             return {
-                "beneficiary": "unclear",
                 "subtype_1": "reassignment",
                 "subtype_2": None,
             }
@@ -538,7 +532,7 @@ class Stage03ClassificationTests(unittest.TestCase):
     def test_process_job_preserves_order_under_request_concurrency(self) -> None:
         def classifier(extraction_text: str, context: str | None) -> dict[str, str]:
             del context
-            return {"beneficiary": "employer", "subtype_1": "other"}
+            return {"subtype_1": "other"}
 
         with TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)
@@ -569,7 +563,7 @@ class Stage03ClassificationTests(unittest.TestCase):
         def classifier(extraction_text: str, context: str | None) -> dict[str, str]:
             del context
             calls.append(extraction_text)
-            return {"beneficiary": "unclear", "subtype_1": "other"}
+            return {"subtype_1": "other"}
 
         with TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)
@@ -599,7 +593,7 @@ class Stage03ClassificationTests(unittest.TestCase):
             del context
             if extraction_text == "clause two":
                 raise ValueError("unexpected subtype value: 'nonsense'")
-            return {"beneficiary": "worker", "subtype_1": "retraining"}
+            return {"subtype_1": "retraining"}
 
         with TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)
@@ -681,12 +675,10 @@ def _enum(call: dict[str, object]) -> list[str]:
 class Stage03ClassifierFactoryTests(unittest.TestCase):
     def test_factory_sends_schema_prompt_and_zero_temperature(self) -> None:
         result, client, completions = _classify(
-            ['{"beneficiary": "employer", "subtype": "reassignment"}']
+            ['{"subtype": "reassignment"}']
         )
 
-        self.assertEqual(
-            result, {"beneficiary": "employer", "subtype_1": "reassignment"}
-        )
+        self.assertEqual(result, {"subtype_1": "reassignment"})
         self.assertEqual(client["client_kwargs"]["base_url"], "http://localhost:9999/v1")
         self.assertEqual(len(completions), 1)
         call = completions[0]
@@ -702,7 +694,7 @@ class Stage03ClassifierFactoryTests(unittest.TestCase):
     def test_second_pass_offers_only_the_chosen_parents_children(self) -> None:
         result, _, completions = _classify(
             [
-                '{"beneficiary": "worker", "subtype": "retraining"}',
+                '{"subtype": "retraining"}',
                 '{"subtype": "tuition_support"}',
             ],
             depth=2,
@@ -710,11 +702,7 @@ class Stage03ClassifierFactoryTests(unittest.TestCase):
 
         self.assertEqual(
             result,
-            {
-                "beneficiary": "worker",
-                "subtype_1": "retraining",
-                "subtype_2": "tuition_support",
-            },
+            {"subtype_1": "retraining", "subtype_2": "tuition_support"},
         )
         self.assertEqual(len(completions), 2)
         self.assertEqual(_enum(completions[0]), [*SUBTYPES, runner.OTHER_LABEL])
@@ -728,23 +716,19 @@ class Stage03ClassifierFactoryTests(unittest.TestCase):
 
     def test_other_at_the_top_level_is_terminal(self) -> None:
         result, _, completions = _classify(
-            ['{"beneficiary": "unclear", "subtype": "other"}'], depth=2
+            ['{"subtype": "other"}'], depth=2
         )
 
         # No second call is issued at all: "other" names no node to refine into.
         self.assertEqual(len(completions), 1)
         self.assertEqual(
             result,
-            {
-                "beneficiary": "unclear",
-                "subtype_1": runner.OTHER_LABEL,
-                "subtype_2": None,
-            },
+            {"subtype_1": runner.OTHER_LABEL, "subtype_2": None},
         )
 
     def test_cascade_stops_at_a_leaf_shallower_than_the_requested_depth(self) -> None:
         result, _, completions = _classify(
-            ['{"beneficiary": "worker", "subtype": "reassignment"}'], depth=2
+            ['{"subtype": "reassignment"}'], depth=2
         )
 
         self.assertEqual(len(completions), 1)
@@ -753,11 +737,11 @@ class Stage03ClassifierFactoryTests(unittest.TestCase):
 
     def test_depth_one_asks_once_and_reports_only_the_first_level(self) -> None:
         result, _, completions = _classify(
-            ['{"beneficiary": "worker", "subtype": "retraining"}'], depth=1
+            ['{"subtype": "retraining"}'], depth=1
         )
 
         self.assertEqual(len(completions), 1)
-        self.assertEqual(set(result), {"beneficiary", "subtype_1"})
+        self.assertEqual(set(result), {"subtype_1"})
 
     def test_factory_requires_subtypes(self) -> None:
         with self.assertRaisesRegex(ValueError, "no subtypes"):
@@ -916,7 +900,7 @@ class Stage03CliTests(unittest.TestCase):
             "--default-chat-template-kwargs", server_kwargs[0]["extra_serve_args"]
         )
         self.assertEqual(
-            classifier_kwargs[0]["provision"].provision_type, "technology"
+            classifier_kwargs[0]["provision"].clause_type, "technology"
         )
         self.assertEqual(classifier_kwargs[0]["depth"], 2)
 

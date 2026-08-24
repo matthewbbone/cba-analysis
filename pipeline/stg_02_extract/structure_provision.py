@@ -12,8 +12,8 @@ PROVISIONS_DIR = Path(__file__).resolve().parents[1] / "provisions"
 
 _PROVISION_NAME = re.compile(r"[a-z][a-z0-9_]*")
 _CONFIG_KEYS = {
-    "provision_type",
-    "extraction_prompt",
+    "clause_type",
+    "clause_description",
     "N_EXTRACTION_PASSES",
     "LANGEXTRACT_MAX_WORKERS",
     "LANGEXTRACT_BATCH_LENGTH",
@@ -29,6 +29,25 @@ _NODE_KEYS = {"description", "subtypes"}
 # Stage 3 injects this label at every level as the "none of the above" escape
 # hatch, so a config may not also declare it.
 RESERVED_SUBTYPE_LABEL = "other"
+
+# Which party a clause substantively benefits. Stage 2 asks the model for this
+# alongside each extraction; stage 3 and the analysis utils only read it back,
+# so this is the single definition of the vocabulary.
+BENEFICIARY_OPTIONS: Mapping[str, str] = {
+    "worker": (
+        "The clause's substantive benefit accrues to workers or the union: it creates a "
+        "right, protection, entitlement, or constraint on management that workers can invoke."
+    ),
+    "employer": (
+        "The clause's substantive benefit accrues to the employer or management: it affirms "
+        "or expands management's discretion, or limits what workers may demand."
+    ),
+    "unclear": (
+        "The clause confers no substantive benefit on either party, or the benefit cannot be "
+        "assigned: it is purely procedural, genuinely mutual, or too vague to judge."
+    ),
+}
+DEFAULT_BENEFICIARY = "unclear"
 
 
 @dataclass(frozen=True)
@@ -46,7 +65,7 @@ class SubtypeNode:
 
 @dataclass(frozen=True)
 class ProvisionSpec:
-    provision_type: str
+    clause_type: str
     prompt_description: str
     extraction_passes: int
     langextract_max_workers: int
@@ -196,16 +215,27 @@ def labels_at_level(
 
 
 
+def render_options(options: Mapping[str, str]) -> str:
+    """Label-to-description choices as a flat bullet list for a prompt."""
+
+    return "\n".join(
+        f"- {label}: {' '.join(description.split())}"
+        for label, description in options.items()
+    )
+
+
 def _prompt_description(clause_type: str, clause_description: str) -> str:
     return (
-        f'You are a legal expert reviewing contract text and extracting {clause_type} clauses.\n\n'
-        f'Only extract text that both:\n'
-        f'  1. Clearly defines a legal right, permission, obligation, or prohibition and\n'
-        f'  2. Has a clear benefciary or responsible party\n\n'
-        f'The extraction_class for every extraction is "{clause_type}".\n'
-        f'For each extraction, return attributes with exactly one key named "context" '
-        f'that is a concise, faithful description of any information elsewhere in the '
-        f'current text chunk that is relevant to understanding the extracted text.\n\n'
+        f'You are a legal expert reviewing chunks of contract text and extracting '
+        f'{clause_type} class clauses.\n\n'
+        f'Extract verbatim quotes from the text that meet the following criteria:\n'
+        f'  1. Clearly defines a legal right, permission, obligation, or prohibition.\n'
+        f'  2. Has a clear beneficiary who benefits from this clause.\n\n'
+        f'In your response include the following attributes:\n'
+        f'  1. context: a concise, faithful description of any additional information '
+        f'in the text chunk relevant to understanding the extracted text\n'
+        f'  2. beneficiary: which party receives a substantive benefit from this clause:\n'
+        f'{render_options(BENEFICIARY_OPTIONS)}\n\n'
         f'{clause_type} Description: {clause_description}'
     )
 
@@ -226,17 +256,19 @@ def load_provision(name: str) -> ProvisionSpec:
         raise ValueError(f"invalid YAML in provision config {path.name}") from exc
     config = _config_object(raw)
 
-    provision_type = _nonempty_string(config["provision_type"], "provision_type")
-    if _PROVISION_NAME.fullmatch(provision_type) is None:
-        raise ValueError("provision_type must be a safe snake_case name")
-    if provision_type != name:
-        raise ValueError(f'provision_type must match filename "{name}.yaml"')
+    clause_type = _nonempty_string(config["clause_type"], "clause_type")
+    if _PROVISION_NAME.fullmatch(clause_type) is None:
+        raise ValueError("clause_type must be a safe snake_case name")
+    if clause_type != name:
+        raise ValueError(f'clause_type must match filename "{name}.yaml"')
 
-    prompt = _nonempty_string(config["extraction_prompt"], "extraction_prompt")
+    clause_description = _nonempty_string(
+        config["clause_description"], "clause_description"
+    )
     raw_taxonomy = config.get("subtype_taxonomy")
     return ProvisionSpec(
-        provision_type=provision_type,
-        prompt_description=_prompt_description(prompt, provision_type),
+        clause_type=clause_type,
+        prompt_description=_prompt_description(clause_type, clause_description),
         extraction_passes=_positive_integer(
             config["N_EXTRACTION_PASSES"],
             "N_EXTRACTION_PASSES",

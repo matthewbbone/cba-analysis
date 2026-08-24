@@ -31,11 +31,14 @@ load_dotenv(PROJECT_ROOT / ".env")
 
 from pipeline.stg_02_extract.runner import reasoning_serve_args
 from pipeline.stg_02_extract.structure_provision import (
+    BENEFICIARY_OPTIONS,
+    DEFAULT_BENEFICIARY,
     RESERVED_SUBTYPE_LABEL,
     ProvisionSpec,
     SubtypeNode,
     children_of,
     load_provision,
+    render_options,
     taxonomy_depth,
 )
 from pipeline.utils.vllm_server import VLLMServer
@@ -47,23 +50,6 @@ DEFAULT_MODEL_NAME = "google/gemma-4-31B-it"
 DEFAULT_EXTRACT_MODEL_NAME = "google/gemma-4-31B-it"
 INPUT_STAGE_NAME = "stg_02_extract"
 STAGE_NAME = "stg_03_classify"
-
-# Which party a provision substantively benefits. Shared by every provision type;
-# only the subtype options vary, and those come from the provision config.
-BENEFICIARY_OPTIONS: Mapping[str, str] = {
-    "worker": (
-        "The provision's substantive benefit accrues to workers or the union: it creates a "
-        "right, protection, entitlement, or constraint on management that workers can invoke."
-    ),
-    "employer": (
-        "The provision's substantive benefit accrues to the employer or management: it affirms "
-        "or expands management's discretion, or limits what workers may demand."
-    ),
-    "unclear": (
-        "The provision confers no substantive benefit on either party, or the benefit cannot be "
-        "assigned: it is purely procedural, genuinely mutual, or too vague to judge."
-    ),
-}
 
 # Offered as a choice at every taxonomy level, so the model is never forced into
 # a category that does not fit. It is terminal: an extraction labelled "other"
@@ -81,15 +67,10 @@ CLASSIFY_SYSTEM_PROMPT = (
 )
 
 CLASSIFY_USER_TEMPLATE = """\
-The following text is a {provision_type} provision extracted from a collective bargaining \
+The following text is a {clause_type} provision extracted from a collective bargaining \
 agreement.
 
-Classify it on two dimensions.
-
-1. beneficiary - which party receives a substantive benefit from this provision:
-{beneficiary_options}
-
-2. subtype - which kind of {provision_type} provision this text describes:
+Classify it - which kind of {clause_type} provision this text describes:
 {subtype_options}
 
 Judge only what the provision text itself establishes. Do not speculate about effects it does not \
@@ -102,7 +83,7 @@ Provision:
 # Used from the second pass onward: the parent class is already settled, so the
 # only question is which of that parent's own children the provision belongs to.
 REFINE_USER_TEMPLATE = """\
-The following text is a {provision_type} provision extracted from a collective bargaining \
+The following text is a {clause_type} provision extracted from a collective bargaining \
 agreement.
 
 It has already been classified as "{parent_label}": {parent_description}
@@ -130,7 +111,7 @@ class ClassificationJob:
     document_id: str
     extract_model_name: str
     model_name: str
-    provision_type: str
+    clause_type: str
     input_path: Path
     output_path: Path
     # Taxonomy levels this run classifies, so each record can say how deep it went.
@@ -164,28 +145,8 @@ def default_output_root() -> Path:
     return default_cache_dir() / STAGE_NAME
 
 
-def classification_schema(subtype_names: Sequence[str]) -> dict[str, object]:
-    """JSON schema for the two first-pass attributes, for guided decoding."""
-
-    return {
-        "type": "object",
-        "properties": {
-            "beneficiary": {
-                "type": "string",
-                "enum": list(BENEFICIARY_OPTIONS),
-            },
-            "subtype": {
-                "type": "string",
-                "enum": list(subtype_names),
-            },
-        },
-        "required": ["beneficiary", "subtype"],
-        "additionalProperties": False,
-    }
-
-
 def subtype_schema(subtype_names: Sequence[str]) -> dict[str, object]:
-    """JSON schema for a refinement pass, which settles only the subtype."""
+    """JSON schema for one classification pass, for guided decoding."""
 
     return {
         "type": "object",
@@ -208,13 +169,6 @@ def level_options(nodes: Mapping[str, SubtypeNode]) -> dict[str, str]:
     return options
 
 
-def render_options(options: Mapping[str, str]) -> str:
-    return "\n".join(
-        f"- {label}: {' '.join(description.split())}"
-        for label, description in options.items()
-    )
-
-
 def _with_context(prompt: str, context: str | None) -> str:
     if context and context.strip():
         return prompt + CONTEXT_TEMPLATE.format(context=context.strip())
@@ -222,17 +176,16 @@ def _with_context(prompt: str, context: str | None) -> str:
 
 
 def build_user_prompt(
-    provision_type: str,
+    clause_type: str,
     subtypes: Mapping[str, str],
     extraction_text: str,
     context: str | None = None,
 ) -> str:
-    """First-pass prompt: beneficiary plus the top level of the taxonomy."""
+    """First-pass prompt: the top level of the taxonomy."""
 
     return _with_context(
         CLASSIFY_USER_TEMPLATE.format(
-            provision_type=provision_type,
-            beneficiary_options=render_options(BENEFICIARY_OPTIONS),
+            clause_type=clause_type,
             subtype_options=render_options(subtypes),
             extraction_text=extraction_text.strip(),
         ),
@@ -241,7 +194,7 @@ def build_user_prompt(
 
 
 def build_refine_prompt(
-    provision_type: str,
+    clause_type: str,
     parent: SubtypeNode,
     subtypes: Mapping[str, str],
     extraction_text: str,
@@ -251,7 +204,7 @@ def build_refine_prompt(
 
     return _with_context(
         REFINE_USER_TEMPLATE.format(
-            provision_type=provision_type,
+            clause_type=clause_type,
             parent_label=parent.label,
             parent_description=" ".join(parent.description.split()),
             subtype_options=render_options(subtypes),
@@ -266,7 +219,7 @@ def discover_extractions(
     output_root: Path,
     extract_model_name: str,
     model_name: str,
-    provision_type: str,
+    clause_type: str,
     source_filter: str | None = None,
     document_id_filter: str | Sequence[str] | None = None,
     taxonomy_depth: int = 1,
@@ -303,7 +256,7 @@ def discover_extractions(
             if document_ids is not None and document_id not in document_ids:
                 continue
 
-            input_path = document_dir / f"{provision_type}.jsonl"
+            input_path = document_dir / f"{clause_type}.jsonl"
             if not input_path.exists():
                 continue
 
@@ -312,7 +265,7 @@ def discover_extractions(
                 / source_dir.name
                 / model_output_name
                 / document_id
-                / f"{provision_type}.jsonl"
+                / f"{clause_type}.jsonl"
             )
             jobs.append(
                 ClassificationJob(
@@ -320,7 +273,7 @@ def discover_extractions(
                     document_id=document_id,
                     extract_model_name=extract_model_name,
                     model_name=model_name,
-                    provision_type=provision_type,
+                    clause_type=clause_type,
                     input_path=input_path,
                     output_path=output_path,
                     taxonomy_depth=taxonomy_depth,
@@ -353,6 +306,16 @@ def extraction_context(record: Mapping[str, object]) -> str | None:
     return context if isinstance(context, str) else None
 
 
+def extraction_beneficiary(record: Mapping[str, object]) -> str:
+    """The beneficiary stage 2 assigned, falling back for pre-beneficiary records."""
+
+    attributes = record.get("attributes")
+    value = attributes.get("beneficiary") if isinstance(attributes, dict) else None
+    if isinstance(value, str) and value in BENEFICIARY_OPTIONS:
+        return value
+    return DEFAULT_BENEFICIARY
+
+
 def subtype_key(level: int) -> str:
     return f"subtype_{level}"
 
@@ -378,11 +341,11 @@ def classification_to_record(
         "document_id": job.document_id,
         "extract_model_name": job.extract_model_name,
         "model_name": job.model_name,
-        "extraction_class": job.provision_type,
+        "extraction_class": job.clause_type,
         "extraction_text": extraction.get("extraction_text", ""),
         "span_start": extraction.get("span_start"),
         "span_end": extraction.get("span_end"),
-        "beneficiary": classification["beneficiary"],
+        "beneficiary": extraction_beneficiary(extraction),
         "taxonomy_depth": job.taxonomy_depth,
         **levels,
     }
@@ -396,16 +359,16 @@ def make_classifier(
 ) -> Classifier:
     """Build a classifier that walks ``depth`` taxonomy levels, one call each.
 
-    The first call settles the beneficiary and the top-level class together. Each
-    later call is shown only the children of the class already chosen, so the
-    enum stays short however wide the taxonomy is overall.
+    The first call settles the top-level class. Each later call is shown only the
+    children of the class already chosen, so the enum stays short however wide
+    the taxonomy is overall.
     """
 
     from openai import OpenAI
 
     taxonomy = provision.subtype_taxonomy
     if taxonomy is None:
-        raise ValueError(f'provision "{provision.provision_type}" defines no subtypes')
+        raise ValueError(f'provision "{provision.clause_type}" defines no subtypes')
     if depth < 1:
         raise ValueError("depth must be at least 1")
 
@@ -430,21 +393,18 @@ def make_classifier(
         options = level_options(taxonomy)
         content = complete(
             build_user_prompt(
-                provision_type=provision.provision_type,
+                clause_type=provision.clause_type,
                 subtypes=options,
                 extraction_text=extraction_text,
                 context=context,
             ),
-            classification_schema(list(options)),
+            subtype_schema(list(options)),
             "provision_classification",
         )
-        first = parse_classification(content, list(options))
+        first = parse_subtype(content, list(options))
 
-        result: dict[str, str | None] = {
-            "beneficiary": first["beneficiary"],
-            subtype_key(1): first["subtype"],
-        }
-        path = [first["subtype"]]
+        result: dict[str, str | None] = {subtype_key(1): first}
+        path = [first]
 
         for level in range(2, depth + 1):
             # Empty when the parent was "other" or a genuine leaf: either way
@@ -457,7 +417,7 @@ def make_classifier(
             options = level_options(children)
             content = complete(
                 build_refine_prompt(
-                    provision_type=provision.provision_type,
+                    clause_type=provision.clause_type,
                     parent=parent,
                     subtypes=options,
                     extraction_text=extraction_text,
@@ -490,21 +450,8 @@ def _subtype_payload(content: str | None, subtype_names: Sequence[str]) -> dict[
     return payload
 
 
-def parse_classification(
-    content: str | None,
-    subtype_names: Sequence[str],
-) -> dict[str, str]:
-    """Validate a first-pass response, which carries beneficiary and subtype."""
-
-    payload = _subtype_payload(content, subtype_names)
-    beneficiary = payload.get("beneficiary")
-    if beneficiary not in BENEFICIARY_OPTIONS:
-        raise ValueError(f"unexpected beneficiary value: {beneficiary!r}")
-    return {"beneficiary": beneficiary, "subtype": payload["subtype"]}
-
-
 def parse_subtype(content: str | None, subtype_names: Sequence[str]) -> str:
-    """Validate a refinement response, which carries only the subtype."""
+    """Validate one classification response, which carries only the subtype."""
 
     return _subtype_payload(content, subtype_names)["subtype"]
 
@@ -638,7 +585,7 @@ def make_progress_reporter(jobs: list[ClassificationJob]) -> ProgressReporter:
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Classify extracted provisions by beneficiary and subtype.",
+        description="Classify extracted provisions by subtype.",
     )
     parser.add_argument(
         "--provision",
@@ -778,14 +725,14 @@ def main(argv: list[str] | None = None) -> None:
     provision = load_provision(args.provision)
     if provision.subtype_taxonomy is None:
         raise ValueError(
-            f'provision "{provision.provision_type}" defines no subtypes; add a '
+            f'provision "{provision.clause_type}" defines no subtypes; add a '
             "subtype_taxonomy block to its provision config to classify it"
         )
     available_depth = taxonomy_depth(provision.subtype_taxonomy)
     if args.taxonomy_depth > available_depth:
         raise ValueError(
             f"--taxonomy-depth {args.taxonomy_depth} exceeds the taxonomy of "
-            f'provision "{provision.provision_type}", which declares '
+            f'provision "{provision.clause_type}", which declares '
             f"{available_depth} level(s)"
         )
 
@@ -794,13 +741,13 @@ def main(argv: list[str] | None = None) -> None:
         output_root=args.output_root,
         extract_model_name=args.extract_model_name,
         model_name=args.model_name,
-        provision_type=provision.provision_type,
+        clause_type=provision.clause_type,
         source_filter=args.source,
         document_id_filter=args.document_id,
         taxonomy_depth=args.taxonomy_depth,
     )
     if not jobs:
-        print(f"No stage 2 {provision.provision_type}.jsonl extractions found.")
+        print(f"No stage 2 {provision.clause_type}.jsonl extractions found.")
         return
 
     if args.sample is not None and args.sample < len(jobs):

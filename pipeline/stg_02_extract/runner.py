@@ -30,6 +30,8 @@ except ModuleNotFoundError:
 load_dotenv(PROJECT_ROOT / ".env")
 
 from pipeline.stg_02_extract.structure_provision import (
+    BENEFICIARY_OPTIONS,
+    DEFAULT_BENEFICIARY,
     ProvisionSpec,
     load_provision,
 )
@@ -55,7 +57,7 @@ class ExtractionJob:
     document_id: str
     ocr_model_name: str
     model_name: str
-    provision_type: str
+    clause_type: str
     input_path: Path
     output_path: Path
 
@@ -121,7 +123,7 @@ def discover_full_texts(
     output_root: Path,
     ocr_model_name: str,
     model_name: str,
-    provision_type: str,
+    clause_type: str,
     source_filter: str | None = None,
     document_id_filter: str | Sequence[str] | None = None,
 ) -> list[ExtractionJob]:
@@ -166,7 +168,7 @@ def discover_full_texts(
                 / source_dir.name
                 / model_output_name
                 / document_id
-                / f"{provision_type}.jsonl"
+                / f"{clause_type}.jsonl"
             )
             jobs.append(
                 ExtractionJob(
@@ -174,7 +176,7 @@ def discover_full_texts(
                     document_id=document_id,
                     ocr_model_name=ocr_model_name,
                     model_name=model_name,
-                    provision_type=provision_type,
+                    clause_type=clause_type,
                     input_path=input_path,
                     output_path=output_path,
                 )
@@ -231,12 +233,25 @@ def reconcile_span(
     return span_start, span_end, not length_mismatch
 
 
+def extraction_beneficiary(attributes: object) -> str:
+    """The beneficiary the model named, falling back when it named none.
+
+    Guided decoding constrains this to BENEFICIARY_OPTIONS, so the fallback only
+    fires for records that bypassed the schema.
+    """
+
+    value = attributes.get("beneficiary") if isinstance(attributes, dict) else None
+    if isinstance(value, str) and value in BENEFICIARY_OPTIONS:
+        return value
+    return DEFAULT_BENEFICIARY
+
+
 def extraction_to_record(
     extraction,
     job: ExtractionJob,
     source_text: str | None = None,
 ) -> dict[str, object] | None:
-    if getattr(extraction, "extraction_class", None) != job.provision_type:
+    if getattr(extraction, "extraction_class", None) != job.clause_type:
         return None
 
     span_start, span_end = extraction_char_span(extraction)
@@ -251,15 +266,16 @@ def extraction_to_record(
     attributes = getattr(extraction, "attributes", None)
     raw_context = attributes.get("context") if isinstance(attributes, dict) else None
     context = raw_context.strip() if isinstance(raw_context, str) else None
+    beneficiary = extraction_beneficiary(attributes)
 
     return {
         "source": job.source,
         "document_id": job.document_id,
         "ocr_model_name": job.ocr_model_name,
         "model_name": job.model_name,
-        "extraction_class": job.provision_type,
+        "extraction_class": job.clause_type,
         "extraction_text": extraction_text,
-        "attributes": {"context": context or None},
+        "attributes": {"context": context or None, "beneficiary": beneficiary},
         "span_start": span_start,
         "span_end": span_end,
         "span_reliable": span_reliable,
@@ -295,14 +311,18 @@ def make_langextract_extractor(
     )
     output_schema = lx.schema.extractions_schema(
         lx.schema.extraction_item_schema(
-            provision.provision_type,
+            provision.clause_type,
             attributes={
                 "context": {
                     "anyOf": [
                         {"type": "string"},
                         {"type": "null"},
                     ]
-                }
+                },
+                "beneficiary": {
+                    "type": "string",
+                    "enum": list(BENEFICIARY_OPTIONS),
+                },
             },
         )
     )
@@ -553,7 +573,7 @@ def main(argv: list[str] | None = None) -> None:
         output_root=args.output_root,
         ocr_model_name=ocr_model_name,
         model_name=args.model_name,
-        provision_type=provision.provision_type,
+        clause_type=provision.clause_type,
         source_filter=args.source,
         document_id_filter=args.document_id,
     )
