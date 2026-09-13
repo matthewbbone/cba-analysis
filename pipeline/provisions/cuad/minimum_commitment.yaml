@@ -1,0 +1,8 @@
+clause_type: minimum_commitment
+clause_description: |-
+  Is there a minimum order size or minimum amount or units per-time period that one party must buy from the counterparty under the contract?
+N_EXTRACTION_PASSES: 2
+LANGEXTRACT_MAX_WORKERS: 10
+LANGEXTRACT_BATCH_LENGTH: 10
+MAX_CHAR_BUFFER: 8192
+ENRICH_MAX_CHAR_BUFFER: 5000

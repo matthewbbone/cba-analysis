@@ -16,7 +16,7 @@ In **Extraction comparison**:
 - **Right pane** — one shared OCR `full.txt` with *both* models' spans
   highlighted inline, color-coded by which model produced them, above a detail
   card that puts the two models side by side: extracted text, the extraction's
-  `attributes.context`, its grounding status, and its character offsets.
+  its grounding status and character offsets.
 
 Both models' spans are overlaid on a single copy of `full.txt` because the pair
 is only sampled when both models recorded the same `ocr_model_name`, so their

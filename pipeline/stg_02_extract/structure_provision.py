@@ -18,36 +18,18 @@ _CONFIG_KEYS = {
     "LANGEXTRACT_MAX_WORKERS",
     "LANGEXTRACT_BATCH_LENGTH",
     "MAX_CHAR_BUFFER",
+    "ENRICH_MAX_CHAR_BUFFER",
 }
-# Keys a provision config may declare but that extraction does not need; stage 3
+# Keys a provision config may declare but that extraction does not need; stage 4
 # classification reads the subtype taxonomy from the same file.
 _OPTIONAL_CONFIG_KEYS = {
     "subtype_taxonomy",
 }
 _MINIMUM_SUBTYPES = 2
 _NODE_KEYS = {"description", "subtypes"}
-# Stage 3 injects this label at every level as the "none of the above" escape
+# Stage 4 injects this label at every level as the "none of the above" escape
 # hatch, so a config may not also declare it.
 RESERVED_SUBTYPE_LABEL = "other"
-
-# Which party a clause substantively benefits. Stage 2 asks the model for this
-# alongside each extraction; stage 3 and the analysis utils only read it back,
-# so this is the single definition of the vocabulary.
-BENEFICIARY_OPTIONS: Mapping[str, str] = {
-    "worker": (
-        "The clause's substantive benefit accrues to workers or the union: it creates a "
-        "right, protection, entitlement, or constraint on management that workers can invoke."
-    ),
-    "employer": (
-        "The clause's substantive benefit accrues to the employer or management: it affirms "
-        "or expands management's discretion, or limits what workers may demand."
-    ),
-    "unclear": (
-        "The clause confers no substantive benefit on either party, or the benefit cannot be "
-        "assigned: it is purely procedural, genuinely mutual, or too vague to judge."
-    ),
-}
-DEFAULT_BENEFICIARY = "unclear"
 
 
 @dataclass(frozen=True)
@@ -70,7 +52,12 @@ class ProvisionSpec:
     extraction_passes: int
     langextract_max_workers: int
     langextract_batch_length: int
-    max_char_buffer: int
+    # One chunk size, or a schedule of one size per extraction pass. A schedule
+    # gives each pass different chunk boundaries, so a clause cut at a boundary
+    # in one pass can land whole in another.
+    max_char_buffer: int | list[int]
+    # Character budget for the sentence-bounded context window built by stage 3.
+    enrich_max_char_buffer: int
     # Top level of the classification taxonomy, in config order; None when the
     # provision declares no subtypes and therefore cannot be classified.
     subtype_taxonomy: Mapping[str, SubtypeNode] | None = None
@@ -107,6 +94,27 @@ def _positive_integer(value: object, key: str) -> int:
     if isinstance(value, bool) or not isinstance(value, int) or value <= 0:
         raise ValueError(f"{key} must be a positive integer")
     return value
+
+
+def _char_buffer_schedule(value: object, passes: int) -> int | list[int]:
+    """Validate MAX_CHAR_BUFFER as one size, or one size per extraction pass.
+
+    langextract accepts either form and enforces the same rules, but checking
+    here fails the config at load time with the offending key named, rather than
+    part-way through a run.
+    """
+
+    if isinstance(value, list):
+        if len(value) != passes:
+            raise ValueError(
+                "MAX_CHAR_BUFFER schedule must have one entry per pass: "
+                f"N_EXTRACTION_PASSES is {passes}, got {len(value)}"
+            )
+        return [
+            _positive_integer(entry, f"MAX_CHAR_BUFFER[{index}]")
+            for index, entry in enumerate(value)
+        ]
+    return _positive_integer(value, "MAX_CHAR_BUFFER")
 
 
 def _subtype_level(
@@ -227,20 +235,31 @@ def render_options(options: Mapping[str, str]) -> str:
 def _prompt_description(clause_type: str, clause_description: str) -> str:
     return (
         f'You are a legal expert reviewing chunks of contract text and extracting '
-        f'{clause_type} class clauses.\n\n'
-        f'Extract verbatim quotes from the text that meet the following criteria:\n'
-        f'  1. Clearly defines a legal right, permission, obligation, or prohibition.\n'
-        f'  2. Has a clear beneficiary who benefits from this clause.\n\n'
-        f'In your response include the following attributes:\n'
-        f'  1. context: a concise, faithful description of any additional information '
-        f'in the text chunk relevant to understanding the extracted text\n'
-        f'  2. beneficiary: which party receives a substantive benefit from this clause:\n'
-        f'{render_options(BENEFICIARY_OPTIONS)}\n\n'
-        f'{clause_type} Description: {clause_description}'
+        f'verbatim quotes from {clause_type} class clauses.\n\n'
+        f'{clause_type} Description: {clause_description}\n\n'
+        'If no text is relevant, return an empty list for the '
+        '`extractions` key: {"extractions": []}.\n'
     )
 
 
-def load_provision(name: str) -> ProvisionSpec:
+def resolve_provisions_dir(source: str | None) -> Path:
+    """Prefer a source-scoped provisions subdirectory when one exists.
+
+    Some sources (e.g. ``cuad``) bundle their own clause taxonomy that has no
+    bearing on any other source, so those configs live under
+    ``provisions/<source>/`` instead of cluttering the flat top-level
+    directory. Falls back to the top-level directory when the source has no
+    such subdirectory, or when no source filter was given.
+    """
+
+    if source:
+        candidate = PROVISIONS_DIR / source
+        if candidate.is_dir():
+            return candidate
+    return PROVISIONS_DIR
+
+
+def load_provision(name: str, *, provisions_dir: Path | None = None) -> ProvisionSpec:
     """Load and validate a prompt-only provision extraction config."""
 
     if not isinstance(name, str) or _PROVISION_NAME.fullmatch(name) is None:
@@ -249,7 +268,8 @@ def load_provision(name: str) -> ProvisionSpec:
             "lowercase letters, digits, and underscores"
         )
 
-    path = PROVISIONS_DIR / f"{name}.yaml"
+    directory = PROVISIONS_DIR if provisions_dir is None else provisions_dir
+    path = directory / f"{name}.yaml"
     try:
         raw = yaml.safe_load(path.read_text(encoding="utf-8"))
     except yaml.YAMLError as exc:
@@ -265,14 +285,14 @@ def load_provision(name: str) -> ProvisionSpec:
     clause_description = _nonempty_string(
         config["clause_description"], "clause_description"
     )
+    extraction_passes = _positive_integer(
+        config["N_EXTRACTION_PASSES"], "N_EXTRACTION_PASSES"
+    )
     raw_taxonomy = config.get("subtype_taxonomy")
     return ProvisionSpec(
         clause_type=clause_type,
         prompt_description=_prompt_description(clause_type, clause_description),
-        extraction_passes=_positive_integer(
-            config["N_EXTRACTION_PASSES"],
-            "N_EXTRACTION_PASSES",
-        ),
+        extraction_passes=extraction_passes,
         langextract_max_workers=_positive_integer(
             config["LANGEXTRACT_MAX_WORKERS"],
             "LANGEXTRACT_MAX_WORKERS",
@@ -281,9 +301,11 @@ def load_provision(name: str) -> ProvisionSpec:
             config["LANGEXTRACT_BATCH_LENGTH"],
             "LANGEXTRACT_BATCH_LENGTH",
         ),
-        max_char_buffer=_positive_integer(
-            config["MAX_CHAR_BUFFER"],
-            "MAX_CHAR_BUFFER",
+        max_char_buffer=_char_buffer_schedule(
+            config["MAX_CHAR_BUFFER"], extraction_passes
+        ),
+        enrich_max_char_buffer=_positive_integer(
+            config["ENRICH_MAX_CHAR_BUFFER"], "ENRICH_MAX_CHAR_BUFFER"
         ),
         subtype_taxonomy=(
             None if raw_taxonomy is None else _subtype_taxonomy(raw_taxonomy)

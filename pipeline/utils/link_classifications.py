@@ -1,4 +1,4 @@
-"""Link stage-03 classifications to the harmonized CBA metadata.
+"""Link stage-04 classifications to the harmonized CBA metadata.
 
 Reads every ``<document_id>/<clause_type>.jsonl`` under a stage-03
 classification directory and joins it to
@@ -39,6 +39,7 @@ if __package__ is None or __package__ == "":
 
 import pandas as pd
 
+from pipeline.stg_03_enrich.runner import BENEFICIARY_LABELS
 from pipeline.stg_02_extract.structure_provision import (
     RESERVED_SUBTYPE_LABEL,
     labels_at_level,
@@ -59,7 +60,7 @@ except ModuleNotFoundError:
 
 load_dotenv(PROJECT_ROOT / ".env")
 
-CLASSIFY_STAGE_NAME = "stg_03_classify"
+CLASSIFY_STAGE_NAME = "stg_04_classify"
 DEFAULT_SOURCE = "dol_archive"
 DEFAULT_MODEL_NAME = "Qwen/Qwen3.8-27B-FP8"
 DEFAULT_PROVISION_TYPE = "technology"
@@ -173,11 +174,12 @@ PROVISION_COLUMNS = [
     "span_end",
 ]
 
-# Every provision names exactly one beneficiary, unlike subtypes which a CBA can
-# carry several of -- so these three are exhaustive and mutually exclusive, and
-# a CBA's own pct_beneficiary_* columns sum to 100 (documents with no provision
-# excepted, where the percentage is undefined rather than zero).
-BENEFICIARY_LABELS = ("employer", "worker", "unclear")
+# BENEFICIARY_LABELS is imported from stage 3, which assigns the value during
+# enrichment. Every
+# provision names exactly one beneficiary, unlike subtypes which a CBA can carry
+# several of, so the labels are exhaustive and mutually exclusive and a CBA's own
+# pct_beneficiary_* columns sum to 100 (documents with no provision excepted,
+# where the percentage is undefined rather than zero).
 
 
 def discover_document_ids(classify_dir: Path) -> list[str]:
@@ -373,7 +375,14 @@ def build_provision_table(
     metadata: pd.DataFrame,
     include_text: bool,
 ) -> pd.DataFrame:
-    """Return one row per classified provision, with its document's metadata."""
+    """Return one row per classified provision, with its document's metadata.
+
+    ``subtype_1`` rides along whenever it survives ``select_level`` as a column
+    distinct from ``subtype`` -- i.e. the table was built below level 1 -- so a
+    level-2+ provision keeps its level-1 ancestor even though ``subtype`` itself
+    now names the deeper label.  A level-1 table has no such column: ``subtype``
+    already *is* ``subtype_1`` there, renamed by ``select_level``.
+    """
 
     frame = provisions.rename(
         columns={
@@ -383,6 +392,8 @@ def build_provision_table(
         }
     )
     columns = list(PROVISION_COLUMNS)
+    if "subtype_1" in frame.columns:
+        columns.insert(columns.index("subtype") + 1, "subtype_1")
     if include_text:
         columns.append("extraction_text")
     for column in columns:
@@ -401,11 +412,22 @@ def build_document_table(
     metadata: pd.DataFrame,
     subtypes: Sequence[str],
     beneficiaries: Sequence[str] = BENEFICIARY_LABELS,
+    level1_labels: Sequence[str] | None = None,
 ) -> pd.DataFrame:
     """Return one row per classified document, zero-provision documents included.
 
     ``n_<subtype>`` counts provisions; ``has_<subtype>`` is the document-level
     unit -- three task-allocation provisions in one document are one document.
+
+    ``level1_labels``, given only when ``provisions`` was narrowed to a level
+    below the top one, additionally writes ``n_other_in_<label>`` and
+    ``has_other_in_<label>`` for each level-1 label: the provisions that were
+    placed under that level-1 category but then classified "other" among its
+    children. The flat ``has_other`` column (from ``subtypes`` carrying
+    ``RESERVED_SUBTYPE_LABEL``) cannot be split this way after the fact -- it
+    pools "other" from every level-1 branch into one column -- so this reads
+    ``subtype_1``, which ``select_level`` leaves untouched, to attribute each
+    "other" row to the branch it was actually offered as an alternative within.
 
     ``n_beneficiary_<label>`` counts provisions naming that beneficiary, and
     ``pct_beneficiary_<label>`` is that count's share of the document's own
@@ -435,6 +457,24 @@ def build_document_table(
         merged[f"n_{subtype}"] = counts[subtype].to_numpy()
     for subtype in subtypes:
         merged[f"has_{subtype}"] = merged[f"n_{subtype}"] > 0
+
+    if level1_labels:
+        if provisions.empty or "subtype_1" not in provisions.columns:
+            other_counts = pd.DataFrame(
+                0, index=frame["document_id"], columns=list(level1_labels)
+            )
+        else:
+            other_rows = provisions[provisions["subtype"] == RESERVED_SUBTYPE_LABEL]
+            other_counts = (
+                pd.crosstab(other_rows["document_id"], other_rows["subtype_1"])
+                .reindex(index=frame["document_id"], columns=list(level1_labels))
+                .fillna(0)
+                .astype(int)
+            )
+        other_counts.index.name = "document_id"
+        for label in level1_labels:
+            merged[f"n_other_in_{label}"] = other_counts[label].to_numpy()
+            merged[f"has_other_in_{label}"] = merged[f"n_other_in_{label}"] > 0
 
     if provisions.empty or "beneficiary" not in provisions.columns:
         beneficiary_counts = pd.DataFrame(
@@ -574,7 +614,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             f"--level {args.level} exceeds the {args.clause_type} taxonomy, "
             f"which declares {available} level(s)"
         )
-    # "other" is offered at every level by stage 3, so it is a label that can
+    # "other" is offered at every level by stage 4, so it is a label that can
     # appear in the records even though the config never declares it.
     subtypes = [
         *labels_at_level(spec.subtype_taxonomy, args.level),
@@ -597,7 +637,12 @@ def main(argv: Sequence[str] | None = None) -> int:
     metadata = load_metadata(args.metadata.expanduser(), args.source)
 
     documents = build_document_table(
-        document_ids, provisions, metadata, subtypes, BENEFICIARY_LABELS
+        document_ids,
+        provisions,
+        metadata,
+        subtypes,
+        BENEFICIARY_LABELS,
+        level1_labels=list(spec.subtype_taxonomy) if args.level > 1 else None,
     )
     provision_table = build_provision_table(provisions, metadata, args.include_text)
 

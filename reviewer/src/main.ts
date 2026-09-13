@@ -3,11 +3,11 @@ import "./style.css";
 interface Extraction {
   extraction_class: string;
   extraction_text: string;
+  generated_extraction_text?: string;
   span_start: number;
   span_end: number;
   grounding_status: string;
   span_reliable?: boolean;
-  attributes?: { context?: string | null };
 }
 
 interface ExtractionComparisonPayload {
@@ -235,7 +235,6 @@ function renderExtractionColumn(side: Side, entry: Extraction | null, isActive: 
         <div class="detail-empty">No overlapping extraction from ${alias}.</div>
       </div>`;
   }
-  const context = entry.attributes?.context;
   // A span the pipeline could not re-anchor may highlight only a prefix of the
   // extracted text, so the reviewer should not read the highlight as ground truth.
   const unreliable =
@@ -251,10 +250,6 @@ function renderExtractionColumn(side: Side, entry: Extraction | null, isActive: 
       </div>
       <div class="detail-label">Extracted text</div>
       <pre class="detail-text">${escapeHtml(entry.extraction_text)}</pre>
-      <div class="detail-label">Context</div>
-      <div class="detail-context${context ? "" : " empty"}">${
-        context ? escapeHtml(context) : "No context recorded."
-      }</div>
     </div>`;
 }
 

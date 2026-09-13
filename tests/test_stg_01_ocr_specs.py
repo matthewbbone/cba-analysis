@@ -223,8 +223,38 @@ class RunnerSpecTests(unittest.IsolatedAsyncioTestCase):
                 patch("pipeline.utils.vllm_server.VLLMServer", FakeServer),
             ):
                 common.main(general.SPEC, ["--device", "2"])
+                common.main(
+                    general.SPEC,
+                    [
+                        "--endpoint",
+                        "openrouter",
+                        "--model-name",
+                        "google/gemini-3.7-flash",
+                        "--device",
+                        "not-a-gpu",
+                    ],
+                )
 
         self.assertEqual(captured_server_kwargs[0]["device"], "2")
+        self.assertEqual(captured_server_kwargs[0]["endpoint"], "vllm")
+        self.assertEqual(captured_server_kwargs[1]["endpoint"], "openrouter")
+        self.assertEqual(
+            captured_server_kwargs[1]["model_name"],
+            "google/gemini-3.7-flash",
+        )
+
+    def test_general_runner_exposes_openrouter_endpoint_only(self) -> None:
+        default_args = general.parse_args([])
+        remote_args = general.parse_args(
+            ["--endpoint", "openrouter", "--num-gpus", "0", "--device", "bad"]
+        )
+
+        general.validate_args(remote_args)
+        self.assertEqual(default_args.endpoint, "vllm")
+        self.assertEqual(remote_args.endpoint, "openrouter")
+        for specialized in (paddleocr, glmocr, miner):
+            with self.subTest(runner=specialized.__name__):
+                self.assertFalse(hasattr(specialized.parse_args([]), "endpoint"))
 
     def test_general_ovisocr2_profile_defaults_are_model_specific(self) -> None:
         generic = general.parse_args([])

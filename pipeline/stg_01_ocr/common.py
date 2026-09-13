@@ -976,24 +976,29 @@ def parse_args(
 def validate_args(spec: RunnerSpec, args: argparse.Namespace) -> None:
     if args.concurrency < 1:
         raise ValueError("--concurrency must be at least 1")
-    if args.num_gpus < 1:
-        raise ValueError("--num-gpus must be at least 1")
-    args.device = validate_cuda_device_selection(args.device, args.num_gpus)
-    if args.max_model_len < 1:
-        raise ValueError("--max-model-len must be at least 1")
+    if getattr(args, "endpoint", "vllm") == "vllm":
+        if args.num_gpus < 1:
+            raise ValueError("--num-gpus must be at least 1")
+        args.device = validate_cuda_device_selection(args.device, args.num_gpus)
+        if args.max_model_len < 1:
+            raise ValueError("--max-model-len must be at least 1")
     if args.dpi < 1:
         raise ValueError("--dpi must be at least 1")
     if args.max_tokens is not None and args.max_tokens < 1:
         raise ValueError("--max-tokens must be at least 1")
     if args.max_inflight_requests < 1:
         raise ValueError("--max-inflight-requests must be at least 1")
-    if args.max_num_seqs < 1:
+    if getattr(args, "endpoint", "vllm") == "vllm" and args.max_num_seqs < 1:
         raise ValueError("--max-num-seqs must be at least 1")
     if args.repetition_retries < 0:
         raise ValueError("--repetition-retries cannot be negative")
     if args.sample is not None and args.sample < 1:
         raise ValueError("--sample must be at least 1")
-    if args.gpu_memory_utilization is not None and not 0 < args.gpu_memory_utilization <= 1:
+    if (
+        getattr(args, "endpoint", "vllm") == "vllm"
+        and args.gpu_memory_utilization is not None
+        and not 0 < args.gpu_memory_utilization <= 1
+    ):
         raise ValueError("--gpu-memory-utilization must be greater than 0 and at most 1")
     if not OUTPUT_VARIANT_PATTERN.fullmatch(args.output_variant):
         raise ValueError("--output-variant may contain only letters, digits, '.', '_', and '-'")
@@ -1197,6 +1202,7 @@ def main(spec: RunnerSpec, argv: Sequence[str] | None = None) -> None:
 
             server = VLLMServer(
                 model_name=args.model_name,
+                endpoint=getattr(args, "endpoint", "vllm"),
                 port=args.port,
                 max_model_len=args.max_model_len,
                 num_gpus=args.num_gpus,

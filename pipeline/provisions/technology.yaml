@@ -1,5 +1,8 @@
 clause_type: technology
-clause_description: Clauses that address the introduction of new technology in the workplace.
+clause_description: |-
+  Clauses that address the introduction of new technology into work processes. This can include clauses regarding
+  preemptive rights regarding the decision to adopt new technology, clauses mitigating impacts of new technology
+  implementation, and clauses regarding the use of technology in workforce management.
 subtype_taxonomy:
   preemptive_rights:
     description:  |- 
@@ -98,4 +101,5 @@ subtype_taxonomy:
 N_EXTRACTION_PASSES: 2
 LANGEXTRACT_MAX_WORKERS: 10
 LANGEXTRACT_BATCH_LENGTH: 10
-MAX_CHAR_BUFFER: 5000
+MAX_CHAR_BUFFER: [2048, 8192]
+ENRICH_MAX_CHAR_BUFFER: 5000

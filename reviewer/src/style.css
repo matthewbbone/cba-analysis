@@ -270,24 +270,6 @@ body {
   background: #e8590c;
 }
 
-.detail-context {
-  padding: 8px 10px;
-  background: #fffaf0;
-  border: 1px solid #f0e0c0;
-  border-radius: 6px;
-  font-size: 12px;
-  line-height: 1.5;
-  max-height: 140px;
-  overflow: auto;
-}
-
-.detail-context.empty {
-  background: #fff;
-  border-color: var(--border);
-  color: var(--muted);
-  font-style: italic;
-}
-
 .detail-label {
   font-size: 11px;
   text-transform: uppercase;

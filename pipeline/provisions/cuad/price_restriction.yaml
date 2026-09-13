@@ -1,0 +1,8 @@
+clause_type: price_restriction
+clause_description: |-
+  Is there a restriction on the ability of a party to raise or reduce prices of technology, goods, or services provided?
+N_EXTRACTION_PASSES: 2
+LANGEXTRACT_MAX_WORKERS: 10
+LANGEXTRACT_BATCH_LENGTH: 10
+MAX_CHAR_BUFFER: 8192
+ENRICH_MAX_CHAR_BUFFER: 5000

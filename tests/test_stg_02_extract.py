@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from types import SimpleNamespace
@@ -21,6 +22,7 @@ class Stage02ProvisionTests(unittest.TestCase):
             "LANGEXTRACT_MAX_WORKERS": 3,
             "LANGEXTRACT_BATCH_LENGTH": 4,
             "MAX_CHAR_BUFFER": 1_000,
+            "ENRICH_MAX_CHAR_BUFFER": 5_000,
         }
 
     def _load_temp(
@@ -42,7 +44,7 @@ class Stage02ProvisionTests(unittest.TestCase):
         # own values rather than one shared number.
         for name, prompt_fragment, passes, char_buffer in (
             ("wage_table", "base-wage", 5, 10_000),
-            ("technology", "new technology", 2, 5_000),
+            ("technology", "new technology", 2, [2_048, 8_192]),
         ):
             with self.subTest(name=name):
                 provision = load_provision(name)
@@ -53,28 +55,38 @@ class Stage02ProvisionTests(unittest.TestCase):
                     f"extracting {name} class clauses",
                     provision.prompt_description,
                 )
-                self.assertIn("context", provision.prompt_description)
-                # Every beneficiary the schema allows is described in the prompt.
-                for label in structure_provision.BENEFICIARY_OPTIONS:
-                    self.assertIn(f"- {label}:", provision.prompt_description)
+                self.assertNotIn("context attribute", provision.prompt_description)
+                self.assertNotIn("beneficiary", provision.prompt_description)
+                self.assertIn(
+                    '`extractions` key: {"extractions": []}',
+                    provision.prompt_description,
+                )
                 self.assertEqual(provision.extraction_passes, passes)
                 self.assertEqual(provision.langextract_max_workers, 10)
                 self.assertEqual(provision.langextract_batch_length, 10)
                 self.assertEqual(provision.max_char_buffer, char_buffer)
+                self.assertEqual(provision.enrich_max_char_buffer, 5_000)
+
+    def test_every_bundled_provision_has_a_valid_enrichment_buffer(self) -> None:
+        for path in sorted(structure_provision.PROVISIONS_DIR.rglob("*.yaml")):
+            with self.subTest(path=path):
+                provision = load_provision(path.stem, provisions_dir=path.parent)
+                self.assertIs(type(provision.enrich_max_char_buffer), int)
+                self.assertGreater(provision.enrich_max_char_buffer, 0)
 
     def test_loads_all_configured_values(self) -> None:
         provision = self._load_temp(self._definition())
 
         self.assertEqual(provision.clause_type, "safety_rule")
-        self.assertTrue(
-            provision.prompt_description.endswith(
-                "safety_rule Description: Mandatory workplace safety rules."
-            )
+        self.assertIn(
+            "safety_rule Description: Mandatory workplace safety rules.",
+            provision.prompt_description,
         )
         self.assertEqual(provision.extraction_passes, 2)
         self.assertEqual(provision.langextract_max_workers, 3)
         self.assertEqual(provision.langextract_batch_length, 4)
         self.assertEqual(provision.max_char_buffer, 1_000)
+        self.assertEqual(provision.enrich_max_char_buffer, 5_000)
 
     def test_rejects_unsafe_name_and_type_filename_mismatch(self) -> None:
         with self.assertRaises(ValueError):
@@ -128,12 +140,53 @@ class Stage02ProvisionTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     self._load_temp({**self._definition(), key: value})
 
+    def test_accepts_a_char_buffer_schedule_of_one_size_per_pass(self) -> None:
+        definition = {
+            **self._definition(),
+            "N_EXTRACTION_PASSES": 3,
+            "MAX_CHAR_BUFFER": [1_000, 2_000, 3_000],
+        }
+
+        self.assertEqual(
+            self._load_temp(definition).max_char_buffer, [1_000, 2_000, 3_000]
+        )
+
+    def test_rejects_a_schedule_that_does_not_match_the_pass_count(self) -> None:
+        for label, passes, schedule in (
+            ("too short", 3, [1_000, 2_000]),
+            ("too long", 2, [1_000, 2_000, 3_000]),
+            ("empty", 2, []),
+        ):
+            with self.subTest(label=label):
+                definition = {
+                    **self._definition(),
+                    "N_EXTRACTION_PASSES": passes,
+                    "MAX_CHAR_BUFFER": schedule,
+                }
+                with self.assertRaisesRegex(ValueError, "one entry per pass"):
+                    self._load_temp(definition)
+
+    def test_rejects_bad_values_inside_a_char_buffer_schedule(self) -> None:
+        for label, entry in (
+            ("zero", 0), ("negative", -1), ("bool", True),
+            ("string", "1000"), ("float", 1.5), ("none", None),
+        ):
+            with self.subTest(label=label):
+                definition = {
+                    **self._definition(),
+                    "N_EXTRACTION_PASSES": 2,
+                    "MAX_CHAR_BUFFER": [1_000, entry],
+                }
+                with self.assertRaisesRegex(ValueError, r"MAX_CHAR_BUFFER\[1\]"):
+                    self._load_temp(definition)
+
     def test_rejects_bool_zero_and_wrong_typed_integer_values(self) -> None:
         integer_keys = (
             "N_EXTRACTION_PASSES",
             "LANGEXTRACT_MAX_WORKERS",
             "LANGEXTRACT_BATCH_LENGTH",
             "MAX_CHAR_BUFFER",
+            "ENRICH_MAX_CHAR_BUFFER",
         )
         for key in integer_keys:
             for value in (True, 0, -1, "1", 1.5):
@@ -240,7 +293,7 @@ class Stage02ExtractionTests(unittest.TestCase):
                         "model_name": job.model_name,
                         "extraction_class": job.clause_type,
                         "extraction_text": "rule one",
-                        "attributes": {"context": "Applies to operators."},
+                        "generated_extraction_text": "rule one",
                         "span_start": 0,
                         "span_end": 8,
                         "grounding_status": "match_exact",
@@ -252,7 +305,7 @@ class Stage02ExtractionTests(unittest.TestCase):
                         "model_name": job.model_name,
                         "extraction_class": job.clause_type,
                         "extraction_text": "rule two",
-                        "attributes": {"context": None},
+                        "generated_extraction_text": "rule two",
                         "span_start": 9,
                         "span_end": 17,
                         "grounding_status": "match_exact",
@@ -272,8 +325,8 @@ class Stage02ExtractionTests(unittest.TestCase):
             ["rule one", "rule two"],
         )
         self.assertEqual(
-            [row["attributes"] for row in rows],
-            [{"context": "Applies to operators."}, {"context": None}],
+            [row["generated_extraction_text"] for row in rows],
+            ["rule one", "rule two"],
         )
         self.assertEqual(
             seen_text,
@@ -350,59 +403,26 @@ class Stage02RecordTests(unittest.TestCase):
             output_path=Path("safety_rule.jsonl"),
         )
 
-    def test_extraction_to_record_keeps_matching_class_and_trims_context(self) -> None:
+    def test_extraction_to_record_keeps_generated_and_exact_source_text(self) -> None:
         extraction = SimpleNamespace(
             extraction_class="safety_rule",
             extraction_text="Safety rule text",
-            attributes={
-                "context": "  Applies to night-shift employees.  ",
-                "beneficiary": "worker",
-            },
             char_interval=SimpleNamespace(start_pos=5, end_pos=21),
             alignment_status=SimpleNamespace(value="match_exact"),
         )
 
-        record = runner.extraction_to_record(extraction, self._job())
+        record = runner.extraction_to_record(
+            extraction, self._job(), "xxxxxSafety rule text"
+        )
 
         self.assertIsNotNone(record)
         self.assertEqual(record["extraction_class"], "safety_rule")
         self.assertEqual(record["extraction_text"], "Safety rule text")
-        self.assertEqual(
-            record["attributes"],
-            {"context": "Applies to night-shift employees.", "beneficiary": "worker"},
-        )
+        self.assertEqual(record["generated_extraction_text"], "Safety rule text")
+        self.assertNotIn("attributes", record)
+        self.assertNotIn("dropped_attributes", record)
         self.assertEqual(record["span_start"], 5)
         self.assertEqual(record["span_end"], 21)
-
-    def test_extraction_to_record_normalizes_invalid_attributes(self) -> None:
-        attributes_values = [
-            None,
-            {},
-            {"context": None},
-            {"context": "  "},
-            {"context": 3},
-            {"context": None, "beneficiary": "workers"},
-            {"context": None, "beneficiary": 3},
-        ]
-
-        for attributes in attributes_values:
-            with self.subTest(attributes=attributes):
-                extraction = SimpleNamespace(
-                    extraction_class="safety_rule",
-                    extraction_text="Safety rule text",
-                    attributes=attributes,
-                    char_interval=SimpleNamespace(start_pos=5, end_pos=21),
-                    alignment_status=None,
-                )
-
-                record = runner.extraction_to_record(extraction, self._job())
-
-                self.assertIsNotNone(record)
-                self.assertEqual(
-                    record["attributes"],
-                    {"context": None, "beneficiary": "unclear"},
-                )
-                self.assertEqual(record["grounding_status"], "unknown")
 
     def test_extraction_to_record_drops_other_classes_and_ungrounded_text(self) -> None:
         other_class = SimpleNamespace(
@@ -420,8 +440,8 @@ class Stage02RecordTests(unittest.TestCase):
             alignment_status=None,
         )
 
-        self.assertIsNone(runner.extraction_to_record(other_class, self._job()))
-        self.assertIsNone(runner.extraction_to_record(ungrounded, self._job()))
+        self.assertIsNone(runner.extraction_to_record(other_class, self._job(), "text"))
+        self.assertIsNone(runner.extraction_to_record(ungrounded, self._job(), "text"))
 
 
 class Stage02LangExtractTests(unittest.TestCase):
@@ -433,6 +453,7 @@ class Stage02LangExtractTests(unittest.TestCase):
             langextract_max_workers=3,
             langextract_batch_length=4,
             max_char_buffer=1_000,
+            enrich_max_char_buffer=5_000,
         )
         job = runner.ExtractionJob(
             source="source",
@@ -474,22 +495,50 @@ class Stage02LangExtractTests(unittest.TestCase):
             extraction_item["properties"]["safety_rule"],
             {"type": "string"},
         )
-        self.assertEqual(
-            extraction_item["required"],
-            ["safety_rule", "safety_rule_attributes"],
+        self.assertEqual(extraction_item["required"], ["safety_rule"])
+        self.assertNotIn("safety_rule_attributes", extraction_item["properties"])
+
+    def test_factory_uses_openrouter_connection_settings(self) -> None:
+        provision = ProvisionSpec(
+            clause_type="safety_rule",
+            prompt_description="configured prompt",
+            extraction_passes=1,
+            langextract_max_workers=1,
+            langextract_batch_length=1,
+            max_char_buffer=1_000,
+            enrich_max_char_buffer=5_000,
         )
-        attributes_schema = extraction_item["properties"][
-            "safety_rule_attributes"
-        ]
-        self.assertEqual(attributes_schema["required"], ["context", "beneficiary"])
-        self.assertFalse(attributes_schema["additionalProperties"])
-        self.assertEqual(
-            attributes_schema["properties"]["context"],
-            {"anyOf": [{"type": "string"}, {"type": "null"}]},
+
+        job = runner.ExtractionJob(
+            source="source",
+            document_id="doc",
+            ocr_model_name="ocr/model",
+            model_name="google/gemini-3.7-flash",
+            clause_type="safety_rule",
+            input_path=Path("full.txt"),
+            output_path=Path("safety_rule.jsonl"),
         )
+        with (
+            patch.dict(os.environ, {"OPENROUTER_API_KEY": "test-secret"}),
+            patch(
+                "langextract.extract",
+                return_value=SimpleNamespace(extractions=[]),
+            ) as extract,
+        ):
+            extractor = runner.make_langextract_extractor(
+                provision=provision,
+                model_name="google/gemini-3.7-flash",
+                port=9999,
+                endpoint="openrouter",
+            )
+            extractor("contract text", job)
+
+        config = extract.call_args.kwargs["config"]
+        self.assertEqual(config.model_id, "google/gemini-3.7-flash")
+        self.assertEqual(config.provider_kwargs["api_key"], "test-secret")
         self.assertEqual(
-            attributes_schema["properties"]["beneficiary"],
-            {"type": "string", "enum": ["worker", "employer", "unclear"]},
+            config.provider_kwargs["base_url"],
+            "https://openrouter.ai/api/v1",
         )
 
 
@@ -548,6 +597,22 @@ class Stage02CliTests(unittest.TestCase):
         self.assertEqual(args.ocr_model_name, "ATH-MaaS/OvisOCR2")
         self.assertFalse(hasattr(args, "validate"))
         self.assertFalse(hasattr(args, "verify_llm"))
+        self.assertEqual(args.endpoint, "vllm")
+
+    def test_parse_args_accepts_openrouter_endpoint(self) -> None:
+        args = runner.parse_args(
+            [
+                "--provision",
+                "technology",
+                "--endpoint",
+                "openrouter",
+                "--model-name",
+                "google/gemini-3.7-flash",
+            ]
+        )
+
+        self.assertEqual(args.endpoint, "openrouter")
+        self.assertEqual(args.model_name, "google/gemini-3.7-flash")
 
     def test_parse_args_accepts_source_and_multiple_document_ids(self) -> None:
         args = runner.parse_args(
@@ -624,7 +689,7 @@ class Stage02CliTests(unittest.TestCase):
                         "model_name": job.model_name,
                         "extraction_class": job.clause_type,
                         "extraction_text": "table",
-                        "attributes": {"context": None},
+                        "generated_extraction_text": "table",
                         "span_start": 0,
                         "span_end": 5,
                         "grounding_status": "match_exact",
@@ -649,6 +714,8 @@ class Stage02CliTests(unittest.TestCase):
                         "ocr/model",
                         "--model-name",
                         "extract/model",
+                        "--endpoint",
+                        "openrouter",
                         "--source",
                         "source",
                         "--device",
@@ -670,8 +737,10 @@ class Stage02CliTests(unittest.TestCase):
 
         self.assertEqual(len(rows), 1)
         self.assertEqual(rows[0]["extraction_text"], "table")
-        self.assertEqual(rows[0]["attributes"], {"context": None})
+        self.assertNotIn("attributes", rows[0])
         self.assertEqual(server_kwargs[0]["device"], "3")
+        self.assertEqual(server_kwargs[0]["endpoint"], "openrouter")
+        self.assertEqual(extractor_kwargs[0]["endpoint"], "openrouter")
         self.assertEqual(
             server_kwargs[0]["extra_serve_args"],
             [
@@ -743,11 +812,26 @@ class Stage02SpanReconcileTests(unittest.TestCase):
             alignment_status=SimpleNamespace(value="match_exact"),
         )
 
-        record = runner.extraction_to_record(extraction, self._job())
+        source = "xxxxxSafety rule text"
+        record = runner.extraction_to_record(extraction, self._job(), source)
 
         self.assertTrue(record["span_reliable"])
         self.assertEqual(record["span_start"], 5)
         self.assertEqual(record["span_end"], 21)
+
+    def test_invalid_source_intervals_are_dropped(self) -> None:
+        source = "short source"
+        for start, end in ((-1, 2), (2, 2), (4, 3), (0, 99)):
+            with self.subTest(start=start, end=end):
+                extraction = SimpleNamespace(
+                    extraction_class="safety_rule",
+                    extraction_text="generated",
+                    char_interval=SimpleNamespace(start_pos=start, end_pos=end),
+                    alignment_status=None,
+                )
+                self.assertIsNone(
+                    runner.extraction_to_record(extraction, self._job(), source)
+                )
 
 
 if __name__ == "__main__":

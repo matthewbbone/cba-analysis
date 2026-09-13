@@ -15,6 +15,7 @@ if __package__ is None or __package__ == "":
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from pipeline.utils.gpu import validate_cuda_device_selection
+from pipeline.utils.generation import generation_kwargs, make_profiled_langextract_model
 from pipeline.utils.paths import (
     PROJECT_ROOT,
     default_cache_dir,
@@ -30,12 +31,16 @@ except ModuleNotFoundError:
 load_dotenv(PROJECT_ROOT / ".env")
 
 from pipeline.stg_02_extract.structure_provision import (
-    BENEFICIARY_OPTIONS,
-    DEFAULT_BENEFICIARY,
     ProvisionSpec,
     load_provision,
+    resolve_provisions_dir,
 )
-from pipeline.utils.vllm_server import VLLMServer
+from pipeline.utils.vllm_server import (
+    VLLMServer,
+    add_endpoint_argument,
+    apply_model_serve_defaults,
+    openai_client_kwargs,
+)
 
 
 # Must be an instruction-tuned model: langextract talks to vLLM's chat
@@ -49,7 +54,8 @@ REASONING_PARSER_MODEL_MARKERS = (
 )
 INPUT_STAGE_NAME = "stg_01_ocr"
 STAGE_NAME = "stg_02_extract"
-
+DEFAULT_MAX_MODEL_LEN = 14000
+DEFAULT_NUM_GPUS = 1
 
 @dataclass(frozen=True)
 class ExtractionJob:
@@ -202,19 +208,11 @@ def extraction_grounding_status(extraction) -> str:
     return getattr(status, "value", str(status))
 
 
-# Non-exact grounding often anchors only a matched prefix while extraction_text
-# holds the full provision, leaving span_start/span_end
-# covering far fewer characters than the text. Recompute the span when the
-# recorded length disagrees with the text length by more than this tolerance.
-SPAN_LENGTH_TOLERANCE = 50
-
-
 def reconcile_span(
     span_start: int,
     span_end: int,
-    grounding_status: str,
     extraction_text: str,
-    source_text: str | None,
+    source_text: str,
 ) -> tuple[int, int, bool]:
     """Return (span_start, span_end, span_reliable), fixing corrupted spans.
 
@@ -223,50 +221,50 @@ def reconcile_span(
     happens, re-locate the full text in the source; if found, use those
     offsets; otherwise flag the span as unreliable.
     """
-    length_mismatch = abs((span_end - span_start) - len(extraction_text)) > SPAN_LENGTH_TOLERANCE
-    if grounding_status == "match_exact" and not length_mismatch:
+    if source_text[span_start:span_end] == extraction_text:
         return span_start, span_end, True
-    if source_text is not None and extraction_text:
-        found = source_text.find(extraction_text)
-        if found != -1:
-            return found, found + len(extraction_text), True
-    return span_start, span_end, not length_mismatch
-
-
-def extraction_beneficiary(attributes: object) -> str:
-    """The beneficiary the model named, falling back when it named none.
-
-    Guided decoding constrains this to BENEFICIARY_OPTIONS, so the fallback only
-    fires for records that bypassed the schema.
-    """
-
-    value = attributes.get("beneficiary") if isinstance(attributes, dict) else None
-    if isinstance(value, str) and value in BENEFICIARY_OPTIONS:
-        return value
-    return DEFAULT_BENEFICIARY
+    if extraction_text:
+        matches: list[int] = []
+        search_from = 0
+        while (found := source_text.find(extraction_text, search_from)) != -1:
+            matches.append(found)
+            search_from = found + 1
+        if matches:
+            nearest = min(matches, key=lambda candidate: abs(candidate - span_start))
+            return nearest, nearest + len(extraction_text), True
+    return span_start, span_end, False
 
 
 def extraction_to_record(
     extraction,
     job: ExtractionJob,
-    source_text: str | None = None,
+    source_text: str,
 ) -> dict[str, object] | None:
     if getattr(extraction, "extraction_class", None) != job.clause_type:
         return None
 
     span_start, span_end = extraction_char_span(extraction)
-    if span_start is None or span_end is None:
+    if not (
+        isinstance(span_start, int)
+        and not isinstance(span_start, bool)
+        and isinstance(span_end, int)
+        and not isinstance(span_end, bool)
+        and 0 <= span_start < span_end <= len(source_text)
+    ):
         return None
 
-    extraction_text = getattr(extraction, "extraction_text", "")
+    generated_extraction_text = getattr(extraction, "extraction_text", "")
+    if not isinstance(generated_extraction_text, str):
+        return None
     grounding_status = extraction_grounding_status(extraction)
     span_start, span_end, span_reliable = reconcile_span(
-        span_start, span_end, grounding_status, extraction_text, source_text
+        span_start,
+        span_end,
+        generated_extraction_text,
+        source_text,
     )
-    attributes = getattr(extraction, "attributes", None)
-    raw_context = attributes.get("context") if isinstance(attributes, dict) else None
-    context = raw_context.strip() if isinstance(raw_context, str) else None
-    beneficiary = extraction_beneficiary(attributes)
+    if not 0 <= span_start < span_end <= len(source_text):
+        return None
 
     return {
         "source": job.source,
@@ -274,8 +272,8 @@ def extraction_to_record(
         "ocr_model_name": job.ocr_model_name,
         "model_name": job.model_name,
         "extraction_class": job.clause_type,
-        "extraction_text": extraction_text,
-        "attributes": {"context": context or None, "beneficiary": beneficiary},
+        "extraction_text": source_text[span_start:span_end],
+        "generated_extraction_text": generated_extraction_text,
         "span_start": span_start,
         "span_end": span_end,
         "span_reliable": span_reliable,
@@ -294,6 +292,7 @@ def make_langextract_extractor(
     provision: ProvisionSpec,
     model_name: str,
     port: int,
+    endpoint: str = "vllm",
 ) -> Extractor:
     import langextract as lx
     from langextract.factory import ModelConfig
@@ -302,36 +301,27 @@ def make_langextract_extractor(
         model_id=model_name,
         provider="openai",
         provider_kwargs={
-            "api_key": "EMPTY",
-            "base_url": f"http://localhost:{port}/v1",
+            **openai_client_kwargs(endpoint, port),
             # LangExtract's OpenAI provider owns its own request pool, so this
             # must be configured both here and on lx.extract below.
             "max_workers": provision.langextract_max_workers,
         },
     )
     output_schema = lx.schema.extractions_schema(
-        lx.schema.extraction_item_schema(
-            provision.clause_type,
-            attributes={
-                "context": {
-                    "anyOf": [
-                        {"type": "string"},
-                        {"type": "null"},
-                    ]
-                },
-                "beneficiary": {
-                    "type": "string",
-                    "enum": list(BENEFICIARY_OPTIONS),
-                },
-            },
-        )
+        lx.schema.extraction_item_schema(provision.clause_type)
     )
+    model_kwargs = {"config": config}
+    if generation_kwargs(model_name, endpoint):
+        model_kwargs = {"model": make_profiled_langextract_model(
+            model_name, endpoint, openai_client_kwargs(endpoint, port),
+            provision.langextract_max_workers,
+        )}
 
     def extractor(text: str, job: ExtractionJob) -> list[dict[str, object]]:
         annotated_document = lx.extract(
             text_or_documents=text,
             prompt_description=provision.prompt_description,
-            config=config,
+            **model_kwargs,
             output_schema=output_schema,
             extraction_passes=provision.extraction_passes,
             max_workers=provision.langextract_max_workers,
@@ -456,11 +446,16 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         "--provision",
         required=True,
         metavar="NAME",
-        help="Load the bundled provisions/NAME.yaml definition.",
+        help=(
+            "Load the bundled provisions/NAME.yaml definition. Loaded from "
+            "provisions/<source>/NAME.yaml instead when --source names a "
+            "source with its own provisions subdirectory (e.g. cuad)."
+        ),
     )
     parser.add_argument("--input-root", type=Path, default=default_input_root())
     parser.add_argument("--output-root", type=Path, default=default_output_root())
     parser.add_argument("--model-name", default=DEFAULT_MODEL_NAME)
+    add_endpoint_argument(parser)
     parser.add_argument(
         "--ocr-model-name",
         default=DEFAULT_OCR_MODEL_NAME,
@@ -479,7 +474,16 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
             "this when another reasoning model requires its own parser."
         ),
     )
-    parser.add_argument("--num-gpus", type=int, default=1)
+    # ``None`` records that the option was not supplied, so a model that needs
+    # a specific serve layout can set it after the model name is known.
+    parser.add_argument(
+        "--num-gpus",
+        type=int,
+        help=(
+            "GPUs to shard the model across (tensor parallel size). Defaults "
+            f"to the model's own requirement, otherwise {DEFAULT_NUM_GPUS}."
+        ),
+    )
     parser.add_argument(
         "--device",
         metavar="GPU_IDS",
@@ -489,7 +493,14 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
             "--num-gpus. Overrides CUDA_VISIBLE_DEVICES for the server process."
         ),
     )
-    parser.add_argument("--max-model-len", type=int, default=14000)
+    parser.add_argument(
+        "--max-model-len",
+        type=int,
+        help=(
+            "Context window to serve. Defaults to the model's own requirement, "
+            f"otherwise {DEFAULT_MAX_MODEL_LEN}."
+        ),
+    )
     parser.add_argument(
         "--gpu-memory-utilization",
         type=float,
@@ -532,18 +543,28 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 
 
 def validate_args(args: argparse.Namespace) -> None:
+    apply_model_serve_defaults(
+        args,
+        default_max_model_len=DEFAULT_MAX_MODEL_LEN,
+        default_num_gpus=DEFAULT_NUM_GPUS,
+    )
     if args.concurrency < 1:
         raise ValueError("--concurrency must be at least 1")
-    if args.num_gpus < 1:
-        raise ValueError("--num-gpus must be at least 1")
-    args.device = validate_cuda_device_selection(args.device, args.num_gpus)
-    if args.max_model_len < 1:
-        raise ValueError("--max-model-len must be at least 1")
-    if args.reasoning_parser is not None:
+    if args.endpoint == "vllm":
+        if args.num_gpus < 1:
+            raise ValueError("--num-gpus must be at least 1")
+        args.device = validate_cuda_device_selection(args.device, args.num_gpus)
+        if args.max_model_len < 1:
+            raise ValueError("--max-model-len must be at least 1")
+    if args.endpoint == "vllm" and args.reasoning_parser is not None:
         args.reasoning_parser = args.reasoning_parser.strip()
         if not args.reasoning_parser:
             raise ValueError("--reasoning-parser must not be empty")
-    if args.gpu_memory_utilization is not None and not 0 < args.gpu_memory_utilization <= 1:
+    if (
+        args.endpoint == "vllm"
+        and args.gpu_memory_utilization is not None
+        and not 0 < args.gpu_memory_utilization <= 1
+    ):
         raise ValueError("--gpu-memory-utilization must be greater than 0 and at most 1")
     if args.sample is not None and args.sample < 1:
         raise ValueError("--sample must be at least 1")
@@ -565,7 +586,9 @@ def report_results(results: list[ExtractionResult]) -> None:
 def main(argv: list[str] | None = None) -> None:
     args = parse_args(argv)
     validate_args(args)
-    provision = load_provision(args.provision)
+    provision = load_provision(
+        args.provision, provisions_dir=resolve_provisions_dir(args.source)
+    )
     ocr_model_name = args.ocr_model_name or args.model_name
 
     jobs = discover_full_texts(
@@ -609,6 +632,7 @@ def main(argv: list[str] | None = None) -> None:
     try:
         server = VLLMServer(
             model_name=args.model_name,
+            endpoint=args.endpoint,
             port=args.port,
             max_model_len=args.max_model_len,
             num_gpus=args.num_gpus,
@@ -625,6 +649,7 @@ def main(argv: list[str] | None = None) -> None:
             provision=provision,
             model_name=args.model_name,
             port=args.port,
+            endpoint=args.endpoint,
         )
 
         def processor(job: ExtractionJob) -> ExtractionResult:

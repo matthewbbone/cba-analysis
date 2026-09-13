@@ -1,14 +1,27 @@
-"""Plot subtype prevalence and beneficiary share for linked stage-03 classifications.
+"""Plot subtype prevalence and beneficiary share for linked stage-04 classifications.
 
 Reads the document table written by ``link_classifications.py`` and renders six
 figures: subtype prevalence overall, across contract-expiration cohorts, and by
 NAICS sector, plus the same three cuts for beneficiary share.
 
+Below the top taxonomy level, the three subtype figures are drawn once per
+level-1 category rather than once for the whole level: a level-2 run over a
+taxonomy with three level-1 categories therefore writes 3x as many subtype
+figures, each comparing only the subtypes that were offered as alternatives to
+one another under one level-1 label. These per-category figures replace the
+usual "no provision of the type at all" bucket with an "other" bucket specific
+to the category: the share of CBAs holding a provision link_classifications.py
+already placed under this level-1 label but that was then classified "other"
+among its children, rather than any of the named subtypes -- not the same
+population as a CBA carrying no provision of the clause type at all. The
+beneficiary figures are unaffected -- beneficiary is independent of subtype.
+
 The subtype figures report a share of *documents*, not of provisions: for each
 group, the percentage of CBAs carrying at least one provision of each subtype,
-plus the percentage carrying no provision of the type at all.  A document with
-ten task-allocation provisions counts once, and because a CBA can carry several
-subtypes the shares in a group do not sum to 100.
+plus (outside the per-category level-2+ figures) the percentage carrying no
+provision of the type at all.  A document with ten task-allocation provisions
+counts once, and because a CBA can carry several subtypes the shares in a
+group do not sum to 100.
 
 The beneficiary figures report a different statistic: each CBA's own percentage
 of provisions naming a beneficiary, averaged across CBAs -- the mean of
@@ -55,9 +68,11 @@ except ModuleNotFoundError:  # pragma: no cover - exercised only without matplot
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.colors import LinearSegmentedColormap
 
 from pipeline.stg_02_extract.structure_provision import (
     RESERVED_SUBTYPE_LABEL,
+    SubtypeNode,
     labels_at_level,
     load_provision,
     taxonomy_depth,
@@ -95,9 +110,14 @@ OTHER_SECTOR_LABEL = "Other sectors"
 # industry, and pinned below the real sectors.
 NO_NAICS_LABEL = "No NAICS code"
 
-# The absence of any provision is its own series on every figure.  It is keyed
-# by a name no subtype can collide with and painted neutral grey, so the six
-# categorical hues stay reserved for the subtypes themselves.
+# The absence of any provision is its own series on every level-1 figure.  It is
+# keyed by a name no subtype can collide with and painted neutral grey, so the
+# six categorical hues stay reserved for the subtypes themselves.  Figures split
+# by level-1 category (see ``level1_groups``) drop this series -- a CBA with no
+# provision of the level-2 group's parent category is not the same thing as a
+# CBA with no provision of the whole clause type -- and draw an
+# ``other_in_<level1 label>`` series in its place, painted with the same grey so
+# both read as "the catch-all bucket" wherever either appears.
 NONE_KEY = "__none__"
 NONE_COLOR = "#6b6a65"
 
@@ -117,6 +137,15 @@ SERIES_COLORS = (
 # distinguishable without relying on colour alone.
 SERIES_MARKERS = ("o", "s", "^", "D", "v", "P", "X", "*")
 NONE_MARKER = "o"
+
+# Fixed hues for the beneficiary labels with an intuitive colour, so a
+# reader does not have to recheck the legend between beneficiary figures.
+# Any other beneficiary label still draws from SERIES_COLORS.
+BENEFICIARY_COLOR_OVERRIDES = {
+    "workers": SERIES_COLORS[0],  # blue
+    "employer": SERIES_COLORS[7],  # red
+    "unclear": SERIES_COLORS[5],  # green
+}
 
 TEXT_PRIMARY = "#0b0b0b"
 TEXT_SECONDARY = "#52514e"
@@ -187,21 +216,100 @@ def frequent_subtypes(
     return kept, dropped
 
 
-def series_order(subtypes: Sequence[str]) -> list[str]:
-    """Return the plotting order: subtypes as declared, absence last."""
+def level1_groups(
+    taxonomy: Mapping[str, SubtypeNode], subtypes: Sequence[str]
+) -> dict[str, list[str]]:
+    """Partition ``subtypes`` by their level-1 ancestor in ``taxonomy``.
 
-    return [*subtypes, NONE_KEY]
+    Used to split a deeper level's flat subtype list into one series group per
+    top-level classification, so a level-2+ run can render a separate set of
+    figures per level-1 category instead of one figure mixing every branch.
+    The injected "other" label names no node in the taxonomy and so belongs to
+    no single level-1 ancestor -- it is dropped from every group rather than
+    assigned to one arbitrarily. Groups are returned in taxonomy declaration
+    order, each holding its members in ``subtypes`` order.
+    """
+
+    ancestor: dict[str, str] = {}
+
+    def walk(nodes: Mapping[str, SubtypeNode], top: str) -> None:
+        for label, node in nodes.items():
+            ancestor[label] = top
+            walk(node.children, top)
+
+    for top_label, node in taxonomy.items():
+        walk({top_label: node}, top_label)
+
+    groups: dict[str, list[str]] = {top_label: [] for top_label in taxonomy}
+    for subtype in subtypes:
+        top_label = ancestor.get(subtype)
+        if top_label is not None:
+            groups[top_label].append(subtype)
+    return groups
+
+
+def group_series_keys(
+    top_label: str,
+    members: Sequence[str],
+    documents: pd.DataFrame,
+    colors: dict[str, str],
+    markers: dict[str, str],
+    labels: dict[str, str],
+) -> list[str]:
+    """Series to draw for one level-1 category's figures.
+
+    ``members`` plus that category's own "other" bucket, in place of the
+    level-1 absence series: a CBA with a provision link_classifications.py
+    already placed under ``top_label`` but that was then classified "other"
+    among its children, not a CBA with no provision of the clause type at all.
+
+    Mutates ``colors``/``markers``/``labels`` in place to add a style entry for
+    the synthetic ``other_in_<top_label>`` key, painted the same grey as
+    :data:`NONE_KEY` so both read as "the catch-all bucket" wherever either
+    appears. Falls back to the bare member list, with a warning, when
+    ``documents`` predates the ``has_other_in_<top_label>`` column -- an older
+    table built before this bucket existed.
+    """
+
+    group_keys = list(members)
+    other_column = f"has_other_in_{top_label}"
+    if other_column not in documents.columns:
+        print(
+            f"  [warn] documents table carries no {other_column} column; "
+            "rebuild it with the updated link_classifications.py to show the "
+            f"'other' bucket for {top_label!r}"
+        )
+        return group_keys
+
+    other_key = f"other_in_{top_label}"
+    colors.setdefault(other_key, NONE_COLOR)
+    markers.setdefault(other_key, NONE_MARKER)
+    labels.setdefault(other_key, f"Other {top_label.replace('_', ' ')} subtype")
+    group_keys.append(other_key)
+    return group_keys
+
+
+def series_order(subtypes: Sequence[str], include_none: bool = True) -> list[str]:
+    """Return the plotting order: subtypes as declared, absence last.
+
+    ``include_none`` is off for a figure split by level-1 category: those
+    figures carry their own ``other_in_<level1 label>`` catch-all as an
+    ordinary member of ``subtypes`` instead, so appending :data:`NONE_KEY` on
+    top would draw two different catch-all buckets on the same figure.
+    """
+
+    return [*subtypes, NONE_KEY] if include_none else list(subtypes)
 
 
 def _subtype_shares_for(
-    frame: pd.DataFrame, subtypes: Sequence[str]
+    frame: pd.DataFrame, subtypes: Sequence[str], include_none: bool = True
 ) -> pd.Series:
     """Percentage of the CBAs in ``frame`` carrying each series.
 
     The single definition of the subtype statistic, so the raw lines and the
     composition-adjusted lines cannot drift apart.  Index is the subtypes plus
-    :data:`NONE_KEY`; the values do not sum to 100 because one CBA can carry
-    several subtypes.
+    :data:`NONE_KEY` when ``include_none``; the values do not sum to 100
+    because one CBA can carry several subtypes.
     """
 
     total = len(frame)
@@ -210,26 +318,33 @@ def _subtype_shares_for(
         column = f"has_{subtype}"
         carried = int(frame[column].astype(bool).sum()) if column in frame else 0
         shares[subtype] = carried / total * 100 if total else 0.0
-    without_any = int((frame["n_provisions"] == 0).sum())
-    shares[NONE_KEY] = without_any / total * 100 if total else 0.0
+    if include_none:
+        without_any = int((frame["n_provisions"] == 0).sum())
+        shares[NONE_KEY] = without_any / total * 100 if total else 0.0
     return pd.Series(shares, dtype=float)
 
 
 def document_shares(
-    documents: pd.DataFrame, group: str, subtypes: Sequence[str]
+    documents: pd.DataFrame,
+    group: str,
+    subtypes: Sequence[str],
+    include_none: bool = True,
 ) -> tuple[pd.DataFrame, pd.Series]:
     """Return per-group percentages of documents carrying each series.
 
-    Rows are groups, columns are the subtypes plus :data:`NONE_KEY`.  A row does
-    not sum to 100: one CBA can carry several subtypes, and the absence series
-    is the complement of carrying any.
+    Rows are groups, columns are the subtypes plus :data:`NONE_KEY` when
+    ``include_none``. A row does not sum to 100: one CBA can carry several
+    subtypes, and the absence series is the complement of carrying any.
     """
 
     grouped = documents.groupby(group, dropna=True)
     totals = grouped.size()
-    keys = series_order(subtypes)
+    keys = series_order(subtypes, include_none=include_none)
     shares = pd.DataFrame(
-        [_subtype_shares_for(frame, subtypes)[keys] for _, frame in grouped],
+        [
+            _subtype_shares_for(frame, subtypes, include_none=include_none)[keys]
+            for _, frame in grouped
+        ],
         index=totals.index,
         columns=keys,
     )
@@ -237,7 +352,7 @@ def document_shares(
 
 
 def overall_shares(
-    documents: pd.DataFrame, subtypes: Sequence[str]
+    documents: pd.DataFrame, subtypes: Sequence[str], include_none: bool = True
 ) -> tuple[pd.Series, pd.Series]:
     """Return the same shares for the whole table, plus the document counts."""
 
@@ -249,7 +364,8 @@ def overall_shares(
             if column in documents.columns
             else 0
         )
-    counts[NONE_KEY] = int((documents["n_provisions"] == 0).sum())
+    if include_none:
+        counts[NONE_KEY] = int((documents["n_provisions"] == 0).sum())
     counts = pd.Series(counts, dtype=float)
     return counts / max(len(documents), 1) * 100, counts
 
@@ -261,12 +377,21 @@ def beneficiary_style(
 
     Unlike :func:`subtype_style`, there is no absence series here: every
     provision names exactly one beneficiary, so the three labels already
-    exhaust the space.
+    exhaust the space. Labels in BENEFICIARY_COLOR_OVERRIDES always draw
+    their fixed hue; any other label falls back to the categorical
+    sequence, skipping the reserved hues.
     """
 
+    fallback_colors = [
+        color
+        for color in SERIES_COLORS
+        if color not in BENEFICIARY_COLOR_OVERRIDES.values()
+    ]
+    next_fallback = iter(fallback_colors)
     colors = {
-        beneficiary: SERIES_COLORS[index % len(SERIES_COLORS)]
-        for index, beneficiary in enumerate(beneficiaries)
+        beneficiary: BENEFICIARY_COLOR_OVERRIDES.get(beneficiary)
+        or next(next_fallback)
+        for beneficiary in beneficiaries
     }
     markers = {
         beneficiary: SERIES_MARKERS[index % len(SERIES_MARKERS)]
@@ -459,8 +584,9 @@ def plot_overall(
     colors,
     labels,
     clause_type: str,
+    include_none: bool = True,
 ) -> "matplotlib.figure.Figure":
-    shares, counts = overall_shares(documents, subtypes)
+    shares, counts = overall_shares(documents, subtypes, include_none=include_none)
     shares = shares.sort_values(ascending=True)
 
     fig, ax = plt.subplots(figsize=(8.4, 0.42 * len(shares) + 2.0))
@@ -637,6 +763,7 @@ def plot_by_period(
     industry_adjusted: bool = True,
     min_sector_docs: int = DEFAULT_MIN_SECTOR_DOCS,
     min_cell_docs: int = 1,
+    include_none: bool = True,
 ) -> "matplotlib.figure.Figure | None":
     known = documents[
         documents["expire_period"].notna() & (documents["expire_period"] != "")
@@ -644,7 +771,9 @@ def plot_by_period(
     if known.empty:
         print("  [warn] no document carries an expiration cohort; skipping figure")
         return None
-    shares, totals = document_shares(known, "expire_period", subtypes)
+    shares, totals = document_shares(
+        known, "expire_period", subtypes, include_none=include_none
+    )
     shares = shares.sort_index()
 
     kept = [period for period in shares.index if totals.get(period, 0) >= min_docs]
@@ -660,7 +789,7 @@ def plot_by_period(
 
     fig, ax = plt.subplots(figsize=(9.5, 5.4))
     positions = range(len(kept))
-    keys = series_order(subtypes)
+    keys = series_order(subtypes, include_none=include_none)
     for key in keys:
         ax.plot(
             list(positions),
@@ -875,6 +1004,7 @@ def plot_by_sector(
     min_docs: int,
     clause_type: str,
     show_unknown: bool = True,
+    include_none: bool = True,
 ) -> "matplotlib.figure.Figure | None":
     grouped = _grouped_by_sector(documents, min_docs, keep_unknown=show_unknown)
     if grouped is None:
@@ -882,11 +1012,13 @@ def plot_by_sector(
         return None
     known, doc_counts = grouped
 
-    shares, totals = document_shares(known, "sector_group", subtypes)
+    shares, totals = document_shares(
+        known, "sector_group", subtypes, include_none=include_none
+    )
     order = _sector_order(totals)
     shares = shares.loc[order]
 
-    keys = series_order(subtypes)
+    keys = series_order(subtypes, include_none=include_none)
     # One slot per industry, split evenly between the series; the bar is drawn a
     # touch thinner than its slot so neighbours never touch.
     slot = 0.86
@@ -931,6 +1063,330 @@ def plot_by_sector(
             min_docs, int(doc_counts.get(UNKNOWN_SECTOR, 0)), show_unknown
         ),
     )
+    return fig
+
+
+FOCUS_COUNT_CAPTION = (
+    "Counts of individual provisions, not CBAs -- a document with several such "
+    "provisions contributes to every applicable series once per provision."
+)
+
+FOCUS_BENEFICIARIES = ("employer", "workers")
+
+
+def _named_other_style_handles() -> list:
+    """Two proxies naming solid-vs-dotted, so each beneficiary needs only one legend entry.
+
+    Mirrors :func:`_style_legend_handles`: colour already carries the
+    beneficiary, so line style is free to carry named-subtype-vs-"other"
+    instead of being repeated per beneficiary.
+    """
+
+    from matplotlib.lines import Line2D
+
+    return [
+        Line2D([], [], color=TEXT_PRIMARY, linewidth=2, label="Named subtype at level 2"),
+        Line2D(
+            [],
+            [],
+            color=TEXT_PRIMARY,
+            linewidth=2,
+            linestyle=ADJUSTED_LINESTYLE,
+            label="Classified 'other' at level 2",
+        ),
+    ]
+
+
+def plot_focus_category_counts_by_period(
+    provisions: pd.DataFrame,
+    level1_label: str,
+    min_docs: int,
+    beneficiaries: Sequence[str] = FOCUS_BENEFICIARIES,
+) -> "matplotlib.figure.Figure | None":
+    """Time series of raw provision counts for one level-1 category, by beneficiary.
+
+    Unlike the share figures elsewhere in this module, which report the
+    percentage of CBAs carrying a subtype, this counts the provisions
+    themselves: one solid line per beneficiary for provisions the category's
+    named level-2 subtypes absorbed, and one dotted line, same colour and
+    marker, for the "other" bucket its own children left over. Beneficiary
+    colours match :func:`beneficiary_style`, so a reader does not have to
+    recheck the legend between this figure and the beneficiary-share figures.
+    Requires a provisions table built at level 2 or deeper, whose
+    ``subtype_1`` column names each provision's level-1 ancestor independently
+    of ``subtype``, which by then names the deeper label.
+    """
+
+    if "subtype_1" not in provisions.columns:
+        print(
+            "  [warn] provisions table carries no subtype_1 column; rebuild it "
+            "with the updated link_classifications.py at --level 2 or deeper "
+            "to show the focus-category figure"
+        )
+        return None
+
+    scoped = provisions[
+        (provisions["subtype_1"] == level1_label)
+        & provisions["beneficiary"].isin(beneficiaries)
+        & provisions["expire_period"].notna()
+        & (provisions["expire_period"] != "")
+    ]
+    if scoped.empty:
+        print(
+            f"  [warn] no {'/'.join(beneficiaries)} {level1_label} provision "
+            "carries an expiration cohort; skipping focus-category figure"
+        )
+        return None
+
+    totals = scoped.groupby("expire_period").size()
+    periods = sorted(totals.index)
+    kept = [period for period in periods if totals.get(period, 0) >= min_docs]
+    dropped = [
+        f"{period} ({_plural(int(totals.get(period, 0)), 'provision')})"
+        for period in periods
+        if period not in kept
+    ]
+    if not kept:
+        print(
+            "  [warn] no expiration cohort meets --min-group-docs; skipping "
+            "focus-category figure"
+        )
+        return None
+
+    colors, markers, labels = beneficiary_style(beneficiaries)
+    category_title = level1_label.replace("_", " ")
+
+    fig, ax = plt.subplots(figsize=(9.5, 5.4))
+    positions = range(len(kept))
+    highest = 0
+    for beneficiary in beneficiaries:
+        subset = scoped[scoped["beneficiary"] == beneficiary]
+        is_other = subset["subtype"] == RESERVED_SUBTYPE_LABEL
+        named = subset[~is_other].groupby("expire_period").size()
+        other = subset[is_other].groupby("expire_period").size()
+        named_values = [int(named.get(period, 0)) for period in kept]
+        other_values = [int(other.get(period, 0)) for period in kept]
+        highest = max(highest, max(named_values, default=0), max(other_values, default=0))
+
+        ax.plot(
+            list(positions),
+            named_values,
+            color=colors[beneficiary],
+            marker=markers[beneficiary],
+            markersize=5.5,
+            linewidth=2,
+            label=labels[beneficiary],
+            zorder=2,
+        )
+        ax.plot(
+            list(positions),
+            other_values,
+            color=colors[beneficiary],
+            marker=markers[beneficiary],
+            markersize=5.5,
+            markerfacecolor="none",
+            linewidth=1.8,
+            linestyle=ADJUSTED_LINESTYLE,
+            label="_nolegend_",
+            zorder=2,
+        )
+
+    ax.set_xticks(list(positions))
+    ax.set_xticklabels(
+        [f"{period}\n{int(totals.get(period, 0))} provisions" for period in kept]
+    )
+    ax.set_ylim(0, max(highest * 1.15, 5))
+    ax.set_xlabel(PERIOD_AXIS_LABEL, color=TEXT_SECONDARY, fontsize=9)
+    ax.set_ylabel("Number of provisions", color=TEXT_SECONDARY, fontsize=9)
+    extra = _named_other_style_handles()
+    ax.set_title(
+        f"{category_title.capitalize()} provisions by beneficiary, by expiration cohort",
+        loc="left",
+        color=TEXT_PRIMARY,
+        pad=_title_pad(len(beneficiaries) + len(extra), ncol=2),
+    )
+    _tidy(ax, axis="y")
+    _legend(ax, ncol=2, extra_handles=extra)
+    caption = PERIOD_CAPTION + " " + FOCUS_COUNT_CAPTION
+    if dropped:
+        caption += f" Cohorts below {min_docs} provisions omitted: {', '.join(dropped)}."
+    _caption(fig, ax, caption)
+    return fig
+
+
+# Eras coarser than the five-year cohorts elsewhere in this module: a heatmap
+# with one column per (beneficiary, cohort) pair would need as many columns as
+# there are cohorts times beneficiaries, crowding out the level-1 row labels
+# it exists to compare. Bounds are inclusive expiration years.
+LEVEL1_ERA_BUCKETS = (("00-14", 2000, 2014), ("15-29", 2015, 2029))
+
+# White to violet: a hue this module does not already use for a beneficiary or
+# a subtype, so shading a cell by magnitude never reads as though it were
+# naming an identity the row/column labels do not already carry.
+HEATMAP_CMAP = LinearSegmentedColormap.from_list("cba_seq_violet", ["#ffffff", "#4a3aa7"])
+
+
+def level1_beneficiary_era_shares(
+    provisions: pd.DataFrame,
+    level1_labels: Sequence[str],
+    beneficiaries: Sequence[str] = FOCUS_BENEFICIARIES,
+    era_buckets: Sequence[tuple[str, int, int]] = LEVEL1_ERA_BUCKETS,
+) -> tuple[pd.DataFrame, pd.Series, int]:
+    """Share of CBAs carrying each level-1 category (rows), by beneficiary-era (columns).
+
+    Each column's own denominator is the CBAs holding at least one provision
+    naming that column's beneficiary within that column's era -- not the whole
+    corpus -- since a CBA with no such provision could not carry any subtype of
+    it either. A CBA counts once per cell however many matching provisions it
+    holds, the same document-level counting unit as the rest of this module's
+    subtype-share figures. Rows are the taxonomy's level-1 categories in
+    declared order, plus the "other" escape hatch stage 4 offers at every
+    level, appended last so it reads as the catch-all it is. Requires a
+    provisions table built at level 1, whose ``subtype`` column already names
+    the level-1 label (or "other") directly.
+
+    Returns the share matrix, each column's denominator (CBA count), and the
+    number of CBAs that carry a provision naming an included beneficiary but
+    only outside every era -- present nowhere in the matrix, not merely absent
+    from one cell.
+    """
+
+    rows = [*level1_labels, RESERVED_SUBTYPE_LABEL]
+    shares = pd.DataFrame(index=rows, dtype=float)
+    totals: dict[str, int] = {}
+    covered_docs: set = set()
+    in_scope_docs = set(
+        provisions.loc[provisions["beneficiary"].isin(beneficiaries), "document_id"]
+    )
+
+    for beneficiary in beneficiaries:
+        for era_label, start_year, end_year in era_buckets:
+            column = f"{beneficiary.capitalize()} ({era_label})"
+            mask = (provisions["beneficiary"] == beneficiary) & provisions[
+                "expire_year"
+            ].between(start_year, end_year)
+            scoped = provisions[mask]
+            covered_docs |= set(scoped["document_id"])
+            denominator = scoped["document_id"].nunique()
+            totals[column] = int(denominator)
+            if denominator == 0:
+                shares[column] = [0.0 for _ in rows]
+                continue
+            shares[column] = [
+                scoped.loc[scoped["subtype"] == row, "document_id"].nunique()
+                / denominator
+                * 100
+                for row in rows
+            ]
+
+    excluded_docs = len(in_scope_docs - covered_docs)
+    return shares, pd.Series(totals), excluded_docs
+
+
+def plot_level1_beneficiary_era_heatmap(
+    provisions: pd.DataFrame,
+    level1_labels: Sequence[str],
+    clause_type: str,
+    beneficiaries: Sequence[str] = FOCUS_BENEFICIARIES,
+    era_buckets: Sequence[tuple[str, int, int]] = LEVEL1_ERA_BUCKETS,
+) -> "matplotlib.figure.Figure | None":
+    """Heatmap of the share of CBAs: level-1 category x (beneficiary, era).
+
+    Cell shading is a single sequential hue standing for magnitude alone --
+    independent of which beneficiary or era a column names -- so the color
+    channel never competes with the identity the row and column labels already
+    carry. Requires a provisions table built at level 1 (``subtype`` already
+    the level-1 label or "other") with the harmonized ``expire_year`` column.
+    """
+
+    if "expire_year" not in provisions.columns:
+        print(
+            "  [warn] provisions table carries no expire_year column; skipping "
+            "level-1 beneficiary/era heatmap"
+        )
+        return None
+
+    shares, totals, excluded_docs = level1_beneficiary_era_shares(
+        provisions, level1_labels, beneficiaries, era_buckets
+    )
+    values = shares.to_numpy(dtype=float)
+    if totals.sum() == 0:
+        print(
+            "  [warn] no CBA falls into a plotted beneficiary/era column; "
+            "skipping level-1 beneficiary/era heatmap"
+        )
+        return None
+
+    row_labels = [row.replace("_", " ").capitalize() for row in shares.index]
+    column_labels = [
+        f"{column}\n{int(totals[column])} CBAs" for column in shares.columns
+    ]
+    vmax = max(float(values.max()), 1.0)
+
+    fig, ax = plt.subplots(
+        figsize=(1.9 * len(shares.columns) + 2.2, 0.65 * len(shares.index) + 1.8)
+    )
+    mesh = ax.imshow(values, cmap=HEATMAP_CMAP, vmin=0, vmax=vmax, aspect="auto")
+
+    ax.set_xticks(range(len(shares.columns)))
+    ax.set_xticklabels(column_labels, color=TEXT_SECONDARY, fontsize=9)
+    ax.set_yticks(range(len(shares.index)))
+    ax.set_yticklabels(row_labels, color=TEXT_SECONDARY, fontsize=9)
+    ax.tick_params(length=0)
+    for spine in ax.spines.values():
+        spine.set_visible(False)
+
+    # imshow's cells touch by default; a thin white seam substitutes for the
+    # gridlines every other figure in this module draws behind its marks.
+    ax.set_xticks([x - 0.5 for x in range(1, len(shares.columns))], minor=True)
+    ax.set_yticks([y - 0.5 for y in range(1, len(shares.index))], minor=True)
+    ax.grid(which="minor", color="white", linewidth=2)
+    ax.tick_params(which="minor", length=0)
+
+    for row_index, row in enumerate(shares.index):
+        for col_index, column in enumerate(shares.columns):
+            value = float(shares.loc[row, column])
+            text_color = "white" if value / vmax > 0.5 else TEXT_PRIMARY
+            ax.text(
+                col_index,
+                row_index,
+                f"{value:.1f}%",
+                ha="center",
+                va="center",
+                color=text_color,
+                fontsize=10,
+            )
+
+    colorbar = fig.colorbar(mesh, ax=ax, fraction=0.035, pad=0.02)
+    colorbar.outline.set_visible(False)
+    colorbar.ax.tick_params(colors=TEXT_SECONDARY, labelsize=8)
+    colorbar.set_label("% of CBAs", color=TEXT_SECONDARY, fontsize=9)
+
+    category_title = clause_type.replace("_", " ").capitalize()
+    ax.set_title(
+        f"{category_title} provisions by level-1 category, beneficiary and era",
+        loc="left",
+        color=TEXT_PRIMARY,
+        pad=14,
+    )
+    caption = (
+        "Each cell is the % of CBAs in its column carrying at least one "
+        "provision of that row's category -- a CBA counts once however many "
+        "matching provisions it holds, so a column's cells can sum past 100%. "
+        "A column's own denominator (below its label) is the CBAs holding at "
+        "least one provision naming that beneficiary within that era, not the "
+        "whole corpus. Eras group five-year expiration cohorts into "
+        f"{era_buckets[0][1]}-{era_buckets[0][2]} and "
+        f"{era_buckets[1][1]}-{era_buckets[1][2]}; a beneficiary outside "
+        f"{' or '.join(beneficiaries)} is excluded entirely."
+    )
+    if excluded_docs:
+        caption += (
+            f" {_plural(excluded_docs, 'CBA')} carrying a provision naming an "
+            "included beneficiary fall outside every era and are excluded from "
+            "every column's denominator."
+        )
+    _caption(fig, ax, caption)
     return fig
 
 
@@ -1240,6 +1696,28 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         ),
     )
     parser.add_argument(
+        "--focus-category",
+        default=None,
+        metavar="LEVEL1_LABEL",
+        help=(
+            "level-1 category to additionally plot as a provision-count time "
+            "series, split into its 'other' bucket vs named subtypes with one "
+            f"line pair per beneficiary in {', '.join(FOCUS_BENEFICIARIES)}. "
+            "Requires the provisions table built at --level 2 or deeper. "
+            "Example: preemptive_rights"
+        ),
+    )
+    parser.add_argument(
+        "--level1-heatmap",
+        action="store_true",
+        help=(
+            "additionally plot a heatmap of provision counts: level-1 category "
+            "(plus 'other') by row, beneficiary crossed with a 2000-2014 / "
+            f"2015-2029 era by column, for beneficiaries in {', '.join(FOCUS_BENEFICIARIES)}. "
+            "Always reads the level-1 provisions table regardless of --level"
+        ),
+    )
+    parser.add_argument(
         "--dpi",
         type=int,
         default=DEFAULT_DPI,
@@ -1269,7 +1747,13 @@ def main(argv: Sequence[str] | None = None) -> int:
             f"--level {args.level} exceeds the {args.clause_type} taxonomy, "
             f"which declares {available} level(s)"
         )
-    # Must match the --level the document table was built with: stage 3 offers
+    if args.focus_category is not None and args.focus_category not in spec.subtype_taxonomy:
+        raise SystemExit(
+            f"--focus-category {args.focus_category!r} is not a level-1 label of "
+            f"the {args.clause_type} taxonomy; choose one of "
+            f"{', '.join(spec.subtype_taxonomy)}"
+        )
+    # Must match the --level the document table was built with: stage 4 offers
     # "other" at every level, so it joins the config's own labels.
     declared = list(labels_at_level(spec.subtype_taxonomy, args.level))
     subtypes = [*declared, RESERVED_SUBTYPE_LABEL]
@@ -1322,11 +1806,12 @@ def main(argv: Sequence[str] | None = None) -> int:
                 "lower --min-cbas"
             )
 
-    figures = {
-        f"{prefix}_subtype_share.png": plot_overall(
+    figures: dict[str, "matplotlib.figure.Figure | None"] = {}
+    if args.level == 1:
+        figures[f"{prefix}_subtype_share.png"] = plot_overall(
             documents, subtypes, colors, labels, args.clause_type
-        ),
-        f"{prefix}_share_by_period.png": plot_by_period(
+        )
+        figures[f"{prefix}_share_by_period.png"] = plot_by_period(
             documents,
             subtypes,
             colors,
@@ -1337,8 +1822,8 @@ def main(argv: Sequence[str] | None = None) -> int:
             industry_adjusted=args.industry_adjusted,
             min_sector_docs=args.min_sector_docs,
             min_cell_docs=args.min_cell_docs,
-        ),
-        f"{prefix}_share_by_sector.png": plot_by_sector(
+        )
+        figures[f"{prefix}_share_by_sector.png"] = plot_by_sector(
             documents,
             subtypes,
             colors,
@@ -1346,8 +1831,51 @@ def main(argv: Sequence[str] | None = None) -> int:
             args.min_sector_docs,
             args.clause_type,
             show_unknown=args.show_unknown,
-        ),
-    }
+        )
+    else:
+        # Below the top level, one flat figure per statistic would mix series
+        # from every level-1 branch; split into one figure set per level-1
+        # category instead, so each figure only compares subtypes that were
+        # actually offered as alternatives to one another during classification.
+        groups = level1_groups(spec.subtype_taxonomy, subtypes)
+        for top_label, members in groups.items():
+            if not members:
+                print(
+                    f"  [warn] no level-{args.level} subtype under {top_label!r} "
+                    "survives filtering; skipping its figures"
+                )
+                continue
+            group_keys = group_series_keys(
+                top_label, members, documents, colors, markers, labels
+            )
+            group_clause_type = f"{args.clause_type} / {top_label.replace('_', ' ')}"
+            figures[f"{prefix}_{top_label}_subtype_share.png"] = plot_overall(
+                documents, group_keys, colors, labels, group_clause_type,
+                include_none=False,
+            )
+            figures[f"{prefix}_{top_label}_share_by_period.png"] = plot_by_period(
+                documents,
+                group_keys,
+                colors,
+                markers,
+                labels,
+                args.min_group_docs,
+                group_clause_type,
+                industry_adjusted=args.industry_adjusted,
+                min_sector_docs=args.min_sector_docs,
+                min_cell_docs=args.min_cell_docs,
+                include_none=False,
+            )
+            figures[f"{prefix}_{top_label}_share_by_sector.png"] = plot_by_sector(
+                documents,
+                group_keys,
+                colors,
+                labels,
+                args.min_sector_docs,
+                group_clause_type,
+                show_unknown=args.show_unknown,
+                include_none=False,
+            )
 
     if all(f"pct_beneficiary_{b}" in documents.columns for b in BENEFICIARY_LABELS):
         b_colors, b_markers, b_labels = beneficiary_style(BENEFICIARY_LABELS)
@@ -1381,6 +1909,39 @@ def main(argv: Sequence[str] | None = None) -> int:
             "rebuild it with the updated link_classifications.py to add the "
             "beneficiary figures"
         )
+
+    if args.focus_category is not None:
+        provisions_path = args.input_dir / f"{prefix}_provisions.csv"
+        if not provisions_path.is_file():
+            print(
+                f"  [warn] provisions table not found: {provisions_path}; "
+                "skipping focus-category figure"
+            )
+        else:
+            provisions = pd.read_csv(provisions_path, dtype={"expire_period": str})
+            figure_name = f"{prefix}_{args.focus_category}_counts_by_period.png"
+            figures[figure_name] = plot_focus_category_counts_by_period(
+                provisions,
+                args.focus_category,
+                args.min_group_docs,
+            )
+
+    if args.level1_heatmap:
+        level1_prefix = table_prefix(args.clause_type, args.source, 1)
+        level1_provisions_path = args.input_dir / f"{level1_prefix}_provisions.csv"
+        if not level1_provisions_path.is_file():
+            print(
+                f"  [warn] level-1 provisions table not found: "
+                f"{level1_provisions_path}; run link_classifications.py with "
+                "--level 1 first; skipping level-1 heatmap"
+            )
+        else:
+            level1_provisions = pd.read_csv(level1_provisions_path)
+            figures[f"{level1_prefix}_beneficiary_era_heatmap.png"] = (
+                plot_level1_beneficiary_era_heatmap(
+                    level1_provisions, list(spec.subtype_taxonomy), args.clause_type
+                )
+            )
 
     for name, figure in figures.items():
         if figure is not None:

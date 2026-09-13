@@ -74,7 +74,7 @@ def _record(
     subtype: str,
     span_start: int = 0,
     child: str | None = None,
-    beneficiary: str = "worker",
+    beneficiary: str = "workers",
 ) -> str:
     """A stage-3 record with one column per taxonomy level.
 
@@ -268,7 +268,7 @@ class BuildTablesTests(unittest.TestCase):
                     ),
                     _record(
                         "document_1", "preemptive_rights", 60, "notification_right",
-                        beneficiary="worker",
+                        beneficiary="workers",
                     ),
                 ]
             )
@@ -336,10 +336,10 @@ class BuildTablesTests(unittest.TestCase):
 
         row = documents[documents["document_id"] == "document_1"].iloc[0]
         self.assertEqual(row["n_beneficiary_employer"], 3)
-        self.assertEqual(row["n_beneficiary_worker"], 1)
+        self.assertEqual(row["n_beneficiary_workers"], 1)
         self.assertEqual(row["n_beneficiary_unclear"], 0)
         self.assertAlmostEqual(row["pct_beneficiary_employer"], 75.0)
-        self.assertAlmostEqual(row["pct_beneficiary_worker"], 25.0)
+        self.assertAlmostEqual(row["pct_beneficiary_workers"], 25.0)
         self.assertAlmostEqual(row["pct_beneficiary_unclear"], 0.0)
 
     def test_beneficiary_share_is_undefined_not_zero_with_no_provisions(self) -> None:
@@ -433,6 +433,9 @@ class MainTests(BuildTablesTests):
         self.assertEqual(len(provisions), 5)
         self.assertNotIn("extraction_text", provisions.columns)
         self.assertIn("document-subtype pairs:      3", summary)
+        # At level 1, "subtype" already is the level-1 label -- a separate
+        # subtype_1 column would just duplicate it.
+        self.assertNotIn("subtype_1", provisions.columns)
 
     def test_level_two_reports_child_labels_and_drops_unlabelled_rows(self) -> None:
         with TemporaryDirectory() as tmp_str:
@@ -472,6 +475,13 @@ class MainTests(BuildTablesTests):
         row = documents[documents["document_id"] == "document_1"].iloc[0]
         self.assertEqual(row["n_job_displacement"], 3)
         self.assertEqual(row["n_notification_right"], 1)
+        # subtype_1 rides along so a level-2+ provision keeps its level-1
+        # ancestor even though "subtype" itself now names the deeper label.
+        self.assertIn("subtype_1", provisions.columns)
+        self.assertEqual(
+            sorted(provisions["subtype_1"].unique()),
+            ["implementation", "preemptive_rights"],
+        )
 
     def test_level_beyond_the_taxonomy_is_rejected(self) -> None:
         with TemporaryDirectory() as tmp_str:
@@ -511,6 +521,125 @@ class MainTests(BuildTablesTests):
 
         self.assertEqual(status, 0)
         self.assertFalse(wrote_anything)
+
+
+class OtherInLevel1Tests(unittest.TestCase):
+    """The level-2 ``other`` bucket must attribute to its level-1 parent.
+
+    ``has_other`` alone cannot tell a reader whether a CBA's "other" provision
+    was offered as an alternative to ``notification_right`` or to
+    ``job_displacement`` -- that requires the level-1 label stage 3 already
+    attached to the same record (``subtype_1``, untouched by
+    ``select_level``).
+    """
+
+    source = SOURCE
+
+    @staticmethod
+    def _write(path: Path, text: str = "") -> None:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text, encoding="utf-8")
+
+    def _build_cache(self, cache_dir: Path) -> Path:
+        classify_dir = (
+            cache_dir / link_classifications.CLASSIFY_STAGE_NAME / self.source / MODEL_DIR
+        )
+        self._write(
+            classify_dir / "document_1" / f"{PROVISION_TYPE}.jsonl",
+            "\n".join(
+                [
+                    # Placed under implementation, but none of its named
+                    # children fit -- level 2 lands on "other".
+                    _record("document_1", "implementation", 0, "other"),
+                    _record(
+                        "document_1", "preemptive_rights", 20, "notification_right"
+                    ),
+                ]
+            )
+            + "\n",
+        )
+        return classify_dir
+
+    def _build_metadata(self, path: Path) -> None:
+        self._write(path, METADATA_HEADER + _metadata_row("document_1"))
+
+    def _level2_documents(self, tmp_dir: Path, level1_labels) -> pd.DataFrame:
+        classify_dir = self._build_cache(tmp_dir / "cache")
+        metadata_path = tmp_dir / "meta.csv"
+        self._build_metadata(metadata_path)
+
+        provisions = link_classifications.load_classifications(
+            classify_dir, PROVISION_TYPE
+        )
+        provisions, _ = link_classifications.select_level(provisions, 2)
+        with redirect_stdout(StringIO()):
+            metadata = link_classifications.load_metadata(metadata_path, self.source)
+        return link_classifications.build_document_table(
+            link_classifications.discover_document_ids(classify_dir),
+            provisions,
+            metadata,
+            ["notification_right", "other"],
+            level1_labels=level1_labels,
+        )
+
+    def test_other_is_attributed_to_its_level1_parent(self) -> None:
+        with TemporaryDirectory() as tmp_str:
+            documents = self._level2_documents(
+                Path(tmp_str),
+                ["preemptive_rights", "implementation", "workforce_management"],
+            )
+
+        row = documents[documents["document_id"] == "document_1"].iloc[0]
+        self.assertEqual(row["n_other_in_implementation"], 1)
+        self.assertTrue(row["has_other_in_implementation"])
+        self.assertEqual(row["n_other_in_preemptive_rights"], 0)
+        self.assertFalse(row["has_other_in_preemptive_rights"])
+        self.assertFalse(row["has_other_in_workforce_management"])
+        # The flat, unattributed column from the ordinary subtype pass is
+        # untouched -- this only adds columns, it does not replace it.
+        self.assertTrue(row["has_other"])
+
+    def test_no_level1_labels_adds_no_columns(self) -> None:
+        with TemporaryDirectory() as tmp_str:
+            documents = self._level2_documents(Path(tmp_str), None)
+
+        self.assertFalse(any(c.startswith("has_other_in_") for c in documents.columns))
+
+    def test_main_writes_the_per_category_other_columns(self) -> None:
+        with TemporaryDirectory() as tmp_str:
+            tmp_dir = Path(tmp_str)
+            self._build_cache(tmp_dir / "cache")
+            self._build_metadata(tmp_dir / "meta.csv")
+
+            with redirect_stdout(StringIO()):
+                status = link_classifications.main(
+                    [
+                        "--source",
+                        self.source,
+                        "--model-name",
+                        MODEL_NAME,
+                        "--clause-type",
+                        PROVISION_TYPE,
+                        "--cache-dir",
+                        str(tmp_dir / "cache"),
+                        "--metadata",
+                        str(tmp_dir / "meta.csv"),
+                        "--output-dir",
+                        str(tmp_dir / "out"),
+                        "--level",
+                        "2",
+                    ]
+                )
+
+            documents = pd.read_csv(
+                tmp_dir / "out" / "technology_dol_archive_l2_documents.csv"
+            )
+
+        self.assertEqual(status, 0)
+        row = documents[documents["document_id"] == "document_1"].iloc[0]
+        self.assertEqual(row["n_other_in_implementation"], 1)
+        self.assertEqual(row["n_other_in_preemptive_rights"], 0)
+        self.assertEqual(row["n_other_in_workforce_management"], 0)
 
 
 if __name__ == "__main__":

@@ -21,7 +21,8 @@ except ModuleNotFoundError:
 load_dotenv(PROJECT_ROOT / ".env")
 
 STAGE_NAME = "stg_02_extract"
-CLASSIFY_STAGE_NAME = "stg_03_classify"
+ENRICH_STAGE_NAME = "stg_03_enrich"
+CLASSIFY_STAGE_NAME = "stg_04_classify"
 KNOWN_SOURCES = ("dol_archive", "cornell_dol", "cornell_retail_educ")
 
 
@@ -109,32 +110,27 @@ def _extracted_document_ids(doc_rel_dirs: Sequence[Path]) -> list[str]:
     )
 
 
-def _classification_artifacts(document_dir: Path) -> list[Path]:
-    """Return every classification output file for one document."""
+def _stage_artifacts(document_dir: Path) -> list[Path]:
+    """Return every output file for one model/document directory."""
 
     if not document_dir.is_dir():
         return []
     return sorted(path for path in document_dir.rglob("*") if path.is_file())
 
 
-def move_classifications(
+def move_downstream_stage(
     source: str,
-    classify_stage: str,
+    downstream_stage: str,
     doc_rel_dirs: Sequence[Path],
     src_cache: Path,
     dst_cache: Path,
     dry_run: bool,
     document_ids: Sequence[str] | None = None,
 ) -> None:
-    """Copy stage-03 classifications for the selected documents.
+    """Copy one model-keyed downstream stage for the selected documents."""
 
-    Stage 03 is keyed by the *classification* model, which need not match the
-    extraction model that produced its input, so documents are matched by ID
-    across every classification model arm.
-    """
-
-    src_stage_dir = src_cache / classify_stage / source
-    dst_stage_dir = dst_cache / classify_stage / source
+    src_stage_dir = src_cache / downstream_stage / source
+    dst_stage_dir = dst_cache / downstream_stage / source
     selected_document_ids = (
         _extracted_document_ids(doc_rel_dirs)
         if document_ids is None
@@ -142,7 +138,7 @@ def move_classifications(
     )
 
     print(
-        "copying classification file(s) for "
+        f"copying {downstream_stage} file(s) for "
         f"{len(selected_document_ids)} selected document(s)"
     )
     print(f"  from {src_stage_dir}")
@@ -162,7 +158,7 @@ def move_classifications(
     matched_model_documents = 0
     for model_dir in model_dirs:
         for document_id in selected_document_ids:
-            artifacts = _classification_artifacts(model_dir / document_id)
+            artifacts = _stage_artifacts(model_dir / document_id)
             if not artifacts:
                 continue
             matched_documents.add(document_id)
@@ -176,13 +172,13 @@ def move_classifications(
                 copied += 1
 
     for document_id in sorted(set(selected_document_ids) - matched_documents):
-        print(f"  [warn] no classifications for selected document: {document_id}")
+        print(f"  [warn] no {downstream_stage} outputs for selected document: {document_id}")
 
     if dry_run:
         return
 
     print(
-        f"done: copied {copied} classification file(s) from "
+        f"done: copied {copied} {downstream_stage} file(s) from "
         f"{matched_model_documents} model/document output(s) to {dst_stage_dir}"
     )
 
@@ -190,8 +186,8 @@ def move_classifications(
 def main(argv: Sequence[str] | None = None) -> None:
     parser = argparse.ArgumentParser(
         description=(
-            "Copy stg_02_extract extractions and the matching stg_03_classify "
-            "outputs for every classification model, for one source from the "
+            "Copy stg_02_extract extractions and matching stg_03_enrich and "
+            "stg_04_classify outputs for every model, for one source from the "
             "external CACHE_DIR into the working-directory cache/, preserving "
             "the stage/source directory layout.  OCR text from stg_01_ocr is "
             "never copied."
@@ -219,6 +215,11 @@ def main(argv: Sequence[str] | None = None) -> None:
         help=f"stage folder under the cache (default: {STAGE_NAME})",
     )
     parser.add_argument(
+        "--enrich-stage",
+        default=ENRICH_STAGE_NAME,
+        help=f"stage folder holding enrichment outputs (default: {ENRICH_STAGE_NAME})",
+    )
+    parser.add_argument(
         "--classify-stage",
         default=CLASSIFY_STAGE_NAME,
         help=(
@@ -227,10 +228,16 @@ def main(argv: Sequence[str] | None = None) -> None:
         ),
     )
     parser.add_argument(
+        "--no-enrich",
+        dest="no_enrich",
+        action="store_true",
+        help="do not copy matching stg_03_enrich outputs",
+    )
+    parser.add_argument(
         "--no-classify",
         dest="no_classify",
         action="store_true",
-        help="do not copy matching stg_03_classify outputs",
+        help="do not copy matching stg_04_classify outputs",
     )
     parser.add_argument(
         "--src-cache",
@@ -272,8 +279,19 @@ def main(argv: Sequence[str] | None = None) -> None:
         document_ids=args.document_ids,
     )
 
+    if not args.no_enrich:
+        move_downstream_stage(
+            args.source,
+            args.enrich_stage,
+            doc_rel_dirs,
+            src_cache,
+            dst_cache,
+            args.dry_run,
+            document_ids=args.document_ids,
+        )
+
     if not args.no_classify:
-        move_classifications(
+        move_downstream_stage(
             args.source,
             args.classify_stage,
             doc_rel_dirs,

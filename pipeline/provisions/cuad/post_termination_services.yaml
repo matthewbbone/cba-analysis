@@ -1,0 +1,8 @@
+clause_type: post_termination_services
+clause_description: |-
+  Is a party subject to obligations after the termination or expiration of a contract, including any post-termination transition, payment, transfer of IP, wind-down, last-buy, or similar commitments?
+N_EXTRACTION_PASSES: 2
+LANGEXTRACT_MAX_WORKERS: 10
+LANGEXTRACT_BATCH_LENGTH: 10
+MAX_CHAR_BUFFER: 8192
+ENRICH_MAX_CHAR_BUFFER: 5000

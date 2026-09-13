@@ -5,14 +5,18 @@ analysis-ready data. It uses local vision-language and language models to:
 
 1. transcribe each PDF;
 2. locate and quote provisions of interest;
-3. classify those provisions by economic content and beneficiary; and
-4. join the results to contract metadata and produce descriptive figures.
+3. enrich them with context summaries and beneficiary labels;
+4. classify them by economic content; and
+5. join the results to contract metadata and produce descriptive figures.
 
 The current application studies how CBAs govern technological change. The same
 pipeline can support other provisions by adding a YAML specification.
 
-All models run locally through [vLLM](https://github.com/vllm-project/vllm).
-The pipeline does not send contract text to a hosted LLM API.
+Models run locally through [vLLM](https://github.com/vllm-project/vllm) by
+default. The general OCR runner and Stages 2–4 can instead use OpenRouter with
+an explicit `--endpoint openrouter` override. OpenRouter mode sends rendered
+page images during OCR and contract text during extraction, enrichment, and
+classification to OpenRouter and the hosted model provider.
 
 ## What is the empirical object?
 
@@ -27,9 +31,9 @@ For the technology taxonomy, each provision receives:
 
 - a hierarchical subtype, such as `preemptive_rights` or `implementation`,
   with a more detailed subtype at level 2; and
-- a beneficiary: `worker`, `employer`, or `unclear`, interpreted as the party
-  receiving the substantive benefit from the provision. Stage 2 assigns this
-  alongside the extraction itself; stage 3 carries it through unchanged.
+- a beneficiary: `workers`, `employer`, or `unclear`, interpreted as the party
+  receiving the substantive benefit from the provision. Stage 3 assigns this
+  during enrichment; stage 4 carries it through unchanged.
 
 The main document-level measures are:
 
@@ -53,11 +57,13 @@ scanned CBA PDFs
 Stage 1: OCR                 page text + complete document text
       |
       v
-Stage 2: extraction          grounded quotations of relevant provisions,
-                             each with a beneficiary
+Stage 2: extraction          grounded, source-exact quotations
       |
       v
-Stage 3: classification      hierarchical subtype labels
+Stage 3: enrichment          context summaries + beneficiary labels
+      |
+      v
+Stage 4: classification      hierarchical subtype labels
       |
       v
 metadata link                document- and provision-level CSVs
@@ -91,6 +97,15 @@ If it is omitted, the pipeline uses the repo-local `cache/` directory. Model
 weights are downloaded from Hugging Face on first use, so any required access
 token must also be available in the environment.
 
+To use the optional hosted endpoint, add an OpenRouter API key:
+
+```dotenv
+OPENROUTER_API_KEY=your-key-here
+```
+
+The presence of this key does not change the default endpoint; every hosted run
+must explicitly pass `--endpoint openrouter`.
+
 ### 2. Run one contract through the pipeline
 
 Place PDFs under `cache/<source>/`. The PDF stem is its `document_id`; for
@@ -113,19 +128,93 @@ uv run python pipeline/stg_02_extract/runner.py \
   --model-name google/gemma-4-31B-it \
   --device 0 --port 8123
 
+# Enrich with surrounding context and beneficiary
+uv run python pipeline/stg_03_enrich/runner.py \
+  --source dol_archive \
+  --document-id document_10 \
+  --provision technology \
+  --extract-model-name google/gemma-4-31B-it \
+  --model-name Qwen/Qwen3.8-27B-FP8 \
+  --device 0 --port 8123
+
 # Classify at the most detailed available taxonomy level
-uv run python pipeline/stg_03_classify/runner.py \
+uv run python pipeline/stg_04_classify/runner.py \
   --source dol_archive \
   --document-id document_10 \
   --provision technology \
   --taxonomy-depth 2 \
-  --extract-model-name google/gemma-4-31B-it \
+  --enrich-model-name Qwen/Qwen3.8-27B-FP8 \
   --model-name Qwen/Qwen3.8-27B-FP8 \
   --device 0 --port 8123
 ```
 
-Each command starts and stops its own local vLLM server. Use a different port
-for each simultaneous process.
+By default, each command starts and stops its own local vLLM server. Use a
+different port for each simultaneous local process. Models that cannot be served
+on the shared defaults carry their own serve profile, so
+`--model-name Qwen/Qwen3.8-Flash-Next-FP8` shards over 4 GPUs at a 65536-token
+context and 0.90 GPU memory utilisation unless `--num-gpus`, `--max-model-len`,
+or `--gpu-memory-utilization` says otherwise.
+
+To run the same stages through OpenRouter, select a compatible OpenRouter model
+slug explicitly. Stage 1 requires image input, while Stages 2–4 require
+structured JSON output. For example, `google/gemini-3.7-flash` supports both:
+
+```bash
+# OCR through OpenRouter
+uv run python pipeline/stg_01_ocr/general/runner.py \
+  --source dol_archive \
+  --document-id document_10 \
+  --endpoint openrouter \
+  --model-name google/gemini-3.7-flash
+
+# Extract technology provisions through OpenRouter
+uv run python pipeline/stg_02_extract/runner.py \
+  --source dol_archive \
+  --document-id document_10 \
+  --provision technology \
+  --ocr-model-name google/gemini-3.7-flash \
+  --endpoint openrouter \
+  --model-name google/gemini-3.7-flash
+
+# Enrich those provisions through OpenRouter
+uv run python pipeline/stg_03_enrich/runner.py \
+  --source dol_archive \
+  --document-id document_10 \
+  --provision technology \
+  --extract-model-name google/gemini-3.7-flash \
+  --endpoint openrouter \
+  --model-name google/gemini-3.7-flash
+
+# Classify those provisions through OpenRouter
+uv run python pipeline/stg_04_classify/runner.py \
+  --source dol_archive \
+  --document-id document_10 \
+  --provision technology \
+  --taxonomy-depth 2 \
+  --enrich-model-name google/gemini-3.7-flash \
+  --endpoint openrouter \
+  --model-name google/gemini-3.7-flash
+```
+
+Local-only options such as `--port`, `--device`, `--num-gpus`,
+`--max-model-len`, and vLLM reasoning-parser settings are ignored in
+OpenRouter mode. Provider or model capability errors are returned directly by
+OpenRouter; the pipeline does not rewrite or pre-validate model slugs.
+
+Stages 2–4 apply Qwen's recommended thinking-mode sampling defaults to
+`qwen/qwen3.8-flash` and the local `Qwen/Qwen3.8-Flash-Next` / `-FP8`
+checkpoints: temperature 1.0, top-p 0.95, top-k 20, and presence penalty 0.0.
+Local requests also specify min-p 0.0 and repetition penalty 1.0. OpenRouter
+requests omit these two neutral settings because Alibaba does not advertise
+support for them. Thinking is explicitly enabled.
+
+Flash requests through OpenRouter are restricted to `alibaba`, with fallbacks
+disabled and parameter support required. If Alibaba is unavailable or cannot
+support the request, it fails instead of routing to another provider. These
+defaults do not change other models. Sources:
+[Qwen generation guidance](https://huggingface.co/Qwen/Qwen3.8-Flash-Next)
+and [OpenRouter provider routing](https://openrouter.ai/docs/guides/routing/provider-selection).
+Use `--force` to regenerate existing outputs with the new settings.
 
 ### 3. Build analysis files and figures
 
@@ -165,10 +254,13 @@ stg_01_ocr/<source>/<ocr_model>/<document_id>/
   full.txt          pages combined with page markers
 ```
 
-The general runner works with Hugging Face vision-language models served by
-vLLM. Specialized runners are also available for GLM-OCR, MinerU, and
-PaddleOCR-VL under `pipeline/stg_01_ocr/specialized/`. Their `layout` modes
-first detect page regions and then transcribe them in reading order.
+The general runner works with vision-language models served locally by vLLM or
+remotely through OpenRouter. Specialized runners are also available for
+GLM-OCR, MinerU, and PaddleOCR-VL under `pipeline/stg_01_ocr/specialized/`.
+Their `layout` modes
+first detect page regions and then transcribe them in reading order. These
+specialized runners remain vLLM-only because they use model-specific local
+serving controls.
 
 Useful controls include `--sample`, `--seed`, repeatable `--document-id`,
 `--document-ids`, `--dpi`, `--concurrency`, and `--force`. Run a script with
@@ -184,11 +276,11 @@ Each JSONL row is a quoted provision with fields including:
 
 | Field | Meaning |
 | --- | --- |
-| `extraction_text` | Text identified as a relevant provision |
-| `context` | Model-produced contextual attribute |
+| `extraction_text` | Exact OCR text at the final character span |
+| `generated_extraction_text` | Text returned by LangExtract before grounding |
 | `span_start`, `span_end` | Character offsets in the OCR document |
 | `span_reliable` | Whether the offsets can be treated as reliable |
-| `grounding_status` | Result of reconciling the quotation to source text |
+| `grounding_status` | LangExtract's grounding/alignment status |
 | `document_id`, `source` | Contract identifiers |
 | `ocr_model_name`, `model_name` | Provenance for the OCR and extraction models |
 
@@ -196,19 +288,33 @@ Extraction uses `langextract` to chunk long contracts and reconcile returned
 text with the OCR source. Researchers auditing results should use the span and
 grounding fields rather than treating every quotation as equally reliable.
 
-### Stage 3: classification
+Stage 2 asks LangExtract only for provision text. Researchers auditing results
+can compare the generated and source-exact fields alongside the grounding data.
+
+### Stage 3: enrichment
 
 ```text
-stg_03_classify/<source>/<classify_model>/<document_id>/<provision>.jsonl
+stg_03_enrich/<source>/<enrich_model>/<document_id>/<provision>.jsonl
 ```
 
-Each extraction retains its quoted text and offsets and gains `beneficiary`,
-`subtype_1`, `subtype_2`, and model-provenance fields. Classification proceeds
+Each grounded extraction gains a top-level `context` summary and `beneficiary`.
+The enrichment prompt uses a sentence-bounded window recovered from the Stage 1
+OCR text and sized by `ENRICH_MAX_CHAR_BUFFER` in the provision config.
+
+### Stage 4: classification
+
+```text
+stg_04_classify/<source>/<classify_model>/<document_id>/<provision>.jsonl
+```
+
+Each extraction retains its quoted text, offsets, grounding metadata, context,
+and beneficiary, and gains `subtype_1`, `subtype_2`, and separate extraction,
+enrichment, and classification model-provenance fields. Classification proceeds
 down the taxonomy one level at a time. The pipeline adds a terminal `other`
 category at every level; if selected, deeper subtype fields remain null.
 
 `--taxonomy-depth` cannot exceed the depth declared by the provision. A
-provision without a taxonomy can be extracted but not classified.
+provision without a taxonomy can be extracted and enriched but not classified.
 
 ### Linked analysis data
 
@@ -285,15 +391,18 @@ change the plotted sample and should be reported with results.
 
 Provision definitions live in `pipeline/provisions/*.yaml` and contain:
 
+`--provision NAME` (`stg_02_extract/runner.py`) loads `pipeline/provisions/NAME.yaml` by default. When `--source` names a source with its own `pipeline/provisions/<source>/` subdirectory, it loads `pipeline/provisions/<source>/NAME.yaml` instead, so a source can bundle a clause taxonomy that has no bearing on any other source.
+
 1. `clause_type`, the snake_case name of the clause class, which must match the
    filename stem;
 2. `clause_description`, a short description of what the class covers; and
-3. optionally, a hierarchical `subtype_taxonomy` used by stage 3.
+3. `ENRICH_MAX_CHAR_BUFFER`, the approximate character budget for Stage 3's
+   sentence-bounded context window; and
+4. optionally, a hierarchical `subtype_taxonomy` used by Stage 4.
 
 The extraction prompt itself is not in the YAML. It is built around
 `clause_type` and `clause_description` by `_prompt_description` in
-`pipeline/stg_02_extract/structure_provision.py`, so every provision asks for
-the same attributes (`context` and `beneficiary`) in the same wording.
+`pipeline/stg_02_extract/structure_provision.py`; it asks only for matching text.
 
 The included specifications are:
 
@@ -302,6 +411,10 @@ The included specifications are:
   `workforce_management`.
 - `wage_table.yaml`: wage-table extraction only; it has no classification
   taxonomy.
+- `cuad/*.yaml`: one flat config per CUAD clause category (41 total, e.g.
+  `cuad/governing_law.yaml`, `cuad/non_compete.yaml`), sourced from the CUAD
+  dataset's own category descriptions. Selected automatically with `--source
+  cuad --provision <category_name>`. None declare a `subtype_taxonomy`.
 
 Taxonomy labels must be unique snake_case names. Each nonterminal level must
 have at least two choices. Do not declare `other`, which is reserved and added
@@ -364,7 +477,8 @@ GPU or network access.
 ```text
 pipeline/stg_01_ocr/          PDF transcription
 pipeline/stg_02_extract/      grounded provision extraction
-pipeline/stg_03_classify/     hierarchical classification
+pipeline/stg_03_enrich/       context and beneficiary enrichment
+pipeline/stg_04_classify/     hierarchical taxonomy classification
 pipeline/provisions/          measurement definitions and taxonomies
 pipeline/utils/               metadata linking, plots, paths, model ranking
 reviewer/                     browser-based human review tool
@@ -375,8 +489,10 @@ tests/                        unit and integration tests with mocked inference
 ```
 
 `parallel_runs.bash` launches OCR for the three configured sources across
-three GPUs. `pipeline/utils/move_extractions.py` copies selected stage-2 and
-stage-3 outputs from an external `CACHE_DIR` into the repo-local cache for
-review; it never copies OCR text. `main.py` and
+three GPUs. `pipeline/utils/move_extractions.py` copies selected Stage 2,
+Stage 3 enrichment, and Stage 4 classification outputs from an external
+`CACHE_DIR` into the repo-local cache for review; `--no-enrich` and
+`--no-classify` control the downstream copies independently, and OCR text is
+never copied. `main.py` and
 `references/provision_taxonomy.json` are legacy placeholders and are not used
 by the active pipeline.

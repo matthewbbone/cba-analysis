@@ -1,3 +1,4 @@
+import argparse
 import os
 from pathlib import Path
 from types import SimpleNamespace
@@ -94,6 +95,86 @@ class VllmServeCommandTests(unittest.TestCase):
             ["--max-num-seqs", "24"],
         )
 
+    def test_qwen3_next_profile_supplies_its_serve_requirements(self) -> None:
+        command = vllm_server.build_serve_command(
+            executable="python",
+            model_name="Qwen/Qwen3.8-Flash-Next-FP8",
+        )
+
+        for option, value in (
+            ("--tensor-parallel-size", "4"),
+            ("--gpu-memory-utilization", "0.9"),
+            ("--max-model-len", "65536"),
+        ):
+            option_index = command.index(option)
+            self.assertEqual(command[option_index + 1], value)
+        # Four-way sharding still routes through the multiprocessing executor.
+        self.assertIn("--distributed-executor-backend", command)
+
+    def test_explicit_serve_options_override_the_model_profile(self) -> None:
+        command = vllm_server.build_serve_command(
+            executable="python",
+            model_name="Qwen/Qwen3.8-Flash-Next-FP8",
+            max_model_len=8192,
+            num_gpus=2,
+            gpu_memory_utilization=0.5,
+        )
+
+        for option, value in (
+            ("--tensor-parallel-size", "2"),
+            ("--gpu-memory-utilization", "0.5"),
+            ("--max-model-len", "8192"),
+        ):
+            option_index = command.index(option)
+            self.assertEqual(command[option_index + 1], value)
+
+    def test_models_without_a_profile_keep_the_shared_defaults(self) -> None:
+        command = vllm_server.build_serve_command(
+            executable="python",
+            model_name="Qwen/Qwen3.8-27B-FP8",
+        )
+
+        max_model_len_index = command.index("--max-model-len")
+        self.assertEqual(command[max_model_len_index + 1], "32768")
+        tensor_parallel_index = command.index("--tensor-parallel-size")
+        self.assertEqual(command[tensor_parallel_index + 1], "1")
+        self.assertNotIn("--gpu-memory-utilization", command)
+
+    def test_server_adopts_the_model_profile_for_unset_options(self) -> None:
+        server = vllm_server.VLLMServer("Qwen/Qwen3.8-Flash-Next-FP8")
+
+        self.assertEqual(server.num_gpus, 4)
+        self.assertEqual(server.max_model_len, 65536)
+        self.assertEqual(server.gpu_memory_utilization, 0.90)
+
+    def test_runner_defaults_fill_only_the_options_left_unset(self) -> None:
+        args = SimpleNamespace(
+            model_name="Qwen/Qwen3.8-Flash-Next-FP8",
+            max_model_len=None,
+            num_gpus=2,
+            gpu_memory_utilization=None,
+        )
+        vllm_server.apply_model_serve_defaults(args, default_max_model_len=14000)
+
+        self.assertEqual(args.max_model_len, 65536)
+        self.assertEqual(args.num_gpus, 2)
+        self.assertEqual(args.gpu_memory_utilization, 0.90)
+
+        stage_args = SimpleNamespace(
+            model_name="google/gemma-4-31B-it",
+            max_model_len=None,
+            num_gpus=None,
+            gpu_memory_utilization=None,
+        )
+        vllm_server.apply_model_serve_defaults(
+            stage_args,
+            default_max_model_len=14000,
+        )
+
+        self.assertEqual(stage_args.max_model_len, 14000)
+        self.assertEqual(stage_args.num_gpus, 1)
+        self.assertIsNone(stage_args.gpu_memory_utilization)
+
     def test_reserved_extra_serve_option_is_rejected(self) -> None:
         with self.assertRaisesRegex(ValueError, "--max-model-len"):
             vllm_server.validate_extra_serve_args(
@@ -121,6 +202,76 @@ class VllmServeCommandTests(unittest.TestCase):
     def test_server_rejects_invalid_max_num_seqs(self) -> None:
         with self.assertRaisesRegex(ValueError, "max_num_seqs must be at least 1"):
             vllm_server.VLLMServer("example/model", max_num_seqs=0)
+
+
+class EndpointConfigurationTests(unittest.TestCase):
+    def test_endpoint_argument_defaults_to_vllm_and_accepts_openrouter(self) -> None:
+        parser = argparse.ArgumentParser()
+        vllm_server.add_endpoint_argument(parser)
+
+        self.assertEqual(parser.parse_args([]).endpoint, "vllm")
+        self.assertEqual(
+            parser.parse_args(["--endpoint", "openrouter"]).endpoint,
+            "openrouter",
+        )
+
+    def test_local_client_settings_preserve_existing_values(self) -> None:
+        self.assertEqual(
+            vllm_server.openai_client_kwargs("vllm", 9000),
+            {
+                "api_key": "EMPTY",
+                "base_url": "http://localhost:9000/v1",
+            },
+        )
+
+    def test_openrouter_client_settings_read_the_environment_key(self) -> None:
+        with patch.dict(os.environ, {"OPENROUTER_API_KEY": "test-secret"}):
+            self.assertEqual(
+                vllm_server.openai_client_kwargs("openrouter"),
+                {
+                    "api_key": "test-secret",
+                    "base_url": "https://openrouter.ai/api/v1",
+                },
+            )
+
+    def test_openrouter_requires_an_api_key_without_echoing_secrets(self) -> None:
+        with patch.dict(os.environ, {}, clear=True):
+            with self.assertRaisesRegex(RuntimeError, "OPENROUTER_API_KEY") as raised:
+                vllm_server.openai_client_kwargs("openrouter")
+
+        self.assertNotIn("api_key=", str(raised.exception))
+
+    def test_openrouter_start_skips_all_local_server_setup(self) -> None:
+        remote_client = object()
+        with (
+            patch.dict(os.environ, {"OPENROUTER_API_KEY": "test-secret"}),
+            patch("openai.AsyncOpenAI", return_value=remote_client) as async_openai,
+            patch.object(vllm_server, "python_executable") as python_executable,
+            patch.object(vllm_server, "validate_vllm_cuda_runtime") as cuda_check,
+            patch.object(vllm_server.VLLMServer, "_wait") as wait,
+            patch.object(vllm_server.subprocess, "Popen") as popen,
+        ):
+            server = vllm_server.VLLMServer(
+                "google/gemini-3.7-flash",
+                endpoint="openrouter",
+                num_gpus=0,
+                device="not-a-gpu",
+                gpu_memory_utilization=2,
+                max_num_seqs=0,
+                extra_serve_args=["--port", "9999"],
+            )
+            server.start()
+
+        self.assertIs(server.client, remote_client)
+        async_openai.assert_called_once_with(
+            api_key="test-secret",
+            base_url="https://openrouter.ai/api/v1",
+        )
+        python_executable.assert_not_called()
+        cuda_check.assert_not_called()
+        wait.assert_not_called()
+        popen.assert_not_called()
+        server.close()
 
 
 class VllmClientLifecycleTests(unittest.TestCase):

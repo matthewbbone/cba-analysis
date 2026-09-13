@@ -1,0 +1,8 @@
+clause_type: source_code_escrow
+clause_description: |-
+  Is one party required to deposit its source code into escrow with a third party, which can be released to the counterparty upon the occurrence of certain events (bankruptcy, insolvency, etc.)?
+N_EXTRACTION_PASSES: 2
+LANGEXTRACT_MAX_WORKERS: 10
+LANGEXTRACT_BATCH_LENGTH: 10
+MAX_CHAR_BUFFER: 8192
+ENRICH_MAX_CHAR_BUFFER: 5000

@@ -1,3 +1,4 @@
+import argparse
 import atexit
 import json
 import os
@@ -21,6 +22,10 @@ except ModuleNotFoundError:
         return {}
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
+VLLM_ENDPOINT = "vllm"
+OPENROUTER_ENDPOINT = "openrouter"
+ENDPOINT_CHOICES = (VLLM_ENDPOINT, OPENROUTER_ENDPOINT)
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 
 
 def load_project_dotenv(dotenv_path: Path = PROJECT_ROOT / ".env") -> None:
@@ -32,6 +37,44 @@ def load_project_dotenv(dotenv_path: Path = PROJECT_ROOT / ".env") -> None:
 
 
 load_project_dotenv()
+
+
+def add_endpoint_argument(parser: argparse.ArgumentParser) -> None:
+    """Add the shared local-or-hosted inference endpoint switch."""
+
+    parser.add_argument(
+        "--endpoint",
+        choices=ENDPOINT_CHOICES,
+        default=VLLM_ENDPOINT,
+        help=(
+            "Inference endpoint to use. vllm starts a local server (default); "
+            "openrouter uses OPENROUTER_API_KEY from the project .env file."
+        ),
+    )
+
+
+def openai_client_kwargs(endpoint: str, port: int = 8123) -> dict[str, str]:
+    """Return OpenAI SDK connection settings for a supported endpoint."""
+
+    if endpoint == VLLM_ENDPOINT:
+        return {
+            "api_key": "EMPTY",
+            "base_url": f"http://localhost:{port}/v1",
+        }
+    if endpoint == OPENROUTER_ENDPOINT:
+        api_key = os.environ.get("OPENROUTER_API_KEY", "").strip()
+        if not api_key:
+            raise RuntimeError(
+                "OpenRouter endpoint requires OPENROUTER_API_KEY in the "
+                "environment or project .env file"
+            )
+        return {
+            "api_key": api_key,
+            "base_url": OPENROUTER_BASE_URL,
+        }
+    raise ValueError(
+        f"unsupported endpoint {endpoint!r}; expected one of {ENDPOINT_CHOICES}"
+    )
 
 
 def model_log_filename(model_name: str) -> str:
@@ -48,6 +91,74 @@ OVIS26_VISUAL_TOKENS = [
     "<ovis_video_start>",
     "<ovis_video_end>",
 ]
+
+DEFAULT_MAX_MODEL_LEN = 32768
+DEFAULT_NUM_GPUS = 1
+
+# Serve settings a model needs in order to load and run at all, rather than
+# tuning preferences.  They fill in only where the caller left the option
+# unset, so an explicit --num-gpus/--max-model-len/--gpu-memory-utilization
+# still wins.
+MODEL_SERVE_PROFILES: dict[str, dict[str, float]] = {
+    # Qwen3.8 Flash Next does not fit on a single GPU alongside a usable KV
+    # cache, and its long-context window has to be requested when the server
+    # starts.
+    "Qwen/Qwen3.8-Flash-Next-FP8": {
+        "num_gpus": 4,
+        "gpu_memory_utilization": 0.90,
+        "max_model_len": 65536,
+    },
+}
+
+
+def model_serve_profile(model_name: str) -> dict[str, float]:
+    """Return the serve settings a model needs, if it declares any."""
+
+    return dict(MODEL_SERVE_PROFILES.get(model_name, {}))
+
+
+def resolve_serve_settings(
+    model_name: str,
+    *,
+    max_model_len: int | None = None,
+    num_gpus: int | None = None,
+    gpu_memory_utilization: float | None = None,
+    default_max_model_len: int = DEFAULT_MAX_MODEL_LEN,
+    default_num_gpus: int = DEFAULT_NUM_GPUS,
+) -> tuple[int, int, float | None]:
+    """Complete unset serve options from the model profile, then the defaults."""
+
+    profile = MODEL_SERVE_PROFILES.get(model_name, {})
+    if max_model_len is None:
+        max_model_len = int(profile.get("max_model_len", default_max_model_len))
+    if num_gpus is None:
+        num_gpus = int(profile.get("num_gpus", default_num_gpus))
+    if gpu_memory_utilization is None:
+        gpu_memory_utilization = profile.get("gpu_memory_utilization")
+    return max_model_len, num_gpus, gpu_memory_utilization
+
+
+def apply_model_serve_defaults(
+    args: argparse.Namespace,
+    *,
+    default_max_model_len: int = DEFAULT_MAX_MODEL_LEN,
+    default_num_gpus: int = DEFAULT_NUM_GPUS,
+) -> None:
+    """Resolve a runner's unset vLLM serve options against the model profile."""
+
+    (
+        args.max_model_len,
+        args.num_gpus,
+        args.gpu_memory_utilization,
+    ) = resolve_serve_settings(
+        args.model_name,
+        max_model_len=getattr(args, "max_model_len", None),
+        num_gpus=getattr(args, "num_gpus", None),
+        gpu_memory_utilization=getattr(args, "gpu_memory_utilization", None),
+        default_max_model_len=default_max_model_len,
+        default_num_gpus=default_num_gpus,
+    )
+
 
 RESERVED_SERVE_OPTIONS = frozenset(
     {
@@ -103,8 +214,8 @@ def build_serve_command(
     executable: str,
     model_name: str,
     port: int = 8123,
-    max_model_len: int = 32768,
-    num_gpus: int = 1,
+    max_model_len: int | None = None,
+    num_gpus: int | None = None,
     gpu_memory_utilization: float | None = None,
     language_only: bool = False,
     tokenizer_dir: Path | None = None,
@@ -114,6 +225,12 @@ def build_serve_command(
 ) -> list[str]:
     """Build the argv for a vLLM OpenAI-compatible server process."""
     validate_extra_serve_args(extra_serve_args)
+    max_model_len, num_gpus, gpu_memory_utilization = resolve_serve_settings(
+        model_name,
+        max_model_len=max_model_len,
+        num_gpus=num_gpus,
+        gpu_memory_utilization=gpu_memory_utilization,
+    )
 
     command = [
         executable,
@@ -393,29 +510,46 @@ class VLLMServer:
         self,
         model_name: str,
         port: int = 8123,
-        max_model_len: int = 32768,
-        num_gpus: int = 1,
+        max_model_len: int | None = None,
+        num_gpus: int | None = None,
         gpu_memory_utilization: float | None = None,
         language_only: bool = False,
         extra_serve_args: list[str] | None = None,
         max_num_seqs: int | None = None,
         device: str | int | None = None,
+        endpoint: str = VLLM_ENDPOINT,
     ):
-        if num_gpus < 1:
-            raise ValueError("num_gpus must be at least 1")
-        if gpu_memory_utilization is not None and not 0 < gpu_memory_utilization <= 1:
-            raise ValueError("gpu_memory_utilization must be greater than 0 and at most 1")
-        if max_num_seqs is not None and max_num_seqs < 1:
-            raise ValueError("max_num_seqs must be at least 1")
-        validate_extra_serve_args(extra_serve_args)
+        if endpoint not in ENDPOINT_CHOICES:
+            raise ValueError(
+                f"unsupported endpoint {endpoint!r}; expected one of {ENDPOINT_CHOICES}"
+            )
+        max_model_len, num_gpus, gpu_memory_utilization = resolve_serve_settings(
+            model_name,
+            max_model_len=max_model_len,
+            num_gpus=num_gpus,
+            gpu_memory_utilization=gpu_memory_utilization,
+        )
+        if endpoint == VLLM_ENDPOINT:
+            if num_gpus < 1:
+                raise ValueError("num_gpus must be at least 1")
+            if gpu_memory_utilization is not None and not 0 < gpu_memory_utilization <= 1:
+                raise ValueError("gpu_memory_utilization must be greater than 0 and at most 1")
+            if max_num_seqs is not None and max_num_seqs < 1:
+                raise ValueError("max_num_seqs must be at least 1")
+            validate_extra_serve_args(extra_serve_args)
         
+        self.endpoint = endpoint
         self.model_name = model_name
         self.port = port
         self.max_model_len = max_model_len
         self.num_gpus = num_gpus
         self.gpu_memory_utilization = gpu_memory_utilization
         self.max_num_seqs = max_num_seqs
-        self.device = validate_cuda_device_selection(device, num_gpus)
+        self.device = (
+            validate_cuda_device_selection(device, num_gpus)
+            if endpoint == VLLM_ENDPOINT
+            else None
+        )
         self.extra_serve_args = list(extra_serve_args or [])
         self.server = None
         self.client = None
@@ -444,8 +578,7 @@ class VLLMServer:
         # those loops leaves its keep-alive connection bound to a closed loop
         # and surfaces as an opaque ``APIConnectionError``.
         with OpenAI(
-            api_key="EMPTY",
-            base_url=f"http://localhost:{self.port}/v1",
+            **openai_client_kwargs(VLLM_ENDPOINT, self.port),
             max_retries=0,
         ) as readiness_client:
             start = dt.datetime.now().timestamp()
@@ -474,6 +607,18 @@ class VLLMServer:
         
     def start(self):
         from openai import AsyncOpenAI
+
+        if self.endpoint == OPENROUTER_ENDPOINT:
+            if self.client is not None:
+                raise RuntimeError("OpenRouter client is already running")
+            self.client = AsyncOpenAI(
+                **openai_client_kwargs(self.endpoint, self.port)
+            )
+            print(
+                f"OpenRouter client is ready for model {self.model_name} at "
+                f"{OPENROUTER_BASE_URL}"
+            )
+            return
 
         if self.server is not None and self.server.poll() is None:
             raise RuntimeError("VLLM server is already running")
@@ -562,8 +707,7 @@ class VLLMServer:
         # Create the inference client only after the readiness loop has closed.
         # Its transport will therefore first be used by the caller's event loop.
         self.client = AsyncOpenAI(
-            api_key="EMPTY",
-            base_url=f"http://localhost:{self.port}/v1",
+            **openai_client_kwargs(VLLM_ENDPOINT, self.port),
         )
         print(f"VLLM server is ready at http://localhost:{self.port}/v1")
         
@@ -604,4 +748,7 @@ class VLLMServer:
             self.log_file.close()
             self.log_file = None
 
-        print("VLLM server has been stopped.")
+        if self.endpoint == VLLM_ENDPOINT:
+            print("VLLM server has been stopped.")
+        else:
+            print("OpenRouter client has been closed.")

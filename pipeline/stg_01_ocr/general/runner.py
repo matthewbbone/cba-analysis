@@ -39,6 +39,7 @@ from pipeline.stg_01_ocr.common import (  # re-export the historical public seam
 )
 from pipeline.stg_01_ocr.render import render_page, render_page_isolated
 from pipeline.stg_01_ocr.repetition import RepetitionPolicy, default_policy
+from pipeline.utils.vllm_server import add_endpoint_argument
 
 
 DEFAULT_MODEL_NAME = "AIDC-AI/Ovis2.6-30B-A3B"
@@ -75,6 +76,7 @@ def _is_ovisocr2(model_name: str) -> bool:
 
 
 def add_arguments(parser: argparse.ArgumentParser) -> None:
+    add_endpoint_argument(parser)
     # ``None`` records that the shared option was not explicitly supplied, so
     # the model profile can choose its completion budget after model selection.
     parser.set_defaults(max_tokens=None)

@@ -55,7 +55,7 @@ interface ExtractionRecord {
   model_name: string;
   extraction_class: string;
   extraction_text: string;
-  attributes?: { context?: string | null };
+  generated_extraction_text?: string;
   span_start: number;
   span_end: number;
   span_reliable?: boolean;

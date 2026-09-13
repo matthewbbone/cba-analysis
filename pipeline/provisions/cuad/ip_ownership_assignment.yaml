@@ -1,0 +1,8 @@
+clause_type: ip_ownership_assignment
+clause_description: |-
+  Does intellectual property created by one party become the property of the counterparty, either per the terms of the contract or upon the occurrence of certain events?
+N_EXTRACTION_PASSES: 2
+LANGEXTRACT_MAX_WORKERS: 10
+LANGEXTRACT_BATCH_LENGTH: 10
+MAX_CHAR_BUFFER: 8192
+ENRICH_MAX_CHAR_BUFFER: 5000

@@ -25,9 +25,13 @@ class MoveExtractionsTests(unittest.TestCase):
         self._write(extraction_root / "extractor_b" / "doc_a" / "wage_tables.jsonl")
         self._write(extraction_root / "extractor_b" / "doc_b" / "wage_tables.jsonl")
 
-        # Stage 03 is keyed by the classification model, which need not match
-        # the extraction model that produced its input.
-        classify_root = src_cache / "stg_03_classify" / self.source
+        enrich_root = src_cache / "stg_03_enrich" / self.source
+        self._write(enrich_root / "enricher_a" / "doc_a" / "wage_tables.jsonl")
+        self._write(enrich_root / "enricher_a" / "doc_b" / "wage_tables.jsonl")
+
+        # Stage 04 is keyed by the classification model, which need not match
+        # either upstream model.
+        classify_root = src_cache / "stg_04_classify" / self.source
         self._write(classify_root / "classifier_a" / "doc_a" / "wage_tables.jsonl")
         self._write(classify_root / "classifier_a" / "doc_b" / "wage_tables.jsonl")
         self._write(classify_root / "classifier_b" / "doc_a" / "wage_tables.jsonl")
@@ -48,9 +52,17 @@ class MoveExtractionsTests(unittest.TestCase):
             dst_cache,
             dry_run,
         )
-        move_extractions.move_classifications(
+        move_extractions.move_downstream_stage(
             self.source,
-            "stg_03_classify",
+            "stg_03_enrich",
+            document_dirs,
+            src_cache,
+            dst_cache,
+            dry_run,
+        )
+        move_extractions.move_downstream_stage(
+            self.source,
+            "stg_04_classify",
             document_dirs,
             src_cache,
             dst_cache,
@@ -95,7 +107,7 @@ class MoveExtractionsTests(unittest.TestCase):
             with redirect_stdout(StringIO()):
                 self._move_all(src_cache, dst_cache, dry_run=False)
 
-            classify_root = dst_cache / "stg_03_classify" / self.source
+            classify_root = dst_cache / "stg_04_classify" / self.source
             classify_files = {
                 path.relative_to(classify_root)
                 for path in classify_root.rglob("*")
@@ -131,7 +143,7 @@ class MoveExtractionsTests(unittest.TestCase):
                     ]
                 )
 
-            classify_root = dst_cache / "stg_03_classify" / self.source
+            classify_root = dst_cache / "stg_04_classify" / self.source
             classify_files = {
                 path.relative_to(classify_root)
                 for path in classify_root.rglob("*")
@@ -142,7 +154,7 @@ class MoveExtractionsTests(unittest.TestCase):
             classify_files, {Path("classifier_a/doc_b/wage_tables.jsonl")}
         )
 
-    def test_cli_no_classify_skips_stage_03(self) -> None:
+    def test_cli_no_classify_skips_stage_04(self) -> None:
         with TemporaryDirectory() as tmp_dir:
             root = Path(tmp_dir)
             src_cache = root / "source_cache"
@@ -161,13 +173,33 @@ class MoveExtractionsTests(unittest.TestCase):
                     ]
                 )
 
-            classify_exists = (dst_cache / "stg_03_classify").exists()
+            classify_exists = (dst_cache / "stg_04_classify").exists()
             extraction_exists = (
                 dst_cache / "stg_02_extract" / self.source
             ).is_dir()
+            enrich_exists = (dst_cache / "stg_03_enrich").exists()
 
         self.assertFalse(classify_exists)
         self.assertTrue(extraction_exists)
+        self.assertTrue(enrich_exists)
+
+    def test_cli_no_enrich_skips_stage_03(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            src_cache = root / "source_cache"
+            dst_cache = root / "destination_cache"
+            self._build_source_cache(src_cache)
+            with redirect_stdout(StringIO()):
+                move_extractions.main([
+                    self.source,
+                    "--src-cache", str(src_cache),
+                    "--dst-cache", str(dst_cache),
+                    "--no-enrich",
+                ])
+            enrich_exists = (dst_cache / "stg_03_enrich").exists()
+            classify_exists = (dst_cache / "stg_04_classify").exists()
+        self.assertFalse(enrich_exists)
+        self.assertTrue(classify_exists)
 
     def test_cli_never_copies_ocr_text(self) -> None:
         with TemporaryDirectory() as tmp_dir:

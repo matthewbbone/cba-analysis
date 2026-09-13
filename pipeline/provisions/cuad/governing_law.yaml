@@ -1,0 +1,8 @@
+clause_type: governing_law
+clause_description: |-
+  Which state/country's law governs the interpretation of the contract?
+N_EXTRACTION_PASSES: 2
+LANGEXTRACT_MAX_WORKERS: 10
+LANGEXTRACT_BATCH_LENGTH: 10
+MAX_CHAR_BUFFER: [2048, 8192]
+ENRICH_MAX_CHAR_BUFFER: 5000
