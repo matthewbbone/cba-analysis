@@ -1,103 +1,99 @@
 clause_type: technology
 clause_description: |-
-  Clauses that address the introduction of new technology into work processes. This can include clauses regarding
-  preemptive rights regarding the decision to adopt new technology, clauses mitigating impacts of new technology
-  implementation, and clauses regarding the use of technology in workforce management.
+  Clauses that address workplace technologies
 subtype_taxonomy:
-  preemptive_rights:
-    description:  |- 
-      provisions focused on establishing respective rights and roles regarding the decision to adopt and 
-      implement new technology
+  technology_definitions:
+    description: |- 
+      key definitions related to workplace technology
     subtypes:
-      labor_management_cooperation:
+      technological_change_definitions:
+        description: |- 
+          These definitions establish the scope of what constitutes “technological change” for the purposes of management obligations
+        subtypes:
+      artificial_intelligence_definitions:
         description: |-
-          stipulate a union’s “pledge to cooperate” along with management’s promise to make efforts to 
-          mitigate the negative impact of technological changes on the workforce
-      labor_management_committee: 
+          These definitions often distinguish between general AI, machine learning, generative AI, and traditional rule-based systems
+        subtypes:
+      wearables_and_sensor_technology_definitions:
         description: |-
-          Technological change committees often include equal representation from the union and employer, 
-          with variations on employee representative selection procedures.
-      research_studies_planning:
+          These definitions address devices that collect biometric, health, or movement data from workers, particularly in performance-driven or physically intensive jobs
+        subtypes:
+      information_and_communications_technology_definitions:
         description: |-
-          Provisions stipulating research and studies on the impact of technology on the workplace
-      notification_right:
-        description: |-
-          the right to advanced notification about any proposed technological changes in the workplace
-      negotiation_right:
-        description: |-
-          asserts the union's right to negotiate with management regarding the effects of the new 
-          technology on jobs as well as the strategy  for introducing the new technology before 
-          implementation of the technology.
-      participation_right:
-        description: |-
-          asserts the union’s right to engage in the strategic decision-making surrounding the 
-          adoption of new technologies
-      technology_restriction:
-        description: |-
-          establish limitations on management’s right to introduce new technology
-  implementation:
-    description:  |-
-      provisions designed to mitigate the introduction of new technology in the workplace
+          These provisions define the digital systems, software, and communications tools used by workers in their everyday roles
+        subtypes:
+  foundational_technology_rights:
+    description: |-
+      recognition of foundational rights when an employer plans to introduce new or modified technologies
     subtypes:
-      job_displacement:
+      notification_and_information_rights:
         description: |-
-          outline processes to address job loss due to technological changes in the workplace
-      job_protection_transfers:
+          requirement that employers notify unions and provide timely, detailed information about planned or potential changes
+        subtypes:
+      bargaining_rights_on_technolgoy_changes:
         description: |-
-          protect existing employees, especially employees with seniority, from job loss due to new technologies
-      wage_benefit_protection:
+          explicitly affirm union rights to negotiate over the introduction and effects of new workplace technologies
+        subtypes:
+      participation_in_technology_decision_making_processes:
         description: |-
-          These ‘compensation protection’ clauses attempt to maintain wage levels and/or work hours
-      job_restructuring_productivity:
+          provisions for active worker participation throughout the technology decision-making process
+        subtypes:
+      union_jurisdiction_and_work_preservation:
         description: |-
-          focus on changes in working conditions associated with new technologies, such as changes in workload, 
-          tasks, responsibilities, work schedules, or pace of work
-      union_jurisdiction:
-        description: |-
-          set out to protect or expand the bargaining unit during job restructuring associated with new technologies 
-          in the workplace
-      workforce_training:
-        description: |-
-          training provisions cover a variety of topics ranging from simple requirements that employers 
-          provide training for new technology to comprehensive training programs for new technologies
-      technology_transition_plan:
-        description: |-
-          Technology transition plans, developed either in anticipation of the introduction of new technology 
-          or for a specific planned technological innovation, often outline the process for introducing 
-          technological change in the workplace including advanced notification, displacement mitigation 
-          strategies, and compensation plans
-  workforce_management:
-    description:  |-
-       provisions related to the use of technology in workforce management
+          provisions to protect bargaining unit jurisdiction and prevent job displacement
+        subtypes:
+  employer_commitments_in_technology_implementation:
+    description: |-
+      a wide range of employer commitments to ensure that technological change does not undermine workers’ job stability, income security, or working conditions
     subtypes:
-      monitoring_surveillance:
+      employment_and_economic_security_protections:
         description: |-
-          contract provisions that ensure employee and union rights to know about the use of these technologies 
-          in the workplace and that limit employers’ use of monitoring and surveillance technologies
-      internet_usage:
+          Employment and income protections form the cornerstone of bargaining agreements on technology effects—contract provisions that respond directly to the organizational impacts of new tools, systems, and processes
+        subtypes:
+      training_and_workforce_development_for_technological_change:
         description: |-
-          guidelines for union and member use of social media in order to avoid negative consequences for social 
-          media activities
-      scheduling:
+          provisions to ensure that workers can adapt to technological change through guaranteed access to training, fair selection processes, adequate program infrastructure, and long-term educational support
+        subtypes:
+      technology_related_safety_health_and_accommodation:
         description: |-
-          provisions to protect workers from unpredictable, unstable, and rigid scheduling practices by employers 
-          combined with algorithmic computer scheduling systems
-      telework:
+          provisions that address the physical, psychological, and accessibility-related impacts of workplace technologies
+        subtypes:
+  governance_of_workplace_technology_applications:
+    description: |-
+      how unions have negotiated over the use and governance of specific workplace technology applications
+    subtypes:
+      electronic_monitoring_and_surveillance_technologies:
         description: |-
-          provisions outlining parameters for telecommuting
-      maintaining_safety:
+          sought to define clear limits, notification processes, and accountability measures to govern how these electronic monitoring and surveillance systems are implemented and used
+        subtypes:
+      human_resources_and_workforce_management_technologies:
         description: |-
-          Clauses that outline the employers’ responsibility to protect workers and ensure a safe workplace often 
-          stipulate requirements for: regulatory compliance, proper maintenance of equipment and technologies to 
-          ensure safety, employee notification of health concerns associated with technology, and employee training 
-          on new technology to ensure safety for employees
-      technology_safety_review:
+          establish contractual safeguards to ensure that these automated systems for personnel functions such as hiring, evaluation, timekeeping, and scheduling operate fairly, remain accountable to workers and their representatives, and do not override negotiated procedures or erode worker rights
+        subtypes:
+      work_task_technologies_and_applications:
         description: |-
-          require the employer to study the impact of new technologies on employee health and safety
-      technology_hazard_protection:
+          provisions to safeguard worker roles, preserve professional autonomy, and ensure equitable and accountable integration of technology into daily work
+        subtypes:
+  participation_in_technology_governance:
+    description: |-
+      formal mechanisms to participate in the planning, implementation, and oversight of workplace technologies
+    subtypes:
+      collaboration_purpose_and_scope:
         description: |-
-          Worker protection provisions often detail issues related to specific technologies and set guidelines to 
-          protect worker safety and health
+          establish collaborative goals and activities to guide the governance of workplace technologies
+        subtypes:
+      structural_elements_of_collaboration_and_participation:
+        description: |-
+          establish structural parameters for how collaboration is organized
+        subtypes:
+      operational_guidelines_and_processes_for_collaboration:
+        description: |-
+          define operational procedures to guide how committees and workgroups operate in practice
+        subtypes:
+      skills_and_capabilities_for_collaboration:
+        description: :-
+          provisions to build the capacity of union and management participants—through joint training, dispute resolution practices, and evaluation methods.
+        subtypes:
 N_EXTRACTION_PASSES: 2
 LANGEXTRACT_MAX_WORKERS: 10
 LANGEXTRACT_BATCH_LENGTH: 10

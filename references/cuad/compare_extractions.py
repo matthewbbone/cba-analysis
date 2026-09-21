@@ -225,13 +225,13 @@ def jaccard(a: Span, b: Span) -> float:
     return overlap / union if union > 0 else 0.0
 
 
-def greedy_match(
+def greedy_match_pairs(
     golds: Sequence[Span],
     preds: Sequence[Span],
     score_fn: Callable[[Span, Span], float],
     min_score: float,
-) -> tuple[int, int, int]:
-    """Greedy 1:1 matching by descending score; returns (tp, fp, fn).
+) -> list[tuple[int, int, float]]:
+    """Return (gold index, prediction index, score) for greedy 1:1 matches.
 
     Each gold span may be claimed by at most one prediction and vice versa,
     so one prediction spanning several gold spans -- or several predictions
@@ -248,16 +248,29 @@ def greedy_match(
 
     matched_golds: set[int] = set()
     matched_preds: set[int] = set()
-    true_positives = 0
-    for _, gold_index, pred_index in candidates:
+    pairs: list[tuple[int, int, float]] = []
+    for score, gold_index, pred_index in candidates:
         if gold_index in matched_golds or pred_index in matched_preds:
             continue
         matched_golds.add(gold_index)
         matched_preds.add(pred_index)
-        true_positives += 1
+        pairs.append((gold_index, pred_index, score))
 
-    false_positives = len(preds) - len(matched_preds)
-    false_negatives = len(golds) - len(matched_golds)
+    return pairs
+
+
+def greedy_match(
+    golds: Sequence[Span],
+    preds: Sequence[Span],
+    score_fn: Callable[[Span, Span], float],
+    min_score: float,
+) -> tuple[int, int, int]:
+    """Greedy 1:1 matching by descending score; returns (tp, fp, fn)."""
+
+    true_positives = len(greedy_match_pairs(golds, preds, score_fn, min_score))
+
+    false_positives = len(preds) - true_positives
+    false_negatives = len(golds) - true_positives
     return true_positives, false_positives, false_negatives
 
 

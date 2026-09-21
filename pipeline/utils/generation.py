@@ -43,7 +43,8 @@ def generation_kwargs(model_name: str, endpoint: str) -> dict[str, object]:
 
 
 def make_profiled_langextract_model(
-    model_name: str, endpoint: str, connection: dict[str, str], max_workers: int
+    model_name: str, endpoint: str, connection: dict[str, str], max_workers: int,
+    *, request_defaults: dict | None = None,
 ):
     """Preserve request extensions that LangExtract's provider filters out.
 
@@ -56,8 +57,40 @@ def make_profiled_langextract_model(
         def _build_chat_completions_params(self, prompt: str, config: dict) -> dict:
             params = super()._build_chat_completions_params(prompt, config)
             params.update(generation_kwargs(model_name, endpoint))
-            return params
+            return merge_request_defaults(params, request_defaults or {})
 
     return ProfiledOpenAILanguageModel(
         model_id=model_name, max_workers=max_workers, **connection
     )
+
+
+def merge_request_defaults(params: dict, defaults: dict) -> dict:
+    """Fill absent request settings, including nested vLLM extensions."""
+    merged = dict(defaults)
+    for key, value in params.items():
+        if value is None:
+            continue
+        if isinstance(value, dict) and isinstance(merged.get(key), dict):
+            merged[key] = merge_request_defaults(value, merged[key])
+        else:
+            merged[key] = value
+    return merged
+
+
+def harness_request_defaults(generation_config: dict) -> dict:
+    """Reproduce vLLM's auto generation config on a neutral shared server.
+
+    Input is GenerationConfig.to_diff_dict(), as used by vLLM, rather than
+    Transformers' full defaults (which would introduce e.g. top_k=50).
+    """
+    request, extra = {}, {"chat_template_kwargs": {
+        "enable_thinking": True, "preserve_thinking": False,
+    }}
+    for name in ("temperature", "top_p", "max_new_tokens"):
+        if generation_config.get(name) is not None:
+            request["max_tokens" if name == "max_new_tokens" else name] = generation_config[name]
+    for name in ("top_k", "min_p", "repetition_penalty"):
+        if generation_config.get(name) is not None:
+            extra[name] = generation_config[name]
+    request["extra_body"] = extra
+    return request

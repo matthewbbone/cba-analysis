@@ -52,7 +52,7 @@ class Stage02ProvisionTests(unittest.TestCase):
                 self.assertEqual(provision.clause_type, name)
                 self.assertIn(prompt_fragment, provision.prompt_description.lower())
                 self.assertIn(
-                    f"extracting {name} class clauses",
+                    f"extracting verbatim quotes from {name} class clauses",
                     provision.prompt_description,
                 )
                 self.assertNotIn("context attribute", provision.prompt_description)
@@ -78,6 +78,7 @@ class Stage02ProvisionTests(unittest.TestCase):
         provision = self._load_temp(self._definition())
 
         self.assertEqual(provision.clause_type, "safety_rule")
+        self.assertEqual(provision.clause_description, "Mandatory workplace safety rules.")
         self.assertIn(
             "safety_rule Description: Mandatory workplace safety rules.",
             provision.prompt_description,
@@ -598,6 +599,66 @@ class Stage02CliTests(unittest.TestCase):
         self.assertFalse(hasattr(args, "validate"))
         self.assertFalse(hasattr(args, "verify_llm"))
         self.assertEqual(args.endpoint, "vllm")
+        self.assertFalse(args.cuad_test)
+        self.assertIsNone(args.source)
+
+    def test_cuad_test_implies_cuad_source(self) -> None:
+        for flag in ("--cuad_test", "--cuad-test"):
+            with self.subTest(flag=flag):
+                args = runner.parse_args(["--provision", "governing_law", flag])
+                self.assertTrue(args.cuad_test)
+                self.assertEqual(args.source, "cuad")
+        with self.assertRaises(SystemExit):
+            runner.parse_args([
+                "--provision", "technology", "--cuad_test", "--source", "dol_archive",
+            ])
+
+    def test_cuad_test_filters_before_sampling_and_respects_document_ids(self) -> None:
+        from references.cuad.compare_extractions import DOCUMENT_ID_TITLE_OVERRIDES
+
+        alias, title = next(iter(DOCUMENT_ID_TITLE_OVERRIDES.items()))
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            split = root / "test.json"
+            split.write_text(json.dumps({"data": [
+                {"title": title, "paragraphs": [{"qas": []}]},
+                {"title": " test_doc ", "paragraphs": [{"qas": []}]},
+            ]}), encoding="utf-8")
+            for source, doc in (
+                ("cuad", alias), ("cuad", "test_doc"), ("cuad", "train_doc"),
+                ("other", "test_doc"),
+            ):
+                full = root / "input" / source / "ocr" / doc / "full.txt"
+                full.parent.mkdir(parents=True)
+                full.write_text("contract text", encoding="utf-8")
+            argv = [
+                "--provision", "governing_law", "--cuad_test",
+                "--input-root", str(root / "input"),
+                "--output-root", str(root / "output"),
+                "--ocr-model-name", "ocr", "--model-name", "extract/model",
+                "--endpoint", "openrouter", "--no-progress",
+            ]
+            with (
+                patch.object(runner, "CUAD_TEST_JSON", split),
+                patch.object(runner, "VLLMServer") as server,
+                patch.object(runner, "make_langextract_extractor", return_value=lambda text, job: []),
+                patch.object(runner.random, "Random") as sampler,
+            ):
+                sampler.return_value.sample.side_effect = lambda population, count: population[:count]
+                runner.main(argv + ["--sample", "1", "--seed", "0"])
+                population = sampler.return_value.sample.call_args.args[0]
+                self.assertEqual({job.document_id for job in population}, {alias, "test_doc"})
+                self.assertTrue(all(job.source == "cuad" for job in population))
+                self.assertEqual(len(list((root / "output").rglob("*.jsonl"))), 1)
+                server.return_value.close.assert_called_once()
+
+                server.reset_mock()
+                runner.main(argv + ["--document-id", "train_doc"])
+                server.assert_not_called()
+
+                runner.main(argv + ["--document-id", "test_doc", "--force"])
+                self.assertTrue((root / "output" / "cuad" / "extract_model" /
+                                 "test_doc" / "governing_law.jsonl").exists())
 
     def test_parse_args_accepts_openrouter_endpoint(self) -> None:
         args = runner.parse_args(

@@ -61,6 +61,7 @@ class ProvisionSpec:
     # Top level of the classification taxonomy, in config order; None when the
     # provision declares no subtypes and therefore cannot be classified.
     subtype_taxonomy: Mapping[str, SubtypeNode] | None = None
+    clause_description: str = ""
 
 
 def _config_object(value: object) -> dict[str, object]:
@@ -234,10 +235,15 @@ def render_options(options: Mapping[str, str]) -> str:
 
 def _prompt_description(clause_type: str, clause_description: str) -> str:
     return (
-        f'You are a legal expert reviewing chunks of contract text and extracting '
-        f'verbatim quotes from {clause_type} class clauses.\n\n'
-        f'{clause_type} Description: {clause_description}\n\n'
-        'If no text is relevant, return an empty list for the '
+        'You are an assistant with strong legal knowledge, supporting senior lawyers by preparing reference materials.'
+        'Given a Context and a Question, extract and return only the sentence(s) from '
+        'the Context that directly address or relate to the Question. '
+        'Do not rephrase or summarize in any way—'
+        'respond with exact sentences from the Context relevant to the Question. '
+        'page numbers or whitespace, include them exactly as they appear.'
+        'When relevance is uncertain, include the passage. Copy all quotes '
+        'verbatim from the supplied text; do not invent or paraphrase content.\n\n'
+        'Only if no text is plausibly relevant, return an empty list for the '
         '`extractions` key: {"extractions": []}.\n'
     )
 
@@ -291,6 +297,7 @@ def load_provision(name: str, *, provisions_dir: Path | None = None) -> Provisio
     raw_taxonomy = config.get("subtype_taxonomy")
     return ProvisionSpec(
         clause_type=clause_type,
+        clause_description=clause_description,
         prompt_description=_prompt_description(clause_type, clause_description),
         extraction_passes=extraction_passes,
         langextract_max_workers=_positive_integer(

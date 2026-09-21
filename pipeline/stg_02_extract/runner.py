@@ -40,6 +40,7 @@ from pipeline.utils.vllm_server import (
     add_endpoint_argument,
     apply_model_serve_defaults,
     openai_client_kwargs,
+    validate_borrowed_server,
 )
 
 
@@ -56,6 +57,7 @@ INPUT_STAGE_NAME = "stg_01_ocr"
 STAGE_NAME = "stg_02_extract"
 DEFAULT_MAX_MODEL_LEN = 14000
 DEFAULT_NUM_GPUS = 1
+CUAD_TEST_JSON = PROJECT_ROOT / "references" / "cuad" / "test.json"
 
 @dataclass(frozen=True)
 class ExtractionJob:
@@ -191,6 +193,20 @@ def discover_full_texts(
     return jobs
 
 
+def filter_cuad_test_jobs(jobs: list[ExtractionJob]) -> list[ExtractionJob]:
+    """Keep CUAD test contracts, resolving cached filenames to dataset titles."""
+    from references.cuad.compare_extractions import (
+        build_document_id_resolver,
+        load_gold_documents,
+    )
+
+    resolve = build_document_id_resolver(load_gold_documents(CUAD_TEST_JSON))
+    return [
+        job for job in jobs
+        if job.source == "cuad" and resolve(job.document_id) is not None
+    ]
+
+
 def extraction_char_span(extraction) -> tuple[int | None, int | None]:
     char_interval = getattr(extraction, "char_interval", None)
     if char_interval is None:
@@ -293,6 +309,7 @@ def make_langextract_extractor(
     model_name: str,
     port: int,
     endpoint: str = "vllm",
+    *, request_defaults: dict | None = None,
 ) -> Extractor:
     import langextract as lx
     from langextract.factory import ModelConfig
@@ -311,10 +328,11 @@ def make_langextract_extractor(
         lx.schema.extraction_item_schema(provision.clause_type)
     )
     model_kwargs = {"config": config}
-    if generation_kwargs(model_name, endpoint):
+    if generation_kwargs(model_name, endpoint) or request_defaults is not None:
         model_kwargs = {"model": make_profiled_langextract_model(
             model_name, endpoint, openai_client_kwargs(endpoint, port),
             provision.langextract_max_workers,
+            request_defaults=request_defaults,
         )}
 
     def extractor(text: str, job: ExtractionJob) -> list[dict[str, object]]:
@@ -375,26 +393,33 @@ def run_extraction_queue(
         except Exception as exc:
             return ExtractionResult(job=job, status="failed", error=str(exc))
 
+    executor = ThreadPoolExecutor(max_workers=concurrency)
     try:
-        with ThreadPoolExecutor(max_workers=concurrency) as executor:
-            futures = [executor.submit(run_job, job) for job in jobs]
-            for future in as_completed(futures):
-                result = future.result()
-                results.append(result)
-                if progress_reporter is not None:
-                    progress_reporter.callback(result)
-                elif result.status == "failed":
-                    print(
-                        f"failed {result.job.source}/{result.job.document_id}: "
-                        f"{result.error}"
-                    )
-                elif result.status == "skipped":
-                    print(f"skipped {result.job.source}/{result.job.document_id}")
-                else:
-                    print(
-                        f"wrote {result.job.source}/{result.job.document_id} "
-                        f"({result.extraction_count} extractions)"
-                    )
+        futures = [executor.submit(run_job, job) for job in jobs]
+        for future in as_completed(futures):
+            result = future.result()
+            results.append(result)
+            if progress_reporter is not None:
+                progress_reporter.callback(result)
+            elif result.status == "failed":
+                print(
+                    f"failed {result.job.source}/{result.job.document_id}: "
+                    f"{result.error}"
+                )
+            elif result.status == "skipped":
+                print(f"skipped {result.job.source}/{result.job.document_id}")
+            else:
+                print(
+                    f"wrote {result.job.source}/{result.job.document_id} "
+                    f"({result.extraction_count} extractions)"
+                )
+    except BaseException:
+        # Let the owning runner/orchestrator close vLLM without first waiting
+        # for every queued document. In-flight requests unwind on server close.
+        executor.shutdown(wait=False, cancel_futures=True)
+        raise
+    else:
+        executor.shutdown(wait=True)
     finally:
         if progress_reporter is not None:
             progress_reporter.close()
@@ -515,6 +540,15 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--no-progress", action="store_true")
     parser.add_argument("--source")
     parser.add_argument(
+        "--cuad_test",
+        "--cuad-test",
+        action="store_true",
+        help=(
+            "Only process CUAD contracts in references/cuad/test.json; "
+            "implies --source cuad. Applied before --sample."
+        ),
+    )
+    parser.add_argument(
         "--document-id",
         "--document-ids",
         dest="document_id",
@@ -539,7 +573,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         type=int,
         help="Seed for --sample selection, for reproducible runs.",
     )
-    return parser.parse_args(argv)
+    args = parser.parse_args(argv)
+    if args.cuad_test:
+        if args.source not in (None, "cuad"):
+            parser.error("--cuad_test requires --source cuad (or no --source)")
+        args.source = "cuad"
+    return args
 
 
 def validate_args(args: argparse.Namespace) -> None:
@@ -583,9 +622,12 @@ def report_results(results: list[ExtractionResult]) -> None:
         print(f"failed {result.job.source}/{result.job.document_id}: {result.error}")
 
 
-def main(argv: list[str] | None = None) -> None:
-    args = parse_args(argv)
+def run(args: argparse.Namespace, *, server: VLLMServer | None = None) -> list[ExtractionResult]:
+    """Run a clause, optionally borrowing a server owned by an orchestrator."""
     validate_args(args)
+    owned_server = server is None
+    if server is not None:
+        validate_borrowed_server(server, args)
     provision = load_provision(
         args.provision, provisions_dir=resolve_provisions_dir(args.source)
     )
@@ -600,9 +642,11 @@ def main(argv: list[str] | None = None) -> None:
         source_filter=args.source,
         document_id_filter=args.document_id,
     )
+    if args.cuad_test:
+        jobs = filter_cuad_test_jobs(jobs)
     if not jobs:
         print("No stage 1 full.txt documents found.")
-        return
+        return []
 
     if args.sample is not None and args.sample < len(jobs):
         sampler = random.Random(args.seed)
@@ -619,37 +663,34 @@ def main(argv: list[str] | None = None) -> None:
 
     pending_jobs = [job for job in jobs if args.force or not job.output_path.exists()]
     if not pending_jobs:
-        report_results(
-            [
-                ExtractionResult(job=job, status="skipped")
-                for job in jobs
-            ]
-        )
-        return
-
-    server = None
+        results = [ExtractionResult(job=job, status="skipped") for job in jobs]
+        report_results(results)
+        return results
 
     try:
-        server = VLLMServer(
-            model_name=args.model_name,
-            endpoint=args.endpoint,
-            port=args.port,
-            max_model_len=args.max_model_len,
-            num_gpus=args.num_gpus,
-            device=args.device,
-            gpu_memory_utilization=args.gpu_memory_utilization,
-            extra_serve_args=reasoning_serve_args(
-                args.model_name,
-                args.reasoning_parser,
-            ),
-            max_num_seqs=args.max_num_seqs
-        )
-        server.start()
+        if owned_server:
+            server = VLLMServer(
+                model_name=args.model_name,
+                endpoint=args.endpoint,
+                port=args.port,
+                max_model_len=args.max_model_len,
+                num_gpus=args.num_gpus,
+                device=args.device,
+                gpu_memory_utilization=args.gpu_memory_utilization,
+                extra_serve_args=reasoning_serve_args(
+                    args.model_name,
+                    args.reasoning_parser,
+                ),
+                max_num_seqs=args.max_num_seqs,
+            )
+            server.start()
+        request_defaults = getattr(args, "harness_request_defaults", None)
         extractor = make_langextract_extractor(
             provision=provision,
             model_name=args.model_name,
             port=args.port,
             endpoint=args.endpoint,
+            **({"request_defaults": request_defaults} if request_defaults is not None else {}),
         )
 
         def processor(job: ExtractionJob) -> ExtractionResult:
@@ -666,9 +707,14 @@ def main(argv: list[str] | None = None) -> None:
             show_progress=not args.no_progress,
         )
         report_results(results)
+        return results
     finally:
-        if server is not None:
+        if owned_server and server is not None:
             server.close()
+
+
+def main(argv: list[str] | None = None) -> None:
+    run(parse_args(argv))
 
 
 if __name__ == "__main__":

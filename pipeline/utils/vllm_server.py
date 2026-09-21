@@ -81,6 +81,13 @@ def model_log_filename(model_name: str) -> str:
     return f"{model_name.replace('/', '_')}.log"
 
 
+def validate_borrowed_server(server, args) -> None:
+    """Prevent a caller from sending cached-model requests to another server."""
+    for name in ("endpoint", "model_name", "port", "max_model_len"):
+        if getattr(server, name) != getattr(args, name):
+            raise ValueError(f"Borrowed server {name} differs from requested configuration")
+
+
 OVIS26_MODEL_NAMES = {"AIDC-AI/Ovis2.6-30B-A3B"}
 OVIS26_VISUAL_TOKENS = [
     "<image>",

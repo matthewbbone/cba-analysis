@@ -268,6 +268,17 @@ Useful controls include `--sample`, `--seed`, repeatable `--document-id`,
 
 ### Stage 2: grounded extraction
 
+Use `--cuad_test` to restrict extraction to the 102 contracts listed in
+`references/cuad/test.json`. This implies `--source cuad`, uses the existing
+document-title overrides, and intersects any `--document-id` selection before
+applying `--sample`. Only contracts with cached OCR `full.txt` inputs are run.
+
+```bash
+uv run python -m pipeline.stg_02_extract.runner \
+  --cuad_test --provision joint_ip_ownership \
+  --model-name openai/gpt-4.1 --endpoint openrouter
+```
+
 ```text
 stg_02_extract/<source>/<extract_model>/<document_id>/<provision>.jsonl
 ```
@@ -386,6 +397,262 @@ Important interpretation limits:
 Useful plotting thresholds include `--min-group-docs` (default 10),
 `--min-sector-docs` (default 5), `--min-cbas`, and `--min-cell-docs`. These can
 change the plotted sample and should be reported with results.
+
+## Sequential CUAD sweep
+
+Run both extraction methods for all 41 clause types and all 102 CUAD test
+contracts, with one vLLM server per model:
+
+```bash
+# Validate all test inputs and print the 410-job schedule without inference.
+uv run python -m pipeline.stg_02_extract.orchestrator --dry-run
+
+# Resume the full sweep on physical GPU 0.
+uv run python -m pipeline.stg_02_extract.orchestrator --device cuda:0
+
+# Run the five technology-provision proxies (50 jobs across both methods).
+uv run python -m pipeline.stg_02_extract.orchestrator --target min_5 --device cuda:0
+
+# Run that subset for one model (10 jobs across both methods).
+uv run python -m pipeline.stg_02_extract.orchestrator --target min_5 --model-name google/gemma-4-31b-it --device cuda:0
+
+# Rerun only runner.py (Harness) for these models across all 41 clause types.
+uv run python -m pipeline.stg_02_extract.orchestrator \
+  --method runner --force --device 0 \
+  --model-name Qwen/Qwen3.8-27B \
+  --model-name Qwen/Qwen3.8-27B-FP8 \
+  --model-name RedHatAI/gemma-4-31B-it-FP8-dynamic \
+  --model-name google/gemma-3-12b-it \
+  --model-name thomsonreuters/Thomson-1.0-Small
+```
+
+`--target min_5` selects `change_of_control`, `audit_rights`,
+`post_termination_services`, `rofr_rofo_rofn`, and `anti_assignment`.
+It retains all 102 test documents and, by default, all five models. Use
+`--model-name MODEL` to select one preset or custom model; repeat the option to
+select several. Without this option, the five preset models run.
+Add `--dry-run` to preview the schedule. The default `--target all` selects all
+41 clause types.
+
+`--method runner` runs only the standard extraction runner (reported as Harness),
+leaving ContractEval outputs untouched. `--method contracteval` runs only
+ContractEval; the default `--method both` runs both methods. `--force` reruns
+existing outputs only for the selected methods. Each selection shares one
+vLLM server per model across all selected clauses.
+
+The default model order is `Qwen/Qwen3.8-27B`,
+`RedHatAI/gemma-4-31B-it-FP8-dynamic`, `google/gemma-4-31b-it`,
+`Qwen/Qwen3.8-27B-FP8`, and `google/gemma-3-12b-it`. Identifiers are passed
+through exactly; explicit `--model-name` selections run in the supplied order.
+For each model, clauses run alphabetically, with ContractEval then Harness when
+both are selected, before the server is closed and the next model loads. Document
+concurrency is one; Harness retains its configured internal workers and passes.
+
+The shared server uses neutral vLLM generation defaults. Harness receives the
+model's generation defaults and its existing thinking-template settings per
+request; ContractEval keeps temperature 0, a 5,000-token output budget, and
+model-default thinking. Neither method changes the shared server's defaults.
+
+Defaults are GPU 0, one GPU, port 8123, context length 131072, and the standard
+OCR input/model directories. Override `--input-root`, `--ocr-model-name`,
+`--port`, `--max-model-len`, `--gpu-memory-utilization`, or `--max-num-seqs`
+as needed. The orchestrator never truncates ContractEval inputs, automatically
+shrinks context, or adds GPUs to fit a model.
+
+`--output-root` is the stage-02 root: existing Harness and ContractEval layouts
+are preserved beneath it. Compatible cached results are reused, failed or
+missing extractions are retried, and cache mismatches remain errors. Use
+`--force` to regenerate results and `--no-progress` to suppress progress bars.
+Missing or unreadable test inputs stop preflight before any server starts.
+
+Progress and errors are saved atomically after every clause job to
+`<output-root>/cuad/orchestration/latest.json`. Clause failures allow subsequent
+jobs to continue; startup failures or a dead server skip the remaining jobs for
+that model. Servers are never restarted within a sweep. Failed ContractEval
+requests still score as empty extractions; infrastructure failures are recorded
+separately. The command exits nonzero if anything fails, and Ctrl+C or SIGTERM
+closes the current server and stops the sweep. A server cleanup failure stops
+the sweep to avoid loading another model before GPU release is confirmed.
+Generate comparison tables separately after extraction completes.
+
+## ContractEval CUAD baseline
+
+Run one clause and model with the full-document method from
+[ContractEval](https://arxiv.org/html/2508.03080v1):
+
+```bash
+uv run python -m pipeline.stg_02_extract.contracteval \
+  --provision governing_law --model-name openai/gpt-4.1 --endpoint openrouter
+
+uv run python -m pipeline.stg_02_extract.contracteval \
+  --provision governing_law --model-name Qwen/Qwen3-8B --endpoint vllm
+```
+
+OpenRouter uses `OPENROUTER_API_KEY` from the environment or project `.env`.
+The vLLM command starts and closes its server; GPU selection and serving options
+follow the extraction runner. The default context window is 131,072 tokens;
+adjust `--max-model-len`, `--num-gpus`, `--device`, and
+`--gpu-memory-utilization` for the model and available hardware. Context overflow
+is reported as a failure; inputs are never truncated or chunked.
+
+The script selects the 102 contracts in `references/cuad/test.json` from the
+runner's stage-1 `cuad/<ocr-model>/<document>/full.txt` inputs. It uses the local
+CUAD YAML description inside the original CUAD question wrapper and the
+reference system prompt and fenced Context/Question template. Each document and
+clause receives one plain-text request. Original CUAD answer strings remain the
+labels, so OCR differences affect exact containment scores. The local test file
+contains 4,182 question pairs across all 41 categories; the paper reports 4,128.
+
+Generation defaults are temperature 0 and a 5,000-token output budget. The budget
+is adapted from the reference open-model implementation and shared across both
+endpoints; the proprietary reference used a larger budget. `top_p` is 0.9 for
+OpenRouter, as in the proprietary reference, and 1.0 for local greedy decoding.
+Use `--max-tokens`, `--temperature` (or `--temperature default` to omit it), and
+`--thinking default|on|off` to change these settings. Thinking defaults to the
+model's behavior. Gemma 4 and Qwen 3 reasoning parsers are selected automatically;
+use `--reasoning-parser` for other local reasoning models. Endpoint-separated
+reasoning is stored separately and final-answer content is scored. A provider
+may reject or ignore unsupported generation controls; requested settings and
+returned model metadata are retained for inspection.
+
+Results are written atomically to:
+
+```text
+CACHE_DIR/stg_02_extract/cuad/contracteval/<safe_model>/<document_id>/<clause_type>.json
+CACHE_DIR/stg_02_extract/cuad/contracteval/<safe_model>/metrics/<clause_type>.json
+```
+
+Each result retains the raw answer, labels, scores, usage, finish reason, and
+generation settings. Matching cached results are reused; changed inputs, prompts,
+labels, or settings require `--force` or a separate `--output-root`. That option
+replaces the ContractEval root (model/document directories are appended).
+Use `--document-id`, `--sample N --seed S`, and `--concurrency` as needed.
+
+Evaluation follows the [reference evaluator](https://github.com/olivialiu121/ContractEval/blob/main/Evaluation.py):
+all gold strings must be contained in the answer to count a positive example as
+TP. It reports TP/TN/FP/FN, precision, recall, F1, F2, positive-case token-set
+Jaccard, and false abstentions divided by the selected positive-example count.
+It preserves upstream edge stripping, case-insensitive substring detection of
+“no related clause”, and Jaccard punctuation removal and literal-space splitting.
+Undefined precision/recall/F scores are zero; positive-only metrics are JSON
+`null` when there are no positive examples. Truncated answers are flagged and
+scored. Failed requests and missing answers count as empty extractions: FN on
+positive examples, TN on negative examples, zero positive-case Jaccard, and a
+false abstention on positive examples. Errors remain reported separately.
+Failure records retain their status and error (without inventing answer text),
+are included in the comparison table, and are retried on subsequent inference
+runs. Offline evaluation also counts missing cached outputs as empty extractions,
+including failures from older runs that did not save per-document records.
+The comparison table also reads failures and missing-output IDs from saved
+aggregate metrics when no per-document record exists; actual output files take
+precedence. Its coverage section shows the number of failed or missing cases.
+Documents without OCR inputs remain listed separately as missing inputs.
+
+Rescore saved answers and compare an existing runner model on the common set of
+documents without starting inference:
+
+```bash
+uv run python -m pipeline.stg_02_extract.contracteval \
+  --provision governing_law --model-name openai/gpt-4.1 \
+  --evaluate-only --compare-runner-model RedHatAI/gemma-4-31B-it-FP8-dynamic
+```
+
+Offline rescoring checks input/prompt/label identity but uses saved generation
+metadata, so inference flags do not need repeating. Comparison joins the runner's
+stored `extraction_text` values in file order. An existing empty JSONL file is an
+abstention; missing files are excluded and listed separately. Rows naming a
+different OCR model are excluded with an error (empty files contain no provenance
+to verify). `--runner-output-root` overrides the stage-2 root containing
+`cuad/<model>/...`. Metrics include document IDs, missing coverage, failures, and
+truncation counts. The command exits nonzero for missing selected inputs, missing
+offline outputs, request failures, or invalid comparison data. Incomplete runner
+coverage is reported without failing the run.
+
+### Model comparison table
+
+Generate a standalone HTML table with grouped **ContractEval** and **Harness**
+columns (Precision, Recall, F1, true-positive Jaccard, and Corpus retained), one row per eligible
+model, plus a final **N Types** column:
+
+```bash
+uv run python -m pipeline.stg_02_extract.comparison_table
+```
+
+Use the same five-clause subset as the orchestrator with:
+
+```bash
+uv run python -m pipeline.stg_02_extract.comparison_table --target min_5
+```
+
+The default `--target all` includes all eligible types. With `--target min_5`,
+**N Types** counts eligible types only within that subset (at most five).
+The complete paired test-coverage requirement still applies. An optional
+`--clause-type` must belong to the selected target.
+
+The default output is `figures/cuad/comparison_table.html`, with a companion
+`comparison_table.spans.json` containing grounded offsets, gold spans, matched
+pairs, unmatched passages, and per-case TP/FP/FN counts. The script reads
+`CACHE_DIR/stg_02_extract/cuad` and uses `answer_start` plus annotated answer
+lengths from `references/cuad/CUADv1.json`, ignoring saved scores and labels.
+The HTML contains only the main comparison table. Each model-methodology pair
+has an Examples dropdown with one TP, FP, TN, and FN drawn from its evaluated
+cases; unavailable outcome types are identified in the dropdown.
+
+Both methods use greedy one-to-one span matching requiring full containment:
+**100% of a gold span's characters must be included in one extraction**.
+Missing any part of the gold span disqualifies the match.
+Additional surrounding text does not disqualify a match, though
+it still reduces the separately reported Jaccard similarity. Each prediction
+and gold span participates in at most one match; separate extractions are not
+combined to meet the threshold. Extra grounded predictions, including duplicates,
+are false positives; ungrounded passages are excluded from extraction metrics
+and retained only in diagnostics. Unmatched gold spans are false
+negatives. Precision and Recall use pooled span counts across each model's
+included types: `TP / (TP + FP)` and `TP / (TP + FN)`. Undefined Precision
+and Recall are reported as zero.
+
+**Corpus retained** is the percentage of characters in the evaluated CUAD
+documents covered by extracted spans. Each document is counted once, and
+overlapping or duplicate spans across included clause types are merged before
+counting extracted characters. All grounded extractions count, including false
+positives; ungrounded text is excluded. The JSON report includes
+`extracted_characters`, `corpus_characters`, and the fraction `corpus_retained`.
+An empty corpus produces an undefined fraction, displayed as an em dash.
+
+Harness uses recorded character offsets, checked against the original CUAD
+context. ContractEval's free-text output is grounded without consulting gold
+labels. Alignment first tries whole paragraphs, then lines and sentences,
+allowing whitespace differences and common Markdown/quotation wrappers.
+Adjacent fragments within a paragraph merge only across whitespace in the
+source, with no unmatched output between them; separate paragraphs/list items
+stay separate. Altered or unlocatable passages remain in the ungrounded diagnostics.
+Repeated text maps to the next unused occurrence in source order, then the first
+unused occurrence; if all occurrences are used, the duplicate prediction is
+retained. Ambiguous matches and unmatched passages are recorded in the diagnostics.
+This deterministic alignment cannot infer which occurrence a model intended.
+
+Only model–clause pairs covering all 102 contracts in **both ContractEval and
+Harness for that same model** are included. Coverage requires the actual test
+document IDs; extra training outputs cannot substitute for missing test
+documents. Recorded failures count as covered and score as empty extractions.
+Incomplete or unpaired types are excluded from both methods' aggregates.
+Models with no eligible types are omitted. Evaluation uses only test
+documents, even when a complete Harness run also contains training outputs.
+By default, all eligible clause types are pooled. **N Types** shows how many
+types contribute to a model's aggregate. Both methods within a row use identical
+cases; different models can include different types. The companion JSON records
+each row's included clause names, case counts, and coverage. The highest unrounded score for each
+metric across **both** methodologies is bold, including exact ties.
+
+**Jaccard (TP)** averages the Jaccard values of qualifying matched span pairs
+across all included documents and types. Its denominator is the number of true
+positives; neither false negatives nor false positives are included. It is
+undefined (JSON `null`, shown as a dash) when there are no true positives.
+`--jaccard-cases tp` remains accepted; positive-case averaging is no longer supported.
+Use `--clause-type NAME` to restrict to one type, or `--model-name MODEL ...` to select
+models, `--output PATH` to change the HTML destination, and `--input-root PATH`
+or `--cuad-json PATH` to override inputs. No model calls occur. The separate `contracteval.py`
+script retains its paper-reference document-level metrics.
 
 ## Defining an outcome taxonomy
 
