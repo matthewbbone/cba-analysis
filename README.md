@@ -302,6 +302,68 @@ grounding fields rather than treating every quotation as equally reliable.
 Stage 2 asks LangExtract only for provision text. Researchers auditing results
 can compare the generated and source-exact fields alongside the grounding data.
 
+### Alternative Stage 2: sentence-ID extraction
+
+`runner2` asks the model to select sentence ranges and reconstructs extracted
+passages directly from the original OCR text:
+
+```bash
+UV_PROJECT_ENVIRONMENT=/VData/scro4406/cba_analysis/.venv \
+uv run python -m pipeline.stg_02_extract.runner2 \
+  --source negotiating_tech --provision technology \
+  --ocr-model-name ATH-MaaS/OvisOCR2 --model-name Qwen/Qwen3.8-27B \
+  --device 0 --port 8124
+```
+
+It shares the original runner's document selection, `--cuad_test`, sampling,
+GPU, progress, and endpoint flags. Use `--endpoint openrouter` with
+`OPENROUTER_API_KEY` for hosted models. `--max-tokens` defaults to 5,000 per
+response; `--max-model-len` follows the original runner's model defaults.
+Runner2 disables thinking on every request (`enable_thinking=false` for vLLM,
+`reasoning.enabled=false` for OpenRouter), overriding model profiles and shared
+server request defaults. This applies to all five orchestrator models. Restart
+any running invocation to apply changes; use `--force` or a fresh `--output-root`
+when switching from existing thinking-enabled results because their cache
+fingerprints differ.
+The runner owns one server per invocation; programmatic callers can borrow
+one using `run(args, server=server)` without transferring lifecycle ownership.
+
+Chonkie 1.7.0 prepares sentences once per document through a validated local
+adapter. Headings and table rows remain whole; list markers stay attached to
+their first sentence. Document-wide IDs appear as `[S1]`, `[S2]`, etc. in the
+prompt and as `S1`, `S2`, etc. in responses. Recursive Markdown chunk proposals
+use `N_EXTRACTION_PASSES` and `MAX_CHAR_BUFFER`, snapped to these fixed units.
+Each chunk includes its enclosing heading and neighboring units as selectable
+context. Character budgets are soft: oversized units remain whole, and endpoint
+context errors fail the document rather than truncating its text. Passes run
+sequentially, with chunk requests bounded by `LANGEXTRACT_MAX_WORKERS` and
+`LANGEXTRACT_BATCH_LENGTH`.
+
+Overlapping selections merge; adjacent selections remain separate. Quotations
+retain source punctuation, Markdown, and intervening whitespace. These are
+extracted passages, not inferred clause boundaries. The compatibility field
+`generated_extraction_text` contains the reconstructed quotation: the model
+actually generates IDs. `grounding_status: sentence_ids` and reliable character
+offsets identify this method. Recall and retained-text targets still require
+empirical evaluation.
+
+Outputs use a separate root (overridable with `--output-root`):
+
+```text
+CACHE_DIR/stg_02_extract_runner2/<source>/<safe_model>/<document_id>/<provision>.jsonl
+CACHE_DIR/stg_02_extract_runner2/<source>/<safe_model>/<document_id>/<provision>.manifest.json
+```
+
+The manifest records the source hash, sentence offsets, prompt/configuration
+fingerprint, request settings, responses and usage, and selection provenance.
+It is the completion marker for atomic publication. Only matching completed
+outputs with a valid file hash are reused; mismatches require `--force` or a
+different output root. Failed and incomplete documents are retried. An empty
+JSONL with a completed manifest is a valid abstention. Invalid ranges receive
+one corrective retry; request errors, missing content, and truncated responses
+remain failures. Other documents continue, and any document failure gives a
+nonzero exit status.
+
 ### Stage 3: enrichment
 
 ```text
@@ -414,7 +476,22 @@ uv run python -m pipeline.stg_02_extract.orchestrator --device cuda:0
 uv run python -m pipeline.stg_02_extract.orchestrator --target min_5 --device cuda:0
 
 # Run that subset for one model (10 jobs across both methods).
-uv run python -m pipeline.stg_02_extract.orchestrator --target min_5 --model-name google/gemma-4-31b-it --device cuda:0
+uv run python -m pipeline.stg_02_extract.orchestrator --target min_5 --model-name thomsonreuters/Thomson-1.0-Small --device cuda:0
+
+# Run all three methods for one model, loading it once (15 clause jobs).
+UV_PROJECT_ENVIRONMENT=/VData/scro4406/cba_analysis/.venv \
+uv run python -m pipeline.stg_02_extract.orchestrator \
+  --method all --target min_5 --model-name Qwen/Qwen3.8-27B-FP8 --device cuda:0
+
+# Run all three methods through OpenRouter for an explicitly selected model.
+UV_PROJECT_ENVIRONMENT=/VData/scro4406/cba_analysis/.venv \
+uv run python -m pipeline.stg_02_extract.orchestrator \
+  --endpoint openrouter --method all --target min_5 --model-name openai/gpt-4.1
+
+# Run sentence-ID extraction on all 102 test documents for each min_5 clause.
+UV_PROJECT_ENVIRONMENT=/VData/scro4406/cba_analysis/.venv \
+uv run python -m pipeline.stg_02_extract.orchestrator \
+  --method runner2 --target min_5 --device cuda:0
 
 # Rerun only runner.py (Harness) for these models across all 41 clause types.
 uv run python -m pipeline.stg_02_extract.orchestrator \
@@ -431,21 +508,37 @@ uv run python -m pipeline.stg_02_extract.orchestrator \
 It retains all 102 test documents and, by default, all five models. Use
 `--model-name MODEL` to select one preset or custom model; repeat the option to
 select several. Without this option, the five preset models run.
+The endpoint defaults to `vllm`, including when models are explicitly selected.
+Use `--endpoint openrouter` to send requests to OpenRouter; this requires at
+least one explicit `--model-name` and `OPENROUTER_API_KEY` in the environment or
+project `.env`. Repeat `--model-name` to run several hosted models sequentially.
+OpenRouter mode works with every `--method` selection, starts no local model
+server, and skips Hugging Face generation-config loading. GPU/server flags are
+ignored; each extraction script retains its OpenRouter request settings.
+`--dry-run` requires no API key and makes no API requests.
 Add `--dry-run` to preview the schedule. The default `--target all` selects all
 41 clause types.
 
 `--method runner` runs only the standard extraction runner (reported as Harness),
-leaving ContractEval outputs untouched. `--method contracteval` runs only
-ContractEval; the default `--method both` runs both methods. `--force` reruns
+leaving ContractEval outputs untouched. `--method runner2` runs only sentence-ID
+extraction (reported as Runner2), using the same shared server and test inputs.
+With `--target min_5`, it schedules 25 clause jobs across the five preset models,
+or five jobs with a single `--model-name`. `--method contracteval` runs only
+ContractEval; the default `--method both` runs ContractEval and Harness.
+`--method all` runs ContractEval, Harness, and Runner2 in that order for each
+clause, sharing one server per model. It schedules 75 jobs for `min_5` across
+the five preset models, or 15 for one model (615 for all 41 clauses and models).
+`--force` reruns
 existing outputs only for the selected methods. Each selection shares one
 vLLM server per model across all selected clauses.
 
 The default model order is `Qwen/Qwen3.8-27B`,
-`RedHatAI/gemma-4-31B-it-FP8-dynamic`, `google/gemma-4-31b-it`,
+`RedHatAI/gemma-4-31B-it-FP8-dynamic`, `thomsonreuters/Thomson-1.0-Small`,
 `Qwen/Qwen3.8-27B-FP8`, and `google/gemma-3-12b-it`. Identifiers are passed
 through exactly; explicit `--model-name` selections run in the supplied order.
 For each model, clauses run alphabetically, with ContractEval then Harness when
-both are selected, before the server is closed and the next model loads. Document
+both are selected, followed by Runner2 with `--method all`, before the server
+is closed and the next model loads. Document
 concurrency is one; Harness retains its configured internal workers and passes.
 
 The shared server uses neutral vLLM generation defaults. Harness receives the
@@ -460,7 +553,16 @@ as needed. The orchestrator never truncates ContractEval inputs, automatically
 shrinks context, or adds GPUs to fit a model.
 
 `--output-root` is the stage-02 root: existing Harness and ContractEval layouts
-are preserved beneath it. Compatible cached results are reused, failed or
+are preserved beneath it. For `--method runner2`, the default root is instead
+`CACHE_DIR/stg_02_extract_runner2`, including its orchestration report; an explicit
+`--output-root` overrides this location. Runner2 preserves its manifest validation,
+5,000-token response budget, and disabled thinking on the shared server.
+With `--method all`, default runs use each method's existing cache location:
+ContractEval and Harness under `CACHE_DIR/stg_02_extract`, and Runner2 under
+`CACHE_DIR/stg_02_extract_runner2`. When an explicit `--output-root ROOT` is
+provided with `--method all`, Runner2 uses `ROOT/runner2` while the other methods
+and the orchestration report use their existing layouts under `ROOT`.
+Compatible cached results are reused, failed or
 missing extractions are retried, and cache mismatches remain errors. Use
 `--force` to regenerate results and `--no-progress` to suppress progress bars.
 Missing or unreadable test inputs stop preflight before any server starts.

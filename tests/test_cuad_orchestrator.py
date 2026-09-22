@@ -8,7 +8,7 @@ import pytest
 
 from pipeline.stg_02_extract import orchestrator as orch
 from pipeline.stg_02_extract.orchestrator import execute_job
-from pipeline.stg_02_extract import runner, contracteval as ce
+from pipeline.stg_02_extract import runner, runner2, contracteval as ce
 from references.cuad.compare_extractions import CATEGORY_BY_CLAUSE_TYPE, DOCUMENT_ID_TITLE_OVERRIDES
 
 
@@ -78,17 +78,19 @@ def test_invalid_settings(args):
         orch.parse_args(args)
 
 
-def test_full_schedule_single_server_per_model(sweep):
+@pytest.mark.parametrize('method,labels', [('both', ['ContractEval', 'Harness']),
+                                         ('all', ['ContractEval', 'Harness', 'Runner2'])])
+def test_full_schedule_single_server_per_model(sweep, method, labels):
     old_handler = signal.getsignal(signal.SIGTERM)
-    assert orch.main(sweep.args) == 0
+    assert orch.main(sweep.args + ['--method', method]) == 0
     expected = []
     for model in orch.MODELS:
         expected.append(('start', model))
         for clause in sweep.clauses:
-            expected.extend([('ContractEval', model, clause), ('Harness', model, clause)])
+            expected.extend((label, model, clause) for label in labels)
         expected.append(('close', model))
     assert sweep.events == expected
-    assert sweep.executor.call_count == 410
+    assert sweep.executor.call_count == 205 * len(labels)
     assert [call.args[0] for call in sweep.defaults.call_args_list] == list(orch.MODELS)
     for server in sweep.servers:
         server.start.assert_called_once()
@@ -102,7 +104,7 @@ def test_full_schedule_single_server_per_model(sweep):
     assert sweep.servers[-1].extra_serve_args == ['--generation-config', 'vllm']
     report = read_report(sweep.root)
     assert report['status'] == 'completed'
-    assert len(report['jobs']) == 410
+    assert len(report['jobs']) == 205 * len(labels)
     assert all(task['counts']['completed'] == 102 for task in report['jobs'])
     assert signal.getsignal(signal.SIGTERM) == old_handler
 
@@ -127,7 +129,7 @@ def test_single_model_filter(sweep):
     assert {task['model_name'] for task in report['jobs']} == {model}
 
 
-@pytest.mark.parametrize('method,label', [('runner', 'Harness'), ('contracteval', 'ContractEval')])
+@pytest.mark.parametrize('method,label', [('runner', 'Harness'), ('runner2', 'Runner2'), ('contracteval', 'ContractEval')])
 def test_single_method_runs_only_selected_module(sweep, monkeypatch, method, label):
     # Restore the real dispatcher so this checks which extraction module runs.
     monkeypatch.setattr(orch, 'execute_job', execute_job)
@@ -141,15 +143,20 @@ def test_single_method_runs_only_selected_module(sweep, monkeypatch, method, lab
         'metrics': {'count': 102},
     })
     monkeypatch.setattr(runner, 'run', runner_run)
+    runner2_run = Mock(return_value=runner_run.return_value)
+    monkeypatch.setattr(runner2, 'run', runner2_run)
     monkeypatch.setattr(ce, 'run', contracteval_run)
     models = [orch.MODELS[0], 'thomsonreuters/Thomson-1.0-Small']
     argv = sweep.args + ['--method', method, '--force']
     for model in models:
         argv.extend(['--model-name', model])
     assert orch.main(argv) == 0
-    selected, excluded = (runner_run, contracteval_run) if method == 'runner' else (contracteval_run, runner_run)
+    modules = {'runner': runner_run, 'runner2': runner2_run, 'contracteval': contracteval_run}
+    selected = modules[method]
     assert selected.call_count == 82
-    excluded.assert_not_called()
+    for name, excluded in modules.items():
+        if name != method:
+            excluded.assert_not_called()
     assert [server.model_name for server in sweep.servers] == models
     for call in selected.call_args_list:
         assert call.args[0].force
@@ -280,10 +287,12 @@ def test_preflight_full_split_title_overrides_and_training_exclusion(inputs):
     assert ids == sorted(doc for doc, _ in inputs.pairs)
 
 
-def test_min_5_preflight_and_schedule(inputs, monkeypatch, capsys):
+@pytest.mark.parametrize('method,labels', [('both', ['ContractEval', 'Harness']), ('runner2', ['Runner2']),
+                                         ('all', ['ContractEval', 'Harness', 'Runner2'])])
+def test_min_5_preflight_and_schedule(inputs, monkeypatch, capsys, method, labels):
     expected = {'change_of_control', 'audit_rights', 'post_termination_services',
                 'rofr_rofo_rofn', 'anti_assignment'}
-    args = ['--target', 'min_5', '--input-root', str(inputs.root / 'input'),
+    args = ['--target', 'min_5', '--method', method, '--input-root', str(inputs.root / 'input'),
             '--ocr-model-name', 'ocr', '--output-root', str(inputs.root / 'out')]
     clauses, ids = orch.preflight(orch.parse_args(args))
     assert clauses == sorted(expected)
@@ -294,10 +303,10 @@ def test_min_5_preflight_and_schedule(inputs, monkeypatch, capsys):
     factory.assert_not_called()
     assert not (inputs.root / 'out').exists()
     lines = capsys.readouterr().out.splitlines()
-    assert '50 sequential jobs' in lines[0]
-    assert len(lines[1:]) == 50
+    assert f'{25 * len(labels)} sequential jobs' in lines[0]
+    assert len(lines[1:]) == 25 * len(labels)
     assert {line.split(' / ')[1] for line in lines[1:]} == expected
-    assert [line.split(' / ')[-1] for line in lines[1:]] == ['ContractEval', 'Harness'] * 25
+    assert [line.split(' / ')[-1] for line in lines[1:]] == labels * 25
 
 
 @pytest.mark.parametrize('problem', ['missing', 'unreadable', 'duplicate'])
@@ -321,7 +330,7 @@ def test_preflight_errors_are_explicit(inputs, problem):
 def test_clause_settings_and_output_paths(tmp_path):
     args = orch.parse_args(['--output-root', str(tmp_path), '--device', 'cuda:0', '--force',
                            '--gpu-memory-utilization', '.9', '--max-model-len', '65536', '--no-progress'])
-    for method in orch.METHODS:
+    for method in orch.METHOD_MODULES:
         selected = orch.clause_args(args, orch.MODELS[0], 'governing_law', method, ['doc'])
         assert selected.document_id == ['doc']
         assert selected.endpoint == 'vllm' and selected.num_gpus == 1
@@ -335,6 +344,8 @@ def test_clause_settings_and_output_paths(tmp_path):
             assert 'extra_body' not in ce.inference_settings(selected)['request']
         else:
             assert selected.output_root == tmp_path and selected.cuad_test
+            if method == 'Runner2':
+                assert selected.max_tokens == 5000
 
 
 def test_generation_config_loader_uses_only_nondefault_values(monkeypatch):
@@ -355,16 +366,17 @@ def test_generation_config_loader_uses_only_nondefault_values(monkeypatch):
     }}}
 
 
-def test_execute_job_reports_document_failures_and_borrows_server(tmp_path, monkeypatch):
+@pytest.mark.parametrize('method,module', [('Harness', runner), ('Runner2', runner2)])
+def test_execute_job_reports_document_failures_and_borrows_server(tmp_path, monkeypatch, method, module):
     args = orch.parse_args(['--output-root', str(tmp_path)])
-    task = {'model_name': orch.MODELS[0], 'clause_type': 'governing_law', 'method': 'Harness'}
+    task = {'model_name': orch.MODELS[0], 'clause_type': 'governing_law', 'method': method}
     borrowed = object()
     defaults = {'temperature': .8}
     fake = Mock(return_value=[
         runner.ExtractionResult(SimpleNamespace(document_id='doc1'), 'skipped'),
         runner.ExtractionResult(SimpleNamespace(document_id='doc2'), 'failed', error='timeout'),
     ])
-    monkeypatch.setattr(runner, 'run', fake)
+    monkeypatch.setattr(module, 'run', fake)
     result = orch.execute_job(args, task, ['doc1', 'doc2'], borrowed, defaults)
     assert result['status'] == 'failed' and result['errors'] == {'doc2': 'timeout'}
     assert result['counts'] == {'completed': 0, 'reused': 1, 'failed': 1}
@@ -447,3 +459,241 @@ def test_interrupted_queue_cancels_pending_documents(monkeypatch):
         release.set()
         timer.cancel()
         assert finished.wait(2)
+
+
+def test_runner2_separate_default_root_and_override(tmp_path):
+    args = orch.parse_args(['--method', 'runner2', '--target', 'min_5'])
+    standalone = runner2.parse_args(['--provision', 'audit_rights', '--cuad_test'])
+    assert args.output_root == standalone.output_root
+    assert args.output_root != orch.parse_args([]).output_root
+    selected = orch.clause_args(args, orch.MODELS[0], 'audit_rights', 'Runner2', ['doc'])
+    assert selected.output_root == standalone.output_root
+    assert selected.source == 'cuad' and selected.cuad_test
+    assert orch.parse_args(['--method', 'runner2', '--output-root', str(tmp_path)]).output_root == tmp_path
+
+
+def test_runner2_min_5_real_preflight_and_shared_generation(inputs, monkeypatch):
+    defaults = {'top_p': .8, 'extra_body': {'chat_template_kwargs': {'enable_thinking': True}}}
+    loader = Mock(return_value=defaults)
+    monkeypatch.setattr(orch, 'load_generation_defaults', loader)
+    servers = []
+
+    def make_server(**kwargs):
+        server = SimpleNamespace(**kwargs, start=Mock(), close=Mock(), server=Mock())
+        server.server.poll.return_value = None
+        servers.append(server)
+        return server
+
+    monkeypatch.setattr(orch, 'VLLMServer', make_server)
+    document_ids = sorted(doc for doc, _ in inputs.pairs)
+    observed = []
+
+    def run(selected, *, server):
+        assert server is servers[0]
+        assert selected.document_id == document_ids
+        assert selected.source == 'cuad' and selected.cuad_test
+        assert selected.concurrency == 1 and selected.device == '0'
+        assert selected.output_root == inputs.root / 'out'
+        assert selected.harness_request_defaults == defaults
+        settings = runner2.request_settings(selected)
+        assert settings['max_tokens'] == 5000 and settings['temperature'] == 0
+        assert settings['top_p'] == .8
+        assert settings['extra_body']['chat_template_kwargs'] == {
+            'enable_thinking': False, 'preserve_thinking': False}
+        observed.append(selected.provision)
+        return [runner.ExtractionResult(SimpleNamespace(document_id=doc), 'skipped') for doc in document_ids]
+
+    monkeypatch.setattr(runner2, 'run', run)
+    original_runner, contracteval = Mock(), Mock()
+    monkeypatch.setattr(runner, 'run', original_runner)
+    monkeypatch.setattr(ce, 'run', contracteval)
+    assert orch.main([
+        '--method', 'runner2', '--target', 'min_5', '--model-name', orch.MODELS[0],
+        '--input-root', str(inputs.root / 'input'), '--ocr-model-name', 'ocr',
+        '--output-root', str(inputs.root / 'out'), '--device', 'cuda:0', '--no-progress',
+    ]) == 0
+    assert observed == sorted(orch.MIN_5_CLAUSES)
+    assert len(servers) == 1
+    servers[0].start.assert_called_once()
+    servers[0].close.assert_called_once()
+    assert servers[0].extra_serve_args == ['--generation-config', 'vllm', '--reasoning-parser', 'qwen3']
+    loader.assert_called_once_with(orch.MODELS[0])
+    original_runner.assert_not_called()
+    contracteval.assert_not_called()
+    report = read_report(inputs.root)
+    assert report['document_ids'] == document_ids
+    assert len(report['jobs']) == 5
+    assert all(task['method'] == 'Runner2' and task['counts']['reused'] == 102 for task in report['jobs'])
+
+
+def test_all_method_default_and_custom_cache_paths(tmp_path):
+    args = orch.parse_args(['--method', 'all'])
+    assert args.output_root == runner.default_output_root()
+    default_runner2 = runner2.parse_args(['--provision', 'audit_rights']).output_root
+    assert args.runner2_output_root == default_runner2
+    selected = orch.clause_args(args, orch.MODELS[0], 'audit_rights', 'Runner2', ['doc'])
+    assert selected.output_root == default_runner2
+    args = orch.parse_args(['--method', 'all', '--output-root', str(tmp_path)])
+    roots = {method: orch.clause_args(args, orch.MODELS[0], 'audit_rights', method, ['doc']).output_root
+             for method in orch.ALL_METHODS}
+    assert roots == {'ContractEval': tmp_path / 'cuad/contracteval',
+                     'Harness': tmp_path, 'Runner2': tmp_path / 'runner2'}
+    assert roots['Harness'] / 'cuad/model/doc/audit_rights.jsonl' != roots['Runner2'] / 'cuad/model/doc/audit_rights.jsonl'
+
+
+@pytest.mark.parametrize('fail_runner2', [False, True])
+def test_all_dispatches_three_methods_on_one_server(sweep, monkeypatch, fail_runner2):
+    clauses = sorted(orch.MIN_5_CLAUSES)
+    monkeypatch.setattr(orch, 'preflight', lambda args: (clauses, sweep.documents))
+    monkeypatch.setattr(orch, 'execute_job', execute_job)
+    labels = ['ContractEval', 'Harness', 'Runner2']
+    model = orch.MODELS[0]
+    roots = {'ContractEval': sweep.root / 'out/cuad/contracteval',
+             'Harness': sweep.root / 'out', 'Runner2': sweep.root / 'out/runner2'}
+    mocks = {}
+
+    def run(label, selected, *, server):
+        assert server is sweep.servers[0]
+        assert selected.document_id == sweep.documents
+        assert selected.concurrency == 1 and selected.output_root == roots[label]
+        sweep.events.append((label, model, selected.provision))
+        if label == 'ContractEval':
+            assert selected.thinking == 'default'
+            assert not hasattr(selected, 'harness_request_defaults')
+            return {'failures': {}, 'missing_inputs': [], 'missing_outputs': [],
+                    'execution': {'completed': 102, 'reused': 0, 'failed': 0},
+                    'metrics': {'count': 102}}
+        assert selected.cuad_test and selected.source == 'cuad'
+        assert selected.harness_request_defaults is sweep.defaults.return_value
+        assert selected.harness_request_defaults['extra_body']['chat_template_kwargs']['enable_thinking'] is True
+        if label == 'Runner2':
+            assert runner2.request_settings(selected)['extra_body']['chat_template_kwargs']['enable_thinking'] is False
+        return [runner.ExtractionResult(
+            SimpleNamespace(document_id=doc),
+            'failed' if fail_runner2 and label == 'Runner2' and selected.provision == clauses[0] and i == 0 else 'completed',
+            error='mock request failure' if i == 0 else None,
+        ) for i, doc in enumerate(sweep.documents)]
+
+    for label, module in orch.METHOD_MODULES.items():
+        mocks[label] = Mock(side_effect=lambda selected, server, label=label: run(label, selected, server=server))
+        monkeypatch.setattr(module, 'run', mocks[label])
+    assert orch.main(sweep.args + ['--method', 'all', '--target', 'min_5', '--model-name', model]) == int(fail_runner2)
+    assert len(sweep.servers) == 1
+    sweep.servers[0].start.assert_called_once()
+    sweep.servers[0].close.assert_called_once()
+    sweep.defaults.assert_called_once_with(model)
+    assert all(mock.call_count == 5 for mock in mocks.values())
+    assert sweep.events == [('start', model)] + [
+        (label, model, clause) for clause in clauses for label in labels
+    ] + [('close', model)]
+    report = read_report(sweep.root)
+    assert len(report['jobs']) == 15 and report['jobs'][-1]['status'] == 'completed'
+    assert report['settings']['runner2_output_root'] == str(sweep.root / 'out/runner2')
+    if fail_runner2:
+        assert report['jobs'][2]['errors'] == {sweep.documents[0]: 'mock request failure'}
+
+
+def test_openrouter_requires_explicit_models_and_never_routes_implicitly():
+    assert orch.parse_args([]).endpoint == 'vllm'
+    assert orch.parse_args(['--model-name', 'openai/gpt-4.1']).endpoint == 'vllm'
+    with pytest.raises(SystemExit):
+        orch.parse_args(['--endpoint', 'openrouter'])
+    with pytest.raises(SystemExit):
+        orch.parse_args(['--endpoint', 'openrouter', '--model-name', ' '])
+    args = orch.parse_args(['--endpoint', 'openrouter', '--model-name', 'openai/gpt-4.1',
+                           '--model-name', 'provider/other-model', '--device', 'not-a-gpu'])
+    assert args.model_name == ['openai/gpt-4.1', 'provider/other-model']
+
+
+def test_openrouter_dry_run_without_credentials_or_servers(sweep, monkeypatch, capsys):
+    monkeypatch.delenv('OPENROUTER_API_KEY', raising=False)
+    credentials = Mock(side_effect=AssertionError('Dry-run must not require credentials'))
+    monkeypatch.setattr(orch, 'openai_client_kwargs', credentials)
+    assert orch.main(sweep.args + ['--endpoint', 'openrouter', '--model-name', 'openai/gpt-4.1',
+                                  '--method', 'all', '--dry-run']) == 0
+    output = capsys.readouterr().out
+    assert '123 sequential jobs via OpenRouter' in output and 'on GPU' not in output
+    credentials.assert_not_called()
+    sweep.factory.assert_not_called()
+    sweep.defaults.assert_not_called()
+    sweep.executor.assert_not_called()
+    assert not (sweep.root / 'out').exists()
+
+
+def test_openrouter_missing_credentials_fail_before_jobs(sweep, monkeypatch):
+    monkeypatch.delenv('OPENROUTER_API_KEY', raising=False)
+    with pytest.raises(RuntimeError, match='OPENROUTER_API_KEY'):
+        orch.main(sweep.args + ['--endpoint', 'openrouter', '--model-name', 'openai/gpt-4.1'])
+    sweep.factory.assert_not_called()
+    sweep.executor.assert_not_called()
+    assert not (sweep.root / 'out').exists()
+
+
+@pytest.mark.parametrize('mode,labels', [
+    ('all', ['ContractEval', 'Harness', 'Runner2']), ('both', ['ContractEval', 'Harness']),
+    ('runner', ['Harness']), ('runner2', ['Runner2']), ('contracteval', ['ContractEval']),
+])
+def test_openrouter_routes_every_method_without_local_configuration(sweep, monkeypatch, mode, labels):
+    clauses = sorted(orch.MIN_5_CLAUSES)
+    monkeypatch.setattr(orch, 'preflight', lambda args: (clauses, sweep.documents))
+    monkeypatch.setattr(orch, 'execute_job', execute_job)
+    monkeypatch.setenv('OPENROUTER_API_KEY', 'test-only-key')
+    observed = []
+    models = ['openai/gpt-4.1', 'provider/other-model']
+
+    def run(label, selected, *, server):
+        assert server is None
+        assert selected.endpoint == 'openrouter' and selected.document_id == sweep.documents
+        assert selected.device is None  # Orchestrator GPU flags were not forwarded.
+        observed.append((selected.model_name, selected.provision, label))
+        if label == 'ContractEval':
+            settings = ce.inference_settings(selected)
+            assert settings['reasoning_parser'] is None and settings['request']['top_p'] == .9
+            assert selected.output_root == sweep.root / 'out/cuad/contracteval'
+            return {'failures': {}, 'missing_inputs': [], 'missing_outputs': [],
+                    'execution': {'completed': 102, 'reused': 0, 'failed': 0}, 'metrics': {'count': 102}}
+        assert selected.harness_request_defaults is None
+        if label == 'Runner2':
+            settings = runner2.request_settings(selected)
+            assert settings['extra_body']['reasoning'] == {'enabled': False}
+            assert 'chat_template_kwargs' not in settings['extra_body']
+            expected = sweep.root / ('out/runner2' if mode == 'all' else 'out')
+            assert selected.output_root == expected
+        return [runner.ExtractionResult(SimpleNamespace(document_id=doc), 'skipped') for doc in sweep.documents]
+
+    for label, module in orch.METHOD_MODULES.items():
+        monkeypatch.setattr(module, 'run', lambda selected, server, label=label: run(label, selected, server=server))
+    argv = sweep.args + ['--endpoint', 'openrouter', '--method', mode, '--target', 'min_5',
+                         '--device', 'ignored', '--max-model-len', '0']
+    for model in models:
+        argv.extend(['--model-name', model])
+    assert orch.main(argv) == 0
+    assert observed == [(model, clause, label) for model in models for clause in clauses for label in labels]
+    sweep.factory.assert_not_called()
+    sweep.defaults.assert_not_called()
+    report = read_report(sweep.root)
+    assert report['status'] == 'completed' and report['settings']['endpoint'] == 'openrouter'
+    assert 'test-only-key' not in json.dumps(report)
+    assert all(m['serving'] == {'model_name': m['model_name'], 'endpoint': 'openrouter'} for m in report['models'])
+
+
+@pytest.mark.parametrize('interrupt', [False, True])
+def test_openrouter_errors_and_interruption_are_reported(sweep, monkeypatch, interrupt):
+    monkeypatch.setenv('OPENROUTER_API_KEY', 'test-only-key')
+    calls = []
+    def execute(*args):
+        calls.append(args)
+        if len(calls) == 1:
+            if interrupt:
+                raise KeyboardInterrupt
+            raise RuntimeError('provider request failed')
+        return {'status': 'completed', 'counts': {}, 'errors': {}}
+    sweep.executor.side_effect = execute
+    status = orch.main(sweep.args + ['--endpoint', 'openrouter', '--model-name', 'openai/gpt-4.1', '--method', 'runner2'])
+    assert status == (130 if interrupt else 1)
+    report = read_report(sweep.root)
+    assert report['status'] == ('interrupted' if interrupt else 'failed')
+    if not interrupt:
+        assert len(calls) == 41 and report['jobs'][-1]['status'] == 'completed'
+    sweep.factory.assert_not_called()
+    sweep.defaults.assert_not_called()

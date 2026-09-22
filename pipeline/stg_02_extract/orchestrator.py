@@ -1,4 +1,4 @@
-"""Run selected CUAD test clauses sequentially, sharing one vLLM server per model."""
+"""Run CUAD test clauses sequentially via shared vLLM servers or OpenRouter."""
 from __future__ import annotations
 
 import argparse
@@ -11,23 +11,26 @@ import sys
 if __package__ is None or __package__ == "":
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from pipeline.stg_02_extract import contracteval, runner
+from pipeline.stg_02_extract import contracteval, runner, runner2
 from pipeline.stg_02_extract.cuad_targets import MIN_5_CLAUSES
 from pipeline.stg_02_extract.structure_provision import load_provision, resolve_provisions_dir
 from pipeline.utils.generation import harness_request_defaults
 from pipeline.utils.gpu import validate_cuda_device_selection
-from pipeline.utils.vllm_server import VLLMServer
+from pipeline.utils.paths import default_cache_dir
+from pipeline.utils.vllm_server import VLLMServer, add_endpoint_argument, openai_client_kwargs
 from references.cuad.compare_extractions import CATEGORY_BY_CLAUSE_TYPE, build_document_id_resolver, load_gold_documents
 
 
 MODELS = (
     "Qwen/Qwen3.8-27B",
     "RedHatAI/gemma-4-31B-it-FP8-dynamic",
-    "google/gemma-4-31b-it",
+    "thomsonreuters/Thomson-1.0-Small",
     "Qwen/Qwen3.8-27B-FP8",
     "google/gemma-3-12b-it",
 )
 METHODS = ("ContractEval", "Harness")
+ALL_METHODS = (*METHODS, "Runner2")
+METHOD_MODULES = {"ContractEval": contracteval, "Harness": runner, "Runner2": runner2}
 TEST_DOCUMENT_COUNT = 102
 CLAUSE_COUNT = 41
 
@@ -42,11 +45,12 @@ def parse_args(argv=None):
                         help="Clause selection: all 41 types (default), or the five technology-provision proxies.")
     parser.add_argument("--model-name", action="append", metavar="MODEL",
                         help="Run only this model; repeat to select more than one. Defaults to the five preset models.")
-    parser.add_argument("--method", choices=("both", "runner", "contracteval"), default="both",
-                        help="Extraction method: both (default), runner.py only (Harness), or ContractEval only.")
+    add_endpoint_argument(parser)
+    parser.add_argument("--method", choices=("both", "all", "runner", "runner2", "contracteval"), default="both",
+                        help="Both original methods (default), all three methods, runner.py (Harness), runner2.py (sentence IDs), or ContractEval only.")
     parser.add_argument("--input-root", type=Path, default=runner.default_input_root())
-    parser.add_argument("--output-root", type=Path, default=runner.default_output_root(),
-                        help="Stage-02 root for both methods and the orchestration report.")
+    parser.add_argument("--output-root", type=Path,
+                        help="Extraction/report root; defaults to CACHE_DIR/stg_02_extract_runner2 for runner2, otherwise CACHE_DIR/stg_02_extract. With --method all, a custom root stores Runner2 under its runner2/ subdirectory.")
     parser.add_argument("--ocr-model-name", default=runner.DEFAULT_OCR_MODEL_NAME)
     parser.add_argument("--device", default="0", help="One physical GPU ID; accepts 0 or cuda:0.")
     parser.add_argument("--port", type=int, default=8123)
@@ -59,16 +63,28 @@ def parse_args(argv=None):
     args = parser.parse_args(argv)
     if args.model_name and any(not model.strip() for model in args.model_name):
         parser.error("model-name must not be empty")
-    try:
-        args.device = validate_cuda_device_selection(args.device.removeprefix("cuda:"), 1)
-    except ValueError as exc:
-        parser.error(str(exc))
-    if not 1 <= args.port <= 65535 or args.max_model_len < 1 or args.max_num_seqs < 1:
-        parser.error("port, context length, and sequence count must be valid positive values")
-    if args.gpu_memory_utilization is not None and not 0 < args.gpu_memory_utilization <= 1:
-        parser.error("gpu-memory-utilization must be greater than zero and at most one")
+    if args.endpoint == "openrouter" and not args.model_name:
+        parser.error("--endpoint openrouter requires at least one explicit --model-name")
+    if args.endpoint == "vllm":
+        try:
+            args.device = validate_cuda_device_selection(args.device.removeprefix("cuda:"), 1)
+        except ValueError as exc:
+            parser.error(str(exc))
+        if not 1 <= args.port <= 65535 or args.max_model_len < 1 or args.max_num_seqs < 1:
+            parser.error("port, context length, and sequence count must be valid positive values")
+        if args.gpu_memory_utilization is not None and not 0 < args.gpu_memory_utilization <= 1:
+            parser.error("gpu-memory-utilization must be greater than zero and at most one")
     args.input_root = args.input_root.expanduser()
+    custom_output_root = args.output_root is not None
+    if args.output_root is None:
+        args.output_root = (default_cache_dir() / "stg_02_extract_runner2"
+                            if args.method == "runner2" else runner.default_output_root())
     args.output_root = args.output_root.expanduser()
+    if args.method == "all":
+        # Reuse standalone caches by default; keep custom experiments within
+        # their chosen root without colliding with Harness's JSONL files.
+        args.runner2_output_root = (args.output_root / "runner2" if custom_output_root else
+                                    default_cache_dir() / "stg_02_extract_runner2").expanduser()
     return args
 
 
@@ -123,21 +139,23 @@ def load_generation_defaults(model_name: str) -> dict:
 
 def clause_args(args, model: str, clause: str, method: str, document_ids: list[str]):
     argv = [
-        "--provision", clause, "--model-name", model, "--endpoint", "vllm",
+        "--provision", clause, "--model-name", model, "--endpoint", args.endpoint,
         "--input-root", str(args.input_root), "--ocr-model-name", args.ocr_model_name,
-        "--device", args.device, "--num-gpus", "1", "--port", str(args.port),
-        "--max-model-len", str(args.max_model_len), "--max-num-seqs", str(args.max_num_seqs),
         "--concurrency", "1", "--document-id", *document_ids,
     ]
+    if args.endpoint == "vllm":
+        argv.extend(["--device", args.device, "--num-gpus", "1", "--port", str(args.port),
+                     "--max-model-len", str(args.max_model_len), "--max-num-seqs", str(args.max_num_seqs)])
     output_root = args.output_root
-    module = runner
+    module = METHOD_MODULES[method]
     if method == "ContractEval":
-        module = contracteval
         output_root = output_root / "cuad" / "contracteval"
     else:
         argv.append("--cuad_test")
+        if method == "Runner2" and args.method == "all":
+            output_root = args.runner2_output_root
     argv.extend(["--output-root", str(output_root)])
-    if args.gpu_memory_utilization is not None:
+    if args.endpoint == "vllm" and args.gpu_memory_utilization is not None:
         argv.extend(["--gpu-memory-utilization", str(args.gpu_memory_utilization)])
     if args.force:
         argv.append("--force")
@@ -157,7 +175,7 @@ def execute_job(args, task, document_ids, server, request_defaults) -> dict:
         evaluated = summary["metrics"]["count"]
     else:
         selected.harness_request_defaults = request_defaults
-        results = runner.run(selected, server=server)
+        results = METHOD_MODULES[task["method"]].run(selected, server=server)
         errors = {r.job.document_id: r.error for r in results if r.status == "failed"}
         for name in set(document_ids) - {r.job.document_id for r in results}:
             errors[name] = "Missing input or result"
@@ -176,18 +194,26 @@ def main(argv=None) -> int:
     args = parse_args(argv)
     clauses, document_ids = preflight(args)
     models = args.model_name or list(MODELS)
-    methods = METHODS if args.method == "both" else (
-        "Harness" if args.method == "runner" else "ContractEval",
-    )
+    if args.method == "all":
+        methods = ALL_METHODS
+    elif args.method == "both":
+        methods = METHODS
+    else:
+        methods = ({"runner": "Harness", "runner2": "Runner2", "contracteval": "ContractEval"}[args.method],)
     tasks = [{"model_name": model, "clause_type": clause, "method": method,
               "status": "pending", "document_count": len(document_ids)}
              for model in models for clause in clauses for method in methods]
+    destination = f"on GPU {args.device}" if args.endpoint == "vllm" else "via OpenRouter"
     print(f"{len(models)} models, {len(clauses)} clauses, {len(document_ids)} test documents; "
-          f"{len(tasks)} sequential jobs on GPU {args.device}")
+          f"{len(tasks)} sequential jobs {destination}")
     if args.dry_run:
         for index, task in enumerate(tasks, 1):
             print(f"{index:03}: {task['model_name']} / {task['clause_type']} / {task['method']}")
         return 0
+
+    if args.endpoint == "openrouter":
+        # Validate credentials once, without saving the key or contacting the API.
+        openai_client_kwargs(args.endpoint)
 
     report = {"started_at": now(), "status": "running", "document_ids": document_ids,
               "settings": {key: str(value) if isinstance(value, Path) else value
@@ -206,30 +232,33 @@ def main(argv=None) -> int:
         save()
         for model in models:
             model_tasks = [task for task in tasks if task["model_name"] == model]
-            first_args = clause_args(args, model, clauses[0], "ContractEval", document_ids)
-            settings = contracteval.inference_settings(first_args)
-            serve_args = ["--generation-config", "vllm"]
-            if settings["reasoning_parser"]:
-                serve_args.extend(["--reasoning-parser", settings["reasoning_parser"]])
-            serving = dict(model_name=model, endpoint="vllm", device=args.device, num_gpus=1,
-                           port=args.port, max_model_len=args.max_model_len,
-                           gpu_memory_utilization=args.gpu_memory_utilization,
-                           max_num_seqs=args.max_num_seqs, extra_serve_args=serve_args)
+            serving = dict(model_name=model, endpoint=args.endpoint)
+            if args.endpoint == "vllm":
+                first_args = clause_args(args, model, clauses[0], "ContractEval", document_ids)
+                settings = contracteval.inference_settings(first_args)
+                serve_args = ["--generation-config", "vllm"]
+                if settings["reasoning_parser"]:
+                    serve_args.extend(["--reasoning-parser", settings["reasoning_parser"]])
+                serving.update(device=args.device, num_gpus=1, port=args.port,
+                               max_model_len=args.max_model_len,
+                               gpu_memory_utilization=args.gpu_memory_utilization,
+                               max_num_seqs=args.max_num_seqs, extra_serve_args=serve_args)
             model_report = {"model_name": model, "status": "starting", "serving": serving}
             report["models"].append(model_report)
             save()
             server = None
             try:
                 request_defaults = None
-                if "Harness" in methods:
-                    request_defaults = load_generation_defaults(model)
-                    model_report["harness_request_defaults"] = request_defaults
-                server = VLLMServer(**serving)
-                server.start()
+                if args.endpoint == "vllm":
+                    if any(method != "ContractEval" for method in methods):
+                        request_defaults = load_generation_defaults(model)
+                        model_report["harness_request_defaults"] = request_defaults
+                    server = VLLMServer(**serving)
+                    server.start()
                 model_report["status"] = "running"
                 save()
                 for task in model_tasks:
-                    if server.server is None or server.server.poll() is not None:
+                    if server is not None and (server.server is None or server.server.poll() is not None):
                         raise RuntimeError("vLLM server exited; remaining jobs will not be attempted")
                     task.update(status="running", started_at=now())
                     save()

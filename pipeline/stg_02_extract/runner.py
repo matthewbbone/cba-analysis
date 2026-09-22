@@ -465,7 +465,7 @@ def make_progress_reporter(jobs: list[ExtractionJob]) -> ProgressReporter:
     return ProgressReporter(callback=callback, close=progress.close)
 
 
-def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+def build_argument_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Extract provisions from OCR text.")
     parser.add_argument(
         "--provision",
@@ -573,6 +573,13 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         type=int,
         help="Seed for --sample selection, for reproducible runs.",
     )
+    return parser
+
+
+def parse_args(
+    argv: list[str] | None = None, *, parser: argparse.ArgumentParser | None = None
+) -> argparse.Namespace:
+    parser = parser if parser is not None else build_argument_parser()
     args = parser.parse_args(argv)
     if args.cuad_test:
         if args.source not in (None, "cuad"):

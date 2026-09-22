@@ -1,7 +1,8 @@
-"""Compare cached ContractEval and Harness spans against CUAD gold spans.
+"""Compare cached ContractEval, Harness, and Runner2 spans against CUAD gold spans.
 
-Both methods use one-to-one span matching requiring full gold-span containment.
-Aggregate all clause types with complete test coverage in both methods per model.
+All methods use one-to-one span matching requiring full gold-span containment.
+Aggregate clause types with complete test coverage in the compared methods per model.
+Runner2 is included when it has complete clause outputs for that model.
 Run with --clause-type joint_ip_ownership to select a single provision.
 """
 from __future__ import annotations
@@ -28,7 +29,8 @@ from references.cuad.compare_extractions import (
     Totals,
 )
 
-METHODS = ("ContractEval", "Harness")
+METHODS = ("ContractEval", "Harness", "Runner2")
+REQUIRED_METHODS = ("ContractEval", "Harness")
 METRICS = (("precision", "Precision"), ("recall", "Recall"), ("f1", "F1"),
            ("jaccard_mean", "Jaccard (TP)"), ("corpus_retained", "Corpus retained"))
 Case = tuple[str, str]  # CUAD title, clause type
@@ -83,7 +85,7 @@ def load_gold(path: Path) -> dict[Case, GoldCase]:
 
 
 def paired_cases(manifests, test_titles: set[str]) -> dict[str, set[Case]]:
-    """Find complete clause pairs within each model, independently of other models."""
+    """Intersect complete clauses across available methods, requiring both baselines."""
     models = {}
     for run, cases in manifests:
         methods = models.setdefault(run.model_key, {})
@@ -92,9 +94,9 @@ def paired_cases(manifests, test_titles: set[str]) -> dict[str, set[Case]]:
         methods[run.method] = set(cases)
     eligible = {}
     for model, methods in models.items():
-        if not all(method in methods for method in METHODS):
+        if not all(method in methods for method in REQUIRED_METHODS):
             continue
-        common = methods["ContractEval"] & methods["Harness"]
+        common = set.intersection(*methods.values())
         cases = set()
         for clause in {clause for _, clause in common}:
             required = {(title, clause) for title in test_titles}
@@ -106,14 +108,18 @@ def paired_cases(manifests, test_titles: set[str]) -> dict[str, set[Case]]:
 
 
 def discover_runs(root: Path, gold: dict[Case, GoldCase], clause_type=None, model_names=None,
-                  test_titles: set[str] | None = None, *, clause_types: set[str] | None = None):
+                  test_titles: set[str] | None = None, *, clause_types: set[str] | None = None,
+                  runner2_root: Path | None = None):
     if test_titles is None:
         test_titles = {title for title, _ in gold}
     resolve = build_document_id_resolver({title: None for title, _ in gold})
     selected = {path_safe_model_name(name) for name in model_names} if model_names else None
+    if runner2_root is None:
+        runner2_root = root.parent.parent / "stg_02_extract_runner2" / root.name
     manifests, unmatched = [], []
     for method in METHODS:
-        parent = root / "contracteval" if method == "ContractEval" else root
+        parent = {"ContractEval": root / "contracteval", "Harness": root,
+                  "Runner2": runner2_root}[method]
         extension = "json" if method == "ContractEval" else "jsonl"
         if not parent.exists():
             continue
@@ -175,9 +181,9 @@ def discover_runs(root: Path, gold: dict[Case, GoldCase], clause_type=None, mode
     if selected is not None:
         missing = selected - eligible.keys()
         if missing:
-            raise ValueError(f"No matching outputs with complete test coverage in both methods for models: {', '.join(sorted(missing))}")
+            raise ValueError(f"No matching outputs with complete test coverage in the compared methods for models: {', '.join(sorted(missing))}")
     for model in sorted({run.model_key for run, _ in manifests} - eligible.keys()):
-        print(f"Skipping {model}: no clause type has complete test coverage in both methods", file=sys.stderr)
+        print(f"Skipping {model}: no clause type has complete test coverage in the compared methods", file=sys.stderr)
     # Select pairs before opening outputs. Incomplete or unpaired runs must
     # neither reduce another model's population nor trigger unnecessary reads.
     manifests = [(run, paths) for run, paths in manifests if run.model_key in eligible]
@@ -204,9 +210,9 @@ def discover_runs(root: Path, gold: dict[Case, GoldCase], clause_type=None, mode
                         start, end = record["span_start"], record["span_end"]
                         context = gold[case].context
                         if type(start) is not int or type(end) is not int or not 0 <= start < end <= len(context):
-                            raise ValueError("invalid Harness span offsets")
+                            raise ValueError(f"invalid {run.method} span offsets")
                         if context[start:end] != record["extraction_text"]:
-                            raise ValueError("Harness offsets do not match original CUAD context")
+                            raise ValueError(f"{run.method} offsets do not match original CUAD context")
                         prediction.spans.append((start, end))
                 for record in records:
                     model_name = record.get("model_name")
@@ -231,12 +237,12 @@ def covered_characters(spans: list[tuple[int, int]]) -> int:
 
 def evaluate(runs: list[Run], gold: dict[Case, GoldCase], *, test_titles: set[str] | None = None):
     if not runs:
-        raise ValueError("No matching ContractEval or Harness output files found")
+        raise ValueError("No matching ContractEval, Harness, or Runner2 output files found")
     if test_titles is None:
         test_titles = {title for title, _ in gold}
     eligible = paired_cases([(run, run.predictions) for run in runs], test_titles)
     if not eligible:
-        raise ValueError("No model/clause pair has complete test coverage in both methods")
+        raise ValueError("No model/clause pair has complete test coverage in the compared methods")
     rows, coverage, diagnostics = {}, [], []
     for run in runs:
         if run.model_key not in eligible:
@@ -338,6 +344,7 @@ def evaluate(runs: list[Run], gold: dict[Case, GoldCase], *, test_titles: set[st
     all_cases = set.union(*eligible.values())
     return {
         "rows": [rows[key] for key in sorted(rows)],
+        "methods": [method for method in METHODS if any(method in row for row in rows.values())],
         "coverage": coverage, "diagnostics": diagnostics,
         "cases": sorted(all_cases),
         "positive_count": sum(bool(gold[case].spans) for case in all_cases),
@@ -353,8 +360,10 @@ def evaluate(runs: list[Run], gold: dict[Case, GoldCase], *, test_titles: set[st
 
 
 def render_html(report: dict, gold_path: Path) -> str:
+    methods = report.get("methods", [method for method in METHODS
+                                     if any(method in row for row in report["rows"])])
     maxima = {
-        metric: max((row[method][metric] for row in report["rows"] for method in METHODS
+        metric: max((row[method][metric] for row in report["rows"] for method in methods
                      if method in row and row[method][metric] is not None), default=None)
         for metric, _ in METRICS if metric != "corpus_retained"
     }
@@ -385,7 +394,7 @@ def render_html(report: dict, gold_path: Path) -> str:
 
     for row in report["rows"]:
         cells = [f'<th scope="row">{escape(row["model_name"])}</th>']
-        for method in METHODS:
+        for method in methods:
             for metric, _ in METRICS:
                 value = row.get(method, {}).get(metric)
                 text = "—" if value is None else f"{value:.3f}"
@@ -399,8 +408,10 @@ def render_html(report: dict, gold_path: Path) -> str:
         body.append("<tr>" + "".join(cells) + "</tr>")
     subheaders = "".join(
         "".join(f'<th scope="col">{label}</th>' for _, label in METRICS) + '<th scope="col">Examples</th>'
-        for _ in METHODS
+        for _ in methods
     )
+    headers = ''.join(f'<th colspan="{len(METRICS) + 1}" scope="colgroup">{escape(method)}</th>'
+                      for method in methods)
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CUAD methodology comparison</title>
@@ -421,7 +432,7 @@ dd span {{display: block; margin-top: 3px; overflow-wrap: anywhere;}}
 <caption>An extraction is considered correct when it contains the entire gold span (100% character coverage).
 Corpus retained is extracted characters / corpus characters, counting each document and overlapping
 characters once across evaluated clause types. Ungrounded passages are excluded from all metrics.</caption>
-<thead><tr><th rowspan="2" scope="col">Model</th><th colspan="{len(METRICS) + 1}" scope="colgroup">ContractEval</th><th colspan="{len(METRICS) + 1}" scope="colgroup">Harness</th><th rowspan="2" scope="col">N Types</th></tr>
+<thead><tr><th rowspan="2" scope="col">Model</th>{headers}<th rowspan="2" scope="col">N Types</th></tr>
 <tr>{subheaders}</tr></thead><tbody>{"".join(body)}</tbody></table></div>
 </body></html>
 '''
@@ -432,6 +443,8 @@ def main(argv=None) -> int:
     parser.add_argument("--target", choices=("all", "min_5"), default="all",
                         help="Compare all eligible clause types (default), or the orchestrator's five technology-provision proxies.")
     parser.add_argument("--input-root", type=Path, default=default_cache_dir() / "stg_02_extract/cuad")
+    parser.add_argument("--runner2-root", type=Path,
+                        help="Runner2 CUAD cache directory; defaults to the sibling stg_02_extract_runner2/cuad cache.")
     parser.add_argument("--cuad-json", type=Path, default=DEFAULT_CUAD_JSON)
     parser.add_argument("--test-json", type=Path, default=TEST_JSON,
                         help="CUAD test split defining the required complete document coverage.")
@@ -456,9 +469,10 @@ def main(argv=None) -> int:
     if not test_titles:
         raise ValueError("CUAD test split is empty")
     runs, unmatched = discover_runs(args.input_root.expanduser(), gold, args.clause_type,
-                                    args.model_name, test_titles, clause_types=clause_types)
+                                    args.model_name, test_titles, clause_types=clause_types,
+                                    runner2_root=args.runner2_root.expanduser() if args.runner2_root else None)
     if not runs:
-        raise ValueError("No model/clause pair has complete test coverage in both methods")
+        raise ValueError("No model/clause pair has complete test coverage in the compared methods")
     report = evaluate(runs, gold, test_titles=test_titles)
     report["target"] = args.target
     report["requested_clause_types"] = ([args.clause_type] if args.clause_type else

@@ -236,8 +236,8 @@ def render_options(options: Mapping[str, str]) -> str:
 def _prompt_description(clause_type: str, clause_description: str) -> str:
     return (
         'You are an assistant with strong legal knowledge, supporting senior lawyers by preparing reference materials.'
-        'Given a Context and a Question, extract and return only the sentence(s) from '
-        'the Context that directly address or relate to the Question. '
+        'Extract and return only the sentence(s) from the context that pertain to the following clause type: '
+        f'{clause_type}: {clause_description} '
         'Do not rephrase or summarize in any way—'
         'respond with exact sentences from the Context relevant to the Question. '
         'page numbers or whitespace, include them exactly as they appear.'

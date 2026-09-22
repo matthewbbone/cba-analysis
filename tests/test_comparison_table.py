@@ -186,7 +186,7 @@ def test_no_positive_cases_and_disjoint_coverage():
     assert report['rows'][0]['Harness']['jaccard_mean'] is None
     assert '<strong>0.000</strong>' in ct.render_html(report, ct.DEFAULT_CUAD_JSON)
     assert ct.evaluate([run, paired], {case: ct.GoldCase('NY', [(0, 2)])})['rows'][0]['Harness']['jaccard_mean'] is None
-    with pytest.raises(ValueError, match='complete test coverage in both methods'):
+    with pytest.raises(ValueError, match='complete test coverage in the compared methods'):
         ct.evaluate([run, ct.Run('b', 'ContractEval', 'B', {('two', 'governing_law'): GroundedAnswer()})], {})
     with pytest.raises(ValueError, match='No matching'):
         ct.evaluate([], {})
@@ -463,3 +463,51 @@ def test_min_5_target_filters_outputs_and_metrics_before_reading(tmp_path):
 def test_comparison_target_rejects_invalid_selection(args):
     with pytest.raises(SystemExit):
         ct.main(args)
+
+
+def test_runner2_discovery_shares_population_and_renders_metrics(tmp_path):
+    root = tmp_path / 'stg_02_extract/cuad'
+    runner2_root = tmp_path / 'stg_02_extract_runner2/cuad'
+    titles = {'positive', 'negative'}
+    clauses = ['governing_law', 'joint_ip_ownership']
+    gold = {(title, clause): ct.GoldCase('NY', [(0, 2)] if title == 'positive' else [])
+            for title in titles for clause in clauses}
+    for title, clause in gold:
+        baseline = root / 'contracteval/model' / title / f'{clause}.json'
+        baseline.parent.mkdir(parents=True, exist_ok=True)
+        baseline.write_text(json.dumps({'answer': 'NY' if title == 'positive' else 'No related clause.'}))
+        harness = root / 'model' / title / f'{clause}.jsonl'
+        harness.parent.mkdir(parents=True, exist_ok=True)
+        harness.write_text('')
+        sentence_ids = runner2_root / 'model' / title / f'{clause}.jsonl'
+        sentence_ids.parent.mkdir(parents=True, exist_ok=True)
+        if clause == 'governing_law':
+            sentence_ids.write_text(json.dumps({'span_start': 0, 'span_end': 2,
+                                               'extraction_text': 'NY', 'model_name': 'model'})
+                                    if title == 'positive' else '')
+        elif title == 'positive':
+            sentence_ids.write_text('invalid incomplete run')
+    runs, unmatched = ct.discover_runs(root, gold, test_titles=titles)
+    assert not unmatched
+    report = ct.evaluate(runs, gold, test_titles=titles)
+    assert report['methods'] == list(ct.METHODS)
+    row, = report['rows']
+    assert row['clause_types'] == ['governing_law']
+    assert row['Runner2']['TP'] == 1
+    assert row['Runner2']['examples']['TN']['document_title'] == 'negative'
+    assert row['Runner2']['corpus_retained'] == 0.5
+    assert row['Harness']['FN'] == 1
+    assert all(item['evaluated'] == 2 for item in report['coverage'])
+    html = ct.render_html(report, ct.DEFAULT_CUAD_JSON)
+    assert 'colspan="6" scope="colgroup">Runner2' in html
+    assert html.count('>Corpus retained</th>') == 3
+
+    custom = tmp_path / 'custom'
+    runner2_root.rename(custom)
+    runs, _ = ct.discover_runs(root, gold, test_titles=titles, runner2_root=custom)
+    assert {run.method for run in runs} == set(ct.METHODS)
+    (custom / 'model/positive/governing_law.jsonl').write_text(json.dumps({
+        'span_start': 0, 'span_end': 1, 'extraction_text': 'NY',
+    }))
+    with pytest.raises(ValueError, match='Runner2 offsets do not match'):
+        ct.discover_runs(root, gold, test_titles=titles, runner2_root=custom)
